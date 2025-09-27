@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: student-management-basic
+Version: 0.1.0
+Summary: Simple student management abstractions (Undergraduate, Graduate, PhD)
+Author-email: Md Aman Khan <email@example.com>
+Project-URL: Homepage, https://github.com/aman2712/student_management
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# student_management
+
+Tiny example package exposing simple student classes:
+- `UndergraduateStudent`
+- `GraduateStudent`
+- `PhDStudent`
+
+## Install
+```bash
+pip install student-management
+```
+
+## Usage
+
+from student_management import UndergraduateStudent, GraduateStudent, PhDStudent
+
+u = UndergraduateStudent("Alice", "U123")
+g = GraduateStudent("Bob", "G456")
+p = PhDStudent("Carol", "P789")
+
+print(u.get_student_type())  # "Undergraduate Student"
+print(g.get_student_type())  # "Graduate Student"
+print(p.get_student_type())  # "PhD Student"
