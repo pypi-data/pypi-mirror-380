@@ -1,0 +1,2 @@
+[console_scripts]
+ollama-websearch-mcp = mcp_service:cli
