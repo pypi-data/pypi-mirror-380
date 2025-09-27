@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+qmemcalc/__init__.py
+qmemcalc/memory.py
+qmemcalc.egg-info/PKG-INFO
+qmemcalc.egg-info/SOURCES.txt
+qmemcalc.egg-info/dependency_links.txt
+qmemcalc.egg-info/entry_points.txt
+qmemcalc.egg-info/requires.txt
+qmemcalc.egg-info/top_level.txt
+tests/test_memory.py

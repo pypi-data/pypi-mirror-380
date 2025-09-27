@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: qmemcalc
+Version: 0.1.0
+Summary: GPU Memory Estimator for QLoRA / LoRA / Transformers
+Home-page: https://github.com/sachin62025/qmemcalc
+Author: Sachin
+Author-email: sachin18449kumar@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0
+Requires-Dist: transformers>=4.40
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# qmemcalc
+
+Quantized Memory Calculator for Transformers (QLoRA / LoRA / full fine-tuning)
+
+## Features
+
+- Estimate GPU memory for FP32/FP16/BF16
+- Supports 4-bit / 8-bit quantization
+- LoRA rank or fraction support
+- Extended optimizer support
+- Gradient checkpointing
+- CLI for quick estimation
+
+## Installation
+
+```bash
+pip install qmemcalc
+```
+
+## Python API Usage
+
+```bash
+from qmemcalc import estimate_memory
+
+result = estimate_memory(
+    model_name="sshleifer/tiny-gpt2",
+    batch_size=2,
+    seq_len=16,
+    lora_r=4,
+    precision="fp16",
+    quantization="4bit"
+)
+
+print(result)
+```
