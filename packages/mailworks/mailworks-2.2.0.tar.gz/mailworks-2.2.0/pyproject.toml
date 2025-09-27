@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailworks"
+dynamic = ["version"]
+description = "A Python package for sending emails using any SMTP server with STARTTLS support"
+readme = "README.md"
+license = "MIT"
+keywords = ["email", "smtp", "send", "mail", "starttls", "python", "gmail", "outlook", "corporate", "universal"]
+authors = [
+    {name = "Antonio Costa", email = "antoniocostabr@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Email",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/antoniocostabr/mailworks"
+Repository = "https://github.com/antoniocostabr/mailworks"
+"Bug Reports" = "https://github.com/antoniocostabr/mailworks/issues"
+Documentation = "https://github.com/antoniocostabr/mailworks#readme"
+
+[tool.setuptools.dynamic]
+version = {attr = "mailworks.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mailworks*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
