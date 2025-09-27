@@ -1,0 +1,4 @@
+exclude env/*
+exclude venv/*
+exclude *.pyc
+exclude __pycache__/*
