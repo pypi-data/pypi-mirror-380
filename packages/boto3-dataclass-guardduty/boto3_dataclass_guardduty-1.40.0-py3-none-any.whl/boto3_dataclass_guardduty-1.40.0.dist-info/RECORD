@@ -1,0 +1,7 @@
+boto3_dataclass_guardduty/__init__.py,sha256=EElNRwN2O1BMMZSCuPUsp4WacZfPKslpDyrOn4SHgFQ,112
+boto3_dataclass_guardduty/caster.py,sha256=dRKaycaGv8WUBWbjo3r9gn27FEP-0L27gc2yYPEK_3g,12123
+boto3_dataclass_guardduty/type_defs.py,sha256=8oij-IjArMPQy-f5VUb22FOXS-tFcmfDxjlsDq5Mhh4,374669
+boto3_dataclass_guardduty-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_guardduty-1.40.0.dist-info/METADATA,sha256=VpSNtzZwrIV1jAkU_4lpPmmgf1TeZkk6qt_naU8GsAk,1655
+boto3_dataclass_guardduty-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_guardduty-1.40.0.dist-info/RECORD,,
