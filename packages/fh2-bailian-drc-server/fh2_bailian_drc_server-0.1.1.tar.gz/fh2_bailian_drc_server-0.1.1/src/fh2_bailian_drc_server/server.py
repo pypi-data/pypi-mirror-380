@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+DRC MCP服务 - 重构后的主入口文件
+pip install "mcp-server>=0.9.0" "httpx>=0.27"
+python main_refactored.py
+"""
+from mcp.server.fastmcp import FastMCP
+
+# 导入所有服务函数（不使用装饰器版本）
+from .services.device_service import device_recommendation, cloud_controls_create
+from .services.flight_service import drone_takeoff, fly_to_points, drone_return_home
+from .services.camera_service import (
+    camera_photo_take,
+    camera_aim,
+    camera_look_at,
+    gimbal_reset_horizontal,
+    gimbal_reset_downward
+)
+from .services.poi_service import poi_enter, poi_exit
+from .services.status_service import get_flight_status, analyze_flight_status
+from .services.panoramic_service import panoramic_shooting
+
+# 创建MCP服务实例
+mcp = FastMCP("drc_mcp_service")
+
+# 注册所有工具
+mcp.tool()(device_recommendation)
+mcp.tool()(cloud_controls_create)
+mcp.tool()(drone_takeoff)
+mcp.tool()(fly_to_points)
+mcp.tool()(drone_return_home)
+mcp.tool()(camera_photo_take)
+mcp.tool()(camera_aim)
+mcp.tool()(camera_look_at)
+mcp.tool()(gimbal_reset_horizontal)
+mcp.tool()(gimbal_reset_downward)
+mcp.tool()(poi_enter)
+mcp.tool()(poi_exit)
+mcp.tool()(get_flight_status)
+mcp.tool()(analyze_flight_status)
+mcp.tool()(panoramic_shooting)
+
+
+def run():
+    mcp.run(transport='stdio')
+
+
+if __name__ == '__main__':
+    run()
