@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(pytest:*)",
+      "Bash(python -m pytest tests/test_registry.py -v)",
+      "Bash(python -m pytest tests/test_registry.py::TestRegistry::test_of_factory_method_basic -v)",
+      "Bash(python -m pytest tests/test_registry.py::TestRegistry::test_hierarchical_of_concrete_class_without_key tests/test_registry.py::TestRegistry::test_hierarchical_of_complex_inheritance_hierarchy -v)",
+      "Bash(python -m pytest tests/test_registry.py::TestRegistry::test_hierarchical_of_concrete_class_without_key tests/test_registry.py::TestRegistry::test_of_factory_method_basic -v)",
+      "Bash(python -m pytest tests/test_registry.py::TestRegistry::test_of_factory_method_with_multiple_subclasses -v)",
+      "Bash(python -m pytest tests/test_registry.py -v --tb=no)",
+      "Bash(mkdocs:*)",
+      "Bash(python -m pytest tests/test_Typed.py::TestHierarchicalTyping -v)",
+      "Bash(python -m pytest tests/test_Typed.py::TestHierarchicalTyping::test_list_of_Typeds_from_dict -v)",
+      "Bash(python -m pytest tests/test_Typed.py -v --tb=no)",
+      "Bash(python -m pytest tests/test_Typed.py::TestTypeConversion::test_convert_union_types -v)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(grep:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:docs.pydantic.dev)",
+      "Bash(hatch version:*)",
+      "Bash(git tag:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
