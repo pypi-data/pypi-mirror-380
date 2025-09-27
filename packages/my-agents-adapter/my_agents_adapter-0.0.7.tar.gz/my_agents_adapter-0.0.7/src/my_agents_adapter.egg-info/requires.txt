@@ -1,0 +1,17 @@
+azure-monitor-opentelemetry
+azure-ai-projects
+azure-identity
+opentelemetry-api
+starlette
+uvicorn
+
+[agentframework]
+agent-framework
+opentelemetry-exporter-otlp-proto-grpc
+
+[langgraph]
+langchain
+langchain-openai
+langgraph
+opentelemetry-instrumentation-langchain
+opentelemetry-exporter-otlp-proto-http
