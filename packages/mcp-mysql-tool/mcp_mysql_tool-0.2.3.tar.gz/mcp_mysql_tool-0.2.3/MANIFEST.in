@@ -1,0 +1,4 @@
+include README.md
+include requirements.txt
+include .env.example
+recursive-include mcp_mysql_server *.py

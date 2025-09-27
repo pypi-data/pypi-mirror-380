@@ -1,0 +1,15 @@
+.env.example
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+mcp_mysql_server/__init__.py
+mcp_mysql_server/server.py
+mcp_mysql_tool.egg-info/PKG-INFO
+mcp_mysql_tool.egg-info/SOURCES.txt
+mcp_mysql_tool.egg-info/dependency_links.txt
+mcp_mysql_tool.egg-info/entry_points.txt
+mcp_mysql_tool.egg-info/requires.txt
+mcp_mysql_tool.egg-info/top_level.txt
