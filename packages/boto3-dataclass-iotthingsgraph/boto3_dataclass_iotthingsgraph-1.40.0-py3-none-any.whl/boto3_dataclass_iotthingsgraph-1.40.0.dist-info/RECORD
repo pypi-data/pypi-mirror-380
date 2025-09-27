@@ -1,0 +1,7 @@
+boto3_dataclass_iotthingsgraph/__init__.py,sha256=zpvZjKBqKGVBK4VTBTGHEkMZDfntaEjKippLtqMc9fI,122
+boto3_dataclass_iotthingsgraph/caster.py,sha256=IQmAHyIdwnnruHrVLq_piraWn1Y7OVustQAnSf-vCX8,5775
+boto3_dataclass_iotthingsgraph/type_defs.py,sha256=760IrneCnnJQ8mnyJ8EH4__RtPIhVYOsma-NvcLKv2M,87473
+boto3_dataclass_iotthingsgraph-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iotthingsgraph-1.40.0.dist-info/METADATA,sha256=9E7Pwzbn3eY60jkaPjR-W9S3vO9u7iYBaTUHpOQgvsk,1690
+boto3_dataclass_iotthingsgraph-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iotthingsgraph-1.40.0.dist-info/RECORD,,
