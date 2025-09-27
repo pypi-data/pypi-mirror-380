@@ -1,0 +1,10 @@
+from __future__ import annotations
+
+from werkzeug.local import LocalProxy
+
+current_rdm_records: LocalProxy
+current_rdm_records_service: LocalProxy
+current_rdm_records_media_files_service: LocalProxy
+current_oaipmh_server_service: LocalProxy
+current_record_communities_service: LocalProxy
+current_community_records_service: LocalProxy
