@@ -1,0 +1,13 @@
+from ohmyapi.router import APIRouter
+from . import models
+
+router = APIRouter(prefix="/{{ app_name }}")
+
+
+@router.get("/")
+def ping():
+    return {
+        "project": "{{ project_name }}",
+        "app": "{{ app_name }}",
+    }
+
