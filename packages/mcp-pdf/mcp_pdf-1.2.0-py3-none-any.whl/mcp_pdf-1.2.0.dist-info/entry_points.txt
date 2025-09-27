@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-pdf = mcp_pdf.server:main
+mcp-pdf-modular = mcp_pdf.server_refactored:main
