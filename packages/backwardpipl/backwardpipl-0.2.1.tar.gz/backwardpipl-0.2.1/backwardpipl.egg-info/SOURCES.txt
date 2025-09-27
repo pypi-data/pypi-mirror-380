@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+backwardpipl/__init__.py
+backwardpipl/backwardpipl.py
+backwardpipl.egg-info/PKG-INFO
+backwardpipl.egg-info/SOURCES.txt
+backwardpipl.egg-info/dependency_links.txt
+backwardpipl.egg-info/requires.txt
+backwardpipl.egg-info/top_level.txt
