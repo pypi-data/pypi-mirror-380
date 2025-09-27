@@ -1,0 +1,7 @@
+boto3_dataclass_geo_routes/__init__.py,sha256=ZFSld2FQxh7OB6ow2s-G-Li6mRRliwpmAO-J_iv1cJw,114
+boto3_dataclass_geo_routes/caster.py,sha256=dkC0Zz4piV2qtBnJONVTaU1VresK2ykjGePeEAx5ohY,1240
+boto3_dataclass_geo_routes/type_defs.py,sha256=2FYMmp_ww1l5pGO4YbseUM85hWpqeNY9ugmWFhfATrI,206876
+boto3_dataclass_geo_routes-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_geo_routes-1.40.0.dist-info/METADATA,sha256=n6z_P7l6h4wmu-hwr48287j304UU7BLYUPiy-I6cpgQ,1662
+boto3_dataclass_geo_routes-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_geo_routes-1.40.0.dist-info/RECORD,,
