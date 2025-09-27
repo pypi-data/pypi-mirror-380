@@ -1,0 +1,23 @@
+[project]
+name = "doehyunbaek"
+version = "0.2.0"
+description = "Personal utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "zenodo-client",
+  "pystow",
+]
+
+[project.scripts]
+doehyunbaek = "doehyunbaek.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/doehyunbaek"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/doehyunbaek"]
