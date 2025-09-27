@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ab-pkce
+Version: 0.1.4
+Author-email: Matthew Coulter <53892067+mattcoulter7@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: <4,>=3.12
+Requires-Dist: pydantic<3,>=2.11.7
+Description-Content-Type: text/markdown
+
+# Open Banking, Opened | PKCE
+
+PKCE Package for Open Banking, Opened API packages.
