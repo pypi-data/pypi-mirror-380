@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crudle/__init__.py,sha256=dbUIifxfI2YshBrFpVRgADwEk3pKL8Rv51NxT--EArc,85
+crudle/query_params_model.py,sha256=HtY8vZyO553K93KdFQyTzvdw7jbf5FIiQ_7mVXc9-zY,3317
+crudle/utils.py,sha256=0jib413qFRouo_VlpabJMoARDAYsOvKu1yMeFyDWlkQ,1773
+crudle/adapters/__init__.py,sha256=brAxebfaQgEqgqbmTVxVlZzlNi92H631tQbUyPOUglo,75
+crudle/adapters/sqlalchemy/__init__.py,sha256=CAQUYGif0Bh3ZZtcFI3tsSHa5-itVNLWSl4t0XtEAtQ,233
+crudle/adapters/sqlalchemy/adapter.py,sha256=1jeJGHaEDeh0tKhXq2wM4Kv9J65CI3mnhqSAdx46b7c,15373
+crudle/adapters/sqlalchemy/helpers.py,sha256=y88N6OvrpCJQYr9CinDspyKCZWsCPSsismbuiORwL-g,24709
+crudle/adapters/sqlalchemy/query_builder.py,sha256=2DqazyQ04-3EUbsp2KvAMOpAZoC6UedzqMsAV6A36FM,14952
+crudle/adapters/sqlalchemy/query_field.py,sha256=r9SWR_ojo2voEBzFbkyhfuVKMyYyb-UAjnRFD_vfCjs,5797
+crudle-0.1.1.dist-info/METADATA,sha256=H9g_QYjPPs7J4ohFdwCDAkvx8YRfBykDEPosWecSlZg,12791
+crudle-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+crudle-0.1.1.dist-info/top_level.txt,sha256=IQQQoo1R-1tXJOWl1aTcmR_znH1l5e_YxMegUsC1FUI,16
+crudle-0.1.1.dist-info/RECORD,,
