@@ -1,0 +1,13 @@
+perforatedbp/tracker_pbp.cpython-310-x86_64-linux-gnu.so,sha256=182eBY-fY9jqHfw7DZr4alLouuqHzlUuFxIYYjPQgbY,1402208
+perforatedbp/blockwise_pbp.cpython-310-x86_64-linux-gnu.so,sha256=dKXauz4eTMDUE0f0Gggqi3UXmdHGqTecFOftSDe_4Qc,1536304
+perforatedbp/clean_load.cpython-310-x86_64-linux-gnu.so,sha256=X-gfm-a6tJ9hvOUIZj9psq-ft93-0LYl0nGBKBIViNM,995976
+perforatedbp/check_license.cpython-310-x86_64-linux-gnu.so,sha256=Hh6tr8PIsvGL_6GaV0jl3ULjIrCeQl9w8bl0_5jvgWU,678528
+perforatedbp/network_pbp.cpython-310-x86_64-linux-gnu.so,sha256=WQ6eo_Zggnk1YyBaikXj-1gJzRg67DraH-Q-QX7HYxI,1385672
+perforatedbp/utils_pbp.cpython-310-x86_64-linux-gnu.so,sha256=P_LZSUolwhgBIWL6gxQBQHYZKUyvKxZy7EzhUtct3hg,1055272
+perforatedbp/modules_pbp.cpython-310-x86_64-linux-gnu.so,sha256=nMgVv6y4T_57cEBCvXuDpbor6IaUzPmz3NRA1O_bXhw,3402128
+perforatedbp/__init__.cpython-310-x86_64-linux-gnu.so,sha256=ZHaWb1ZzDmsz37wXG54DQC9p53Xzs2GuIQm55ujVsUs,67112
+perforatedbp/globals_pbp.cpython-310-x86_64-linux-gnu.so,sha256=DUGfRPTy4odPcsBnbxmQJ53m5hvNBSQLSSYfDdjOf_Q,103144
+perforatedbp-0.0.6.dist-info/WHEEL,sha256=OwK4vrUO2n3qJi8MyWS54SFNf2JjP2GzIJvHAkOFlRA,152
+perforatedbp-0.0.6.dist-info/top_level.txt,sha256=vymX1tN98EJMl_IuPCF3x4XiXYhLC_cB25NXXVJ8G2M,13
+perforatedbp-0.0.6.dist-info/METADATA,sha256=0yuRchqygLnMe3QtqQr9vil2zm9gjX4LPvtlKfxVSvQ,469
+perforatedbp-0.0.6.dist-info/RECORD,,
