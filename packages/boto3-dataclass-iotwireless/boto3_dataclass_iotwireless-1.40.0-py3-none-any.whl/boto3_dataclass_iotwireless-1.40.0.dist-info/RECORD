@@ -1,0 +1,7 @@
+boto3_dataclass_iotwireless/__init__.py,sha256=_jt1LBbVcOrywEArXLqueNHyxvn6lbdcF9mUOQlIrSo,116
+boto3_dataclass_iotwireless/caster.py,sha256=56bMmkMQmzbaGWWv1Oer20qrH72nfegLV37Oyqp0Dpg,14505
+boto3_dataclass_iotwireless/type_defs.py,sha256=PqAsC5AnyqGYI66IgViZ5_7yKi1Blge_FWrGgUds77k,310335
+boto3_dataclass_iotwireless-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iotwireless-1.40.0.dist-info/METADATA,sha256=oUPI2SYVT_KAGkhzhDKxKdS-tM7me3bg4P6Jes6GnR0,1669
+boto3_dataclass_iotwireless-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iotwireless-1.40.0.dist-info/RECORD,,
