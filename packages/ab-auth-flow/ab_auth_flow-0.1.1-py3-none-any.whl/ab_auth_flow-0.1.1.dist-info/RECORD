@@ -1,0 +1,12 @@
+ab_core/auth_flow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/auth_flow/oauth2/flow/__init__.py,sha256=NzycCBzq3N7KZSptnhgaCjG08ujouAVD8vaop8wb574,275
+ab_core/auth_flow/oauth2/flow/base.py,sha256=3Jl-TdGgGvTtYl2NlfmSaMT6Xf12IKZp3CMoudHWrJA,536
+ab_core/auth_flow/oauth2/flow/impersonation.py,sha256=EmBl-q6iSG3tvSrkbnRudD4b9fGQ8hGPn6E3JXMaLU0,1931
+ab_core/auth_flow/oauth2/flow/template.py,sha256=4Zwy0a-hYTDnwCXjNobcZWwXbYkAjwQ28ChdGvImDLY,642
+ab_core/auth_flow/oauth2/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/auth_flow/oauth2/schema/auth_code_stage.py,sha256=5f8W9UZpu6VPtQ_hYlQsCL2dIQdUKx3YDXrZ29X6icc,801
+ab_core/auth_flow/oauth2/schema/flow_type.py,sha256=VBo73fO3So69jFPxQQcjJw7WVzXhZXftwtWJj1sHIls,120
+ab_auth_flow-0.1.1.dist-info/METADATA,sha256=cyTGPAbmWoRH7nJV_ZmSNTpDAevZoDBF4R-3yKoR1Rg,451
+ab_auth_flow-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ab_auth_flow-0.1.1.dist-info/licenses/LICENSE,sha256=REBFOD_HdKi9ZZ38nP3A_NjpLFaijF1A6_PDiMglbLk,1072
+ab_auth_flow-0.1.1.dist-info/RECORD,,
