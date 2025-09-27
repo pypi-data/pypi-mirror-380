@@ -1,0 +1,7 @@
+boto3_dataclass_lex_models/__init__.py,sha256=I05eXPJOZf9ki7hODaDJtA3sY0JpzVmc4XH36UdBPsA,114
+boto3_dataclass_lex_models/caster.py,sha256=S3rjiA4Ew_eeVw7Ra1E4K3nBM1kgDdKfQgxQyNVa4cg,7883
+boto3_dataclass_lex_models/type_defs.py,sha256=gG6DRLU5t9G9AmrUr5kEw3Oo4LcArbVoCIwwl-TawfQ,129217
+boto3_dataclass_lex_models-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_lex_models-1.40.0.dist-info/METADATA,sha256=VscgBRsL7_d5h6yo2eWgOkkAo4EnPq6_zTkEfZVfibs,1662
+boto3_dataclass_lex_models-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_lex_models-1.40.0.dist-info/RECORD,,
