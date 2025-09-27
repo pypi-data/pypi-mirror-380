@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# venvs
+.venv/
+.venv*/
+
+# Poetry
+poetry.lock
+
+# IDE
+.vscode/
+.idea/
+
+# Tests
+.pytest_cache/
+.coverage*
+
+# Docker
+*.log
+
+# Local config
+config/*.local.yaml
+dist/
+
+*.egg-info/*
+*.egg-info/
+*.egg-info
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage*
+.coverage
+.coverage.*
+.coverage.*.*
+.coverage.*.*.*
+.coverage.*.*.*.*
