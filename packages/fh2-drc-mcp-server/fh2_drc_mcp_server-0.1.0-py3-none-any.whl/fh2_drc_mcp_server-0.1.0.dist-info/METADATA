@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: fh2-drc-mcp-server
+Version: 0.1.0
+Summary: FH2 DRC MCP Server - 无人机远程控制MCP服务器
+Author: leslie.zhang@dji.com
+Author-email: leslie.zhang@dji.com <leslie.zhang@dji.com>
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: dashscope>=1.24.6
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.15.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
