@@ -1,0 +1,7 @@
+boto3_dataclass_kafkaconnect/__init__.py,sha256=CbQ18ilV2NAz6TL1I8NOo5Za59m87W2-bqR3DOE36KA,118
+boto3_dataclass_kafkaconnect/caster.py,sha256=_EqNQN7K908stWqA4meEv5eb82Z9HMehfArJQykLSCU,3695
+boto3_dataclass_kafkaconnect/type_defs.py,sha256=1loGhcC8VXJ8oLlk4Y_-knfk5CVw6_iL0G4UKhrAv2M,95995
+boto3_dataclass_kafkaconnect-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_kafkaconnect-1.40.0.dist-info/METADATA,sha256=wKM3dkGrtI7Qf8N5xH9BQgoZys3Pn6vy9E8mKnNqpaI,1676
+boto3_dataclass_kafkaconnect-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_kafkaconnect-1.40.0.dist-info/RECORD,,
