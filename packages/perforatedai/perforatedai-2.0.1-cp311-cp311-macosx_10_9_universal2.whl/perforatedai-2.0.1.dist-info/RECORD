@@ -1,0 +1,10 @@
+perforatedai/__init__.cpython-311-darwin.so,sha256=MnqXVMcY9u6AX87BRlszP_egaSieSsXSmVLdu_I6yxY,87440
+perforatedai/globals_perforatedai.cpython-311-darwin.so,sha256=cfn0pdhwHLFXo99tWshBaxiFuUerbEFytDLWyJbms1s,651816
+perforatedai/library_classes.cpython-311-darwin.so,sha256=tcpbFenvapr6C1jodznoxCvPGzEZDOzZ2_Cvkykgtqk,249160
+perforatedai/modules_perforatedai.cpython-311-darwin.so,sha256=fyeLUaWiAGIQd-Y49dlSLWpbBZlJrxHVeDQfk2SKuPo,866584
+perforatedai/tracker_perforatedai.cpython-311-darwin.so,sha256=kRRqdvtGCW3R8ApPE1nhNVPMRhGCioMcmZbZHsdOx5Y,1993080
+perforatedai/utils_perforatedai.cpython-311-darwin.so,sha256=JMZuk9S7jPcmIvxEhfI2OJR0QDLtKdu63vN4WrXTk1Q,777672
+perforatedai-2.0.1.dist-info/METADATA,sha256=lrsOk0KgLiAe9r83YdD1rZI7gBP1Bopmhji67Abh-nc,365
+perforatedai-2.0.1.dist-info/WHEEL,sha256=vrdZjlh4exCGuOeHFVGYgW_9eYEDoByDCp4vVTWiG0w,115
+perforatedai-2.0.1.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.1.dist-info/RECORD,,
