@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: pydanticTest
+Version: 0.1.2
+Summary: A simple Pydantic example application
+Author-email: "Alessander S. Goulart" <sander@unixwork.com.br>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Requires-Dist: email-validator
+Requires-Dist: pydantic>=2.0.0
+Description-Content-Type: text/markdown
+
+# PydanticTest
+
+Uma aplicação simples demonstrando o uso do Pydantic para validação de dados.
+
+## Instalação
+
+```bash
+pip install pydanticTest
+```
+
+## Uso
+
+```bash
+pydantic-test
+```
+
+## Desenvolvimento
+
+Para executar localmente:
+
+```bash
+uv run start
+```

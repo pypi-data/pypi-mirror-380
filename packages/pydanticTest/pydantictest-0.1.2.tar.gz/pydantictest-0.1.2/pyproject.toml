@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydanticTest"
+version = "0.1.2"
+description = "A simple Pydantic example application"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.0.0",
+    "email-validator",
+]
+authors = [
+    {name = "Alessander S. Goulart", email = "sander@unixwork.com.br"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.scripts]
+pydantic-test = "app.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.uv]
+package = true
