@@ -1,0 +1,13 @@
+timetracking/__init__.py,sha256=QtQzuvFcMJBg4UU3tiPO-1w1l8kX0QJoEim_OP8qq6U,234
+timetracking/database.py,sha256=cEs5mwT9R7eRfE09UXNEbCeG0KXHeuSFAathcUUPOYE,15489
+timetracking/email_export.py,sha256=B35HpUEspxul5PP9QcHSW024Vf9TSnioVHVS4P0cNKU,14426
+timetracking/gui.py,sha256=BSma4sDhyHO_m77eRUkaViyc9o1gRbLpn4Pnlge4Dig,86589
+timetracking/main.py,sha256=RPBLHcGgksQPMz63SNhGUvnMgYgqaMhm_aIOqb36C0Q,481
+timetracking/password_utils.py,sha256=rfab-gVfaBIDuJF10jxWhduzAaXRBOSbJQLw7CLHA94,3011
+timetracking/pdf_export.py,sha256=6NU5K6X4l301cFFvz9mtU9kkiitrFKhb3pH4tJsB4Lo,10406
+timetracking-1.0.45.dist-info/licenses/LICENSE,sha256=dgvTKyKBbT_SvjdVa6p26TJIYjObxgl2YT3evGdK6cU,1070
+timetracking-1.0.45.dist-info/METADATA,sha256=UcACz87hdCmt0fHWCAgJlLWjhkx6kZWwvwRItDnLVB4,11440
+timetracking-1.0.45.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+timetracking-1.0.45.dist-info/entry_points.txt,sha256=1c9_prJOucYocepuus2B5v6xNj44r6bibWtHAOCrOiY,56
+timetracking-1.0.45.dist-info/top_level.txt,sha256=P9WscTTSDKUCuG-7HBKoSoo65KqeMWeASjQMTYbntr4,13
+timetracking-1.0.45.dist-info/RECORD,,
