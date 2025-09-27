@@ -1,0 +1,7 @@
+boto3_dataclass_invoicing/__init__.py,sha256=vQAtv061Z0wXpXJKUYh828MUp4UxHiR3GSC4c814otc,112
+boto3_dataclass_invoicing/caster.py,sha256=SOkCXCt3L5Eb5MPxD60JQ_kUetosIBX3_8PQmc3dVN4,1897
+boto3_dataclass_invoicing/type_defs.py,sha256=9BRqxSJfuiponCZa1CuS9ApThkp8u3whCHkmA63nyWM,42241
+boto3_dataclass_invoicing-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_invoicing-1.40.0.dist-info/METADATA,sha256=CPk0EwYBuRr2tcLLT_YyWstNCFmSi-KWhm2IvoD73iU,1655
+boto3_dataclass_invoicing-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_invoicing-1.40.0.dist-info/RECORD,,
