@@ -1,0 +1,7 @@
+boto3_dataclass_grafana/__init__.py,sha256=wDsv5RhMet3LXXLRyqpQM-UoysC3sAJ7RjDoezayX-k,108
+boto3_dataclass_grafana/caster.py,sha256=lNL-1FfCMKRKJAwDrHaYbwonHUbEsJQHV7mfkTRuis0,5197
+boto3_dataclass_grafana/type_defs.py,sha256=0JRULbMhVvQ2ApsvGDNshkQUgpA71aznnvNXniGMr10,78016
+boto3_dataclass_grafana-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_grafana-1.40.0.dist-info/METADATA,sha256=we-b9iSmOvKjPDIBA9nE68G6n5qw5aw1i-t3Go4XAwc,1641
+boto3_dataclass_grafana-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_grafana-1.40.0.dist-info/RECORD,,
