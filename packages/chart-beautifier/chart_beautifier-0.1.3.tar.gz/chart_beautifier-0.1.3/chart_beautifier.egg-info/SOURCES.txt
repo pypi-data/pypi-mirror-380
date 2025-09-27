@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+chart_beautifier/__init__.py
+chart_beautifier/client.py
+chart_beautifier/exceptions.py
+chart_beautifier.egg-info/PKG-INFO
+chart_beautifier.egg-info/SOURCES.txt
+chart_beautifier.egg-info/dependency_links.txt
+chart_beautifier.egg-info/requires.txt
+chart_beautifier.egg-info/top_level.txt
+tests/test_client.py
+tests/test_exceptions.py
