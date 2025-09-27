@@ -1,0 +1,2 @@
+[console_scripts]
+dmccodegui = dmccodegui.main:main

@@ -1,0 +1,129 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dmccodegui"
+version = "0.1.0"
+description = "Kivy GUI for Galil DMC controller - designed for Raspberry Pi deployment"
+readme = "README.md"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+maintainers = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["kivy", "gui", "galil", "dmc", "controller", "raspberry-pi", "industrial", "automation", "embedded"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: X11 Applications",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "kivy>=2.2.0",
+]
+
+[project.optional-dependencies]
+# Development dependencies
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+# Development and testing dependencies
+test = [
+    "pytest-mock",
+    "pytest-timeout",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/yourusername/dmccodegui"
+Repository = "https://github.com/yourusername/dmccodegui"
+Documentation = "https://github.com/yourusername/dmccodegui#readme"
+"Bug Tracker" = "https://github.com/yourusername/dmccodegui/issues"
+
+[project.scripts]
+dmccodegui = "dmccodegui.main:main"
+
+[tool.setuptools]
+# Include all data files (KV files, images, etc.)
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dmccodegui = [
+    "ui/*.kv",
+    "assets/images/*.png",
+]
+
+# Black code formatter configuration
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# MyPy type checker configuration
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = ["gclib", "kivy.*"]
+ignore_missing_imports = true
+
+# Pytest configuration
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
