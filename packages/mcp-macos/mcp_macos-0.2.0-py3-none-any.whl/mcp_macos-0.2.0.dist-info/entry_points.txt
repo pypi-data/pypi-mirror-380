@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-macos = mcp_macos.main:cli
+

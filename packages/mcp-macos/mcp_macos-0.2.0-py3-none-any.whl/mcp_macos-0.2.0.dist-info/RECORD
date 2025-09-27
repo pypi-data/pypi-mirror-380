@@ -1,0 +1,15 @@
+mcp_macos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_macos/main.py,sha256=H4cXuiekuIomoPBdS0ZgWT8JFhgIJ4TJR7ThFkivfsw,402
+mcp_macos/scripts/cal_create_event_at.applescript,sha256=h05QKUbq4Repm2CGCkyfc_iLXAEPqVm3mM0SVn6IFXo,1206
+mcp_macos/scripts/cal_list_next_events.applescript,sha256=2eKZmpo6-pCowMXiMLB1VuJgblNBvkCHDa8cXMMIYdc,1201
+mcp_macos/scripts/mail_list_emails.applescript,sha256=ReBdZdu4LP4UIBovZv8nLHwyELZGj9mW3ovIHb_ly6A,4625
+mcp_macos/scripts/mail_list_unread.applescript,sha256=fJ_8wNW9iG5jXDJTuT8FpBLpLThqOl6iIzrHXsYWVOs,781
+mcp_macos/scripts/mail_send.applescript,sha256=yNjtXqZppmUdD4c17BiXUCOHDarP5xyW-NUoCtXKZwc,705
+mcp_macos/servers/__init__.py,sha256=F8Sc5Afb6R1lCqUVerykazohiQL5AKxcYgfCFOtjyeA,50
+mcp_macos/servers/calendar.py,sha256=zMf1GZrMsSLUYziiJzQ151PKO_dXejm9SopXlTVFuq8,1165
+mcp_macos/servers/mail.py,sha256=g2-QDWc5cpTp-elMW0oxsDcjO5wAXnIsXMIi4J1iPAs,1732
+mcp_macos/utils.py,sha256=Q2JWJNele7uvT8GwPGsFfELJb3eLfwYjLuzFlcmKYvs,1590
+mcp_macos-0.2.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+mcp_macos-0.2.0.dist-info/entry_points.txt,sha256=Ha2RhAXpPh5MdSm7aA6hxuCWcAIHlV7T4iuczFe5VGY,50
+mcp_macos-0.2.0.dist-info/METADATA,sha256=n41z6pkUhV2TitnvFroG50nATe3QHxJtJj_jfRKaVCc,263
+mcp_macos-0.2.0.dist-info/RECORD,,
