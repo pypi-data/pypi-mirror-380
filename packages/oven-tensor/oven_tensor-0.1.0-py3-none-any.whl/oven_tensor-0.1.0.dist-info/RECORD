@@ -1,0 +1,11 @@
+oven_tensor/__init__.py,sha256=i_h61b2Z-RnZQwd4uWlEmJjOjMDooOR39PQBCEVxbYY,18432
+oven_tensor/cli.py,sha256=f79k-ycJAuayS_b3nDpS6tDilEaSjpMmmPvmpFwErsw,2349
+oven_tensor/kernels/__init__.py,sha256=ge57sJdXc8HOjpirt5JHB0F4oAODLRargU2CyefjzbY,212
+oven_tensor/kernels/binary_ops.py,sha256=AmKYDRkJuU0kY8xvrMp1HmoIFO5KRDazXQNH3IeBLOQ,1376
+oven_tensor/kernels/unary_ops.py,sha256=ZL6Ni0f15Onx1GDPfP9qlpcbskFA6pBH1qSNWsv7JSQ,2016
+oven_tensor-0.1.0.dist-info/licenses/LICENSE,sha256=hFo4CTAAX6G2gXP4fYJgqOKW21QmwjMcCwD5iQSlcws,1068
+oven_tensor-0.1.0.dist-info/METADATA,sha256=6nuyVC3nvfj1fMQjkGUMnWTdQEByunQrxDQwvbILIIk,4007
+oven_tensor-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+oven_tensor-0.1.0.dist-info/entry_points.txt,sha256=EweRlDvxd0XoUaPKBNUMBAY2BuhS71NpFsIBxYaxlJs,68
+oven_tensor-0.1.0.dist-info/top_level.txt,sha256=1FNHf_MwiSMbbsymVaTzyJLVtwtw6Ls4eu9Dr0whqoQ,12
+oven_tensor-0.1.0.dist-info/RECORD,,
