@@ -1,0 +1,5 @@
+/dist
+/migrations
+/target
+/venv
+.env

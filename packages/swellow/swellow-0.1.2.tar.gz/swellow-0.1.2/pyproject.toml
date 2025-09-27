@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "swellow"
+version = "0.1.2"
+description = "SQL-first table migrations."
+authors = [{ name = "Francisco A. B. Sampaio", email = "franciscoabsampaio@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.scripts]
+swellow = "swellow.cli:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.4.2",
+    "testcontainers>=4.13.0",
+]
+
+# Hatch (build tool)
+[tool.hatch.build.targets.wheel]
+packages = ["src/swellow"]
+include-files = ["src/swellow/bin/*"]
