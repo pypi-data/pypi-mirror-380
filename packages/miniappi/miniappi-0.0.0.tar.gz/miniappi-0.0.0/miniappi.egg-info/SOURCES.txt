@@ -1,0 +1,6 @@
+pyproject.toml
+miniappi/__init__.py
+miniappi.egg-info/PKG-INFO
+miniappi.egg-info/SOURCES.txt
+miniappi.egg-info/dependency_links.txt
+miniappi.egg-info/top_level.txt

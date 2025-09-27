@@ -1,0 +1,7 @@
+[project]
+name = "miniappi"
+authors = [
+    {name = "Mikael Koli", email = "koli.mikael@gmail.com"},
+]
+version = "0.0.0"
+description = "Python package to create your Miniappi app"
