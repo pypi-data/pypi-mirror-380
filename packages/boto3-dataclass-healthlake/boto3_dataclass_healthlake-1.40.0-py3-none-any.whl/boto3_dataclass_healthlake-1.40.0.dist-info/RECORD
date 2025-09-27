@@ -1,0 +1,7 @@
+boto3_dataclass_healthlake/__init__.py,sha256=QXy8BoQvn5pzgP7gTG3ZCMCkLQV_5-eTVKFquHtfZXo,114
+boto3_dataclass_healthlake/caster.py,sha256=9W8HKBL4TSMQfA8O8g0cbIQFT6_huzLOxRyVKvH2jcc,2586
+boto3_dataclass_healthlake/type_defs.py,sha256=bTIkw_Fj_8rriRZF9R5YOggN34FMBU8GoRyWXVIEoeY,44500
+boto3_dataclass_healthlake-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_healthlake-1.40.0.dist-info/METADATA,sha256=aXVdgUfugF3Tm6ETeCkyVIQ29aiKtrLZVNtdVQGQqTA,1662
+boto3_dataclass_healthlake-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_healthlake-1.40.0.dist-info/RECORD,,
