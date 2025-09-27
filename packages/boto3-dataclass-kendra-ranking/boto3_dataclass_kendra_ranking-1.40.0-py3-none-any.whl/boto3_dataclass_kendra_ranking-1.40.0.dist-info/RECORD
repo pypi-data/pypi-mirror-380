@@ -1,0 +1,7 @@
+boto3_dataclass_kendra_ranking/__init__.py,sha256=_LW-7ODevO0Ck3dqAHXxLhMB3iN2ei-cm-CXqhKfpEI,122
+boto3_dataclass_kendra_ranking/caster.py,sha256=KRLrNtA_BNMdQAxuWL5e1pTNzBZKcSLCscFFjXITRgQ,1759
+boto3_dataclass_kendra_ranking/type_defs.py,sha256=AscIgMEAdmMKEgfv-tWGHIw6-pRqE2obwPyHeJ4QOwc,20151
+boto3_dataclass_kendra_ranking-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_kendra_ranking-1.40.0.dist-info/METADATA,sha256=QxHlNrG_CnvIVAmj1n2kVASvSaKQhhFVAjzlgK_vXD0,1690
+boto3_dataclass_kendra_ranking-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_kendra_ranking-1.40.0.dist-info/RECORD,,
