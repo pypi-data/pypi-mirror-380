@@ -1,0 +1,10 @@
+stopweb/__init__.py,sha256=u9uncETMzl0XSm6f3On8-45i5CxSZ4r5_0fhAd4LzkA,139
+stopweb/cli.py,sha256=H67OclDVU_iW1LvBcX0CSrxIshm5vv-42EPZfsV1D5k,7464
+stopweb/config.py,sha256=Io5l2DcbrLOweWU4vmSmpY8g-2IROLibginIMW-Lv0I,8616
+stopweb/duration.py,sha256=vpWSTmX02zEkt-14GB0cC74h5E6gOjYBDfoQW6NiwCk,5086
+stopweb/hosts.py,sha256=8QxMRW89HcX3MuiK7dz5U5maghObrCQIbVgpVKX3txY,8029
+stopweb-0.1.0.dist-info/METADATA,sha256=vIr1t7ob5e9YJFXFAdmBSRtij-gQtDfCtqtQ5-br0pA,3216
+stopweb-0.1.0.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+stopweb-0.1.0.dist-info/entry_points.txt,sha256=TeShp9oVYxBQAI5HV9OJD13_7FRlh64TH1uISiaFFP4,44
+stopweb-0.1.0.dist-info/licenses/LICENSE,sha256=_AcxIO4MoktLNKQZUpk_i63F4p-Nd5tUjEd2YniUo34,1063
+stopweb-0.1.0.dist-info/RECORD,,
