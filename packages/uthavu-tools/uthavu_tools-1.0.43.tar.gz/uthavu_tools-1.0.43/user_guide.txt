@@ -1,0 +1,47 @@
+#todo
+- group id options
+- add dockerfile and gitlab-cicd before/while create repo - done
+- sudo nginx -t && sudo systemctl reload nginx - done
+- sudo certbot --nginx -d uthavu.com -d www.uthavu.com - done
+#todo
+
+- Point DNS (A records) for: `2fycleaningsolution.com → 72.60.97.244	` add for bto uthavu.com and www.uthavu.com
+- install our uthavu tools --> pip install uthavu-tools==1.0.23
+	-> pip show -f uthavu-tools
+- copy/move your source code to local system.
+- go inside this folder
+- execute [createrepo]
+- update the variables for cicd
+- execute [usnginx]
+- execute [ushttps] --> may be fater 30 mins, will take some time to update the dns to our new server 
+- need to open the port in hostiner
+
+
+5. Test:
+
+   * `https://2fycleaningsolution.com`
+   * `https://uthavu.com`
+   * `https://mithranassociates.com`
+
+
+output of ushttps:
+-------------------
+
+Till Success:
+-------------
+Certbot failed to authenticate some domains (authenticator: nginx). The Certificate Authority reported these problems:
+  Domain: uthavu.com
+  Type:   connection
+  Detail: During secondary validation: 162.215.226.4: Fetching http://: Invalid empty host in redirect target
+
+  Domain: www.uthavu.com
+  Type:   connection
+  Detail: During secondary validation: 162.215.226.4: Fetching http://: Invalid empty host in redirect target
+
+Hint: The Certificate Authority failed to verify the temporary nginx configuration changes made by Certbot. Ensure the listed domains point to this nginx server and that it is accessible from the internet.
+
+Some challenges have failed.
+Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
+
+After Success:
+-------------
