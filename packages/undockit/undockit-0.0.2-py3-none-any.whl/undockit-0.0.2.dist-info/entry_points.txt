@@ -1,0 +1,3 @@
+[console_scripts]
+undockit=undockit.main:main
+

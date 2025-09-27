@@ -1,0 +1,15 @@
+undockit/__init__.py,sha256=8K4IcOA3-pfzadoM6s2Sfg5460KlJUocGgyTJTJl96U,52
+undockit/__main__.py,sha256=oj5KVGqjZLB4Y6_f4Bw5I-oy8g4LrCFH0IYy_tLxNbA,143
+undockit/__version__.py,sha256=Nx_yBWY0FXGkae6N-vrZytnirWTvABUfz7rIdgvHN-8,162
+undockit/args.py,sha256=RbF5fxXv7fZc-lPDdY5epg4wok3dS0bN1nUCiwHbBbk,2108
+undockit/deploy.py,sha256=NbWVAvgJVuK9Oi1VFFaFRdZNo5zQUaxo_qfEuU5Upvo,4293
+undockit/install.py,sha256=5DVgITPX7jSG6CVMpFmXDgmY47en2tpnB25iEXvWoj0,3947
+undockit/main.py,sha256=0RpKuhjfworoxtdEXFYkL-aLRDRa7haRZKWAISxgEpk,2439
+undockit/backend/__init__.py,sha256=Hnl4WpaSWV3jy2fp9DYVp3rBGUI0IkJ30FJ5m9wpC34,531
+undockit/backend/base.py,sha256=Yf_yJiU-robmt4JQGvjL0-7edlEIGQI1dHcBjUt0-8c,2333
+undockit/backend/podman.py,sha256=lUdami7IOq0GG_HBYvp7l6ySROUDhqbpAkxx197ynSU,7506
+undockit-0.0.2.dist-info/entry_points.txt,sha256=bmM8I9A_AAeZ6EwZ6gmkbdVDhZi20q-OoyKJ9LOnpbg,47
+undockit-0.0.2.dist-info/licenses/LICENSE.md,sha256=7_BIuQ-veOrsF-WarH8kTkm0-xrCLvJ1PFE1C4Ebs64,146
+undockit-0.0.2.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+undockit-0.0.2.dist-info/METADATA,sha256=QUmzenMRK3Rs8wVBRbuhxGWZBUxaBxMExJhYsUnSqCw,1400
+undockit-0.0.2.dist-info/RECORD,,
