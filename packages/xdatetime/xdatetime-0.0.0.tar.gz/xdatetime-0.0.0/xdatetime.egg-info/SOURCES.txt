@@ -1,0 +1,7 @@
+README.md
+__init__.py
+setup.py
+xdatetime.egg-info/PKG-INFO
+xdatetime.egg-info/SOURCES.txt
+xdatetime.egg-info/dependency_links.txt
+xdatetime.egg-info/top_level.txt
