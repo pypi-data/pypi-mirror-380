@@ -1,0 +1,13 @@
+numpy
+pandas
+rdkit
+scikit-learn
+tqdm
+matplotlib
+
+[dev]
+pytest>=7.0.0
+
+[pka]
+torch>=2.0.0
+torch-geometric>=2.0.0

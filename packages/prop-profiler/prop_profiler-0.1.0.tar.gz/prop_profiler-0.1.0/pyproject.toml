@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prop-profiler"
+version = "0.1.0"
+description = "A molecular property profiler for drug discovery applications"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Enes Kelestemur", email = "enesk@email.unc.edu"}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "rdkit",
+    "scikit-learn",
+    "tqdm",
+    "matplotlib"
+]
+
+[project.optional-dependencies]
+pka = [
+    "torch>=2.0.0",
+    "torch-geometric>=2.0.0"
+]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/eneskelestemur/prop_profiler"
+Repository = "https://github.com/eneskelestemur/prop_profiler"
+
+[project.scripts]
+prop-profiler = "prop_profiler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prop_profiler*"]
+
+[tool.setuptools]
+include-package-data = true
