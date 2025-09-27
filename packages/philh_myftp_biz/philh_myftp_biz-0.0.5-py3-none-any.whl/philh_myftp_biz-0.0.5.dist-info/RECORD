@@ -1,0 +1,16 @@
+philh_myftp_biz/__init__.py,sha256=gxDqdPcgXwrKUDvbDaQxctZx8MQ6TemX-CbcpRgmLTE,689
+philh_myftp_biz/array.py,sha256=u3PSAaVWuPESKoQoz6wlyysiuyGbQ2hG0Gyegz1bSYU,4357
+philh_myftp_biz/classOBJ.py,sha256=LSnjL6sOUVklAnm20vwcgz0Wa46bgF4uPI6xjWB0LjY,1667
+philh_myftp_biz/db.py,sha256=KsYtxujufGSv4nN8N4wF7SN_Je8trxiwJ3k0zN62CN8,828
+philh_myftp_biz/file.py,sha256=Wj9D_23fkcYNJJPzzo43PaKjygmqwxPkBWOov73Q_AM,8281
+philh_myftp_biz/json.py,sha256=DfJEzpHylJ4S3o1F_HT36g9gr82LWFEsZwRUvaCi2p4,2622
+philh_myftp_biz/modules.py,sha256=9qyhHp4FyhUa92tGJHyjs877s_TbuQ3Clv_Ho3iTdh8,4813
+philh_myftp_biz/num.py,sha256=Ng2e1Xz9pdjxrbjIi0DuyR7gLLDzjSHUeeMMlMHLgt8,1073
+philh_myftp_biz/other.py,sha256=n8OsBVAesHrgexnkS_ifbi8ikoAi3-RnujJlzDuKy7g,5238
+philh_myftp_biz/pc.py,sha256=gQVsp71BPgaTIq5vEwC51gvqA7GdTafL_TcLofSEj5Y,17190
+philh_myftp_biz/text.py,sha256=gJeogN4R8lsNaW9JXYvuJS6aTGX2q6vkxwl1NvNjLRs,2849
+philh_myftp_biz/time.py,sha256=R6L1vaaJuHd_zfTWiHP-70qsZjXXw4zwHYV-Kc5wCL0,4439
+philh_myftp_biz/web.py,sha256=h2M96lqWyKaRM6dpkA2QIVfH-46USLvivglak4iaLto,18982
+philh_myftp_biz-0.0.5.dist-info/METADATA,sha256=MYh83X9iNADm9pvf4rVFPDshEZBSBB5Z5w6S2cvFHyM,692
+philh_myftp_biz-0.0.5.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+philh_myftp_biz-0.0.5.dist-info/RECORD,,
