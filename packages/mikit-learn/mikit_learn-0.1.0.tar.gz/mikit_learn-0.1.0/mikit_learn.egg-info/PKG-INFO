@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mikit-learn
+Version: 0.1.0
+Summary: Multi-instance machine learning in Python
+Author-email: Dmitry Zankov <dvzankov@gmail.com>
+License: MIT
+Description-Content-Type: text/x-rst
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: lightning
