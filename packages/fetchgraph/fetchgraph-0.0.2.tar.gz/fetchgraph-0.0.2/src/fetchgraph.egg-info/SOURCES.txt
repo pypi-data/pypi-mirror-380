@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/fetchgraph/__init__.py
+src/fetchgraph/core.py
+src/fetchgraph/utils.py
+src/fetchgraph.egg-info/PKG-INFO
+src/fetchgraph.egg-info/SOURCES.txt
+src/fetchgraph.egg-info/dependency_links.txt
+src/fetchgraph.egg-info/requires.txt
+src/fetchgraph.egg-info/top_level.txt
+src/fetchgraph/prompts/plan_generic.md
+src/fetchgraph/prompts/synth_generic.md
