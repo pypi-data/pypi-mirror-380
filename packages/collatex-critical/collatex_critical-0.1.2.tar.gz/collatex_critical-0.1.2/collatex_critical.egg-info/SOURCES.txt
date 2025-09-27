@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+collatex_critical.egg-info/PKG-INFO
+collatex_critical.egg-info/SOURCES.txt
+collatex_critical.egg-info/dependency_links.txt
+collatex_critical.egg-info/requires.txt
+collatex_critical.egg-info/top_level.txt
