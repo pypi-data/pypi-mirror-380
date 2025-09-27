@@ -1,0 +1,7 @@
+boto3_dataclass_iotsitewise/__init__.py,sha256=0qsmIt1-C2121K04nimBcW9dr_j4kMoC-JrR1gxEUM8,116
+boto3_dataclass_iotsitewise/caster.py,sha256=PSn6mMiT_3KVYH2J1fZpZAzKvg9tzgS-Phpew27SV8c,21036
+boto3_dataclass_iotsitewise/type_defs.py,sha256=xcKdGcoE-mT18NZchXsZESxg9Jdlxg0_iL9kjDTZ5dA,418869
+boto3_dataclass_iotsitewise-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iotsitewise-1.40.0.dist-info/METADATA,sha256=yUhafknNsiJJLQKwApwjy-pNfL4uJVot_v6loNqq1Zg,1669
+boto3_dataclass_iotsitewise-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iotsitewise-1.40.0.dist-info/RECORD,,
