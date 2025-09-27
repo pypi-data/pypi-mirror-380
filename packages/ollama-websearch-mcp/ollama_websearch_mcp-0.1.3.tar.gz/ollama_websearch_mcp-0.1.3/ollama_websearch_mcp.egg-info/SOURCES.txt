@@ -1,0 +1,10 @@
+README.md
+mcp_service.py
+pyproject.toml
+setup.py
+ollama_websearch_mcp.egg-info/PKG-INFO
+ollama_websearch_mcp.egg-info/SOURCES.txt
+ollama_websearch_mcp.egg-info/dependency_links.txt
+ollama_websearch_mcp.egg-info/entry_points.txt
+ollama_websearch_mcp.egg-info/requires.txt
+ollama_websearch_mcp.egg-info/top_level.txt
