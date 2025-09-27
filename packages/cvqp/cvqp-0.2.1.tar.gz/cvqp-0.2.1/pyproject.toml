@@ -1,0 +1,75 @@
+[project]
+name = "cvqp"
+version = "0.2.1"
+description = "A Python implementation of the CVQP solver for CVaR-constrained quadratic programs"
+authors = [
+    {name = "David Pérez Piñeiro"},
+    {name = "Eric Luxenberg"}
+]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Repository = "https://github.com/cvxgrp/cvqp"
+
+[project.optional-dependencies]
+test = ["pytest>=8.3.5", "cvxpy>=1.6.0"]
+dev = [
+    "ipykernel>=6.29.5",
+    "jupyter>=1.1.1",
+    "mosek>=10.2.8",
+    "pyinstrument>=5.0.0",
+    "pandas>=2.2.3",
+    "black>=24.10.0",
+    "line-profiler>=4.2.0",
+    "pytest>=8.3.5",
+    "pre-commit>=4.2.0",
+    "ruff>=0.12.0",
+    "tqdm>=4.67.1",
+    "cvxpy>=1.6.0",
+    "matplotlib>=3.9.2"
+]
+
+[build-system]
+requires = ["setuptools>=61", "pybind11>=2.10.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cvqp*"]
+
+[tool.setuptools.package-data]
+cvqp = ["libs/*.cpp", "libs/*.h", "py.typed"]
+
+[tool.cibuildwheel]
+build-verbosity = 1
+skip = "cp38-* cp39-* pp* *-musllinux*"
+archs = ["auto"]
+before-build = "pip install pybind11 numpy"
+test-requires = "pytest numpy scipy"
+test-command = "pytest {project}/tests/test_cpp_extension.py -v"
+
+[tool.cibuildwheel.macos]
+archs = ["x86_64", "arm64"]
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64"]
+
+[tool.cibuildwheel.windows]
+archs = ["AMD64"]
