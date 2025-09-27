@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+tests/TestBot.py
+zns_discord_bot/__init__.py
+zns_discord_bot/logger_base.py
+zns_discord_bot/zns_discord_bot.py
+zns_discord_bot.egg-info/PKG-INFO
+zns_discord_bot.egg-info/SOURCES.txt
+zns_discord_bot.egg-info/dependency_links.txt
+zns_discord_bot.egg-info/requires.txt
+zns_discord_bot.egg-info/top_level.txt
+zns_discord_bot/components/__init__.py
+zns_discord_bot/components/easy_embed.py
+zns_discord_bot/utils/__init__.py
+zns_discord_bot/utils/channel_utils.py
+zns_discord_bot/utils/message_utils.py
