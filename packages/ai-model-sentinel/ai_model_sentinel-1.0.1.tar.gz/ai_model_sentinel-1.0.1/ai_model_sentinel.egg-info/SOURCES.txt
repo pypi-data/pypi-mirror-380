@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ai_model_sentinel.egg-info/PKG-INFO
+ai_model_sentinel.egg-info/SOURCES.txt
+ai_model_sentinel.egg-info/dependency_links.txt
+ai_model_sentinel.egg-info/entry_points.txt
+ai_model_sentinel.egg-info/requires.txt
+ai_model_sentinel.egg-info/top_level.txt
