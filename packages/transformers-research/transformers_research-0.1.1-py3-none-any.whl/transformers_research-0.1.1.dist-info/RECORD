@@ -1,0 +1,11 @@
+transformers_research/__init__.py,sha256=8zLGg-DfQhnDl2Ky0n-zXpN-8e-g7iR0AcaI4l4Vvpk,32
+transformers_research/version.py,sha256=DPHyWzMNBvG0_yw7E6c_1kjVGI6yVJgRCagiNsKhBj8,47
+transformers_research/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformers_research/models/attention.py,sha256=-CIQ4czhuGfzQWpZYaVgggYmQVwUjnmabMyOjistHXM,2981
+transformers_research/models/norm.py,sha256=BrJTAyLwpl8SZh6S72zo_2N14ceoOWum9fP4FjNY8b8,4582
+transformers_research/models/vanilla.py,sha256=CvIioViASj1XcEDzJfmHLWhSXYlXtjwQuK7a0w7gQcM,241
+transformers_research/models/vision.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformers_research-0.1.1.dist-info/METADATA,sha256=_B8v1y9RZN4simJVWiviZUt8ZbJQGAJWYd-S-bzZddQ,342
+transformers_research-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+transformers_research-0.1.1.dist-info/top_level.txt,sha256=GJ1Xg0BVWlEZoxaJphxlCRHfZusAFbfn98f8gFvFRks,22
+transformers_research-0.1.1.dist-info/RECORD,,
