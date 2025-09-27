@@ -1,0 +1,16 @@
+ab_core/impersonation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/impersonation/impersonator/__init__.py,sha256=lgKo9rZq9NEQDqok0lrwq2i9Qn7l3uJTxojTnBnyUl4,525
+ab_core/impersonation/impersonator/base.py,sha256=DQFvQwxJFQj_Kg4M-KGHVdozlOwQWSB3NnHklV_0Zy0,1308
+ab_core/impersonation/impersonator/template.py,sha256=hflsYvcQLC6CLLRyIE_Pho3eMTA1kjX0YvkKIf6atX0,1563
+ab_core/impersonation/impersonator/playwright/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/impersonation/impersonator/playwright/base.py,sha256=mml-VNhvte1bYbHm5YHB7h5PP5huNxDtRB23OXIRGJU,3301
+ab_core/impersonation/impersonator/playwright/browserless.py,sha256=clQfApy3WnyobOgA391Q7s1DmsO9K4Q7Fo-BWoQaAew,3687
+ab_core/impersonation/impersonator/playwright/cdp.py,sha256=0hKl47VG6STQHq4qdGgY1-EVqdWWoxLef1wB6hvw7PU,2699
+ab_core/impersonation/impersonator/playwright/standard.py,sha256=lWmD8_JxriNIAlzQsem0o0pD5EIH9S3wJU-IEdGb6P4,1591
+ab_core/impersonation/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/impersonation/schema/impersonation_exchange.py,sha256=vM414K0yhsRSb97tDUEn1Mf3YalACjFrwIkxQcVfEHg,1264
+ab_core/impersonation/schema/impersonation_tool.py,sha256=Wau1lpzf_Gu2v7O7a15jgE8-KX8ZOTAKd7pq0US4CRc,298
+ab_impersonation-0.1.1.dist-info/METADATA,sha256=efdcqnKhrQISHUGBk9wQoCeGuQYHi2iht2-9CXjpqt8,435
+ab_impersonation-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ab_impersonation-0.1.1.dist-info/licenses/LICENSE,sha256=REBFOD_HdKi9ZZ38nP3A_NjpLFaijF1A6_PDiMglbLk,1072
+ab_impersonation-0.1.1.dist-info/RECORD,,
