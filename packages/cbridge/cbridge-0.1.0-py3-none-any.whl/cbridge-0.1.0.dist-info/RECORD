@@ -1,0 +1,8 @@
+cbridge/__init__.py,sha256=8XdJb2MftXO2zj6ZJAbASxdurlWaKpiu_NE4TJf6Bo4,239
+cbridge/cbridge.py,sha256=QzqU7kNLjVlRxzlPvrbWmqsV_7HfS-jslMRiULI_Q6g,3161
+cbridge/cfunc.py,sha256=xw6eowQaOiM4rRS0gj6BwcG12fu7XIw-Mya_h1rkokw,1374
+cbridge/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbridge/types.py,sha256=X802qNlJGmAETqp2r0pFNji-girWh_07cNreG3-Mv_o,3684
+cbridge-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+cbridge-0.1.0.dist-info/METADATA,sha256=tqlqYFqoE6mB9oZb5Dnw_NhsPda1VSnU0CXYqCslVaw,5485
+cbridge-0.1.0.dist-info/RECORD,,
