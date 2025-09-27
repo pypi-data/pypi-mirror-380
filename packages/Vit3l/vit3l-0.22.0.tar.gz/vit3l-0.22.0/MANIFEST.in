@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include pyproject.toml
+recursive-include examples *
+recursive-exclude examples __pycache__
+recursive-exclude examples *.pyc
+recursive-exclude examples node_modules
+recursive-exclude examples dist
+recursive-exclude examples .vite

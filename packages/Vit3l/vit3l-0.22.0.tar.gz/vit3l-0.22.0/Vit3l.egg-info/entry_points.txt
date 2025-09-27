@@ -1,0 +1,2 @@
+[console_scripts]
+vit3l = vit3l.__main__:main
