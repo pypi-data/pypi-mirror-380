@@ -1,0 +1,8 @@
+[project]
+name = "backwardpipl"
+version = "0.1.0"
+description = "A function decoration that let the function go backward by setting the new argument backward to True."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Cedrick Gauthier", email = "spinachlang@proton.me" }]

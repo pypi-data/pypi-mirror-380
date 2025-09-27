@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: backwardpipl
+Version: 0.1.0
+Summary: A function decoration that let the function go backward by setting the new argument backward to True.
+Author-email: Cedrick Gauthier <spinachlang@proton.me>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# backwardpipl
+A python function decorator to make a function reversable. It adds a "backward" parameter defaulting at false but once set at true, the function go bottom up.
