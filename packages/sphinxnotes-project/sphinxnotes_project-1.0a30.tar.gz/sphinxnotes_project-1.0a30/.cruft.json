@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/sphinx-notes/cookiecutter",
+  "commit": "14dd2c64b2ac3a9ad79ce460ee7e7d198af06b48",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "namespace": "sphinxnotes",
+      "name": "project",
+      "full_name": "sphinxnotes-project",
+      "author": "Shengyu Zhang",
+      "description": "A Sphinx extension that provides useful directives for creating project documentation",
+      "version": "0.1",
+      "github_owner": "sphinx-notes",
+      "github_repo": "project",
+      "pypi_name": "sphinxnotes-project",
+      "pypi_owner": "SilverRainZ",
+      "is_python_project": true,
+      "python_version": "3.12",
+      "is_sphinx_extension": true,
+      "sphinx_version": "7.0",
+      "development_status": "3 - Alpha",
+      "_template": "https://github.com/sphinx-notes/cookiecutter",
+      "_commit": "14dd2c64b2ac3a9ad79ce460ee7e7d198af06b48"
+    }
+  },
+  "directory": null
+}
