@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: undockit
+Version: 0.0.3
+Summary: run dockerfiles as commands
+Author-email: Gareth Davidson <gaz@bitplane.net>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: coverage ; extra == "dev"
+Requires-Dist: pytest-cov ; extra == "dev"
+Requires-Dist: build ; extra == "dev"
+Requires-Dist: twine ; extra == "dev"
+Requires-Dist: ruff ; extra == "dev"
+Requires-Dist: pydoc-markdown ; extra == "dev"
+Project-URL: Bug Tracker, https://github.com/bitplane/undockit/issues
+Project-URL: Homepage, https://github.com/bitplane/undockit
+Project-URL: Repository, https://github.com/bitplane/undockit
+Provides-Extra: dev
+
+# undockit
+
+Run docker containers like they're native commands.
+
+
+## Setup
+
+Deps:
+
+1. nvidia drivers
+2. nvidia-container-toolkit
+3. `podman`
+
+Now create a CDI config:
+
+```bash
+sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+```
+
+Then install `undockit` from pypi. You could use pipx or uv, it'll work all
+the same:
+
+```bash
+pip install undockit
+```
+
+## Usage
+
+To install a container as an executable, use the install command:
+
+```bash
+undockit install docker.io/bitplanenet/whisper
+```
+
+This will add an executable Dockerfile with the undockit runtime as the shebang
+into your `~/.local/bin` dir or `$PREFIX`. You can override that location;
+see `--help` for details
+
+You can now run it:
+
+```bash
+whisper --help
+```
+
+## Links
+
+* [🏠 home](https://bitplane.net/dev/python/undockit)
+* [🐱 github](https://github.com/bitplane/undockit)
+* [🐍 pypi](https://pypi.org/project/undockit)
+* [📖 pydoc](https://bitplane.net/dev/python/undockit/pydoc)
+
