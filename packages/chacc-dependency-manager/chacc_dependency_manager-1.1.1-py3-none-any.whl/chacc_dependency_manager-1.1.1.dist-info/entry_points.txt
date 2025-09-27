@@ -1,0 +1,4 @@
+[console_scripts]
+cdm = chacc.cli:main
+chacc-dependency-manager = chacc.cli:main
+chacc-dm = chacc.cli:main
