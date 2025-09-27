@@ -1,0 +1,8 @@
+bestllm/__init__.py,sha256=HNUUsL21yFOJVvQOqZHQixH74BaOi45UbiqMV0gwSWM,1703
+bestllm/hardware.py,sha256=Fi2tU43bKvGJWax77tt2l74URWpE9dp2nkH-hA3MFq0,3508
+bestllm/models.py,sha256=Wd73ensO9BWYGccQGcTpay9ThTG_BWcsSeU49kVWVv8,2673
+bestllm/selector.py,sha256=DL96HiscYwfuziVnUNcvMEgL7dv6dlIfiRRx9kM97Js,2022
+bestllm-0.0.1.dist-info/WHEEL,sha256=Jb20R3Ili4n9P1fcwuLup21eQ5r9WXhs4_qy7VTrgPI,79
+bestllm-0.0.1.dist-info/entry_points.txt,sha256=hFN0ucKwKt6HjsYk1cqEfYkcpBuZcwoPYmh812SHoSg,42
+bestllm-0.0.1.dist-info/METADATA,sha256=YOsdzqkd6Z0CJlefUnY12507zF3ZneL-M7MNNZ1hyRQ,4167
+bestllm-0.0.1.dist-info/RECORD,,
