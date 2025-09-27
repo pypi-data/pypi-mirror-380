@@ -1,0 +1,7 @@
+boto3_dataclass_iot_managed_integrations/__init__.py,sha256=pwYgpA9OfopjQ2ZByXbWer23w3TfGQUuKW-lcRKZSwk,142
+boto3_dataclass_iot_managed_integrations/caster.py,sha256=Tp6TTnZsXI43sDXN2n9yA4iD-wv0c_Gpq1Q9NRIjo4Y,17694
+boto3_dataclass_iot_managed_integrations/type_defs.py,sha256=YjJAuV1OYxGnEkkKJWsd8rvhhXYHYBNGxdrKbGt-98o,221617
+boto3_dataclass_iot_managed_integrations-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iot_managed_integrations-1.40.0.dist-info/METADATA,sha256=llFYbUtosD-2O9DDWECezEEtr86DZBFICukKPrBY4no,1760
+boto3_dataclass_iot_managed_integrations-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iot_managed_integrations-1.40.0.dist-info/RECORD,,
