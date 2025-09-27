@@ -1,0 +1,7 @@
+boto3_dataclass_geo_places/__init__.py,sha256=ljecw3BXkw0qok0ie5zwS7l2fydF4aeDKGa1wWxh51I,114
+boto3_dataclass_geo_places/caster.py,sha256=cnjzLrvPyB5uRx13qPJixQg0KO8RwfvoCTJYJENbdaQ,1465
+boto3_dataclass_geo_places/type_defs.py,sha256=gmy0qQT8eacAmheperI_GMxdsk1elMjkIIWNp1t_B6k,83568
+boto3_dataclass_geo_places-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_geo_places-1.40.0.dist-info/METADATA,sha256=nmITC6tQl0BgkeSalUKPBMD88olEfPrC1ePIdw1EF0w,1662
+boto3_dataclass_geo_places-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_geo_places-1.40.0.dist-info/RECORD,,
