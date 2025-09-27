@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/crudle/__init__.py
+src/crudle/query_params_model.py
+src/crudle/utils.py
+src/crudle.egg-info/PKG-INFO
+src/crudle.egg-info/SOURCES.txt
+src/crudle.egg-info/dependency_links.txt
+src/crudle.egg-info/requires.txt
+src/crudle.egg-info/top_level.txt
+src/crudle/adapters/__init__.py
+src/crudle/adapters/sqlalchemy/__init__.py
+src/crudle/adapters/sqlalchemy/adapter.py
+src/crudle/adapters/sqlalchemy/helpers.py
+src/crudle/adapters/sqlalchemy/query_builder.py
+src/crudle/adapters/sqlalchemy/query_field.py
