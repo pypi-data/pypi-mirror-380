@@ -1,0 +1,662 @@
+Metadata-Version: 2.4
+Name: schwab_sdk_unofficial
+Version: 0.1.1
+Summary: Cliente ligero para API de Schwab: OAuth, REST y Streaming WebSocket
+Author: Schwab SDK Contributors
+License-Expression: MIT
+Project-URL: Homepage, https://pypi.org/project/schwab-sdk/
+Project-URL: Repository, https://github.com/your-org/schwab-sdk
+Keywords: schwab,trading,market-data,websocket,sdk,api
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: Flask>=3.1.0
+Requires-Dist: cryptography>=41.0.0
+Dynamic: license-file
+
+# Schwab SDK (Python)
+
+Cliente ligero para la API de Schwab: OAuth, REST (Trader/Market Data) y Streaming WebSocket.
+
+- Enfoque: wrappers directos, sin validaciones complejas; manejo robusto de tokens, refresh y reintentos.
+- Cobertura: Accounts, Orders, Market Data y Streaming (Level One, Book, Chart, Screener, Account Activity).
+
+## Instalación
+
+Paquete PyPI no oficial (nombre de distribución):
+```bash
+pip install schwab_sdk_unofficial
+```
+
+Import en código (módulo):
+```python
+from schwab_sdk import Client
+```
+
+⚠️ Nota: El nombre del paquete en PyPI es `schwab_sdk_unofficial`, pero el import se mantiene como `schwab_sdk` para una API limpia.
+
+## Tabla de contenidos
+- [Requisitos](#requisitos)
+- [Configuración](#configuración)
+- [Inicio rápido](#inicio-rápido)
+- [Autenticación (OAuth)](#autenticación-oauth)
+- [Manejo de requests y errores (REST)](#manejo-de-requests-y-errores-rest)
+- [Accounts (`accounts.py`)](#accounts-accountspy)
+- [Orders (`orders.py`)](#orders-orderspy)
+- [Market Data (`marketpy`)](#market-data-marketpy)
+- [Streaming WebSocket (`streamingpy`)](#streaming-websocket-streamingpy)
+  - [Formatos de claves (tabla rápida)](#formatos-de-claves-tabla-rápida)
+  - [Ejemplos por servicio](#ejemplos-por-servicio)
+  - [Utilidades](#utilidades)
+  - [Campos recomendados](#campos-recomendados)
+  - [Guía rápida de campos (IDs → significado)](#guía-rápida-de-campos-ids--significado)
+  - [Estructura de frames](#estructura-de-frames)
+- [Troubleshooting avanzado](#troubleshooting-avanzado)
+- [Contribuciones](#contribuciones)
+- [Disclaimer](#disclaimer)
+- [Licencia](#licencia)
+
+## Requisitos
+
+- Python 3.9+
+- Instalar dependencias:
+
+```bash
+pip install requests websocket-client flask
+```
+
+## Configuración
+
+Crear `.env` (o exportar variables de entorno):
+
+```env
+SCHWAB_CLIENT_ID=tu_client_id
+SCHWAB_CLIENT_SECRET=tu_client_secret
+SCHWAB_REDIRECT_URI=https://127.0.0.1:8080/callback
+```
+
+Los tokens se guardan en `schwab_tokens.json` y se rotan automáticamente (access ~29min; aviso de re-login al expirar refresh ~7d).
+
+## Inicio rápido
+
+```python
+from schwab_sdk import Client
+import os
+
+client = Client(
+    os.environ['SCHWAB_CLIENT_ID'],
+    os.environ['SCHWAB_CLIENT_SECRET'],
+    os.environ.get('SCHWAB_REDIRECT_URI','https://127.0.0.1:8080/callback')
+)
+
+# Primer uso: login OAuth (abre el navegador)
+client.login()
+
+# REST
+quotes = client.market.get_quotes(["AAPL","MSFT"])  # Market Data
+accounts = client.account.get_accounts()               # Cuentas
+
+# Streaming (Level One equities)
+ws = client.streaming
+ws.on_data(lambda f: print("DATA", f))
+ws.connect(); ws.login()
+ws.equities_subscribe(["AAPL"]) 
+```
+
+## Autenticación (OAuth)
+
+- `client.login(timeout=300, auto_open_browser=True)`
+- Útiles: `client.has_valid_token()`, `client.refresh_token_now()`, `client.logout()`
+- Internamente: servidor HTTPS callback adhoc (dev), intercambio de code por tokens, auto-refresh y aviso al expirar refresh.
+
+## Manejo de requests y errores (REST)
+
+Todas las llamadas REST usan `Client._request()` con:
+- Headers de Authorization automáticos
+- Reintento de refresh en 401 (una vez) y reenvío inmediato
+- Reintentos con backoff para 429/5xx (exponencial con factor 0.5)
+
+---
+
+## Accounts (`accounts.py`)
+
+### get_account_numbers() -> List[dict]
+- GET `/accounts/accountNumbers`
+- Devuelve pares `accountNumber` y `hashValue`.
+- Ejemplo de respuesta:
+```json
+[
+  {"accountNumber":"12345678","hashValue":"827C...AC12"}
+]
+```
+
+### get_accounts(params: dict|None=None) -> dict
+- GET `/accounts`
+- Parámetros (query):
+  - `fields` (opcional): actualmente la API acepta `positions` para devolver posiciones. Ej.: `fields=positions`.
+
+### get_account_by_id(account_hash: str, params: dict|None=None) -> dict
+- GET `/accounts/{accountNumber}`
+- `account_hash`: identificador cifrado de la cuenta (`hashValue`).
+- Parámetros (query):
+  - `fields` (opcional): `positions` para incluir posiciones. Ej.: `fields=positions`.
+
+### find_account(last_4_digits: str) -> dict|None
+- Helper que usa `get_account_numbers()` y filtra por los últimos 4 dígitos para luego llamar `get_account_by_id`.
+
+### get_transactions(account_hash: str, from_date: str|None, to_date: str|None, filters: dict|None=None) -> dict
+- GET `/accounts/{accountHash}/transactions`
+- **UNA FECHA REQUERIDA**: puedes pasar solo `from_date` o solo `to_date`. Si pasas una sola fecha, el SDK completará la otra para el mismo día:
+  - Formato corto `YYYY-MM-DD`: start → `YYYY-MM-DDT00:00:00.000Z`, end → `YYYY-MM-DDT23:59:59.000Z`
+  - Formato ISO UTC completo `YYYY-MM-DDTHH:MM:SS.ffffffZ`: se usa tal cual; si falta la otra fecha, se deriva con las 00:00:00.000Z o 23:59:59.000Z del mismo día.
+- Params:
+  - `startDate`: ISO UTC - `YYYY-MM-DDTHH:MM:SS.ffffffZ` (o corto `YYYY-MM-DD`)
+  - `endDate`: ISO UTC - `YYYY-MM-DDTHH:MM:SS.ffffffZ` (o corto `YYYY-MM-DD`)
+  - `filters`: dict opcional:
+    - `types`: string con tipos válidos: `TRADE`, `RECEIVE_AND_DELIVER`, `DIVIDEND_OR_INTEREST`, `ACH_RECEIPT`, `ACH_DISBURSEMENT`, `CASH_RECEIPT`, `CASH_DISBURSEMENT`, `ELECTRONIC_FUND`, `WIRE_OUT`, `WIRE_IN`, `JOURNAL`
+    - `symbol`: símbolo específico
+    - `status`: estado de transacciones
+  
+  Nota: En algunas configuraciones de la API `types` puede considerarse obligatorio. El SDK no lo exige y lo trata como filtro opcional.
+
+**Ejemplo correcto**:
+```python
+from datetime import datetime, timezone, timedelta
+
+# Obtener hashValue
+hash_value = client.account.get_account_numbers()[0]['hashValue']
+
+# Crear fechas en formato UTC
+start = datetime.now(timezone.utc) - timedelta(days=7)
+start = start.replace(hour=0, minute=0, second=0, microsecond=0)
+end = datetime.now(timezone.utc).replace(hour=23, minute=59, second=59, microsecond=999999)
+
+# Llamada correcta
+transactions = client.account.get_transactions(
+    account_number=hash_value,  # ¡Usar hashValue!
+    from_date=start.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+    to_date=end.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+    filters={"types": "TRADE,DIVIDEND_OR_INTEREST"}  # Opcional
+)
+```
+
+### get_transaction(account_hash: str, transaction_id: str) -> dict
+- GET `/accounts/{accountHash}/transactions/{transactionId}`
+- Parámetros (path):
+  - `account_hash` (requerido)
+  - `transaction_id` (requerido): ID numérico de la transacción
+- Devuelve el detalle de una transacción específica.
+
+### get_user_preferences() -> dict
+- GET `/userPreference`
+- Devuelve preferencias del usuario y, cuando aplica, información del streamer necesaria para WebSocket:
+  - `streamerSocketUrl`
+  - `schwabClientCustomerId`
+  - `schwabClientCorrelId`
+  - `SchwabClientChannel`
+  - `SchwabClientFunctionId`
+- Útil para inicializar `client.streaming` (LOGIN y suscripciones).
+
+---
+
+## Orders (`orders.py`)
+
+Todas las respuestas incluyen metadatos HTTP y los datos nativos:
+```json
+{
+  "status_code": 200,
+  "success": true,
+  "headers": {"...": "..."},
+  "url": "https://...",
+  "elapsed_seconds": 0.42,
+  "method": "GET|POST|PUT|DELETE",
+  "params": {"...": "..."},
+  "data": {},
+  "order_id": "..."   
+}
+```
+
+### get_orders(account_hash, from_entered_time=None, to_entered_time=None, status=None, max_results=None) -> dict
+- GET `/accounts/{accountNumber}/orders`
+- Requisitos de la API: `fromEnteredTime` y `toEnteredTime` son obligatorios (ISO-8601). El SDK los completa a "últimos 60 días" si no los pasas.
+- `status` (case-insensitive): se normaliza a mayúsculas. Valores aceptados por la API:
+  `AWAITING_PARENT_ORDER`, `AWAITING_CONDITION`, `AWAITING_STOP_CONDITION`, `AWAITING_MANUAL_REVIEW`, `ACCEPTED`, `AWAITING_UR_OUT`, `PENDING_ACTIVATION`, `QUEUED`, `WORKING`, `REJECTED`, `PENDING_CANCEL`, `CANCELED`, `PENDING_REPLACE`, `REPLACED`, `FILLED`, `EXPIRED`, `NEW`, `AWAITING_RELEASE_TIME`, `PENDING_ACKNOWLEDGEMENT`, `PENDING_RECALL`, `UNKNOWN`.
+- `maxResults` (opcional): límite de registros (por defecto API 3000).
+- Formato de fecha/hora: ISO-8601 `YYYY-MM-DDTHH:MM:SS.000Z`.
+
+### get_all_orders(from_entered_time=None, to_entered_time=None, status=None, max_results=None) -> dict
+- GET `/orders`
+- Requisitos de la API: `fromEnteredTime` y `toEnteredTime` son obligatorios (ISO-8601). Si no los pasas, el SDK usa "últimos 60 días".
+- Filtros idénticos a `get_orders` (incluye normalización de `status`).
+- `maxResults` (opcional): límite de registros (por defecto API 3000).
+
+### place_order(account_number: str, order_data: dict) -> dict
+- POST `/accounts/{accountNumber}/orders`
+- Extrae `order_id` del header `Location` cuando está presente.
+
+### get_order(account_hash: str, order_id: str) -> dict
+- GET `/accounts/{accountNumber}/orders/{orderId}`
+
+### cancel_order(account_hash: str, order_id: str) -> dict
+- DELETE `/accounts/{accountNumber}/orders/{orderId}`
+- Intenta extraer `order_id` desde `Location` si el servidor lo devuelve.
+
+### replace_order(account_hash: str, order_id: str, new_order_data: dict) -> dict
+- PUT `/accounts/{accountNumber}/orders/{orderId}`
+- Devuelve nuevo `order_id` (de `Location`) cuando aplica.
+
+### preview_order(account_hash: str, order_data: dict) -> dict
+- POST `/accounts/{accountNumber}/previewOrder`
+- Intenta extraer `order_id` desde `Location` si el servidor lo devuelve.
+
+### Helpers de payload
+
+- `build_limit_order(symbol, quantity, price, instruction="BUY")`
+- `build_market_order(symbol, quantity, instruction="BUY")`
+- `build_bracket_order(symbol, quantity, entry_price, take_profit_price, stop_loss_price)`
+
+Ejemplo (preview):
+```python
+acc = client.account.get_account_numbers()[0]['hashValue']
+order = client.orders.build_limit_order("AAPL", 1, 100.00)
+preview = client.orders.preview_order(acc, order)
+```
+
+---
+
+## Market Data (`market.py`)
+
+### get_quotes(symbols: str|List[str], params: dict|None=None) -> dict
+- GET `/quotes?symbols=...`
+- Parámetros:
+  - `symbols` (requerido): str o lista de símbolos separados por coma. Ej.: `AAPL,AMZN,$DJI,/ESH23`.
+  - `params` (opcional):
+    - `fields`: subconjunto de datos. Valores: `quote`, `fundamental`, `extended`, `reference`, `regular`. Por defecto: todos.
+    - `indicative`: boolean (`true|false`) para incluir cotizaciones indicativas (p.ej., ETFs). Ej.: `indicative=false`.
+
+### get_quote(symbol: str, params: dict|None=None) -> dict
+- GET `/{symbol}/quotes`
+- Parámetros:
+  - `symbol` (requerido): símbolo único (ej.: `TSLA`).
+  - `params` (opcional):
+    - `fields`: igual que en `get_quotes`.
+
+### get_option_chain(symbol: str, params: dict|None=None) -> dict
+- GET `/chains`
+- Parámetros:
+  - `symbol` (requerido)
+  - `contractType` (opcional): `CALL`, `PUT`, `ALL`
+  - `strikeCount` (opcional): int (nº de strikes arriba/abajo del ATM)
+  - `includeUnderlyingQuote` (opcional): boolean
+  - `strategy` (opcional): `SINGLE`, `ANALYTICAL`, `COVERED`, `VERTICAL`, `STRADDLE`, etc.
+  - `interval` (opcional): número (intervalo entre strikes para spreads)
+  - `strike` (opcional): número (strike específico)
+  - `range` (opcional): `ITM`, `NTM`, `OTM`, `ALL`
+  - `fromDate` / `toDate` (opcional): `YYYY-MM-DD` (el SDK también acepta ISO y recorta a fecha)
+  - `volatility`, `underlyingPrice`, `interestRate`, `daysToExpiration` (opcionales): para `ANALYTICAL`
+  - `expMonth` (opcional): `JAN`–`DEC`, `ALL`
+  - `optionType` (opcional)
+  - `entitlement` (opcional): tipo de cliente (`PN`, `NP`, `PP`)
+
+- GET `/expirationchain`
+- Parámetros:
+  - `symbol` (requerido)
+
+### get_price_history(symbol, periodType="month", period=1, frequencyType="daily", frequency=1, startDate=None, endDate=None, params=None) -> dict
+- GET `/pricehistory`
+- Parámetros:
+  - `periodType`: `day|month|year|ytd`
+  - `period`: int
+  - `frequencyType`: `minute|daily|weekly|monthly`
+  - `frequency`: int
+  - `startDate`/`endDate` (ms desde epoch)
+  - Extra opcionales (`needExtendedHoursData`, etc., según permisos)
+
+### get_movers(symbol_id: str, params: dict|None=None) -> dict
+- GET `/movers/{symbol_id}` (p.ej., `$DJI`, `$SPX`, `NASDAQ`)
+- Parámetros (si aplica):
+  - `sort`: `VOLUME`, `TRADES`, `PERCENT_CHANGE_UP`, `PERCENT_CHANGE_DOWN`
+  - `frequency`: `0,1,5,10,30,60` (min). Por defecto `0`.
+
+### get_markets(params: dict|None=None) -> dict
+- GET `/markets`
+- Parámetros (query):
+  - `markets` (requerido por API): array de `equity`, `option`, `bond`, `future`, `forex` (el SDK acepta `params={"markets": ...}`)
+  - `date` (opcional): `YYYY-MM-DD` (si envías ISO, el SDK recorta a fecha)
+
+### get_market_hours(market_id: str, params: dict|None=None) -> dict
+- GET `/markets/{market_id}` (`equity`, `option`, `bond`, `forex`)
+- Parámetros (query):
+  - `date` (opcional): `YYYY-MM-DD` (si envías ISO, el SDK recorta a fecha)
+
+### get_instruments(symbols: str|List[str], projection: str, extra_params: dict|None=None) -> dict
+- GET `/instruments`
+- Parámetros:
+  - `symbols` (requerido): símbolo único o lista separada por comas
+  - `projection` (requerido por API): `symbol-search`, `symbol-regex`, `desc-search`, `desc-regex`, `search`, `fundamental`  
+    Nota: el SDK no lo exige en la firma pero se recomienda proveerlo.
+
+### get_instrument_by_cusip(cusip_id: str, params: dict|None=None) -> dict
+- GET `/instruments/{cusip_id}`
+
+---
+
+## Streaming WebSocket (`streaming.py`)
+
+### Callbacks
+- `on_data(fn)`  (frames de datos)
+- `on_response(fn)`  (confirmaciones/errores de comandos)
+- `on_notify(fn)`  (heartbeats/avisos)
+
+### Flujo básico
+```python
+ws = client.streaming
+ws.on_data(lambda f: print("DATA", f))
+ws.on_response(lambda f: print("RESP", f))
+ws.on_notify(lambda f: print("NOTIFY", f))
+ws.connect(); ws.login()  # Authorization = access token sin "Bearer"
+ws.equities_subscribe(["AAPL","MSFT"])             # LEVELONE_EQUITIES
+ws.options_subscribe(["AAPL  250926C00257500"])      # LEVELONE_OPTIONS
+ws.nasdaq_book(["MSFT"])                             # NASDAQ_BOOK
+ws.chart_equity(["AAPL"])                            # CHART_EQUITY
+ws.screener_equity(["NYSE_VOLUME_5"])                # SCREENER_EQUITY
+```
+
+### Formatos de claves (tabla rápida)
+
+| Tipo           | Formato                                 | Ejemplo                         | Notas                                                |
+|----------------|-----------------------------------------|----------------------------------|------------------------------------------------------|
+| Equities       | Ticker                                  | `AAPL`, `MSFT`                   | Mayúsculas                                           |
+| Options        | `RRRRRR␣␣YYMMDD[C/P]STRIKE`            | `AAPL  250926C00257500`          | Dos espacios; strike acolchonado (8+ dígitos)        |
+| Futures        | `/<root><month><yy>`                    | `/ESZ25`                         | Root/mes/año en mayúsculas                           |
+| FuturesOptions | `./<root><month><year><C/P><strike>`    | `./OZCZ23C565`                   | Dependiente del feed                                 |
+| Forex          | `PAIR`                                  | `EUR/USD`, `USD/JPY`             | Separador `/`                                        |
+| Screener       | `PREFIX_SORTFIELD_FREQUENCY`            | `NYSE_VOLUME_5`                  | Prefijo/criterio/frecuencia                          |
+
+### Ejemplos por servicio
+
+#### Level One Options
+```python
+ws.options_subscribe(["AAPL  250926C00257500"])  # cadena estándar de opciones
+# Campos por defecto: 0,2,3,4,8,16,17,18,20,28,29,30,31,37,44
+```
+
+#### Level One Futures
+```python
+ws.futures_subscribe(["/ESZ25"])  # E-mini S&P 500 Dec 2025
+# Campos por defecto: 0,1,2,3,4,5,8,12,13,18,19,20,24,33
+```
+
+#### Level One Forex
+```python
+ws.forex_subscribe(["EUR/USD","USD/JPY"])  
+# Campos por defecto: 0,1,2,3,4,5,6,7,8,9,10,11,15,16,17,20,21,27,28,29
+```
+
+#### Book (Level II)
+```python
+ws.nasdaq_book(["MSFT"])  # También: ws.nyse_book, ws.options_book
+# Campos por defecto: 0 (Symbol), 1 (BookTime), 2 (Bids), 3 (Asks)
+```
+
+#### Chart (Series)
+```python
+ws.chart_equity(["AAPL"])      # 0..7: key, open, high, low, close, volume, sequence, chartTime
+ws.chart_futures(["/ESZ25"])   # 0..5
+```
+
+#### Screener
+```python
+ws.screener_equity(["NYSE_VOLUME_5"])   
+ws.screener_options(["CBOE_VOLUME_5"]) 
+```
+
+#### Account Activity
+```python
+ws.account_activity()  # Obtiene accountHash y se suscribe
+```
+
+### Utilidades
+- `subscribe(service, keys, fields=None)`
+- `add(service, keys)`
+- `unsubscribe(service, keys)` / `unsubscribe_service(service, keys)`
+- `view(service, fields)`
+
+### Campos recomendados
+- LEVELONE_EQUITIES: `0,1,2,3,4,5,8,10,18,42,33,34,35`
+- LEVELONE_OPTIONS: `0,2,3,4,8,16,17,18,20,28,29,30,31,37,44`
+- LEVELONE_FUTURES: `0,1,2,3,4,5,8,12,13,18,19,20,24,33`
+- CHART_EQUITY: `0,1,2,3,4,5,6,7`
+
+#### Tabla rápida de fields (copiar/pegar)
+
+| Servicio                   | CSV de fields                                  |
+|----------------------------|------------------------------------------------|
+| LEVELONE_EQUITIES          | 0,1,2,3,4,5,8,10,18,42,33,34,35                |
+| LEVELONE_OPTIONS           | 0,2,3,4,8,16,17,18,20,28,29,30,31,37,44        |
+| LEVELONE_FUTURES           | 0,1,2,3,4,5,8,12,13,18,19,20,24,33             |
+| LEVELONE_FUTURES_OPTIONS   | 0,1,2,3,4,5,8,12,13,18,19,20,24,33             |
+| LEVELONE_FOREX             | 0,1,2,3,4,5,6,7,8,9,10,11,15,16,17,20,21,27,28,29 |
+| NASDAQ_BOOK                | 0,1,2,3                                        |
+| NYSE_BOOK                  | 0,1,2,3                                        |
+| OPTIONS_BOOK               | 0,1,2,3                                        |
+| CHART_EQUITY               | 0,1,2,3,4,5,6,7                                |
+| CHART_FUTURES              | 0,1,2,3,4,5                                    |
+| SCREENER_EQUITY            | 0,1,2,3,4                                      |
+| SCREENER_OPTION            | 0,1,2,3,4                                      |
+| ACCT_ACTIVITY              | 0,1,2                                          |
+
+### Ejemplos SUBS / ADD / VIEW / UNSUBS por servicio
+
+```python
+ws = client.streaming
+ws.on_data(lambda f: print("DATA", f))
+ws.on_response(lambda f: print("RESP", f))
+ws.connect(); ws.login()
+
+# LEVELONE_EQUITIES
+ws.equities_subscribe(["AAPL","TSLA"], fields=[0,1,2,3,4,5,8,10,18,42,33,34,35])
+ws.equities_add(["MSFT"])                          # agrega sin reemplazar
+ws.equities_view([0,1,2,3,5,8,18])                  # cambia campos
+ws.equities_unsubscribe(["TSLA"])                  # elimina símbolos
+
+# LEVELONE_OPTIONS
+ws.options_subscribe(["AAPL  250926C00257500"], fields=[0,2,3,4,8,16,17,18,20,28,29,30,31,37,44])
+ws.options_add(["AAPL  250926P00257500"])
+ws.options_view([0,2,3,4,8,16,17,20,28,29,30,31,37,44])
+ws.options_unsubscribe(["AAPL  250926C00257500"])
+
+# LEVELONE_FUTURES
+ws.futures_subscribe(["/ESZ25"], fields=[0,1,2,3,4,5,8,12,13,18,19,20,24,33])
+ws.futures_add(["/NQZ25"]) 
+ws.futures_view([0,1,2,3,4,5,8,12,13,18,19,20,24,33])
+ws.futures_unsubscribe(["/ESZ25"])
+
+# BOOK (Level II)
+ws.nasdaq_book(["MSFT"], fields=[0,1,2,3])
+ws.add("NASDAQ_BOOK", ["AAPL"])                    # genérico ADD
+ws.view("NASDAQ_BOOK", [0,1,2,3])                   # genérico VIEW
+ws.unsubscribe_service("NASDAQ_BOOK", ["MSFT"])    # genérico UNSUBS
+
+# CHART (Series)
+ws.chart_equity(["AAPL"], fields=[0,1,2,3,4,5,6,7])
+ws.add("CHART_EQUITY", ["MSFT"])                  # genérico ADD
+ws.view("CHART_EQUITY", [0,1,2,3,4,5,6,7])          # genérico VIEW
+ws.unsubscribe("CHART_EQUITY", ["AAPL"])           # genérico UNSUBS
+
+# SCREENER
+ws.screener_equity(["EQUITY_ALL_VOLUME_5"], fields=[0,1,2,3,4])
+ws.add("SCREENER_EQUITY", ["NYSE_TRADES_1"])      
+ws.view("SCREENER_EQUITY", [0,1,2,3,4])
+ws.unsubscribe("SCREENER_EQUITY", ["EQUITY_ALL_VOLUME_5"]) 
+
+# ACCT_ACTIVITY
+ws.account_activity(fields=[0,1,2])                  # suscribe actividad
+# Para UNSUBS necesitas la misma key usada en la SUBS (account_hash)
+account_hash = getattr(client, "_account_hash", None)
+if account_hash:
+    ws.unsubscribe_service("ACCT_ACTIVITY", [account_hash])
+```
+
+### Guía rápida de campos (IDs → significado)
+
+> Nota: los mapeos exactos pueden variar según permisos/versión. A continuación, equivalencias prácticas observadas en los frames.
+
+#### LEVELONE_EQUITIES
+
+| ID | Campo               |
+|----|---------------------|
+| 0  | symbol/key          |
+| 1  | bidPrice            |
+| 2  | askPrice            |
+| 3  | lastPrice           |
+| 4  | bidSize             |
+| 5  | askSize             |
+| 8  | totalVolume         |
+| 10 | referencePrice (open/mark) |
+| 18 | netChange           |
+| 42 | percentChange       |
+
+#### LEVELONE_OPTIONS
+
+| ID | Campo                  |
+|----|------------------------|
+| 0  | symbol/key             |
+| 2  | bidPrice               |
+| 3  | askPrice               |
+| 4  | lastPrice              |
+| 8  | totalVolume            |
+| 16 | openInterest           |
+| 17 | daysToExpiration       |
+| 20 | strikePrice            |
+| 28 | delta                  |
+| 29 | gamma                  |
+| 30 | theta                  |
+| 31 | vega                   |
+| 44 | impliedVolatility (si provisto) |
+
+#### LEVELONE_FUTURES
+
+| ID | Campo                          |
+|----|--------------------------------|
+| 0  | symbol/key                     |
+| 1  | bidPrice                       |
+| 2  | askPrice                       |
+| 3  | lastPrice                      |
+| 4  | bidSize                        |
+| 5  | askSize                        |
+| 8  | totalVolume                    |
+| 12 | openInterest                   |
+| 13 | contractDepth/series info (según feed) |
+| 18 | netChange                      |
+| 19 | sessionChange (o días/indicador según feed) |
+| 20 | percentChange/ratio (según feed) |
+| 24 | lastSettlement/mark            |
+| 33 | priorSettle                    |
+
+### Estructura de frames
+- Confirmaciones (`response`): `{ "response": [ { "service":"ADMIN","command":"LOGIN","content":{"code":0,"msg":"..."}} ] }`
+- Datos (`data`): `{ "service":"LEVELONE_EQUITIES","timestamp":...,"command":"SUBS","content":[{"key":"AAPL",...}] }`
+- Notificaciones (`notify`): `{ "notify": [ { "heartbeat": "..." } ] }`
+
+### Cheat-sheet Streamer API (parámetros y comandos)
+
+1) Conexión y prerequisitos
+- **Auth**: usa el Access Token del flujo OAuth.
+- **IDs de sesión** (de `GET /userPreference`): `schwabClientCustomerId`, `schwabClientCorrelId`, `SchwabClientChannel`, `SchwabClientFunctionId`.
+- **Transporte**: WebSocket JSON. Un solo stream por usuario (si abres más: código 12 CLOSE_CONNECTION).
+
+2) Envoltura de cada comando
+- **Campos comunes**:
+  - `service` (req.): `ADMIN`, `LEVELONE_EQUITIES`, `LEVELONE_OPTIONS`, `LEVELONE_FUTURES`, `LEVELONE_FUTURES_OPTIONS`, `LEVELONE_FOREX`, `NYSE_BOOK`, `NASDAQ_BOOK`, `OPTIONS_BOOK`, `CHART_EQUITY`, `CHART_FUTURES`, `SCREENER_EQUITY`, `SCREENER_OPTION`, `ACCT_ACTIVITY`.
+  - `command` (req.): `LOGIN`, `SUBS`, `ADD`, `UNSUBS`, `VIEW`, `LOGOUT`.
+  - `requestid` (req.): identificador único del request.
+  - `SchwabClientCustomerId` y `SchwabClientCorrelId` (recomendados): de `userPreference`.
+  - `parameters` (opcional): depende del servicio/comando.
+- **Notas**: `SUBS` sobrescribe lista; `ADD` agrega; `UNSUBS` quita; `VIEW` cambia `fields`.
+
+3) ADMIN (sesión)
+- `LOGIN` (`service=ADMIN`, `command=LOGIN`)
+  - parameters: `Authorization` (token sin "Bearer"), `SchwabClientChannel`, `SchwabClientFunctionId`.
+- `LOGOUT` (`service=ADMIN`, `command=LOGOUT`)
+  - parameters: vacío.
+
+4) LEVEL ONE (cotizaciones L1)
+- parameters comunes: `keys` (req., lista CSV), `fields` (opcional, índices).
+- `LEVELONE_EQUITIES`: `keys` tickers en mayúsculas (ej.: `AAPL,TSLA`).
+- `LEVELONE_OPTIONS`: `keys` formato Schwab opciones `RRRRRR  YYMMDD[C/P]STRIKE`.
+- `LEVELONE_FUTURES`: `keys` `/<root><monthCode><yearCode>` (mes: F,G,H,J,K,M,N,Q,U,V,X,Z; año 2 dígitos), ej.: `/ESZ25`.
+- `LEVELONE_FUTURES_OPTIONS`: `keys` `./<root><month><yy><C|P><strike>`, ej.: `./OZCZ23C565`.
+- `LEVELONE_FOREX`: `keys` pares `BASE/QUOTE` CSV (ej.: `EUR/USD,USD/JPY`).
+
+5) BOOK (Level II)
+- servicios: `NYSE_BOOK`, `NASDAQ_BOOK`, `OPTIONS_BOOK`.
+- parameters: `keys` (req., tickers), `fields` (opcional, índices de niveles).
+
+6) CHART (velas streaming)
+- `CHART_EQUITY`: `keys` equities; `fields` índices (OHLCV, time, seq).
+- `CHART_FUTURES`: `keys` futuros (mismo formato que L1 futuros); `fields` índices.
+
+7) SCREENER (gainers/losers/activos)
+- servicios: `SCREENER_EQUITY`, `SCREENER_OPTION`.
+- `keys` patrón `PREFIX_SORTFIELD_FREQUENCY`, ej.: `EQUITY_ALL_VOLUME_5`.
+  - `PREFIX` ejemplos: `$COMPX`, `$DJI`, `$SPX`, `INDEX_ALL`, `NYSE`, `NASDAQ`, `OTCBB`, `EQUITY_ALL`, `OPTION_PUT`, `OPTION_CALL`, `OPTION_ALL`.
+  - `SORTFIELD`: `VOLUME`, `TRADES`, `PERCENT_CHANGE_UP`, `PERCENT_CHANGE_DOWN`, `AVERAGE_PERCENT_VOLUME`.
+  - `FREQUENCY`: `0,1,5,10,30,60` (min; `0`=día completo).
+- `fields` (opcional): índices de campos del screener.
+
+8) ACCOUNT (actividad de cuenta)
+- servicio: `ACCT_ACTIVITY` (`SUBS`/`UNSUBS`).
+- `keys` (req.): identificador arbitario de tu sub; si envías varios, usa el primero.
+- `fields` (recomendado): `0` (o `0,1,2,3` según ejemplo y necesidad).
+
+9) Respuestas del servidor
+- Tipos: `response` (a tus requests), `notify` (heartbeats), `data` (flujo de mercado).
+- Códigos clave: `0` SUCCESS, `3` LOGIN_DENIED, `11` SERVICE_NOT_AVAILABLE, `12` CLOSE_CONNECTION, `19` REACHED_SYMBOL_LIMIT, `20` STREAM_CONN_NOT_FOUND, `21` BAD_COMMAND_FORMAT, `26/27/28/29` éxitos de `SUBS/UNSUBS/ADD/VIEW`.
+
+10) Delivery Types
+- `All Sequence`: todo con número de secuencia.
+- `Change`: sólo campos cambiados (conflado).
+- `Whole`: mensajes completos con throttling.
+
+11) Buenas prácticas
+- Haz `LOGIN` y espera `code=0` antes de `SUBS/ADD`.
+- Para agregar símbolos sin perder los existentes, usa `ADD` (no `SUBS`).
+- Cambia `fields` con `VIEW` para performance.
+- Maneja `notify` (heartbeats) y reconecta si se pierden.
+- Reutiliza tu `SchwabClientCorrelId` durante la sesión.
+- Si ves `19` (límite de símbolos), distribuye cargas (sharding) por servicio/sesión.
+
+---
+
+## Troubleshooting avanzado
+
+- `notify.code=12` (Only one connection): cierra otras sesiones WebSocket activas.
+- `response.content.code=3` (Login denied): token inválido/expirado → `client.login()`.
+- `response.content.code=21` (Bad command formatting): revisa formato de `Authorization` (sin `Bearer`) y claves (espaciado en opciones, mayúsculas).
+- 401 REST persistente: borra `schwab_tokens.json` y relanza `client.login()`.
+- Latencia alta/frames perdidos: evita reconexiones paralelas; usa la resuscripción automática del SDK.
+
+---
+
+## Contribuciones
+
+¡Tu colaboración es bienvenida! Ideas, issues y PRs ayudan a mejorar el SDK:
+- Abre un issue con detalles claros (entorno, pasos, error esperado/obtenido).
+- Propón mejoras de cobertura de endpoints y ejemplos.
+- Sigue un estilo claro y añade pruebas o ejemplos mínimos cuando sea posible.
+
+Si quieres mantener sesiones de trabajo o discutir roadmap, abre un issue etiquetado como `discussion`.
+
+## Disclaimer
+
+Este proyecto es no oficial y no está afiliado, patrocinado ni respaldado por Charles Schwab & Co., Inc. “Schwab” y otras marcas son propiedad de sus respectivos titulares. El uso de este SDK está sujeto a los términos y condiciones de las APIs de Schwab y a la normativa aplicable. Úsalo bajo tu propio criterio y responsabilidad.
+
+---
+
+## Licencia
+MIT ([LICENSE](LICENSE))
