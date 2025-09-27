@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: yt-dlp-getpot-wpc
+Version: 1.0.0
+Author-email: coletdjnz <coletdjnz@protonmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 coletdjnz
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: yt-dlp,yt-dlp-plugin,yt-dlp-pot-provider
+Requires-Python: >=3.9
+Requires-Dist: nodriver
+Description-Content-Type: text/markdown
+
+Official repository: <https://github.com/coletdjnz/yt-dlp-getpot-wpc>
+
+# WebPoClient PO Token Provider
+
+An experimental yt-dlp [PO Token Provider](https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#po-token-provider-plugins) that uses [nodriver](https://github.com/ultrafunkamsterdam/nodriver) and YouTube's "WebPoClient" in the browser mint PO Tokens.
+
+Supports:
+- WebPO-based clients (`web`, `web_safari`, `web_music`, `mweb` `tv`, `tv_embedded`, `web_embedded`, `web_creator`, ...)
+- Minting GVS and Player PO Tokens
+- Minting PO Tokens for both guest and logged-in sessions
+
+<!-- TOC -->
+* [WebPoClient PO Token Provider](#webpoclient-po-token-provider)
+  * [Installing](#installing)
+    * [pip/pipx](#pippipx)
+  * [Usage](#usage)
+    * [Options](#options)
+      * [Custom Chrome Location](#custom-chrome-location)
+<!-- TOC -->
+
+## Installing
+
+**Requires yt-dlp `2025.09.26` or above.**
+
+Chrome or Chromium must be installed.
+
+### pip/pipx
+
+```
+pipx inject yt-dlp yt-dlp-getpot-wpc
+```
+
+or
+
+```
+python3 -m pip install -U yt-dlp-getpot-wpc
+```
+
+
+If installed correctly, you should see the `wpc` PO Token provider in `yt-dlp -v YOUTUBE_URL` output
+
+    [debug] [youtube] [pot] PO Token Providers: wpc-1.x.y (external)
+
+
+## Usage
+
+This provider will automatically be used when a PO Token is requested by yt-dlp. It will launch a web browser while yt-dlp is running which it will use to mint PO Token(s).
+
+> [!WARNING]
+> Do not close the browser that is launched when yt-dlp is running!
+
+### Options
+
+
+#### Custom Chrome Location
+
+Set the location of the Chrome browser executable to use.
+
+`--extractor-args "youtubepot-wpc:browser_path=/usr/bin/chromium"`
