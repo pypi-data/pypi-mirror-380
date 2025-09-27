@@ -1,0 +1,3 @@
+[console_scripts]
+RTD = ride_the_duck.__main__:console_entry
+ride-the-duck = ride_the_duck.__main__:console_entry

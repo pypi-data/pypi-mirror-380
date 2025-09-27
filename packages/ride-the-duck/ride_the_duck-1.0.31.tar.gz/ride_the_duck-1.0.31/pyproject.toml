@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ride-the-duck"
+dynamic = ["version"]
+description = "A terminal-based gambling card game inspired by 'Ride The Bus'"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+authors = [{name = "Braeden Sy Tan", email = "braedenjairsytan@icloud.com"}]
+license = {text = "MIT"}
+keywords = ["game", "cards", "gambling", "terminal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop", 
+    "Topic :: Games/Entertainment :: Arcade",
+    "Programming Language :: Python :: 3"
+]
+
+[project.urls]
+Homepage = "https://github.com/DuckyBoi-XD/Ride-The-Duck"
+Repository = "https://github.com/DuckyBoi-XD/Ride-The-Duck"
+Issues = "https://github.com/DuckyBoi-XD/Ride-The-Duck/issues"
+
+[project.scripts]
+ride-the-duck = "ride_the_duck.__main__:console_entry"
+RTD = "ride_the_duck.__main__:console_entry"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ride_the_duck*"]
+exclude = ["tests*"]
+
+[tool.setuptools_scm]
+write_to = "ride_the_duck/_version.py"
+fallback_version = "0.0.0"
