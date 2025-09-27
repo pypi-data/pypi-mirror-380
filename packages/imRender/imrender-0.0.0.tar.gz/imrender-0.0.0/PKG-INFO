@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: imRender
+Version: 0.0.0
+Summary: .
+License-Expression: Apache-2.0
+Project-URL: Github, https://github.com/firstelfin/imRender
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: tqdm
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Dynamic: license-file
+
+# imRender
+
+> Github: [https://github.com/firstelfin/imRender](https://github.com/firstelfin/imRender)
+> PYPI: [https://pypi.org/project/imRender/](https://pypi.org/project/imRender/)
+
+Image Display
+
+- [x] Draw label annotations in labelme format onto the image.
+- [x] Customize the display of flags attributes.
