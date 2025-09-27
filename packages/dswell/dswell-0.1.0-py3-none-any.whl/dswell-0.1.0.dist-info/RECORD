@@ -1,0 +1,15 @@
+dswell/__init__.py,sha256=8vONbGS8m7h6PfItQihVslfHXDHEpLL2f9Kw73YziwM,70
+dswell/cli.py,sha256=ZCESKGILrqhePrHa-YZDdx8EzxmfjS5z8imhI1wn3Gk,271
+dswell/daemon.py,sha256=9-N3k0HT1FWuBD_fHmuLxhu3C3yptQrTKQeaMfIkJY0,6586
+dswell/logger.py,sha256=IQXlpYvdQAt8SeSe1yU7VmyJywYtTZ-UzCifXyBaRl8,1617
+dswell/pending.py,sha256=6gfdeGoTlBrDEXiVey5oX9vQ3wjjd4MjEH0D6698rCU,3595
+dswell/printer.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dswell/utils.py,sha256=vV_hEBS5Z56EfRE4bctp98DvJYvO9sxZv2h8cv9RXkk,1920
+dswell/subcmds/__init__.py,sha256=xJryYbVoSfVtQ9mB3OSeLe8DLB9CJK32vjzeYLyQZgI,38
+dswell/subcmds/create.py,sha256=DIWWqSWTJ861ihmsIzUl6PC3c83DfgyTcWRts3GW6fc,1960
+dswell/subcmds/list.py,sha256=DmprXswvB6DDXGzt8xFuXnaFXRbi6L-dTFpnoRpkuc8,892
+dswell-0.1.0.dist-info/METADATA,sha256=W3Qa0CiGA76gH75i1mfLl2Odu8MKg9Ygd4ARqXPI6is,3812
+dswell-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dswell-0.1.0.dist-info/entry_points.txt,sha256=0h6kAi6GC4OgxP1-g_ldfvZzMsvVYjQ58WlhO117o_w,42
+dswell-0.1.0.dist-info/licenses/LICENSE,sha256=sEE_M0xQwYRwxAP1oaRCuYiMLbV8pWIB00B55ezWHaM,1070
+dswell-0.1.0.dist-info/RECORD,,

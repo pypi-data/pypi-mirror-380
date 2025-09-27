@@ -1,0 +1,2 @@
+[console_scripts]
+dswell = dswell.cli:cli
