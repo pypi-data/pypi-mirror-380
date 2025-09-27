@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-rag-librarian = rag_mcp_server.server:main
