@@ -1,0 +1,13 @@
+openai
+jinja2
+sseclient
+requests
+pyyaml
+
+[api]
+fastapi
+uvicorn
+
+[dashboard]
+fastapi
+uvicorn
