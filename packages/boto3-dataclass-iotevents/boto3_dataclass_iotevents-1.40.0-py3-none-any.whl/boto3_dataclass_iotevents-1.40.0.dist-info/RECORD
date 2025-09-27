@@ -1,0 +1,7 @@
+boto3_dataclass_iotevents/__init__.py,sha256=Awvm-tW5RB01SBHKsQHFtkZb1R6IF8fU94LD_0ydedA,112
+boto3_dataclass_iotevents/caster.py,sha256=F67z2tcSMQggujfKiYvqwTMX2KPcXuGSxpjKlZUBHro,4666
+boto3_dataclass_iotevents/type_defs.py,sha256=8o8FXQaJvof9EcgFh38Zk_tLSuuiK5qjQIHI4_-ptb4,120375
+boto3_dataclass_iotevents-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iotevents-1.40.0.dist-info/METADATA,sha256=eO3mI2WvImWYdnRfvZGv94XrmLhhFd54-3TGHne8yF8,1655
+boto3_dataclass_iotevents-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iotevents-1.40.0.dist-info/RECORD,,
