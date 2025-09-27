@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+app/iLibrary/__init__.py
+app/iLibrary.egg-info/PKG-INFO
+app/iLibrary.egg-info/SOURCES.txt
+app/iLibrary.egg-info/dependency_links.txt
+app/iLibrary.egg-info/top_level.txt
+app/iLibrary/src/Library.py
+app/iLibrary/src/__init__.py
