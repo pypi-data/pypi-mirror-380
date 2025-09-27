@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/gradium/__init__.py
+src/gradium/core.py
+src/gradium.egg-info/PKG-INFO
+src/gradium.egg-info/SOURCES.txt
+src/gradium.egg-info/dependency_links.txt
+src/gradium.egg-info/top_level.txt

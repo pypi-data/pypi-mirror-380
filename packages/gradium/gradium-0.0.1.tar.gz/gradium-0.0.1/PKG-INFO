@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: gradium
+Version: 0.0.1
+Summary: Gradium Python API.
+Author-email: Laurent Mazaré <laurent.mazare@gmail.com>
+License-Expression: MIT
+Keywords: audio
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# gradium
+
+The Gradium API library for Python.
+
+```python
+from gradium import grd
+print(grd("PyPI"))
+```
+
