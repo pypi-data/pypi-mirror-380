@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: programacion
+Version: 0.1.2
+Summary: Paquete con ejercicios y ejemplos de programación en Python
+Home-page: https://github.com/Nico02-ui/curso2025_26/tree/main/Programacion
+Author: Nrodguer02
+Author-email: rodriguezguerranicolas@outlook.es
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Carpeta para programación (archivos Python y Java)
