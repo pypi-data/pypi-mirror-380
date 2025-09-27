@@ -1,0 +1,12 @@
+sender_policy_flattener/__init__.py,sha256=MhFaDvwUMRbWVRSVjpzV2WG6XP6ajW3PgY_Nxl4YvLk,2683
+sender_policy_flattener/cli.py,sha256=UF6oRXg0b3i6dGNDRuOj3jwt5x5YYR_BqK8foO27Amo,3694
+sender_policy_flattener/crawler.py,sha256=WJViMJwzqmoDficPFBWd12Bb_pIZ6eEEtnITvkCyxnU,2362
+sender_policy_flattener/email_utils.py,sha256=9kv2-cCnzHJVfy1XyGCc85ixucmRkO6wIiZu3ueN39c,2451
+sender_policy_flattener/formatting.py,sha256=kU3qxGE-qTIA_0bZIuIMjH-eKCnRiH-SAfSa1I9YMtQ,3107
+sender_policy_flattener/handlers.py,sha256=ZWr2OX1ebJ6_So5Ky06vPYjhynEySiNPCyHbGkR7D7k,3643
+sender_policy_flattener/mechanisms.py,sha256=UyvN0875ifQptrPwnqYuFVWjnXIDrASbiTAT0AJhYuo,2649
+sender_policy_flattener-0.4.0.dist-info/METADATA,sha256=r7uejSlO_GM9k-kc6O4IRM2E1U-0ojIOJIym22lWGHU,4579
+sender_policy_flattener-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sender_policy_flattener-0.4.0.dist-info/entry_points.txt,sha256=g972n29457_8n3_sTFSGb_n3KRRd-ESCzEngrBXxGX0,60
+sender_policy_flattener-0.4.0.dist-info/licenses/LICENSE,sha256=nygTHAMQDRhS0lBNJLjH7IQ69MxcrXgBVAbolLx5AuM,1074
+sender_policy_flattener-0.4.0.dist-info/RECORD,,
