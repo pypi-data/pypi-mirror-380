@@ -1,0 +1,7 @@
+boto3_dataclass_iotfleethub/__init__.py,sha256=QunHgAPLB4IhDRrijtGdO4njBz_J8k_GjOimxoS793w,116
+boto3_dataclass_iotfleethub/caster.py,sha256=Gt0FUyiwMRCckox91-qHcs6ItIKR5SOWXpE6xx9B5NM,1073
+boto3_dataclass_iotfleethub/type_defs.py,sha256=Jv2ZJ7SqXG2KCtW2ziYpqHaqmZsPMCL3ddcnOvck-hY,15291
+boto3_dataclass_iotfleethub-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_iotfleethub-1.40.0.dist-info/METADATA,sha256=6Wnd3gaOFf3yjHdDLdWgECuiUD8cA2oXmeskrVRt-a0,1669
+boto3_dataclass_iotfleethub-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_iotfleethub-1.40.0.dist-info/RECORD,,
