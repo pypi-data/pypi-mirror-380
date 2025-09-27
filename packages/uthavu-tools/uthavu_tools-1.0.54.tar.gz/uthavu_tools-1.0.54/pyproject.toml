@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+#[tool.setuptools_scm]
+#version_scheme = "v-release"
+#local_scheme = "no-local-version"
+
+[project]
+name = "uthavu-tools"
+version = "1.0.54"   
+#dynamic = ["version"]   # <-- use setuptools-scm for version
+description = "Collection of CLI utilities from Uthavu Software"
+authors = [
+    { name = "Uthavu Software - The People’s Solution", email = "jawahar.s@uthavu.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+
+[project.scripts]
+pushmain = "uthavu_tools.git_tools.pushmain:main"
+checkbranch = "uthavu_tools.git_tools.checkbranch:main"
+cleanbranch = "uthavu_tools.git_tools.cleanbranches:main"
+cleanup = "uthavu_tools.git_tools.cleanup:main"
+deploymain = "uthavu_tools.git_tools.deploymain:main"
+release = "uthavu_tools.git_tools.release:main"
+checkin = "uthavu_tools.git_tools.checkin:main"
+ut = "uthavu_tools.listtools:main"
+createrepo = "uthavu_tools.git_tools.createrepo:main"
+usnginx = "uthavu_tools.debian_server.setup_nginx_config:main"
+usnginx_uthavu = "uthavu_tools.debian_server.setup_nginx_config_uthavu:main"
+ushttps = "uthavu_tools.debian_server.setup_nginx_https:main"
+usserver = "uthavu_tools.debian_server.usserver:main"
+
+
+[tool.setuptools.package-data]
+"uthavu_tools.git_tools" = ["template_files/**", "template_files/**/.*"]
