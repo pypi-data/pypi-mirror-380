@@ -1,0 +1,7 @@
+*.o
+*.so
+/reliq
+/reliq.h
+tests/advanced/boards-forums/*/
+tests/advanced/threads/*/
+tests/advanced/users/*/
