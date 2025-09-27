@@ -1,0 +1,2 @@
+collatex>=1.7.0
+indic-transliteration
