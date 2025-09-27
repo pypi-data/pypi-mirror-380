@@ -1,0 +1,2 @@
+[console_scripts]
+qmemcalc = qmemcalc.memory:main
