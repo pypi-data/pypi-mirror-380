@@ -1,0 +1,12 @@
+swellow/.gitignore,sha256=gI3RktMkNma28a1Pm_7KSHfuBZRWxAhRqTk3MxsmAUw,4
+swellow/__init__.py,sha256=bqb7MIBsfFzo_kdBWJSCrYZxzgmzpy2GZJnrdPE71cI,18
+swellow/app.py,sha256=bZgoSOSTPCTLMxh-IuE099CGIeT23-ciO0IVYjFBQ80,5084
+swellow/cli.py,sha256=HhlBPy2qro83RqCQ-AQK3BgV607-fuq4ovDEb7D96CM,2330
+swellow/bin/swellow-linux-x86_64/swellow,sha256=keRPgWpijPTmRxRKBaQoFZ_GVhAHjZ13Av2gTSp2QzM,3569024
+swellow/bin/swellow-macos-aarch64/swellow,sha256=GjreKu37o9sN7R8fIdhJCWOU4zI_vjH_ucVI2Sq9zNs,2853664
+swellow/bin/swellow-windows-x86_64/swellow.exe,sha256=VHvMPDn1S5rL2wI1Yn5PwVxWAJha85dT79B7MxAqgb4,2489856
+swellow-0.1.2.dist-info/METADATA,sha256=XkyXwGLuGpRZjrYJU_pyRfUmhbDB2sMAjvhUd_nQKGU,6233
+swellow-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+swellow-0.1.2.dist-info/entry_points.txt,sha256=pakq6F9E7WhxWLn2i30tqaUzu9R-RPBQiMc9GpmHBsg,45
+swellow-0.1.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+swellow-0.1.2.dist-info/RECORD,,
