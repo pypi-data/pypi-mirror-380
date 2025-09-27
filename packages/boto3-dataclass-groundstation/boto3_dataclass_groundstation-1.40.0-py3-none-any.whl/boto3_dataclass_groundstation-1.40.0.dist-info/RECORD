@@ -1,0 +1,7 @@
+boto3_dataclass_groundstation/__init__.py,sha256=S-nctjQBqgf7F_7Bw9vFUq3esLr_L8L-yMu0lr8K1so,120
+boto3_dataclass_groundstation/caster.py,sha256=mc_oANqdPpM3a6-cH6mufqDFN-FrG2mc6B6TBEZheyY,6360
+boto3_dataclass_groundstation/type_defs.py,sha256=t10ol5iW3-fuTcPgLuwpzAzbhPv2-xM5jzgqNaEfxp4,117219
+boto3_dataclass_groundstation-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_groundstation-1.40.0.dist-info/METADATA,sha256=ildZ7099Ffb13HUmB5NwOYvj-0zB3rr74YmdbldHNAA,1683
+boto3_dataclass_groundstation-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_groundstation-1.40.0.dist-info/RECORD,,
