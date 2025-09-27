@@ -1,0 +1,8 @@
+aigc_compliance/__init__.py,sha256=v-7xkDg3VYsQtEW-5hVw1hNgL_-elGLklIRIP8uDBJg,990
+aigc_compliance/client.py,sha256=t3cfPI80lmu28ITu-qQOr_Fhad10p9z3NPI-Td4_IE4,16599
+aigc_compliance/exceptions.py,sha256=pzraxq99CVXRfRj0l-4EdE4IZH7zi9IrydtiSZMzM7o,3309
+aigc_compliance/models.py,sha256=Wt9bliwgRxTGm-HUsOrcv9mWRGPc3iir0nCKdgLua9I,2852
+aigc_compliance-1.0.1.dist-info/METADATA,sha256=wtS4sxnwaqk3OhrYUoBzzR3dfhsA8w0PTd086p8ncFM,11229
+aigc_compliance-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aigc_compliance-1.0.1.dist-info/licenses/LICENSE,sha256=NUKashUdlREvJqp1KtXr3VaFqF_JSJ6auyWM6yu6x7A,1071
+aigc_compliance-1.0.1.dist-info/RECORD,,
