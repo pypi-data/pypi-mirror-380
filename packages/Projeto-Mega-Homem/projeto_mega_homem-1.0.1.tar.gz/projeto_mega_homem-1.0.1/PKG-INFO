@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: Projeto_Mega-Homem
+Version: 1.0.1
+Summary: A remake of Cut Man stage from Mega Man 1 using pygame and python 3.11.0
+Project-URL: Homepage, https://github.com/joaovictorbezerraA/Projeto_Mega-Homem
+Project-URL: Issues, https://github.com/joaovictorbezerraA/Projeto_Mega-Homem/issues
+Author-email: João Victor Bezerra de Araujo <Jbezerra15@hotmail.com>
+License-Expression: MIT
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: pygame>=2.6.1
+Description-Content-Type: text/markdown
+
+# Projeto_Mega-Homem
+The Cut Man stage from Mega Man 1 (NES) remade with pygame
+
+The following requisites are necessary to run the game:
+* Python 3.11.0
+* Pygame 2.6.1
+
+# Running Instructions
+To run this program it's required to execute the file game.py
+with the python command
+while pygame is active
+
+# Controls
+* Movement: WASD
+* Jump: Space
+* Shoot: J
