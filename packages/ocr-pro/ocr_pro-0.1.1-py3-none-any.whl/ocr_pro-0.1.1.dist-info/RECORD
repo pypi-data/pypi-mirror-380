@@ -1,0 +1,9 @@
+ocr/__init__.py,sha256=_i4dluD1zXKafx4e5TNXabB45zumatjn7LTO27tJqfk,150
+ocr/aadhaar_card.py,sha256=ARAiwX0dmnasUvrMDI-CsViieJ3Si8ffCAjTvI7FNIA,783
+ocr/fetch_data.py,sha256=o0lEGkJul9xaBOo-DO74-Xgeuec5VWyvKVmv7F90lwI,2005
+ocr/image_preprocessor.py,sha256=jPperSocTzMDjLY5ohj5to644RdJwuqFl_TaGnQCGwI,500
+ocr/pan_card.py,sha256=H4rFBbj9oer1iOvzoucdiCVd07pVLucgpZmQukhAoTs,560
+ocr_pro-0.1.1.dist-info/METADATA,sha256=Xg5N9o44P6HQTP7BQrJ0gfZqe2Fx-Dy-X6oObuB-fgU,2634
+ocr_pro-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ocr_pro-0.1.1.dist-info/top_level.txt,sha256=KyNJgRLJaoLguntMg1qobvoOzL2HjR8AZvH6i15mAow,4
+ocr_pro-0.1.1.dist-info/RECORD,,
