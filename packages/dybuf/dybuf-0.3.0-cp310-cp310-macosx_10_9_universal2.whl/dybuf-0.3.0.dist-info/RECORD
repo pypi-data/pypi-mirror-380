@@ -1,0 +1,12 @@
+dybuf-0.3.0.dist-info/RECORD,,
+dybuf-0.3.0.dist-info/WHEEL,sha256=8XuoKPbF6WmVUSfmuDPFsRwMXLxyxuWi93Fa-BVABOs,114
+dybuf-0.3.0.dist-info/top_level.txt,sha256=vk2AqlZeq0Bw6UBhH8L04lSUlrpfH1cp85-MphKlRWU,6
+dybuf-0.3.0.dist-info/METADATA,sha256=Cvei6I3PPhgxGw3zLNeICzqcK-tSm5CrwiiS7XbOBzE,6277
+dybuf-0.3.0.dist-info/licenses/LICENSE,sha256=TkCs4WMakawR5qunAtFB8SkM1OpradEoptsCn_vKMXo,765
+dybuf/_core.pxd,sha256=vns3r0lcuqH7Jobex-tOYnnsIYdhusnzRAUmaVJ-lTM,3526
+dybuf/_core.c,sha256=r05VMACnrI5X8QLOUxF3x1ndPTmriVeDmtXddRvwZEY,1563759
+dybuf/__init__.py,sha256=vZa_36qhY1oJjIDj9G8wNI0R7Gsx1rP5Tk4qOz11_Mk,573
+dybuf/_core.pyx,sha256=8A48YPbuRRwd05XDiqrpB4GjYPHhz0xFB7_Fz21DJvE,12617
+dybuf/_core.cpython-310-darwin.so,sha256=snHZS8siiuXBNmze04ZWZXRJN8ZAU9qsYAWy0Zo2L_U,610536
+dybuf/tests/__init__.py,sha256=5q5uTLElsRPfMvcd0S2kPV4bs7pVAXUbAI9ZUz3j8OM,28
+dybuf/tests/test_roundtrip.py,sha256=wA47xLZ8T5HBjpKpjjGFBSi7oVFkzzSdomYKOGQac7A,6316
