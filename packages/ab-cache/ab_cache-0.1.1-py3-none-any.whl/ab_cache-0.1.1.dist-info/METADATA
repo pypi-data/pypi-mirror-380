@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: ab-cache
+Version: 0.1.1
+Author-email: Matthew Coulter <53892067+mattcoulter7@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: <4,>=3.12
+Requires-Dist: ab-dependency
+Requires-Dist: diskcache<6,>=5.6.3
+Requires-Dist: orjson<4,>=3.11.2
+Requires-Dist: pydantic<3,>=2.11.7
+Requires-Dist: slugify<0.0.2,>=0.0.1
+Requires-Dist: sqlmodel<0.0.25,>=0.0.24
+Requires-Dist: uuid7<0.2,>=0.1.0
+Provides-Extra: all
+Requires-Dist: redis<7,>=6.4.0; extra == 'all'
+Provides-Extra: redis-async
+Requires-Dist: redis<7,>=6.4.0; extra == 'redis-async'
+Provides-Extra: redis-sync
+Requires-Dist: redis<7,>=6.4.0; extra == 'redis-sync'
+Description-Content-Type: text/markdown
+
+# Open Banking, Opened | Database
+
+Database Package for Open Banking, Opened API packages.
