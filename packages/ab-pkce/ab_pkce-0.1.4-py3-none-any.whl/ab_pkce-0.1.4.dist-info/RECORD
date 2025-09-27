@@ -1,0 +1,12 @@
+ab_core/pkce/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/pkce/methods/__init__.py,sha256=jOlwx8_4v0dIZtEahdlLvBlUOpXNcbOzasLTFSGfLEA,260
+ab_core/pkce/methods/base.py,sha256=1TVhfo9Fv4E1dnhklsTEhcVTs7YFX0uHBSqsZvcqCuE,664
+ab_core/pkce/methods/plain.py,sha256=7dhMiQ6gKXB0sOQfejXM25f92mX9ZiN6sEBylKXbATI,561
+ab_core/pkce/methods/s256.py,sha256=5j2Usqk71pGgTYuszEALNQpR0meO0VMrwmXKYFK817U,706
+ab_core/pkce/methods/template.py,sha256=GNZ0PzpYfPiATjl1rElxMbJKBCnBzKaKP91v9o419hE,541
+ab_core/pkce/schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/pkce/schema/pkce_method.py,sha256=FI-k0WnzzmaFfzJ90pIBkjAqAGxgZsrATZMmwuo0jW4,118
+ab_pkce-0.1.4.dist-info/METADATA,sha256=SdjfZHBUWSWZHiwt3KpE6thL1RpTCj_-UxqkJmzHNWQ,338
+ab_pkce-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ab_pkce-0.1.4.dist-info/licenses/LICENSE,sha256=REBFOD_HdKi9ZZ38nP3A_NjpLFaijF1A6_PDiMglbLk,1072
+ab_pkce-0.1.4.dist-info/RECORD,,
