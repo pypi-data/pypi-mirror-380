@@ -1,0 +1,13 @@
+perforatedbp/__init__.cpython-313-darwin.so,sha256=kVIUQQdytRZgxdhAnj82MLob0jzxOEFJo5NpmAW5ND8,87680
+perforatedbp/blockwise_pbp.cpython-313-darwin.so,sha256=mZxL6etBzPr1ZD0GVI8RPP3B7tbA_l1iV1QFW7spUco,368496
+perforatedbp/check_license.cpython-313-darwin.so,sha256=Pc6DB_O4hDgSb2mVDO0NGnDociKnBcoDNSSh4SvvS1M,208560
+perforatedbp/clean_load.cpython-313-darwin.so,sha256=gFyoLwnyEv3ErGi8d29UXBph6mRKYZhn0VE_pLBrpBc,285520
+perforatedbp/globals_pbp.cpython-313-darwin.so,sha256=2Vq3U6yYyseRe9KgRyAiSzDq4JSZPgGFaYTCZ2Z8fc0,91968
+perforatedbp/modules_pbp.cpython-313-darwin.so,sha256=4-RedbUtipHOXVjGjtn5Wb99MrcJxbS7PSVeewg2gkg,743552
+perforatedbp/network_pbp.cpython-313-darwin.so,sha256=cY2qhOSxDxdTzfiqJrjrFrPDGtqh0fkAg118CHwvh0o,370512
+perforatedbp/tracker_pbp.cpython-313-darwin.so,sha256=I5A1suK-86oAywfUWBTmdY8NJti5vTUyAzSiyXV_2V8,386016
+perforatedbp/utils_pbp.cpython-313-darwin.so,sha256=ln2zYAZQjalonHPKoVW7b0wMr6Ke4W_pGEpsN0QyrLA,304032
+perforatedbp-0.0.6.dist-info/METADATA,sha256=eb1L3fRVkNygwujVSYMJM208igZCtF7yRHvK-Hsb1ms,588
+perforatedbp-0.0.6.dist-info/WHEEL,sha256=memlX0NSEQnmSMa3rcNWPnk4cttudwgAZx3qq8qO4ME,115
+perforatedbp-0.0.6.dist-info/top_level.txt,sha256=vymX1tN98EJMl_IuPCF3x4XiXYhLC_cB25NXXVJ8G2M,13
+perforatedbp-0.0.6.dist-info/RECORD,,
