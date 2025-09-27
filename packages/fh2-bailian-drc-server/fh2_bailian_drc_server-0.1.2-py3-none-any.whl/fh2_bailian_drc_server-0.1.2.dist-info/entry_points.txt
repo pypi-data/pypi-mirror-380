@@ -1,0 +1,3 @@
+[console_scripts]
+fh2-bailian-drc-server = fh2_bailian_drc_server:main
+
