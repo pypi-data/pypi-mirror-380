@@ -1,0 +1,17 @@
+odoo/addons/purchase_mto_owner/README.rst,sha256=acdFzlvkSzak4JrhdM6CDP4mEfuY6-3thUJBi__7bdY,3117
+odoo/addons/purchase_mto_owner/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/purchase_mto_owner/__manifest__.py,sha256=a8kxghe5_DEUmDZ26Yn2Qs0CF9u0MWsESYFfI8h5k8A,433
+odoo/addons/purchase_mto_owner/i18n/it.po,sha256=V8jkAkj-UQTw1GzyWwGD8P7sflD5o02R_LEthG20SNg,554
+odoo/addons/purchase_mto_owner/i18n/purchase_mto_owner.pot,sha256=Xo1_N0K6uCBKESprtqmHksQRnxFsMtAvJwOZVeGIbac,484
+odoo/addons/purchase_mto_owner/models/__init__.py,sha256=l8tqnYLGWPpqVSTCZTXW9qbcI7SfkDC37dgldCd10po,25
+odoo/addons/purchase_mto_owner/models/stock_rule.py,sha256=AET7Tuo742veSjbNlJ3s5LEvt1XiiOsZLypMr6YA8MM,1674
+odoo/addons/purchase_mto_owner/readme/CONTRIBUTORS.md,sha256=vLtiQWvoHoV3WUR6jl_ZQTgRpMp862_Rpcb-J5b_KHQ,58
+odoo/addons/purchase_mto_owner/readme/DESCRIPTION.md,sha256=GxVXO4O67zzlXidspJvH9e6h3ejGPza7iOrzOmXFgfI,108
+odoo/addons/purchase_mto_owner/static/description/icon.png,sha256=CgnOEZCwoe6f1vlLwkqFVfc2q_uwBMU0UnXN8j6X5ag,10254
+odoo/addons/purchase_mto_owner/static/description/index.html,sha256=ky8M833eXgUxJ6aTYcS50soordEKXrs_ic00YtveZ0s,12448
+odoo/addons/purchase_mto_owner/tests/__init__.py,sha256=1Wty67jh3R5XewIrns6yqw2hH7L_3cBaGS9Fwhuy7_Y,38
+odoo/addons/purchase_mto_owner/tests/test_purchase_mto_owner.py,sha256=M-2ROFkCylCaAAFm6b06uPIea-LFC-LwV-kirqLdNTk,2541
+odoo_addon_purchase_mto_owner-16.0.1.0.0.3.dist-info/METADATA,sha256=KEMjDjGy8SRextO1fpKyf4vR6ChsBqa9Jj0TZ2syq9k,3698
+odoo_addon_purchase_mto_owner-16.0.1.0.0.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+odoo_addon_purchase_mto_owner-16.0.1.0.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_purchase_mto_owner-16.0.1.0.0.3.dist-info/RECORD,,
