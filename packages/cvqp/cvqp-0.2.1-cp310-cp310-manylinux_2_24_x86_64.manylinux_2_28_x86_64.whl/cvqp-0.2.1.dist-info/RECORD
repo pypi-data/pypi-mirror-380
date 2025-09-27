@@ -1,0 +1,15 @@
+cvqp/__init__.py,sha256=922JgWYMPPa4Z2FjYol1458ow6H3g_RqKTWrJnh7nQY,356
+cvqp/admm.py,sha256=a-RdyyRBckfu89VUR9zq2wsIFUW2CcJCPnMCdRNzOXI,16838
+cvqp/projection.py,sha256=i9oFgfYqx9jTKl-dmrY1jazNRKFG7m4PR_k3ZRLURyI,1892
+cvqp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvqp/types.py,sha256=B64ZLCny7OsV0i5EK9DTtMbItaD-1V9shp0lauHNvms,4214
+cvqp/libs/__init__.py,sha256=5S-5FJ9e7jgN-7NZ_X3YRbEOV9RlhtfkMVR20rKJxQw,79
+cvqp/libs/bindings.cpp,sha256=WII3Isb3jB4X3mWNa-MqJVB0INI_pMuSujq2vJALaIA,883
+cvqp/libs/proj_sum_largest.cpp,sha256=_n-6U-mrQEjEGMf_l4CsK6S2JP85dd3KinQX3Kfue_E,5190
+cvqp/libs/proj_sum_largest.cpython-310-x86_64-linux-gnu.so,sha256=Bew2jba551Y--D-v7h0qYRhKu16lmlBpfBHE5GuxwOY,187600
+cvqp/libs/proj_sum_largest.h,sha256=vuBj2LnxKJkov5kBahtMQ1O6ai2tOZch5r9whj4TC0A,274
+cvqp-0.2.1.dist-info/METADATA,sha256=WvmPtlxGDkkwLHiDCrBNiME1iv5VFFS_BJfwUc8WcNU,5777
+cvqp-0.2.1.dist-info/WHEEL,sha256=HeTPKmtWRHAcGMCPCdnU4FtSZuvZBNNr3hB4MNGY2JY,152
+cvqp-0.2.1.dist-info/top_level.txt,sha256=v3LPfPhmCC9fVj4deOszsmpmGsvVtwPFYIJ31-F-POE,5
+cvqp-0.2.1.dist-info/RECORD,,
+cvqp-0.2.1.dist-info/licenses/LICENSE,sha256=ki_xlogPZpQ3lyPgOmWFf68S3vStKESnVUtlQ7Q3ivs,11364
