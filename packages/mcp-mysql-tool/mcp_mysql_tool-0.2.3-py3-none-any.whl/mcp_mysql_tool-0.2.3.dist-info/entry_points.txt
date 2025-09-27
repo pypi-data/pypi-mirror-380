@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-mysql-tool = mcp_mysql_server.server:cli_main
