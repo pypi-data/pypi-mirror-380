@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pycalcpp
+Version: 0.1.0
+Summary: Calculadora matemática de alto rendimiento (C++ + pybind11)
+Home-page: https://github.com/JDEVELOPER76/PyCal-plus-plus
+Author: JOSEDVP76
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# pycalcpp
+Calculadora matemática de alto rendimiento: núcleo en C++ (pybind11) y wrapper Python.
+
+## Instalación
+```bash
+pip install pycalcpp
