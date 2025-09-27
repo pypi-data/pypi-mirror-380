@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.4.0", "jupyterlab>=4.0.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "strangeworks_jupyterlab_theme"
+version = "0.1.0"
+description = "Strangeworks dark theme for JupyterLab"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Strangeworks", email = "support@strangeworks.com" }
+]
+keywords = ["jupyter", "jupyterlab", "theme", "strangeworks"]
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.hatch.build.targets.sdist]
+artifacts = ["strangeworks_jupyterlab_theme/labextension"]
+exclude = [".github", "binder"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"strangeworks_jupyterlab_theme/labextension" = "share/jupyter/labextensions/@strangeworks/jupyterlab-theme"
+"install.json" = "share/jupyter/labextensions/@strangeworks/jupyterlab-theme/install.json"
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.6.0"]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "strangeworks_jupyterlab_theme/labextension/static/style.js",
+    "strangeworks_jupyterlab_theme/labextension/package.json",
+]
+skip-if-exists = ["strangeworks_jupyterlab_theme/labextension/static/style.js"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+build_cmd = "build:prod"
+npm = ["jlpm"]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_cmd = "install:extension"
+npm = ["jlpm"]
+source_dir = "src"
+build_dir = "strangeworks_jupyterlab_theme/labextension"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyterlab>=4.0.0,<5'",
+    "jlpm",
+    "jlpm build:prod"
+]
+before-build-python = ["jlpm clean:all"]
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
