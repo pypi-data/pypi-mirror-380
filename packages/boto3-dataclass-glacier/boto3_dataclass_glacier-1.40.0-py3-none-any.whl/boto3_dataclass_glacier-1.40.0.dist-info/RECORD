@@ -1,0 +1,7 @@
+boto3_dataclass_glacier/__init__.py,sha256=_Is4EkxHOKZ4bNKn58iT-15GnoMzCkzoIYvMv9whYOQ,108
+boto3_dataclass_glacier/caster.py,sha256=WBxjx-D8CJrHkbYy3ZAyFRVVg0Z1gjQIacuMNgJ8iWE,6665
+boto3_dataclass_glacier/type_defs.py,sha256=_zouZgaBZeuyvDhEs_3kkTE38ItzY6PUY5euS1oGEGs,93432
+boto3_dataclass_glacier-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_glacier-1.40.0.dist-info/METADATA,sha256=5IOD5KAtdVel9Y6QBzYNx2UpPXfYH5jZ3_2i0dihidc,1641
+boto3_dataclass_glacier-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_glacier-1.40.0.dist-info/RECORD,,
