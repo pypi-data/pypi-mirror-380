@@ -1,0 +1,13 @@
+zns_discord_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zns_discord_bot/logger_base.py,sha256=edYi7NzXAMevCr17dws6rCz5BnRZDhvT01rEailkYmU,6846
+zns_discord_bot/zns_discord_bot.py,sha256=_o2OI2Th8vPzviqzA696AijLfTsysYLxUvEzWOdDwO4,4174
+zns_discord_bot/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zns_discord_bot/components/easy_embed.py,sha256=nqXZgNthqhpg5XV-JQ83hE1EgaTjJ-PdaPxkhZcdcRY,1600
+zns_discord_bot/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zns_discord_bot/utils/channel_utils.py,sha256=hSi1J7BJF8jewixprllye7qZ-JTtMp2WwjzA_De6LbA,457
+zns_discord_bot/utils/message_utils.py,sha256=mD5kJwGsGDlOa53OJAZbKhPzSE3GTI5Vmf9n6mxuppw,853
+zns_discord_bot-1.0.9.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+zns_discord_bot-1.0.9.dist-info/METADATA,sha256=Xkue17wv0KsCN7DxwfJApFQ-dflRTAWFzR5IWNKOqQs,1956
+zns_discord_bot-1.0.9.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+zns_discord_bot-1.0.9.dist-info/top_level.txt,sha256=l6UB0H57wh5T1bHVntUPHJ8-5pkai2vNkysYOUJYNcE,16
+zns_discord_bot-1.0.9.dist-info/RECORD,,
