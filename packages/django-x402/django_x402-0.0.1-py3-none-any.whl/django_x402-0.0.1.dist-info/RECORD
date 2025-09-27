@@ -1,0 +1,9 @@
+django_x402/__init__.py,sha256=v_NECl5zWr1VP8SmbJfl3kN8uMUAIYq3SlnolotFWNc,172
+django_x402/facilitators.py,sha256=31wnf8sEJccrNrgsSOwoGZct6sgPP_0OxTIGGVyGZxI,20126
+django_x402/middleware.py,sha256=4UhKFQUxpgv2wBRDUnwksJRaTgwBI7sYb4l1ZXPGF4s,12387
+django_x402/urls.py,sha256=KSfLKOaQF39Dji0wFmDbhpZ8TyiQ84ewjOYppkS6v9c,370
+django_x402/views.py,sha256=5XaGinjt5bqOtP3Du0w1369vbq-8n3ksLbylgN44Wsg,3171
+django_x402-0.0.1.dist-info/METADATA,sha256=ka_09kmLx08My9CHosb_UAhsVUfQf29OJyP4hABPXm8,6395
+django_x402-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_x402-0.0.1.dist-info/licenses/LICENSE,sha256=GVtCs9aCoyd5gYY5GkKZGcN36uY3nMcUbtXKjgSHkEY,1071
+django_x402-0.0.1.dist-info/RECORD,,
