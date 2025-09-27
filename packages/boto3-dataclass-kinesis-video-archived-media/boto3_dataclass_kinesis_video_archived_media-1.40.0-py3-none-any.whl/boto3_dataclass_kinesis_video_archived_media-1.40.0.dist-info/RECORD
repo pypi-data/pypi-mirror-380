@@ -1,0 +1,7 @@
+boto3_dataclass_kinesis_video_archived_media/__init__.py,sha256=ZRY3f13fqnt86eD9QCBXVKSAHwrfK_LoqX0k3q7H2iM,150
+boto3_dataclass_kinesis_video_archived_media/caster.py,sha256=0LmI_GBcksA49HB74Axv0-9EQvoUI2WFxYYbdb-DMXs,1510
+boto3_dataclass_kinesis_video_archived_media/type_defs.py,sha256=ZOa1e2m4qlysNsnnbzG5C8sxtX_g6FDbYpskag5U4Jc,25741
+boto3_dataclass_kinesis_video_archived_media-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_kinesis_video_archived_media-1.40.0.dist-info/METADATA,sha256=vszufyb6xuSDZO1lUG1pNgh2CyorOzeXpGpj8eymDgg,1788
+boto3_dataclass_kinesis_video_archived_media-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_kinesis_video_archived_media-1.40.0.dist-info/RECORD,,
