@@ -1,0 +1,30 @@
+# --- Core pins compatible with Synapse/AzureML preinstalls ---
+# AzureML 1.55 requires numpy <1.24 and pandas <=2.0.0.
+numpy>=1.22,<1.24
+pandas>=1.5.3,<=2.0.0
+
+# Arrow with ListViewType and compatible with the above
+pyarrow>=21,<23
+
+# Timezone cap for mlflow-skinny in Synapse images
+pytz<2024
+tzdata>=2022.7
+
+# Project dependencies
+polars~=1.27.1
+duckdb~=1.2.2
+sqlglot~=26.14.0
+python-dateutil~=2.9.0.post0
+python-dotenv~=1.0.1
+colorlog~=6.9.0
+setuptools~=78.1.0
+
+
+# NOTE:
+# Redis and cloud SDKs are NOT installed by default.
+# Install them via extras, e.g.:
+#   pip install 'supertable[minio]'   -> minio backend + redis
+#   pip install 'supertable[s3]'      -> AWS S3 backend + redis
+#   pip install 'supertable[azure]'   -> Azure Blob backend + redis
+#   pip install 'supertable[gcp]'     -> GCS backend + redis
+#   pip install 'supertable[all-cloud]' -> all cloud backends (each brings redis)
