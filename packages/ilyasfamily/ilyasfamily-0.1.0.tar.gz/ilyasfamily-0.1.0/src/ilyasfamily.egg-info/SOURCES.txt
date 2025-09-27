@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ilyasfamily/__init__.py
+src/ilyasfamily/core.py
+src/ilyasfamily/types.py
+src/ilyasfamily.egg-info/PKG-INFO
+src/ilyasfamily.egg-info/SOURCES.txt
+src/ilyasfamily.egg-info/dependency_links.txt
+src/ilyasfamily.egg-info/top_level.txt
+tests/test.py
