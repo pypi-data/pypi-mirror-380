@@ -1,0 +1,7 @@
+boto3_dataclass_greengrass/__init__.py,sha256=uI0l99F1u4cOAwaUtd0Bl3iJKfTCGFqESj6wA2DAk2k,114
+boto3_dataclass_greengrass/caster.py,sha256=pR5TcohjdofbIole_e2fXhitJUstCuFPRQo4sFtYdRc,17389
+boto3_dataclass_greengrass/type_defs.py,sha256=XvUSzaRw5Ch4kMUSbRIwndGNGiC3cLsPAkyj6YwhHxs,243273
+boto3_dataclass_greengrass-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_greengrass-1.40.0.dist-info/METADATA,sha256=sJ4AyufVLDNKiK4-_ockkehO-Dyq4gFZgjZRNc5106k,1662
+boto3_dataclass_greengrass-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_greengrass-1.40.0.dist-info/RECORD,,
