@@ -1,0 +1,2 @@
+manim>=0.17.0
+pydantic>=2.0
