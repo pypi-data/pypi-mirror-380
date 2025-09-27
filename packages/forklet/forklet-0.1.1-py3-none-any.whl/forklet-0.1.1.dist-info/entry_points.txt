@@ -1,0 +1,2 @@
+[console_scripts]
+forklet = forklet.__main__:main
