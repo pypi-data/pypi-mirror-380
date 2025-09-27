@@ -1,0 +1,2 @@
+[console_scripts]
+shipy = shipy.cli:main
