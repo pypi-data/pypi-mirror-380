@@ -1,0 +1,106 @@
+"""
+日志模块类型提示
+"""
+
+import logging
+from typing import Optional, Union, Dict, Any, TypeVar
+from threading import Lock
+
+class LoggerManager:
+    """日志管理器 - 单例模式，管理全局日志配置"""
+    
+    _instance: Optional['LoggerManager']
+    _lock: Lock
+    
+    def __new__(cls) -> 'LoggerManager': ...
+    def __init__(self) -> None: ...
+    def configure(self, **kwargs) -> None: ...
+    def get_logger(self) -> logging.Logger: ...
+    def get_config(self) -> Dict[str, Any]: ...
+    def get_log_file_path(self) -> Optional[str]: ...
+
+class Logger:
+    """公开的日志类 - 提供用户友好的接口"""
+    
+    def __init__(
+        self,
+        log_dir: Optional[str] = ...,
+        log_filename: Optional[str] = ...,
+        log_level: Union[int, str] = ...,
+        max_file_size: int = ...,
+        backup_count: int = ...,
+        console_output: bool = ...,
+        file_output: bool = ...
+    ) -> None: ...
+    def debug(self, msg: str, *args, **kwargs) -> None: ...
+    def info(self, msg: str, *args, **kwargs) -> None: ...
+    def warning(self, msg: str, *args, **kwargs) -> None: ...
+    def error(self, msg: str, *args, **kwargs) -> None: ...
+    def critical(self, msg: str, *args, **kwargs) -> None: ...
+    def exception(self, msg: str, *args, **kwargs) -> None: ...
+
+
+"""
+登录模块类型提示
+"""
+
+from typing import Self, Optional
+from ..utils.base import Base
+
+class Login(Base):
+    """登录类"""
+    
+    username: str
+    password: str
+    dll_path: str
+    appname: str
+    lparam: str
+    autoupdate: bool
+    showmanship: bool
+    
+    def __init__(
+        self,
+        username: str,
+        password: str,
+        dll_path: str,
+        appname: str = ...,
+        lparam: str = ...,
+        autoupdate: bool = ...,
+        showmanship: bool = ...
+    ) -> None: ...
+    def set_dll_path(self) -> Self: ...
+    def login(self) -> Self: ...
+    def get_last_login_fyi(self) -> Self: ...
+    def get_last_login_time(self) -> Self: ...
+    def get_current_fyi(self) -> Self: ...
+    def get_max_open_num(self) -> Self: ...
+    def get_version(self) -> Self: ...
+
+class 登录模块(Base):
+    """登录模块封装类（中文函数名版本）"""
+    
+    用户名: str
+    密码: str
+    dll路径: str
+    应用名称: str
+    应用参数: str
+    自动更新: bool
+    显示消息框: bool
+    
+    def __init__(
+        self,
+        用户名: str,
+        密码: str,
+        dll路径: str,
+        应用名称: str = ...,
+        应用参数: str = ...,
+        自动更新: bool = ...,
+        显示消息框: bool = ...
+    ) -> None: ...
+    def 设置dll路径(self) -> Self: ...
+    def 登录(self) -> Self: ...
+    def 获取最近登录点数(self) -> Self: ...
+    def 获取最近登录时间(self) -> Self: ...
+    def 获取当前点数(self) -> Self: ...
+    def 获取最大多开数(self) -> Self: ...
+    def 获取版本号(self) -> Self: ...
