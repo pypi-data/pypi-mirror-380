@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+ocr/__init__.py
+ocr/aadhaar_card.py
+ocr/fetch_data.py
+ocr/image_preprocessor.py
+ocr/pan_card.py
+ocr_pro.egg-info/PKG-INFO
+ocr_pro.egg-info/SOURCES.txt
+ocr_pro.egg-info/dependency_links.txt
+ocr_pro.egg-info/requires.txt
+ocr_pro.egg-info/top_level.txt
