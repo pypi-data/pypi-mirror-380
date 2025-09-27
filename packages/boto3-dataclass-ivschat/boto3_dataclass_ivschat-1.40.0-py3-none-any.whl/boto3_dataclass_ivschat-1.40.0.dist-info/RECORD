@@ -1,0 +1,7 @@
+boto3_dataclass_ivschat/__init__.py,sha256=2QKIk-l-hn69TvkYes6TvBuBWeIUbn9zkUwBE7z74o0,108
+boto3_dataclass_ivschat/caster.py,sha256=XtuXICnQVTMt_pnHeTbUHKf17_IxMO6LXMNrjlKRbEU,3011
+boto3_dataclass_ivschat/type_defs.py,sha256=10yk_bbWiRGF7l1RlcPQE4rVXRaFgXDvvHErUsgCVww,38802
+boto3_dataclass_ivschat-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_ivschat-1.40.0.dist-info/METADATA,sha256=RDHohE31WH1xXIDFUjwcByjDQeqjlNOgMFkoIdZX70Y,1641
+boto3_dataclass_ivschat-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_ivschat-1.40.0.dist-info/RECORD,,
