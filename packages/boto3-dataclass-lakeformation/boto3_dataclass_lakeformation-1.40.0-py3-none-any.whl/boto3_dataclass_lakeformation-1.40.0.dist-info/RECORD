@@ -1,0 +1,7 @@
+boto3_dataclass_lakeformation/__init__.py,sha256=Plw1BO1vLvrXqYoKuptM3BYRRyWfpCxtXr42Zhq2_6M,120
+boto3_dataclass_lakeformation/caster.py,sha256=odVMrjaXj-bF5fmzrIBoGu7ZSboj8y6-2m3VGWVST_c,8474
+boto3_dataclass_lakeformation/type_defs.py,sha256=5B4Yc5v1XGs116ptwJXvKZqNguFy4ys0TuSVGoqDesw,164541
+boto3_dataclass_lakeformation-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_lakeformation-1.40.0.dist-info/METADATA,sha256=A3ngSHwykoIrRJj5SLqHNWRcwiz8UGyfvzD30ykHkc4,1683
+boto3_dataclass_lakeformation-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_lakeformation-1.40.0.dist-info/RECORD,,
