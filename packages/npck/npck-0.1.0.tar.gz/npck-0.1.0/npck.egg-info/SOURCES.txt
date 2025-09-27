@@ -1,0 +1,14 @@
+setup.py
+npck/__init__.py
+npck/practical1.py
+npck/practical2.py
+npck/practical3.py
+npck/practical4.py
+npck/practical5.py
+npck/practical6.py
+npck/practical7.py
+npck/practical8.py
+npck.egg-info/PKG-INFO
+npck.egg-info/SOURCES.txt
+npck.egg-info/dependency_links.txt
+npck.egg-info/top_level.txt
