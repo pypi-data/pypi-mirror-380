@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/transformers_research/__init__.py
+src/transformers_research/version.py
+src/transformers_research.egg-info/PKG-INFO
+src/transformers_research.egg-info/SOURCES.txt
+src/transformers_research.egg-info/dependency_links.txt
+src/transformers_research.egg-info/requires.txt
+src/transformers_research.egg-info/top_level.txt
+src/transformers_research/models/__init__.py
+src/transformers_research/models/attention.py
+src/transformers_research/models/norm.py
+src/transformers_research/models/vanilla.py
+src/transformers_research/models/vision.py
