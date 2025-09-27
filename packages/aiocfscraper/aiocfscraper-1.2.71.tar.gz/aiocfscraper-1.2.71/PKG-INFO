@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: aiocfscraper
+Version: 1.2.71
+Summary: A Python module to bypass Cloudflare's anti-bot page.
+Home-page: https://github.com/bolone-sengkuni/aio-cloudscraper
+Author: bolone-sengkuni
+Author-email: 
+Project-URL: Bug Tracker, https://github.com/bolone-sengkuni/aio-cloudscraper/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+aiocfscraper:
+- An asynchronous requesting library to help elude CloudFlare's anti-bot detection tests.
+- Inspired by https://pypi.org/project/cloudscraper/

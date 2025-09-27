@@ -1,0 +1,12 @@
+README.md
+setup.py
+aiocfscraper.egg-info/PKG-INFO
+aiocfscraper.egg-info/SOURCES.txt
+aiocfscraper.egg-info/dependency_links.txt
+aiocfscraper.egg-info/requires.txt
+aiocfscraper.egg-info/top_level.txt
+utils/__init__.py
+utils/challenge_identification.py
+utils/challenge_solver.py
+utils/helpers.py
+utils/user_agents.py
