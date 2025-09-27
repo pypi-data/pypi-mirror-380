@@ -1,0 +1,2 @@
+[console_scripts]
+ai-sentinel = military_scanner:main
