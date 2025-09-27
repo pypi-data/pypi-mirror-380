@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pynadlan
+Version: 0.1.0
+Summary: A Python wrapper for the israel Nadlan prices.
+Home-page: https://github.com/bensterenson/pynadlan
+Author: Your Name
+Author-email: bensterenson@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# pynadlan
