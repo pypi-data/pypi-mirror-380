@@ -1,0 +1,7 @@
+boto3_dataclass_lexv2_runtime/__init__.py,sha256=7teqvuqNrEy1dYtzVeoVbVMciB71-dAxyXFpuJMU4ek,120
+boto3_dataclass_lexv2_runtime/caster.py,sha256=PVGYkrj1kkAdTAhimAmDCj2X8WW037iEio-lSTXb5pI,1389
+boto3_dataclass_lexv2_runtime/type_defs.py,sha256=ZKFK3GUkvl7sOIiNQOP3EKrqb4p1KJ_RpfJ1jmK-XgI,62090
+boto3_dataclass_lexv2_runtime-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_lexv2_runtime-1.40.0.dist-info/METADATA,sha256=3F8wE3YxADKihry8JzkCObM-4RDPFpKbq0DwFr7ibHU,1683
+boto3_dataclass_lexv2_runtime-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_lexv2_runtime-1.40.0.dist-info/RECORD,,
