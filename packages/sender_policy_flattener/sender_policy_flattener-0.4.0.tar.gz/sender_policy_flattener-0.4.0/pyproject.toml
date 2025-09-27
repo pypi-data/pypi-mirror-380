@@ -1,0 +1,52 @@
+[project]
+name = "sender_policy_flattener"
+version = "0.4.0"
+description = "Condense SPF records to network blocks to avoid DNS Lookup Limits"
+authors = [{ name = "Vasili Syrakis", email = "cetanu@gmail.com" }]
+requires-python = ">=3.10.0,<4"
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "spf",
+    "dns",
+    "sender policy framework",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3.3",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+    "Intended Audience :: System Administrators",
+    "Natural Language :: English",
+]
+dependencies = [
+    "dnspython",
+    "netaddr",
+]
+
+[project.urls]
+Repository = "https://github.com/cetanu/sender_policy_flattener"
+
+[project.scripts]
+spflat = "sender_policy_flattener.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-spec",
+    "mock",
+    "ruff",
+    "mypy",
+    "types-netaddr",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
