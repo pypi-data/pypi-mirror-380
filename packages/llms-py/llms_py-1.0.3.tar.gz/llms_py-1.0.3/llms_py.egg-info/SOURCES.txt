@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+llms.json
+llms.py
+pyproject.toml
+requirements.txt
+setup.py
+llms_py.egg-info/PKG-INFO
+llms_py.egg-info/SOURCES.txt
+llms_py.egg-info/dependency_links.txt
+llms_py.egg-info/entry_points.txt
+llms_py.egg-info/not-zip-safe
+llms_py.egg-info/requires.txt
+llms_py.egg-info/top_level.txt
