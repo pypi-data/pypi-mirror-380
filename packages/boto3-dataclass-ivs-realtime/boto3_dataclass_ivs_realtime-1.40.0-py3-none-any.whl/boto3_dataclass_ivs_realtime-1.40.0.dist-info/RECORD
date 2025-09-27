@@ -1,0 +1,7 @@
+boto3_dataclass_ivs_realtime/__init__.py,sha256=X8m787PH7El1y2b1N04R490qkc7cRdnlnOevB2BJkgs,118
+boto3_dataclass_ivs_realtime/caster.py,sha256=gzj7cg5WvJJWs-vpOjIHBLEY5luMNmZCjtjYJhqHFFU,6607
+boto3_dataclass_ivs_realtime/type_defs.py,sha256=ekP6EInUh-5Hobs_0VxreoNC3oi5qw0gLs-dHCUHAmc,116838
+boto3_dataclass_ivs_realtime-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_ivs_realtime-1.40.0.dist-info/METADATA,sha256=Idoxm8WbyvioHI2K2ED9w-RGt06fJL-cQlSnxdLkixQ,1676
+boto3_dataclass_ivs_realtime-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_ivs_realtime-1.40.0.dist-info/RECORD,,
