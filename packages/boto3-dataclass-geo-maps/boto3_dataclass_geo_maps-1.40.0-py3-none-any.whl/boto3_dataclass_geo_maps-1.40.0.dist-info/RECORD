@@ -1,0 +1,7 @@
+boto3_dataclass_geo_maps/__init__.py,sha256=KYsTnyK8oF1qDWNHnlI3fl5rokraXrduJNseF3Kxuls,110
+boto3_dataclass_geo_maps/caster.py,sha256=33qpBmXlHGK5Y4cLJxBzmf8cv_IGLyUmQgeE9lhqBu4,1136
+boto3_dataclass_geo_maps/type_defs.py,sha256=4Szydk0QHjmc61qfgx6VOQWMfjpsIwAjL-5z5ukNjzA,11074
+boto3_dataclass_geo_maps-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_geo_maps-1.40.0.dist-info/METADATA,sha256=9u1kKHj6qwEFmEyh6YVXvquaOiwK1_CX9lp90I_rmA8,1648
+boto3_dataclass_geo_maps-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_geo_maps-1.40.0.dist-info/RECORD,,
