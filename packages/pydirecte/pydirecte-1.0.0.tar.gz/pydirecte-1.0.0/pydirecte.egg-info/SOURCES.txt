@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pydirecte/__init__.py
+pydirecte/index.py
+pydirecte.egg-info/PKG-INFO
+pydirecte.egg-info/SOURCES.txt
+pydirecte.egg-info/dependency_links.txt
+pydirecte.egg-info/requires.txt
+pydirecte.egg-info/top_level.txt
