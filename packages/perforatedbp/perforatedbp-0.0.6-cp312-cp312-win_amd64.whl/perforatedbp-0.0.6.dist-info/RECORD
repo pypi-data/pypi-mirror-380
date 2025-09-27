@@ -1,0 +1,13 @@
+perforatedbp/__init__.cp312-win_amd64.pyd,sha256=bVED4Gw7paRZL1R8JAPRzenDHo9lR7_T_aEA5ltdxkE,16896
+perforatedbp/blockwise_pbp.cp312-win_amd64.pyd,sha256=-uA0L14nihCAije5ftcSxBaS1RkmMmuVL1h6b933mlo,113152
+perforatedbp/check_license.cp312-win_amd64.pyd,sha256=nB-Kle-RgSI6yMuZzo7k9p9hQ8gB6S7OoHGamCM8Wq4,60416
+perforatedbp/clean_load.cp312-win_amd64.pyd,sha256=VQBitk1OLkwA5phU1JLT_vEiLF7Hm04ZrpfBmzGcDrI,90624
+perforatedbp/globals_pbp.cp312-win_amd64.pyd,sha256=vtDhat-yxGv6HMLD_zE0ihqnR6zdONalaeCJwYD0pdg,23552
+perforatedbp/modules_pbp.cp312-win_amd64.pyd,sha256=s65UimSBR_C97muTVCzmWTB6ducvaejRNjDFeAjlFXk,251392
+perforatedbp/network_pbp.cp312-win_amd64.pyd,sha256=jmrKjSz9XFHNT0iYXCpJGKc0617VqS-CM1mfI96h3ws,113152
+perforatedbp/tracker_pbp.cp312-win_amd64.pyd,sha256=SW2fpJGSRrbpJmXEB33eNlOxj0JIoXzBtiY5ILboICg,113664
+perforatedbp/utils_pbp.cp312-win_amd64.pyd,sha256=bieo63clkVSheb5tde71bDJNU5BI8AftvQScHxBSG4M,92160
+perforatedbp-0.0.6.dist-info/METADATA,sha256=CMOhvKCHZL5oohl20_KYdNg2_4MwTpWJSwkwswWYE3Y,609
+perforatedbp-0.0.6.dist-info/WHEEL,sha256=8UP9x9puWI0P1V_d7K2oMTBqfeLNm21CTzZ_Ptr0NXU,101
+perforatedbp-0.0.6.dist-info/top_level.txt,sha256=vymX1tN98EJMl_IuPCF3x4XiXYhLC_cB25NXXVJ8G2M,13
+perforatedbp-0.0.6.dist-info/RECORD,,
