@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Run Benchmark{% endblock %}
+
+{% block head %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto space-y-8">
+        <div class="flex justify-between items-center">
+             <h1 class="text-3xl font-bold">Benchmark Runner Dashboard</h1>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Run New Benchmark</h2>
+            <div class="flex items-end space-x-4">
+                <div class="flex-1">
+                    <label for="benchmark-select" class="block text-sm font-medium text-gray-300">Select Benchmark</label>
+                    <select id="benchmark-select" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm p-2"></select>
+                </div>
+                <div class="flex-1">
+                    <label for="model-select" class="block text-sm font-medium text-gray-300">Select Model</label>
+                    <select id="model-select" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm p-2"></select>
+                </div>
+                <button id="run-eval-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200 h-10">Run Eval</button>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="flex justify-between items-center mb-4 border-b border-gray-700 pb-2">
+                <h2 class="text-xl font-semibold">Results History</h2>
+                <button id="refresh-results-btn" class="text-gray-400 hover:text-white text-sm">Refresh</button>
+            </div>
+            
+            <div class="mb-6 p-4 bg-gray-900 rounded-lg">
+                <h3 class="font-semibold mb-4 text-lg">Performance Comparison</h3>
+                <div class="flex space-x-4 mb-4">
+                    <div class="flex-1">
+                        <label for="graph-benchmark-select" class="block text-sm font-medium text-gray-300">View results for benchmark:</label>
+                        <select id="graph-benchmark-select" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm p-2"></select>
+                    </div>
+                </div>
+                <canvas id="resultsChart"></canvas>
+            </div>
+
+            <table class="w-full text-left">
+                <thead class="border-b border-gray-600 text-sm text-gray-400">
+                    <tr>
+                        <th class="py-2 px-4">Timestamp</th>
+                        <th class="py-2 px-4">Benchmark</th>
+                        <th class="py-2 px-4">Model</th>
+                        <th class="py-2 px-4">Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody id="results-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='run.js') }}"></script>
+{% endblock %}
