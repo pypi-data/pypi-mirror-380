@@ -1,0 +1,14 @@
+numpy
+geopy
+setuptools
+cython
+parso
+py7zr
+python-dotenv
+fastparquet
+ipython
+polars
+psutil
+scipy
+
+[polars-worker]
