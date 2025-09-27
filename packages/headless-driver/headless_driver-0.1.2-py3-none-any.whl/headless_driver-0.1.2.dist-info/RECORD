@@ -1,0 +1,10 @@
+headless/__init__.py,sha256=ti-o0P6jGC98yTtfpt-ZcUY6Vs-nOCsVJ0NFHdFN9bE,319
+headless/core.py,sha256=QmGL_H8zS-Svsru3iyqLFmczyqx-sDZdikzPi-iaedE,8428
+headless/manager.py,sha256=SG38EFp2UTDjSG4sKPd2qOphLEMFhEmEIsJdQuFXFqI,5185
+headless/scraper.py,sha256=anbkebGMqizpM1lMLqYvdEobf1EFd8oQ8P3ei7f9TWs,5624
+headless_driver-0.1.2.dist-info/licenses/LICENSE,sha256=KU1mE56ce7vLGeo8D_cNQdb3Qfd88kVDr34k0GHFuF0,1066
+headless_driver-0.1.2.dist-info/METADATA,sha256=etNnIy8WQaR1Yhh0fKSJxMKfUqOyJZuKPx5yrA6bKAQ,6590
+headless_driver-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+headless_driver-0.1.2.dist-info/entry_points.txt,sha256=5lgUEJCfBq2y5jBbJRmnPU78wm70h7kpkXGEz6-yP-c,54
+headless_driver-0.1.2.dist-info/top_level.txt,sha256=bQrwMfgf9qjhl3XE5TNmza_wGMRAtbAAWdivtY5imr4,9
+headless_driver-0.1.2.dist-info/RECORD,,
