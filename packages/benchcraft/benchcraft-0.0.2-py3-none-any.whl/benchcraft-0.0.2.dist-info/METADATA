@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: benchcraft
+Version: 0.0.2
+Summary: Craft and run benchmarks.
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: asyncio
+Requires-Dist: flask
+Requires-Dist: openai
+Requires-Dist: sqlalchemy
+Requires-Dist: tqdm
+Provides-Extra: developer
+Requires-Dist: bandit[toml]; extra == 'developer'
+Requires-Dist: black; extra == 'developer'
+Requires-Dist: hatch; extra == 'developer'
+Requires-Dist: mypy; extra == 'developer'
+Requires-Dist: pytest; extra == 'developer'
+Requires-Dist: pytest-cov; extra == 'developer'
+Requires-Dist: ruff; extra == 'developer'
+Description-Content-Type: text/markdown
+
+# benchcraft
+
+A web application for creating, running, and reviewing benchmarks.
+
+
+## Quick Start
+```
+pip install -e .
+benchcraft serve
+```
+
+Open your browser and navigate to `http://localhost:5000`
+
+
+## Create
+![benchcraft screenshot](https://github.com/christopherwoodall/benchcraft/blob/main/.github/docs/create.png?raw=true)
+
+
+## Run
+![benchcraft screenshot](https://github.com/christopherwoodall/benchcraft/blob/main/.github/docs/run.png?raw=true)
+
+## Review
+WIP
