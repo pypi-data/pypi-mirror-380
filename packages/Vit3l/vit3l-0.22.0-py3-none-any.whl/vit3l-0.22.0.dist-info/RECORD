@@ -1,0 +1,16 @@
+vit3l/__init__.py,sha256=xGj27O5MkS87femNO475t7Ei0fdbsg6W_lM-3NNmt98,27523
+vit3l/__main__.py,sha256=2HvTJ0p3VJ0eJEKGrAsN_AvlpH6ZS7pZoTnWUn3DjJ0,1371
+vit3l/browsers.py,sha256=DplUYjHif2MnVrHrYF_ttiBnfTB53EJ2qUdBnB-JU-0,3526
+vit3l/chrome.py,sha256=FX3uLuWZxxpx-pMvayeNIlBN8VzLY5CX38vKZ9yONOs,3224
+vit3l/edge.py,sha256=8JpNO1XBexU0QS5ebeCs1zfcqcm30B-ptp5Bz4T87zw,918
+vit3l/eel.js,sha256=kxSXMGXihnWLwBnSNyIOX6VPuZtaz9RnEVm0tyRm1-w,14703
+vit3l/electron.py,sha256=VpmHgEouFuTbhK2N7mMTxT0e2WCkFW5sIc9v5C4rSNQ,1006
+vit3l/msIE.py,sha256=QdDW0aDofzEYIV0HsENasmsUVtkqVAdGVQXgCG808Hc,458
+vit3l/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vit3l/types.py,sha256=bLSM6VRnLpmJqfCT0_idBLDdy09XzFGINK9ZcFY1rzk,1500
+vit3l-0.22.0.dist-info/licenses/LICENSE,sha256=Hb_hE1ZVsUgQmIaUoDKXj355GD45hlaCtrk5tmItZlE,1071
+vit3l-0.22.0.dist-info/METADATA,sha256=0H594_XE3iy3kPfBs8ngXhrskIYsQgrDK61hAsEk2vA,6753
+vit3l-0.22.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+vit3l-0.22.0.dist-info/entry_points.txt,sha256=yIhvsOLg33vUd_vKUZ5dQ8oorAyCO4LIOpVWS9wp8xw,46
+vit3l-0.22.0.dist-info/top_level.txt,sha256=Q_ZQKNisskuy6tzsGuA8PezIXILY2I6UVlMocS9uJ2w,6
+vit3l-0.22.0.dist-info/RECORD,,
