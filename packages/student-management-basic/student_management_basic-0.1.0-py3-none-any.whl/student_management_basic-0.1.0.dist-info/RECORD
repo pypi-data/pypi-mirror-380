@@ -1,0 +1,9 @@
+student_management/__init__.py,sha256=nrq6Ich4Zlrz3zWw35oAtKDf3D71Lv90bwIVtk1bAjk,113
+student_management/graduate.py,sha256=FymDvFgypkfTCrYXklNIt2H6F5vOZbSYJKxcHk77G-s,134
+student_management/parent_student.py,sha256=vi-Fimq0d7TJ-RqYds6PDJf3NzM1hIBTlSgzTHRPQMA,226
+student_management/phd.py,sha256=I6cg2vgQH1Ir4ZHuWggkElcSm3JAur-9O_FYhf4b84k,124
+student_management/undergraduate.py,sha256=WzxXJ1AG9tjLo7VE4AqtIKxUMls_I_i65ddjaAr3nps,144
+student_management_basic-0.1.0.dist-info/METADATA,sha256=wLfKV6qfnPuF_I_CdmmdNYNQ9GBmQIauo0jOEvCAmGg,1018
+student_management_basic-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+student_management_basic-0.1.0.dist-info/top_level.txt,sha256=12zxuo6o3l49wnwdxy2NrbaPhPKOLA6zC57VxlMpGHY,19
+student_management_basic-0.1.0.dist-info/RECORD,,
