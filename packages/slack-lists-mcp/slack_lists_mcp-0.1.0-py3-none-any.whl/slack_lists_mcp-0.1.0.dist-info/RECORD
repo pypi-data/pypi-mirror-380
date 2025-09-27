@@ -1,0 +1,10 @@
+slack_lists_mcp/__init__.py,sha256=7O6-k_fzQyr-TG9mqvTr7sbv9NSkQFlZGLFv9WudUjo,139
+slack_lists_mcp/__main__.py,sha256=5pExNHWGTvLDpw1KhK5eAKEgQGv7XI2V4k3gXEJoLvc,672
+slack_lists_mcp/config.py,sha256=V3uNm6wmxw0RlWYC6vY7_UdHzDl1_yRhw9plXs0OT-k,2053
+slack_lists_mcp/models.py,sha256=KmxoPTgbSkPcl-oI7_4BxBpSFKitdye82RObgCLMBaU,6000
+slack_lists_mcp/server.py,sha256=3Wtc3kgl2x-IoxxYfssdZ6NH0O8-jPsZz3L5qiZR-zI,18367
+slack_lists_mcp/slack_client.py,sha256=vcTViXAVh5gGkAFajtEML-v0LetzN1kvW79iLFgdNl4,19362
+slack_lists_mcp-0.1.0.dist-info/WHEEL,sha256=pFCy50wRV2h7SjJ35YOsQUupaV45rMdgpNIvnXbG5bE,79
+slack_lists_mcp-0.1.0.dist-info/entry_points.txt,sha256=rzI-HSgpSHN3cXkCxqJ2sQbQ6-KpWu_p-1xDj944JY0,58
+slack_lists_mcp-0.1.0.dist-info/METADATA,sha256=sarbeoC8CTbRveQfQmSZe8SP1qghqaHGMeqR9zBQeBs,6152
+slack_lists_mcp-0.1.0.dist-info/RECORD,,
