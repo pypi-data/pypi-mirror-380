@@ -1,0 +1,141 @@
+id: https://concepts.datalad.org/s/properties/unreleased
+name: properties-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: Collection of common properties for use in schemas
+description: |
+  This schema provides a collection of common properties for use in other
+  schemas. It can be imported directly into other linkml schemas, or
+  any of its individual property definitions can be used by their
+  URI as vocabulary components or definitions (e.g., `dlprops:name`
+  identified by this [URI](`name`)).
+
+  Class definitions are only included insofar as they define ranges
+  for particular property slots.
+
+  Slot names use the plural form whenever they are directly declared as
+  "multivalued" in this schema, otherwise the singular form is used for
+  the slot name. The `slot_uri` always uses the singular form.
+
+  Every property declared here is mapped to standard/established vocabularies.
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.context.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: MIT
+
+prefixes:
+  dcterms: http://purl.org/dc/terms/
+  dlprops: https://concepts.datalad.org/s/properties/unreleased/
+  dlschemas: https://concepts.datalad.org/s/
+  eunal: http://publications.europa.eu/resource/authority/
+  ex: http://example.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  linkml: https://w3id.org/linkml/
+  obo: http://purl.obolibrary.org/obo/
+  owl: http://www.w3.org/2002/07/owl#
+  pq: http://www.wikidata.org/prop/qualifier/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sio: http://semanticscience.org/resource/
+
+default_prefix: dlprops
+
+emit_prefixes:
+  - dlprops
+
+imports:
+  - linkml:types
+  - dlschemas:things/v1
+
+slots:
+  conforms_to:
+    slot_uri: dlprops:conforms_to
+    description: >-
+      An established standard to which the subject conforms.
+    range: Thing
+    comments:
+      - This property SHOULD be used to indicate a model, schema, ontology, view or profile that the subject conforms to.
+    exact_mappings:
+      - dcterms:conformsTo
+
+  about:
+    slot_uri: dlprops:about
+    description: >-
+      A relation of an information artifact to the subject, such as
+      a URL identifying the topic of a document.
+    range: Thing
+    multivalued: true
+    exact_mappings:
+      - schema:about
+      - obo:IAO_0000136
+
+  keywords:
+    slot_uri: dlprops:keyword
+    description: >-
+      One or more keywords or tags describing the subject.
+    range: string
+    multivalued: true
+    exact_mappings:
+      - dcat:keyword
+      - schema:keywords
+      - obo:IAO_0000629
+
+  name:
+    slot_uri: dlprops:name
+    description: >-
+      Name of the subject. A name is closely related to a `title`, but often
+      more compact and identifier-like, but without the implication of
+      uniqueness of an identifier. A name is often used by technical systems
+      to display an item in an organizational structure, such as a file
+      in a directory hierarchy.
+    exact_mappings:
+      - rdfs:label
+      - schema:name
+      - foaf:name
+    close_mappings:
+      - dlprops:title
+      - obo:IAO_0000590
+    range: string
+
+  same_as:
+    slot_uri: dlprops:same_as
+    description: >-
+      Declares that the subject and an object are equal.
+      Can be used to indicate a URL of a reference Web page that unambiguously
+      indicates the subject's identity. For example, the URL of the subject's
+      Wikipedia page, Wikidata entry, or official website.
+    range: Thing
+    exact_mappings:
+      - owl:sameAs
+    close_mappings:
+      - schema:sameAs
+
+  short_name:
+    slot_uri: dlprops:short_name
+    is_a: name
+    description: >-
+      A shortened name for the subject. For example, an acronym, initialism,
+      nickname, or other abbreviation of the `name`.
+    exact_mappings:
+      - pq:P1813
+    range: string
+
+  title:
+    slot_uri: dlprops:title
+    description: >-
+      A summarily description of the subject. It is closely related to
+      a `name`, but often less compact and more descriptive. Typically used for
+      documents.
+    exact_mappings:
+      - dcterms:title
+      - sio:SIO_000185
+    related_mappings:
+      - schema:name
+    range: string

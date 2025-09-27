@@ -1,0 +1,8 @@
+
+@prefix dlsocial: <https://concepts.datalad.org/s/social/unreleased/> .
+@prefix trr379: <https://trr379.de/> .
+
+trr379:bbbb a dlsocial:Person ;
+    dlsocial:given_name "John" .
+
+

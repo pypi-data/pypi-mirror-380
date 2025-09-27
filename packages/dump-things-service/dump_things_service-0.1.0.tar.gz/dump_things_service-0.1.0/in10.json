@@ -1,0 +1,16 @@
+{
+    "id": "trr379:root_element",
+    "given_name": "Grandfather",
+    "relations": {
+        "trr379:child_element": {
+            "id": "trr379:child_element",
+            "given_name": "Father",
+            "relations": {
+                "trr379:grand_child_element": {
+                    "id": "trr379:grand_child_element",
+                    "given_name": "Son"
+                }
+            }
+        }
+    }
+}

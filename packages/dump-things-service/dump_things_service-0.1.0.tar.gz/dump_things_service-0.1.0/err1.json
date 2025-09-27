@@ -1,0 +1,30 @@
+[
+  {
+    "annotations": {
+      "http://purl.obolibrary.org/obo/NCIT_C54269": "inm7usrmgt:28578b89-4b67-4b8a-8a2a-76633578465d"
+    },
+    "broad_mappings": [
+      "http://purl.obolibrary.org/obo/FBdv_00007013"
+    ],
+    "close_mappings": [
+      "http://purl.obolibrary.org/obo/ExO_0000102",
+      "http://purl.obolibrary.org/obo/PATO_0000011"
+    ],
+    "pid": "inm7:datamgt/dim/age",
+    "display_label": "Age",
+    "name": "Age",
+    "short_name": "Age"
+  },
+  {
+    "annotations": {
+      "http://purl.obolibrary.org/obo/NCIT_C54269": "inm7usrmgt:28578b89-4b67-4b8a-8a2a-76633578465d"
+    },
+    "close_mappings": [
+      "http://purl.obolibrary.org/obo/ExO_0000110"
+    ],
+    "pid": "inm7datamgt:4e52cb94-2f87-44a8-bb03-5c28d27d32f4",
+    "display_label": "Sex",
+    "name": "Sex",
+    "short_name": "Sex"
+  }
+]

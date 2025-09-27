@@ -1,0 +1,7 @@
+@prefix dltemporal: <https://concepts.datalad.org/s/temporal/unreleased/> .
+@prefix trr379: <https://trr379.de/> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+
+trr379:test_extract_1_2 a dltemporal:InstantaneousEvent ;
+    dltemporal:at_time "2028-12-31"^^w3ctr:NOTE-datetime .
+

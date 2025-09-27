@@ -1,0 +1,14 @@
+{
+  "pid": "inm7:pending/persons/8e9cb28c-a966-4c06-ad01-088887ce36fc",
+  "display_label": "Werner Schmidt",
+  "family_name": "Schmidt",
+  "given_name": "Werner",
+  "honorific_name_prefix": "Prof. Dr. Dr.",
+  "orcid": "0000-0001-6398-8888",
+  "offices": [
+    "inm7:rooms/fzj-14.6y-3046"
+  ],
+  "start_date": "2023-10-01",
+  "end_date": "2024-09-30",
+  "user_classifications": ["inm7_fzj_employee"]
+}

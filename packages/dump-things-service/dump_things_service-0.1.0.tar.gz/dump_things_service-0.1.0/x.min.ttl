@@ -1,0 +1,5 @@
+@prefix inm7fu: <https://concepts.inm7.de/s/flat-users/unreleased/> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+
+<https://inm7.de/ns/pending/persons/XXX> a inm7fu:User ;
+    inm7fu:start_date "2014"^^w3ctr:NOTE-datetime .

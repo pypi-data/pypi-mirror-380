@@ -1,0 +1,5 @@
+<https://trr379.de/contributors/michael-hanke2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://concepts.datalad.org/s/social/unreleased/Person> .
+<https://trr379.de/contributors/michael-hanke2> <https://concepts.datalad.org/s/social/unreleased/additional_names> "Dr Honk" .
+<https://trr379.de/contributors/michael-hanke2> <https://concepts.datalad.org/s/social/unreleased/family_name> "Hanke" .
+<https://trr379.de/contributors/michael-hanke2> <https://concepts.datalad.org/s/social/unreleased/given_name> "Michael" .
+<https://trr379.de/contributors/michael-hanke2> <https://concepts.datalad.org/s/social/unreleased/honorific_name_prefix> "Prof. Dr." .

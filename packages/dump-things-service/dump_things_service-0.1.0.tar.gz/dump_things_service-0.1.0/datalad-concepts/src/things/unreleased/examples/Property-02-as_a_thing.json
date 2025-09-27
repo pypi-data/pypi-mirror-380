@@ -1,0 +1,13 @@
+{
+  "pid": "ex:modified",
+  "attributes": [
+    {
+      "predicate": "ex:title",
+      "schema_type": "dlthings:AttributeSpecification",
+      "value": "modified"
+    }
+  ],
+  "description": "Date on which the resource was changed.",
+  "schema_type": "dlthings:Property",
+  "@type": "Property"
+}

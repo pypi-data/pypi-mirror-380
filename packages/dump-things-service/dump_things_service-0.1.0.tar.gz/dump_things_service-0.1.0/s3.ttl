@@ -1,0 +1,11 @@
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix inm7si: <https://concepts.inm7.de/s/simpleinput/unreleased/> .
+
+<https://inm7.de/ns/pending/organizations/c3ff0508-a2f0-4320-b9d8-d051a230146d> a inm7si:Organization ;
+    dlthings:relation <https://inm7.de/ns/pending/grants/c0edd060-807f-41ef-8036-2ca8e3a0c8ef> ;
+    inm7si:leaders <https://inm7.de/ns/pending/persons/661e5303-60c1-462e-8750-4e7689ba87a7> ;
+    inm7si:name "MyORG" .
+
+<https://inm7.de/ns/pending/grants/c0edd060-807f-41ef-8036-2ca8e3a0c8ef> a dlthings:Thing .
+
+

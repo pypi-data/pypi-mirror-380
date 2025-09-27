@@ -1,0 +1,6 @@
+<https://inm7.de/ns/pending/persons/67c2ca83-068b-46f7-a4b2-61185428f65f> a <https://concepts.inm7.de/s/flat-users/unreleased/User>;
+    <https://concepts.inm7.de/s/flat-base/unreleased/family_name> "some";
+    <https://concepts.inm7.de/s/flat-base/unreleased/given_name> "other";
+    <https://concepts.inm7.de/s/flat-users/unreleased/end_date> "2025-05-16";
+    <https://concepts.inm7.de/s/flat-users/unreleased/start_date> "2025-05-08";
+    <https://concepts.inm7.de/s/flat-users/unreleased/user_classifications> "student".

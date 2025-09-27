@@ -1,0 +1,10 @@
+# An attribute without a singular value, but attributes of it
+# own instead.
+predicate: ex:identifier
+exact_mappings:
+  - ADMS:Identifier
+attributes:
+  - predicate: skos:notation
+    value: 5008462-8
+  - predicate: ADMS:schemaAgency
+    value: https://d-nb.info

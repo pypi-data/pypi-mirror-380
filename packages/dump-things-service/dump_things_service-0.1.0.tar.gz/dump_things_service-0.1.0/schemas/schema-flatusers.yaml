@@ -1,0 +1,309 @@
+id: https://concepts.inm7.de/s/flat-users/unreleased
+name: inm7-flat-users-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: Data models for INM7 user management
+description: |
+  The classes and slots in this schema support modeling the
+  onboarding and offboarding workflows at the INM7.
+
+  More information may be available on the schema's [about page](about).
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: CC-BY-4.0
+
+prefixes:
+  ADMS: http://www.w3.org/ns/adms#
+  dash: http://datashapes.org/dash#
+  dcterms: http://purl.org/dc/terms/
+  dlidentifiers: https://concepts.datalad.org/s/identifiers/unreleased/
+  dlschemas: https://concepts.datalad.org/s/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  dltypes: https://concepts.datalad.org/s/types/unreleased/
+  eunal: http://publications.europa.eu/resource/authority/
+  inm7schemas: https://concepts.inm7.de/s/
+  inm7fb: https://concepts.inm7.de/s/flat-base/unreleased/
+  inm7fu: https://concepts.inm7.de/s/flat-users/unreleased/
+  inm7: https://inm7.de/ns/
+  inm7pending: https://inm7.de/ns/pending/
+  linkml: https://w3id.org/linkml/
+  orcid: https://orcid.org/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sh: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  spdx: http://spdx.org/rdf/terms#
+  w3ctr: https://www.w3.org/TR/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+default_prefix: inm7fu
+
+emit_prefixes:
+  - dlidentifiers
+  - dlthings
+  - dltypes
+  - inm7
+  - inm7fb
+  - inm7fu
+  - rdf
+  - rdfs
+  - skos
+  - xsd
+
+imports:
+  - /home/cristian/Develop/dump-things-service/schemas/schema-flatbase
+
+enums:
+  LicensedSoftware:
+    description: >-
+      Recognized license types. This is not a labeling of the actual user terms,
+      but of the product for which users need or request a license for.
+    permissible_values:
+      adobe:
+        description: Adobe Photoshop and other Adobe products
+      forklift:
+        description: Forklift file manager
+      matlab:
+        description: Matlab
+      matlab_toolboxes:
+        description: Any Matlab toolboxes
+      msoffice:
+        description: Microsoft Office
+      spss:
+        description: IBM SPSS (Statistics, and others)
+      zoom:
+        description: Zoom (videoconferencing)
+
+  UserClassification:
+    description: >-
+      Classifications of user types.
+    permissible_values:
+      inm7_fzj_employee:
+        description: An INM7 member that is an employee of the FZJ.
+      inm7_hhu_employee:
+        description: An INM7 member that is an employee of Heinrich Heine University Düsseldorf.
+      student:
+        description: A person associated with the INM7 as part of their training.
+      external:
+        description: An person with no formal direct affiliation with the INM7.
+
+  RequestableLaptop:
+    description: >-
+      Requestable configurations for INM-7 provided laptops.
+    permissible_values:
+      mac_new_querty:
+        description: Mac with US keyboard layout, max one year old.
+      mac_new_quertz:
+        description: Mac with German keyboard layout, max one year old.
+      mac_used_querty:
+        description: Mac with US keyboard layout, max five years old.
+      mac_used_quertz:
+        description: Mac with German keyboard layout, max five years old.
+      lenovolinux_new_querty:
+        description: Lenovo laptop running Linux with US keyboard layout, max one year old.
+      lenovolinux_new_quertz:
+        description: Lenovo laptop running Linux with German keyboard layout, max one year old.
+      lenovolinux_used_querty:
+        description: Lenovo laptop running Linux with US keyboard layout, max five years old.
+      lenovolinux_used_quertz:
+        description: Lenovo laptop running Linux with German keyboard layout, max five years old.
+      other:
+        description: Non-standard equipment, specify in the description.
+
+  RequestableAccessory:
+    description: Requestable accessories for INM-7 users
+    permissible_values:
+      screen_keyboard_mouse:
+        description: Package with screen (Dell 27 inch with built-in USB-C Dock), keyboard, and mouse.
+      headset_std:
+        description: Headset USB/wireless/3.5mm (Corsair Virtuoso RGB wireless black).
+      headset_custom:
+        description: Other headset (max 200 Euro incl Tax), specify in the description.
+      other:
+        description: Other kind of accessory, specify in the description.
+
+slots:
+  allocated_software_licenses:
+    title: License allocation
+    description: >-
+      Software licenses allocated for the subject.
+    range: LicensedSoftware
+    multivalued: true
+
+  start_date:
+    title: Start date
+    description: >-
+      Timepoint at which the subject starts or started.
+    range: W3CISO8601
+
+  end_date:
+    title: End date
+    description: >-
+      Timepoint at which the subject ends or ended.
+    range: W3CISO8601
+
+  juseless_account:
+    title: Juseless account
+    description: Assigned account on the Juseless system
+    range: JuselessAccount
+
+  requested_accessories:
+    title: Requested accessories
+    description: >-
+      The standard workplace package is a Dell 27-inch screen
+      with built-in USB-C dock, a keyboard, and a mouse. The standard
+      headset is a USB/wireless/3.5mm Corsair Virtuoso RGB wireless black.
+      For other accessories, choose "other" and specify in the description.
+    range: RequestableAccessory
+    multivalued: true
+
+  requested_juseless_account_name:
+    title: Preferred user name
+    description: Name of a (to be created) account
+    range: string
+    # guestimated from looking at juseless /home
+    pattern: '[a-z]+[a-z1-9.]+'
+
+  juseless_group_membership:
+    title: Juseless group membership
+    description: Groups on the Juseless system this user needs be a member of.
+    range: JuselessGroup
+    multivalued: true
+
+  requested_laptop:
+    title: Requested laptop
+    description: >-
+      Mac or Lenovo laptops can be provided. Lenovo laptops run Linux.
+      Category "new" laptops are max one year old, "used" laptops are
+      max five years old (4-cores, 16G RAM, 512G SSD). US (querty) and
+      German (quertz) keyboards are possible.
+    range: RequestableLaptop
+
+  user_classifications:
+    title: User type(s)
+    description: >-
+      Type classifications for users
+    range: UserClassification
+    multivalued: true
+
+classes:
+  Account:
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      Authorization to access resources on a system.
+    slots:
+      - name
+
+  JuselessAccount:
+    is_a: Account
+    description: User account on the Juseless system
+    slots:
+      - member_of
+    slot_usage:
+      member_of:
+        range: JuselessGroup
+
+  JuselessGroup:
+    is_a: Account
+    description: Unix group on the Juseless system
+
+  User:
+    class_uri: inm7fu:User
+    is_a: Person
+    description: >-
+      A person that is a user of the INM7 IT infrastructure
+    slots:
+      # on top of the properties from `Person`
+      - allocated_software_licenses
+      - end_date
+      - juseless_account
+      - requested_accessories
+      - requested_juseless_account_name
+      - juseless_group_membership
+      - requested_laptop
+      - start_date
+      - user_classifications
+    slot_usage:
+      family_name:
+        required: true
+        annotations:
+          sh:order: 1
+      given_name:
+        required: true
+        annotations:
+          sh:order: 2
+      additional_names:
+        annotations:
+          sh:order: 3
+      honorific_name_prefix:
+        annotations:
+          sh:order: 4
+      honorific_name_suffix:
+        annotations:
+          sh:order: 5
+      start_date:
+        required: true
+        description: When this person starts being a user.
+        annotations:
+          sh:order: 6
+      end_date:
+        required: true
+        title: (Expected) End date
+        description: When this person is expected to stop being a user.
+        annotations:
+          sh:order: 7
+      user_classifications:
+        required: true
+        annotations:
+          sh:order: 8
+      member_of:
+        annotations:
+          sh:order: 9
+      offices:
+        annotations:
+          sh:order: 10
+      emails:
+        recommended: true
+        annotations:
+          sh:order: 11
+      orcid:
+        recommended: true
+        annotations:
+          sh:order: 12
+      requested_juseless_account_name:
+        annotations:
+          sh:order: 13
+      requested_laptop:
+        annotations:
+          sh:order: 14
+      requested_accessories:
+        annotations:
+          sh:order: 15
+      allocated_software_licenses:
+        annotations:
+          sh:order: 16
+      juseless_group_membership:
+        annotations:
+          sh:order: 17
+      juseless_account:
+        annotations:
+          sh:order: 18
+      description:
+        annotations:
+          sh:order: 19
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 20

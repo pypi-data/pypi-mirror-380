@@ -1,0 +1,7 @@
+@prefix inm7fb: <https://concepts.inm7.de/s/flat-base/unreleased/> .
+@prefix inm7fs: <https://concepts.inm7.de/s/flat-data/unreleased/> .
+
+<http://xxx.example.com/hans-dieter> a inm7fs:SubjectType ;
+    inm7fb:name "hans dieter" .
+
+

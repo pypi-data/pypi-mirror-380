@@ -1,0 +1,12 @@
+{
+  "pid": "inm7:pending/organizations/c3ff0508-a2f0-4320-b9d8-d051a230146d",
+  "name": "MyORG",
+  "relations": {
+    "inm7:pending/grants/c0edd060-807f-41ef-8036-2ca8e3a0c8ef": {
+      "pid": "inm7:pending/grants/c0edd060-807f-41ef-8036-2ca8e3a0c8ef"
+    }
+},
+  "leaders": [
+    "inm7:pending/persons/661e5303-60c1-462e-8750-4e7689ba87a7"
+  ]
+}

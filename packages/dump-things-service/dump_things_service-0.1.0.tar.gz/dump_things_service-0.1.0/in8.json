@@ -1,0 +1,8 @@
+{
+  "id": "trr379:root_element",
+  "relations" : {
+    "trr379:child_element": {
+      "id": "trr379:child_element"
+    }
+  }
+}

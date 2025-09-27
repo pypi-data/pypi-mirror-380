@@ -1,0 +1,101 @@
+id: https://concepts.trr379.de/s/base/unreleased
+name: trr379-base-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: Base schema for TRR379 metadata
+description: |
+  TODO
+
+  More information is available on the schema's [about page](about).
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.context.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: CC-BY-4.0
+
+prefixes:
+  CiTO: http://purl.org/spar/cito/
+  cogatlas: https://www.cognitiveatlas.org/task/id/
+  dledist: https://concepts.datalad.org/s/edistributions/unreleased/
+  dlidentifiers: https://concepts.datalad.org/s/identifiers/unreleased/
+  dlprops: https://concepts.datalad.org/s/properties/unreleased/
+  dlprov: https://concepts.datalad.org/s/prov/unreleased/
+  dlpubs: https://concepts.datalad.org/s/publications/unreleased/
+  dlres: https://concepts.datalad.org/s/resources/unreleased/
+  dlroles: https://concepts.datalad.org/s/roles/unreleased/
+  dlschemas: https://concepts.datalad.org/s/
+  dlsocial: https://concepts.datalad.org/s/social/unreleased/
+  dlspatial: https://concepts.datalad.org/s/spatial/unreleased/
+  dltemporal: https://concepts.datalad.org/s/temporal/unreleased/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  dltypes: https://concepts.datalad.org/s/types/unreleased/
+  doi: https://dx.doi.org/
+  email: https://concepts.datalad.org/ns/email/
+  # here is a large, versatile source of controlled vocabularies/codes
+  eunal: http://publications.europa.eu/resource/authority/
+  geo: "geo:"
+  gepris: https://gepris.dfg.de/gepris/
+  linkml: https://w3id.org/linkml/
+  marcrel: http://id.loc.gov/vocabulary/relators/
+  obo: http://purl.obolibrary.org/obo/
+  orcid: https://orcid.org/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  ror: https://ror.org/
+  schema: http://schema.org/
+  # snomed
+  sct: "http://snomed.info/id/"
+  # form annotations
+  sh: http://www.w3.org/ns/shacl#
+  sio: http://semanticscience.org/resource/
+  skos: http://www.w3.org/2004/02/skos/core#
+  trr379base: https://concepts.trr379.de/s/base/unreleased/
+  # this name space is (partially) populated by the TRR379 main
+  # website, providing definitions for key items
+  trr379: https://trr379.de/
+  w3ctr: https://www.w3.org/TR/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+default_prefix: trr379base
+
+emit_prefixes:
+  - dlidentifiers
+  - dlprops
+  - dlprov
+  - dlpubs
+  - dlres
+  - dlroles
+  - dlsocial
+  - dlspatial
+  - dltemporal
+  - dlthings
+  - dltypes
+  - email
+  - geo
+  - marcrel
+  - orcid
+  - rdf
+  - rdfs
+  - skos
+  - trr379
+  - w3ctr
+  - xsd
+
+imports:
+  # components of direct utility
+  - dlschemas:roles/unreleased
+  - dlschemas:social/unreleased
+  - dlschemas:publications/unreleased
+  - dlschemas:resources/unreleased
+  - dlschemas:edistributions/unreleased
+
+
+classes:

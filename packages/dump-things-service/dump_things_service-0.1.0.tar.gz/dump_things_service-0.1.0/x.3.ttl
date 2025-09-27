@@ -1,0 +1,12 @@
+@prefix inm7fb: <https://concepts.inm7.de/s/flat-base/unreleased/> .
+@prefix inm7fu: <https://concepts.inm7.de/s/flat-users/unreleased/> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+
+<https://inm7.de/ns/pending/persons/67c2ca83-068b-46f7-a4b2-611854280001> a inm7fu:User ;
+    inm7fb:family_name "test x.3.ttl" ;
+    inm7fb:given_name "werwerwer" ;
+    inm7fu:end_date "2025-05-16"^^w3ctr:NOTE-datetime ;
+    inm7fu:start_date "2025"^^w3ctr:NOTE-datetime ;
+    inm7fu:user_classifications "student" .
+
+

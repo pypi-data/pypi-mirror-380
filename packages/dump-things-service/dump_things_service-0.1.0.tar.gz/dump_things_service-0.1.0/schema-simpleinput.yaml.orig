@@ -1,0 +1,991 @@
+id: https://concepts.inm7.de/s/simpleinput/unreleased
+name: inm7-simpleinput-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: INM7 simplified data models for manual metadata entry
+description: |
+  The classes and slots in this schema have the (sole) purpose of
+  informing the auto-generation of UIs for data entry. Consequently,
+  the simplify and lump-together concepts and constructs that will
+  eventually be represented with more appropriate data structures
+  from the `base` schema.
+
+  More information is available on the schema's [about page](about).
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: CC-BY-4.0
+
+prefixes:
+  ADMS: http://www.w3.org/ns/adms#
+  dash: http://datashapes.org/dash#
+  dcterms: http://purl.org/dc/terms/
+  dlidentifiers: https://concepts.datalad.org/s/identifiers/unreleased/
+  dlschemas: https://concepts.datalad.org/s/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  dltypes: https://concepts.datalad.org/s/types/unreleased/
+  eunal: http://publications.europa.eu/resource/authority/
+  inm7si: https://concepts.inm7.de/s/simpleinput/unreleased/
+  inm7: https://inm7.de/ns/
+  linkml: https://w3id.org/linkml/
+  orcid: https://orcid.org/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sh: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  spdx: http://spdx.org/rdf/terms#
+  w3ctr: https://www.w3.org/TR/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+default_prefix: inm7si
+
+emit_prefixes:
+  - dlidentifiers
+  - dlthings
+  - dltypes
+  - inm7
+  - rdf
+  - rdfs
+  - skos
+  - xsd
+
+imports:
+  - dlschemas:things/v1
+  - dlschemas:identifiers/unreleased
+
+
+enums:
+  OrganizationType:
+    description: >-
+      Classification of organizations.
+    permissible_values:
+      team:
+        description: Smallest unit of an organized group.
+      group:
+        description: A group may consist of more than one team.
+      division:
+        description: A unit within a parent organization that comprises multiple groups.
+      institute:
+        description: A topical unit comprising multiple divisions or groups.
+      researchcenter:
+        description: An institute primarily focused on research (as opposed to education).
+      researchorganization:
+        description: An organization primarily focused on research (as opposed to education), possibly comprising multiple research centers.
+      faculty:
+        description: A division of a university or college
+      college:
+        description: An institution with a primary focus on undergraduate education.
+      university:
+        description: An institution with a focus on both undergraduate and graduate education.
+      nonprofit:
+        description: A private entity operated for a collective, public or social benefit.
+      business:
+        description: A company aiming to generate profit.
+
+
+types:
+  W3CISO8601:
+    uri: w3ctr:NOTE-datetime
+    description:
+      W3C variant/subset of IS08601 for specifying date(times).
+      Supported are
+      - YYYY (eg 1997)
+      - YYYY-MM (eg 1997-07)
+      - YYYY-MM-DD (eg 1997-07-16)
+      - YYYY-MM-DDThh:mmTZD (eg 1997-07-16T19:20+01:00)
+      - YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00)
+      - YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+      where TZD is the time zone designator (Z or +hh:mm or -hh:mm)
+    typeof: string
+    pattern: '^([-+]\d+)|(\d{4})|(\d{4}-[01]\d)|(\d{4}-[01]\d-[0-3]\d)|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))$'
+    see_also:
+      - https://www.w3.org/TR/NOTE-datetime
+
+slots:
+  acknowledgements:
+    description: >-
+      A description of how the subject should be acknowledged.
+    range: string
+
+  additional_names:
+    description: >-
+      Additional name(s) associated with the subject, such as one or more
+      middle names, or a nick name.
+    range: string
+    multivalued: true
+
+  contributing_projects:
+    description: >-
+      Projects that have contributed to the subject.
+    range: Project
+    multivalued: true
+
+  assignees:
+    description: >-
+      A person to whom an assignment to the subject is made. For example,
+      a person appointed or deputed by another to perform some task,
+      or enjoy some privilege.
+    range: Person
+    multivalued: true
+
+  authors:
+    description: >-
+      People that contributed to a document in the author role.
+    range: Person
+    multivalued: true
+
+  building:
+    description: >-
+      Building where the subject is located.
+    range: Building
+
+  building_level:
+    description: >-
+      Building level where the subject is located.
+    range: BuildingLevel
+
+  collaborators:
+    description: >-
+      Persons that are working together on a project.
+    range: Person
+    multivalued: true
+
+  curation_comments:
+    description: >-
+      A comment about a metadata record either providing additional information for
+      a record curation, or leaving a comment after curation occurred. This can be
+      used to include information that is deemed relevant, but could not be expressed
+      in the provided fields.
+    range: string
+    multivalued: true
+
+  date_complete_before:
+    description: >-
+      Timepoint at which the subject must have been completed at the latest.
+    range: W3CISO8601
+
+  date_published:
+    description: >-
+      Timepoint at which the subject was (last) published.
+    range: W3CISO8601
+
+  date_received:
+    description: >-
+      Timepoint at which the subject was received.
+    range: W3CISO8601
+
+  date_started:
+    description: >-
+      Timepoint at which the subject starts or started.
+    range: W3CISO8601
+
+  date_ended:
+    description: >-
+      Timepoint at which the subject ends or ended.
+    range: W3CISO8601
+
+  display_name:
+    slot_uri: skos:prefLabel
+    description: >-
+      Name to shown when the record is displayed as an item.
+    range: string
+
+  doi:
+    description: >-
+      Associated Digital Object Identifier (DOI; ISO 26324; see
+      https://doi.org).  The value must be just the DOI without the URL
+      project. So just `10.1038/s41597-022-01163-2` and not
+      `https://doi.org/10.1038/s41597-022-01163-2`.
+    range: string
+
+  emails:
+    description: >-
+      Associated email address.
+    range: EmailAddress
+    multivalued: true
+
+  family_name:
+    description: >-
+      The (inherited) family name of the subject. In many Western languages this is the
+      "last name".
+    range: string
+
+  funding:
+    description: >-
+      Grant that provides resources for a project.
+    range: Grant
+    multivalued: true
+
+  given_name:
+    description: >-
+      The given (non-inherited) name of the subject.
+    range: string
+
+  honorific_name_prefix:
+    description: >-
+      The honorific prefix(es) of the subject's name. For example, (academic/formal) titles
+      like "Mrs", or "Dr", "Dame".
+    range: string
+
+  honorific_name_suffix:
+    description: >-
+      The honorific suffix(es) of the subject's name. For example, generation labels ("III"),
+      or indicators of an academic degree, a profession, or a position ("MD", "BA").
+    range: string
+
+  issn:
+    description: >-
+      Associated International Standard Serial Number (ISSN) identifier (see https://www.issn.org).
+    range: string
+    pattern: '^\d{4}-\d{3}[0-9X]{1}$'
+
+  journal:
+    description: >-
+      Journal a document was published in.
+    range: Journal
+
+  member_of:
+    description: >-
+      The subject is a member of an organization.
+    range: Organization
+    multivalued: true
+
+  name:
+    description: >-
+      Name of the subject.
+    range: string
+
+  offices:
+    description: >-
+      Room(s) that are the office(s) of the subject.
+    range: Room
+    multivalued: true
+
+  orcid:
+    description: >-
+      Associated ORCID identifier (see https://orcid.org).
+    range: string
+    pattern: '^\d{4}-\d{4}-\d{4}-\d{3}[0-9X]{1}$'
+
+  organization_type:
+    description: >-
+      Type of an organization.
+    range: OrganizationType
+
+  partner_organizations:
+    description: >-
+      Organizations that contribute to a project.
+    range: Organization
+    multivalued: true
+
+  leaders:
+    description: >-
+      Person(s) that are formal or informal leaders of the subject.
+    range: Person
+    multivalued: true
+
+  parent_organization:
+    description: >-
+      An organization the subject is a part of.
+    range: Organization
+
+  parent_project:
+    description: >-
+      A project the subject is a part of.
+    range: Project
+
+  recipients:
+    description: >-
+      Person(s) who received the subject.
+    range: Person
+    multivalued: true
+
+  prerequisites:
+    description: >-
+      Deliverable requirements of the subject.
+    range: Deliverable
+    multivalued: true
+
+  room:
+    description: >-
+      Room where the subject is located.
+    range: Room
+
+  short_name:
+    description: >-
+      A shortened name for the subject. For example, an acronym, initialism,
+      nickname, or other abbreviation of the name or title.
+    range: string
+
+  site:
+    description: >-
+      Site where the subject is located.
+    range: Site
+
+  sponsor:
+    description: >-
+      Agent that provided the resources.
+    range: Organization
+
+  sponsor_grant_identifier:
+    description: >-
+      Identifier for a grant issued by the sponsor.
+    range: string
+
+  sponsor_admin_contacts:
+    description: >-
+      Administrative contacts at the sponsoring organization.
+    range: Person
+    multivalued: true
+
+  sponsor_budget_eur:
+    description: >-
+      Total budget provided by the sponsor in Euros.
+    range: float
+
+  local_budget_eur:
+    description: >-
+      Local budget awarded by the sponsor in Euros.
+    range: float
+
+  local_admin_contacts:
+    description: >-
+      Administrative contacts at the local organization.
+    range: Person
+    multivalued: true
+
+  local_psp_element:
+    description: >-
+      SAP PSP element associated with the subject.
+    range: string
+
+  title:
+    description: >-
+      A summarily description of the subject. It is closely related to
+      a `name`, but often less compact and more descriptive. Typically used for
+      documents.
+    range: string
+
+  employed_datasets:
+    description: >-
+      Dataset(s) that informed the subject.
+    range: Dataset
+    multivalued: true
+
+
+classes:
+  CurationAid:
+    class_uri: inm7si:CurationAid
+    mixin: true
+    description: >-
+      Technical helper providing curation-related slots.
+    slots:
+      - curation_comments
+      - display_name
+      - identifiers
+    slot_usage:
+      display_name:
+        recommended: true
+        annotations:
+          sh:name: Display name
+          sh:group: inm7si:CurationAidPropertyGroup
+          sh:order: 1
+      curation_comments:
+        annotations:
+          sh:name: Comments
+          sh:group: inm7si:CurationAidPropertyGroup
+          sh:order: 2
+          dash:singleLine: false
+
+  Accolade:
+    class_uri: inm7si:Accolade
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      An award, prize, or other honor received in recognition of an achievement.
+    slots:
+      - title
+      - date_received
+      - recipients
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:AccoladePropertyGroup
+          sh:order: 1
+      recipients:
+        required: true
+        annotations:
+          sh:name:  Recipient(s)
+          sh:group: inm7si:AccoladePropertyGroup
+          sh:order: 2
+      date_received:
+        recommended: true
+        annotations:
+          sh:name:  Date received
+          sh:group: inm7si:AccoladePropertyGroup
+          sh:order: 3
+
+  Dataset:
+    class_uri: inm7si:Dataset
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A collection of data, published or curated by a single agent.
+    slots:
+      - title
+      - short_name
+      - authors
+      - contributing_projects
+      - acknowledgements
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 2
+      authors:
+        annotations:
+          sh:name: Author(s)
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 3
+      contributing_projects:
+        annotations:
+          sh:name: Contributing project(s)
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 4
+      description:
+        annotations:
+          sh:name: Description
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 6
+          dash:singleLine: false
+      acknowledgements:
+        annotations:
+          sh:name: How to acknowledge
+          sh:group: inm7si:DatasetPropertyGroup
+          sh:order: 7
+          dash:singleLine: false
+
+  Deliverable:
+    class_uri: inm7si:Deliverable
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      An entity that needs to be provided to another party, typically requiring
+      to perform a specific task. For example, a write-up on a specific
+      development, a software tool ready for download, a dataset acquired.
+    slots:
+      - title
+      - short_name
+      - assignees
+      - parent_project
+      - date_complete_before
+      - prerequisites
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 2
+      parent_project:
+        annotations:
+          sh:name: In project
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 3
+      date_complete_before:
+        annotations:
+          sh:name: Deadline
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 4
+          dash:singleLine: false
+      assignees:
+        annotations:
+          sh:name: Assignee(s)
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 5
+      description:
+        annotations:
+          sh:name: Description
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 6
+          dash:singleLine: false
+      prerequisites:
+        annotations:
+          sh:name: Prerequisite(s)
+          sh:group: inm7si:DeliverablePropertyGroup
+          sh:order: 7
+
+  Grant:
+    class_uri: inm7si:Grant
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A grant, typically financial or otherwise quantifiable, resources.
+    slots:
+      - title
+      - short_name
+      - recipients
+      - acknowledgements
+      - date_started
+      - date_ended
+      - sponsor
+      - sponsor_grant_identifier
+      - sponsor_admin_contacts
+      - sponsor_budget_eur
+      - local_admin_contacts
+      - local_budget_eur
+      - local_psp_element
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 2
+      recipients:
+        annotations:
+          sh:name:  Recipients
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 3
+      acknowledgements:
+        annotations:
+          sh:name:  How to acknowledge
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 4
+          dash:singleLine: false
+      date_started:
+        annotations:
+          sh:name:  Start date
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 5
+      date_ended:
+        annotations:
+          sh:name:  End date
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 6
+      sponsor:
+        annotations:
+          sh:name:  Sponsor
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 7
+      sponsor_grant_identifier:
+        annotations:
+          sh:name:  Grant identifier
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 8
+      sponsor_admin_contacts:
+        annotations:
+          sh:name:  Contact(s)
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 9
+      sponsor_budget_eur:
+        annotations:
+          sh:name:  Total amount awarded (EUR)
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 10
+      local_psp_element:
+        annotations:
+          sh:name:  PSP Element
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 11
+      local_admin_contacts:
+        annotations:
+          sh:name:  Local Admin Contact(s)
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 12
+      local_budget_eur:
+        annotations:
+          sh:name:  Amount locally awarded (EUR)
+          sh:group: inm7si:GrantPropertyGroup
+          sh:order: 13
+
+  Person:
+    class_uri: inm7si:Person
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A person.
+    slots:
+      - additional_names
+      - family_name
+      - given_name
+      - honorific_name_prefix
+      - honorific_name_suffix
+      - emails
+      - member_of
+      - orcid
+      - offices
+    slot_usage:
+      family_name:
+        recommended: true
+        annotations:
+          sh:name: Family name
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 1
+      given_name:
+        recommended: true
+        annotations:
+          sh:name: Given name
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 2
+      additional_names:
+        annotations:
+          sh:name: Additional names
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 3
+      honorific_name_prefix:
+        annotations:
+          sh:name: Title or prefix
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 4
+      honorific_name_suffix:
+        annotations:
+          sh:name: Suffix
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 5
+      emails:
+        recommended: true
+        annotations:
+          sh:name: Email(s)
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 6
+      orcid:
+        recommended: true
+        annotations:
+          sh:name: ORCID
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 7
+      member_of:
+        annotations:
+          sh:name: Member of
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 8
+      offices:
+        annotations:
+          sh:name: Office room(s)
+          sh:group: inm7si:PersonPropertyGroup
+          sh:order: 9
+
+  Project:
+    class_uri: inm7si:Project
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A collective endeavour of some kind. Typically it is a planned process
+      that is undertaken or attempted to meet some requirement, or to achieve
+      a particular goal.
+    slots:
+      - title
+      - short_name
+      - date_started
+      - date_ended
+      - leaders
+      - collaborators
+      - partner_organizations
+      - funding
+      - description
+      - parent_project
+      - employed_datasets
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 2
+      leaders:
+        annotations:
+          sh:name:  Leader(s)
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 3
+      description:
+        annotations:
+          sh:name:  Description
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 4
+          dash:singleLine: false
+      date_started:
+        annotations:
+          sh:name:  Start date
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 5
+      date_ended:
+        annotations:
+          sh:name:  End date
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 6
+      funding:
+        annotations:
+          sh:name:  Funding
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 7
+      collaborators:
+        annotations:
+          sh:name:  Collaborator(s)
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 8
+      partner_organizations:
+        annotations:
+          sh:name:  Partner(s)
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 9
+      parent_project:
+        annotations:
+          sh:name:  Parent project
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 10
+      employed_datasets:
+        annotations:
+          sh:name:  Employed dataset(s)
+          sh:group: inm7si:ProjectPropertyGroup
+          sh:order: 11
+
+  Journal:
+    class_uri: inm7si:Journal
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A periodical that publishes (peer-reviewed) academic articles.
+    slots:
+      - issn
+      - title
+      - short_name
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:JournalPropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:JournalPropertyGroup
+          sh:order: 2
+      issn:
+        recommended: true
+        annotations:
+          sh:name:  ISSN
+          sh:group: inm7si:JournalPropertyGroup
+          sh:order: 3
+
+  JournalArticle:
+    class_uri: inm7si:JournalArticle
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A report that is published in a journal.
+    slots:
+      - doi
+      - title
+      - authors
+      - journal
+      - date_published
+      - contributing_projects
+      - employed_datasets
+    slot_usage:
+      title:
+        required: true
+        annotations:
+          sh:name:  Title
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 1
+      doi:
+        recommended: true
+        annotations:
+          sh:name: Digital Object Identifier
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 2
+      authors:
+        annotations:
+          sh:name: Author(s)
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 3
+      journal:
+        annotations:
+          sh:name: Journal
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 4
+      date_published:
+        annotations:
+          sh:name: Date published
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 5
+      contributing_projects:
+        annotations:
+          sh:name: Associated project(s)
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 6
+      employed_datasets:
+        annotations:
+          sh:name:  Employed dataset(s)
+          sh:group: inm7si:JournalArticlePropertyGroup
+          sh:order: 7
+
+  Site:
+    class_uri: inm7si:Site
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A place or region where entities (building, office, etc.) reside.
+    slots:
+      - name
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:name:  Name
+          sh:group: inm7si:SitePropertyGroup
+          sh:order: 1
+
+  Building:
+    class_uri: inm7si:Building
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A structure with a roof and walls.
+    slots:
+      - name
+      - site
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:name:  Name
+          sh:group: inm7si:BuildingPropertyGroup
+          sh:order: 1
+      site:
+        annotations:
+          sh:name:  Site
+          sh:group: inm7si:BuildingPropertyGroup
+          sh:order: 2
+
+  BuildingLevel:
+    class_uri: inm7si:BuildingLevel
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A single level or floor of a (multilevel) building.
+    slots:
+      - name
+      - building
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:name:  Name
+          sh:group: inm7si:BuildingLevelPropertyGroup
+          sh:order: 1
+      building:
+        annotations:
+          sh:name:  Building
+          sh:group: inm7si:BuildingLevelPropertyGroup
+          sh:order: 2
+
+  Organization:
+    class_uri: inm7si:Organization
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A social or legal institution such as a company, a society, or a university.
+    slots:
+      - name
+      - short_name
+      - parent_organization
+      - organization_type
+      - leaders
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:name:  Name
+          sh:group: inm7si:OrganizationPropertyGroup
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:name:  Short name
+          sh:group: inm7si:OrganizationPropertyGroup
+          sh:order: 2
+      organization_type:
+        annotations:
+          sh:name:  Type
+          sh:group: inm7si:OrganizationPropertyGroup
+          sh:order: 3
+      leaders:
+        annotations:
+          sh:name:  Leader(s)
+          sh:group: inm7si:OrganizationPropertyGroup
+          sh:order: 4
+      parent_organization:
+        annotations:
+          sh:name:  Parent organization
+          sh:group: inm7si:OrganizationPropertyGroup
+          sh:order: 5
+
+  Room:
+    class_uri: inm7si:Room
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      An area within a building enclosed by walls and floor and ceiling.
+    slots:
+      - name
+      - building_level
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:name:  Name
+          sh:group: inm7si:RoomPropertyGroup
+          sh:order: 1
+      building_level:
+        annotations:
+          sh:name:  Building level
+          sh:group: inm7si:RoomPropertyGroup
+          sh:order: 2

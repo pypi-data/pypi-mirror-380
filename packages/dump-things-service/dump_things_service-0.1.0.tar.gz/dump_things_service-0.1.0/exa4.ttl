@@ -1,0 +1,5 @@
+@prefix abc: <http://example.org/person-schema/abc/> .
+@prefix xyz: <http://example.org/person-schema/xyz/> .
+
+xyz:HenryAdams a abc:Person ;
+    abc:given_name "Henry" .

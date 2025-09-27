@@ -1,0 +1,1586 @@
+from __future__ import annotations
+
+from typing import Any, ClassVar, Dict, List, Literal, Optional, Union
+
+from pydantic import BaseModel, ConfigDict, Field, RootModel
+
+metamodel_version = "None"
+version = "UNRELEASED"
+
+
+class ConfiguredBaseModel(BaseModel):
+    model_config = ConfigDict(
+        validate_assignment = True,
+        validate_default = True,
+        extra = "forbid",
+        arbitrary_types_allowed = True,
+        use_enum_values = True,
+        strict = False,
+    )
+
+
+
+
+class LinkMLMeta(RootModel):
+    root: Dict[str, Any] = {}
+    model_config = ConfigDict(frozen=True)
+
+    def __getattr__(self, key:str):
+        return getattr(self.root, key)
+
+    def __getitem__(self, key:str):
+        return self.root[key]
+
+    def __setitem__(self, key:str, value):
+        self.root[key] = value
+
+    def __contains__(self, key:str) -> bool:
+        return key in self.root
+
+
+linkml_meta = LinkMLMeta({'comments': ['ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME'],
+     'default_prefix': 'trr379base',
+     'description': 'TODO\n'
+                    '\n'
+                    "More information is available on the schema's [about "
+                    'page](about).\n'
+                    '\n'
+                    'The schema definition is available as\n'
+                    '\n'
+                    '- [JSON-LD context](../unreleased.jsonld)\n'
+                    '- [LinkML YAML](../unreleased.yaml)\n'
+                    '- [OWL TTL](../unreleased.owl.ttl)\n'
+                    '- [SHACL TTL](../unreleased.shacl.ttl)\n',
+     'pid': 'https://concepts.trr379.de/s/base/unreleased',
+     'imports': ['dlschemas:things/v1',
+                 'dlschemas:properties/unreleased',
+                 'dlschemas:roles/unreleased',
+                 'dlschemas:social/unreleased'],
+     'license': 'CC-BY-4.0',
+     'name': 'trr379-base-schema',
+     'prefixes': {'ADMS': {'prefix_prefix': 'ADMS',
+                           'prefix_reference': 'http://www.w3.org/ns/adms#'},
+                  'bibo': {'prefix_prefix': 'bibo',
+                           'prefix_reference': 'http://purl.org/ontology/bibo/'},
+                  'dcat': {'prefix_prefix': 'dcat',
+                           'prefix_reference': 'http://www.w3.org/ns/dcat#'},
+                  'dcterms': {'prefix_prefix': 'dcterms',
+                              'prefix_reference': 'http://purl.org/dc/terms/'},
+                  'dlschemas': {'prefix_prefix': 'dlschemas',
+                                'prefix_reference': 'https://concepts.datalad.org/s/'},
+                  'dlthings': {'prefix_prefix': 'dlthings',
+                               'prefix_reference': 'https://concepts.datalad.org/s/things/v1/'},
+                  'eunal': {'prefix_prefix': 'eunal',
+                            'prefix_reference': 'http://publications.europa.eu/resource/authority/'},
+                  'linkml': {'prefix_prefix': 'linkml',
+                             'prefix_reference': 'https://w3id.org/linkml/'},
+                  'marcrel': {'prefix_prefix': 'marcrel',
+                              'prefix_reference': 'http://id.loc.gov/vocabulary/relators/'},
+                  'obo': {'prefix_prefix': 'obo',
+                          'prefix_reference': 'http://purl.obolibrary.org/obo/'},
+                  'owl': {'prefix_prefix': 'owl',
+                          'prefix_reference': 'http://www.w3.org/2002/07/owl#'},
+                  'rdf': {'prefix_prefix': 'rdf',
+                          'prefix_reference': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+                  'rdfs': {'prefix_prefix': 'rdfs',
+                           'prefix_reference': 'http://www.w3.org/2000/01/rdf-schema#'},
+                  'sio': {'prefix_prefix': 'sio',
+                          'prefix_reference': 'http://semanticscience.org/resource/'},
+                  'skos': {'prefix_prefix': 'skos',
+                           'prefix_reference': 'http://www.w3.org/2004/02/skos/core#'},
+                  'trr379': {'prefix_prefix': 'trr379',
+                             'prefix_reference': 'https://trr379.de/'},
+                  'trr379base': {'prefix_prefix': 'trr379base',
+                                 'prefix_reference': 'https://concepts.trr379.de/s/base/unreleased/'},
+                  'xsd': {'prefix_prefix': 'xsd',
+                          'prefix_reference': 'http://www.w3.org/2001/XMLSchema#'}},
+     'source_file': 'trr379.yaml',
+     'status': 'eunal:concept-status/DRAFT',
+     'title': 'Base schema for TRR379 metadata'} )
+
+
+class ThingMixin(ConfiguredBaseModel):
+    """
+    Mix-in with the common interface of `Thing` and `AttributeSpecification`. This interface enables type specifications (`rdf:type`) for things and attributes via a `type` designator slot to indicate specialized schema classes for validation where a slot's `range` is too generic. A thing or attribute can be further describe with statements on qualified relations to other things (`is_characterized_by`), or inline attributes (`has_attributes`). A set of `mappings` slots enables the alignment for arbitrary external schemas and terminologies.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://concepts.datalad.org/s/things/v1', 'mixin': True})
+
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.datalad.org/s/things/v1/ThingMixin","dlthings:ThingMixin"] = Field(default="dlthings:ThingMixin", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class ValueSpecificationMixin(ConfiguredBaseModel):
+    """
+    Mix-in for a (structured) value specification. Two slots are provided to define a (literal) value (`value`) and its type (`range`).
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://concepts.datalad.org/s/things/v1'})
+
+    range: Optional[str] = Field(default=None, description="""Declares that the value of a `Thing` or `AttributeSpecification` are instances of a particular class.""", json_schema_extra = { "linkml_meta": {'alias': 'range',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdfs:range'],
+         'slot_uri': 'rdfs:range'} })
+    value: Optional[str] = Field(default=None, description="""Value of a thing.""", json_schema_extra = { "linkml_meta": {'alias': 'value',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdf:value'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'rdfs:value'} })
+
+
+class AttributeSpecification(ValueSpecificationMixin, ThingMixin):
+    """
+    An attribute is conceptually a thing, but it requires no dedicated identifier (`pid`). Instead, it is linked to a `Thing` via its `has_attributes` slot and declares a `predicate` on the nature of the relationship.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'close_mappings': ['dlthings:Thing'],
+         'exact_mappings': ['sio:SIO_000614'],
+         'from_schema': 'https://concepts.datalad.org/s/things/v1',
+         'mixins': ['ThingMixin', 'ValueSpecificationMixin'],
+         'slot_usage': {'predicate': {'name': 'predicate', 'required': True}}})
+
+    predicate: str = Field(default=..., description="""Reference to a `Property` within a `Statement`.""", json_schema_extra = { "linkml_meta": {'alias': 'predicate',
+         'domain_of': ['AttributeSpecification', 'Statement'],
+         'exact_mappings': ['rdf:predicate'],
+         'relational_role': 'PREDICATE',
+         'slot_uri': 'rdf:predicate'} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.datalad.org/s/things/v1/AttributeSpecification","dlthings:AttributeSpecification"] = Field(default="dlthings:AttributeSpecification", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+    range: Optional[str] = Field(default=None, description="""Declares that the value of a `Thing` or `AttributeSpecification` are instances of a particular class.""", json_schema_extra = { "linkml_meta": {'alias': 'range',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdfs:range'],
+         'slot_uri': 'rdfs:range'} })
+    value: Optional[str] = Field(default=None, description="""Value of a thing.""", json_schema_extra = { "linkml_meta": {'alias': 'value',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdf:value'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'rdfs:value'} })
+
+
+class Statement(ConfiguredBaseModel):
+    """
+    An RDF statement that links a `predicate` (a `Property`) with an `object` (a `Thing`) to the subject to form a triple. A `Statement` is used to qualify a relation to a `Thing` referenced by its identifier. For specifying a qualified relation to an attribute that has no dedicated identifier, use an `AttributeSpecification`.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlthings:Statement',
+         'exact_mappings': ['rdf:Statement'],
+         'from_schema': 'https://concepts.datalad.org/s/things/v1',
+         'slot_usage': {'object': {'name': 'object', 'required': True},
+                        'predicate': {'name': 'predicate', 'required': True}}})
+
+    object: str = Field(default=..., description="""Reference to a `Thing` within a `Statement`.""", json_schema_extra = { "linkml_meta": {'alias': 'object',
+         'domain_of': ['Statement', 'Relationship'],
+         'exact_mappings': ['rdf:object'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'rdf:object'} })
+    predicate: str = Field(default=..., description="""Reference to a `Property` within a `Statement`.""", json_schema_extra = { "linkml_meta": {'alias': 'predicate',
+         'domain_of': ['AttributeSpecification', 'Statement'],
+         'exact_mappings': ['rdf:predicate'],
+         'relational_role': 'PREDICATE',
+         'slot_uri': 'rdf:predicate'} })
+
+
+class Thing(ThingMixin):
+    """
+    The most basic, identifiable item. In addition to the slots that are common between a `Thing` and an `AttributeSpecification` (see `ThingMixin`), two additional slots are provided. The `id` slot takes the required identifier for a `Thing`. The `relation` slot allows for the inline specification of other `Thing` instances. Such a relation is unqualified (and symmetric), and should be further characterized via a `Statement` (see `is_characterized_by`). From a schema perspective, the `relation` slots allows for building self-contained, structured documents (e.g., a JSON object) with arbitrarily complex information on a `Thing`.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlthings:Thing',
+         'exact_mappings': ['schema:Thing'],
+         'from_schema': 'https://concepts.datalad.org/s/things/v1',
+         'mixins': ['ThingMixin']})
+
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.datalad.org/s/things/v1/Thing","dlthings:Thing"] = Field(default="dlthings:Thing", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Property(Thing):
+    """
+    An RDF property, a `Thing` used to define a `predicate`, for example in a `Statement`.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlthings:Property',
+         'exact_mappings': ['rdf:Property'],
+         'from_schema': 'https://concepts.datalad.org/s/things/v1'})
+
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.datalad.org/s/things/v1/Property","dlthings:Property"] = Field(default="dlthings:Property", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class ValueSpecification(Thing, ValueSpecificationMixin):
+    """
+    A `Thing` that is a value of some kind. This class can be used to describe an outcome of a measurement, a factual value or constant, or other qualitative or quantitative information with an associated identifier. If no identifier is available, an `AttributeSpecification` can be used within the context of an associated `Thing` (`has_attributes`).
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'exact_mappings': ['obo:OBI_0001933'],
+         'from_schema': 'https://concepts.datalad.org/s/things/v1',
+         'mixins': ['ValueSpecificationMixin'],
+         'slot_usage': {'value': {'name': 'value',
+                                  'notes': ['It is required, because when it is not '
+                                            'needed, `Thing` should be used as a type. '
+                                            'Its absence is therefore likely a sign of '
+                                            'an error.'],
+                                  'required': True}}})
+
+    range: Optional[str] = Field(default=None, description="""Declares that the value of a `Thing` or `AttributeSpecification` are instances of a particular class.""", json_schema_extra = { "linkml_meta": {'alias': 'range',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdfs:range'],
+         'slot_uri': 'rdfs:range'} })
+    value: str = Field(default=..., description="""Value of a thing.""", json_schema_extra = { "linkml_meta": {'alias': 'value',
+         'domain_of': ['ValueSpecificationMixin'],
+         'exact_mappings': ['rdf:value'],
+         'notes': ['It is required, because when it is not needed, `Thing` should be '
+                   'used as a type. Its absence is therefore likely a sign of an '
+                   'error.'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'rdfs:value'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.datalad.org/s/things/v1/ValueSpecification","dlthings:ValueSpecification"] = Field(default="dlthings:ValueSpecification", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Role(Thing):
+    """
+    A role is the function of a resource or agent with respect to a subject, in the context of resource attribution or relationships.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlroles:Role',
+         'exact_mappings': ['prov:Role', 'dcat:Role'],
+         'from_schema': 'https://concepts.datalad.org/s/roles/unreleased'})
+
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlroles:Role"] = Field(default="dlroles:Role", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Relationship(ConfiguredBaseModel):
+    """
+    An association class for characterizing the relation between two things with the role(s) the object had with respect to the subject. A relationship is always between two things only, but can be annotated with multiple roles (for example, a person having both an author role with respect to a dataset, and also being the person who is legally responsible contact for it).
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlroles:Relationship',
+         'close_mappings': ['prov:Influence', 'dcat:Relationship'],
+         'from_schema': 'https://concepts.datalad.org/s/roles/unreleased',
+         'slot_usage': {'had_roles': {'name': 'had_roles', 'required': True},
+                        'object': {'name': 'object', 'required': True}}})
+
+    object: str = Field(default=..., description="""Reference to a `Thing` within a `Statement`.""", json_schema_extra = { "linkml_meta": {'alias': 'object',
+         'domain_of': ['Statement', 'Relationship'],
+         'exact_mappings': ['rdf:object'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'rdf:object'} })
+    had_roles: List[str] = Field(default=..., description="""The function of an entity or agent with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'had_roles',
+         'comments': ['May be used in a qualified-attribution to specify the role of '
+                      'an Agent with respect to an Entity.',
+                      'May be used in a qualified-relation to specify the role of an '
+                      'Entity with respect to another Entity.'],
+         'domain_of': ['Relationship'],
+         'exact_mappings': ['prov:hadRole', 'dcat:had_role'],
+         'slot_uri': 'dlroles:had_roles'} })
+
+
+class Identifier(ConfiguredBaseModel):
+    """
+    An identifier is a label that uniquely identifies an item in a particular context. Some identifiers are globally unique. All identifiers are unique within their individual scope.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlidentifiers:Identifier',
+         'close_mappings': ['ADMS:Identifier'],
+         'from_schema': 'https://concepts.datalad.org/s/identifiers/unreleased',
+         'slot_usage': {'notation': {'name': 'notation', 'required': True}}})
+
+    creator: Optional[str] = Field(default=None, description="""An agent responsible for making an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'creator',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['dcterms:creator'],
+         'slot_uri': 'dlidentifiers:creator'} })
+    notation: str = Field(default=..., description="""String of characters such as \"T58:5\" or \"30:4833\" used to uniquely identify a concept within the scope of a given concept scheme.""", json_schema_extra = { "linkml_meta": {'alias': 'notation',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['skos:notation'],
+         'slot_uri': 'dlidentifiers:notation'} })
+    type: Literal["dlidentifiers:Identifier"] = Field(default="dlidentifiers:Identifier", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class IssuedIdentifier(Identifier):
+    """
+    An identifier that was issued by a particular agent with a notation that has no (or an undefined) relation to the nature of the identified entity.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlidentifiers:IssuedIdentifier',
+         'exact_mappings': ['ADMS:Identifier'],
+         'from_schema': 'https://concepts.datalad.org/s/identifiers/unreleased',
+         'see_also': ['https://semiceu.github.io/ADMS/releases/2.00/#Identifier']})
+
+    schema_agency: Optional[str] = Field(default=None, description="""Name of the agency that issued an identifier.""", json_schema_extra = { "linkml_meta": {'alias': 'schema_agency',
+         'domain_of': ['IssuedIdentifier'],
+         'exact_mappings': ['ADMS:schemaAgency'],
+         'slot_uri': 'dlidentifiers:schema_agency'} })
+    creator: Optional[str] = Field(default=None, description="""An agent responsible for making an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'creator',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['dcterms:creator'],
+         'slot_uri': 'dlidentifiers:creator'} })
+    notation: str = Field(default=..., description="""String of characters such as \"T58:5\" or \"30:4833\" used to uniquely identify a concept within the scope of a given concept scheme.""", json_schema_extra = { "linkml_meta": {'alias': 'notation',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['skos:notation'],
+         'slot_uri': 'dlidentifiers:notation'} })
+    type: Literal["dlidentifiers:IssuedIdentifier"] = Field(default="dlidentifiers:IssuedIdentifier", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class ComputedIdentifier(Identifier):
+    """
+    An identifier that has been derived from information on the identified entity.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlidentifiers:ComputedIdentifier',
+         'from_schema': 'https://concepts.datalad.org/s/identifiers/unreleased',
+         'narrow_mappings': ['spdx:Checksum']})
+
+    creator: Optional[str] = Field(default=None, description="""An agent responsible for making an entity.""", json_schema_extra = { "linkml_meta": {'alias': 'creator',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['dcterms:creator'],
+         'slot_uri': 'dlidentifiers:creator'} })
+    notation: str = Field(default=..., description="""String of characters such as \"T58:5\" or \"30:4833\" used to uniquely identify a concept within the scope of a given concept scheme.""", json_schema_extra = { "linkml_meta": {'alias': 'notation',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['skos:notation'],
+         'slot_uri': 'dlidentifiers:notation'} })
+    type: Literal["dlidentifiers:ComputedIdentifier"] = Field(default="dlidentifiers:ComputedIdentifier", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Checksum(ComputedIdentifier):
+    """
+    A Checksum is a value that allows to check the integrity of the contents of a file. Even small changes to the content of the file will change its checksum. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlidentifiers:Checksum',
+         'exact_mappings': ['spdx:Checksum'],
+         'from_schema': 'https://concepts.datalad.org/s/identifiers/unreleased',
+         'slot_usage': {'creator': {'description': 'Identifies the software agent '
+                                                   '(algorithm) used to produce the '
+                                                   'subject `Checksum`.',
+                                    'exact_mappings': ['spdx:algorithm'],
+                                    'name': 'creator',
+                                    'required': True},
+                        'notation': {'description': 'Lower case hexadecimal encoded '
+                                                    'checksum digest value.',
+                                     'exact_mappings': ['spdx:checksumValue'],
+                                     'name': 'notation',
+                                     'range': 'HexBinary',
+                                     'required': True}}})
+
+    creator: str = Field(default=..., description="""Identifies the software agent (algorithm) used to produce the subject `Checksum`.""", json_schema_extra = { "linkml_meta": {'alias': 'creator',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['spdx:algorithm'],
+         'slot_uri': 'dlidentifiers:creator'} })
+    notation: str = Field(default=..., description="""Lower case hexadecimal encoded checksum digest value.""", json_schema_extra = { "linkml_meta": {'alias': 'notation',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['spdx:checksumValue'],
+         'slot_uri': 'dlidentifiers:notation'} })
+    type: Literal["dlidentifiers:Checksum"] = Field(default="dlidentifiers:Checksum", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class DOI(IssuedIdentifier):
+    """
+    Digital Object Identifier (DOI; ISO 26324), an identifier system governed by the DOI Foundation, where individual identifiers are issued by one of several registration agencies.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlidentifiers:DOI',
+         'from_schema': 'https://concepts.datalad.org/s/identifiers/unreleased',
+         'slot_usage': {'creator': {'description': 'By default, the creator is '
+                                                   'identified as "https://doi.org".',
+                                    'ifabsent': 'string(https://doi.org)',
+                                    'name': 'creator'},
+                        'notation': {'description': 'The identifier notation is '
+                                                    'specified without a URL-prefix, '
+                                                    'or a `doi:` prefix.',
+                                     'name': 'notation'},
+                        'schema_agency': {'description': 'By default, the schema '
+                                                         'agency is identified as `DOI '
+                                                         'Foundation`.',
+                                          'ifabsent': 'string(DOI Foundation)',
+                                          'name': 'schema_agency'}},
+         'unique_keys': {'value': {'description': 'The DOI notation is globally unique '
+                                                  'within the scope of DOIs',
+                                   'unique_key_name': 'value',
+                                   'unique_key_slots': ['notation']}}})
+
+    schema_agency: Optional[str] = Field(default="DOI Foundation", description="""By default, the schema agency is identified as `DOI Foundation`.""", json_schema_extra = { "linkml_meta": {'alias': 'schema_agency',
+         'domain_of': ['IssuedIdentifier'],
+         'exact_mappings': ['ADMS:schemaAgency'],
+         'ifabsent': 'string(DOI Foundation)',
+         'slot_uri': 'dlidentifiers:schema_agency'} })
+    creator: Optional[str] = Field(default="https://doi.org", description="""By default, the creator is identified as \"https://doi.org\".""", json_schema_extra = { "linkml_meta": {'alias': 'creator',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['dcterms:creator'],
+         'ifabsent': 'string(https://doi.org)',
+         'slot_uri': 'dlidentifiers:creator'} })
+    notation: str = Field(default=..., description="""The identifier notation is specified without a URL-prefix, or a `doi:` prefix.""", json_schema_extra = { "linkml_meta": {'alias': 'notation',
+         'domain_of': ['Identifier'],
+         'exact_mappings': ['skos:notation'],
+         'slot_uri': 'dlidentifiers:notation'} })
+    type: Literal["dlidentifiers:DOI"] = Field(default="dlidentifiers:DOI", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Location(Thing):
+    """
+    A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlspatial:Location',
+         'exact_mappings': ['prov:Location'],
+         'from_schema': 'https://concepts.datalad.org/s/spatial/unreleased'})
+
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlspatial:Location"] = Field(default="dlspatial:Location", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class InstanteneousEvent(Thing):
+    """
+    A moment of a transition from one particular state of the world to another.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'exact_mappings': ['prov:InstanteneousEvent'],
+         'from_schema': 'https://concepts.datalad.org/s/temporal/unreleased'})
+
+    at_time: Optional[str] = Field(default=None, description="""Time at which an instanteneous event takes place or took place.""", json_schema_extra = { "linkml_meta": {'alias': 'at_time',
+         'domain_of': ['InstanteneousEvent'],
+         'exact_mappings': ['prov:atTime'],
+         'slot_uri': 'dltemporal:at_time'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dltemporal:InstanteneousEvent"] = Field(default="dltemporal:InstanteneousEvent", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Agent(Thing):
+    """
+    Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlprov:Agent',
+         'comments': ['This class does not support even a basic `name` slot, because '
+                      'depending on the context, there may not be a suitable name, or '
+                      'one name would not be enough. If no specialized derived class '
+                      'is available in a context where a `name` or similar attribute '
+                      'is desired, it can be expressed via the `has_attributes` slot.'],
+         'exact_mappings': ['foaf:Agent', 'prov:Agent'],
+         'from_schema': 'https://concepts.datalad.org/s/prov/unreleased'})
+
+    acted_on_behalf_of: Optional[List[str]] = Field(default=None, description="""Assign the authority and responsibility for carrying out a specific activity of the subject agent to another agent.""", json_schema_extra = { "linkml_meta": {'alias': 'acted_on_behalf_of',
+         'domain': 'Agent',
+         'domain_of': ['Agent'],
+         'exact_mappings': ['prov:actedOnBehalfOf'],
+         'slot_uri': 'dlprov:acted_on_behalf_of'} })
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlprov:Agent"] = Field(default="dlprov:Agent", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Activity(Thing):
+    """
+    An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlprov:Activity',
+         'comments': ['This class does not support even a basic `name` slot, because '
+                      'depending on the context, there may not be a suitable name, or '
+                      'one name would not be enough. If no specialized derived class '
+                      'is available in a context where a `name` or similar attribute '
+                      'is desired, it can be expressed via the `has_attributes` slot.'],
+         'exact_mappings': ['prov:Activity'],
+         'from_schema': 'https://concepts.datalad.org/s/prov/unreleased'})
+
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    ended_at: Optional[str] = Field(default=None, description="""End is when an activity is deemed to have been ended by some trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end.""", json_schema_extra = { "linkml_meta": {'alias': 'ended_at',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:endedAtTime'],
+         'slot_uri': 'dltemporal:ended_at'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    started_at: Optional[str] = Field(default=None, description="""Start is when an activity is deemed to have been started by some trigger. The activity did not exist before its start. Any usage, generation, or invalidation involving an activity follows the activity's start.""", json_schema_extra = { "linkml_meta": {'alias': 'started_at',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:startedAtTime'],
+         'slot_uri': 'dltemporal:started_at'} })
+    was_associated_with: Optional[List[str]] = Field(default=None, description="""An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.""", json_schema_extra = { "linkml_meta": {'alias': 'was_associated_with',
+         'domain': 'Activity',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:wasAssociatedWith'],
+         'slot_uri': 'dlprov:was_associated_with'} })
+    was_informed_by: Optional[List[str]] = Field(default=None, description="""Communication is the exchange of an entity by two activities, one activity using the entity generated by the other.""", json_schema_extra = { "linkml_meta": {'alias': 'was_informed_by',
+         'domain': 'Activity',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:wasInformedBy'],
+         'slot_uri': 'dlprov:was_informed_by'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlprov:Activity"] = Field(default="dlprov:Activity", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Entity(Thing):
+    """
+    A physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlprov:Entity',
+         'exact_mappings': ['prov:Entity'],
+         'from_schema': 'https://concepts.datalad.org/s/prov/unreleased'})
+
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    was_attributed_to: Optional[List[str]] = Field(default=None, description="""Attribution is the ascribing of an entity to an agent.""", json_schema_extra = { "linkml_meta": {'alias': 'was_attributed_to',
+         'domain': 'Entity',
+         'domain_of': ['Entity'],
+         'exact_mappings': ['prov:wasAttributedTo'],
+         'slot_uri': 'dlprov:was_attributed_to'} })
+    was_derived_from: Optional[List[str]] = Field(default=None, description="""Derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.""", json_schema_extra = { "linkml_meta": {'alias': 'was_derived_from',
+         'domain': 'Entity',
+         'domain_of': ['Entity'],
+         'exact_mappings': ['prov:wasDerivedFrom'],
+         'slot_uri': 'dlprov:was_derived_from'} })
+    was_generated_by: Optional[List[str]] = Field(default=None, description="""Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.""", json_schema_extra = { "linkml_meta": {'alias': 'was_generated_by',
+         'domain': 'Entity',
+         'domain_of': ['Entity'],
+         'exact_mappings': ['prov:wasAttributedTo'],
+         'slot_uri': 'dlprov:was_generated_by'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlprov:Entity"] = Field(default="dlprov:Entity", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class SoftwareAgent(Agent):
+    """
+    Running software.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlprov:SoftwareAgent',
+         'exact_mappings': ['prov:SoftwareAgent'],
+         'from_schema': 'https://concepts.datalad.org/s/prov/unreleased'})
+
+    acted_on_behalf_of: Optional[List[str]] = Field(default=None, description="""Assign the authority and responsibility for carrying out a specific activity of the subject agent to another agent.""", json_schema_extra = { "linkml_meta": {'alias': 'acted_on_behalf_of',
+         'domain': 'Agent',
+         'domain_of': ['Agent'],
+         'exact_mappings': ['prov:actedOnBehalfOf'],
+         'slot_uri': 'dlprov:acted_on_behalf_of'} })
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlprov:SoftwareAgent"] = Field(default="dlprov:SoftwareAgent", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Person(Agent):
+    """
+    Person agents are people, alive, dead, or fictional.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlsocial:Person',
+         'comments': ['This class does not offer common slots like "affiliation" or '
+                      '"email". Instead, this information should be expressed as '
+                      '`qualified_relations` to other things with a role '
+                      'characterization. An affiliation can be expressed as a relation '
+                      'to an organization, and the role that the organization has for '
+                      'the person (e.g., "employer"). This approach has the advantage '
+                      'that relations like a membership can be expressed at either end '
+                      '(at an organizations potential `members` slot, but also '
+                      '(symmetrically) as a persons potential `member_of` slot).'],
+         'exact_mappings': ['foaf:Person', 'prov:Person'],
+         'from_schema': 'https://concepts.datalad.org/s/social/unreleased'})
+
+    additional_names: Optional[List[str]] = Field(default=None, description="""Additional name(s) associated with the subject, such as one or more middle names, or a nick name.""", json_schema_extra = { "linkml_meta": {'alias': 'additional_names',
+         'domain_of': ['Person'],
+         'exact_mappings': ['vcard:additional_name'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:additional_names'} })
+    family_name: Optional[str] = Field(default=None, description="""The (inherited) family name of the subject. In many Western languages this is the \"last name\".""", json_schema_extra = { "linkml_meta": {'alias': 'family_name',
+         'domain_of': ['Person'],
+         'exact_mappings': ['foaf:familyName', 'vcard:family-name'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:family_name'} })
+    given_name: Optional[str] = Field(default=None, description="""The given (non-inherited) name of the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'given_name',
+         'domain_of': ['Person'],
+         'exact_mappings': ['foaf:familyName', 'vcard:given-name'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:given_name'} })
+    honorific_name_prefix: Optional[str] = Field(default=None, description="""The honorific prefix(es) of the subject's name. For example, (academic/formal) titles like \"Mrs\", or \"Dr\", \"Dame\".""", json_schema_extra = { "linkml_meta": {'alias': 'honorific_name_prefix',
+         'domain_of': ['Person'],
+         'exact_mappings': ['vcard:honorific-suffix'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:honorific_name_prefix'} })
+    honorific_name_suffix: Optional[str] = Field(default=None, description="""The honorific suffix(es) of the subject's name. For example, generation labels (\"III\"), or indicators of an academic degree, a profession, or a position (\"MD\", \"BA\").""", json_schema_extra = { "linkml_meta": {'alias': 'honorific_name_suffix',
+         'domain_of': ['Person'],
+         'exact_mappings': ['vcard:honorific-suffix'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:honorific_name_suffix'} })
+    formatted_name: Optional[str] = Field(default=None, description="""A formatted text corresponding to the name of the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'formatted_name',
+         'domain_of': ['Person'],
+         'exact_mappings': ['vcard:fn'],
+         'is_a': 'name',
+         'slot_uri': 'dlsocial:formatted_name'} })
+    acted_on_behalf_of: Optional[List[str]] = Field(default=None, description="""Assign the authority and responsibility for carrying out a specific activity of the subject agent to another agent.""", json_schema_extra = { "linkml_meta": {'alias': 'acted_on_behalf_of',
+         'domain': 'Agent',
+         'domain_of': ['Agent'],
+         'exact_mappings': ['prov:actedOnBehalfOf'],
+         'slot_uri': 'dlprov:acted_on_behalf_of'} })
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlsocial:Person"] = Field(default="dlsocial:Person", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Organization(Agent):
+    """
+    A social or legal instititution such as a company, a society, or a university.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dlsocial:Organization',
+         'comments': ['This class does not offer common slots like "address" or '
+                      '"contact". Instead, this information should be expressed as '
+                      '`qualified_relations` to other things with a '
+                      'role-characterization. An address can be expressed as a '
+                      'relation to a location, and the role this location has for the '
+                      'organization (e.g., "main office"). Likewise, a contact can be '
+                      'describe as a relation to a person, and the role that this '
+                      'person fulfills for the organization (e.g., "spokesperson").'],
+         'exact_mappings': ['foaf:Organization', 'prov:Organization'],
+         'from_schema': 'https://concepts.datalad.org/s/social/unreleased'})
+
+    name: Optional[str] = Field(default=None, description="""Name of the subject. A name is closely related to a `title`, but often more compact and identifier-like, but without the implication of uniqueness of an identifier. A name is often used by technical systems to display an item in an organizational structure, such as a file in a directory hierarchy.""", json_schema_extra = { "linkml_meta": {'alias': 'name',
+         'close_mappings': ['dlprops:title'],
+         'domain_of': ['Organization'],
+         'exact_mappings': ['rdfs:label', 'schema:name', 'foaf:name'],
+         'slot_uri': 'dlprops:name'} })
+    short_name: Optional[str] = Field(default=None, description="""A shortened name for the subject. For example, an acronym, initialism, nickname, or other abbreviation of the `name`.""", json_schema_extra = { "linkml_meta": {'alias': 'short_name',
+         'domain_of': ['Organization', 'Project'],
+         'exact_mappings': ['pq:P1813'],
+         'is_a': 'name',
+         'slot_uri': 'dlprops:short_name'} })
+    acted_on_behalf_of: Optional[List[str]] = Field(default=None, description="""Assign the authority and responsibility for carrying out a specific activity of the subject agent to another agent.""", json_schema_extra = { "linkml_meta": {'alias': 'acted_on_behalf_of',
+         'domain': 'Agent',
+         'domain_of': ['Agent'],
+         'exact_mappings': ['prov:actedOnBehalfOf'],
+         'slot_uri': 'dlprov:acted_on_behalf_of'} })
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlsocial:Organization"] = Field(default="dlsocial:Organization", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Project(Activity):
+    """
+    A collective endeavour of some kind. Typically it is a planned process that is undertaken or attempted to meet some requirement, or to achieve a particular goal.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'broad_mappings': ['obo:BFO_0000015'],
+         'class_uri': 'dlsocial:Project',
+         'close_mappings': ['obo:NCIT_C47885'],
+         'exact_mappings': ['foaf:Project'],
+         'from_schema': 'https://concepts.datalad.org/s/social/unreleased'})
+
+    description: Optional[str] = Field(default=None, description="""A free-text account of the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'description',
+         'domain_of': ['Project'],
+         'exact_mappings': ['dcterms:description', 'rdfs:comment'],
+         'slot_uri': 'dlprops:description'} })
+    short_name: Optional[str] = Field(default=None, description="""A shortened name for the subject. For example, an acronym, initialism, nickname, or other abbreviation of the `name`.""", json_schema_extra = { "linkml_meta": {'alias': 'short_name',
+         'domain_of': ['Organization', 'Project'],
+         'exact_mappings': ['pq:P1813'],
+         'is_a': 'name',
+         'slot_uri': 'dlprops:short_name'} })
+    title: Optional[str] = Field(default=None, description="""A summarily description of the subject. It is closely related to a `name`, but often less compact and more descriptive. Typically used for documents.""", json_schema_extra = { "linkml_meta": {'alias': 'title',
+         'domain_of': ['Project'],
+         'exact_mappings': ['dcterms:title', 'sio:SIO_000185'],
+         'related_mappings': ['schema:name'],
+         'slot_uri': 'dlprops:title'} })
+    at_location: Optional[str] = Field(default=None, description="""Associate the subject with a location. This can be a geographic place, or a place in a directory, or table.""", json_schema_extra = { "linkml_meta": {'alias': 'at_location',
+         'domain_of': ['Agent', 'Activity'],
+         'exact_mappings': ['prov:atLocation'],
+         'slot_uri': 'dlspatial:at_location'} })
+    ended_at: Optional[str] = Field(default=None, description="""End is when an activity is deemed to have been ended by some trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end.""", json_schema_extra = { "linkml_meta": {'alias': 'ended_at',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:endedAtTime'],
+         'slot_uri': 'dltemporal:ended_at'} })
+    identifiers: Optional[List[Union[Identifier,IssuedIdentifier,ComputedIdentifier,Checksum,DOI]]] = Field(default=None, description="""An unambiguous reference to the subject within a given context.""", json_schema_extra = { "linkml_meta": {'alias': 'identifiers',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlidentifiers:identifier'} })
+    qualified_relations: Optional[List[Relationship]] = Field(default=None, description="""Characterizes the relationship or role of an entity with respect to the subject.""", json_schema_extra = { "linkml_meta": {'alias': 'qualified_relations',
+         'domain': 'Thing',
+         'domain_of': ['Location', 'InstanteneousEvent', 'Agent', 'Activity', 'Entity'],
+         'exact_mappings': ['dcat:qualifiedRelation'],
+         'slot_uri': 'dlroles:qualified_relations'} })
+    started_at: Optional[str] = Field(default=None, description="""Start is when an activity is deemed to have been started by some trigger. The activity did not exist before its start. Any usage, generation, or invalidation involving an activity follows the activity's start.""", json_schema_extra = { "linkml_meta": {'alias': 'started_at',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:startedAtTime'],
+         'slot_uri': 'dltemporal:started_at'} })
+    was_associated_with: Optional[List[str]] = Field(default=None, description="""An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.""", json_schema_extra = { "linkml_meta": {'alias': 'was_associated_with',
+         'domain': 'Activity',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:wasAssociatedWith'],
+         'slot_uri': 'dlprov:was_associated_with'} })
+    was_informed_by: Optional[List[str]] = Field(default=None, description="""Communication is the exchange of an entity by two activities, one activity using the entity generated by the other.""", json_schema_extra = { "linkml_meta": {'alias': 'was_informed_by',
+         'domain': 'Activity',
+         'domain_of': ['Activity'],
+         'exact_mappings': ['prov:wasInformedBy'],
+         'slot_uri': 'dlprov:was_informed_by'} })
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["dlsocial:Project"] = Field(default="dlsocial:Project", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Author(Role):
+    """
+    An agent responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'trr379base:Author',
+         'exact_mappings': ['marcrel:aut'],
+         'from_schema': 'https://concepts.trr379.de/s/base/unreleased'})
+
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.trr379.de/s/base/unreleased/Author","trr379base:Author"] = Field(default="trr379base:Author", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+class Interviewer(Role):
+    """
+    An agent responsible for creating or contributing to a resource by acting as an interviewer, reporter, pollster, or some other information gathering agent.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'trr379base:Interviewer',
+         'exact_mappings': ['marcrel:ivr'],
+         'from_schema': 'https://concepts.trr379.de/s/base/unreleased'})
+
+    id: str = Field(default=..., description="""Globally unique identifier of a metadata object, such as a `Thing`.""", json_schema_extra = { "linkml_meta": {'alias': 'id',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcterms:identifier',
+                            'schema:identifier',
+                            'ADMS:identifier'],
+         'slot_uri': 'dlthings:id'} })
+    relations: Optional[Dict[str, Union[Thing,Property,ValueSpecification,Role,Location,InstanteneousEvent,Agent,Activity,Entity,Project,SoftwareAgent,Person,Organization,Author,Interviewer]]] = Field(default=None, description="""Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `is_characterized_by` slot.""", json_schema_extra = { "linkml_meta": {'alias': 'relations',
+         'domain': 'Thing',
+         'domain_of': ['Thing'],
+         'exact_mappings': ['dcat:relation', 'dcterms:relation'],
+         'relational_role': 'OBJECT',
+         'slot_uri': 'dlthings:relation',
+         'symmetric': True} })
+    broad_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have broader meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'broad_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:broadMatch'} })
+    close_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have close meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'close_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:closeMatch'} })
+    exact_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have identical meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'exact_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:exactMatch'} })
+    has_attributes: Optional[List[AttributeSpecification]] = Field(default=None, description="""Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `is_characterized_by`) should be preferred.""", json_schema_extra = { "linkml_meta": {'alias': 'has_attributes',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['sio:SIO_000008'],
+         'slot_uri': 'dlthings:has_attributes'} })
+    is_characterized_by: Optional[List[Statement]] = Field(default=None, description="""Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship.""", json_schema_extra = { "linkml_meta": {'alias': 'is_characterized_by',
+         'domain_of': ['ThingMixin'],
+         'exact_mappings': ['obo:RO_0000053'],
+         'slot_uri': 'dlthings:is_characterized_by'} })
+    narrow_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have narrower meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'narrow_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:narrowMatch'} })
+    related_mappings: Optional[List[str]] = Field(default=None, description="""A list of terms from different schemas or terminology systems that have related meaning.""", json_schema_extra = { "linkml_meta": {'alias': 'related_mappings',
+         'domain_of': ['ThingMixin'],
+         'is_a': 'mappings',
+         'slot_uri': 'skos:relatedMatch'} })
+    type: Literal["https://concepts.trr379.de/s/base/unreleased/Interviewer","trr379base:Interviewer"] = Field(default="trr379base:Interviewer", description="""State that the subject is an instance of a particular RDF class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range.""", json_schema_extra = { "linkml_meta": {'alias': 'type',
+         'designates_type': True,
+         'domain_of': ['ThingMixin', 'Identifier'],
+         'exact_mappings': ['dcterms:type'],
+         'slot_uri': 'rdf:type'} })
+
+
+# Model rebuild
+# see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
+ThingMixin.model_rebuild()
+ValueSpecificationMixin.model_rebuild()
+AttributeSpecification.model_rebuild()
+Statement.model_rebuild()
+Thing.model_rebuild()
+Property.model_rebuild()
+ValueSpecification.model_rebuild()
+Role.model_rebuild()
+Relationship.model_rebuild()
+Identifier.model_rebuild()
+IssuedIdentifier.model_rebuild()
+ComputedIdentifier.model_rebuild()
+Checksum.model_rebuild()
+DOI.model_rebuild()
+Location.model_rebuild()
+InstanteneousEvent.model_rebuild()
+Agent.model_rebuild()
+Activity.model_rebuild()
+Entity.model_rebuild()
+SoftwareAgent.model_rebuild()
+Person.model_rebuild()
+Organization.model_rebuild()
+Project.model_rebuild()
+Author.model_rebuild()
+Interviewer.model_rebuild()

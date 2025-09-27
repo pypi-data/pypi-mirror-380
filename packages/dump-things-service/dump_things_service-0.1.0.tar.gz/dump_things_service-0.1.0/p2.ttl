@@ -1,0 +1,84 @@
+@prefix CiTO: <http://purl.org/spar/cito/> .
+@prefix dlidentifiers: <https://concepts.datalad.org/s/identifiers/unreleased/> .
+@prefix dlprops: <https://concepts.datalad.org/s/properties/unreleased/> .
+@prefix dlprov: <https://concepts.datalad.org/s/prov/unreleased/> .
+@prefix dlroles: <https://concepts.datalad.org/s/roles/unreleased/> .
+@prefix dlsocial: <https://concepts.datalad.org/s/social/unreleased/> .
+@prefix dltemporal: <https://concepts.datalad.org/s/temporal/unreleased/> .
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix marcrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ror: <https://ror.org/> .
+@prefix schema1: <http://schema.org/> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://trr379.de/projects/q02> a dlsocial:Project ;
+    dlidentifiers:identifier [ a dlidentifiers:IssuedIdentifier ;
+            dlidentifiers:creator "trr379:."^^xsd:anyURI ;
+            dlidentifiers:notation "Q02" ;
+            dlidentifiers:schema_agency "TRR379" ] ;
+    dlprops:short_name "Q02" ;
+    dlprops:title "Data management for computational modeling" ;
+    dlprov:associated_with ror:018mejw64,
+        <https://trr379.de/.> ;
+    dlprov:informed_by <https://trr379.de/projects/q01> ;
+    dlroles:qualified_relations [ a dlroles:Relationship ;
+            rdf:object "ror:02nv7yv05"^^xsd:anyURI ;
+            dlroles:roles marcrel:cli,
+                marcrel:his,
+                marcrel:sht ],
+        [ a dlroles:Relationship ;
+            rdf:object "trr379:contributors/michael-hanke"^^xsd:anyURI ;
+            dlroles:roles marcrel:ctb,
+                marcrel:led,
+                marcrel:mdc,
+                marcrel:pdr,
+                marcrel:prc,
+                marcrel:prg,
+                <https://trr379.de/roles/pi> ],
+        [ a dlroles:Relationship ;
+            rdf:object "gepris:projekt/512007073"^^xsd:anyURI ;
+            dlroles:roles schema1:funding ],
+        [ a dlroles:Relationship ;
+            rdf:object "ror:04xfq0f34"^^xsd:anyURI ;
+            dlroles:roles marcrel:cli,
+                marcrel:his,
+                marcrel:sht ],
+        [ a dlroles:Relationship ;
+            rdf:object "trr379:contributors/gabriele-ende"^^xsd:anyURI ;
+            dlroles:roles marcrel:ctb,
+                marcrel:led,
+                <https://trr379.de/roles/pi> ],
+        [ a dlroles:Relationship ;
+            rdf:object "ror:01hynnt93"^^xsd:anyURI ;
+            dlroles:roles marcrel:cli,
+                marcrel:his,
+                marcrel:sht ],
+        [ a dlroles:Relationship ;
+            rdf:object "trr379:contributors/klaus-mathiak"^^xsd:anyURI ;
+            dlroles:roles marcrel:ctb,
+                marcrel:led,
+                <https://trr379.de/roles/pi> ],
+        [ a dlroles:Relationship ;
+            rdf:object "ror:018mejw64"^^xsd:anyURI ;
+            dlroles:roles marcrel:fnd,
+                marcrel:spn ],
+        [ a dlroles:Relationship ;
+            rdf:object "gepris:projekt/546006540"^^xsd:anyURI ;
+            dlroles:roles schema1:funding ],
+        [ a dlroles:Relationship ;
+            rdf:object "trr379:contributors/christine-ecker"^^xsd:anyURI ;
+            dlroles:roles marcrel:ctb,
+                marcrel:led,
+                <https://trr379.de/roles/pi> ],
+        [ a dlroles:Relationship ;
+            rdf:object "ror:04cvxnb49"^^xsd:anyURI ;
+            dlroles:roles marcrel:cli,
+                marcrel:his,
+                marcrel:sht ] ;
+    dltemporal:started_at "2024-10-01"^^w3ctr:NOTE-datetime ;
+    dlthings:characterized_by [ a dlthings:Statement ;
+            rdf:object "https://www.trr379.de/projects/q02"^^xsd:anyURI ;
+            rdf:predicate CiTO:citesAsAuthority ] ;
+    dlthings:description "This is the information management project (INF) of the TRR379." .

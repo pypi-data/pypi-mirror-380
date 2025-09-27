@@ -1,0 +1,17 @@
+{
+    "id": "trr379:test_extract_1",
+    "given_name": "Grandfather",
+    "relations": [
+        {
+            "id": "trr379:test_extract_1_1",
+            "relations": [
+                {
+                    "id": "trr379:test_extract_1_1_1"
+                }
+            ]
+        },
+        {
+            "id": "trr379:test_extract_1_2"
+        }
+    ]
+}

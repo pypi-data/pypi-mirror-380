@@ -1,0 +1,6 @@
+host: 127.0.0.1
+port: 8088
+global_store: /home/cristian/tmp/dat/root
+token_stores:
+  token_1: /home/cristian/tmp/dat/token_1
+  token_2: /home/cristian/tmp/dat/token_2

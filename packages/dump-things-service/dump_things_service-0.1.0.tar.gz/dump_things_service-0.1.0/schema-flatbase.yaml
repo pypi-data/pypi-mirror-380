@@ -1,0 +1,450 @@
+id: https://concepts.inm7.de/s/flat-base/unreleased
+name: inm7-flat-base-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: INM7 simplified data models for manual metadata entry
+description: |
+  The classes and slots in this schema have the (sole) purpose of
+  informing the auto-generation of UIs for data entry. Consequently,
+  the simplify and lump-together concepts and constructs that will
+  eventually be represented with more appropriate data structures
+  from the `base` schema.
+
+  This schema is itself a basis for more specialized schema serving
+  particular use cases. The classes defined here are foundational
+  building block for INM7 concepts to be reused and extended for
+  more targeted applications.
+
+  More information is available on the schema's [about page](about).
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: CC-BY-4.0
+
+prefixes:
+  ADMS: http://www.w3.org/ns/adms#
+  dash: http://datashapes.org/dash#
+  dcterms: http://purl.org/dc/terms/
+  dlidentifiers: https://concepts.datalad.org/s/identifiers/unreleased/
+  dlschemas: https://concepts.datalad.org/s/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  dltypes: https://concepts.datalad.org/s/types/unreleased/
+  eunal: http://publications.europa.eu/resource/authority/
+  inm7schemas: https://concepts.inm7.de/s/
+  inm7fb: https://concepts.inm7.de/s/flat-base/unreleased/
+  inm7: https://inm7.de/ns/
+  inm7pending: https://inm7.de/ns/pending/
+  linkml: https://w3id.org/linkml/
+  orcid: https://orcid.org/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sh: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
+  spdx: http://spdx.org/rdf/terms#
+  w3ctr: https://www.w3.org/TR/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+default_prefix: inm7fb
+
+emit_prefixes:
+  - dlidentifiers
+  - dlthings
+  - dltypes
+  - inm7
+  - rdf
+  - rdfs
+  - skos
+  - xsd
+
+imports:
+  - dlschemas:things/v1
+  - dlschemas:identifiers/unreleased
+
+types:
+  # taken from https://concepts.datalad.org/s/temporal/unreleased/
+  # to avoid the relatively complex schema import
+  W3CISO8601:
+    uri: w3ctr:NOTE-datetime
+    description:
+      W3C variant/subset of IS08601 for specifying date(times).
+      Supported are
+      - YYYY (eg 1997)
+      - YYYY-MM (eg 1997-07)
+      - YYYY-MM-DD (eg 1997-07-16)
+      - YYYY-MM-DDThh:mmTZD (eg 1997-07-16T19:20+01:00)
+      - YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00)
+      - YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
+      where TZD is the time zone designator (Z or +hh:mm or -hh:mm)
+    typeof: string
+    pattern: '^([-+]\d+)|(\d{4})|(\d{4}-[01]\d)|(\d{4}-[01]\d-[0-3]\d)|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))$'
+    see_also:
+      - https://www.w3.org/TR/NOTE-datetime
+
+
+enums:
+  OrganizationType:
+    description: >-
+      Classification of organizations.
+    permissible_values:
+      team:
+        description: Smallest unit of an organized group.
+      group:
+        description: A group may consist of more than one team.
+      division:
+        description: A unit within a parent organization that comprises multiple groups.
+      institute:
+        description: A topical unit comprising multiple divisions or groups.
+      researchcenter:
+        description: An institute primarily focused on research (as opposed to education).
+      researchorganization:
+        description: An organization primarily focused on research (as opposed to education), possibly comprising multiple research centers.
+      faculty:
+        description: A division of a university or college
+      college:
+        description: An institution with a primary focus on undergraduate education.
+      university:
+        description: An institution with a focus on both undergraduate and graduate education.
+      nonprofit:
+        description: A private entity operated for a collective, public or social benefit.
+      business:
+        description: A company aiming to generate profit.
+
+
+slots:
+  additional_names:
+    title: Additional names
+    description: >-
+      Additional name(s) associated with the subject, such as one or more
+      middle names, or a nick name.
+    range: string
+    multivalued: true
+
+  building:
+    title: Building
+    description: >-
+      Building where the subject is located.
+    range: Building
+
+  building_level:
+    title: Building level
+    description: >-
+      Building level where the subject is located.
+    range: BuildingLevel
+
+  curation_comments:
+    title: Comments
+    description: >-
+      A comment about a metadata record either providing additional information for
+      a record curation, or leaving a comment after curation occurred. This can be
+      used to include information that is deemed relevant, but could not be expressed
+      in the provided fields.
+    range: string
+    multivalued: true
+    annotations:
+      dash:singleLine: false
+
+  display_label:
+    title: Record display label
+    slot_uri: skos:prefLabel
+    description: >-
+      Label to shown when the record is displayed as an item.
+    range: string
+
+  emails:
+    title: Email(s)
+    description: >-
+      Associated email address.
+    range: EmailAddress
+    multivalued: true
+
+  family_name:
+    title: Family name
+    description: >-
+      The (inherited) family name of the subject. In many Western languages this is the
+      "last name".
+    range: string
+
+  given_name:
+    title: Given name
+    description: >-
+      The given (non-inherited) name of the subject.
+    range: string
+
+  honorific_name_prefix:
+    title: Title or prefix
+    description: >-
+      The honorific prefix(es) of the subject's name. For example, (academic/formal) titles
+      like "Mrs", or "Dr", "Dame".
+    range: string
+
+  honorific_name_suffix:
+    title: Suffix
+    description: >-
+      The honorific suffix(es) of the subject's name. For example, generation labels ("III"),
+      or indicators of an academic degree, a profession, or a position ("MD", "BA").
+    range: string
+
+  leaders:
+    title: Leader(s)
+    description: >-
+      Person(s) that are formal or informal leaders of the subject.
+    range: Person
+    multivalued: true
+
+  member_of:
+    title: Member of
+    description: >-
+      The subject is a member of an organization.
+    range: Organization
+    multivalued: true
+
+  name:
+    title: Name
+    description: >-
+      Name of the subject.
+    range: string
+
+  offices:
+    title: Office room(s)
+    description: >-
+      Room(s) that are the office(s) of the subject.
+    range: Room
+    multivalued: true
+
+  orcid:
+    title: ORCID
+    description: >-
+      Associated ORCID identifier (see https://orcid.org).
+    range: string
+    pattern: '^\d{4}-\d{4}-\d{4}-\d{3}[0-9X]{1}$'
+
+  organization_type:
+    title: Organization type
+    description: >-
+      Type of an organization.
+    range: OrganizationType
+
+  parent_organization:
+    title: Parent organization
+    description: >-
+      An organization the subject is a part of.
+    range: Organization
+
+  record_contact:
+    title: Record contact
+    description: >-
+      Person to contact regarding questions about information in this
+      metadata record.
+    range: Person
+
+  short_name:
+    title: Short name
+    description: >-
+      A shortened name for the subject. For example, an acronym, initialism,
+      nickname, or other abbreviation of the name or title.
+    range: string
+
+  site:
+    title: Site
+    description: >-
+      Site where the subject is located.
+    range: Site
+
+
+classes:
+  CurationAid:
+    class_uri: inm7fb:CurationAid
+    mixin: true
+    description: >-
+      Technical helper providing curation-related slots.
+    slots:
+      - curation_comments
+      - display_label
+      - identifiers
+      - record_contact
+
+  Person:
+    class_uri: inm7fb:Person
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A person.
+    slots:
+      - additional_names
+      - family_name
+      - given_name
+      - honorific_name_prefix
+      - honorific_name_suffix
+      - emails
+      - member_of
+      - orcid
+      - offices
+    slot_usage:
+      family_name:
+        recommended: true
+        annotations:
+          sh:order: 1
+      given_name:
+        recommended: true
+        annotations:
+          sh:order: 2
+      additional_names:
+        annotations:
+          sh:order: 3
+      honorific_name_prefix:
+        annotations:
+          sh:order: 4
+      honorific_name_suffix:
+        annotations:
+          sh:order: 5
+      emails:
+        recommended: true
+        annotations:
+          sh:order: 6
+      orcid:
+        recommended: true
+        annotations:
+          sh:order: 7
+      member_of:
+        annotations:
+          sh:order: 8
+      offices:
+        annotations:
+          sh:order: 9
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 10
+
+  Site:
+    class_uri: inm7fb:Site
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A place or region where entities (building, office, etc.) reside.
+    slots:
+      - name
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:order: 1
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 2
+
+  Building:
+    class_uri: inm7fb:Building
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A structure with a roof and walls.
+    slots:
+      - name
+      - site
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:order: 1
+      site:
+        annotations:
+          sh:order: 2
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 1
+
+  BuildingLevel:
+    class_uri: inm7fb:BuildingLevel
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A single level or floor of a (multilevel) building.
+    slots:
+      - name
+      - building
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:order: 1
+      building:
+        annotations:
+          sh:order: 2
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 1
+
+  Organization:
+    class_uri: inm7fb:Organization
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      A social or legal institution such as a company, a society, or a university.
+    slots:
+      - name
+      - short_name
+      - parent_organization
+      - organization_type
+      - leaders
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:order: 1
+      short_name:
+        annotations:
+          sh:order: 2
+      organization_type:
+        annotations:
+          sh:order: 3
+      leaders:
+        annotations:
+          sh:order: 4
+      parent_organization:
+        annotations:
+          sh:order: 5
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 6
+
+  Room:
+    class_uri: inm7fb:Room
+    is_a: Thing
+    mixins:
+      - CurationAid
+    description: >-
+      An area within a building enclosed by walls and floor and ceiling.
+    slots:
+      - name
+      - building_level
+    slot_usage:
+      name:
+        required: true
+        annotations:
+          sh:order: 1
+      building_level:
+        annotations:
+          sh:order: 2
+      display_label:
+        recommended: true
+        annotations:
+          sh:order: 3

@@ -1,0 +1,24 @@
+@prefix dlprov: <https://concepts.datalad.org/s/prov/unreleased/> .
+@prefix dlsocial: <https://concepts.datalad.org/s/social/unreleased/> .
+@prefix dltemporal: <https://concepts.datalad.org/s/temporal/unreleased/> .
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix trr379: <https://trr379.de/> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+
+trr379:test_extract_1 a dlsocial:Person ;
+    dlsocial:given_name "Grandfather" ;
+    dlthings:relation trr379:test_extract_1_1,
+        trr379:test_extract_1_2 .
+
+trr379:test_extract_1_1_1 a dlprov:Agent,
+        dlthings:Thing ;
+    dlprov:acted_on_behalf_of trr379:test_extract_1_1 .
+
+trr379:test_extract_1_2 a dltemporal:InstantaneousEvent,
+        dlthings:Thing ;
+    dltemporal:at_time "2028-12-31"^^w3ctr:NOTE-datetime .
+
+trr379:test_extract_1_1 a dlsocial:Person,
+        dlthings:Thing ;
+    dlsocial:given_name "Father" ;
+    dlthings:relation trr379:test_extract_1_1_1 .

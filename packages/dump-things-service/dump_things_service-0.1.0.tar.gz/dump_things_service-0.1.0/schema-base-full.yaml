@@ -1,0 +1,3946 @@
+name: trr379-base-schema
+description: 'TODO
+
+
+  More information is available on the schema''s [about page](about).
+
+
+  The schema definition is available as
+
+
+  - [JSON-LD context](../unreleased.context.jsonld)
+
+  - [LinkML YAML](../unreleased.yaml)
+
+  - [OWL TTL](../unreleased.owl.ttl)
+
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+  '
+title: Base schema for TRR379 metadata
+comments:
+- ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+status: eunal:concept-status/DRAFT
+id: https://concepts.trr379.de/s/base/unreleased
+version: UNRELEASED
+imports:
+- dlschemas:roles/unreleased
+- dlschemas:social/unreleased
+- dlschemas:publications/unreleased
+- dlschemas:resources/unreleased
+- dlschemas:edistributions/unreleased
+- dlschemas:things/v1
+- dlschemas:prov/unreleased
+- dlschemas:properties/unreleased
+- dlschemas:temporal/unreleased
+- dlschemas:types/unreleased
+- linkml:types
+- dlschemas:identifiers/unreleased
+- dlschemas:spatial/unreleased
+license: CC-BY-4.0
+prefixes:
+  CiTO:
+    prefix_prefix: CiTO
+    prefix_reference: http://purl.org/spar/cito/
+  cogatlas:
+    prefix_prefix: cogatlas
+    prefix_reference: https://www.cognitiveatlas.org/task/id/
+  dledist:
+    prefix_prefix: dledist
+    prefix_reference: https://concepts.datalad.org/s/edistributions/unreleased/
+  dlidentifiers:
+    prefix_prefix: dlidentifiers
+    prefix_reference: https://concepts.datalad.org/s/identifiers/unreleased/
+  dlprops:
+    prefix_prefix: dlprops
+    prefix_reference: https://concepts.datalad.org/s/properties/unreleased/
+  dlprov:
+    prefix_prefix: dlprov
+    prefix_reference: https://concepts.datalad.org/s/prov/unreleased/
+  dlpubs:
+    prefix_prefix: dlpubs
+    prefix_reference: https://concepts.datalad.org/s/publications/unreleased/
+  dlres:
+    prefix_prefix: dlres
+    prefix_reference: https://concepts.datalad.org/s/resources/unreleased/
+  dlroles:
+    prefix_prefix: dlroles
+    prefix_reference: https://concepts.datalad.org/s/roles/unreleased/
+  dlschemas:
+    prefix_prefix: dlschemas
+    prefix_reference: https://concepts.datalad.org/s/
+  dlsocial:
+    prefix_prefix: dlsocial
+    prefix_reference: https://concepts.datalad.org/s/social/unreleased/
+  dlspatial:
+    prefix_prefix: dlspatial
+    prefix_reference: https://concepts.datalad.org/s/spatial/unreleased/
+  dltemporal:
+    prefix_prefix: dltemporal
+    prefix_reference: https://concepts.datalad.org/s/temporal/unreleased/
+  dlthings:
+    prefix_prefix: dlthings
+    prefix_reference: https://concepts.datalad.org/s/things/v1/
+  dltypes:
+    prefix_prefix: dltypes
+    prefix_reference: https://concepts.datalad.org/s/types/unreleased/
+  doi:
+    prefix_prefix: doi
+    prefix_reference: https://dx.doi.org/
+  email:
+    prefix_prefix: email
+    prefix_reference: https://concepts.datalad.org/ns/email/
+  eunal:
+    prefix_prefix: eunal
+    prefix_reference: http://publications.europa.eu/resource/authority/
+  geo:
+    prefix_prefix: geo
+    prefix_reference: 'geo:'
+  gepris:
+    prefix_prefix: gepris
+    prefix_reference: https://gepris.dfg.de/gepris/
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+  marcrel:
+    prefix_prefix: marcrel
+    prefix_reference: http://id.loc.gov/vocabulary/relators/
+  obo:
+    prefix_prefix: obo
+    prefix_reference: http://purl.obolibrary.org/obo/
+  orcid:
+    prefix_prefix: orcid
+    prefix_reference: https://orcid.org/
+  owl:
+    prefix_prefix: owl
+    prefix_reference: http://www.w3.org/2002/07/owl#
+  rdf:
+    prefix_prefix: rdf
+    prefix_reference: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs:
+    prefix_prefix: rdfs
+    prefix_reference: http://www.w3.org/2000/01/rdf-schema#
+  ror:
+    prefix_prefix: ror
+    prefix_reference: https://ror.org/
+  schema:
+    prefix_prefix: schema
+    prefix_reference: http://schema.org/
+  sct:
+    prefix_prefix: sct
+    prefix_reference: http://snomed.info/id/
+  sh:
+    prefix_prefix: sh
+    prefix_reference: http://www.w3.org/ns/shacl#
+  sio:
+    prefix_prefix: sio
+    prefix_reference: http://semanticscience.org/resource/
+  skos:
+    prefix_prefix: skos
+    prefix_reference: http://www.w3.org/2004/02/skos/core#
+  trr379base:
+    prefix_prefix: trr379base
+    prefix_reference: https://concepts.trr379.de/s/base/unreleased/
+  trr379:
+    prefix_prefix: trr379
+    prefix_reference: https://trr379.de/
+  w3ctr:
+    prefix_prefix: w3ctr
+    prefix_reference: https://www.w3.org/TR/
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
+emit_prefixes:
+- dlidentifiers
+- dlprops
+- dlprov
+- dlpubs
+- dlres
+- dlroles
+- dlsocial
+- dlspatial
+- dltemporal
+- dlthings
+- dltypes
+- email
+- geo
+- marcrel
+- orcid
+- rdf
+- rdfs
+- skos
+- trr379
+- w3ctr
+- xsd
+default_prefix: trr379base
+default_range: string
+types:
+  W3CISO8601:
+    name: W3CISO8601
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/W3CISO8601
+    description: W3C variant/subset of IS08601 for specifying date(times). Supported
+      are - YYYY (eg 1997) - YYYY-MM (eg 1997-07) - YYYY-MM-DD (eg 1997-07-16) - YYYY-MM-DDThh:mmTZD
+      (eg 1997-07-16T19:20+01:00) - YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00)
+      - YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00) where TZD is the
+      time zone designator (Z or +hh:mm or -hh:mm)
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    see_also:
+    - https://www.w3.org/TR/NOTE-datetime
+    typeof: string
+    base: str
+    uri: w3ctr:NOTE-datetime
+    pattern: ^([-+]\d+)|(\d{4})|(\d{4}-[01]\d)|(\d{4}-[01]\d-[0-3]\d)|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))$
+  EmailAddress:
+    name: EmailAddress
+    definition_uri: https://concepts.datalad.org/s/types/unreleased/EmailAddress
+    description: RFC 5322 compliant email address
+    notes:
+    - The validation regex is taken from https://stackoverflow.com/a/201378
+    - The regex is single-quoted for YAML encoding, hence all inner "'" have been
+      doubled
+    from_schema: https://concepts.datalad.org/s/types/unreleased
+    base: str
+    uri: dltypes:EmailAddress
+    pattern: (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
+  HexBinary:
+    name: HexBinary
+    definition_uri: https://concepts.datalad.org/s/types/unreleased/HexBinary
+    description: hex-encoded binary data.
+    from_schema: https://concepts.datalad.org/s/types/unreleased
+    base: str
+    uri: xsd:hexBinary
+    pattern: ^[a-fA-F0-9]+$
+  NodeUriOrCurie:
+    name: NodeUriOrCurie
+    definition_uri: https://concepts.datalad.org/s/types/unreleased/NodeUriOrCurie
+    description: A type referencing an graph node. This is like `uriorcurie`, but
+      in an RDF export leads to the desirable `rdf.type` declaration, rather then
+      an `rdf.literal` of the corresponding URI.
+    from_schema: https://concepts.datalad.org/s/types/unreleased
+    typeof: uriorcurie
+    base: str
+    uri: rdfs:Resource
+    repr: str
+  NonNegativeInteger:
+    name: NonNegativeInteger
+    definition_uri: https://concepts.datalad.org/s/types/unreleased/NonNegativeInteger
+    description: An integer
+    notes:
+    - Integer with minimum (inclusive) value of zero, i.e. the standard mathematical
+      concept of the non-negative integers.
+    from_schema: https://concepts.datalad.org/s/types/unreleased
+    broad_mappings:
+    - schema:Integer
+    base: int
+    uri: xsd:nonNegativeInteger
+  string:
+    name: string
+    definition_uri: https://w3id.org/linkml/String
+    description: A character string
+    notes:
+    - In RDF serializations, a slot with range of string is treated as a literal or
+      type xsd:string.   If you are authoring schemas in LinkML YAML, the type is
+      referenced with the lower case "string".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Text
+    base: str
+    uri: xsd:string
+  integer:
+    name: integer
+    definition_uri: https://w3id.org/linkml/Integer
+    description: An integer
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "integer".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Integer
+    base: int
+    uri: xsd:integer
+  boolean:
+    name: boolean
+    definition_uri: https://w3id.org/linkml/Boolean
+    description: A binary (true or false) value
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "boolean".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Boolean
+    base: Bool
+    uri: xsd:boolean
+    repr: bool
+  float:
+    name: float
+    definition_uri: https://w3id.org/linkml/Float
+    description: A real number that conforms to the xsd:float specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "float".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:float
+  double:
+    name: double
+    definition_uri: https://w3id.org/linkml/Double
+    description: A real number that conforms to the xsd:double specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "double".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    close_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:double
+  decimal:
+    name: decimal
+    definition_uri: https://w3id.org/linkml/Decimal
+    description: A real number with arbitrary precision that conforms to the xsd:decimal
+      specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "decimal".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    broad_mappings:
+    - schema:Number
+    base: Decimal
+    uri: xsd:decimal
+  time:
+    name: time
+    definition_uri: https://w3id.org/linkml/Time
+    description: A time object represents a (local) time of day, independent of any
+      particular day
+    notes:
+    - URI is dateTime because OWL reasoners do not work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "time".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Time
+    base: XSDTime
+    uri: xsd:time
+    repr: str
+  date:
+    name: date
+    definition_uri: https://w3id.org/linkml/Date
+    description: a date (year, month and day) in an idealized calendar
+    notes:
+    - URI is dateTime because OWL reasoners don't work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Date
+    base: XSDDate
+    uri: xsd:date
+    repr: str
+  datetime:
+    name: datetime
+    definition_uri: https://w3id.org/linkml/Datetime
+    description: The combination of a date and time
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "datetime".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:DateTime
+    base: XSDDateTime
+    uri: xsd:dateTime
+    repr: str
+  date_or_datetime:
+    name: date_or_datetime
+    definition_uri: https://w3id.org/linkml/DateOrDatetime
+    description: Either a date or a datetime
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date_or_datetime".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: linkml:DateOrDatetime
+    repr: str
+  uriorcurie:
+    name: uriorcurie
+    definition_uri: https://w3id.org/linkml/Uriorcurie
+    description: a URI or a CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uriorcurie".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: URIorCURIE
+    uri: xsd:anyURI
+    repr: str
+  curie:
+    name: curie
+    definition_uri: https://w3id.org/linkml/Curie
+    conforms_to: https://www.w3.org/TR/curie/
+    description: a compact URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "curie".
+    comments:
+    - in RDF serializations this MUST be expanded to a URI
+    - in non-RDF serializations MAY be serialized as the compact representation
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: Curie
+    uri: xsd:string
+    repr: str
+  uri:
+    name: uri
+    definition_uri: https://w3id.org/linkml/Uri
+    conforms_to: https://www.ietf.org/rfc/rfc3987.txt
+    description: a complete URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uri".
+    comments:
+    - in RDF serializations a slot with range of uri is treated as a literal or type
+      xsd:anyURI unless it is an identifier or a reference to an identifier, in which
+      case it is translated directly to a node
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    close_mappings:
+    - schema:URL
+    base: URI
+    uri: xsd:anyURI
+    repr: str
+  ncname:
+    name: ncname
+    definition_uri: https://w3id.org/linkml/Ncname
+    description: Prefix part of CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "ncname".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: NCName
+    uri: xsd:string
+    repr: str
+  objectidentifier:
+    name: objectidentifier
+    definition_uri: https://w3id.org/linkml/Objectidentifier
+    description: A URI or CURIE that represents an object in the model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "objectidentifier".
+    comments:
+    - Used for inheritance and type checking
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: ElementIdentifier
+    uri: shex:iri
+    repr: str
+  nodeidentifier:
+    name: nodeidentifier
+    definition_uri: https://w3id.org/linkml/Nodeidentifier
+    description: A URI, CURIE or BNODE that represents a node in a model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "nodeidentifier".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: NodeIdentifier
+    uri: shex:nonLiteral
+    repr: str
+  jsonpointer:
+    name: jsonpointer
+    definition_uri: https://w3id.org/linkml/Jsonpointer
+    conforms_to: https://datatracker.ietf.org/doc/html/rfc6901
+    description: A string encoding a JSON Pointer. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to a valid object within the current
+      instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpointer".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+  jsonpath:
+    name: jsonpath
+    definition_uri: https://w3id.org/linkml/Jsonpath
+    conforms_to: https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html
+    description: A string encoding a JSON Path. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to zero or more valid objects within
+      the current instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpath".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+  sparqlpath:
+    name: sparqlpath
+    definition_uri: https://w3id.org/linkml/Sparqlpath
+    conforms_to: https://www.w3.org/TR/sparql11-query/#propertypaths
+    description: A string encoding a SPARQL Property Path. The value of the string
+      MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects
+      within the current instance document when encoded as RDF.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "sparqlpath".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+slots:
+  roles:
+    name: roles
+    definition_uri: https://concepts.datalad.org/s/roles/unreleased/roles
+    description: Describes the function of an entity or agent (object) within the
+      scope of a `Relationship` with the subject.
+    from_schema: https://concepts.datalad.org/s/roles/unreleased
+    mappings:
+    - dlroles:roles
+    exact_mappings:
+    - prov:hadRole
+    - dcat:had_role
+    slot_uri: dlroles:roles
+    owner: Relationship
+    domain_of:
+    - Relationship
+    range: Role
+    multivalued: true
+    inlined: false
+  qualified_relations:
+    name: qualified_relations
+    definition_uri: https://concepts.datalad.org/s/roles/unreleased/qualified_relations
+    description: Characterizes the relationship or role of an entity with respect
+      to the subject.
+    from_schema: https://concepts.datalad.org/s/roles/unreleased
+    mappings:
+    - dlroles:qualified_relations
+    exact_mappings:
+    - dcat:qualifiedRelation
+    domain: Thing
+    slot_uri: dlroles:qualified_relations
+    owner: qualified_relations
+    domain_of:
+    - Agent
+    - Activity
+    - Entity
+    - InstantaneousEvent
+    - Location
+    range: Relationship
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  family_name:
+    name: family_name
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/family_name
+    description: The (inherited) family name of the subject. In many Western languages
+      this is the "last name".
+    title: Family name
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:family_name
+    exact_mappings:
+    - foaf:familyName
+    - vcard:family-name
+    is_a: name
+    slot_uri: dlsocial:family_name
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+  formatted_name:
+    name: formatted_name
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/formatted_name
+    description: A formatted text corresponding to the name of the subject.
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:formatted_name
+    exact_mappings:
+    - vcard:fn
+    is_a: name
+    slot_uri: dlsocial:formatted_name
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+  honorific_name_prefix:
+    name: honorific_name_prefix
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/honorific_name_prefix
+    description: The honorific prefix(es) of the subject's name. For example, (academic/formal)
+      titles like "Mrs", or "Dr", "Dame".
+    title: Title or prefix
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:honorific_name_prefix
+    exact_mappings:
+    - vcard:honorific-suffix
+    is_a: name
+    slot_uri: dlsocial:honorific_name_prefix
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+  honorific_name_suffix:
+    name: honorific_name_suffix
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/honorific_name_suffix
+    description: The honorific suffix(es) of the subject's name. For example, generation
+      labels ("III"), or indicators of an academic degree, a profession, or a position
+      ("MD", "BA").
+    title: Suffix
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:honorific_name_suffix
+    exact_mappings:
+    - vcard:honorific-suffix
+    is_a: name
+    slot_uri: dlsocial:honorific_name_suffix
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+  given_name:
+    name: given_name
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/given_name
+    description: The given (non-inherited) name of the subject.
+    title: Given name
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:given_name
+    exact_mappings:
+    - foaf:familyName
+    - vcard:given-name
+    is_a: name
+    slot_uri: dlsocial:given_name
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+  additional_names:
+    name: additional_names
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/additional_names
+    description: Additional name(s) associated with the subject, such as one or more
+      middle names, or a nick name.
+    title: Additional names
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:additional_names
+    exact_mappings:
+    - vcard:additional_name
+    is_a: name
+    slot_uri: dlsocial:additional_names
+    owner: Person
+    domain_of:
+    - Person
+    range: string
+    multivalued: true
+  access_methods:
+    name: access_methods
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/access_methods
+    description: (Alternative) means to gain access to the subject.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:access_method
+    slot_uri: dlres:access_method
+    owner: Resource
+    domain_of:
+    - Resource
+    range: AccessMethod
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  distributions:
+    name: distributions
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/distributions
+    description: Available distributions of the resource.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:distributions
+    exact_mappings:
+    - dcat:distribution
+    broad_mappings:
+    - sio:SIO_000341
+    domain: Resource
+    slot_uri: dlres:distributions
+    owner: distributions
+    domain_of:
+    - Dataset
+    - Document
+    inverse: distribution_of
+    range: Distribution
+    multivalued: true
+  distribution_of:
+    name: distribution_of
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/distribution_of
+    description: The resource that the subject is a distribution of.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:distribution_of
+    broad_mappings:
+    - sio:SIO_000426
+    domain: Distribution
+    slot_uri: dlres:distribution_of
+    owner: Distribution
+    domain_of:
+    - Distribution
+    inverse: distributions
+    range: Resource
+  locator:
+    name: locator
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/locator
+    description: A descriptive identifier that locates a resource within a containing
+      resource. This can be a unique name, a numerical key, or another notation that
+      uniquely identifies the subject within the containing resource.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:locator
+    exact_mappings:
+    - bibo:locator
+    slot_uri: dlres:locator
+    owner: DataServiceAccess
+    domain_of:
+    - IndexedResourceRelationship
+    - DataServiceAccess
+    range: string
+  previous_version:
+    name: previous_version
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/previous_version
+    description: The previous version of the subject in a lineage.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:previous_version
+    exact_mappings:
+    - dcat:previousVersion
+    - pav:previousVersion
+    slot_uri: dlres:previous_version
+    owner: Resource
+    domain_of:
+    - Resource
+    range: string
+  sponsor:
+    name: sponsor
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/sponsor
+    description: An agent that supports a thing through a pledge, promise, or financial
+      contribution.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:sponsor
+    exact_mappings:
+    - schema:sponsor
+    slot_uri: dlres:sponsor
+    owner: Grant
+    domain_of:
+    - Grant
+    range: Agent
+  version_label:
+    name: version_label
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/version_label
+    description: Version indicator (name or identifier) of the subject.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:version_label
+    exact_mappings:
+    - dcat:version
+    - pav:version
+    slot_uri: dlres:version_label
+    owner: Resource
+    domain_of:
+    - Resource
+    range: string
+  version_notes:
+    name: version_notes
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/version_notes
+    description: A description of changes between this version and the previous version
+      of the subject.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:version_notes
+    exact_mappings:
+    - ADMS:versionNotes
+    slot_uri: dlres:version_notes
+    owner: Resource
+    domain_of:
+    - Resource
+    range: string
+    multivalued: true
+  data_service:
+    name: data_service
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/data_service
+    description: A data service that gives access to the distribution of a dataset.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:data_service
+    slot_uri: dledist:data_service
+    owner: DataServiceAccess
+    domain_of:
+    - DataServiceAccess
+    range: DataService
+  byte_size:
+    name: byte_size
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/byte_size
+    description: The size of the subject in bytes.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:byte_size
+    exact_mappings:
+    - dcat:byteSize
+    slot_uri: dledist:byte_size
+    owner: ElectronicDistribution
+    domain_of:
+    - ElectronicDistribution
+    range: NonNegativeInteger
+  checksums:
+    name: checksums
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/checksums
+    description: The checksum property provides a mechanism that can be used to verify
+      that the contents of a file or package have not changed.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:checksum
+    exact_mappings:
+    - spdx:checksum
+    slot_uri: dledist:checksum
+    owner: ElectronicDistribution
+    domain_of:
+    - ElectronicDistribution
+    range: Checksum
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  compression_format:
+    name: compression_format
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/compression_format
+    description: The compression format of the distribution in which the data is contained
+      in a compressed form, e.g., to reduce the size of the downloadable file.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:compression_format
+    exact_mappings:
+    - dcat:compressFormat
+    slot_uri: dledist:compression_format
+    range: Thing
+  download_urls:
+    name: download_urls
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/download_urls
+    description: URL that gives direct access to the subject in the form of a downloadable
+      file in a given format.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:download_url
+    exact_mappings:
+    - dcat:downloadURL
+    related_mappings:
+    - dcat:accessURL
+    - dcat:landingPage
+    slot_uri: dledist:download_url
+    owner: DirectDownload
+    domain_of:
+    - DirectDownload
+    range: uri
+    multivalued: true
+  format:
+    name: format
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/format
+    description: The file format of a distribution.
+    notes:
+    - When type of the distribution is defined by IANA, `media_type` should be used.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:format
+    exact_mappings:
+    - dcterms:format
+    slot_uri: dledist:format
+    owner: ElectronicDistribution
+    domain_of:
+    - ElectronicDistribution
+    range: Thing
+  landing_page:
+    name: landing_page
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/landing_page
+    description: A Web page that can be navigated to in a Web browser to gain access
+      to a resource.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:landing_page
+    exact_mappings:
+    - dcat:landingPage
+    - foaf:page
+    slot_uri: dledist:landing_page
+    owner: AccessThroughLandingPage
+    domain_of:
+    - AccessThroughLandingPage
+    range: uri
+  media_type:
+    name: media_type
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/media_type
+    description: The media type of a distribution as defined by IANA
+    examples:
+    - value: text/csv
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    see_also:
+    - https://www.iana.org/assignments/media-types
+    mappings:
+    - dledist:media_type
+    exact_mappings:
+    - dcat:mediaType
+    is_a: format
+    slot_uri: dledist:media_type
+    owner: ElectronicDistribution
+    domain_of:
+    - ElectronicDistribution
+    range: string
+  packaging_format:
+    name: packaging_format
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/packaging_format
+    description: The package format of the distribution in which one or more data
+      files are grouped together, e.g., to enable a set of related files to be downloaded
+      together.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:packaging_format
+    exact_mappings:
+    - dcat:packageFormat
+    slot_uri: dledist:packaging_format
+    range: Thing
+  broad_mappings:
+    name: broad_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/broad_mappings
+    description: A list of terms from different schemas or terminology systems that
+      have broader meaning.
+    title: Broad mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:broadMatch
+    is_a: mappings
+    slot_uri: skos:broadMatch
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: uriorcurie
+    multivalued: true
+  close_mappings:
+    name: close_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/close_mappings
+    description: A list of terms from different schemas or terminology systems that
+      have close meaning.
+    title: Close mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:closeMatch
+    is_a: mappings
+    slot_uri: skos:closeMatch
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: uriorcurie
+    multivalued: true
+  description:
+    name: description
+    definition_uri: https://concepts.datalad.org/s/things/v1/description
+    annotations:
+      dash:singleLine:
+        tag: dash:singleLine
+        value: false
+    description: A free-text account of the subject.
+    title: Description
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:description
+    exact_mappings:
+    - dcterms:description
+    - rdfs:comment
+    broad_mappings:
+    - obo:IAO_0000300
+    slot_uri: dlthings:description
+    owner: ThingMixin
+    domain_of:
+    - PersonalRequest
+    - ThingMixin
+    range: string
+  exact_mappings:
+    name: exact_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/exact_mappings
+    description: A list of terms from different schemas or terminology systems that
+      have identical meaning.
+    title: Exact mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:exactMatch
+    is_a: mappings
+    slot_uri: skos:exactMatch
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: uriorcurie
+    multivalued: true
+  attributes:
+    name: attributes
+    definition_uri: https://concepts.datalad.org/s/things/v1/attributes
+    description: Declares a relation that associates a `Thing` (or another attribute)
+      with an attribute, where an attribute is an intrinsic characteristic, such as
+      a quality, capability, disposition, function, or is an externally derived attribute
+      determined from some descriptor (e.g. a quantity, position, label/identifier).
+      Technically, this declaration is done via an `AttributeSpecification` that combines
+      a `predicate` with a value declaration and the attribute-related slots of a
+      `Thing`. Importantly, such attributes are declared inline, because they do not
+      have a unique identifier. If an identifier is available, a `Thing` declaration
+      (see `relation`), and a qualification of that relationship via a `Statement`
+      (see `characterized_by`) should be preferred.
+    title: Attributes
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:attributes
+    exact_mappings:
+    - sio:SIO_000008
+    slot_uri: dlthings:attributes
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: AttributeSpecification
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  pid:
+    name: pid
+    definition_uri: https://concepts.datalad.org/s/things/v1/pid
+    description: Persistent and globally unique identifier of a `Thing`.
+    title: Persistent identifier
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:pid
+    exact_mappings:
+    - dcterms:identifier
+    - schema:identifier
+    - ADMS:identifier
+    slot_uri: dlthings:pid
+    identifier: true
+    owner: Thing
+    domain_of:
+    - Thing
+    range: uriorcurie
+    required: true
+  characterized_by:
+    name: characterized_by
+    definition_uri: https://concepts.datalad.org/s/things/v1/characterized_by
+    description: Qualifies relationships between a subject `Thing` and an object `Thing`
+      with a `Statement` declaring a `predicate` on the nature of the relationship.
+    title: Is characterized by
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:characterized_by
+    exact_mappings:
+    - obo:RO_0000053
+    slot_uri: dlthings:characterized_by
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: Statement
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  mappings:
+    name: mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/mappings
+    description: A list of terms from different schemas or terminology systems that
+      have comparable meaning. These may include terms that are precisely equivalent,
+      broader or narrower in meaning, or otherwise semantically related but not equivalent
+      from a strict ontological perspective.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:mappingRelation
+    slot_uri: skos:mappingRelation
+    range: uriorcurie
+    multivalued: true
+  annotations:
+    name: annotations
+    definition_uri: https://concepts.datalad.org/s/things/v1/annotations
+    description: A record of properties of the metadata record on a subject, a collection
+      of tag/text tuples with the semantics of OWL Annotation.
+    title: Annotations
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:annotations
+    exact_mappings:
+    - obo:NCIT_C44272
+    slot_uri: dlthings:annotations
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: Annotation
+    multivalued: true
+    inlined: true
+  annotation_tag:
+    name: annotation_tag
+    definition_uri: https://concepts.datalad.org/s/things/v1/annotation_tag
+    description: A tag identifying an annotation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    slot_uri: dlthings:annotation_tag
+    owner: Annotation
+    domain_of:
+    - Annotation
+    range: Thing
+  annotation_value:
+    name: annotation_value
+    definition_uri: https://concepts.datalad.org/s/things/v1/annotation_value
+    description: The actual annotation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    slot_uri: dlthings:annotation_value
+    owner: Annotation
+    domain_of:
+    - Annotation
+    range: string
+  narrow_mappings:
+    name: narrow_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/narrow_mappings
+    description: A list of terms from different schemas or terminology systems that
+      have narrower meaning.
+    title: Narrow mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:narrowMatch
+    is_a: mappings
+    slot_uri: skos:narrowMatch
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: uriorcurie
+    multivalued: true
+  object:
+    name: object
+    definition_uri: https://concepts.datalad.org/s/things/v1/object
+    description: Reference to a `Thing` within a `Statement`.
+    notes:
+    - We do not declare a range here to be able to tighten the range in subclasses
+      of class that need a particular range. This appears to be working around a linkml
+      limitation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:object
+    exact_mappings:
+    - rdf:object
+    slot_uri: rdf:object
+    owner: Statement
+    domain_of:
+    - Relationship
+    - Statement
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: string
+    multivalued: false
+    inlined: false
+  predicate:
+    name: predicate
+    definition_uri: https://concepts.datalad.org/s/things/v1/predicate
+    description: Reference to a `Property` within a `Statement`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:predicate
+    exact_mappings:
+    - rdf:predicate
+    slot_uri: rdf:predicate
+    owner: Statement
+    domain_of:
+    - AttributeSpecification
+    - Statement
+    relational_role:
+      text: PREDICATE
+      description: a slot with this role connects a relationship to its predicate/property
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
+    range: Property
+    multivalued: false
+    inlined: false
+  range:
+    name: range
+    definition_uri: https://concepts.datalad.org/s/things/v1/range
+    description: Declares that the value of a `Thing` or `AttributeSpecification`
+      are instances of a particular class.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdfs:range
+    exact_mappings:
+    - rdfs:range
+    slot_uri: rdfs:range
+    owner: ValueSpecificationMixin
+    domain_of:
+    - ValueSpecificationMixin
+    range: uriorcurie
+  related_mappings:
+    name: related_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/related_mappings
+    description: A list of terms from different schemas or terminology systems that
+      have related meaning.
+    title: Related mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:relatedMatch
+    is_a: mappings
+    slot_uri: skos:relatedMatch
+    owner: ThingMixin
+    domain_of:
+    - ThingMixin
+    range: uriorcurie
+    multivalued: true
+  relations:
+    name: relations
+    definition_uri: https://concepts.datalad.org/s/things/v1/relations
+    description: Declares an unqualified relation of the subject `Thing` to another
+      `Thing`. This schema slot is used to define related things inline. If such a
+      definition is not needed. A qualified relationship can be declared directly
+      using the `characterized_by` slot.
+    title: Relations
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:relation
+    exact_mappings:
+    - dcat:relation
+    - dcterms:relation
+    domain: Thing
+    slot_uri: dlthings:relation
+    owner: Thing
+    domain_of:
+    - Thing
+    symmetric: true
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: Thing
+    multivalued: true
+    inlined: true
+    inlined_as_list: false
+  value:
+    name: value
+    definition_uri: https://concepts.datalad.org/s/things/v1/value
+    description: Value of a thing.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdfs:value
+    exact_mappings:
+    - rdf:value
+    slot_uri: rdfs:value
+    owner: ValueSpecificationMixin
+    domain_of:
+    - ValueSpecificationMixin
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: string
+  acted_on_behalf_of:
+    name: acted_on_behalf_of
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/acted_on_behalf_of
+    description: Assign the authority and responsibility for carrying out a specific
+      activity of the subject agent to another agent.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:acted_on_behalf_of
+    exact_mappings:
+    - prov:actedOnBehalfOf
+    domain: Agent
+    slot_uri: dlprov:acted_on_behalf_of
+    owner: Agent
+    domain_of:
+    - Agent
+    range: Agent
+    multivalued: true
+    inlined: false
+  associated_with:
+    name: associated_with
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/associated_with
+    description: An activity association is an assignment of responsibility to an
+      agent for an activity, indicating that the agent had a role in the activity.
+      It further allows for a plan to be specified, which is the plan intended by
+      the agent to achieve some goals in the context of this activity.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:associated_with
+    exact_mappings:
+    - prov:wasAssociatedWith
+    domain: Activity
+    slot_uri: dlprov:associated_with
+    owner: Activity
+    domain_of:
+    - Activity
+    range: Agent
+    multivalued: true
+    inlined: false
+  attributed_to:
+    name: attributed_to
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/attributed_to
+    description: Attribution is the ascribing of an entity to an agent.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:attributed_to
+    exact_mappings:
+    - prov:wasAttributedTo
+    domain: Entity
+    slot_uri: dlprov:attributed_to
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Agent
+    multivalued: true
+    inlined: false
+  derived_from:
+    name: derived_from
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/derived_from
+    description: Derivation is a transformation of an entity into another, an update
+      of an entity resulting in a new one, or the construction of a new entity based
+      on a pre-existing entity.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:derived_from
+    exact_mappings:
+    - prov:wasDerivedFrom
+    domain: Entity
+    slot_uri: dlprov:derived_from
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Entity
+    multivalued: true
+    inlined: false
+  generated_by:
+    name: generated_by
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/generated_by
+    description: Generation is the completion of production of a new entity by an
+      activity. This entity did not exist before generation and becomes available
+      for usage after this generation.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:generated_by
+    exact_mappings:
+    - prov:wasAttributedTo
+    domain: Entity
+    slot_uri: dlprov:generated_by
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Activity
+    multivalued: true
+    inlined: false
+  informed_by:
+    name: informed_by
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/informed_by
+    description: Communication is the exchange of an entity by two activities, one
+      activity using the entity generated by the other.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:informed_by
+    exact_mappings:
+    - prov:wasInformedBy
+    domain: Activity
+    slot_uri: dlprov:informed_by
+    owner: Activity
+    domain_of:
+    - Activity
+    range: Activity
+    multivalued: true
+    inlined: false
+  conforms_to:
+    name: conforms_to
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/conforms_to
+    description: An established standard to which the subject conforms.
+    comments:
+    - This property SHOULD be used to indicate a model, schema, ontology, view or
+      profile that the subject conforms to.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:conforms_to
+    exact_mappings:
+    - dcterms:conformsTo
+    slot_uri: dlprops:conforms_to
+    owner: Resource
+    domain_of:
+    - Resource
+    range: Thing
+  about:
+    name: about
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/about
+    description: A relation of an information artifact to the subject, such as a URL
+      identifying the topic of a document.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:about
+    exact_mappings:
+    - schema:about
+    - obo:IAO_0000136
+    slot_uri: dlprops:about
+    owner: Resource
+    domain_of:
+    - Resource
+    range: Thing
+    multivalued: true
+  keywords:
+    name: keywords
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/keywords
+    description: One or more keywords or tags describing the subject.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:keyword
+    exact_mappings:
+    - dcat:keyword
+    - schema:keywords
+    - obo:IAO_0000629
+    slot_uri: dlprops:keyword
+    owner: Resource
+    domain_of:
+    - Resource
+    range: string
+    multivalued: true
+  name:
+    name: name
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/name
+    description: Name of the subject. A name is closely related to a `title`, but
+      often more compact and identifier-like, but without the implication of uniqueness
+      of an identifier. A name is often used by technical systems to display an item
+      in an organizational structure, such as a file in a directory hierarchy.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:name
+    exact_mappings:
+    - rdfs:label
+    - schema:name
+    - foaf:name
+    close_mappings:
+    - dlprops:title
+    - obo:IAO_0000590
+    slot_uri: dlprops:name
+    owner: Organization
+    domain_of:
+    - Organization
+    range: string
+  same_as:
+    name: same_as
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/same_as
+    description: Declares that the subject and an object are equal. Can be used to
+      indicate a URL of a reference Web page that unambiguously indicates the subject's
+      identity. For example, the URL of the subject's Wikipedia page, Wikidata entry,
+      or official website.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:same_as
+    exact_mappings:
+    - owl:sameAs
+    close_mappings:
+    - schema:sameAs
+    slot_uri: dlprops:same_as
+    owner: Resource
+    domain_of:
+    - Resource
+    range: Thing
+  short_name:
+    name: short_name
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/short_name
+    description: A shortened name for the subject. For example, an acronym, initialism,
+      nickname, or other abbreviation of the `name`.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:short_name
+    exact_mappings:
+    - pq:P1813
+    is_a: name
+    slot_uri: dlprops:short_name
+    owner: Resource
+    domain_of:
+    - Organization
+    - Project
+    - Resource
+    range: string
+  title:
+    name: title
+    definition_uri: https://concepts.datalad.org/s/properties/unreleased/title
+    description: A summarily description of the subject. It is closely related to
+      a `name`, but often less compact and more descriptive. Typically used for documents.
+    from_schema: https://concepts.datalad.org/s/properties/unreleased
+    mappings:
+    - dlprops:title
+    exact_mappings:
+    - dcterms:title
+    - sio:SIO_000185
+    related_mappings:
+    - schema:name
+    slot_uri: dlprops:title
+    owner: Resource
+    domain_of:
+    - Project
+    - Resource
+    range: string
+  at_time:
+    name: at_time
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/at_time
+    description: Time at which an instanteneous event takes place or took place.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:at_time
+    exact_mappings:
+    - prov:atTime
+    slot_uri: dltemporal:at_time
+    owner: InstantaneousEvent
+    domain_of:
+    - InstantaneousEvent
+    range: W3CISO8601
+  date_modified:
+    name: date_modified
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/date_modified
+    description: Timepoint at which the subject was (last) changed, updated or modified.
+    notes:
+    - successful validation with `datetime` as a range and linkml-jsonschema-validate`
+      depends on a patched linkml, see https://github.com/linkml/linkml/issues/1806
+    - a related problem also exists for `linkml-validate`, we cannot have a more specific
+      range right now
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:date_modified
+    exact_mappings:
+    - dcterms:modified
+    slot_uri: dltemporal:date_modified
+    owner: Resource
+    domain_of:
+    - Publication
+    - Resource
+    range: W3CISO8601
+  date_published:
+    name: date_published
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/date_published
+    description: Timepoint at which the subject was (last) published.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:date_published
+    exact_mappings:
+    - schema:datePublished
+    - dcterms:issued
+    slot_uri: dltemporal:date_published
+    owner: Resource
+    domain_of:
+    - Publication
+    - Resource
+    range: W3CISO8601
+  started_at:
+    name: started_at
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/started_at
+    description: Start is when an activity is deemed to have been started by some
+      trigger. The activity did not exist before its start. Any usage, generation,
+      or invalidation involving an activity follows the activity's start.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:started_at
+    exact_mappings:
+    - prov:startedAtTime
+    slot_uri: dltemporal:started_at
+    owner: TransientRelationship
+    domain_of:
+    - Activity
+    - TransientRelationship
+    range: W3CISO8601
+  ended_at:
+    name: ended_at
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/ended_at
+    description: End is when an activity is deemed to have been ended by some trigger.
+      The activity no longer exists after its end. Any usage, generation, or invalidation
+      involving an activity precedes the activity's end.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:ended_at
+    exact_mappings:
+    - prov:endedAtTime
+    slot_uri: dltemporal:ended_at
+    owner: TransientRelationship
+    domain_of:
+    - Activity
+    - TransientRelationship
+    range: W3CISO8601
+  schema_type:
+    name: schema_type
+    definition_uri: https://concepts.datalad.org/s/types/unreleased/schema_type
+    description: State that the subject is an instance of a particular schema class.
+      Typically, no explicit value needs to be assigned to this slot, because it matches
+      the class type of a particular record. However, this slots can be used as a
+      type designator of a schema element for validation and schema structure handling
+      purposes. This is used to indicate specialized schema classes for properties
+      that accept a hierarchy of classes as their range.
+    from_schema: https://concepts.datalad.org/s/types/unreleased
+    mappings:
+    - rdf:type
+    exact_mappings:
+    - dcterms:type
+    slot_uri: rdf:type
+    designates_type: true
+    owner: Identifier
+    domain_of:
+    - Relationship
+    - AccessMethod
+    - ThingMixin
+    - Identifier
+    range: NodeUriOrCurie
+  creator:
+    name: creator
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/creator
+    description: An agent responsible for making an entity.
+    notes:
+    - The `range` is only `uriorcurie` here (and not `Thing`), because we have an
+      `ifabsent` declaration for DOIs that only work with this type. And even for
+      that it needs a patch.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:creator
+    exact_mappings:
+    - dcterms:creator
+    slot_uri: dlidentifiers:creator
+    owner: Identifier
+    domain_of:
+    - Identifier
+    range: uriorcurie
+  identifiers:
+    name: identifiers
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/identifiers
+    description: An unambiguous reference to the subject within a given context.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:identifier
+    exact_mappings:
+    - dcterms:identifier
+    - schema:identifier
+    - ADMS:identifier
+    slot_uri: dlidentifiers:identifier
+    owner: Location
+    domain_of:
+    - Agent
+    - Activity
+    - Entity
+    - InstantaneousEvent
+    - Location
+    range: Identifier
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  notation:
+    name: notation
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/notation
+    description: String of characters such as "T58:5" or "30:4833" used to uniquely
+      identify a concept within the scope of a given concept scheme.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:notation
+    exact_mappings:
+    - skos:notation
+    slot_uri: dlidentifiers:notation
+    owner: Identifier
+    domain_of:
+    - Identifier
+    range: string
+  schema_agency:
+    name: schema_agency
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/schema_agency
+    description: Name of the agency that issued an identifier.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:schema_agency
+    exact_mappings:
+    - ADMS:schemaAgency
+    slot_uri: dlidentifiers:schema_agency
+    owner: IssuedIdentifier
+    domain_of:
+    - IssuedIdentifier
+    range: string
+  at_location:
+    name: at_location
+    definition_uri: https://concepts.datalad.org/s/spatial/unreleased/at_location
+    description: Associate the subject with a location. This can be a geographic place,
+      or a place in a directory, or table.
+    from_schema: https://concepts.datalad.org/s/spatial/unreleased
+    mappings:
+    - dlspatial:at_location
+    exact_mappings:
+    - prov:atLocation
+    slot_uri: dlspatial:at_location
+    owner: Activity
+    domain_of:
+    - Agent
+    - Activity
+    range: Location
+    multivalued: false
+    inlined: false
+  Relationship_object:
+    name: Relationship_object
+    definition_uri: https://concepts.datalad.org/s/things/v1/object
+    description: Reference to a `Thing` within a `Statement`.
+    notes:
+    - We do not declare a range here to be able to tighten the range in subclasses
+      of class that need a particular range. This appears to be working around a linkml
+      limitation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:object
+    exact_mappings:
+    - rdf:object
+    is_a: object
+    domain: Relationship
+    slot_uri: rdf:object
+    alias: object
+    owner: Relationship
+    domain_of:
+    - Relationship
+    is_usage_slot: true
+    usage_slot_name: object
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: Thing
+    required: true
+    multivalued: false
+    inlined: false
+  Person_family_name:
+    name: Person_family_name
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/family_name
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 1
+    description: The (inherited) family name of the subject. In many Western languages
+      this is the "last name".
+    title: Family name
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:family_name
+    exact_mappings:
+    - foaf:familyName
+    - vcard:family-name
+    is_a: family_name
+    domain: Person
+    slot_uri: dlsocial:family_name
+    alias: family_name
+    owner: Person
+    domain_of:
+    - Person
+    is_usage_slot: true
+    usage_slot_name: family_name
+    range: string
+  Person_given_name:
+    name: Person_given_name
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/given_name
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 2
+    description: The given (non-inherited) name of the subject.
+    title: Given name
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:given_name
+    exact_mappings:
+    - foaf:familyName
+    - vcard:given-name
+    is_a: given_name
+    domain: Person
+    slot_uri: dlsocial:given_name
+    alias: given_name
+    owner: Person
+    domain_of:
+    - Person
+    is_usage_slot: true
+    usage_slot_name: given_name
+    range: string
+  Person_additional_names:
+    name: Person_additional_names
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/additional_names
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 3
+    description: Additional name(s) associated with the subject, such as one or more
+      middle names, or a nick name.
+    title: Additional names
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:additional_names
+    exact_mappings:
+    - vcard:additional_name
+    is_a: additional_names
+    domain: Person
+    slot_uri: dlsocial:additional_names
+    alias: additional_names
+    owner: Person
+    domain_of:
+    - Person
+    is_usage_slot: true
+    usage_slot_name: additional_names
+    range: string
+    multivalued: true
+  Person_honorific_name_prefix:
+    name: Person_honorific_name_prefix
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/honorific_name_prefix
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 4
+    description: The honorific prefix(es) of the subject's name. For example, (academic/formal)
+      titles like "Mrs", or "Dr", "Dame".
+    title: Title or prefix
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:honorific_name_prefix
+    exact_mappings:
+    - vcard:honorific-suffix
+    is_a: honorific_name_prefix
+    domain: Person
+    slot_uri: dlsocial:honorific_name_prefix
+    alias: honorific_name_prefix
+    owner: Person
+    domain_of:
+    - Person
+    is_usage_slot: true
+    usage_slot_name: honorific_name_prefix
+    range: string
+  Person_honorific_name_suffix:
+    name: Person_honorific_name_suffix
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/honorific_name_suffix
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 5
+    description: The honorific suffix(es) of the subject's name. For example, generation
+      labels ("III"), or indicators of an academic degree, a profession, or a position
+      ("MD", "BA").
+    title: Suffix
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:honorific_name_suffix
+    exact_mappings:
+    - vcard:honorific-suffix
+    is_a: honorific_name_suffix
+    domain: Person
+    slot_uri: dlsocial:honorific_name_suffix
+    alias: honorific_name_suffix
+    owner: Person
+    domain_of:
+    - Person
+    is_usage_slot: true
+    usage_slot_name: honorific_name_suffix
+    range: string
+  Resource_previous_version:
+    name: Resource_previous_version
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/previous_version
+    description: The previous version of the subject in a lineage.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:previous_version
+    exact_mappings:
+    - dcat:previousVersion
+    - pav:previousVersion
+    is_a: previous_version
+    domain: Resource
+    slot_uri: dlres:previous_version
+    alias: previous_version
+    owner: Resource
+    domain_of:
+    - Resource
+    is_usage_slot: true
+    usage_slot_name: previous_version
+    range: Resource
+  Distribution_previous_version:
+    name: Distribution_previous_version
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/previous_version
+    description: The previous version of the subject in a lineage.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:previous_version
+    exact_mappings:
+    - dcat:previousVersion
+    - pav:previousVersion
+    is_a: Resource_previous_version
+    domain: Distribution
+    slot_uri: dlres:previous_version
+    alias: previous_version
+    owner: Distribution
+    domain_of:
+    - Distribution
+    is_usage_slot: true
+    usage_slot_name: previous_version
+    range: Distribution
+  IndexedResourceRelationship_locator:
+    name: IndexedResourceRelationship_locator
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/locator
+    description: A descriptive identifier that locates a resource within a containing
+      resource. This can be a unique name, a numerical key, or another notation that
+      uniquely identifies the subject within the containing resource.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:locator
+    exact_mappings:
+    - bibo:locator
+    is_a: locator
+    domain: IndexedResourceRelationship
+    slot_uri: dlres:locator
+    key: true
+    alias: locator
+    owner: IndexedResourceRelationship
+    domain_of:
+    - IndexedResourceRelationship
+    is_usage_slot: true
+    usage_slot_name: locator
+    range: string
+    required: true
+  IndexedResourceRelationship_object:
+    name: IndexedResourceRelationship_object
+    definition_uri: https://concepts.datalad.org/s/things/v1/object
+    description: Reference to a `Thing` within a `Statement`.
+    notes:
+    - We do not declare a range here to be able to tighten the range in subclasses
+      of class that need a particular range. This appears to be working around a linkml
+      limitation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:object
+    exact_mappings:
+    - rdf:object
+    is_a: Relationship_object
+    domain: IndexedResourceRelationship
+    slot_uri: rdf:object
+    alias: object
+    owner: IndexedResourceRelationship
+    domain_of:
+    - IndexedResourceRelationship
+    is_usage_slot: true
+    usage_slot_name: object
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: Resource
+    required: true
+    multivalued: false
+    inlined: false
+  ElectronicDistribution_previous_version:
+    name: ElectronicDistribution_previous_version
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/previous_version
+    description: The previous version of the subject in a lineage.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:previous_version
+    exact_mappings:
+    - dcat:previousVersion
+    - pav:previousVersion
+    is_a: Distribution_previous_version
+    domain: ElectronicDistribution
+    slot_uri: dlres:previous_version
+    alias: previous_version
+    owner: ElectronicDistribution
+    domain_of:
+    - ElectronicDistribution
+    is_usage_slot: true
+    usage_slot_name: previous_version
+    range: ElectronicDistribution
+  DataServiceAccess_data_service:
+    name: DataServiceAccess_data_service
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/data_service
+    description: A data service that gives access to the distribution of a dataset.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:data_service
+    is_a: data_service
+    domain: DataServiceAccess
+    slot_uri: dledist:data_service
+    alias: data_service
+    owner: DataServiceAccess
+    domain_of:
+    - DataServiceAccess
+    is_usage_slot: true
+    usage_slot_name: data_service
+    range: DataService
+    required: true
+  DataServiceAccess_locator:
+    name: DataServiceAccess_locator
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/locator
+    description: A descriptive identifier that locates a resource within a containing
+      resource. This can be a unique name, a numerical key, or another notation that
+      uniquely identifies the subject within the containing resource.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:locator
+    exact_mappings:
+    - bibo:locator
+    is_a: locator
+    domain: DataServiceAccess
+    slot_uri: dlres:locator
+    alias: locator
+    owner: DataServiceAccess
+    domain_of:
+    - DataServiceAccess
+    is_usage_slot: true
+    usage_slot_name: locator
+    range: string
+    required: true
+  AttributeSpecification_predicate:
+    name: AttributeSpecification_predicate
+    definition_uri: https://concepts.datalad.org/s/things/v1/predicate
+    description: Reference to a `Property` within a `Statement`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:predicate
+    exact_mappings:
+    - rdf:predicate
+    is_a: predicate
+    domain: AttributeSpecification
+    slot_uri: rdf:predicate
+    alias: predicate
+    owner: AttributeSpecification
+    domain_of:
+    - AttributeSpecification
+    is_usage_slot: true
+    usage_slot_name: predicate
+    relational_role:
+      text: PREDICATE
+      description: a slot with this role connects a relationship to its predicate/property
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
+    range: Property
+    required: true
+    multivalued: false
+    inlined: false
+  Statement_object:
+    name: Statement_object
+    definition_uri: https://concepts.datalad.org/s/things/v1/object
+    description: Reference to a `Thing` within a `Statement`.
+    notes:
+    - We do not declare a range here to be able to tighten the range in subclasses
+      of class that need a particular range. This appears to be working around a linkml
+      limitation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:object
+    exact_mappings:
+    - rdf:object
+    is_a: object
+    domain: Statement
+    slot_uri: rdf:object
+    alias: object
+    owner: Statement
+    domain_of:
+    - Statement
+    is_usage_slot: true
+    usage_slot_name: object
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: Thing
+    required: true
+    multivalued: false
+    inlined: false
+  Statement_predicate:
+    name: Statement_predicate
+    definition_uri: https://concepts.datalad.org/s/things/v1/predicate
+    description: Reference to a `Property` within a `Statement`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdf:predicate
+    exact_mappings:
+    - rdf:predicate
+    is_a: predicate
+    domain: Statement
+    slot_uri: rdf:predicate
+    alias: predicate
+    owner: Statement
+    domain_of:
+    - Statement
+    is_usage_slot: true
+    usage_slot_name: predicate
+    relational_role:
+      text: PREDICATE
+      description: a slot with this role connects a relationship to its predicate/property
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
+    range: Property
+    required: true
+    multivalued: false
+    inlined: false
+  Thing_pid:
+    name: Thing_pid
+    definition_uri: https://concepts.datalad.org/s/things/v1/pid
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 1
+    description: Persistent and globally unique identifier of a `Thing`.
+    title: Persistent identifier
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:pid
+    exact_mappings:
+    - dcterms:identifier
+    - schema:identifier
+    - ADMS:identifier
+    is_a: pid
+    domain: Thing
+    slot_uri: dlthings:pid
+    identifier: true
+    alias: pid
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: pid
+    range: uriorcurie
+    required: true
+  Thing_characterized_by:
+    name: Thing_characterized_by
+    definition_uri: https://concepts.datalad.org/s/things/v1/characterized_by
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 2
+    description: Qualifies relationships between a subject `Thing` and an object `Thing`
+      with a `Statement` declaring a `predicate` on the nature of the relationship.
+    title: Is characterized by
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:characterized_by
+    exact_mappings:
+    - obo:RO_0000053
+    is_a: characterized_by
+    domain: Thing
+    slot_uri: dlthings:characterized_by
+    alias: characterized_by
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: characterized_by
+    range: Statement
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  Thing_attributes:
+    name: Thing_attributes
+    definition_uri: https://concepts.datalad.org/s/things/v1/attributes
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 3
+    description: Declares a relation that associates a `Thing` (or another attribute)
+      with an attribute, where an attribute is an intrinsic characteristic, such as
+      a quality, capability, disposition, function, or is an externally derived attribute
+      determined from some descriptor (e.g. a quantity, position, label/identifier).
+      Technically, this declaration is done via an `AttributeSpecification` that combines
+      a `predicate` with a value declaration and the attribute-related slots of a
+      `Thing`. Importantly, such attributes are declared inline, because they do not
+      have a unique identifier. If an identifier is available, a `Thing` declaration
+      (see `relation`), and a qualification of that relationship via a `Statement`
+      (see `characterized_by`) should be preferred.
+    title: Attributes
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:attributes
+    exact_mappings:
+    - sio:SIO_000008
+    is_a: attributes
+    domain: Thing
+    slot_uri: dlthings:attributes
+    alias: attributes
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: attributes
+    range: AttributeSpecification
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  Thing_description:
+    name: Thing_description
+    definition_uri: https://concepts.datalad.org/s/things/v1/description
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 4
+    description: A free-text account of the subject.
+    title: Description
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:description
+    exact_mappings:
+    - dcterms:description
+    - rdfs:comment
+    broad_mappings:
+    - obo:IAO_0000300
+    is_a: description
+    domain: Thing
+    slot_uri: dlthings:description
+    alias: description
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: description
+    range: string
+  Thing_annotations:
+    name: Thing_annotations
+    definition_uri: https://concepts.datalad.org/s/things/v1/annotations
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 5
+    description: A record of properties of the metadata record on a subject, a collection
+      of tag/text tuples with the semantics of OWL Annotation.
+    title: Annotations
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:annotations
+    exact_mappings:
+    - obo:NCIT_C44272
+    is_a: annotations
+    domain: Thing
+    slot_uri: dlthings:annotations
+    alias: annotations
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: annotations
+    range: Annotation
+    multivalued: true
+    inlined: true
+  Thing_relations:
+    name: Thing_relations
+    definition_uri: https://concepts.datalad.org/s/things/v1/relations
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 6
+    description: Declares an unqualified relation of the subject `Thing` to another
+      `Thing`. This schema slot is used to define related things inline. If such a
+      definition is not needed. A qualified relationship can be declared directly
+      using the `characterized_by` slot.
+    title: Relations
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:relation
+    exact_mappings:
+    - dcat:relation
+    - dcterms:relation
+    is_a: relations
+    domain: Thing
+    slot_uri: dlthings:relation
+    alias: relations
+    owner: Thing
+    domain_of:
+    - Thing
+    symmetric: true
+    is_usage_slot: true
+    usage_slot_name: relations
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: Thing
+    multivalued: true
+    inlined: true
+    inlined_as_list: false
+  Thing_exact_mappings:
+    name: Thing_exact_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/exact_mappings
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 7
+    description: A list of terms from different schemas or terminology systems that
+      have identical meaning.
+    title: Exact mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:exactMatch
+    is_a: exact_mappings
+    domain: Thing
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: exact_mappings
+    range: uriorcurie
+    multivalued: true
+  Thing_close_mappings:
+    name: Thing_close_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/close_mappings
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 8
+    description: A list of terms from different schemas or terminology systems that
+      have close meaning.
+    title: Close mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:closeMatch
+    is_a: close_mappings
+    domain: Thing
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: close_mappings
+    range: uriorcurie
+    multivalued: true
+  Thing_broad_mappings:
+    name: Thing_broad_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/broad_mappings
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 9
+    description: A list of terms from different schemas or terminology systems that
+      have broader meaning.
+    title: Broad mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:broadMatch
+    is_a: broad_mappings
+    domain: Thing
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: broad_mappings
+    range: uriorcurie
+    multivalued: true
+  Thing_narrow_mappings:
+    name: Thing_narrow_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/narrow_mappings
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 10
+    description: A list of terms from different schemas or terminology systems that
+      have narrower meaning.
+    title: Narrow mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:narrowMatch
+    is_a: narrow_mappings
+    domain: Thing
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: narrow_mappings
+    range: uriorcurie
+    multivalued: true
+  Thing_related_mappings:
+    name: Thing_related_mappings
+    definition_uri: https://concepts.datalad.org/s/things/v1/related_mappings
+    annotations:
+      sh:order:
+        tag: sh:order
+        value: 11
+    description: A list of terms from different schemas or terminology systems that
+      have related meaning.
+    title: Related mappings
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - skos:relatedMatch
+    is_a: related_mappings
+    domain: Thing
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Thing
+    domain_of:
+    - Thing
+    is_usage_slot: true
+    usage_slot_name: related_mappings
+    range: uriorcurie
+    multivalued: true
+  ValueSpecification_value:
+    name: ValueSpecification_value
+    definition_uri: https://concepts.datalad.org/s/things/v1/value
+    description: Value of a thing.
+    notes:
+    - It is required, because when it is not needed, `Thing` should be used as a type.
+      Its absence is therefore likely a sign of an error.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - rdfs:value
+    exact_mappings:
+    - rdf:value
+    is_a: value
+    domain: ValueSpecification
+    slot_uri: rdfs:value
+    alias: value
+    owner: ValueSpecification
+    domain_of:
+    - ValueSpecification
+    is_usage_slot: true
+    usage_slot_name: value
+    relational_role:
+      text: OBJECT
+      description: a slot with this role connects a relationship to its object/target
+        node
+      meaning: http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+    range: string
+    required: true
+  Annotation_annotation_tag:
+    name: Annotation_annotation_tag
+    definition_uri: https://concepts.datalad.org/s/things/v1/annotation_tag
+    description: A tag identifying an annotation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    is_a: annotation_tag
+    domain: Annotation
+    slot_uri: dlthings:annotation_tag
+    key: true
+    alias: annotation_tag
+    owner: Annotation
+    domain_of:
+    - Annotation
+    is_usage_slot: true
+    usage_slot_name: annotation_tag
+    range: Thing
+    required: true
+  Identifier_notation:
+    name: Identifier_notation
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/notation
+    description: String of characters such as "T58:5" or "30:4833" used to uniquely
+      identify a concept within the scope of a given concept scheme.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:notation
+    exact_mappings:
+    - skos:notation
+    is_a: notation
+    domain: Identifier
+    slot_uri: dlidentifiers:notation
+    alias: notation
+    owner: Identifier
+    domain_of:
+    - Identifier
+    is_usage_slot: true
+    usage_slot_name: notation
+    range: string
+    required: true
+  Checksum_creator:
+    name: Checksum_creator
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/creator
+    description: Identifies the software agent (algorithm) used to produce the subject
+      `Checksum`.
+    notes:
+    - The `range` is only `uriorcurie` here (and not `Thing`), because we have an
+      `ifabsent` declaration for DOIs that only work with this type. And even for
+      that it needs a patch.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:creator
+    exact_mappings:
+    - spdx:algorithm
+    is_a: creator
+    domain: Checksum
+    slot_uri: dlidentifiers:creator
+    alias: creator
+    owner: Checksum
+    domain_of:
+    - Checksum
+    is_usage_slot: true
+    usage_slot_name: creator
+    range: uriorcurie
+    required: true
+  Checksum_notation:
+    name: Checksum_notation
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/notation
+    description: Lower case hexadecimal encoded checksum digest value.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:notation
+    exact_mappings:
+    - spdx:checksumValue
+    is_a: Identifier_notation
+    domain: Checksum
+    slot_uri: dlidentifiers:notation
+    alias: notation
+    owner: Checksum
+    domain_of:
+    - Checksum
+    is_usage_slot: true
+    usage_slot_name: notation
+    range: HexBinary
+    required: true
+  DOI_creator:
+    name: DOI_creator
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/creator
+    description: By default, the creator is identified as "https://doi.org".
+    notes:
+    - The `range` is only `uriorcurie` here (and not `Thing`), because we have an
+      `ifabsent` declaration for DOIs that only work with this type. And even for
+      that it needs a patch.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:creator
+    exact_mappings:
+    - dcterms:creator
+    is_a: creator
+    domain: DOI
+    slot_uri: dlidentifiers:creator
+    ifabsent: string(https://doi.org)
+    alias: creator
+    owner: DOI
+    domain_of:
+    - DOI
+    is_usage_slot: true
+    usage_slot_name: creator
+    range: uriorcurie
+  DOI_notation:
+    name: DOI_notation
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/notation
+    description: The identifier notation is specified without a URL-prefix, or a `doi:`
+      prefix.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:notation
+    exact_mappings:
+    - skos:notation
+    is_a: Identifier_notation
+    domain: DOI
+    slot_uri: dlidentifiers:notation
+    alias: notation
+    owner: DOI
+    domain_of:
+    - DOI
+    is_usage_slot: true
+    usage_slot_name: notation
+    range: string
+    required: true
+  DOI_schema_agency:
+    name: DOI_schema_agency
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/schema_agency
+    description: By default, the schema agency is identified as `DOI Foundation`.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:schema_agency
+    exact_mappings:
+    - ADMS:schemaAgency
+    is_a: schema_agency
+    domain: DOI
+    slot_uri: dlidentifiers:schema_agency
+    ifabsent: string(DOI Foundation)
+    alias: schema_agency
+    owner: DOI
+    domain_of:
+    - DOI
+    is_usage_slot: true
+    usage_slot_name: schema_agency
+    range: string
+classes:
+  Role:
+    name: Role
+    definition_uri: https://concepts.datalad.org/s/roles/unreleased/Role
+    description: A role is the function of a resource or agent with respect to a subject,
+      in the context of resource attribution or relationships.
+    from_schema: https://concepts.datalad.org/s/roles/unreleased
+    mappings:
+    - dlroles:Role
+    exact_mappings:
+    - prov:Role
+    - dcat:Role
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    class_uri: dlroles:Role
+  Relationship:
+    name: Relationship
+    definition_uri: https://concepts.datalad.org/s/roles/unreleased/Relationship
+    description: An association class for characterizing the relation between two
+      things with the role(s) the object had with respect to the subject. A relationship
+      is always between two things only, but can be annotated with multiple roles
+      (for example, a person having both an author role with respect to a dataset,
+      and also being the person who is legally responsible contact for it).
+    from_schema: https://concepts.datalad.org/s/roles/unreleased
+    mappings:
+    - dlroles:Relationship
+    close_mappings:
+    - prov:Influence
+    - dcat:Relationship
+    slots:
+    - Relationship_object
+    - roles
+    - schema_type
+    slot_usage:
+      object:
+        name: object
+        range: Thing
+        required: true
+    class_uri: dlroles:Relationship
+  Person:
+    name: Person
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/Person
+    description: Person agents are people, alive, dead, or fictional.
+    comments:
+    - This class does not offer common slots like "affiliation" or "email". Instead,
+      this information should be expressed as `qualified_relations` to other things
+      with a role characterization. An affiliation can be expressed as a relation
+      to an organization, and the role that the organization has for the person (e.g.,
+      "employer"). This approach has the advantage that relations like a membership
+      can be expressed at either end (at an organizations potential `members` slot,
+      but also (symmetrically) as a persons potential `member_of` slot).
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:Person
+    exact_mappings:
+    - foaf:Person
+    - prov:Person
+    is_a: Agent
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - acted_on_behalf_of
+    - at_location
+    - identifiers
+    - qualified_relations
+    - Person_additional_names
+    - Person_family_name
+    - Person_given_name
+    - Person_honorific_name_prefix
+    - Person_honorific_name_suffix
+    - formatted_name
+    slot_usage:
+      family_name:
+        name: family_name
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 1
+      given_name:
+        name: given_name
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 2
+      additional_names:
+        name: additional_names
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 3
+      honorific_name_prefix:
+        name: honorific_name_prefix
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 4
+      honorific_name_suffix:
+        name: honorific_name_suffix
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 5
+    class_uri: dlsocial:Person
+  Group:
+    name: Group
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/Group
+    description: A collection of individual agents. A group may itself play the role
+      of an agent.
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:Group
+    exact_mappings:
+    - foaf:Group
+    is_a: Agent
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - acted_on_behalf_of
+    - at_location
+    - identifiers
+    - qualified_relations
+    class_uri: dlsocial:Group
+  Organization:
+    name: Organization
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/Organization
+    description: A social or legal instititution such as a company, a society, or
+      a university.
+    comments:
+    - This class does not offer common slots like "address" or "contact". Instead,
+      this information should be expressed as `qualified_relations` to other things
+      with a role-characterization. An address can be expressed as a relation to a
+      location, and the role this location has for the organization (e.g., "main office").
+      Likewise, a contact can be describe as a relation to a person, and the role
+      that this person fulfills for the organization (e.g., "spokesperson").
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:Organization
+    exact_mappings:
+    - foaf:Organization
+    - prov:Organization
+    is_a: Agent
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - acted_on_behalf_of
+    - at_location
+    - identifiers
+    - qualified_relations
+    - name
+    - short_name
+    class_uri: dlsocial:Organization
+  Project:
+    name: Project
+    definition_uri: https://concepts.datalad.org/s/social/unreleased/Project
+    description: A collective endeavour of some kind. Typically it is a planned process
+      that is undertaken or attempted to meet some requirement, or to achieve a particular
+      goal.
+    from_schema: https://concepts.datalad.org/s/social/unreleased
+    mappings:
+    - dlsocial:Project
+    exact_mappings:
+    - foaf:Project
+    close_mappings:
+    - obo:NCIT_C47885
+    broad_mappings:
+    - obo:BFO_0000015
+    is_a: Activity
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - at_location
+    - ended_at
+    - identifiers
+    - qualified_relations
+    - started_at
+    - associated_with
+    - informed_by
+    - short_name
+    - title
+    class_uri: dlsocial:Project
+  Publication:
+    name: Publication
+    definition_uri: https://concepts.datalad.org/s/publications/unreleased/Publication
+    description: A document that is the output of a publishing process. This can printed
+      or electronic work offered for distribution, and may have been made available
+      by a publisher.
+    from_schema: https://concepts.datalad.org/s/publications/unreleased
+    mappings:
+    - dlpubs:Publication
+    exact_mappings:
+    - obo:IAO_0000311
+    - obo:NCIT_C48471
+    close_mappings:
+    - sio:SIO_000087
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - date_modified
+    - date_published
+    class_uri: dlpubs:Publication
+  Resource:
+    name: Resource
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Resource
+    description: A consumable, often quantifiable entity, typically made available
+      by a single agent.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Resource
+    narrow_mappings:
+    - dcat:Resource
+    is_a: Entity
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    slot_usage:
+      previous_version:
+        name: previous_version
+        range: Resource
+    class_uri: dlres:Resource
+  AccessMethod:
+    name: AccessMethod
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/AccessMethod
+    description: An approach or procedure to gain access to the subject.
+    comments:
+    - This is merely a base class for range declaration. It does not define any slots
+      other than a type designator, because little or no commonalities of properties
+      across access methods are to be expected.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:AccessMethod
+    slots:
+    - schema_type
+    class_uri: dlres:AccessMethod
+  Dataset:
+    name: Dataset
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Dataset
+    description: A collection of data, published or curated by a single agent. This
+      is a conceptual entity. A single dataset might be available in more than one
+      representation, with differing schematic layouts, formats, and serializations.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Dataset
+    exact_mappings:
+    - dcat:Dataset
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - distributions
+    class_uri: dlres:Dataset
+    disjoint_with:
+    - Document
+    - Grant
+    - Instrument
+  Distribution:
+    name: Distribution
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Distribution
+    description: A specific representation of a resource, which may come in the form
+      of a physical object, or an electronic file, or an archive or directory of many
+      files, may be standalone or part of a larger collection.
+    notes:
+    - A `Distribution` is derived from `Resource`, following the logic that it is
+      a materialized/specialized variant of a particular resource. It therefore should
+      inherit all its slots. This is in contrast to DCAT, where `Distribution` is
+      not a subclass. However, in DCAT a `Distribution` also does not have a version.
+      Here we do want that, for example, to express an update of a format conversion,
+      where no data change, only the layout.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Distribution
+    narrow_mappings:
+    - dcat:Distribution
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - distribution_of
+    - Distribution_previous_version
+    slot_usage:
+      previous_version:
+        name: previous_version
+        range: Distribution
+    class_uri: dlres:Distribution
+  Document:
+    name: Document
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Document
+    description: A conceptual entity representing things which a, broadly conceived,
+      "documents. This includes non-textual things like images. A conceputal document
+      is to be distinguished from its physical, or electronic distributions.
+    notes:
+    - The key difference between a dataset and a document is the collection-nature
+      of the dataset (multiple items of a kind in a collection), whereas a document
+      is "one of its kind". A dataset could comprise multiple documents.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Document
+    exact_mappings:
+    - foaf:Document
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - distributions
+    class_uri: dlres:Document
+    disjoint_with:
+    - Dataset
+    - Grant
+    - Instrument
+  Grant:
+    name: Grant
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Grant
+    description: A grant, typically financial or otherwise quantifiable, resources.
+    notes:
+    - A grant is not a document. The associated document would be the grant agreement.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Grant
+    exact_mappings:
+    - schema:Grant
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - sponsor
+    class_uri: dlres:Grant
+    disjoint_with:
+    - Dataset
+    - Document
+    - Instrument
+  IndexedResourceRelationship:
+    name: IndexedResourceRelationship
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/IndexedResourceRelationship
+    description: An association class for attaching a `locator` as additional information
+      to a `hasPart` relationship.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    is_a: Relationship
+    slots:
+    - roles
+    - schema_type
+    - IndexedResourceRelationship_locator
+    - IndexedResourceRelationship_object
+    slot_usage:
+      locator:
+        name: locator
+        key: true
+      object:
+        name: object
+        range: Resource
+        required: true
+    class_uri: dlres:IndexedResourceRelationship
+  IndexedResourcePart:
+    name: IndexedResourcePart
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/IndexedResourcePart
+    description: An association class for attaching an index `locator` as additional
+      information to a `hasPart` relationship.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    is_a: IndexedResourceRelationship
+    slots:
+    - roles
+    - schema_type
+    - IndexedResourceRelationship_locator
+    - IndexedResourceRelationship_object
+    class_uri: dlres:IndexedResourcePart
+  IndexedResourcePartOf:
+    name: IndexedResourcePartOf
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/IndexedResourcePartOf
+    description: An association class for attaching an index `locator` as additional
+      information to a `isPartOf` relationship.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    is_a: IndexedResourceRelationship
+    slots:
+    - roles
+    - schema_type
+    - IndexedResourceRelationship_locator
+    - IndexedResourceRelationship_object
+    class_uri: dlres:IndexedResourcePartOf
+  Instrument:
+    name: Instrument
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/Instrument
+    description: A thing that enables an agent to perform an action. This is typically
+      a device (e.g., a machine to perform a particular type of measurement), but
+      it can also be a questionnaire that is used to perform a particular kind of
+      assessment. An instrument is typically not a "reagent".
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:Instrument
+    related_mappings:
+    - schema:instrument
+    narrow_mappings:
+    - obo:NCIT_C62103
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    class_uri: dlres:Instrument
+    disjoint_with:
+    - Dataset
+    - Document
+    - Grant
+  PersonalRequest:
+    name: PersonalRequest
+    definition_uri: https://concepts.datalad.org/s/resources/unreleased/PersonalRequest
+    description: The act of personally making a request to get access to the subject
+      by following some described procedure.
+    from_schema: https://concepts.datalad.org/s/resources/unreleased
+    mappings:
+    - dlres:PersonalRequest
+    is_a: AccessMethod
+    slots:
+    - schema_type
+    - description
+    class_uri: dlres:PersonalRequest
+  ElectronicDistribution:
+    name: ElectronicDistribution
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/ElectronicDistribution
+    description: A specific representation of data, which may come in the form of
+      a single file, or an archive or directory of many files, may be standalone or
+      part of a larger collection.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:ElectronicDistribution
+    exact_mappings:
+    - dcat:Distribution
+    is_a: Distribution
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    - distribution_of
+    - byte_size
+    - checksums
+    - format
+    - media_type
+    - ElectronicDistribution_previous_version
+    slot_usage:
+      previous_version:
+        name: previous_version
+        range: ElectronicDistribution
+    class_uri: dledist:ElectronicDistribution
+  DataService:
+    name: DataService
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/DataService
+    description: A collection of operations that provides access to one or more dataset
+      distributions or data processing functions.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:DataService
+    exact_mappings:
+    - dcat:DataService
+    is_a: Resource
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    - about
+    - access_methods
+    - conforms_to
+    - date_modified
+    - date_published
+    - keywords
+    - Resource_previous_version
+    - same_as
+    - short_name
+    - title
+    - version_label
+    - version_notes
+    class_uri: dledist:DataService
+  DataServiceAccess:
+    name: DataServiceAccess
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/DataServiceAccess
+    description: Access through a data service where the subject is available via
+      a particular locator.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:DataServiceAccess
+    is_a: AccessMethod
+    slots:
+    - schema_type
+    - DataServiceAccess_data_service
+    - DataServiceAccess_locator
+    slot_usage:
+      data_service:
+        name: data_service
+        required: true
+      locator:
+        name: locator
+        required: true
+    class_uri: dledist:DataServiceAccess
+  DirectDownload:
+    name: DirectDownload
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/DirectDownload
+    description: Direct access to the subject is possible via a download URL.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:DirectDownload
+    is_a: AccessMethod
+    slots:
+    - schema_type
+    - download_urls
+    class_uri: dledist:DirectDownload
+  AccessThroughLandingPage:
+    name: AccessThroughLandingPage
+    definition_uri: https://concepts.datalad.org/s/edistributions/unreleased/AccessThroughLandingPage
+    description: Access to the subject through a web page, or information on a web
+      page, that can be navigated to in a Web browser.
+    from_schema: https://concepts.datalad.org/s/edistributions/unreleased
+    mappings:
+    - dledist:AccessThroughLandingPage
+    is_a: AccessMethod
+    slots:
+    - schema_type
+    - landing_page
+    class_uri: dledist:AccessThroughLandingPage
+  ThingMixin:
+    name: ThingMixin
+    definition_uri: https://concepts.datalad.org/s/things/v1/ThingMixin
+    description: Mix-in with the common interface of `Thing` and `AttributeSpecification`.
+      This interface enables type specifications (`rdf:type`) for things and attributes
+      via a `type` designator slot to indicate specialized schema classes for validation
+      where a slot's `range` is too generic. A thing or attribute can be further describe
+      with statements on qualified relations to other things (`characterized_by`),
+      or inline attributes (`attributes`). A set of `mappings` slots enables the alignment
+      for arbitrary external schemas and terminologies.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mixin: true
+    slots:
+    - annotations
+    - broad_mappings
+    - close_mappings
+    - description
+    - exact_mappings
+    - attributes
+    - characterized_by
+    - narrow_mappings
+    - related_mappings
+    - schema_type
+    class_uri: dlthings:ThingMixin
+  ValueSpecificationMixin:
+    name: ValueSpecificationMixin
+    definition_uri: https://concepts.datalad.org/s/things/v1/ValueSpecificationMixin
+    description: Mix-in for a (structured) value specification. Two slots are provided
+      to define a (literal) value (`value`) and its type (`range`).
+    from_schema: https://concepts.datalad.org/s/things/v1
+    slots:
+    - range
+    - value
+    class_uri: dlthings:ValueSpecificationMixin
+  AttributeSpecification:
+    name: AttributeSpecification
+    definition_uri: https://concepts.datalad.org/s/things/v1/AttributeSpecification
+    description: An attribute is conceptually a thing, but it requires no dedicated
+      identifier (`pid`). Instead, it is linked to a `Thing` via its `attributes`
+      slot and declares a `predicate` on the nature of the relationship.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    exact_mappings:
+    - sio:SIO_000614
+    close_mappings:
+    - dlthings:Thing
+    mixins:
+    - ThingMixin
+    - ValueSpecificationMixin
+    slots:
+    - AttributeSpecification_predicate
+    - annotations
+    - broad_mappings
+    - close_mappings
+    - description
+    - exact_mappings
+    - attributes
+    - characterized_by
+    - narrow_mappings
+    - related_mappings
+    - schema_type
+    - range
+    - value
+    slot_usage:
+      predicate:
+        name: predicate
+        required: true
+    class_uri: dlthings:AttributeSpecification
+  Property:
+    name: Property
+    definition_uri: https://concepts.datalad.org/s/things/v1/Property
+    description: An RDF property, a `Thing` used to define a `predicate`, for example
+      in a `Statement`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:Property
+    exact_mappings:
+    - rdf:Property
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    class_uri: dlthings:Property
+  Statement:
+    name: Statement
+    definition_uri: https://concepts.datalad.org/s/things/v1/Statement
+    description: An RDF statement that links a `predicate` (a `Property`) with an
+      `object` (a `Thing`) to the subject to form a triple. A `Statement` is used
+      to qualify a relation to a `Thing` referenced by its identifier. For specifying
+      a qualified relation to an attribute that has no dedicated identifier, use an
+      `AttributeSpecification`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:Statement
+    exact_mappings:
+    - rdf:Statement
+    slots:
+    - Statement_object
+    - Statement_predicate
+    slot_usage:
+      object:
+        name: object
+        range: Thing
+        required: true
+      predicate:
+        name: predicate
+        required: true
+    class_uri: dlthings:Statement
+  Thing:
+    name: Thing
+    definition_uri: https://concepts.datalad.org/s/things/v1/Thing
+    description: The most basic, identifiable item. In addition to the slots that
+      are common between a `Thing` and an `AttributeSpecification` (see `ThingMixin`),
+      two additional slots are provided. The `pid` slot takes the required identifier
+      for a `Thing`. The `relation` slot allows for the inline specification of other
+      `Thing` instances. Such a relation is unqualified (and symmetric), and should
+      be further characterized via a `Statement` (see `characterized_by`). From a
+      schema perspective, the `relation` slots allows for building self-contained,
+      structured documents (e.g., a JSON object) with arbitrarily complex information
+      on a `Thing`.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    mappings:
+    - dlthings:Thing
+    exact_mappings:
+    - schema:Thing
+    mixins:
+    - ThingMixin
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    slot_usage:
+      pid:
+        name: pid
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 1
+      characterized_by:
+        name: characterized_by
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 2
+      attributes:
+        name: attributes
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 3
+      description:
+        name: description
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 4
+      annotations:
+        name: annotations
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 5
+      relations:
+        name: relations
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 6
+      exact_mappings:
+        name: exact_mappings
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 7
+      close_mappings:
+        name: close_mappings
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 8
+      broad_mappings:
+        name: broad_mappings
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 9
+      narrow_mappings:
+        name: narrow_mappings
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 10
+      related_mappings:
+        name: related_mappings
+        annotations:
+          sh:order:
+            tag: sh:order
+            value: 11
+    class_uri: dlthings:Thing
+  ValueSpecification:
+    name: ValueSpecification
+    definition_uri: https://concepts.datalad.org/s/things/v1/ValueSpecification
+    description: A `Thing` that is a value of some kind. This class can be used to
+      describe an outcome of a measurement, a factual value or constant, or other
+      qualitative or quantitative information with an associated identifier. If no
+      identifier is available, an `AttributeSpecification` can be used within the
+      context of an associated `Thing` (`attributes`).
+    from_schema: https://concepts.datalad.org/s/things/v1
+    exact_mappings:
+    - obo:OBI_0001933
+    is_a: Thing
+    mixins:
+    - ValueSpecificationMixin
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - ValueSpecification_value
+    - range
+    slot_usage:
+      value:
+        name: value
+        notes:
+        - It is required, because when it is not needed, `Thing` should be used as
+          a type. Its absence is therefore likely a sign of an error.
+        required: true
+    class_uri: dlthings:ValueSpecification
+  Annotation:
+    name: Annotation
+    definition_uri: https://concepts.datalad.org/s/things/v1/Annotation
+    description: A tag/value pair with the semantics of OWL Annotation.
+    from_schema: https://concepts.datalad.org/s/things/v1
+    slots:
+    - Annotation_annotation_tag
+    - annotation_value
+    slot_usage:
+      annotation_tag:
+        name: annotation_tag
+        key: true
+    class_uri: dlthings:Annotation
+  Agent:
+    name: Agent
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/Agent
+    description: Something that bears some form of responsibility for an activity
+      taking place, for the existence of an entity, or for another agent's activity.
+    comments:
+    - This class does not support even a basic `name` slot, because depending on the
+      context, there may not be a suitable name, or one name would not be enough.
+      If no specialized derived class is available in a context where a `name` or
+      similar attribute is desired, it can be expressed via the `has_attributes` slot.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:Agent
+    exact_mappings:
+    - foaf:Agent
+    - prov:Agent
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - acted_on_behalf_of
+    - at_location
+    - identifiers
+    - qualified_relations
+    class_uri: dlprov:Agent
+  Activity:
+    name: Activity
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/Activity
+    description: An activity is something that occurs over a period of time and acts
+      upon or with entities; it may include consuming, processing, transforming, modifying,
+      relocating, using, or generating entities.
+    comments:
+    - This class does not support even a basic `name` slot, because depending on the
+      context, there may not be a suitable name, or one name would not be enough.
+      If no specialized derived class is available in a context where a `name` or
+      similar attribute is desired, it can be expressed via the `has_attributes` slot.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:Activity
+    exact_mappings:
+    - prov:Activity
+    - obo:BFO_0000015
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - at_location
+    - ended_at
+    - identifiers
+    - qualified_relations
+    - started_at
+    - associated_with
+    - informed_by
+    class_uri: dlprov:Activity
+  Entity:
+    name: Entity
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/Entity
+    description: A physical, digital, conceptual, or other kind of thing with some
+      fixed aspects; entities may be real or imaginary.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:Entity
+    exact_mappings:
+    - prov:Entity
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    - attributed_to
+    - derived_from
+    - generated_by
+    class_uri: dlprov:Entity
+  SoftwareAgent:
+    name: SoftwareAgent
+    definition_uri: https://concepts.datalad.org/s/prov/unreleased/SoftwareAgent
+    description: Running software.
+    from_schema: https://concepts.datalad.org/s/prov/unreleased
+    mappings:
+    - dlprov:SoftwareAgent
+    exact_mappings:
+    - prov:SoftwareAgent
+    is_a: Agent
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - acted_on_behalf_of
+    - at_location
+    - identifiers
+    - qualified_relations
+    class_uri: dlprov:SoftwareAgent
+  InstantaneousEvent:
+    name: InstantaneousEvent
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/InstantaneousEvent
+    description: A moment of a transition from one particular state of the world to
+      another.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:InstantaneousEvent
+    exact_mappings:
+    - prov:InstantaneousEvent
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - at_time
+    - identifiers
+    - qualified_relations
+    class_uri: dltemporal:InstantaneousEvent
+  TransientRelationship:
+    name: TransientRelationship
+    definition_uri: https://concepts.datalad.org/s/temporal/unreleased/TransientRelationship
+    description: A relationship that is valid or remains in place for a limited time.
+    from_schema: https://concepts.datalad.org/s/temporal/unreleased
+    mappings:
+    - dltemporal:TransientRelationship
+    is_a: Relationship
+    slots:
+    - Relationship_object
+    - roles
+    - schema_type
+    - started_at
+    - ended_at
+    class_uri: dltemporal:TransientRelationship
+  Identifier:
+    name: Identifier
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/Identifier
+    description: An identifier is a label that uniquely identifies an item in a particular
+      context. Some identifiers are globally unique. All identifiers are unique within
+      their individual scope.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:Identifier
+    close_mappings:
+    - ADMS:Identifier
+    slots:
+    - creator
+    - Identifier_notation
+    - schema_type
+    slot_usage:
+      notation:
+        name: notation
+        required: true
+    class_uri: dlidentifiers:Identifier
+  IssuedIdentifier:
+    name: IssuedIdentifier
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/IssuedIdentifier
+    description: An identifier that was issued by a particular agent with a notation
+      that has no (or an undefined) relation to the nature of the identified entity.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    see_also:
+    - https://semiceu.github.io/ADMS/releases/2.00/#Identifier
+    mappings:
+    - dlidentifiers:IssuedIdentifier
+    exact_mappings:
+    - ADMS:Identifier
+    is_a: Identifier
+    slots:
+    - creator
+    - Identifier_notation
+    - schema_type
+    - schema_agency
+    class_uri: dlidentifiers:IssuedIdentifier
+  ComputedIdentifier:
+    name: ComputedIdentifier
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/ComputedIdentifier
+    description: An identifier that has been derived from information on the identified
+      entity.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:ComputedIdentifier
+    narrow_mappings:
+    - spdx:Checksum
+    is_a: Identifier
+    slots:
+    - creator
+    - Identifier_notation
+    - schema_type
+    class_uri: dlidentifiers:ComputedIdentifier
+  Checksum:
+    name: Checksum
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/Checksum
+    description: A Checksum is a value that allows to check the integrity of the contents
+      of a file. Even small changes to the content of the file will change its checksum.
+      This class allows the results of a variety of checksum and cryptographic message
+      digest algorithms to be represented.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:Checksum
+    exact_mappings:
+    - spdx:Checksum
+    is_a: ComputedIdentifier
+    slots:
+    - schema_type
+    - Checksum_creator
+    - Checksum_notation
+    slot_usage:
+      creator:
+        name: creator
+        description: Identifies the software agent (algorithm) used to produce the
+          subject `Checksum`.
+        exact_mappings:
+        - spdx:algorithm
+        required: true
+      notation:
+        name: notation
+        description: Lower case hexadecimal encoded checksum digest value.
+        exact_mappings:
+        - spdx:checksumValue
+        range: HexBinary
+        required: true
+    class_uri: dlidentifiers:Checksum
+  DOI:
+    name: DOI
+    definition_uri: https://concepts.datalad.org/s/identifiers/unreleased/DOI
+    description: Digital Object Identifier (DOI; ISO 26324), an identifier system
+      governed by the DOI Foundation, where individual identifiers are issued by one
+      of several registration agencies.
+    from_schema: https://concepts.datalad.org/s/identifiers/unreleased
+    mappings:
+    - dlidentifiers:DOI
+    is_a: IssuedIdentifier
+    slots:
+    - schema_type
+    - DOI_creator
+    - DOI_notation
+    - DOI_schema_agency
+    slot_usage:
+      creator:
+        name: creator
+        description: By default, the creator is identified as "https://doi.org".
+        ifabsent: string(https://doi.org)
+      notation:
+        name: notation
+        description: The identifier notation is specified without a URL-prefix, or
+          a `doi:` prefix.
+      schema_agency:
+        name: schema_agency
+        description: By default, the schema agency is identified as `DOI Foundation`.
+        ifabsent: string(DOI Foundation)
+    class_uri: dlidentifiers:DOI
+    unique_keys:
+      value:
+        unique_key_name: value
+        unique_key_slots:
+        - notation
+        description: The DOI notation is globally unique within the scope of DOIs
+  Location:
+    name: Location
+    definition_uri: https://concepts.datalad.org/s/spatial/unreleased/Location
+    description: A location can be an identifiable geographic place (ISO 19112), but
+      it can also be a non-geographic place such as a directory, row, or column. As
+      such, there are numerous ways in which location can be expressed, such as by
+      a coordinate, address, landmark, and so forth.
+    from_schema: https://concepts.datalad.org/s/spatial/unreleased
+    mappings:
+    - dlspatial:Location
+    exact_mappings:
+    - prov:Location
+    is_a: Thing
+    slots:
+    - Thing_pid
+    - Thing_relations
+    - Thing_characterized_by
+    - Thing_attributes
+    - Thing_description
+    - Thing_annotations
+    - Thing_exact_mappings
+    - Thing_close_mappings
+    - Thing_broad_mappings
+    - Thing_narrow_mappings
+    - Thing_related_mappings
+    - schema_type
+    - identifiers
+    - qualified_relations
+    class_uri: dlspatial:Location
+metamodel_version: 1.7.0
+source_file: schema-base.yaml
+source_file_date: '2025-05-13T13:20:55'
+source_file_size: 3032
+generation_date: '2025-05-13T13:29:38'
+

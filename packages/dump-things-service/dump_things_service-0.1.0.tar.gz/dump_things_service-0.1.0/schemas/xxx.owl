@@ -1,0 +1,1548 @@
+@prefix ADMS: <http://www.w3.org/ns/adms#> .
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dlidentifiers: <https://concepts.datalad.org/s/identifiers/unreleased/> .
+@prefix dlprops: <https://concepts.datalad.org/s/properties/unreleased/> .
+@prefix dlprov: <https://concepts.datalad.org/s/prov/unreleased/> .
+@prefix dlpubs: <https://concepts.datalad.org/s/publications/unreleased/> .
+@prefix dlres: <https://concepts.datalad.org/s/resources/unreleased/> .
+@prefix dlroles: <https://concepts.datalad.org/s/roles/unreleased/> .
+@prefix dlsocial: <https://concepts.datalad.org/s/social/unreleased/> .
+@prefix dlspatial: <https://concepts.datalad.org/s/spatial/unreleased/> .
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix dltypes: <https://concepts.datalad.org/s/types/unreleased/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix shex: <http://www.w3.org/ns/shex#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix trr379base: <https://concepts.trr379.de/s/base/unreleased/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+xsd:boolean a rdfs:Datatype .
+
+xsd:date a rdfs:Datatype .
+
+xsd:dateTime a rdfs:Datatype .
+
+xsd:decimal a rdfs:Datatype .
+
+xsd:double a rdfs:Datatype .
+
+xsd:float a rdfs:Datatype .
+
+xsd:integer a rdfs:Datatype .
+
+xsd:nonNegativeInteger a rdfs:Datatype .
+
+xsd:time a rdfs:Datatype .
+
+shex:iri a rdfs:Datatype .
+
+shex:nonLiteral a rdfs:Datatype .
+
+dltypes:EmailAddress a rdfs:Datatype ;
+    owl:equivalentClass [ a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+            owl:withRestrictions ( [ xsd:pattern "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])" ] ) ] .
+
+<https://concepts.trr379.de/s/base/unreleased.owl.ttl> a owl:Ontology ;
+    rdfs:label "trr379-base-schema" ;
+    dcterms:license "CC-BY-4.0" ;
+    dcterms:title "Base schema for TRR379 metadata" ;
+    bibo:status <http://publications.europa.eu/resource/authority/concept-status/DRAFT> ;
+    pav:version "UNRELEASED" ;
+    skos:definition """TODO
+
+More information is available on the schema's [about page](about).
+
+The schema definition is available as
+
+- [JSON-LD context](../unreleased.context.jsonld)
+- [LinkML YAML](../unreleased.yaml)
+- [OWL TTL](../unreleased.owl.ttl)
+- [SHACL TTL](../unreleased.shacl.ttl)
+""" ;
+    skos:note "ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME" .
+
+trr379base:conforms_to a owl:DatatypeProperty ;
+    rdfs:label "conforms_to" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "An established standard to which the subject conforms." ;
+    skos:exactMatch dcterms:conformsTo ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:note "This property SHOULD be used to indicate a model, schema, ontology, view or profile that the subject conforms to." .
+
+linkml:DateOrDatetime a rdfs:Datatype .
+
+xsd:hexBinary a rdfs:Datatype ;
+    owl:equivalentClass [ a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+            owl:withRestrictions ( [ xsd:pattern "^[a-fA-F0-9]+$" ] ) ] .
+
+trr379base:Annotation a owl:Class ;
+    rdfs:label "Annotation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:annotation_tag ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:annotation_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:annotation_tag ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:annotation_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:annotation_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:annotation_tag ] ;
+    skos:definition "A tag/value pair with the semantics of OWL Annotation." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Any a owl:Class ;
+    rdfs:label "Any" ;
+    skos:exactMatch linkml:Any ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Checksum a owl:Class ;
+    rdfs:label "Checksum" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:hexBinary ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:creator ],
+        trr379base:ComputedIdentifier ;
+    skos:definition "A Checksum is a value that allows to check the integrity of the contents of a file. Even small changes to the content of the file will change its checksum. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented." ;
+    skos:exactMatch spdx:Checksum,
+        dlidentifiers:Checksum ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:DOI a owl:Class ;
+    rdfs:label "DOI" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:schema_agency ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:schema_agency ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:schema_agency ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:notation ],
+        trr379base:IssuedIdentifier ;
+    owl:hasKey ( trr379base:notation ) ;
+    skos:definition "Digital Object Identifier (DOI; ISO 26324), an identifier system governed by the DOI Foundation, where individual identifiers are issued by one of several registration agencies." ;
+    skos:exactMatch dlidentifiers:DOI ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Dataset a owl:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:subClassOf trr379base:Resource ;
+    skos:definition "A collection of data, published or curated by a single agent. This is a conceptual entity. A single dataset might be available in more than one representation, with differing schematic layouts, formats, and serializations." ;
+    skos:exactMatch dcat:Dataset,
+        dlres:Dataset ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Grant a owl:Class ;
+    rdfs:label "Grant" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:sponsor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:sponsor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Agent ;
+            owl:onProperty trr379base:sponsor ],
+        trr379base:Resource ;
+    skos:definition "A grant, typically financial or otherwise quantifiable, of resources." ;
+    skos:exactMatch schema1:Grant,
+        dlres:Grant ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:IndexedResourcePart a owl:Class ;
+    rdfs:label "IndexedResourcePart" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:resource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:resource ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:resource ],
+        trr379base:IndexedResourceRelationship ;
+    skos:definition "An association class for attaching an index `locator` as additional information to a `hasPart` relationship." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:IndexedResourcePartOf a owl:Class ;
+    rdfs:label "IndexedResourcePartOf" ;
+    rdfs:subClassOf trr379base:IndexedResourceRelationship ;
+    skos:definition "An association class for attaching an index `locator` as additional information to a `isPartOf` relationship." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:IndexedResourceRelationship a owl:Class ;
+    rdfs:label "IndexedResourceRelationship" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:resource ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:roles ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:resource ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Role ;
+            owl:onProperty trr379base:roles ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:locator ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Resource ;
+            owl:onProperty trr379base:resource ] ;
+    skos:definition "An association class for attaching a `name` as additional information to a `hasPart` relationship." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:InstantaneousEvent a owl:Class ;
+    rdfs:label "InstantaneousEvent" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Relationship ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:at_time ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:at_time ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom w3ctr:NOTE-datetime ;
+            owl:onProperty trr379base:at_time ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Identifier ;
+            owl:onProperty trr379base:identifiers ],
+        trr379base:Thing ;
+    skos:definition "A moment of a transition from one particular state of the world to another." ;
+    skos:exactMatch prov:InstantaneousEvent ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Instrument a owl:Class ;
+    rdfs:label "Instrument" ;
+    rdfs:subClassOf trr379base:Resource ;
+    skos:definition "A thing that enables an agent to perform an action. This is typically a device (e.g., a machine to perform a particular type of measurement), but it can also be a questionnaire that is used to perform a particular kind of assessment. An instrument is typically not a \"reagent\"." ;
+    skos:exactMatch dlres:Instrument ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:narrowMatch obo:NCIT_C62103 ;
+    skos:relatedMatch schema1:instrument .
+
+trr379base:Organization a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:name ],
+        trr379base:Agent ;
+    skos:definition "A social or legal instititution such as a company, a society, or a university." ;
+    skos:exactMatch prov:Organization,
+        foaf:Organization,
+        dlsocial:Organization ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:note "This class does not offer common slots like \"address\" or \"contact\". Instead, this information should be expressed as `qualified_relations` to other things with a role-characterization. An address can be expressed as a relation to a location, and the role this location has for the organization (e.g., \"main office\"). Likewise, a contact can be describe as a relation to a person, and the role that this person fulfills for the organization (e.g., \"spokesperson\")." .
+
+trr379base:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:formatted_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:given_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:family_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:honorific_name_suffix ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:formatted_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:formatted_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:family_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:given_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:family_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:honorific_name_suffix ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:additional_names ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:additional_names ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:honorific_name_suffix ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:honorific_name_prefix ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:given_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:honorific_name_prefix ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:honorific_name_prefix ],
+        trr379base:Agent ;
+    skos:definition "Person agents are people, alive, dead, or fictional." ;
+    skos:exactMatch prov:Person,
+        foaf:Person,
+        dlsocial:Person ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:note "This class does not offer common slots like \"affiliation\" or \"email\". Instead, this information should be expressed as `qualified_relations` to other things with a role characterization. An affiliation can be expressed as a relation to an organization, and the role that the organization has for the person (e.g., \"employer\"). This approach has the advantage that relations like a membership can be expressed at either end (at an organizations potential `members` slot, but also (symmetrically) as a persons potential `member_of` slot)." .
+
+trr379base:Project a owl:Class ;
+    rdfs:label "Project" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:short_name ],
+        trr379base:Activity ;
+    skos:broadMatch obo:BFO_0000015 ;
+    skos:closeMatch obo:NCIT_C47885 ;
+    skos:definition "A collective endeavour of some kind. Typically it is a planned process that is undertaken or attempted to meet some requirement, or to achieve a particular goal." ;
+    skos:exactMatch foaf:Project,
+        dlsocial:Project ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Publication a owl:Class ;
+    rdfs:label "Publication" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:date_modified ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:date_published ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:date_published ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom w3ctr:NOTE-datetime ;
+            owl:onProperty trr379base:date_published ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:date_modified ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom w3ctr:NOTE-datetime ;
+            owl:onProperty trr379base:date_modified ],
+        trr379base:Resource ;
+    skos:closeMatch sio:SIO_000087 ;
+    skos:definition "A document that is the output of a publishing process. This can printed or electronic work offered for distribution, and may have been made available by a publisher." ;
+    skos:exactMatch IAO:0000311,
+        obo:NCIT_C48471,
+        dlpubs:Publication ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:SoftwareAgent a owl:Class ;
+    rdfs:label "SoftwareAgent" ;
+    rdfs:subClassOf trr379base:Agent ;
+    skos:definition "Running software." ;
+    skos:exactMatch prov:SoftwareAgent,
+        dlprov:SoftwareAgent ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Statement a owl:Class ;
+    rdfs:label "Statement" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:object ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:object ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Property ;
+            owl:onProperty trr379base:predicate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:predicate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:object ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:predicate ] ;
+    skos:definition "An RDF statement that links a `predicate` (a `Property`) with an `object` (a `Thing`) to the subject to form a triple. A `Statement` is used to qualify a relation to a `Thing` referenced by its identifier. For specifying a qualified relation to an attribute that has no dedicated identifier, use an `AttributeSpecification`." ;
+    skos:exactMatch rdf:Statement,
+        dlthings:Statement ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:ValueSpecification a owl:Class ;
+    rdfs:label "ValueSpecification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:value ],
+        trr379base:Thing,
+        trr379base:ValueSpecificationMixin ;
+    skos:definition "A `Thing` that is a value of some kind. This class can be used to describe an outcome of a measurement, a factual value or constant, or other qualitative or quantitative information with an associated identifier. If no identifier is available, an `AttributeSpecification` can be used within the context of an associated `Thing` (`attributes`)." ;
+    skos:exactMatch obo:OBI_0001933 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:ValueSpecificationMixin a owl:Class ;
+    rdfs:label "ValueSpecificationMixin" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:range ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:range ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:range ] ;
+    skos:definition "Mix-in for a (structured) value specification. Two slots are provided to define a (literal) value (`value`) and its type (`range`)." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:about a owl:DatatypeProperty ;
+    rdfs:label "about" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A relation of an information artifact to the subject, such as a URL identifying the topic of a document." ;
+    skos:exactMatch IAO:0000136,
+        schema1:about ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:acted_on_behalf_of a owl:ObjectProperty ;
+    rdfs:label "acted_on_behalf_of" ;
+    rdfs:domain trr379base:Agent ;
+    rdfs:range trr379base:Agent ;
+    skos:definition "Assign the authority and responsibility for carrying out a specific activity of the subject agent to another agent." ;
+    skos:exactMatch prov:actedOnBehalfOf ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:additional_names a owl:DatatypeProperty ;
+    rdfs:label "additional_names" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "Additional name(s) associated with the subject, such as one or more middle names, or a nick name." ;
+    skos:exactMatch vcard:additional_name ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:associated_with a owl:ObjectProperty ;
+    rdfs:label "associated_with" ;
+    rdfs:domain trr379base:Activity ;
+    rdfs:range trr379base:Agent ;
+    skos:definition "An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity." ;
+    skos:exactMatch prov:wasAssociatedWith ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:attributed_to a owl:ObjectProperty ;
+    rdfs:label "attributed_to" ;
+    rdfs:domain trr379base:Entity ;
+    rdfs:range trr379base:Agent ;
+    skos:definition "Attribution is the ascribing of an entity to an agent." ;
+    skos:exactMatch prov:wasAttributedTo ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:derived_from a owl:ObjectProperty ;
+    rdfs:label "derived_from" ;
+    rdfs:domain trr379base:Entity ;
+    rdfs:range trr379base:Entity ;
+    skos:definition "Derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity." ;
+    skos:exactMatch prov:wasDerivedFrom ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:generated_by a owl:ObjectProperty ;
+    rdfs:label "generated_by" ;
+    rdfs:domain trr379base:Entity ;
+    rdfs:range trr379base:Activity ;
+    skos:definition "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." ;
+    skos:exactMatch prov:wasAttributedTo ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:indexed_part_of a owl:ObjectProperty ;
+    rdfs:label "indexed_part_of" ;
+    rdfs:range trr379base:IndexedResourcePartOf ;
+    skos:broadMatch dcat:qualifiedRelation ;
+    skos:definition "A qualified relation that assigns an index `locator` to a resource within the context of an `isPartOf` relationship with a subject (the contained resource)." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:indexed_parts a owl:ObjectProperty ;
+    rdfs:label "indexed_parts" ;
+    rdfs:range trr379base:IndexedResourcePart ;
+    skos:broadMatch dcat:qualifiedRelation ;
+    skos:definition "A qualified relation that assigns an index `locator` to a resource within the context of a `hasPart` relationship with a subject (the containing resource)." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:informed_by a owl:ObjectProperty ;
+    rdfs:label "informed_by" ;
+    rdfs:domain trr379base:Activity ;
+    rdfs:range trr379base:Activity ;
+    skos:definition "Communication is the exchange of an entity by two activities, one activity using the entity generated by the other." ;
+    skos:exactMatch prov:wasInformedBy ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:relations a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "relations" ;
+    rdfs:domain trr379base:Thing ;
+    rdfs:range [ owl:intersectionOf ( [ owl:unionOf ( trr379base:Thing xsd:string ) ] trr379base:Any ) ] ;
+    skos:definition "Declares an unqualified relation of the subject `Thing` to another `Thing`. This schema slot is used to define related things inline. If such a definition is not needed. A qualified relationship can be declared directly using the `characterized_by` slot." ;
+    skos:exactMatch dcterms:relation,
+        dcat:relation ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+rdfs:Resource a rdfs:Datatype ;
+    owl:equivalentClass xsd:anyURI .
+
+trr379base:ComputedIdentifier a owl:Class ;
+    rdfs:label "ComputedIdentifier" ;
+    rdfs:subClassOf trr379base:Identifier ;
+    skos:definition "An identifier that has been derived from information on the identified entity." ;
+    skos:exactMatch dlidentifiers:ComputedIdentifier ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:narrowMatch spdx:Checksum .
+
+trr379base:IssuedIdentifier a owl:Class ;
+    rdfs:label "IssuedIdentifier" ;
+    rdfs:seeAlso <https://semiceu.github.io/ADMS/releases/2.00/#Identifier> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:schema_agency ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:schema_agency ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:schema_agency ],
+        trr379base:Identifier ;
+    skos:definition "An identifier that was issued by a particular agent with a notation that has no (or an undefined) relation to the nature of the identified entity." ;
+    skos:exactMatch ADMS:Identifier,
+        dlidentifiers:IssuedIdentifier ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:annotation_tag a owl:DatatypeProperty ;
+    rdfs:label "annotation_tag" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A tag identifying an annotation." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:annotation_value a owl:DatatypeProperty ;
+    rdfs:label "annotation_value" ;
+    rdfs:range xsd:string ;
+    skos:definition "The actual annotation." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:at_time a owl:DatatypeProperty ;
+    rdfs:label "at_time" ;
+    rdfs:range w3ctr:NOTE-datetime ;
+    skos:definition "Time at which an instanteneous event takes place or took place." ;
+    skos:exactMatch prov:atTime ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:date_modified a owl:DatatypeProperty ;
+    rdfs:label "date_modified" ;
+    rdfs:range w3ctr:NOTE-datetime ;
+    skos:definition "Timepoint at which the subject was (last) changed, updated or modified." ;
+    skos:editorialNote "a related problem also exists for `linkml-validate`, we cannot have a more specific range right now",
+        "successful validation with `datetime` as a range and linkml-jsonschema-validate` depends on a patched linkml, see https://github.com/linkml/linkml/issues/1806" ;
+    skos:exactMatch dcterms:modified ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:date_published a owl:DatatypeProperty ;
+    rdfs:label "date_published" ;
+    rdfs:range w3ctr:NOTE-datetime ;
+    skos:definition "Timepoint at which the subject was (last) published." ;
+    skos:exactMatch schema1:datePublished ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:ended_at a owl:DatatypeProperty ;
+    rdfs:label "ended_at" ;
+    rdfs:range w3ctr:NOTE-datetime ;
+    skos:definition "End is when an activity is deemed to have been ended by some trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end." ;
+    skos:exactMatch prov:endedAtTime ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:family_name a owl:DatatypeProperty ;
+    rdfs:label "family_name" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "The (inherited) family name of the subject. In many Western languages this is the \"last name\"." ;
+    skos:exactMatch vcard:family-name,
+        foaf:familyName ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:formatted_name a owl:DatatypeProperty ;
+    rdfs:label "formatted_name" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "A formatted text corresponding to the name of the subject." ;
+    skos:exactMatch vcard:fn ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:given_name a owl:DatatypeProperty ;
+    rdfs:label "given_name" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "The given (non-inherited) name of the subject." ;
+    skos:exactMatch vcard:given-name,
+        foaf:familyName ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:honorific_name_prefix a owl:DatatypeProperty ;
+    rdfs:label "honorific_name_prefix" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "The honorific prefix(es) of the subject's name. For example, (academic/formal) titles like \"Mrs\", or \"Dr\", \"Dame\"." ;
+    skos:exactMatch vcard:honorific-suffix ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:honorific_name_suffix a owl:DatatypeProperty ;
+    rdfs:label "honorific_name_suffix" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "The honorific suffix(es) of the subject's name. For example, generation labels (\"III\"), or indicators of an academic degree, a profession, or a position (\"MD\", \"BA\")." ;
+    skos:exactMatch vcard:honorific-suffix ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:id a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "Persistent and globally unique identifier of a `Thing`." ;
+    skos:exactMatch dcterms:identifier,
+        schema1:identifier,
+        ADMS:identifier ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:range a owl:DatatypeProperty ;
+    rdfs:label "range" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "Declares that the value of a `Thing` or `AttributeSpecification` are instances of a particular class." ;
+    skos:exactMatch rdfs:range ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:same_as a owl:DatatypeProperty ;
+    rdfs:label "same_as" ;
+    rdfs:range xsd:anyURI ;
+    skos:closeMatch schema1:sameAs ;
+    skos:definition "Declares that the subject and an object are equal. Can be used to indicate a URL of a reference Web page that unambiguously indicates the subject's identity. For example, the URL of the subject's Wikipedia page, Wikidata entry, or official website." ;
+    skos:exactMatch owl:sameAs ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:sponsor a owl:ObjectProperty ;
+    rdfs:label "sponsor" ;
+    rdfs:range trr379base:Agent ;
+    skos:definition "An agent that supports a thing through a pledge, promise, or financial contribution." ;
+    skos:exactMatch schema1:sponsor ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:started_at a owl:DatatypeProperty ;
+    rdfs:label "started_at" ;
+    rdfs:range w3ctr:NOTE-datetime ;
+    skos:definition "Start is when an activity is deemed to have been started by some trigger. The activity did not exist before its start. Any usage, generation, or invalidation involving an activity follows the activity's start." ;
+    skos:exactMatch prov:startedAtTime ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:AttributeSpecification a owl:Class ;
+    rdfs:label "AttributeSpecification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:predicate ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:predicate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Property ;
+            owl:onProperty trr379base:predicate ],
+        trr379base:ThingMixin,
+        trr379base:ValueSpecificationMixin ;
+    skos:closeMatch dlthings:Thing ;
+    skos:definition "An attribute is conceptually a thing, but it requires no dedicated identifier (`id`). Instead, it is linked to a `Thing` via its `attributes` slot and declares a `predicate` on the nature of the relationship." ;
+    skos:exactMatch sio:SIO_000614 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:ThingMixin a owl:Class ;
+    rdfs:label "ThingMixin" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:exact_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:related_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom rdfs:Resource ;
+            owl:onProperty trr379base:schema_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:annotations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:narrow_mappings ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:schema_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:characterized_by ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:close_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:attributes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Annotation ;
+            owl:onProperty trr379base:annotations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:AttributeSpecification ;
+            owl:onProperty trr379base:attributes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:close_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:related_mappings ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:broad_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Statement ;
+            owl:onProperty trr379base:characterized_by ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:broad_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:schema_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:narrow_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:exact_mappings ] ;
+    skos:definition "Mix-in with the common interface of `Thing` and `AttributeSpecification`. This interface enables type specifications (`rdf:type`) for things and attributes via a `type` designator slot to indicate specialized schema classes for validation where a slot's `range` is too generic. A thing or attribute can be further describe with statements on qualified relations to other things (`characterized_by`), or inline attributes (`attributes`). A set of `mappings` slots enables the alignment for arbitrary external schemas and terminologies." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:annotations a owl:ObjectProperty ;
+    rdfs:label "annotations" ;
+    rdfs:range trr379base:Annotation ;
+    skos:definition "A record of properties of the metadata record on a subject, a collection of tag/text tuples with the semantics of OWL Annotation." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:attributes a owl:ObjectProperty ;
+    rdfs:label "attributes" ;
+    rdfs:range trr379base:AttributeSpecification ;
+    skos:definition "Declares a relation that associates a `Thing` (or another attribute) with an attribute, where an attribute is an intrinsic characteristic, such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier). Technically, this declaration is done via an `AttributeSpecification` that combines a `predicate` with a value declaration and the attribute-related slots of a `Thing`. Importantly, such attributes are declared inline, because they do not have a unique identifier. If an identifier is available, a `Thing` declaration (see `relation`), and a qualification of that relationship via a `Statement` (see `characterized_by`) should be preferred." ;
+    skos:exactMatch sio:SIO_000008 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:broad_mappings a owl:DatatypeProperty ;
+    rdfs:label "broad_mappings" ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf trr379base:mappings ;
+    skos:definition "A list of terms from different schemas or terminology systems that have broader meaning." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:characterized_by a owl:ObjectProperty ;
+    rdfs:label "characterized_by" ;
+    rdfs:range trr379base:Statement ;
+    skos:definition "Qualifies relationships between a subject `Thing` and an object `Thing` with a `Statement` declaring a `predicate` on the nature of the relationship." ;
+    skos:exactMatch obo:RO_0000053 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:close_mappings a owl:DatatypeProperty ;
+    rdfs:label "close_mappings" ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf trr379base:mappings ;
+    skos:definition "A list of terms from different schemas or terminology systems that have close meaning." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:exact_mappings a owl:DatatypeProperty ;
+    rdfs:label "exact_mappings" ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf trr379base:mappings ;
+    skos:definition "A list of terms from different schemas or terminology systems that have identical meaning." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:narrow_mappings a owl:DatatypeProperty ;
+    rdfs:label "narrow_mappings" ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf trr379base:mappings ;
+    skos:definition "A list of terms from different schemas or terminology systems that have narrower meaning." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:related_mappings a owl:DatatypeProperty ;
+    rdfs:label "related_mappings" ;
+    rdfs:range xsd:anyURI ;
+    rdfs:subPropertyOf trr379base:mappings ;
+    skos:definition "A list of terms from different schemas or terminology systems that have related meaning." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:roles a owl:ObjectProperty ;
+    rdfs:label "roles" ;
+    rdfs:range trr379base:Role ;
+    skos:definition "Describes the function of an entity or agent (object) within the scope of a `Relationship` with the subject." ;
+    skos:exactMatch dcat:had_role,
+        prov:hadRole ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Identifier ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Relationship ;
+            owl:onProperty trr379base:qualified_relations ],
+        trr379base:Thing ;
+    skos:definition "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth." ;
+    skos:exactMatch prov:Location,
+        dlspatial:Location ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Property a owl:Class ;
+    rdfs:label "Property" ;
+    rdfs:subClassOf trr379base:Thing ;
+    skos:definition "An RDF property, a `Thing` used to define a `predicate`, for example in a `Statement`." ;
+    skos:exactMatch rdf:Property,
+        dlthings:Property ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Role a owl:Class ;
+    rdfs:label "Role" ;
+    rdfs:subClassOf trr379base:Thing ;
+    skos:definition "A role is the function of a resource or agent with respect to a subject, in the context of resource attribution or relationships." ;
+    skos:exactMatch dcat:Role,
+        prov:Role,
+        dlroles:Role ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:mappings a owl:DatatypeProperty ;
+    rdfs:label "mappings" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "A list of terms from different schemas or terminology systems that have comparable meaning. These may include terms that are precisely equivalent, broader or narrower in meaning, or otherwise semantically related but not equivalent from a strict ontological perspective." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Relationship a owl:Class ;
+    rdfs:label "Relationship" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:object ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Role ;
+            owl:onProperty trr379base:roles ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:object ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:roles ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:object ] ;
+    skos:closeMatch dcat:Relationship,
+        prov:Influence ;
+    skos:definition "An association class for characterizing the relation between two things with the role(s) the object had with respect to the subject. A relationship is always between two things only, but can be annotated with multiple roles (for example, a person having both an author role with respect to a dataset, and also being the person who is legally responsible contact for it)." ;
+    skos:exactMatch dlroles:Relationship ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:at_location a owl:ObjectProperty ;
+    rdfs:label "at_location" ;
+    rdfs:range trr379base:Location ;
+    skos:definition "Associate the subject with a location. This can be a geographic place, or a place in a directory, or table." ;
+    skos:exactMatch prov:atLocation ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:range xsd:string ;
+    skos:definition "A free-text account of the subject." ;
+    skos:exactMatch dcterms:description,
+        rdfs:comment ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:locator a owl:DatatypeProperty ;
+    rdfs:label "locator" ;
+    rdfs:range xsd:string ;
+    skos:definition "A descriptive identifier that locates a resource within a containing resource. This can be a unique name, a numerical key, or another notation that uniquely identifies the subject within the containing resource." ;
+    skos:exactMatch bibo:locator ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:object a owl:DatatypeProperty ;
+    rdfs:label "object" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "Reference to a `Thing` within a `Statement`." ;
+    skos:exactMatch rdf:object ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:predicate a owl:ObjectProperty ;
+    rdfs:label "predicate" ;
+    rdfs:range trr379base:Property ;
+    skos:definition "Reference to a `Property` within a `Statement`." ;
+    skos:exactMatch rdf:predicate ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:resource a owl:ObjectProperty ;
+    rdfs:label "resource" ;
+    rdfs:range trr379base:Resource ;
+    skos:definition "Property referencing a resource within an indexed-part or indexed-part-of qualified relationship." ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:schema_agency a owl:DatatypeProperty ;
+    rdfs:label "schema_agency" ;
+    rdfs:range xsd:string ;
+    skos:definition "Name of the agency that issued an identifier." ;
+    skos:exactMatch ADMS:schemaAgency ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:range xsd:string ;
+    skos:definition "A summarily description of the subject. It is closely related to a `name`, but often less compact and more descriptive. Typically used for documents." ;
+    skos:exactMatch dcterms:title,
+        sio:SIO_000185 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:relatedMatch schema1:name .
+
+trr379base:value a owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:range xsd:string ;
+    skos:definition "Value of a thing." ;
+    skos:exactMatch rdf:value ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Identifier ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Agent ;
+            owl:onProperty trr379base:attributed_to ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:attributed_to ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:derived_from ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Relationship ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Activity ;
+            owl:onProperty trr379base:generated_by ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Entity ;
+            owl:onProperty trr379base:derived_from ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:generated_by ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:identifiers ],
+        trr379base:Thing ;
+    skos:definition "A physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
+    skos:exactMatch prov:Entity,
+        dlprov:Entity ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Resource a owl:Class ;
+    rdfs:label "Resource" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:indexed_part_of ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:about ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:same_as ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:IndexedResourcePartOf ;
+            owl:onProperty trr379base:indexed_part_of ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:same_as ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:short_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:same_as ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:about ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:IndexedResourcePart ;
+            owl:onProperty trr379base:indexed_parts ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:indexed_parts ],
+        trr379base:Entity ;
+    skos:definition "A consumable, often quantifiable entity, typically made available by a single agent." ;
+    skos:exactMatch dlres:Resource ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:narrowMatch dcat:Resource .
+
+trr379base:Activity a owl:Class ;
+    rdfs:label "Activity" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Agent ;
+            owl:onProperty trr379base:associated_with ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:ended_at ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom w3ctr:NOTE-datetime ;
+            owl:onProperty trr379base:started_at ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:started_at ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Location ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:associated_with ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Identifier ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:ended_at ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom w3ctr:NOTE-datetime ;
+            owl:onProperty trr379base:ended_at ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:informed_by ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Activity ;
+            owl:onProperty trr379base:informed_by ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:started_at ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Relationship ;
+            owl:onProperty trr379base:qualified_relations ],
+        trr379base:Thing ;
+    skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+    skos:exactMatch prov:Activity,
+        dlprov:Activity ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:note "This class does not support even a basic `name` slot, because depending on the context, there may not be a suitable name, or one name would not be enough. If no specialized derived class is available in a context where a `name` or similar attribute is desired, it can be expressed via the `has_attributes` slot." .
+
+trr379base:creator a owl:DatatypeProperty ;
+    rdfs:label "creator" ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "An agent responsible for making an entity." ;
+    skos:exactMatch dcterms:creator ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:short_name a owl:DatatypeProperty ;
+    rdfs:label "short_name" ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf trr379base:name ;
+    skos:definition "A shortened name for the subject. For example, an acronym, initialism, nickname, or other abbreviation of the `name`." ;
+    skos:exactMatch pq:P1813 ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:Identifier a owl:Class ;
+    rdfs:label "Identifier" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:schema_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom rdfs:Resource ;
+            owl:onProperty trr379base:schema_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:creator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:notation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:schema_type ] ;
+    skos:closeMatch ADMS:Identifier ;
+    skos:definition "An identifier is a label that uniquely identifies an item in a particular context. Some identifiers are globally unique. All identifiers are unique within their individual scope." ;
+    skos:exactMatch dlidentifiers:Identifier ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:identifiers a owl:ObjectProperty ;
+    rdfs:label "identifiers" ;
+    rdfs:range trr379base:Identifier ;
+    skos:definition "An unambiguous reference to the subject within a given context." ;
+    skos:exactMatch dcterms:identifier,
+        schema1:identifier,
+        ADMS:identifier ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:range xsd:string ;
+    skos:closeMatch dlprops:title ;
+    skos:definition "Name of the subject. A name is closely related to a `title`, but often more compact and identifier-like, but without the implication of uniqueness of an identifier. A name is often used by technical systems to display an item in an organizational structure, such as a file in a directory hierarchy." ;
+    skos:exactMatch schema1:name,
+        rdfs:label,
+        foaf:name ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:notation a owl:DatatypeProperty ;
+    rdfs:label "notation" ;
+    rdfs:range xsd:string ;
+    skos:definition "String of characters such as \"T58:5\" or \"30:4833\" used to uniquely identify a concept within the scope of a given concept scheme." ;
+    skos:exactMatch skos:notation ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+trr379base:qualified_relations a owl:ObjectProperty ;
+    rdfs:label "qualified_relations" ;
+    rdfs:domain trr379base:Thing ;
+    rdfs:range trr379base:Relationship ;
+    skos:definition "Characterizes the relationship or role of an entity with respect to the subject." ;
+    skos:exactMatch dcat:qualifiedRelation ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+w3ctr:NOTE-datetime a rdfs:Datatype ;
+    owl:equivalentClass [ a rdfs:Datatype ;
+            owl:intersectionOf ( xsd:string [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^([-+]\\d+)|(\\d{4})|(\\d{4}-[01]\\d)|(\\d{4}-[01]\\d-[0-3]\\d)|(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d+([+-][0-2]\\d:[0-5]\\d|Z))|(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z))|(\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z))$" ] ) ] ) ] .
+
+trr379base:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Relationship ;
+            owl:onProperty trr379base:qualified_relations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Location ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Identifier ;
+            owl:onProperty trr379base:identifiers ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:at_location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom trr379base:Agent ;
+            owl:onProperty trr379base:acted_on_behalf_of ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:acted_on_behalf_of ],
+        trr379base:Thing ;
+    skos:definition "Something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
+    skos:exactMatch prov:Agent,
+        foaf:Agent,
+        dlprov:Agent ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> ;
+    skos:note "This class does not support even a basic `name` slot, because depending on the context, there may not be a suitable name, or one name would not be enough. If no specialized derived class is available in a context where a `name` or similar attribute is desired, it can be expressed via the `has_attributes` slot." .
+
+trr379base:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:narrow_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:close_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:annotations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:relations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:close_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:exact_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:broad_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty trr379base:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:attributes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:characterized_by ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ owl:intersectionOf ( [ owl:unionOf ( trr379base:Thing xsd:string ) ] trr379base:Any ) ] ;
+            owl:onProperty trr379base:relations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:related_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:attributes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:narrow_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:related_mappings ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:contains ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:annotations ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty trr379base:contains ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:exact_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:characterized_by ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty trr379base:contains ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl:Thing ;
+            owl:onProperty trr379base:broad_mappings ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty trr379base:id ],
+        trr379base:ThingMixin ;
+    skos:definition "The most basic, identifiable item. In addition to the slots that are common between a `Thing` and an `AttributeSpecification` (see `ThingMixin`), two additional slots are provided. The `id` slot takes the required identifier for a `Thing`. The `relation` slot allows for the inline specification of other `Thing` instances. Such a relation is unqualified (and symmetric), and should be further characterized via a `Statement` (see `characterized_by`). From a schema perspective, the `relation` slots allows for building self-contained, structured documents (e.g., a JSON object) with arbitrarily complex information on a `Thing`." ;
+    skos:exactMatch schema1:Thing,
+        dlthings:Thing ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+xsd:anyURI a rdfs:Datatype .
+
+trr379base:schema_type a owl:DatatypeProperty ;
+    rdfs:label "schema_type" ;
+    rdfs:range rdfs:Resource ;
+    skos:definition "State that the subject is an instance of a particular schema class. Typically, no explicit value needs to be assigned to this slot, because it matches the class type of a particular record. However, this slots can be used as a type designator of a schema element for validation and schema structure handling purposes. This is used to indicate specialized schema classes for properties that accept a hierarchy of classes as their range." ;
+    skos:exactMatch dcterms:type ;
+    skos:inScheme <https://concepts.trr379.de/s/base/unreleased> .
+
+xsd:string a rdfs:Datatype .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:InstantaneousEvent ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:InstantaneousEvent .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:ValueSpecification ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:ValueSpecification .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Instrument ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Instrument .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Entity ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Entity .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Dataset ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Dataset .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:IssuedIdentifier ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:IssuedIdentifier .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:ThingMixin ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:ThingMixin .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Activity ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Activity .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Resource ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Resource .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Thing ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Thing .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Grant ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Grant .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Location ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Location .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:SoftwareAgent ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:SoftwareAgent .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Property ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Property .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Checksum ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Checksum .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:AttributeSpecification ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:AttributeSpecification .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:ComputedIdentifier ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:ComputedIdentifier .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Project ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Project .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:DOI ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:DOI .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Identifier ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Identifier .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Organization ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Organization .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Agent ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Agent .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Publication ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Publication .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Role ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Role .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf trr379base:Person ;
+    owl:onProperty trr379base:schema_type ;
+    owl:someValuesFrom trr379base:Person .
+
+

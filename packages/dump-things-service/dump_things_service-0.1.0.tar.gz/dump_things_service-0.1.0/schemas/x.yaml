@@ -1,0 +1,16 @@
+id: http://example.org/test-schema
+classes:
+  Person:
+    attributes:
+      name:
+
+  Thing:
+    attributes:
+      id:
+        identifier: true
+        required: true
+      relations:
+        multivalued: true
+        inlined: false
+        inlined_as_list: false
+        range: Person

@@ -1,0 +1,35 @@
+[
+  {
+    "@id": "https://inm7.de/ns/pending/persons/67c2ca83-068b-46f7-a4b2-61185428f65f",
+    "@type": [
+      "https://concepts.inm7.de/s/flat-users/unreleased/User"
+    ],
+    "https://concepts.inm7.de/s/flat-base/unreleased/family_name": [
+      {
+        "@value": "some"
+      }
+    ],
+    "https://concepts.inm7.de/s/flat-base/unreleased/given_name": [
+      {
+        "@value": "other"
+      }
+    ],
+    "https://concepts.inm7.de/s/flat-users/unreleased/end_date": [
+      {
+        "@type": "https://www.w3.org/TR/NOTE-datetime",
+        "@value": "2025-05-16"
+      }
+    ],
+    "https://concepts.inm7.de/s/flat-users/unreleased/start_date": [
+      {
+        "@type": "https://www.w3.org/TR/NOTE-datetime",
+        "@value": "2025-05-08"
+      }
+    ],
+    "https://concepts.inm7.de/s/flat-users/unreleased/user_classifications": [
+      {
+        "@value": "student"
+      }
+    ]
+  }
+]

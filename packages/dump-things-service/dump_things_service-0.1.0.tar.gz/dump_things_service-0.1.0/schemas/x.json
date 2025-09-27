@@ -1,0 +1,41 @@
+{
+    "$defs": {
+        "Person": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "name": {}
+            },
+            "title": "Person",
+            "type": "object"
+        },
+        "Thing": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "id": {},
+                "relations": {
+                    "items": {
+                        "$ref": "#/$defs/Person"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Thing",
+            "type": "object"
+        }
+    },
+    "$id": "http://example.org/test-schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "test-schema",
+    "type": "object",
+    "version": null
+}

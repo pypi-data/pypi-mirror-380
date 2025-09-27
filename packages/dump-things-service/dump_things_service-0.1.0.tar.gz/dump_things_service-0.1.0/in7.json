@@ -1,0 +1,19 @@
+{
+  "pid": "trr379:root_element",
+  "schema_type": "dlsocial:Person",
+  "given_name": "Grandfather",
+  "relations" : {
+    "trr379:child_element": {
+      "pid": "trr379:child_element",
+      "schema_type": "dlsocial:Person",
+      "given_name": "Father",
+      "relations": {
+        "trr379:grand_child_element": {
+          "pid": "trr379:grand_child_element",
+          "schema_type": "dlsocial:Person",
+          "given_name": "Son"
+        }
+      }
+    }
+  }
+}

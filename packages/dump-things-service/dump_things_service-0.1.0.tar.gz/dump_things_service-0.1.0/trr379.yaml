@@ -1,0 +1,81 @@
+id: https://concepts.trr379.de/s/base/unreleased
+name: trr379-base-schema
+version: UNRELEASED
+status: eunal:concept-status/DRAFT
+title: Base schema for TRR379 metadata
+description: |
+  TODO
+
+  More information is available on the schema's [about page](about).
+
+  The schema definition is available as
+
+  - [JSON-LD context](../unreleased.jsonld)
+  - [LinkML YAML](../unreleased.yaml)
+  - [OWL TTL](../unreleased.owl.ttl)
+  - [SHACL TTL](../unreleased.shacl.ttl)
+
+comments:
+  - ALL CONTENT HERE IS UNRELEASED AND MAY CHANGE ANY TIME
+
+license: CC-BY-4.0
+
+prefixes:
+  ADMS: http://www.w3.org/ns/adms#
+  bibo: http://purl.org/ontology/bibo/
+  dcat: http://www.w3.org/ns/dcat#
+  dcterms: http://purl.org/dc/terms/
+  dlschemas: https://concepts.datalad.org/s/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  # here is a large, versatile source of controlled vocabularies/codes
+  eunal: http://publications.europa.eu/resource/authority/
+  linkml: https://w3id.org/linkml/
+  marcrel: http://id.loc.gov/vocabulary/relators/
+  obo: http://purl.obolibrary.org/obo/
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  sio: http://semanticscience.org/resource/
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  trr379base: https://concepts.trr379.de/s/base/unreleased/
+  # this name space is (partially) populated by the TRR379 main
+  # website, providing definitions for key items
+  trr379: https://trr379.de/
+
+default_prefix: trr379base
+
+imports:
+  - dlschemas:things/v1
+  - dlschemas:properties/unreleased
+  - dlschemas:roles/unreleased
+  - dlschemas:social/unreleased
+
+
+classes:
+  #
+  # Person roles
+  #
+  Author:
+    class_uri: trr379base:Author
+    is_a: Role
+    description: >-
+      An agent responsible for creating a work that is primarily textual in
+      content, regardless of media type (e.g., printed text, spoken word,
+      electronic text, tactile text) or genre (e.g., poems, novels,
+      screenplays, blogs). Use also for persons, etc., creating a new work by
+      paraphrasing, rewriting, or adapting works by another creator such that
+      the modification has substantially changed the nature and content of the
+      original or changed the medium of expression
+    exact_mappings:
+      - marcrel:aut
+
+  Interviewer:
+    class_uri: trr379base:Interviewer
+    is_a: Role
+    description: >-
+      An agent responsible for creating or contributing to a resource by acting
+      as an interviewer, reporter, pollster, or some other information
+      gathering agent.
+    exact_mappings:
+      - marcrel:ivr

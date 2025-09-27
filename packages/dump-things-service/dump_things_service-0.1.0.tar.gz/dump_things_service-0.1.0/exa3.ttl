@@ -1,0 +1,12 @@
+@prefix abc: <http://example.org/person-schema/abc/> .
+@prefix xyz: <http://example.org/person-schema/xyz/> .
+
+<http://example.org/person-schema/abc/john.row@x.com> a abc:Person ;
+    abc:given_name "John" .
+
+<http://example.org/person-schema/abc/some_timee@x.com> a abc:Person ;
+    abc:given_name "Wolfgang" .
+
+xyz:johnasdasdasddas a abc:Person ;
+    abc:given_name "John" .
+

@@ -1,0 +1,488 @@
+id: https://concepts.datalad.org/s/things/v1
+name: things-schema
+# only the major version is reflected in the identifier, but this is the full version
+version: 1.0.0-prerelease
+status: eunal:concept-status/DRAFT
+title: Generic schema for an arbitrarily detailed description of "things"
+description: |
+  STILL A DRAFT!!
+
+  This schema provides a generic [`Thing`](Thing) concept as a basic building block.
+  Key concepts of this schema are that any `Thing`
+ 
+  - has a unique identifier ([`pid`](pid))
+  - can be mapped to arbitrary external schemas and terminologies to maximize
+    semantic alignment with existing metadata ecosystems
+    (see [`mappings`](mappings))
+  - can be further described by attributes ([`attributes`](attributes))
+    and qualified relations to other "things"
+    ([`characterized_by`](characterized_by)),
+    without prescribing a particular vocabulary
+  - can be associated with a specialized schema class for enabling detailed
+    validation and precise data transformations ([`type`](type))
+    without limiting the general expressiveness to a fixed set of classes
+    available this foundational schema.
+
+  More information on this schema is available on a [dedicated page](about).
+  Each class comes with dedicated examples that exemplify its use. A good
+  starting point are the [examples of the `Thing` class](Thing#examples).
+
+  Although this generic schema could be used directly, it is meant to be used
+  as a foundational building block for more targeted schemas. Therefore, the
+  schema does not define common slots like `name`, or `description`, and leaves
+  this to more targeted schemas to decide if such slots are needed, and how they
+  should be defined. The envisioned use and reuse of this schema is to import
+  it and built targeted derivatives of `Thing` and other classes provided here.
+  See the [PROV schema](/s/prov) for an example that is built on this schema.
+
+  This schema also incorporates the schema(s)
+
+  - [`types`](https://concepts.datalad.org/s/types/unreleased)
+
+  The schema definition is available as
+
+  - [JSON-LD context](../v1.context.jsonld)
+  - [LinkML YAML](../v1.yaml)
+  - [OWL TTL](../v1.owl.ttl)
+  - [SHACL TTL](../v1.shacl.ttl)
+
+  Upcoming changes to this schema may be available in an [(unreleased)
+  development version](../../things/unreleased).
+
+license: MIT
+
+prefixes:
+  # here for alignment of `pid`
+  ADMS: http://www.w3.org/ns/adms#
+  # SHACL annotations
+  dash: http://datashapes.org/dash#
+  # primarily for the examples, but also a foundational vocab
+  bibo: http://purl.org/ontology/bibo/
+  # here for alignment of `relations`
+  dcat: http://www.w3.org/ns/dcat#
+  # foundational
+  dcterms: http://purl.org/dc/terms/
+  # self-reference
+  dlschemas: https://concepts.datalad.org/s/
+  dlthings: https://concepts.datalad.org/s/things/v1/
+  dltypes: https://concepts.datalad.org/s/types/unreleased/
+  # here is a large, versatile source of controlled vocabularies/codes
+  eunal: http://publications.europa.eu/resource/authority/
+  ex: http://example.org/
+  # here as a technical necessity
+  linkml: https://w3id.org/linkml/
+  # here as a large ecosystem for alignment and annotation
+  obo: http://purl.obolibrary.org/obo/
+  # foundational
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  # form annotations
+  sh: http://www.w3.org/ns/shacl#
+  # here for alignment of `attributes`
+  sio: http://semanticscience.org/resource/
+  # foundational
+  skos: http://www.w3.org/2004/02/skos/core#
+  # Example convenience namespace that makes it possible to not think about
+  # a dedicated distribution/dataset/dataset-version-unqiue namespace.
+  # The prefix can be materialized ala
+  # linkml-convert -s ... -t rdf -P exthisns=http://example.org/ --infer ...
+  #
+  # The following prefix is an example, a use case specific derived
+  # schema needs to define its own, differently named and defined namespace(s).
+  #
+  # A custom umbrella namespace (e.g. for a project, a consortium, a domain)
+  # to keep vocabulary and entities local to this scope
+  exthisns: https://example.org/ns/
+
+default_prefix: dlthings
+
+# list of Curie prefixes that are used in the representation of instances of
+# the model. All prefixes in this list are added to the prefix sections of
+# the target models.
+emit_prefixes:
+  - dlthings
+  - dltypes
+  - rdf
+  - rdfs
+  - skos
+
+imports:
+  - dlschemas:types/unreleased
+  - linkml:types
+
+slots:
+  broad_mappings:
+    slot_uri: skos:broadMatch
+    is_a: mappings
+    title: Broad mappings
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      broader meaning.
+    range: uriorcurie
+    multivalued: true
+
+  close_mappings:
+    slot_uri: skos:closeMatch
+    is_a: mappings
+    title: Close mappings
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      close meaning.
+    range: uriorcurie
+    multivalued: true
+
+  description:
+    slot_uri: dlthings:description
+    title: Description
+    description: A free-text account of the subject.
+    range: string
+    exact_mappings:
+      - dcterms:description
+      - rdfs:comment
+    broad_mappings:
+      - obo:IAO_0000300
+    annotations:
+      dash:singleLine: false
+
+  exact_mappings:
+    slot_uri: skos:exactMatch
+    is_a: mappings
+    title: Exact mappings
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      identical meaning.
+    range: uriorcurie
+    multivalued: true
+
+  attributes:
+    slot_uri: dlthings:attributes
+    title: Attributes
+    description: >-
+      Declares a relation that associates a `Thing` (or another attribute)
+      with an attribute, where an attribute is an intrinsic characteristic,
+      such as a quality, capability, disposition, function, or is an
+      externally derived attribute determined from some descriptor
+      (e.g. a quantity, position, label/identifier).
+      Technically, this declaration is done via an `AttributeSpecification`
+      that combines a `predicate` with a value declaration and the
+      attribute-related slots of a `Thing`. Importantly, such attributes
+      are declared inline, because they do not have a unique identifier.
+      If an identifier is available, a `Thing` declaration (see `relation`),
+      and a qualification of that relationship via a `Statement` (see
+      `characterized_by`) should be preferred.
+    range: AttributeSpecification
+    inlined: true
+    inlined_as_list: true
+    multivalued: true
+    exact_mappings:
+      - sio:SIO_000008
+
+  pid:
+    slot_uri: dlthings:pid
+    identifier: true
+    title: Persistent identifier
+    description: >-
+      Persistent and globally unique identifier of a `Thing`.
+    range: uriorcurie
+    exact_mappings:
+      - dcterms:identifier
+      - schema:identifier
+      - ADMS:identifier
+
+  characterized_by:
+    slot_uri: dlthings:characterized_by
+    title: Is characterized by
+    description: >-
+      Qualifies relationships between a subject `Thing` and an object `Thing`
+      with a `Statement` declaring a `predicate` on the nature of the
+      relationship.
+    range: Statement
+    inlined: true
+    inlined_as_list: true
+    multivalued: true
+    exact_mappings:
+      - obo:RO_0000053
+
+  mappings:
+    slot_uri: skos:mappingRelation
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      comparable meaning. These may include terms that are precisely
+      equivalent, broader or narrower in meaning, or otherwise semantically
+      related but not equivalent from a strict ontological perspective.
+    range: uriorcurie
+    multivalued: true
+
+  annotations:
+    slot_uri: dlthings:annotations
+    title: Annotations
+    description: >-
+      A record of properties of the metadata record on a subject, a collection
+      of tag/text tuples with the semantics of OWL Annotation.
+    range: Annotation
+    inlined: true
+    multivalued: true
+    exact_mappings:
+      - obo:NCIT_C44272
+
+
+  annotation_tag:
+    description: A tag identifying an annotation.
+    range: Thing
+
+  annotation_value:
+    description: The actual annotation.
+    range: string
+
+  narrow_mappings:
+    slot_uri: skos:narrowMatch
+    is_a: mappings
+    title: Narrow mappings
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      narrower meaning.
+    range: uriorcurie
+    multivalued: true
+
+  object:
+    slot_uri: rdf:object
+    description: >-
+      Reference to a `Thing` within a `Statement`.
+    inlined: false
+    multivalued: false
+    relational_role: OBJECT
+    exact_mappings:
+      - rdf:object
+    notes:
+      - We do not declare a range here to be able to tighten the range in
+        subclasses of class that need a particular range. This appears to
+        be working around a linkml limitation.
+
+  predicate:
+    slot_uri: rdf:predicate
+    description: >-
+      Reference to a `Property` within a `Statement`.
+    range: Property
+    inlined: false
+    multivalued: false
+    relational_role: PREDICATE
+    exact_mappings:
+      - rdf:predicate
+
+  range:
+    slot_uri: rdfs:range
+    description: >-
+      Declares that the value of a `Thing` or `AttributeSpecification`
+      are instances of a particular class.
+    range: uriorcurie
+    exact_mappings:
+      - rdfs:range
+
+  related_mappings:
+    slot_uri: skos:relatedMatch
+    is_a: mappings
+    title: Related mappings
+    description: >-
+      A list of terms from different schemas or terminology systems that have
+      related meaning.
+    range: uriorcurie
+    multivalued: true
+
+  relations:
+    slot_uri: dlthings:relation
+    title: Relations
+    description: >-
+      Declares an unqualified relation of the subject `Thing` to another
+      `Thing`. This schema slot is used to define related things inline.
+      If such a definition is not needed. A qualified relationship can be
+      declared directly using the `characterized_by` slot.
+    domain: Thing
+    inlined: true
+    inlined_as_list: false
+    multivalued: true
+    range: Thing
+    relational_role: OBJECT
+    symmetric: true
+    exact_mappings:
+      - dcat:relation
+      - dcterms:relation
+
+  value:
+    slot_uri: rdfs:value
+    description: >-
+      Value of a thing.
+    relational_role: OBJECT
+    range: string
+    exact_mappings:
+      - rdf:value
+
+
+classes:
+  ThingMixin:
+    mixin: true
+    description: >-
+      Mix-in with the common interface of `Thing` and `AttributeSpecification`.
+      This interface enables type specifications (`rdf:type`) for things
+      and attributes via a `type` designator slot to indicate specialized
+      schema classes for validation where a slot's `range` is too generic.
+      A thing or attribute can be further describe with statements on
+      qualified relations to other things (`characterized_by`), or
+      inline attributes (`attributes`).
+      A set of `mappings` slots enables the alignment for arbitrary external
+      schemas and terminologies.
+    slots:
+      - annotations
+      - broad_mappings
+      - close_mappings
+      - description
+      - exact_mappings
+      - attributes
+      - characterized_by
+      - narrow_mappings
+      - related_mappings
+      - schema_type
+
+  ValueSpecificationMixin:
+    description: >-
+      Mix-in for a (structured) value specification. Two slots are provided
+      to define a (literal) value (`value`) and its type (`range`).
+    slots:
+      - range
+      - value
+
+  AttributeSpecification:
+    mixins:
+      - ThingMixin
+      - ValueSpecificationMixin
+    slots:
+      - predicate
+    slot_usage:
+      predicate:
+        required: true
+    description: >-
+      An attribute is conceptually a thing, but it requires no dedicated
+      identifier (`pid`). Instead, it is linked to a `Thing` via its
+      `attributes` slot and declares a `predicate` on the nature of
+      the relationship.
+    exact_mappings:
+      - sio:SIO_000614
+    close_mappings:
+      - dlthings:Thing
+
+  Property:
+    class_uri: dlthings:Property
+    is_a: Thing
+    description: >-
+      An RDF property, a `Thing` used to define a `predicate`, for example
+      in a `Statement`.
+    exact_mappings:
+      - rdf:Property
+
+  Statement:
+    class_uri: dlthings:Statement
+    description: >-
+      An RDF statement that links a `predicate` (a `Property`) with an
+      `object` (a `Thing`) to the subject to form a triple.
+      A `Statement` is used to qualify a relation to a `Thing` referenced
+      by its identifier. For specifying a qualified relation to an
+      attribute that has no dedicated identifier, use
+      an `AttributeSpecification`.
+    slots:
+      - object
+      - predicate
+    slot_usage:
+      object:
+        required: true
+        range: Thing
+      predicate:
+        required: true
+    exact_mappings:
+      - rdf:Statement
+
+  Thing:
+    class_uri: dlthings:Thing
+    mixins:
+      - ThingMixin
+    description: >-
+      The most basic, identifiable item. In addition to the slots
+      that are common between a `Thing` and an `AttributeSpecification`
+      (see `ThingMixin`), two additional slots are provided. The `pid`
+      slot takes the required identifier for a `Thing`. The `relation`
+      slot allows for the inline specification of other `Thing` instances.
+      Such a relation is unqualified (and symmetric), and should be
+      further characterized via a `Statement` (see `characterized_by`).
+      From a schema perspective, the `relation` slots allows for building
+      self-contained, structured documents (e.g., a JSON object) with
+      arbitrarily complex information on a `Thing`.
+    slots:
+      - pid
+      - relations
+    slot_usage:
+      pid:
+        annotations:
+          sh:order: 1
+      characterized_by:
+        annotations:
+          sh:order: 2
+      attributes:
+        annotations:
+          sh:order: 3
+      description:
+        annotations:
+          sh:order: 4
+      annotations:
+        annotations:
+          sh:order: 5
+      relations:
+        annotations:
+          sh:order: 6
+      exact_mappings:
+        annotations:
+          sh:order: 7
+      close_mappings:
+        annotations:
+          sh:order: 8
+      broad_mappings:
+        annotations:
+          sh:order: 9
+      narrow_mappings:
+        annotations:
+          sh:order: 10
+      related_mappings:
+        annotations:
+          sh:order: 11
+    exact_mappings:
+      - schema:Thing
+
+  ValueSpecification:
+    is_a: Thing
+    mixins:
+      - ValueSpecificationMixin
+    description: >-
+      A `Thing` that is a value of some kind. This class can be used
+      to describe an outcome of a measurement, a factual value or constant,
+      or other qualitative or quantitative information with an associated
+      identifier. If no identifier is available, an `AttributeSpecification`
+      can be used within the context of an associated `Thing`
+      (`attributes`).
+    slot_usage:
+      value:
+        required: true
+        notes:
+          - >-
+            It is required, because when it is not needed, `Thing` should
+            be used as a type. Its absence is therefore likely a sign of
+            an error.
+    exact_mappings:
+      - obo:OBI_0001933
+
+  Annotation:
+    description: >-
+      A tag/value pair with the semantics of OWL Annotation.
+    slots:
+      - annotation_tag
+      - annotation_value
+    slot_usage:
+      annotation_tag:
+        key: true

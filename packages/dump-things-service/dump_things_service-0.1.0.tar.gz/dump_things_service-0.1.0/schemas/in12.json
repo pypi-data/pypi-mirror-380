@@ -1,0 +1,22 @@
+{
+  "id": "trr379:test_extract_1",
+  "given_name": "Grandfather",
+  "relations": {
+    "trr379:test_extract_1_1": {
+      "id": "trr379:test_extract_1_1",
+      "given_name": "Father",
+      "relations": {
+        "trr379:test_extract_1_1_1": {
+          "id": "trr379:test_extract_1_1_1",
+          "acted_on_behalf_of": [
+            "trr379:test_extract_1_1"
+          ]
+        }
+      }
+    },
+    "trr379:test_extract_1_2": {
+      "id": "trr379:test_extract_1_2",
+      "at_time": "2028-12-31"
+    }
+  }
+}

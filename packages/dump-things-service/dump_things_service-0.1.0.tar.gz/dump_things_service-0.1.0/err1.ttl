@@ -1,0 +1,27 @@
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix inm7datamgt: <https://inm7.de/ns/datamgt/> .
+@prefix inm7fb: <https://concepts.inm7.de/s/flat-base/unreleased/> .
+@prefix inm7fd: <https://concepts.inm7.de/s/flat-data/unreleased/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inm7datamgt:4e52cb94-2f87-44a8-bb03-5c28d27d32f4 a inm7fd:Dimension ;
+    skos:closeMatch "http://purl.obolibrary.org/obo/ExO_0000110"^^xsd:anyURI ;
+    skos:prefLabel "Sex" ;
+    dlthings:annotations [ a dlthings:Annotation ;
+            dlthings:annotation_tag <http://purl.obolibrary.org/obo/NCIT_C54269> ;
+            dlthings:annotation_value "inm7usrmgt:28578b89-4b67-4b8a-8a2a-76633578465d" ] ;
+    inm7fb:name "Sex" ;
+    inm7fb:short_name "Sex" .
+
+<https://inm7.de/ns/datamgt/dim/age> a inm7fd:Dimension ;
+    skos:broadMatch "http://purl.obolibrary.org/obo/FBdv_00007013"^^xsd:anyURI ;
+    skos:closeMatch "http://purl.obolibrary.org/obo/ExO_0000102"^^xsd:anyURI,
+        "http://purl.obolibrary.org/obo/PATO_0000011"^^xsd:anyURI ;
+    skos:prefLabel "Age" ;
+    dlthings:annotations [ a dlthings:Annotation ;
+            dlthings:annotation_tag <http://purl.obolibrary.org/obo/NCIT_C54269> ;
+            dlthings:annotation_value "inm7usrmgt:28578b89-4b67-4b8a-8a2a-76633578465d" ] ;
+    inm7fb:name "Age" ;
+    inm7fb:short_name "Age" .
+

@@ -1,0 +1,4 @@
+<https://inm7.de/ns/pending/persons/661e5303-60c1-462e-8750-4e7689ba87a7> a <https://concepts.inm7.de/s/simpleinput/unreleased/Person>;
+  <https://concepts.inm7.de/s/simpleinput/unreleased/family_name> "Head";
+  <https://concepts.inm7.de/s/simpleinput/unreleased/given_name> "Dean";
+  <https://concepts.inm7.de/s/simpleinput/unreleased/honorific_name_prefix> "Mr".

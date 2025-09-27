@@ -1,0 +1,12 @@
+aiohttp
+click==8.1.8
+fastapi
+fsspec
+hatch
+hatch-vcs
+linkml
+pydantic==2.8.0
+PyYAML
+rdflib
+requests
+uvicorn

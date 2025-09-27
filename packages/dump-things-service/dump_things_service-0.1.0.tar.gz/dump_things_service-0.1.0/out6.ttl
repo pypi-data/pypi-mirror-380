@@ -1,0 +1,17 @@
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix ns1: <dlsocial:> .
+@prefix trr379: <https://trr379.de/> .
+
+trr379:root_element a ns1:Person ;
+    ns1:schema_type: ns1:Person ;
+    ns1:given_name "Grandfather" ;
+    dlthings:relation trr379:child_element .
+
+trr379:child_element a ns1:Person ;
+    ns1:schema_type: ns1:Person ;
+    ns1:given_name "Father" ;
+    dlthings:relation trr379:grand_child_element .
+
+trr379:grand_child_element a ns1:Person ;
+    ns1:schema_type: ns1:Person ;
+    ns1:given_name "Son" .

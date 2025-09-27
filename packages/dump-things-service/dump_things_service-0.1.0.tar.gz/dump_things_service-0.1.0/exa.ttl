@@ -1,0 +1,11 @@
+@prefix dlidentifiers: <https://concepts.datalad.org/s/identifiers/unreleased/> .
+@prefix dlsocial: <https://concepts.datalad.org/s/social/unreleased/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://trr379.de/contributors/bowie> a dlsocial:Person ;
+    dlidentifiers:identifier [ a dlidentifiers:Identifier ;
+            dlidentifiers:creator "https://orcid.org"^^xsd:anyURI ;
+            dlidentifiers:notation "0000-0001-6398-6370" ] ;
+    dlsocial:family_name "Bowie" ;
+    dlsocial:given_name "David" ;
+    dlsocial:honorific_name_prefix "Musician" .

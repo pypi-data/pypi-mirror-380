@@ -1,0 +1,26 @@
+{
+    "id": "trr379:test_extract_1",
+    "schema_type": "dlsocial:Person",
+    "given_name": "Grandfather",
+    "relations": {
+        "trr379:test_extract_1_1": {
+            "id": "trr379:test_extract_1_1",
+            "schema_type": "dlsocial:Person",
+            "given_name": "Father",
+            "relations": {
+                "trr379:test_extract_1_1_1": {
+                    "id": "trr379:test_extract_1_1_1",
+                    "schema_type": "dlprov:Agent",
+                    "acted_on_behalf_of": [
+                        "trr379:test_extract_1_1"
+                    ]
+                }
+            }
+        },
+        "trr379:test_extract_1_2": {
+            "id": "trr379:test_extract_1_2",
+            "schema_type": "dltemporal:InstantaneousEvent",
+            "at_time": "2028-12-31"
+        }
+    }
+}

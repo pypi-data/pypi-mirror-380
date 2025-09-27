@@ -1,0 +1,11 @@
+@prefix inm7fb: <https://concepts.inm7.de/s/flat-base/unreleased/> .
+@prefix inm7fu: <https://concepts.inm7.de/s/flat-users/unreleased/> .
+
+<https://inm7.de/ns/pending/persons/67c2ca83-068b-46f7-a4b2-61185428f65f> a inm7fu:User ;
+    inm7fb:family_name "some" ;
+    inm7fb:given_name "other" ;
+    inm7fu:end_date "2025-05-16" ;
+    inm7fu:start_date "2025-05-08" ;
+    inm7fu:user_classifications "student" .
+
+

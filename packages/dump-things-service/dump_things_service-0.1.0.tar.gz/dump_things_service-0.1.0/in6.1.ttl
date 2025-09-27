@@ -1,0 +1,15 @@
+@prefix dlthings: <https://concepts.datalad.org/s/things/v1/> .
+@prefix inm7fb: <https://concepts.inm7.de/s/flat-base/unreleased/> .
+@prefix inm7fu: <https://concepts.inm7.de/s/flat-users/unreleased/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix w3ctr: <https://www.w3.org/TR/> .
+
+<https://inm7.de/ns/pending/persons/67c2ca83-0000-46f7-a4b2-61185428f65f> a inm7fu:User ;
+    dlthings:annotations [ a dlthings:Annotation ;
+        dlthings:annotation_tag <http://purl.obolibrary.org/obo/NCIT_C54269> ;
+        dlthings:annotation_value "test_user_2" ] ;
+    inm7fb:family_name "Schmitz" ;
+    inm7fb:given_name "Henry" ;
+    inm7fu:end_date "2025-05-16"^^w3ctr:NOTE-datetime ;
+    inm7fu:start_date "2025-05-08"^^w3ctr:NOTE-datetime ;
+    inm7fu:user_classifications "student" .
