@@ -1,0 +1,13 @@
+citation-utils>=0.5.0
+citation-title>=0.0.2
+corpus-judge>=0.2.0
+environs>=14.3
+sqlite-utils>=3.38
+rich>=14.1
+html-sanitizer>=2.6.0
+pyyaml>=6.0.3
+beautifulsoup4>=4.14
+markdown>=3.9
+httpx>=0.28.1
+python-frontmatter>=1.1.0
+python-slugify>=8.0
