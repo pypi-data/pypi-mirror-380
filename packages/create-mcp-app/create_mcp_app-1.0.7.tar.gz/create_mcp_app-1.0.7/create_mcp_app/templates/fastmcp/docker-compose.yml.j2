@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    image: {{ name.lower() }}:latest
+    container_name: {{ name.lower().replace(' ', '-') }}
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "watchfiles --target-type=command \"python -m {{ package_name }}.app --host 0.0.0.0 --port 8080\""]
+
