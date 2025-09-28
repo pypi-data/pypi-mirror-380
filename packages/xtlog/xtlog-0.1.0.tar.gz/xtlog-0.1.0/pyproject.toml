@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xtlog"
+version = "0.1.0"
+description = "基于loguru的高性能日志库"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "sandorn", email = "sandorn@live.cn"}
+]
+keywords = ["logging", "loguru", "logger", "python"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Logging",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "loguru>=0.7.0",
+]
+
+[project.urls]
+Homepage = "http://github.com/sandorn/xtlog"
+Documentation = "http://github.com/sandorn/xtlog"
+Repository = "http://github.com/sandorn/xtlog"
+Issues = "http://github.com/sandorn/xtlog/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["xtlog"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 200
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["xtlog"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
