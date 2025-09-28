@@ -1,0 +1,7 @@
+boto3_dataclass_workmail/__init__.py,sha256=oDGZ39kbxKfA9HiLbfHvpr83r6h8HWVZKtkiYz0-PxI,110
+boto3_dataclass_workmail/caster.py,sha256=wjDuH_uiyw8NuybZ3KSV2sfPCm0v6glLAWOxXrWDuoI,10574
+boto3_dataclass_workmail/type_defs.py,sha256=7kOKE3TnDoAGJSxh0hd1E3oio_NaLii_wehCnDdY57I,183929
+boto3_dataclass_workmail-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_workmail-1.40.0.dist-info/METADATA,sha256=saTavtu3VHu0PXX5_mCza8CnRxzdoI5bsuEJKjh_BGE,1690
+boto3_dataclass_workmail-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_workmail-1.40.0.dist-info/RECORD,,
