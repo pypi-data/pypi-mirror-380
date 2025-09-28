@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/corpus_judge/__init__.py
+src/corpus_judge/justice_model.py
+src/corpus_judge/justice_name.py
+src/corpus_judge/justice_select.py
+src/corpus_judge/sc.yaml
+src/corpus_judge.egg-info/PKG-INFO
+src/corpus_judge.egg-info/SOURCES.txt
+src/corpus_judge.egg-info/dependency_links.txt
+src/corpus_judge.egg-info/requires.txt
+src/corpus_judge.egg-info/top_level.txt
