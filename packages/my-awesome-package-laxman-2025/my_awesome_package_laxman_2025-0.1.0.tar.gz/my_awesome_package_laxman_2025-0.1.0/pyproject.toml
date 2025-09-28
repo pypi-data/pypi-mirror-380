@@ -1,0 +1,40 @@
+[build-system]
+# We are using setuptools as the build backend
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# --- CORE METADATA ---
+# NOTE: The name MUST be unique on PyPI.
+name = "my-awesome-package-laxman-2025" # <--- RENAME THIS before final upload
+version = "0.1.0"
+description = "A minimal, awesome Python package uploaded to PyPI."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+authors = [
+  {name = "Laxman", email = "your-email@example.com"}, # <-- Updated Name
+]
+
+# --- PROJECT DEPENDENCIES ---
+dependencies = [
+    # Add any runtime dependencies here, e.g., "requests>=2.0.0",
+]
+
+# --- CLASSIFIERS (for PyPI search) ---
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+
+# --- OPTIONAL URLs ---
+[project.urls]
+Homepage = "https://github.com/yourusername/my-awesome-package"
+Repository = "https://github.com/yourusername/my-awesome-package"
+
+# --- CONFIGURATION FOR SETUPLTOOLS (Tells it where to find the code) ---
+[tool.setuptools.packages]
+# This line tells setuptools to look for a package inside the 'src' directory
+find = {where = ["src"]}
