@@ -1,0 +1,9 @@
+flake8_no_emoji/__init__.py,sha256=Gw9_iY8GEuxhfT2WzZ1PlJW_bKoPsU7qKJkxXLuF4lY,100
+flake8_no_emoji/categories.py,sha256=MV8tIP8bTqPZRtAss4iPLYEDuxvE2S6Y9VBP5fxOIqM,1180
+flake8_no_emoji/checker.py,sha256=8gXuyQ8bOq-ihTqIasg7kdDAc_SHUz24MAgaHJ2tNDk,2689
+flake8_no_emoji-0.2.6.dist-info/licenses/LICENSE,sha256=tXwSBbbxc4KkfMWexjysFxRcZxiZiSjd6dWD0QG8l28,1227
+flake8_no_emoji-0.2.6.dist-info/METADATA,sha256=VOCN5aCWLEjpSJWVBaIYpuLWtiPN6yTlckSSCPtlKQY,4284
+flake8_no_emoji-0.2.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+flake8_no_emoji-0.2.6.dist-info/entry_points.txt,sha256=ZGBcqtsX9p5zzG_0UVOrrinsP7FwWkPQbOE1tKVw8dI,56
+flake8_no_emoji-0.2.6.dist-info/top_level.txt,sha256=0qSyca6gpqhJML4V0Bg8r9tPUJtiysT8d6cyi10N9pI,16
+flake8_no_emoji-0.2.6.dist-info/RECORD,,
