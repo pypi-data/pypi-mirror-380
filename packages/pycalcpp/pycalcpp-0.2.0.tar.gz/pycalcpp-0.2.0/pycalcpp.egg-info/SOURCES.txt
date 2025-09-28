@@ -1,0 +1,10 @@
+Operaciones.cpp
+README.md
+documentos.py
+pycalcpp.py
+setup.py
+pycalcpp.egg-info/PKG-INFO
+pycalcpp.egg-info/SOURCES.txt
+pycalcpp.egg-info/dependency_links.txt
+pycalcpp.egg-info/not-zip-safe
+pycalcpp.egg-info/top_level.txt
