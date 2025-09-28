@@ -1,0 +1,5 @@
+rich
+tqdm
+pandas
+python-docx
+reportlab
