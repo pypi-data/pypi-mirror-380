@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+streamtick/__init__.py
+streamtick/arima.py
+streamtick/arima_report.py
+streamtick/data_acquisition.py
+streamtick/data_preprocessing.py
+streamtick/decompose_series.py
+streamtick/make_stationary.py
+streamtick/model_identification.py
+streamtick/ui.py
+streamtick.egg-info/PKG-INFO
+streamtick.egg-info/SOURCES.txt
+streamtick.egg-info/dependency_links.txt
+streamtick.egg-info/requires.txt
+streamtick.egg-info/top_level.txt

@@ -1,0 +1,53 @@
+Streamtick
+An automated time-series toolkit for stock market analysis.
+
+Welcome to Streamtick! This Python library provides a robust set of automated tools for analyzing historical stock data, performing model diagnostics, and generating reliable forecasts. It’s designed to automate the heavy lifting of the time-series workflow, giving you actionable insights quickly.
+
+Installation
+To install Streamtick, you first need to save the following dependencies into a file named requirements.txt and install them:
+
+# Save these lines to requirements.txt
+streamlit==1.36.0
+pandas>=2.2.0
+numpy>=1.26.4
+yfinance==0.2.38
+plotly>=5.21.0
+statsmodels>=0.14.2
+pmdarima>=2.0.3
+
+# Then install
+pip install -r requirements.txt
+
+Library Methods and Usage
+All of Streamtick's core functions are independently callable. You can simply import them and use them in any script or Jupyter Notebook. The library methods cover four essential phases of time-series analysis: Preparation, Identification, Estimation, and Validation.
+
+1. Preparation Methods
+The preparation phase helps ensure your data is properly structured for modeling.
+
+decompose_series: This function breaks down the raw time series into its core components: Trend, Seasonality, and Residual. It is used for initial data inspection. You call it by specifying the ticker and the number of historical years, for example: decompose_series(ticker='TSLA', years=3).
+
+make_stationary: This function shows the effect of differencing (the d term in ARIMA) on the data. It confirms whether the data's mean is stable, which is a requirement for successful ARIMA modeling. You call it by providing the stock ticker and the number of historical years: make_stationary(ticker='TSLA', years=3).
+
+2. Identification Methods
+check_autocorrelation: This method helps determine the optimal starting parameters (p and q) for the ARIMA model. It does this by analyzing ACF (Autocorrelation) and PACF (Partial Autocorrelation) data, which measure the correlation within the series over time. To run it, you call: check_autocorrelation(ticker='TSLA', years=3).
+
+3. Estimation Method
+tick_arima: This is the main automated forecasting tool. It utilizes the pmdarima library to automatically find the optimal ARIMA parameters, fits the model to the historical data, and generates the final price forecast. It also prints the full ARIMA statistical report (including AIC, BIC, and coefficient tables) to the console upon successful fitting. You call it by specifying the ticker, the number of years of data to use for training, and the number of days you want to forecast: tick_arima(ticker='AAPL', years=5, forecast_days=30).
+
+Quick Code Examples
+To demonstrate how to call these methods, here is a complete breakdown using the 'TSLA' ticker:
+
+Preparation and Identification
+from streamtick import decompose_series, make_stationary, check_autocorrelation
+
+# Breaks down the series into its trend, seasonal, and residual parts.
+decompose_series(ticker='TSLA', years=3)
+
+# Confirms data stationarity after differencing.
+make_stationary(ticker='TSLA', years=3)
+
+# Identifies model order based on ACF and PACF data.
+check_autocorrelation(ticker='TSLA', years=3)
+
+tick_arima()
+ArimaReport()
