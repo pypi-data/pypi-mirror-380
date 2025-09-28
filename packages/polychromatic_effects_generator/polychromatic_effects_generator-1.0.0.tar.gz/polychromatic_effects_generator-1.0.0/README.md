@@ -1,0 +1,432 @@
+# Polychromatic Effects Generator
+
+This Python tool allows you to quickly create advanced effects for
+[Polychromatic](https://polychromatic.app/) in a similar fashion to the
+official Razer Synapse app for Windows.
+
+It requires Python 3.13+ and the [PyYAML](https://pypi.org/project/PyYAML/) package.
+
+This tool takes a YAML effect definition file, called a recipe, that has
+information about the effect you want to create, parses it, renders the frames
+of the effect and produces a JSON sequence effect file that Polychromatic can
+read and display.
+
+In other words, this file:
+
+```yaml
+device:
+  name: Razer Cynosa V2
+  icon: keyboard
+  graphic: cynosa_v2_nordic.svg
+  grid:
+    width: 22
+    height: 6
+layers:
+- name: wheel
+  args:
+    gradient:
+      0.00: 91eff2
+      0.25: 323fe8
+      0.50: 8a2fa1
+      0.75: 323fe8
+      1.00: 91eff2
+```
+
+produces this effect:
+
+![Wheel effect on Razer Cynosa V2](./img/wheel.gif)
+
+## Installation *(using [pipx](https://pipx.pypa.io/))*
+
+### Install normally
+
+```sh
+$ pipx install polychromatic_effects_generator
+$ polychromatic_effects_generator --version # Run from PATH
+1.0.0
+```
+
+### Install temporarily *(see [pipx run](https://pipx.pypa.io/stable/docs/#pipx-run))*
+
+```sh
+$ pipx run polychromatic_effects_generator --version
+1.0.0
+```
+
+## Writing a recipe file
+
+A recipe file is a [YAML](https://yaml.org/) file that contains information
+about the effect you want to make, such as metadata, device type and most
+importantly, layers.
+
+### Metadata (optional)
+
+You can optionally specify effect metadata in your recipe file using the
+`metadata` dict:
+
+```yaml
+metadata:
+  name: my awesome effect
+  author: hasha
+  summary: cool wheel effect
+  icon: img/effects/sequence.svg
+```
+
+#### (optional) `name`
+
+Name of the effect. May be different from the recipe filename.
+
+Defaults to the name of the recipe file.
+
+#### (optional) `author`
+
+Author of the effect.
+
+Defaults to `polychromatic_effects_generator`.
+
+#### (optional) `summary`
+
+Summary of the effect.
+
+Defaults to `Generated with polychromatic_effects_generator`.
+
+#### (optional) `icon`
+
+Path to the icon that will be used as the effect icon. You can use built-in
+icons provided by Polychromatic, here is [a list of them](https://github.com/polychromatic/polychromatic/tree/965e76d63c3df2adf3720e5423e122aa73b4d9a6/data/img/effects).
+
+Defaults to `img/effects/sequence.svg`.
+
+### Device info
+
+You need to specify info about the device on which the effect will be played on
+using the `device` dictionary:
+
+```yaml
+device:
+  name: Razer Cynosa V2
+  icon: keyboard
+  graphic: cynosa_v2_nordic.svg
+  grid:
+    width: 22
+    height: 6
+```
+
+#### `name`
+
+Name of the device on which the effect will be displayed.
+
+#### (optional) `icon`
+
+Name of the icon (without file extension) from [polychromatic/data/img/devices](https://github.com/polychromatic/polychromatic/tree/965e76d63c3df2adf3720e5423e122aa73b4d9a6/data/img/devices).
+
+#### (optional) `graphic`
+
+Name of the device graphic (with file extension) from [polychromatic/data/devicemaps](https://github.com/polychromatic/polychromatic/tree/965e76d63c3df2adf3720e5423e122aa73b4d9a6/data/devicemaps).
+
+If this key is not set, then only the Grid view will be available in
+Polychromatic's effect editor.
+
+#### `grid`: dictionary
+
+Information about the width and height of the device's grid.
+
+Grid information for your device can be found in [this file](https://github.com/polychromatic/polychromatic/blob/965e76d63c3df2adf3720e5423e122aa73b4d9a6/data/devices/openrazer.json).
+
+For example, if your device is Razer Cynosa V2, find this entry:
+
+```jsonc
+// ...
+"1532:025E": {
+  "form_factor": "keyboard",
+  "matrix": "22,6",
+  "name": "Razer Cynosa V2",
+  "since": "2.9.0"
+},
+// ...
+```
+
+`matrix` is set to `22,6`. This means that the device grid for Razer Cynosa V2
+is 22 pixels wide and 6 pixels tall:
+
+```yaml
+device:
+  # ...
+  grid:
+    width: 22
+    height: 6
+```
+
+### Playback info
+
+You can customize the effect's duration, FPS and looping:
+
+```yaml
+duration: 30
+fps: 10
+loop: true
+```
+
+#### (optional) `duration`: integer
+
+Amount of frames to render. This value also affects the length of cycles of
+layers. For example, if `duration` is set to 60, then one revolution of the
+Wheel layer will take 60 frames.
+
+Defaults to 30.
+
+#### (optional) `fps`: integer
+
+Amount of frames to play per second.
+
+Defaults to the value of `duration`.
+
+#### (optional) `loop`: boolean
+
+Whether to loop the effect or not.
+
+Defaults to `true`.
+
+### Layer info
+
+Describe the layers you want to use in your effect in the `layers` list.
+
+`layers` list must consist of one or multiple *layer entries*. A layer entry is
+a dictionary that contains:
+
+* `name`: string - Name of the type of the layer, like `static`, `wheel`,
+  `spectrum`. See [list of supported layers](#supported-layer-types).
+* (optional) `keys`: List of key coordinates or `all` - list of key coordinates
+  in the form `[x, y]`.
+
+  For example, if you want to apply a layer only to keys (0, 10) and (10, 5)
+  write: `keys: [[0, 10], [10, 5]]`.
+  
+  Use string literal `all` to apply layer to all keys.
+  
+  Defaults to `all`.
+* `args`: dictionary - Arguments to be passed to the layer's renderer. These
+  arguments are different for each type of layer. Usually contains information
+  about colors.
+
+For example, here is a `layers` list containing a single layer entry describing
+a Static layer that shows the color green:
+
+```yaml
+layers:
+- name: static
+  keys: all
+  args:
+    color: 00ff00
+```
+
+#### Describing a color
+
+Use the HTML color format without the hash `#` symbol to describe colors. For
+example, the color white should look like this: `ffffff`.
+
+> [!NOTE]
+> Due to a limitation of PyYAML, color codes consisting only of numbers, like
+> `000000` will get parsed as numbers instead of colors.
+>
+> To prevent this, prefix number-only colors with the `!color` YAML tag, like
+> this: `!color 000000`.
+
+#### Describing a gradient
+
+Use a dictionary with float keys and [color](#describing-a-color) to describe a
+gradient, like this:
+
+```yaml
+gradient:
+  0.0: ff0000
+  0.5: 00ff00
+  1.0: 0000ff
+```
+
+This gradient transitions from red, to green, to blue.
+
+In a gradient, the float keys represent the position of the color in the
+gradient, called the *index*.
+
+A color with the index `0.0` will be at the start of the gradient, color at
+`1.0` will be at the end, and `0.5` will be in the middle.
+
+Each gradient must at least contain a color with index `0.0` and a color with
+with index `1.0`.
+
+#### Supported layer types
+
+##### `breathing`
+
+Breathing effect that cycles between specified colors.
+
+![Breathing effect on Razer Cynosa V2](./img/breathing.gif)
+
+> [!NOTE]
+> Polychromatic struggles with displaying effects that have a lot of fast
+> changing colors, hence the flashing black keys in the GIF.
+>
+> The effects look totally fine on actual hardware.
+
+###### Arguments
+
+* `colors`: list of [colors](#describing-a-color)
+
+###### Example
+
+```yaml
+- name: breathing
+  args:
+    colors: [ff0000, 00ff00, 0000ff]
+```
+
+##### `spectrum`
+
+Cycles between colors of a specified gradient.
+
+![Spectrum effect on Razer Cynosa V2](./img/spectrum.gif)
+
+###### Arguments
+
+* `gradient`: [gradient](#describing-a-gradient)
+
+###### Example
+
+```yaml
+- name: spectrum
+  args:
+    gradient:
+      0.0: ff0000
+      0.5: 00ff00
+      1.0: 0000ff
+```
+
+##### `static`
+
+Displays a single color.
+
+![Static effect on Razer Cynosa V2](./img/static.png)
+
+###### Arguments
+
+* `color`: [color](#describing-a-color)
+
+###### Example
+
+```yaml
+- name: static
+  args:
+    color: 00ff00
+```
+
+##### `wave`
+
+Scrolls a specified gradient to the left or right.
+
+![Wave effect on Razer Cynosa V2](./img/wave.gif)
+
+###### Arguments
+
+* `gradient`: [gradient](#describing-a-gradient)
+* (optional) `direction`: string, either `left` or `right` - Direction of
+  scrolling of the effect. Defaults to `left`.
+
+###### Example
+
+```yaml
+- name: wave
+  args:
+    gradient:
+      0.0: ff0000
+      0.5: 00ff00
+      1.0: 0000ff
+    direction: right
+```
+
+##### `wheel`
+
+Spinning color wheel that has the colors of the specified gradient.
+
+![Wheel effect on Razer Cynosa V2](./img/wheel.gif)
+
+###### Arguments
+
+* `gradient`: [gradient](#describing-a-gradient)
+* `direction`: string, either `clockwise` or `counterclockwise` - Spinning
+  direction of the color wheel. Defaults to `clockwise`.
+* (optional) `center`: list of 2 floats - Coordinates of the center of the
+  color wheel. Defaults to the center of the grid.
+
+###### Example
+
+```yaml
+- name: wheel
+  args:
+    gradient:
+      0.00: 91eff2
+      0.25: 323fe8
+      0.50: 8a2fa1
+      0.75: 323fe8
+      1.00: 91eff2
+    direction: clockwise
+    center: [16.0, 3.0]
+```
+
+### Complete example of a recipe file
+
+```yaml
+metadata:
+  name: Blue wheel effect
+  author: hasha
+  summary: Made with polychromatic_effects_generator
+  icon: img/effects/repeat.svg
+device:
+  name: Razer Cynosa v2
+  icon: keyboard
+  graphic: cynosa_v2_nordic.svg
+  grid:
+    width: 22
+    height: 6
+duration: 60
+fps: 10
+loop: true
+layers:
+- name: wheel
+  keys: all
+  args:
+    gradient:
+      0.00: 91eff2
+      0.25: 323fe8
+      0.50: 8a2fa1
+      0.75: 323fe8
+      1.00: 91eff2
+    direction: counterclockwise
+    center: [16.0, 3.0]
+```
+
+## Rendering effect from recipe
+
+Run the tool with the path to your recipe file:
+
+```sh
+$ polychromatic_effects_generator wheel.yml
+Recipe parsed successfully! Rendering...
+Done! Saved JSON effect file to /home/hasha/devel/polychromatic-effects-generator/wheel.json
+```
+
+A JSON sequence effect file will be created in your current working directory.
+
+You can use the `--output` option to change the path and filename of the
+rendered effect file:
+
+```sh
+$ polychromatic_effects_generator wheel.yml --output /test/effect.json
+Recipe parsed successfully! Rendering...
+Done! Saved JSON effect file to /test/effect.json
+```
+
+## Adding the rendered effect to Polychromatic
+
+To add the rendered effect to Polychromatic, simply move the JSON file to
+`~/.config/polychromatic/effects`.
