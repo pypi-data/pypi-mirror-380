@@ -1,0 +1,13 @@
+francis_agent-1.0.7.dist-info/licenses/LICENSE,sha256=mrozSAPBMcbsc6wQNqYhDPnfFk-2AjrGzMog2l-rYAw,948
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/gitops.py,sha256=9z6akWkINFkQIBNnaU7Ee9QDPM2jTTMFDZt-lnRMyXQ,3880
+tools/hello.py,sha256=Q0r-ZUZS7ovx0Xfl_H3fYV3FN4Ux3ZaBD6LqZVLBILc,429
+tools/httpjson.py,sha256=HS7qXV4-eGXO72wuOirvYlMj9A7leZ4WD8nnfn3MG0M,6295
+tools/kvstore.py,sha256=hw-B0iZgpDxghDgrMqBd_h6uafZZEEczyW_WG0QpYMQ,7185
+tools/search.py,sha256=sNiy7feC6aDPLUJyOO6ElyNHb8FP0vFq8U4MozDQ3DE,2104
+tools/zipper.py,sha256=djlyQnwhcbB5QG4bioqEeAgWcJlDZdfZfAgWnBH1CCg,7742
+francis_agent-1.0.7.dist-info/METADATA,sha256=t4c6r2ZpgQjEprbCEIRILVdaERceU4st1TRO2s8ePyw,859
+francis_agent-1.0.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+francis_agent-1.0.7.dist-info/entry_points.txt,sha256=w1bag_9_JMfE30TGRE8Zxi8jRVp8CVHc7V2S46vTya0,47
+francis_agent-1.0.7.dist-info/top_level.txt,sha256=OtgdAwX7BJhPkWX_-qbte9dRsQgOcxk3uIluU0xGMWY,14
+francis_agent-1.0.7.dist-info/RECORD,,

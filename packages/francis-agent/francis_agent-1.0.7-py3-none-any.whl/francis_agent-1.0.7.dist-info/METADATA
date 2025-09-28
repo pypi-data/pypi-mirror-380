@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: francis-agent
+Version: 1.0.7
+Summary: Local autonomy loop with tools
+Author: Ap3pp3rs94
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Ap3pp3rs94/francis-agent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Francis Agent
+![CI](https://github.com/Ap3pp3rs94/francis-agent/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Ap3pp3rs94/francis-agent/actions/workflows/ci.yml/badge.svg)
+
+Local autonomy loop with tools (files, gitops, httpjson, kvstore, search, shell, web).
+
+## Quickstart
+python -m venv .venv
+. .venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python .\francis.py
+
+## Dev
+pre-commit install
+pre-commit run --all-files
+pytest -q
+
+
+
+## CLI
+
+`ash
+francis --version
+francis
+``r
+
