@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: index
+Version: 0.5.3.dev0
+Summary: A lightweight spreadsheet indexing system
+Author-email: Stan Ovchinnikov <lishnih@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Manufacturing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+License-File: LICENSE.ru-RU.txt
+License-File: LICENSE.txt
+Requires-Dist: openpyxl>=3.0
+Requires-Dist: pyxlsb>=1.0
+Requires-Dist: pymongo>=4.0
+Requires-Dist: index[dotenv] ; extra == "all"
+Requires-Dist: index[obsolete] ; extra == "all"
+Requires-Dist: python-dotenv>=1.0 ; extra == "dotenv"
+Requires-Dist: xlrd>=2.0 ; extra == "obsolete"
+Project-URL: Source, https://gitflic.ru/project/stan/index
+Provides-Extra: all
+Provides-Extra: dotenv
+Provides-Extra: obsolete
+
+# index
+
+*Read this in other languages: [English](README.md), [Русский](README.ru-RU.md)*
+
+A lightweight spreadsheet indexing system.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/index?color=%23d0d0ff)](https://pypi.org/project/index/)
+![PyPI - Status](https://img.shields.io/pypi/status/index)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/index)
+
+## Installation & Configuration
+
+> `index` requires **Python 3.6.0 or higher** and **pip 19.0 or higher**.
+
+To install, use the following command:
+
+```bash
+pip install --pre index
+```
+
+This will automatically install all necessary packages for operation: `openpyxl`, `pyxlsb`, `pymongo`.
+
+If you also need to index legacy `*.xls` format files, use the command:
+
+```bash
+pip install --pre index[obsolete]
+```
+
+## Quick Start
+
+```bash
+index file.xlsx
+```
+
+The file contents will be read and saved to a MongoDB database.
+
+Default parameters:
+```
+dburi = mongodb://localhost
+dbname = db1
+cname = dump
+cname_files = _files
+```
+
+## Project Status
+
+`Development Status :: 4 - Beta`
+
+## About the Project
+
+The project was originally located here: [https://github.com/ndtfy/index](https://github.com/ndtfy/index). Over time, the project's architecture was changed, and the project has moved.
+
+## Useful Links
+
+*   [https://pypi.org/project/index/](https://pypi.org/project/index/)
+
+## License
+
+*   MIT
