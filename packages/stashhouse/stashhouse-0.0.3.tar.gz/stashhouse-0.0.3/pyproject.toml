@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stashhouse"
+version = "0.0.3"
+requires-python = ">=3.11"
+authors = [
+    {name = "Jayson Fong", email = "jayson.fong@gatech.edu"}
+]
+description = "Centrally store files from a variety of protocols."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+[project.optional-dependencies]
+ssh = [
+    "stashhouse_ssh>=0.0.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/Jayson-Fong/stashhouse"
+Issues = "https://github.com/Jayson-Fong/stashhouse/issues"
+
+[project.scripts]
+stashhouse = "stashhouse.cli:main"
