@@ -1,0 +1,4 @@
+[console_scripts]
+magic = ai_terminal.main:main
+magic-terminal = ai_terminal.main:main
+mt = ai_terminal.main:main
