@@ -1,0 +1,13 @@
+clean_logging/__init__.py,sha256=e6spGThdj9Tjs3YKjUQptxIwRC2Rx0oCqWeWx4UIgJE,215
+clean_logging/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clean_logging/core/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clean_logging/core/interfaces/log_repository_interface.py,sha256=kmD5ECSmAZp15fXMcsPgA84m3fER3J41WXtz0ddH0Uw,443
+clean_logging/infrastructure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clean_logging/infrastructure/logging_setup.py,sha256=X4CurS0EUM0n3zFIc84PlcfohcLVQFSb7cyNMe0v-Fw,7219
+clean_logging/infrastructure/repositories/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clean_logging/infrastructure/repositories/file_log_repository.py,sha256=g4QnyURa1_Y8UI-8J1nSQQZw__IN2bpaBWrev6OmVTY,6244
+clean_logging-0.9.0.dist-info/licenses/LICENSE,sha256=5dz_6Da27IpY5JJBm1UOZfuMvcMIUDl55drLM6x-o7c,3
+clean_logging-0.9.0.dist-info/METADATA,sha256=ejWlCCoo3Nozg0N2qoCrxSI8G8BvpOS-UrLoSZBFyRI,2753
+clean_logging-0.9.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+clean_logging-0.9.0.dist-info/top_level.txt,sha256=lyi6HJxeiSbpxFxX4npEWPZTBls4Qaq7dyzF7w1zqRs,14
+clean_logging-0.9.0.dist-info/RECORD,,
