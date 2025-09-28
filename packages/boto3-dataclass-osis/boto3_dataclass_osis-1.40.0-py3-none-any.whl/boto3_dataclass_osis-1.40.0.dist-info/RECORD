@@ -1,0 +1,7 @@
+boto3_dataclass_osis/__init__.py,sha256=DiuWFGlvReSIwtsGLU-oTIS11wiq3T9W9-kYMY3f_Jk,102
+boto3_dataclass_osis/caster.py,sha256=N4uyx81QrE_oCGJydMxcVeD_tMMvferdTBvlY3kJmIQ,3808
+boto3_dataclass_osis/type_defs.py,sha256=OAs-ogFz_0Nqs40iBXkiqTv1QBgf9PJsKzHMQl0bBPE,63199
+boto3_dataclass_osis-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_osis-1.40.0.dist-info/METADATA,sha256=utonnty_v9iuDnPJwxka6Hn-TYGUk6zArLwxrwP0zi8,1662
+boto3_dataclass_osis-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_osis-1.40.0.dist-info/RECORD,,
