@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: duka_dl
+Version: 0.1.1
+Summary: A fast and simple downloader for Dukascopy
+License: MIT License
+         
+         Copyright (c) 2025 Trần Đình Nguyên
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+License-File: LICENSE
+Author: Trần Đình Nguyên
+Author-email: nguyentd010@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: polars (>=1.33.1,<2.0.0)
+Requires-Dist: rich-argparse (>=1.7.1,<2.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+
+# Duka-DL
+
+Dukascopy is known for its high-quality, tick-level historical market data, which is excellent for backtesting trading strategies. However, downloading this data for long periods is a tedious manual process of downloading, saving, and resampling individual daily files.
+
+**Duka-DL** automates this entire workflow. It is a free, fast, and simple command-line tool that fetches data for each day in your specified range and consolidates it into a single, clean CSV or Parquet file, ready for analysis.
+
+## Installation
+
+Install the package directly from PyPI:
+
+```bash
+pip install duka-dl
+```
+
+## Usage
+
+Using the tool is straightforward. You can specify a symbol, start date, and end date.
+
+### Download Data for a Specific Date Range
+
+To download data for `EURUSD` from January 1st, 2023 to January 31st, 2023:
+
+```bash
+duka-dl EUR-USD -s 01-01-2023 -e 31-01-2023
+```
+
+### Download From a Start Date to Present
+
+If you provide only a start date, the tool will automatically download data up to the most recent complete day.
+
+```bash
+duka-dl EUR-USD -s 01-06-2024
+```
+
+### Download All Available Data
+
+To download all available historical data for a symbol (the tool will find the earliest data available):
+
+```bash
+duka-dl EUR-USD --all
+```
+
+### Save as Parquet
+
+For better performance and smaller file sizes, you can save the output in Parquet format using the `-p` or `--parquet` flag:
+
+```bash
+duka-dl EUR-USD --all --parquet
+```
+
+### Download ASK Price
+
+By default, the tool downloads BID prices. To download ASK prices, use the `-m ASK` flag.
+
+```bash
+duka-dl GBP-JPY -s 01-01-2024 -m ASK
+```
+
+### Help
+
+To see a list of all available commands and options, use the `--help` flag:
+
+```bash
+duka-dl --help
+```
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+
