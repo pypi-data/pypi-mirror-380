@@ -1,0 +1,345 @@
+Metadata-Version: 2.4
+Name: tsm-realtime
+Version: 0.1.4
+Summary: Real-time audio time-scale modification with look-up approximation and full computation methods
+Author: Sayema Lubis, Clark Peng, Jared Carreno
+License: MIT
+Project-URL: Homepage, https://github.com/HMC-MIR/TSMRealTime
+Project-URL: Repository, https://github.com/HMC-MIR/TSMRealTime
+Project-URL: Issues, https://github.com/HMC-MIR/TSMRealTime/issues
+Keywords: audio,dsp,tempo,music,real-time
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: librosa>=0.9.0
+Requires-Dist: pydub>=0.25.0
+Requires-Dist: pynput>=1.8.1
+Provides-Extra: audio
+Requires-Dist: pyaudio>=0.2.11; extra == "audio"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TSM Real-Time
+
+A Python library for **real-time audio time-scale modification** using advanced DSP techniques including Phase Vocoder (PV) and Overlap-Add (OLA) methods.
+
+[![PyPI version](https://badge.fury.io/py/tsm-realtime.svg)](https://badge.fury.io/py/tsm-realtime)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Features
+
+- **Real-time audio processing** with interactive controls
+- **Multiple time-stretching algorithms**:
+  - Phase Vocoder (PV) with baseline and lookup methods
+  - Overlap-Add (OLA) processing
+  - Hybrid approaches combining PV and OLA
+- **Harmonic/Percussive source separation** using librosa
+- **Interactive keyboard controls** for real-time tempo adjustment
+- **Modular design** with reusable TSM functions
+- **Cross-platform support** (Windows, macOS, Linux)
+
+## Installation
+
+⚠️ **Important**: This package requires local machine installation and cannot be used in headless environments (e.g., Google Colab, Jupyter notebooks without display) due to keyboard control dependencies.
+
+<!-- ### From PyPI (Recommended)
+
+```bash
+pip install tsm-realtime
+``` -->
+For full **audio playback functionality**, you must install PyAudio and PortAudio libraries separately:
+
+```bash
+# Install audio dependencies
+pip install tsm-realtime[audio]
+```
+
+**System-specific PortAudio installation:**
+
+- **macOS**: `brew install portaudio`
+- **Ubuntu/Debian**: `sudo apt-get install portaudio19-dev`
+- **Windows**: Usually included with PyAudio wheels
+
+### From Source
+
+```bash
+git clone https://github.com/HMC-MIR/TSMRealTime.git
+cd TSMRealTime
+# See system-specific PortAudio installations
+pip install -e .[audio]  # Editable install with audio support
+```
+
+
+## Quick Start
+
+### Prerequisites
+
+1. **Install the package**:
+```bash
+pip install tsm-realtime
+```
+
+2. **Install audio support** (for playback functionality):
+
+macOS:
+```bash
+brew install portaudio
+pip install tsm-realtime[audio]
+```
+
+Ubuntu/Debian:
+```bash
+sudo apt-get install portaudio19-dev
+pip install tsmrealtime[audio]
+```
+
+Windows:
+```bash
+pip install tsmrealtime[audio]  # Usually works directly
+```
+
+3. **Install system audio libraries** (see Requirements section above)
+
+### Basic Usage
+
+```python
+import tsm_realtime
+
+# Create TSM processor instance
+tsm = tsm_realtime.TSMRealTime()
+
+# Play audio with real-time controls
+tsm.play_hps_full("path/to/your/audio.wav")
+```
+
+### Interactive Controls
+
+When running the audio processing, use these keyboard controls:
+
+- **↑ (Up Arrow)**: Increase time-stretch factor (alpha)
+- **↓ (Down Arrow)**: Decrease time-stretch factor (alpha)  
+- **Ctrl+C**: Stop playback
+
+### Advanced Usage
+
+```python
+# Use lookup-based method for better performance
+tsm.play_hps_lookup("audio.wav", beta=0.25)
+
+# The beta parameter controls the overlap factor for lookup analysis
+# Lower values (0.1-0.3) provide better quality
+# Higher values (0.4-0.8) provide faster performance
+```
+
+## API Reference
+
+### TSMRealTime Class
+
+#### Methods
+
+- `play_hps_full(filename)`: Play audio using hybrid baseline method
+- `play_hps_lookup(filename, beta=0.25)`: Play audio using hybrid lookup method
+- `generate_lookup(beta, xh)`: Generate lookup tables for efficient processing
+- `phase_vocoder_full(xh, Ha_PV, prev_phase)`: Complete phase vocoder analysis
+- `phase_vocoder_lookup(...)`: Phase vocoder using precomputed tables
+- `ola_process(xp, Ha_ola)`: Overlap-Add processing for percussive components
+
+#### Parameters
+
+- `alpha`: Time-stretch factor (1.0 = normal speed, >1.0 = faster, <1.0 = slower)
+- `beta`: Overlap factor for lookup analysis (default: 0.25)
+- `sr`: Sampling rate (default: 22050 Hz)
+
+## Requirements
+
+### System Requirements
+
+- **Python**: 3.8 or higher
+- **Local machine**: Cannot run in headless environments (Colab, remote servers without display)
+- **Audio system**: Requires PortAudio for audio I/O (system-specific installation)
+
+### Python Dependencies
+
+**Core dependencies** (included automatically):
+- `numpy>=1.20.0`
+- `scipy>=1.7.0`
+- `librosa>=0.9.0`
+- `pydub>=0.25.0`
+- `pynput>=1.8.1` (for keyboard controls)
+
+**Audio dependencies** (install separately):
+- `pyaudio>=0.2.11` (requires PortAudio system library)
+
+### Why Separate Audio Installation?
+
+PyAudio and PortAudio cannot be bundled with the package due to:
+- **System-specific compilation**: PortAudio must be compiled for each operating system
+- **Hardware dependencies**: Audio drivers vary by machine
+- **Platform-specific libraries**: Different audio backends (ALSA, CoreAudio, DirectSound)
+
+## Algorithm Details
+
+### Phase Vocoder (PV)
+- Processes harmonic components of audio
+- Maintains phase continuity for natural sound
+- Supports both real-time and lookup-based processing
+
+### Overlap-Add (OLA)
+- Handles percussive components efficiently
+- Provides good quality for transient sounds
+- Lower computational complexity
+
+### Hybrid Approach
+- Combines PV for harmonics and OLA for percussives
+- Achieves optimal balance of quality and performance
+- Automatic source separation using median filtering
+
+## Performance Notes
+
+- **Lookup method**: Faster processing, slightly lower quality
+- **Full method**: Higher quality, more computational overhead
+- **Real-time performance**: Optimized for interactive use
+- **Memory usage**: Moderate, depends on audio length and beta parameter
+
+## Examples
+
+### Example 1: Basic Real-time Processing
+
+```python
+import tsm_realtime
+
+# Initialize processor
+tsm = tsm_realtime.TSMRealTime()
+
+# Play with real-time tempo control
+print("Playing audio. Use ↑/↓ arrows to adjust tempo, Ctrl+C to stop")
+tsm.play_hps_full("sample.wav")
+```
+
+### Example 2: High-Performance Processing
+
+```python
+# Use lookup method for better performance
+tsm.play_hps_lookup("sample.wav", beta=0.2)
+```
+
+### Example 3: Custom Processing Pipeline
+
+```python
+import librosa
+import tsm_realtime
+
+# Load and preprocess audio
+x, sr = librosa.load("sample.wav", mono=True, sr=22050)
+tsm = tsm_realtime.TSMRealTime()
+
+# Generate lookup tables for efficient processing
+xh, xp = tsm._harmonic_percussive_separation(x, sr)
+S_phase, S_mag, w_if, Ha_lookup = tsm.generate_lookup(0.25, xh)
+
+# Process with custom parameters
+# ... (advanced usage)
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**Import fails in headless environments (Colab, remote servers):**
+```
+ImportError: this platform is not supported: failed to acquire X connection
+```
+**Solution**: This package requires a local machine with display capabilities. Cannot run in:
+- Google Colab
+- Remote servers without X11
+- Docker containers without display forwarding
+
+**PyAudio installation fails:**
+```bash
+# macOS
+brew install portaudio
+pip install tsm-realtime[audio]
+
+# Ubuntu/Debian
+sudo apt-get install portaudio19-dev
+pip install tsm-realtime[audio]
+
+# Windows
+pip install tsm-realtime[audio]
+```
+
+**Audio playback issues:**
+- Ensure audio drivers are properly installed
+- Check that the audio file format is supported
+- Verify PortAudio is correctly installed
+- Try different audio backends if available
+
+**Performance issues:**
+- Use lookup method (`play_hps_lookup`) for better performance
+- Reduce `beta` parameter for faster processing
+- Ensure sufficient system resources
+
+## Contributing
+
+We welcome contributions! Please see our [GitHub repository](https://github.com/HMC-MIR/TSMRealTime) for:
+
+- Issue reporting
+- Feature requests
+- Pull requests
+- Development guidelines
+
+## Citation
+
+If you use this library in your research, please cite:
+
+```bibtex
+@software{tsm_realtime,
+  title={TSM Real-Time: Real-time Audio Time-Scale Modification},
+  author={Lubis, Sayema and Peng, Clark and Carreno, Jared},
+  year={2025},
+  url={https://github.com/HMC-MIR/TSMRealTime}
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Authors
+
+- **Sayema Lubis** - *Development and Initial work*
+- **Clark Peng** - *Development*
+- **Jared Carreno** - *Initial work*
+- **TJ Tsai** - *Project Advisor*
+
+## Acknowledgments
+
+- Built on top of excellent libraries: NumPy, SciPy, librosa, and PyAudio
+- Inspired by classic DSP research in time-scale modification
+- Developed at Harvey Mudd College (HMC)
+
+---
+
+For more information, visit our [GitHub repository](https://github.com/HMC-MIR/TSMRealTime) or [PyPI page](https://pypi.org/project/tsm-realtime/).
