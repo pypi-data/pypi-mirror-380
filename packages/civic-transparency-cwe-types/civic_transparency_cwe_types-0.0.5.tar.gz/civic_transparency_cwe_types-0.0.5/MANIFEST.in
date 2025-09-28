@@ -1,0 +1,2 @@
+recursive-include src *.pyi
+recursive-include src *.typed

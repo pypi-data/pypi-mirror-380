@@ -1,0 +1,5524 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows">
+
+
+        <meta name="author" content="Civic Interconnect">
+
+
+        <link rel="canonical" href="https://civic-interconnect.github.io/civic-transparency-cwe-types/api/cwe_schema/">
+
+
+        <link rel="prev" href="../cwe/">
+
+
+        <link rel="next" href="../standards/">
+
+
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+
+
+
+        <title>CWE Schema - Civic Transparency CWE Types</title>
+
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+
+
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+
+
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+
+
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+
+        <a href="#cwe-schema" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-header__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Civic Transparency CWE Types
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+
+              CWE Schema
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+        <label class="md-header__button md-icon" for="__search">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="md-header__source">
+        <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+
+  </nav>
+
+</header>
+
+    <div class="md-container" data-md-component="container">
+
+
+
+
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+
+
+
+
+
+  Home
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../../usage/" class="md-tabs__link">
+
+
+
+
+
+  Usage
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../base/" class="md-tabs__link">
+
+
+
+
+
+  Types
+
+        </a>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+
+
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-nav__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Civic Transparency CWE Types
+  </label>
+
+    <div class="md-nav__source">
+      <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Home
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Usage
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Types
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../base/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Base
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../batch/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Batch
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../cwe/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    CWE
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+    CWE Schema
+
+  </span>
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+    CWE Schema
+
+  </span>
+
+
+      </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#schema-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFreezeResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFreezeResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.breaking_change_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      breaking_change_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.compatible_change_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      compatible_change_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_breaking_changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_breaking_changes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_violations" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_violations
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.is_compatible" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_compatible
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.violation_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      violation_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_compatibility_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_compatibility_summary
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_overall_assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_overall_assessment
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schemas
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_unsupported_versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_unsupported_versions
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.schema_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.version_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      version_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_latest_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_latest_version
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_schemas_by_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schemas_by_version
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schema
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.field_error_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      field_error_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.has_field_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_field_errors
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.validated_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      validated_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_failed_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_failed_cwes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_passed_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_passed_cwes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_validation_rate_by_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_validation_rate_by_schema
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.add_schema_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_schema_version
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.analyze_schema_changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_schema_changes
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.batch_validate_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      batch_validate_cwes
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.check_schema_compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_schema_compatibility
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.detect_schema_freeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      detect_schema_freeze
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_freeze_analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_freeze_analysis
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_schema_loading_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_loading_summary
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_validation_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_validation_summary
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.load_cwe_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_cwe_schema
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.track_schema_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      track_schema_usage
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.track_unsupported_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      track_unsupported_version
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.validate_cwe_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_cwe_data
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.validate_cwe_field" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_cwe_field
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#schema-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweBreakingChangeError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweBreakingChangeError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweDataValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweDataValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweFieldValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweFieldValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweFreezeViolationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweFreezeViolationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaCircularReferenceError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaCircularReferenceError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaCompatibilityError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaCompatibilityError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaConstraintError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaConstraintError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFormatError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFormatError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFreezeError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFreezeError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaLoadingError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaNotFoundError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaParsingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaParsingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaReferenceError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaReferenceError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaValidationError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaVersionError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaVersionError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../standards/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Standards
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Validation
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#schema-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFreezeResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFreezeResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.breaking_change_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      breaking_change_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.compatible_change_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      compatible_change_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_breaking_changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_breaking_changes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_violations" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_violations
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.is_compatible" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_compatible
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.violation_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      violation_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_compatibility_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_compatibility_summary
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_overall_assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_overall_assessment
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schemas
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_unsupported_versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_unsupported_versions
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.schema_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      schema_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.version_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      version_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_latest_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_latest_version
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_schemas_by_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schemas_by_version
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_schema
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.field_error_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      field_error_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.has_field_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_field_errors
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.validated_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      validated_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_failed_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_failed_cwes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_passed_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_passed_cwes
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_validation_rate_by_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_validation_rate_by_schema
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.add_schema_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_schema_version
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.analyze_schema_changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      analyze_schema_changes
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.batch_validate_cwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      batch_validate_cwes
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.check_schema_compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_schema_compatibility
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.detect_schema_freeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      detect_schema_freeze
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_freeze_analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_freeze_analysis
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_schema_loading_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_schema_loading_summary
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.get_validation_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_validation_summary
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.load_cwe_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_cwe_schema
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.track_schema_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      track_schema_usage
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.track_unsupported_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      track_unsupported_version
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.validate_cwe_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_cwe_data
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.results.validate_cwe_field" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_cwe_field
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#schema-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweBreakingChangeError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweBreakingChangeError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweDataValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweDataValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweFieldValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweFieldValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweFreezeViolationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweFreezeViolationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaCircularReferenceError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaCircularReferenceError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaCompatibilityError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaCompatibilityError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaConstraintError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaConstraintError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFormatError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFormatError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaFreezeError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaFreezeError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaLoadingError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaNotFoundError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaParsingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaParsingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaReferenceError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaReferenceError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaValidationError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      CweSchemaVersionError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="CweSchemaVersionError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+
+
+
+
+
+
+
+
+<h1 id="cwe-schema">CWE Schema</h1>
+<p>Types and operations for CWE schema management, validation, and version control. Handles schema loading, constraint validation, and freeze operations for version locking.</p>
+<h2 id="schema-results">Schema Results</h2>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="ci.transparency.cwe.types.cwe.schema.results"></a>
+    <div class="doc doc-contents first">
+
+        <p>CWE schema result types and operations.</p>
+<p>Immutable, slotted dataclasses for tracking CWE schema loading, validation,
+and freeze detection operations. Built on base result types for consistent
+count tracking and error handling.</p>
+
+
+<details class="core-types" open>
+  <summary>Core types</summary>
+  <ul>
+<li>CweSchemaLoadingResult: Tracks CWE schema loading with version info</li>
+<li>CweSchemaValidationResult: Tracks CWE data validation against schemas</li>
+<li>CweSchemaFreezeResult: Tracks schema freeze violations and compatibility</li>
+</ul>
+</details>
+
+<details class="key-operations" open>
+  <summary>Key operations</summary>
+  <ul>
+<li>load_cwe_schema: Load CWE schema with version detection</li>
+<li>validate_cwe_data: Validate CWE data against loaded schemas</li>
+<li>detect_schema_freeze: Detect breaking changes in schema updates</li>
+</ul>
+</details>
+
+<details class="design-principles" open>
+  <summary>Design principles</summary>
+  <ul>
+<li>Immutable: uses dataclasses.replace for all modifications</li>
+<li>CWE-specific: tailored for CWE schema requirements and patterns</li>
+<li>Version-aware: tracks schema versions and compatibility</li>
+<li>Validation-focused: CWE data validation tracking</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult" class="doc doc-heading">
+            <code>CweSchemaFreezeResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseValidationResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.BaseValidationResult)" href="../base/#ci.transparency.cwe.types.base.results.BaseValidationResult">BaseValidationResult</a></code></p>
+
+
+        <p>Result from CWE schema freeze detection.</p>
+<p>Tracks schema freeze violations, breaking changes, and compatibility
+analysis between schema versions.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.breaking_change_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">breaking_change_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of breaking changes detected.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.compatible_change_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">compatible_change_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of compatible changes detected.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_breaking_changes" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_breaking_changes</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any breaking changes were detected.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.has_violations" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_violations</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any schema freeze violations were detected.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.is_compatible" class="doc doc-heading">
+            <code class=" language-python"><span class="n">is_compatible</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if schema changes are backward compatible.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.violation_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">violation_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of schema freeze violations detected.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_compatibility_summary" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_compatibility_summary</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get summary of schema compatibility analysis.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dictionary with compatibility analysis results</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult.get_overall_assessment" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_overall_assessment</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get overall assessment of schema changes.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult" class="doc doc-heading">
+            <code>CweSchemaLoadingResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.BaseLoadingResult)" href="../base/#ci.transparency.cwe.types.base.results.BaseLoadingResult">BaseLoadingResult</a></code></p>
+
+
+        <p>Result from CWE schema loading operations.</p>
+<p>Tracks loaded CWE schemas, version information, and schema-specific
+metadata. Extends BaseLoadingResult to provide loaded/failed counts
+and conversion protocol.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schemas" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_schemas</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any schemas were successfully loaded.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_unsupported_versions" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_unsupported_versions</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any unsupported schema versions were encountered.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.schema_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">schema_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of schemas successfully loaded.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.version_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">version_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of distinct schema versions loaded.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_latest_version" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_latest_version</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the latest schema version loaded.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Latest schema version string, or None if no schemas loaded</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.get_schemas_by_version" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_schemas_by_version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get schema names for a specific version.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema version to filter by</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of schema names using the specified version</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult.has_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_schema</span><span class="p">(</span><span class="n">schema_name</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Check if a specific schema was loaded.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the schema to check</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True if the schema was successfully loaded</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult" class="doc doc-heading">
+            <code>CweSchemaValidationResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseValidationResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.BaseValidationResult)" href="../base/#ci.transparency.cwe.types.base.results.BaseValidationResult">BaseValidationResult</a></code></p>
+
+
+        <p>Result from CWE data validation against schemas.</p>
+<p>Tracks CWE validation results, field-level errors, and validation
+statistics. Extends BaseValidationResult for passed/failed counts.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.field_error_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">field_error_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of field-level validation errors.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.has_field_errors" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_field_errors</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any field-level validation errors occurred.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.validated_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">validated_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of CWEs that were validated.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_failed_cwes" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_failed_cwes</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get list of CWE IDs that failed validation.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of CWE IDs that failed schema validation</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_passed_cwes" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_passed_cwes</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get list of CWE IDs that passed validation.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of CWE IDs that passed schema validation</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult.get_validation_rate_by_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_validation_rate_by_schema</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get validation success rate for this schema.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1] representing validation success rate</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.add_schema_version" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_schema_version</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add or update schema version information.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.add_schema_version[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the schema</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Version string to associate with the schema</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.add_schema_version[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with version information updated</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.analyze_schema_changes" class="doc doc-heading">
+            <code class=" language-python"><span class="n">analyze_schema_changes</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">old_schema</span><span class="p">,</span> <span class="n">new_schema</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Perform analysis of schema changes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.analyze_schema_changes[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The freeze result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>old_schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Previous schema version</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>new_schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New schema version</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.analyze_schema_changes[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with change analysis</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.batch_validate_cwes" class="doc doc-heading">
+            <code class=" language-python"><span class="n">batch_validate_cwes</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">cwe_data_dict</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">schema_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Validate multiple CWEs against a schema in batch.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.batch_validate_cwes[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cwe_data_dict</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dictionary of CWE ID -&gt; CWE data</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>JSON schema to validate against</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional name of the schema being used</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.batch_validate_cwes[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with all validation outcomes recorded</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.check_schema_compatibility" class="doc doc-heading">
+            <code class=" language-python"><span class="n">check_schema_compatibility</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema1</span><span class="p">,</span> <span class="n">schema2</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Check compatibility between two schemas.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.check_schema_compatibility[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The freeze result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema1</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>First schema to compare</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema2</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Second schema to compare</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.check_schema_compatibility[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with compatibility analysis performed</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.detect_schema_freeze" class="doc doc-heading">
+            <code class=" language-python"><span class="n">detect_schema_freeze</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">old_schema</span><span class="p">,</span> <span class="n">new_schema</span><span class="p">,</span> <span class="n">old_version</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">new_version</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Detect schema freeze violations between two schema versions.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.detect_schema_freeze[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The freeze result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>old_schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Previous schema version</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>new_schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New schema version</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>old_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional version string for old schema</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>new_version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional version string for new schema</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.detect_schema_freeze[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with freeze analysis performed</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.get_freeze_analysis" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_freeze_analysis</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate freeze analysis summary.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="CweSchemaFreezeResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult)" href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaFreezeResult">CweSchemaFreezeResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The freeze result to summarize</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dictionary with detailed freeze analysis</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.get_schema_loading_summary" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_schema_loading_summary</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate schema loading summary.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="CweSchemaLoadingResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult)" href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaLoadingResult">CweSchemaLoadingResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema loading result to summarize</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dictionary with detailed schema loading statistics</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.get_validation_summary" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_validation_summary</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate validation summary.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="CweSchemaValidationResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult)" href="#ci.transparency.cwe.types.cwe.schema.results.CweSchemaValidationResult">CweSchemaValidationResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to summarize</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dictionary with detailed validation statistics</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.load_cwe_schema" class="doc doc-heading">
+            <code class=" language-python"><span class="n">load_cwe_schema</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span> <span class="n">schema_data</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Load a CWE schema with version detection.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.load_cwe_schema[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name/identifier for the schema</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_data</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The parsed schema data</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>file_path</code>
+            </td>
+            <td>
+                  <code><span title="pathlib.Path">Path</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to the schema file</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional explicit version (detected if not provided)</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.load_cwe_schema[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with schema loaded and metadata updated</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.track_schema_usage" class="doc doc-heading">
+            <code class=" language-python"><span class="n">track_schema_usage</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Track usage of a loaded schema.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.track_schema_usage[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the schema being used</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.track_schema_usage[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with usage information updated (could track usage counts in future)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.track_unsupported_version" class="doc doc-heading">
+            <code class=" language-python"><span class="n">track_unsupported_version</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Track an unsupported schema version.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.track_unsupported_version[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>version</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The unsupported version</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>reason</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Reason why the version is unsupported</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.track_unsupported_version[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with unsupported version tracked and warning added</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_data" class="doc doc-heading">
+            <code class=" language-python"><span class="n">validate_cwe_data</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">cwe_id</span><span class="p">,</span> <span class="n">cwe_data</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">schema_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Validate CWE data against a schema.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_data[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cwe_id</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ID of the CWE being validated</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cwe_data</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>CWE data to validate</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>JSON schema to validate against</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional name of the schema being used</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_data[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with validation outcome recorded</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_field" class="doc doc-heading">
+            <code class=" language-python"><span class="n">validate_cwe_field</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">field_path</span><span class="p">,</span> <span class="n">field_value</span><span class="p">,</span> <span class="n">field_schema</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Validate a specific CWE field against its schema.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_field[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>field_path</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Path to the field (e.g., "relationships[0].id")</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>field_value</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Value of the field</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>field_schema</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Schema for the specific field</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.cwe.schema.results.validate_cwe_field[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with field validation outcome recorded</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><p>options:
+show<em>source: false
+show_signature: true
+group_by_category: true
+filters: - "!^</em>"</p>
+<h2 id="schema-errors">Schema Errors</h2>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="ci.transparency.cwe.types.cwe.schema.errors"></a>
+    <div class="doc doc-contents first">
+
+        <p>CWE schema error types with rich schema context.</p>
+<p>Domain-specific error hierarchy for CWE schema operations. Extends base error
+types to provide CWE schema-specific context like schema names, versions,
+validation paths, and freeze violation details.</p>
+
+
+<details class="design-principles" open>
+  <summary>Design principles</summary>
+  <ul>
+<li>Inherits consistent formatting from base error types</li>
+<li>Adds CWE schema-specific context (schema names, versions, field paths)</li>
+<li>Provides specific exception types for different schema failure scenarios</li>
+<li>Maintains minimal memory overhead with <strong>slots</strong></li>
+</ul>
+</details>
+
+<details class="core-cwe-schema-errors" open>
+  <summary>Core CWE schema errors</summary>
+  <ul>
+<li>CweSchemaError: Base CWE schema error with schema context</li>
+<li>CweSchemaLoadingError: CWE schema loading/parsing failures</li>
+<li>CweSchemaValidationError: CWE data validation against schema failures</li>
+<li>CweSchemaFreezeError: CWE schema freeze/compatibility violations</li>
+</ul>
+</details>
+
+<details class="typical-usage" open>
+  <summary>Typical usage</summary>
+  <p>from ci.transparency.cwe.types.cwe.schema import CweSchemaValidationError</p>
+<p>try:
+    validate_cwe_against_schema(cwe_data, schema)
+except CweSchemaValidationError as e:
+    # Rich context: "Validation failed | Schema: cwe-v2.0 | Field: relationships[0].id | CWE: CWE-A001"
+    logger.error(f"CWE schema error: {e}")</p>
+</details>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError" class="doc doc-heading">
+            <code>CweBreakingChangeError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaFreezeError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError">CweSchemaFreezeError</a></code></p>
+
+
+        <p>CWE schema breaking change detected.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweBreakingChangeError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add breaking change details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError" class="doc doc-heading">
+            <code>CweDataValidationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaValidationError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError">CweSchemaValidationError</a></code></p>
+
+
+        <p>CWE data validation against schema failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweDataValidationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add validation details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError" class="doc doc-heading">
+            <code>CweFieldValidationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaValidationError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError">CweSchemaValidationError</a></code></p>
+
+
+        <p>CWE field-level validation against schema failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweFieldValidationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add field validation details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError" class="doc doc-heading">
+            <code>CweFreezeViolationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaFreezeError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError">CweSchemaFreezeError</a></code></p>
+
+
+        <p>CWE schema freeze rule violation detected.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweFreezeViolationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add violation details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError" class="doc doc-heading">
+            <code>CweSchemaCircularReferenceError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaValidationError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError">CweSchemaValidationError</a></code></p>
+
+
+        <p>CWE schema contains circular references.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCircularReferenceError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add circular reference details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError" class="doc doc-heading">
+            <code>CweSchemaCompatibilityError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaFreezeError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError">CweSchemaFreezeError</a></code></p>
+
+
+        <p>CWE schema compatibility check failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaCompatibilityError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add compatibility details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError" class="doc doc-heading">
+            <code>CweSchemaConstraintError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaValidationError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError">CweSchemaValidationError</a></code></p>
+
+
+        <p>CWE schema constraint validation failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaConstraintError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add constraint details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError" class="doc doc-heading">
+            <code>CweSchemaError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingError (ci.transparency.cwe.types.base.errors.BaseLoadingError)" href="../base/#ci.transparency.cwe.types.base.errors.BaseLoadingError">BaseLoadingError</a></code></p>
+
+
+        <p>Base exception for CWE schema operations.</p>
+<p>Extends BaseLoadingError to add CWE schema-specific context like
+schema names, versions, and CWE identifiers.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add CWE schema context to error message.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError" class="doc doc-heading">
+            <code>CweSchemaFormatError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaLoadingError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError">CweSchemaLoadingError</a></code></p>
+
+
+        <p>CWE schema format is invalid or malformed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFormatError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add format issue details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError" class="doc doc-heading">
+            <code>CweSchemaFreezeError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseValidationError (ci.transparency.cwe.types.base.errors.BaseValidationError)" href="../base/#ci.transparency.cwe.types.base.errors.BaseValidationError">BaseValidationError</a></code></p>
+
+
+        <p>Base CWE schema freeze violation error.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaFreezeError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add freeze violation details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError" class="doc doc-heading">
+            <code>CweSchemaLoadingError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError">CweSchemaError</a></code></p>
+
+
+        <p>CWE schema loading operation failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaNotFoundError" class="doc doc-heading">
+            <code>CweSchemaNotFoundError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaLoadingError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError">CweSchemaLoadingError</a></code></p>
+
+
+        <p>CWE schema file could not be found.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError" class="doc doc-heading">
+            <code>CweSchemaParsingError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaLoadingError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError">CweSchemaLoadingError</a></code></p>
+
+
+        <p>CWE schema file could not be parsed as valid JSON.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaParsingError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add parsing error details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError" class="doc doc-heading">
+            <code>CweSchemaReferenceError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaValidationError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError">CweSchemaValidationError</a></code></p>
+
+
+        <p>CWE schema reference could not be resolved.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaReferenceError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add reference details to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaValidationError" class="doc doc-heading">
+            <code>CweSchemaValidationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaError">CweSchemaError</a></code></p>
+
+
+        <p>Base CWE schema validation error.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError" class="doc doc-heading">
+            <code>CweSchemaVersionError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CweSchemaLoadingError (ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError)" href="#ci.transparency.cwe.types.cwe.schema.errors.CweSchemaLoadingError">CweSchemaLoadingError</a></code></p>
+
+
+        <p>CWE schema version is not supported or invalid.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.cwe.schema.errors.CweSchemaVersionError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add supported versions to context.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div><p>options:
+show<em>source: false
+show_signature: true
+group_by_category: true
+filters: - "!^</em>"</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <aside class="md-source-file">
+
+
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 26, 2025 14:19:08 UTC">2025-09-26</span>
+  </span>
+
+
+
+
+
+  </aside>
+
+
+
+
+
+
+              </article>
+            </div>
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+
+
+
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.footer", "navigation.tabs", "navigation.top", "navigation.expand", "navigation.sections", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+
+
+  </body>
+</html>

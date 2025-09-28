@@ -1,0 +1,7545 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows">
+
+
+        <meta name="author" content="Civic Interconnect">
+
+
+        <link rel="canonical" href="https://civic-interconnect.github.io/civic-transparency-cwe-types/api/base/">
+
+
+        <link rel="prev" href="../../usage/">
+
+
+        <link rel="next" href="../batch/">
+
+
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+
+
+
+        <title>Base - Civic Transparency CWE Types</title>
+
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+
+
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+
+
+
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+
+
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+
+        <a href="#base-types" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-header__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Civic Transparency CWE Types
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+
+              Base
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+        <label class="md-header__button md-icon" for="__search">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="md-header__source">
+        <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+
+  </nav>
+
+</header>
+
+    <div class="md-container" data-md-component="container">
+
+
+
+
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+
+
+
+
+
+  Home
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+    <li class="md-tabs__item">
+      <a href="../../usage/" class="md-tabs__link">
+
+
+
+
+
+  Usage
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+
+
+
+
+
+  Types
+
+        </a>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+
+
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Civic Transparency CWE Types" class="md-nav__button md-logo" aria-label="Civic Transparency CWE Types" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Civic Transparency CWE Types
+  </label>
+
+    <div class="md-nav__source">
+      <a href="https://github.com/civic-interconnect/civic-transparency-cwe-types" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Home
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Usage
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+    Types
+
+  </span>
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+    Base
+
+  </span>
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+    Base
+
+  </span>
+
+
+      </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#base-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base Results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.failure_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      failure_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.has_attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_attempts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.total_processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_processed
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.from_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_counts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.from_result" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_result
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.to_subtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_subtype
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.error_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      error_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_errors
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_infos" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_infos
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_warnings
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.info_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      info_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.success" class="md-nav__link">
+    <span class="md-ellipsis">
+      success
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.total_issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_issues
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.total_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_messages
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.warning_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      warning_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.from_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_exception
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      ok
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.failure_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      failure_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.has_validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_validations
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.pass_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      pass_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.total_processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_processed
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_bools
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="from_bools">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools--validation_resultpassed-3-validation_resultfailed-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      validation_result.passed == 3, validation_result.failed == 1
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_counts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_result" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_result
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.to_subtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_subtype
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_counts
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_error
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_info
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_validation_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_validation_counts
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_warning
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_infos" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_infos
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_warnings
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_loading
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many_loading
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many_validation
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_validation
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.process_validation_batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      process_validation_batch
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_exception
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_fail
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_failed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_failure
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_loaded
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_pass
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_passed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_passed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_skip" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_skip
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_success" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_success
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_error
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_failed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_warning
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.with_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      with_exception
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#base-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base Errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.AbortedError" class="md-nav__link">
+    <span class="md-ellipsis">
+      AbortedError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="AbortedError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.AbortedError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseLoadingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseLoadingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseLoadingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseProcessingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseProcessingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseProcessingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseProcessingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseTransparencyError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseTransparencyError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.ConfigurationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigurationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="ConfigurationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.ConfigurationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingFileNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingFileNotFoundError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingParsingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="LoadingParsingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingParsingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="LoadingValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.NetworkError" class="md-nav__link">
+    <span class="md-ellipsis">
+      NetworkError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="NetworkError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.NetworkError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.SchemaError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.SchemaError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.TransparencyTimeoutError" class="md-nav__link">
+    <span class="md-ellipsis">
+      TransparencyTimeoutError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="TransparencyTimeoutError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.TransparencyTimeoutError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.VersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      VersionError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="VersionError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.VersionError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../batch/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Batch
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../cwe/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    CWE
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../cwe_schema/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    CWE Schema
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../standards/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Standards
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+    Validation
+
+  </span>
+
+
+      </a>
+    </li>
+
+
+
+
+          </ul>
+        </nav>
+
+    </li>
+
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#base-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base Results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseLoadingResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseLoadingResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.failure_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      failure_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.has_attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_attempts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.total_processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_processed
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.from_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_counts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.from_result" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_result
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseLoadingResult.to_subtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_subtype
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.error_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      error_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_errors
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_infos" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_infos
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.has_warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_warnings
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.info_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      info_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.success" class="md-nav__link">
+    <span class="md-ellipsis">
+      success
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.total_issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_issues
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.total_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_messages
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.warning_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      warning_count
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.from_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_exception
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseResult.ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      ok
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseValidationResult
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseValidationResult">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.failure_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      failure_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.has_validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_validations
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.pass_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      pass_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.success_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      success_rate
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.total_processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_processed
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_bools
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="from_bools">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools--validation_resultpassed-3-validation_resultfailed-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      validation_result.passed == 3, validation_result.failed == 1
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_counts
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.from_result" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_result
+    </span>
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.BaseValidationResult.to_subtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_subtype
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_counts
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_error
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_info
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_validation_counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_validation_counts
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.add_warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_warning
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_infos" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_infos
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.extend_warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      extend_warnings
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_loading
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many_loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many_loading
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_many_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_many_validation
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_results
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.merge_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_validation
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.process_validation_batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      process_validation_batch
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_exception
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_fail
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_failed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_failure
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_loaded
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_pass
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_passed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_passed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_skip" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_skip
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_success" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_success
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_error
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_failed
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.record_validation_warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      record_validation_warning
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.results.with_exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      with_exception
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#base-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base Errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      errors
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.AbortedError" class="md-nav__link">
+    <span class="md-ellipsis">
+      AbortedError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="AbortedError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.AbortedError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseLoadingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseLoadingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseLoadingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseLoadingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseProcessingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseProcessingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseProcessingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseProcessingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseTransparencyError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseTransparencyError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="BaseValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.BaseValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.ConfigurationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigurationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="ConfigurationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.ConfigurationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingFileNotFoundError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingFileNotFoundError
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingParsingError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingParsingError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="LoadingParsingError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingParsingError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingValidationError" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadingValidationError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="LoadingValidationError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.LoadingValidationError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.NetworkError" class="md-nav__link">
+    <span class="md-ellipsis">
+      NetworkError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="NetworkError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.NetworkError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.SchemaError" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="SchemaError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.SchemaError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.TransparencyTimeoutError" class="md-nav__link">
+    <span class="md-ellipsis">
+      TransparencyTimeoutError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="TransparencyTimeoutError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.TransparencyTimeoutError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.VersionError" class="md-nav__link">
+    <span class="md-ellipsis">
+      VersionError
+    </span>
+  </a>
+
+    <nav class="md-nav" aria-label="VersionError">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#ci.transparency.cwe.types.base.errors.VersionError.get_context_parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_context_parts
+    </span>
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
+    </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+
+
+
+
+
+
+
+
+<h1 id="base-types">Base Types</h1>
+<p>Foundation types that all other result types build upon. These provide core functionality for tracking errors, warnings, loading operations, and validation results.</p>
+<h2 id="base-results">Base Results</h2>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="ci.transparency.cwe.types.base.results"></a>
+    <div class="doc doc-contents first">
+
+        <p>Base result types and helpers for transparency operations.</p>
+<p>This module contains all foundational result types and their functional helpers.
+Combines BaseResult, BaseLoadingResult, and BaseValidationResult with their
+combined set of immutable operations.</p>
+
+
+<details class="core-types" open>
+  <summary>Core types</summary>
+  <ul>
+<li>BaseResult: Abstract base for all operation results</li>
+<li>BaseLoadingResult: Base for loading operations (loaded/failed tracking)</li>
+<li>BaseValidationResult: Base for validation operations (passed/failed tracking)</li>
+</ul>
+</details>        <p>All helpers follow functional, immutable patterns with type preservation.</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.results.BaseLoadingResult" class="doc doc-heading">
+            <code>BaseLoadingResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.results.BaseResult)" href="#ci.transparency.cwe.types.base.results.BaseResult">BaseResult</a></code></p>
+
+
+        <p>Base result for all loading operations.</p>
+<p>Tracks counts of successfully loaded items versus failed attempts.
+Provides conversion methods for creating domain-specific result types
+from generic loading results.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.failure_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">failure_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ratio of failed loads to total attempts.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1]. With zero attempts, returns 0.0 (vacuous success).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.has_attempts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_attempts</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any loading attempts were made.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.success_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">success_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ratio of successful loads to total attempts.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1]. With zero attempts, returns 1.0 (vacuous success).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.total_processed" class="doc doc-heading">
+            <code class=" language-python"><span class="n">total_processed</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total number of items processed (loaded + failed).</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.from_counts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_counts</span><span class="p">(</span><span class="n">loaded</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">failed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a result from explicit counts.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>loaded</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of successfully loaded items</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>failed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of failed loading attempts</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Self">Self</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New loading result with the specified counts</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If either count is negative</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.from_result" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_result</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_fields</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert any BaseLoadingResult to a specific subtype.</p>
+<p>This is the general conversion protocol that all domain-specific
+loading results can use to convert from generic batch results
+to their specialized types.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>base</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="BaseLoadingResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.results.BaseLoadingResult)" href="#ci.transparency.cwe.types.base.results.BaseLoadingResult">BaseLoadingResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The base loading result to convert from</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**extra_fields</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional fields specific to the target type</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.T">T</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New instance of the target type with base fields copied</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>batch_result = BatchResult()
+cwe_result = CweLoadingResult.from_result(
+    batch_result,
+    cwes=batch_result.mappings,
+    duplicate_ids=()
+)</p>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseLoadingResult.to_subtype" class="doc doc-heading">
+            <code class=" language-python"><span class="n">to_subtype</span><span class="p">(</span><span class="n">target_class</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_fields</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert this result to a specific subtype.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>target_class</code>
+            </td>
+            <td>
+                  <code><span title="type">type</span>[<span title="ci.transparency.cwe.types.base.results.T">T</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The target result type</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**extra_fields</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional fields for the target type</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.T">T</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New instance of target_class with this result's data</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.results.BaseResult" class="doc doc-heading">
+            <code>BaseResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABC">ABC</span></code></p>
+
+
+        <p>Immutable base result for operations.</p>
+<p>All operations return results that track errors, warnings, and informational
+messages. Results are immutable and provide boolean properties for easy
+condition checking.</p>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li>total_issues = errors + warnings (infos excluded)</li>
+<li>Truthiness: bool(result) is True iff no errors</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.error_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">error_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of error messages.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.has_errors" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_errors</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any errors are present.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.has_infos" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_infos</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any informational messages are present.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.has_warnings" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_warnings</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any warnings are present.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.info_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">info_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of informational messages.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.success" class="doc doc-heading">
+            <code class=" language-python"><span class="n">success</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if no errors occurred.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.success_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">success_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ratio in [0, 1] indicating operation success.</p>
+<p>Defined by subclasses based on their specific success criteria.
+For example, loading operations might use loaded/(loaded+failed),
+while validation operations might use passed/(passed+failed).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.total_issues" class="doc doc-heading">
+            <code class=" language-python"><span class="n">total_issues</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total number of issues (errors + warnings).</p>
+<p>Note: Informational messages are not considered issues.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.total_messages" class="doc doc-heading">
+            <code class=" language-python"><span class="n">total_messages</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total number of all messages (errors + warnings + infos).</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.warning_count" class="doc doc-heading">
+            <code class=" language-python"><span class="n">warning_count</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Number of warning messages.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.from_exception" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_exception</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a result from an exception.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>exc</code>
+            </td>
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The exception to convert to a result</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional context string (e.g., "File processing")</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Self">Self</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with the exception recorded as an error</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseResult.ok" class="doc doc-heading">
+            <code class=" language-python"><span class="n">ok</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a successful result with no messages.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.results.BaseValidationResult" class="doc doc-heading">
+            <code>BaseValidationResult</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.results.BaseResult)" href="#ci.transparency.cwe.types.base.results.BaseResult">BaseResult</a></code></p>
+
+
+        <p>Base result for all validation operations.</p>
+<p>Tracks counts of validation passes versus failures. Provides conversion
+methods for creating domain-specific validation result types from
+generic validation results.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.failure_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">failure_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ratio of validation failures to total validations.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1]. With zero validations, returns 0.0 (vacuous success).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.has_validations" class="doc doc-heading">
+            <code class=" language-python"><span class="n">has_validations</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>True if any validation attempts were made.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.pass_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">pass_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Alias for success_rate - ratio of passed validations.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1]. Identical to success_rate.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.success_rate" class="doc doc-heading">
+            <code class=" language-python"><span class="n">success_rate</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ratio of validation passes to total validations.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Float in [0, 1]. With zero validations, returns 1.0 (vacuous success).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.total_processed" class="doc doc-heading">
+            <code class=" language-python"><span class="n">total_processed</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total number of items validated (passed + failed).</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_bools</span><span class="p">(</span><span class="n">outcomes</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a result from a sequence of boolean validation outcomes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>outcomes</code>
+            </td>
+            <td>
+                  <code><span title="collections.abc.Sequence">Sequence</span>[<span title="bool">bool</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Sequence of validation results (True=passed, False=failed)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Self">Self</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New validation result with counts derived from the boolean outcomes</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>results = [True, True, False, True]
+validation_result = BaseValidationResult.from_bools(results)</p>
+<h4 id="ci.transparency.cwe.types.base.results.BaseValidationResult.from_bools--validation_resultpassed-3-validation_resultfailed-1">validation_result.passed == 3, validation_result.failed == 1</h4>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.from_counts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_counts</span><span class="p">(</span><span class="n">passed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">failed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a result from explicit counts.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>passed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of validations that passed</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>failed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of validations that failed</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Self">Self</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New validation result with the specified counts</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If either count is negative</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.from_result" class="doc doc-heading">
+            <code class=" language-python"><span class="n">from_result</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_fields</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert any BaseValidationResult to a specific subtype.</p>
+<p>This is the general conversion protocol that all domain-specific
+validation results can use to convert from generic validation results
+to their specialized types.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>base</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="BaseValidationResult
+
+
+
+      dataclass
+   (ci.transparency.cwe.types.base.results.BaseValidationResult)" href="#ci.transparency.cwe.types.base.results.BaseValidationResult">BaseValidationResult</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The base validation result to convert from</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**extra_fields</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional fields specific to the target type</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.V">V</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New instance of the target type with base fields copied</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>generic_result = BaseValidationResult(passed=5, failed=2)
+cwe_result = CweValidationResult.from_result(
+    generic_result,
+    invalid_relationships=(),
+    schema_errors=()
+)</p>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.results.BaseValidationResult.to_subtype" class="doc doc-heading">
+            <code class=" language-python"><span class="n">to_subtype</span><span class="p">(</span><span class="n">target_class</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_fields</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert this result to a specific subtype.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>target_class</code>
+            </td>
+            <td>
+                  <code><span title="type">type</span>[<span title="ci.transparency.cwe.types.base.results.V">V</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The target result type</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**extra_fields</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional fields for the target type</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.V">V</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New instance of target_class with this result's data</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.add_counts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_counts</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">loaded</span><span class="p">,</span> <span class="n">failed</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add multiple counts to the result.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_counts[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>loaded</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of successful loads to add</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>failed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of failed loads to add</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_counts[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with counts increased by the specified amounts</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If either count is negative</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.add_error" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_error</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy of result with error appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_error[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to add an error to</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>error</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The error message to append</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_error[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with error appended to errors tuple</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.add_info" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_info</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy of result with info appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_info[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to add an info message to</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>info</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The informational message to append</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_info[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with info appended to infos tuple</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.add_validation_counts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_validation_counts</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">passed</span><span class="p">,</span> <span class="n">failed</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add multiple validation counts to the result.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_validation_counts[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>passed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of validation passes to add</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>failed</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of validation failures to add</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_validation_counts[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with counts increased by the specified amounts</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ValueError">ValueError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If either count is negative</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.add_warning" class="doc doc-heading">
+            <code class=" language-python"><span class="n">add_warning</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">warning</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy of result with warning appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_warning[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to add a warning to</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>warning</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The warning message to append</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.add_warning[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with warning appended to warnings tuple</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.extend_errors" class="doc doc-heading">
+            <code class=" language-python"><span class="n">extend_errors</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="o">*</span><span class="n">errors</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with all errors appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_errors[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to extend</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*errors</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Variable number of error messages to append</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_errors[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with all error messages appended</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.extend_infos" class="doc doc-heading">
+            <code class=" language-python"><span class="n">extend_infos</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="o">*</span><span class="n">infos</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with all infos appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_infos[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to extend</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*infos</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Variable number of info messages to append</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_infos[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with all info messages appended</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.extend_warnings" class="doc doc-heading">
+            <code class=" language-python"><span class="n">extend_warnings</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="o">*</span><span class="n">warnings</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with all warnings appended.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_warnings[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to extend</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*warnings</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Variable number of warning messages to append</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.extend_warnings[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with all warning messages appended</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_loading" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_loading</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge two loading results of the same type.</p>
+<p>Combines counts and messages from both results while preserving
+the concrete type of the first result.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>a</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The primary result (type is preserved)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>b</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to merge from</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result of type R with combined counts and messages</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_many" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_many</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge multiple results into one.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>first</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first result (determines return type)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*rest</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional results to merge</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Single result of first's type with all messages merged</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_many_loading" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_many_loading</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge multiple loading results into one.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>first</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first result (determines return type)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*rest</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional results to merge</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_loading[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Single result of first's type with all counts and messages combined</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_many_validation" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_many_validation</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge multiple validation results into one.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>first</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first result (determines return type)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>*rest</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional results to merge</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_many_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Single result of first's type with all counts and messages combined</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_results" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_results</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return r1 with all messages merged from r2.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>r1</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_results[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The primary result (type is preserved)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>r2</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_results[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to merge messages from</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_results[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result of r1's type with messages from both results</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.merge_validation" class="doc doc-heading">
+            <code class=" language-python"><span class="n">merge_validation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Merge two validation results of the same type.</p>
+<p>Combines counts and messages from both results while preserving
+the concrete type of the first result.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>a</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The primary result (type is preserved)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>b</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to merge from</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.merge_validation[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result of type R with combined counts and messages</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.process_validation_batch" class="doc doc-heading">
+            <code class=" language-python"><span class="n">process_validation_batch</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">outcomes</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Process a batch of validation outcomes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.process_validation_batch[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>outcomes</code>
+            </td>
+            <td>
+                  <code><span title="collections.abc.Sequence">Sequence</span>[<span title="bool">bool</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Sequence of validation results (True=passed, False=failed)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.process_validation_batch[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with counts updated based on the outcomes</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_exception" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_exception</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">exc</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record an exception as an error and increment failed count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_exception[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>exc</code>
+            </td>
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The exception to record</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional context string (e.g., file path)</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_exception[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with exception recorded as error and failed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_fail" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_fail</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Alias for record_validation_failed - records a validation failure.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_fail[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_fail[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with failed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_failed" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_failed</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a failed load by incrementing the failed count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_failed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_failed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with failed count incremented by 1</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_failure" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_failure</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a failure with optional reason.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_failure[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>reason</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional reason for failure (recorded as error if provided)</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_failure[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with failed count incremented and optional error message</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_loaded" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_loaded</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a successful load by incrementing the loaded count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_loaded[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_loaded[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with loaded count incremented by 1</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_pass" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_pass</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Alias for record_passed - records a validation success.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_pass[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_pass[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with passed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_passed" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_passed</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a validation pass by incrementing the passed count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_passed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_passed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with passed count incremented by 1</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_skip" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_skip</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a skip with warning and increment failed count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_skip[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>reason</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Reason for skipping (recorded as warning)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_skip[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with warning added and failed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_success" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_success</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Alias for record_loaded - records a successful operation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_success[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loading result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_success[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with loaded count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_validation_error" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_validation_error</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">error_msg</span><span class="p">,</span> <span class="n">increment_failed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a validation error with optional failure count increment.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_error[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>error_msg</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation error message</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>increment_failed</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to increment the failed count (default: True)</p>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_error[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with error recorded and optionally failed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_validation_failed" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_validation_failed</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a validation failure by incrementing the failed count.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_failed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_failed[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with failed count incremented by 1</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.record_validation_warning" class="doc doc-heading">
+            <code class=" language-python"><span class="n">record_validation_warning</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">warning_msg</span><span class="p">,</span> <span class="n">increment_failed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Record a validation warning with optional failure count increment.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_warning[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation result to update</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>warning_msg</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The validation warning message</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>increment_failed</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to increment the failed count (default: False)</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.record_validation_warning[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with warning recorded and optionally failed count incremented</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ci.transparency.cwe.types.base.results.with_exception" class="doc doc-heading">
+            <code class=" language-python"><span class="n">with_exception</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">exc</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return a copy with exception added as error.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.with_exception[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The result to add exception to</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>exc</code>
+            </td>
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The exception to record</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional context string for the error</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ci.transparency.cwe.types.base.results.with_exception[R]">R</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>New result with exception recorded as an error message</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><p>options:
+show<em>source: false
+show_signature: true
+group_by_category: true
+filters: - "!^</em>"</p>
+<h2 id="base-errors">Base Errors</h2>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="ci.transparency.cwe.types.base.errors"></a>
+    <div class="doc doc-contents first">
+
+        <p>Base error types for transparency operations.</p>
+<p>Provides base exception classes with contextual information and consistent
+formatting patterns. Domain-specific error hierarchies extend these base
+types to provide rich error context and structured error handling.</p>
+
+
+<details class="design-principles" open>
+  <summary>Design principles</summary>
+  <ul>
+<li>Contextual: errors capture relevant context (file paths, IDs, frameworks)</li>
+<li>Consistent: all errors follow the same <strong>str</strong> formatting pattern</li>
+<li>Slotted: minimal memory overhead with <strong>slots</strong></li>
+<li>Hierarchical: base classes allow generic error handling</li>
+</ul>
+</details>
+
+<details class="core-error-hierarchy" open>
+  <summary>Core error hierarchy</summary>
+  <ul>
+<li>BaseTransparencyError: Root exception for all transparency operations</li>
+<li>BaseLoadingError: Loading operations (adds file_path context)</li>
+<li>BaseValidationError: Validation operations (adds validation_context)</li>
+</ul>
+</details>
+
+<details class="common-error-types" open>
+  <summary>Common error types</summary>
+  <ul>
+<li>FileNotFoundError: File could not be found during loading</li>
+<li>ParsingError: File could not be parsed (YAML, JSON, etc.)</li>
+<li>ValidationError: File content failed validation checks</li>
+<li>ConfigurationError: Configuration is invalid or incomplete</li>
+</ul>
+</details>        <p>All errors use consistent formatting: "message | Context1: value | Context2: value"</p>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.AbortedError" class="doc doc-heading">
+            <code>AbortedError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Operation was aborted before completion.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.AbortedError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add abort reason to context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.BaseLoadingError" class="doc doc-heading">
+            <code>BaseLoadingError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Base exception for loading operations.</p>
+<p>Adds file path context that's common to all loading operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.BaseLoadingError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add file path to context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.BaseProcessingError" class="doc doc-heading">
+            <code>BaseProcessingError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Base exception for processing operations.</p>
+<p>Adds processing context for operations that transform or analyze data.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.BaseProcessingError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add processing context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.BaseTransparencyError" class="doc doc-heading">
+            <code>BaseTransparencyError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
+
+
+        <p>Base exception for all transparency operations.</p>
+<p>Provides consistent error formatting and context tracking across all
+transparency-related exceptions.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.BaseTransparencyError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get contextual information parts for error formatting.</p>
+<p>Subclasses override this to add their own contextual information.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of context strings (e.g., ["File: path.yaml", "ID: CWE-123"])</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.BaseValidationError" class="doc doc-heading">
+            <code>BaseValidationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Base exception for validation operations.</p>
+<p>Can be extended by domain-specific validation errors to add
+validation-specific context.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.BaseValidationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add validation context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.ConfigurationError" class="doc doc-heading">
+            <code>ConfigurationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Configuration is invalid or incomplete.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.ConfigurationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add configuration context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.LoadingFileNotFoundError" class="doc doc-heading">
+            <code>LoadingFileNotFoundError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingError (ci.transparency.cwe.types.base.errors.BaseLoadingError)" href="#ci.transparency.cwe.types.base.errors.BaseLoadingError">BaseLoadingError</a></code></p>
+
+
+        <p>File could not be found during loading operation.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.LoadingParsingError" class="doc doc-heading">
+            <code>LoadingParsingError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingError (ci.transparency.cwe.types.base.errors.BaseLoadingError)" href="#ci.transparency.cwe.types.base.errors.BaseLoadingError">BaseLoadingError</a></code></p>
+
+
+        <p>File could not be parsed (YAML, JSON, etc.).</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.LoadingParsingError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add parser type to context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.LoadingValidationError" class="doc doc-heading">
+            <code>LoadingValidationError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseLoadingError (ci.transparency.cwe.types.base.errors.BaseLoadingError)" href="#ci.transparency.cwe.types.base.errors.BaseLoadingError">BaseLoadingError</a></code></p>
+
+
+        <p>File content failed validation checks.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.LoadingValidationError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add validation rule to context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.NetworkError" class="doc doc-heading">
+            <code>NetworkError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Network operation failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.NetworkError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add network context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.SchemaError" class="doc doc-heading">
+            <code>SchemaError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseValidationError (ci.transparency.cwe.types.base.errors.BaseValidationError)" href="#ci.transparency.cwe.types.base.errors.BaseValidationError">BaseValidationError</a></code></p>
+
+
+        <p>Schema validation failed.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.SchemaError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add schema context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.TransparencyTimeoutError" class="doc doc-heading">
+            <code>TransparencyTimeoutError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Operation timed out.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.TransparencyTimeoutError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add timeout context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="ci.transparency.cwe.types.base.errors.VersionError" class="doc doc-heading">
+            <code>VersionError</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseTransparencyError (ci.transparency.cwe.types.base.errors.BaseTransparencyError)" href="#ci.transparency.cwe.types.base.errors.BaseTransparencyError">BaseTransparencyError</a></code></p>
+
+
+        <p>Version compatibility or format error.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ci.transparency.cwe.types.base.errors.VersionError.get_context_parts" class="doc doc-heading">
+            <code class=" language-python"><span class="n">get_context_parts</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Add version information to context if available.</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div><p>options:
+show<em>source: false
+show_signature: true
+group_by_category: true
+filters: - "!^</em>"</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <aside class="md-source-file">
+
+
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 26, 2025 14:19:08 UTC">2025-09-26</span>
+  </span>
+
+
+
+
+
+  </aside>
+
+
+
+
+
+
+              </article>
+            </div>
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+
+
+
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.footer", "navigation.tabs", "navigation.top", "navigation.expand", "navigation.sections", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+
+
+  </body>
+</html>
