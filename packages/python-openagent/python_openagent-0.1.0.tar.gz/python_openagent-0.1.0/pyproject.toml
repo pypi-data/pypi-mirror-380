@@ -1,0 +1,27 @@
+[project]
+name = "python-openagent"
+version = "0.1.0"
+description = "An agentic task execution framework for LLMs"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [
+    {name = "Bijay Regmi", email = "bijay@regmi.dev"}
+]
+dependencies = [
+    "litellm>=1.77.4",
+    "matplotlib>=3.10.6",
+    "networkx>=3.5",
+    "openai>=1.109.1",
+    "pydantic>=2.11.9",
+    "pydantic-settings>=2.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
+[project.urls]
+Homepage = "https://github.com/regmibijay/openagent"
+Documentation = "https://regmibijay.github.io/openagent"
+Repository = "https://github.com/regmibijay/openagent"
+"Author Blog" = "https://blog.regmi.dev"
