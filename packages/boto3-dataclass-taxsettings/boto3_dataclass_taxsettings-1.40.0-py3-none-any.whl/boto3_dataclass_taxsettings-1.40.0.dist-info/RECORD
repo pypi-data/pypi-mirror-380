@@ -1,0 +1,7 @@
+boto3_dataclass_taxsettings/__init__.py,sha256=TysPUoHgXizk6bP7o1zRPhkd9fyqhy_6Aea742fuPyI,116
+boto3_dataclass_taxsettings/caster.py,sha256=oVVKPpUlbvG4AprEpwJtF5ghRl8Da_GvQzgDMB6QQrs,3154
+boto3_dataclass_taxsettings/type_defs.py,sha256=i3p3X-idgKZwnixs5qsx1jAcpAEhtTRgYmWTWzLDvk8,82631
+boto3_dataclass_taxsettings-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_taxsettings-1.40.0.dist-info/METADATA,sha256=kSLZLxQKIzsibn0UQCKQJb4McnbqzxmAcLu3VnFIKnk,1711
+boto3_dataclass_taxsettings-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_taxsettings-1.40.0.dist-info/RECORD,,
