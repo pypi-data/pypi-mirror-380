@@ -1,0 +1,12 @@
+pyxdg
+colorama
+
+[dev]
+pytest
+
+[doc]
+sphinx
+sphinx-togglebutton
+sphinx-autodoc-typehints
+furo
+myst-parser
