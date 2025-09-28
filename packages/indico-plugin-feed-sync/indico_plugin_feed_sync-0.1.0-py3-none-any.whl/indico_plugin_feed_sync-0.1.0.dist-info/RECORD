@@ -1,0 +1,15 @@
+indico_feed_sync/__init__.py,sha256=In6eOs5rx6fXA2GT6DOQs51E-TxfEWJDCCTRKgFkkTY,66
+indico_feed_sync/blueprint.py,sha256=VXqhNZaqP1FeeYCO6ie-kI_gzC3EU2_yswSH0FkYA4A,7699
+indico_feed_sync/forms.py,sha256=CKXUD6v1fbajHLe18szdjAPbubGxJW_w9Qhrbnntru4,6890
+indico_feed_sync/plugin.py,sha256=LJjPXa7EqvBCQpE0W2Q-uGx0ZrPpbmtEXXeG-E92DSM,8078
+indico_feed_sync/tasks.py,sha256=r9vbD2sBeW1I9PF0DyWwdHhMXrNesEdXc8qnZtAScPs,1064
+indico_feed_sync/util.py,sha256=mfN06nzTc6aN4EtPsT3HLKrbaaEqnYmzypswNz2tg3Q,62328
+indico_feed_sync/templates/indico_feed_sync/details_extra.html,sha256=q6mtQGYbir4scoCTAlyIeaBm5AsCVTyTofaK-OFyyq8,7829
+indico_feed_sync/templates/indico_feed_sync/display_action_button.html,sha256=WueT2l-Z0ueP8NZqcoYf-qhOXvicLdeBCRhffTigkWE,2113
+indico_feed_sync/templates/indico_feed_sync/event_action_button.html,sha256=gf2B8BV3KlVH216DFPBfyPxtlZxuBDYLYhMyyHdoReQ,1859
+indico_plugin_feed_sync-0.1.0.dist-info/licenses/LICENSE,sha256=J9FW4HdgPiCDYImZ_ExajlJFEwNg1QuRQOUOJUg9pn8,1074
+indico_plugin_feed_sync-0.1.0.dist-info/METADATA,sha256=gTcTMyWA0K_wQqGxzj6AvcVqC1X4oIrz4J7GEVkeHcY,3824
+indico_plugin_feed_sync-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+indico_plugin_feed_sync-0.1.0.dist-info/entry_points.txt,sha256=4tNrYe5NEoTGnZCRQWuG1xR8Of42vvPfICtuM9mUgIM,61
+indico_plugin_feed_sync-0.1.0.dist-info/top_level.txt,sha256=BQsY6El6DHTNUS1whxM8Ud4j4qCpkliOKdNWYJ40qrw,17
+indico_plugin_feed_sync-0.1.0.dist-info/RECORD,,
