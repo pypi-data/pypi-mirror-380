@@ -1,0 +1,9 @@
+tts_webui_extension/mms/__init__.py,sha256=0Xnsy9t3dNRb5NPiSIILxUhYMjTS9NVw-mBVnfSmPvw,16
+tts_webui_extension/mms/main.py,sha256=26LShNhPg2-BO2wa2WnOrfCqSc9ZYHT3cCY3ToYYEHY,7172
+tts_webui_extension/mms/resources/__init__.py,sha256=jVgu_Pykxux44f1Hev9sG2ULTYqM90u_Hjxse2zReVQ,16
+tts_webui_extension/mms/resources/mms-languages-iso639-3.txt,sha256=EM7h6R8bqw2vZc7nagYJnFsofzfK0qIdTyRiCdG6NQ0,6822
+tts_webui_extension_mms-0.0.3.dist-info/licenses/LICENSE,sha256=QjWW5wBfP8n3Wc_jjLa2EFF26vnPaj6cWVEknrq4s3o,1064
+tts_webui_extension_mms-0.0.3.dist-info/METADATA,sha256=QjXZNTiAblk631FTRuN90ouiB1n-LwUfXJr1bXIbxeU,1337
+tts_webui_extension_mms-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tts_webui_extension_mms-0.0.3.dist-info/top_level.txt,sha256=K_JKsKEyaZs5RnmdAjEe1w7Tk6Yd6s1aL3ZHi3IlBwA,25
+tts_webui_extension_mms-0.0.3.dist-info/RECORD,,
