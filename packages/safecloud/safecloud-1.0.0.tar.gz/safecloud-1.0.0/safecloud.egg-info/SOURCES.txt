@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+safecloud/__init__.py
+safecloud/cli.py
+safecloud/config.py
+safecloud/crypto.py
+safecloud/scanner.py
+safecloud/utils.py
+safecloud.egg-info/PKG-INFO
+safecloud.egg-info/SOURCES.txt
+safecloud.egg-info/dependency_links.txt
+safecloud.egg-info/entry_points.txt
+safecloud.egg-info/requires.txt
+safecloud.egg-info/top_level.txt

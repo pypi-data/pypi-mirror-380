@@ -1,0 +1,8 @@
+click
+rich
+boto3
+cryptography
+requests
+pyfiglet
+dnspython
+gpt4all

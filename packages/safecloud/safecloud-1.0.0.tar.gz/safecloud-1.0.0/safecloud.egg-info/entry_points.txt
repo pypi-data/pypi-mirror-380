@@ -1,0 +1,2 @@
+[console_scripts]
+safecloud = safecloud.cli:cli
