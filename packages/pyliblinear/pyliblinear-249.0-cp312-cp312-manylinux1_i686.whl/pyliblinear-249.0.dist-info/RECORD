@@ -1,0 +1,7 @@
+pyliblinear/__init__.py,sha256=z48Mr5FvSQjHY9WXPv9zk4X3RZzgVP0H4N0LJ5_EQKQ,1452
+pyliblinear/_liblinear.cpython-312-i386-linux-gnu.so,sha256=OFX8OWjN-1JcARNHiCjvS1gT68C9YZHRyXKSVyfHe7M,563412
+pyliblinear-249.0.dist-info/METADATA,sha256=FlFeOqUkm5wHWkILFxnDZzfwtcsU7qDKVp6E9jhAkEM,3109
+pyliblinear-249.0.dist-info/WHEEL,sha256=ZZ2bewrQIM11KoukQVqlsk-rzfthnLnGnMOuRlJZ_Ac,216
+pyliblinear-249.0.dist-info/top_level.txt,sha256=JrCsEeSViG1uwLtDTGcccCDfkSuyWlmGFFTh5jiWF6A,12
+pyliblinear-249.0.dist-info/RECORD,,
+pyliblinear-249.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
