@@ -1,0 +1,17 @@
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "francis-agent"
+version = "1.0.9"
+description = "Francis agent"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+francis = "francis:entrypoint"
+
+[tool.poetry]
+package-mode = true
+packages = [{ include = "francis" }]
