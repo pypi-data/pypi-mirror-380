@@ -1,0 +1,29 @@
+site_name: HTag's Docs
+site_description: GUI toolkit for building GUI toolikit (for building applications for desktop, web, and mobile from a single python3 codebase)
+
+theme:
+    logo: htag.png
+    name: 'material'
+    palette:
+        primary: 'black'
+        accent: 'black'
+
+repo_name: manatlan/htag
+repo_url: https://github.com/manatlan/htag
+edit_uri: ""
+
+nav:
+    - Introduction: 'index.md'
+    - Tutorial: 'tutorial.md'
+    - Concepts: concepts.md
+    - Runners: 'runners.md'
+
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
