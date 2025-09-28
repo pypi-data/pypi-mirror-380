@@ -1,0 +1,10 @@
+corpus_judge/__init__.py,sha256=i14-x0YqerOGORuXFU2TYrSuXHHrvbBjciW2_9Z3YD4,153
+corpus_judge/justice_model.py,sha256=WsjXOlb-1uv_DLb03IEI4ClbyEpAKQ3GvHQZPlUJdYA,5743
+corpus_judge/justice_name.py,sha256=NLzScNUwN0VLljtZgNPK8y6gnSKHBWg108ztMLm5f2I,14354
+corpus_judge/justice_select.py,sha256=VjpE_J-gt4HaeztpybFMuKyeRdWiIsgTh6DvBp7NcZo,6783
+corpus_judge/sc.yaml,sha256=kuKk4Pa10cCNsCyF7USkI6DNszvYTaXzm3EjmpXQt7w,45436
+corpus_judge-0.2.0.dist-info/licenses/LICENSE,sha256=RFNGTEbpv_whSXbQiBHUovVWwagnNTTMKqWOOac5Y9s,1491
+corpus_judge-0.2.0.dist-info/METADATA,sha256=ouAXHO5fpgQHU-xgBPybSmwRR1Kv9U2zoHETkQr8eYY,509
+corpus_judge-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+corpus_judge-0.2.0.dist-info/top_level.txt,sha256=rxGzTkhhpiTnn7I4VyVefN5YY_hhaODHQ0eYZKPsfq4,13
+corpus_judge-0.2.0.dist-info/RECORD,,
