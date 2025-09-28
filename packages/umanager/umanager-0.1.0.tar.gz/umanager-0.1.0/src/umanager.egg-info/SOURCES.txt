@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/umanager/__init__.py
+src/umanager/core.py
+src/umanager/log.py
+src/umanager/server.py
+src/umanager.egg-info/PKG-INFO
+src/umanager.egg-info/SOURCES.txt
+src/umanager.egg-info/dependency_links.txt
+src/umanager.egg-info/requires.txt
+src/umanager.egg-info/top_level.txt
+tests/test_main.py
