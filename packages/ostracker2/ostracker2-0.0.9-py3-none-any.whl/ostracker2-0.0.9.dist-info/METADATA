@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ostracker2
+Version: 0.0.9
+Summary: Python client library for ostracker.xyz
+Home-page: https://ostracker.xyz
+Author: xn--it-uiab.eu
+Author-email: admin@xn--it-uiab.eu
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
