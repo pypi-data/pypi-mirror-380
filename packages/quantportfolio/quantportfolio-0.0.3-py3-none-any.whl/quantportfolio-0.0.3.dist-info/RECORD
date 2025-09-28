@@ -1,0 +1,8 @@
+quantportfolio/__init__.py,sha256=pRnsAaW_OYklrtw8YS7hX9la781tdtiy9neq8vRWMoc,139
+quantportfolio/data.py,sha256=FweZORp9skcHFYbqC0iJ4f_IlyONn5NpEf6vRruFYaY,901
+quantportfolio/optimizer.py,sha256=paBdJJx-fWRIe2buC5sFtjz_nQrSlvJrZnASjzVQHAQ,1197
+quantportfolio/performance.py,sha256=E4AXbmwazK6UmAcIejarhcB0bA7ezBVPOtn__ncoqpE,569
+quantportfolio-0.0.3.dist-info/METADATA,sha256=5ZgS-y2V_4uxrgLIipsUux2sG-nAOb5MZGpRNYwpNag,1597
+quantportfolio-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+quantportfolio-0.0.3.dist-info/licenses/License,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+quantportfolio-0.0.3.dist-info/RECORD,,
