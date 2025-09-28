@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+fitbitApp/__init__.py
+fitbitApp/fitbitApp.py
+fitbitApp.egg-info/PKG-INFO
+fitbitApp.egg-info/SOURCES.txt
+fitbitApp.egg-info/dependency_links.txt
+fitbitApp.egg-info/requires.txt
+fitbitApp.egg-info/top_level.txt
