@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/katakate/__init__.py
+src/katakate/client.py
+src/katakate.egg-info/PKG-INFO
+src/katakate.egg-info/SOURCES.txt
+src/katakate.egg-info/dependency_links.txt
+src/katakate.egg-info/requires.txt
+src/katakate.egg-info/top_level.txt
