@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pilibr/__init__.py
+pilibr/pilibr.py
+pilibr.egg-info/PKG-INFO
+pilibr.egg-info/SOURCES.txt
+pilibr.egg-info/dependency_links.txt
+pilibr.egg-info/top_level.txt
