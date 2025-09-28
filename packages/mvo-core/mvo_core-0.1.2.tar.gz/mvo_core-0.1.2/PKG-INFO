@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: mvo-core
+Version: 0.1.2
+Summary: MVO algorithm for mortality vector optimization and evaluation
+Author-email: real853 <2511063@zju.edu.cn>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: lifelines
+Dynamic: license-file
+
+# my_mvo
+
+Python package for **Mortality Vector Optimization (MVO)** to predict patient outcomes.
+
+## Features
+- Normalize feature matrices
+- Multi-stage vector optimization
+- Bootstrap evaluation of AUC, Brier score, and C-index
+- Logistic regression-based probability prediction
+
+## Installation
+```bash
+pip install my_mvo
+
