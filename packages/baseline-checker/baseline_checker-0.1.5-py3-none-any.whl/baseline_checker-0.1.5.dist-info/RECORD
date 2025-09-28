@@ -1,0 +1,16 @@
+baseline_checker-0.1.5.dist-info/licenses/LICENSE,sha256=U6a-Le59rlz84xiwxwwafuRUIpEn6-ABh7LW131X-Tc,1069
+reports/__init__.py,sha256=y77sfRkByeCQpeKGfoeY-Ype4wPuofuXRRUKIPobWWk,89
+reports/report_generator.py,sha256=3iz4PTXL1l5XCDBua2nmtX_d51AWB5OnZz2R1Px5EdU,6024
+scanner/__init__.py,sha256=y77sfRkByeCQpeKGfoeY-Ype4wPuofuXRRUKIPobWWk,89
+scanner/file_scanner.py,sha256=DzEdjczWmq4IYWPRnIOKZt5ysgB1PtFC8fw_CozgElw,892
+scanner/filters.py,sha256=jH8e6PjY-3Bs2xz_W2oEAtUh937C25kEKaMNPTfQDlk,581
+scanner/project_scanner.py,sha256=YEvOUKw_XQb53tmamkbzfx7YLyAkUfnqoKgWZhqpWv0,1869
+scanner/utils.py,sha256=s5dKb-59_YmDsvg_T_l4TYpD0jJdpDGr9GMHmVs1Sg4,253
+web_app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_app/app.py,sha256=VrKC5c-u8Rc68FLXNyYhicFNDpTFfE7RqBAS5mYue4k,7788
+web_app/tasks.py,sha256=fNPARkJx_i0Xo-e01LHquzxxTeWhj1wNHZsSFK-_G70,1545
+baseline_checker-0.1.5.dist-info/METADATA,sha256=ZgPKBeSWu-oy4fWzznvoPh5YQqM6l28m1SDzFYwdABQ,4815
+baseline_checker-0.1.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+baseline_checker-0.1.5.dist-info/entry_points.txt,sha256=loNHpjofr27BAynZNB_F0XWwaHmSC5iVAnalTH5NGX4,59
+baseline_checker-0.1.5.dist-info/top_level.txt,sha256=H6Tm4GzBeD-gWJ4nkMjabBI4EEu0kPlgakas1Rr6g8s,24
+baseline_checker-0.1.5.dist-info/RECORD,,
