@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/opopoppo/__init__.py
+src/opopoppo/core.py
+src/opopoppo/log.py
+src/opopoppo/server.py
+src/opopoppo.egg-info/PKG-INFO
+src/opopoppo.egg-info/SOURCES.txt
+src/opopoppo.egg-info/dependency_links.txt
+src/opopoppo.egg-info/requires.txt
+src/opopoppo.egg-info/top_level.txt
+tests/test_main.py
