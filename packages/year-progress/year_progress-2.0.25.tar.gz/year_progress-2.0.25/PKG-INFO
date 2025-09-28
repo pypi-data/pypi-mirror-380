@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: year-progress
+Version: 2.0.25
+Summary: A package to calculate the progress of the current year.
+Project-URL: Homepage, https://github.com/DuelitDev/year-progress
+Project-URL: Repository, https://github.com/DuelitDev/year-progress
+Author-email: DuelitDev <jyoon07dev@gmail.com>
+License: WTFPL
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Year Progress
+
+## Install
+
+`pip install year_progress`
+
+## Example
+
+```python
+import year_progress
+
+
+print(f"2025 is {int(year_progress.year_progress())}% complete.")
+# 2025 is 7% complete.
+```
+
+## Author
+
+- [DuelitDev](https://github.com/DuelitDev)
+
+## License
+
+WTFPL

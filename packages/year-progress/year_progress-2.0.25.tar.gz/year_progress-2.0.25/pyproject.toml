@@ -1,0 +1,47 @@
+[project]
+name = "year-progress"
+version = "2.0.25"
+description = "A package to calculate the progress of the current year."
+readme = "README.md"
+license = { text = "WTFPL" }
+authors = [{ name = "DuelitDev", email = "jyoon07dev@gmail.com" }]
+requires-python = ">=3.8"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/DuelitDev/year-progress"
+Repository = "https://github.com/DuelitDev/year-progress"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+show-fixes = true
+exclude = [
+    ".bzr", ".direnv", ".eggs", ".git", ".mypy_cache",
+    ".ruff_cache", ".venv", "__pycache__", "build", "dist"
+]
+
+[tool.ruff.lint]
+select = [
+    "ANN",
+    "B",
+    "C4",
+    "E",
+    "I",
+    "RUF",
+    "UP",
+    "W",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
