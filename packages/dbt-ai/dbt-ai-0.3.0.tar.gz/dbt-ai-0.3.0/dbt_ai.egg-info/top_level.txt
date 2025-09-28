@@ -1,0 +1,6 @@
+dbt_ai
+dist
+docs
+images
+node_modules
+sample_dbt_project
