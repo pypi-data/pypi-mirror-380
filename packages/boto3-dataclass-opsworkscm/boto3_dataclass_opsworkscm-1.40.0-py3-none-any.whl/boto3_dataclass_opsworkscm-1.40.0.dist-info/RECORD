@@ -1,0 +1,7 @@
+boto3_dataclass_opsworkscm/__init__.py,sha256=w3NJplPs0XoLVOs_b_YKXrq7hUSoGz1rbAhNW3i-cNA,114
+boto3_dataclass_opsworkscm/caster.py,sha256=vdx_k3aiznbZzScMbV2qDErYp7hjQnBi0X5r0heJL00,3341
+boto3_dataclass_opsworkscm/type_defs.py,sha256=UbqaEIUUhSj3CHmDy0awhLUilk_eM8WXocYAG7a1F7c,47549
+boto3_dataclass_opsworkscm-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_opsworkscm-1.40.0.dist-info/METADATA,sha256=X_j-qdzIWXz5UT-ZC4jmbv-qbNPbHFXDvR4Ky-1QsTw,1704
+boto3_dataclass_opsworkscm-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_opsworkscm-1.40.0.dist-info/RECORD,,
