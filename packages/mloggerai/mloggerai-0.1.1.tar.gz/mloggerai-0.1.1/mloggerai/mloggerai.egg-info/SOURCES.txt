@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+mloggerai/mloggerai.egg-info/PKG-INFO
+mloggerai/mloggerai.egg-info/SOURCES.txt
+mloggerai/mloggerai.egg-info/dependency_links.txt
+mloggerai/mloggerai.egg-info/requires.txt
+mloggerai/mloggerai.egg-info/top_level.txt
