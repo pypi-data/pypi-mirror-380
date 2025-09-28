@@ -1,0 +1,7 @@
+boto3_dataclass_mediatailor/__init__.py,sha256=YbgnFJZEtygMPyMAPmntYxvJt4lwgmwCmIRyYCeyE_M,116
+boto3_dataclass_mediatailor/caster.py,sha256=smVoUNL9cXRfwa7NREbbKtJGmgOaHwe6Qx_MxP4jiH4,7071
+boto3_dataclass_mediatailor/type_defs.py,sha256=5MgscQA-8vAxu4sqoNWKzLe7A80mZCmaKAlNnJScCZo,168716
+boto3_dataclass_mediatailor-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_mediatailor-1.40.0.dist-info/METADATA,sha256=Hh-me9UKCq7LcVbUiQzoXykYYOTxdXVMNDvUtTeQe0M,1711
+boto3_dataclass_mediatailor-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_mediatailor-1.40.0.dist-info/RECORD,,
