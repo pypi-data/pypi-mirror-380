@@ -1,0 +1,7 @@
+boto3_dataclass_robomaker/__init__.py,sha256=Xf6tbs1A4zBiIcMXZMK1FhH9REMAs2lJJcxAVPhmrxs,112
+boto3_dataclass_robomaker/caster.py,sha256=_f4ziVEdMmxRvkvNcseEz1mUMysX9jQp4JDlMd7G4Rk,9743
+boto3_dataclass_robomaker/type_defs.py,sha256=tlR-wgXJ6Ikp2eEqb8Gr7jGnoPvpQ1xVCn_-45WMwG4,187871
+boto3_dataclass_robomaker-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_robomaker-1.40.0.dist-info/METADATA,sha256=YJiCDoPgSjEuDW5PBjTAqbWPTHdQGzTHbtDdL6Ry808,1697
+boto3_dataclass_robomaker-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_robomaker-1.40.0.dist-info/RECORD,,
