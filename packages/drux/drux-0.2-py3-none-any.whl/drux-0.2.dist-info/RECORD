@@ -1,0 +1,13 @@
+drux/__init__.py,sha256=5RBxh5WQbb6XS8NrxwtWYHxWxaWWL0BJ7AiaXlRyW0U,282
+drux/base_model.py,sha256=iKMF4s--AOwdk86CDq-Nk7f79kqnSajd9_1Wt2Uk5I4,5621
+drux/first_order.py,sha256=LtevuWWROOGyQMrU_dDN8xXoYaihCmMw8gSY_zjZvOw,1729
+drux/higuchi.py,sha256=lW1t84D9RqvDo2KjysfMHdBCcfylEoMaFmDQkyX-cuo,2267
+drux/messages.py,sha256=YFgPdNJnzCQHqwkA93ChNYPJv5HE82Iofg4-OKDWmko,1404
+drux/params.py,sha256=uh3DwxIQYMP5tT9rbGbhcMTQbOEFtN_xh29SIHb4onc,83
+drux/zero_order.py,sha256=M5UvNCd3ad4zl-SBPtwc7mCIwzNAAS-nLljuEb7cfGo,1685
+drux-0.2.dist-info/licenses/AUTHORS.md,sha256=JZRP6K42X32N_LEn8nqTijl07kEs10U4PfEvqjAJJ6A,530
+drux-0.2.dist-info/licenses/LICENSE,sha256=Ck6vYPIMtG-c66W_PK2oYx-WDILkeu3KkrzbUYGQgwo,1066
+drux-0.2.dist-info/METADATA,sha256=I_uODpdJ6LRuoGyXGYMyxDleBpJrle-4XHT0WB7eCQA,11174
+drux-0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+drux-0.2.dist-info/top_level.txt,sha256=axH5XYuJf5x92wsFWlHcRj5MO49618jE1UdpRjdbbuY,5
+drux-0.2.dist-info/RECORD,,
