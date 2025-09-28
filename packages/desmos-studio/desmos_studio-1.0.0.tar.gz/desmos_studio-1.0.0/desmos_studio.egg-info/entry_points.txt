@@ -1,0 +1,2 @@
+[console_scripts]
+desmos-art = desmos_art.cli:main

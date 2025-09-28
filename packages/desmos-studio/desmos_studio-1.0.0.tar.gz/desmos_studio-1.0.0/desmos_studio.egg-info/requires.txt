@@ -1,0 +1,9 @@
+matplotlib>=3.0.0
+svgpathtools>=1.4.0
+
+[dev]
+pytest>=6.0
+black
+flake8
+twine
+build

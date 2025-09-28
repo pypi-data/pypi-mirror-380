@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+desmos_studio/__init__.py
+desmos_studio/cli.py
+desmos_studio.egg-info/PKG-INFO
+desmos_studio.egg-info/SOURCES.txt
+desmos_studio.egg-info/dependency_links.txt
+desmos_studio.egg-info/entry_points.txt
+desmos_studio.egg-info/not-zip-safe
+desmos_studio.egg-info/requires.txt
+desmos_studio.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cli.py
