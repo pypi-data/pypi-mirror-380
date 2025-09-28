@@ -1,0 +1,2 @@
+[jupyter_server.extension]
+jupyterlab_zip_extension = jupyterlab_zip_extension:load_jupyter_server_extension
