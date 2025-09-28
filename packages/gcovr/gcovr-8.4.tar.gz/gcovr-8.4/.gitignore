@@ -1,0 +1,43 @@
+# Python cache files
+__pycache__
+*.py[cod]
+
+# nox virtual environments
+/.nox*/
+# User virtual environment
+/.venv/
+
+# Version is updated from hatch-vcs
+src/gcovr/version.py
+
+# Packages
+/gcovr.egg
+/gcovr.egg-info
+/dist
+/build
+
+# coverage report
+/.coverage*
+/coverage.xml
+# temporary generated files
+/.coverage.*
+
+# Reference files to import
+/*.zip
+
+# VS Code workspace
+/*.code-workspace
+
+# PyCharm
+/.idea
+
+# Mr Developer
+/.mr.developer.cfg
+/.project
+/.pydevproject
+
+# MacOS
+.DS_Store
+
+# CI standalone app folder
+/artifacts
