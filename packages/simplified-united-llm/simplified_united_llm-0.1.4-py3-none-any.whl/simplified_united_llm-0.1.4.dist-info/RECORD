@@ -1,0 +1,16 @@
+simplified_united_llm-0.1.4.dist-info/licenses/LICENSE,sha256=Iup0RAjxNJmUSsSNfPicKLY7VJ79nNLMMpQFSUiU8Lw,1072
+united_llm/__init__.py,sha256=GEu0F3ox87RNEVYBKaoEj44NNKpF2P9Ujykc30gYd98,1034
+united_llm/client.py,sha256=w9HoTTZOIGBIMrd3WevAFtP8sOlxeWoIoq60Subb3vo,27439
+united_llm/py.typed,sha256=ixa8YukDZ3kLo0WsFJRGohLMyHzbMur1ALmmASML2cs,64
+united_llm/providers/__init__.py,sha256=1YO_x3XYo5nbyKO-yCIx3B3klVHxNi5CnFFVNwuYYDY,278
+united_llm/providers/ollama.py,sha256=SoBidKMjYjiJBrzr0048UbSHLu_p49j8k-fwxAOlLiQ,20755
+united_llm/providers/openrouter.py,sha256=RsrfRMbMnZb7tbtT8ANOCXVksmBjS1r_4wSp4rZya7Y,14659
+united_llm/utils/__init__.py,sha256=Hja8QAFqkEISOl38gu1ghFxywe3lGuhlWW12PFdrHoM,254
+united_llm/utils/image_input.py,sha256=EQ0FeIJ2QXFAgKKuVD8VE9hgUx3XTooXVjiE0m0xGz4,7969
+united_llm/utils/logging.py,sha256=kW2fcHJoL38ELYfE6bbTdF5R7QGMuhlspw8EypDzwso,9861
+united_llm/utils/schema_parser.py,sha256=qr0wadUZnOIK-i4bGHsDoEdRu88QPj9j9aXxB89tn6o,3059
+simplified_united_llm-0.1.4.dist-info/METADATA,sha256=q1QLUAXtyjYVZkO8Wdm52R157o6o21FhTDjtPlGhUlc,7701
+simplified_united_llm-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+simplified_united_llm-0.1.4.dist-info/entry_points.txt,sha256=5KnB-1aECt6Ojc-U4r6kFvVyeRGG-xVqCUMD-lVxfYQ,57
+simplified_united_llm-0.1.4.dist-info/top_level.txt,sha256=9ZCWp4i_E3kOK9fCJ9s4r5LPN6RxqAKUzUHzsbf4uzg,11
+simplified_united_llm-0.1.4.dist-info/RECORD,,
