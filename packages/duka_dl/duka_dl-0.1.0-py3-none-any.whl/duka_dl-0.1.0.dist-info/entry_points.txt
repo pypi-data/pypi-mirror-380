@@ -1,0 +1,3 @@
+[console_scripts]
+duka-dl=duka_dl:run
+
