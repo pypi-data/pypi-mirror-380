@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+JuanAcuna_Calc.egg-info/PKG-INFO
+JuanAcuna_Calc.egg-info/SOURCES.txt
+JuanAcuna_Calc.egg-info/dependency_links.txt
+JuanAcuna_Calc.egg-info/requires.txt
+JuanAcuna_Calc.egg-info/top_level.txt
+JuanAcuna_calc/__init__.py

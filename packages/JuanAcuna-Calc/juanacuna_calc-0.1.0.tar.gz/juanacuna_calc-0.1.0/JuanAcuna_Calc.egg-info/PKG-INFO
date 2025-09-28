@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: JuanAcuna-Calc
+Version: 0.1.0
+Summary: La mejor calculadora nunca antes vista.
+Author-email: Juan Sebastian Acuña Tellez <jsacunat@udistrital.edu.co>
+License: Universidad Distrital License
+        
+        copyright (c)  2025 Juan Sebastian Acuña Tellez
+        
+        Puede reproducirse y realizar modificaciones siempre que se cite el autor.
+Project-URL: Homepage, https://github.com/tu_usuario/JuanAcunaCalc
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow
+Dynamic: license-file
+
+# JuanAcunaCalc
+
+Una magnífica calculadora científica desarrrollada con los más grandes estándares de la industria del cálculo científico.
+
+## Instalación
+
+Aquí se documenta como se hace la instalación
+
+''' bash
+
+pip install JuanAcunaCalc
