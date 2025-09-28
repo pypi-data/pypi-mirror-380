@@ -1,0 +1,7 @@
+boto3_dataclass_lookoutvision/__init__.py,sha256=jCBzQUsPI3e8-6KFAyRjkU32NXRHdJUEZeX9Fmwh47U,120
+boto3_dataclass_lookoutvision/caster.py,sha256=1wiDWRYIZUG2okbrbpbf9cYVpjDHRwldnlk7xydUL9k,3974
+boto3_dataclass_lookoutvision/type_defs.py,sha256=1HKG4qpMsYE3RQDr7zqyJ7DEqv5nwMA-VWu5w7WYhAE,72288
+boto3_dataclass_lookoutvision-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_lookoutvision-1.40.0.dist-info/METADATA,sha256=cdHo6tsQ_vigIy_l_9vxaifv6q1ePU2LSZnYiEJqfUk,1725
+boto3_dataclass_lookoutvision-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_lookoutvision-1.40.0.dist-info/RECORD,,
