@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mind_geometry
+Version: 0.0.1
+Summary: simple lib for mindbox
+Author-email: Vlad <dev.solobscurus@yandex.ru>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+
+Библиотека для Mindbox
