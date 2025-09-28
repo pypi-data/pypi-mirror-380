@@ -1,0 +1,13 @@
+<section id="clients" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <p class="text-center text-gray-500 mb-8">{{ sections.trustedUsers.title }}</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        {% for user in sections.trustedUsers.usersList %}
+          <div class="flex items-center text-gray-400 text-xl font-medium">
+            <span class="w-6 h-6 flex items-center justify-center mr-2"><i class="{{ user.icon }} ri-lg"></i></span>
+            {{ user.name }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>

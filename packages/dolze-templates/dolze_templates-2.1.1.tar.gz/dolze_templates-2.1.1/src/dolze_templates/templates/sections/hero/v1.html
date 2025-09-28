@@ -1,0 +1,197 @@
+<!-- Hero Section v1 - Clean Modern Design -->
+
+<section class="relative min-h-screen bg-gradient-to-br from-slate-50 via-gray-100 to-slate-200 overflow-hidden">
+  <!-- Subtle Background Pattern -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0); background-size: 30px 30px;"></div>
+  </div>
+  
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Large floating circles -->
+    <div class="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full animate-pulse-slow"></div>
+    <div class="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full animate-pulse-slow" style="animation-delay: 4s;"></div>
+    
+    <!-- Floating geometric shapes -->
+    <div class="absolute top-32 right-32 w-8 h-8 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rotate-45 animate-float-gentle"></div>
+    <div class="absolute bottom-32 left-32 w-6 h-6 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rotate-12 animate-float-gentle" style="animation-delay: -2s;"></div>
+    <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-float-gentle" style="animation-delay: -4s;"></div>
+  </div>
+
+  <!-- Enhanced Floating Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Animated gradient orbs -->
+    <div class="absolute top-20 right-20 animate-float-gentle opacity-30">
+      <div class="w-20 h-20 rounded-full bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-sm"></div>
+    </div>
+    
+    <!-- Floating particles -->
+    <div class="absolute top-40 left-20 animate-float-gentle opacity-40" style="animation-delay: -2s;">
+      <div class="w-4 h-4 rounded-full bg-gradient-to-r from-purple-400/40 to-pink-400/40"></div>
+    </div>
+    
+    <!-- Geometric shapes -->
+    <div class="absolute bottom-32 right-24 animate-float-gentle opacity-35" style="animation-delay: -4s;">
+      <div class="w-0 h-0 border-l-6 border-r-6 border-b-10 border-l-transparent border-r-transparent border-b-cyan-400/40"></div>
+    </div>
+    
+    <!-- Additional floating elements -->
+    <div class="absolute top-1/4 left-1/3 w-3 h-3 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full animate-float-slow opacity-50" style="animation-delay: -1s;"></div>
+    <div class="absolute bottom-1/4 right-1/3 w-2 h-2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full animate-float-delayed opacity-60" style="animation-delay: -3s;"></div>
+    <div class="absolute top-2/3 left-1/2 w-5 h-5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rotate-45 animate-float-gentle opacity-40" style="animation-delay: -5s;"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4 py-16 min-h-screen flex items-center">
+    <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+      <!-- Left Side - Content -->
+      <div class="space-y-8 text-center lg:text-left">
+      <!-- Main Title -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+        {{ sections.hero.title }}
+        {% if sections.hero.subtitles %}
+        <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 typewrite" data-type='{{ sections.hero.subtitles | tojson }}' data-period="3000"></span>
+        {% endif %}
+      </h1>
+
+        <!-- Description -->
+        {% if sections.hero.description %}
+        <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+          {{ sections.hero.description }}
+        </p>
+        {% endif %}
+
+        <!-- Value Proposition -->
+        <div class="bg-white/80 backdrop-blur-sm border border-white/30 rounded-xl p-6 mb-8 max-w-2xl mx-auto lg:mx-0 shadow-lg">
+        <h3 class="text-lg font-semibold text-slate-900 mb-4">Why Choose Us?</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-600">
+          <div class="flex items-center justify-center lg:justify-start">
+            <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Free Trial</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start">
+            <svg class="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>No Setup</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start">
+            <svg class="w-4 h-4 text-cyan-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        {% if sections.hero.ctaButtons %}
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+        {% for button in sections.hero.ctaButtons %}
+        <a href="{{ button.url }}" 
+           class="group inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white {% if button.style == 'primary' %}bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl border border-blue-500{% else %}bg-transparent text-slate-900 border-2 border-blue-400 hover:bg-blue-400 hover:text-white{% endif %}"
+           {% if button.ariaLabel %}aria-label="{{ button.ariaLabel }}"{% endif %}>
+          {{ button.label }}
+          {% if button.icon %}
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+          {% endif %}
+        </a>
+        {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Social Proof -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-slate-500">
+        <div class="flex items-center">
+          <div class="flex -space-x-2 mr-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 border-2 border-white"></div>
+            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 border-2 border-white"></div>
+            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 border-2 border-white"></div>
+          </div>
+          <span>Join {{ sections.hero.stats[0].value if sections.hero.stats else '10K+' }} users</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <span>{{ sections.testimonials.stats.averageRating if sections.testimonials.stats else '4.9' }}/5 rating</span>
+        </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Revamped Stats Section -->
+      <div class="relative lg:block hidden">
+        <div class="relative w-full h-96 flex items-center justify-center">
+          <!-- Modern Stats Container -->
+          <div class="relative w-96 h-96 flex items-center justify-center">
+            <!-- Outer Glow Ring -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse-slow"></div>
+            
+            <!-- Rotating Rings -->
+            <div class="absolute inset-4 border-2 border-blue-400/30 rounded-full animate-spin-slow"></div>
+            <div class="absolute inset-8 border border-purple-400/20 rounded-full animate-spin-reverse" style="animation-duration: 20s;"></div>
+            <div class="absolute inset-12 border border-cyan-400/15 rounded-full animate-spin-slow" style="animation-duration: 30s;"></div>
+            
+            <!-- Central Stats Grid -->
+            <div class="relative z-10 w-80 h-80 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-8">
+              <!-- Stats Grid -->
+              {% if sections.hero.stats %}
+              <div class="grid grid-cols-2 gap-6 h-full">
+                {% for stat in sections.hero.stats %}
+                <div class="flex flex-col items-center justify-center group cursor-pointer">
+                  <!-- Animated Counter -->
+                  <div class="relative mb-3">
+                    <div class="text-4xl font-bold text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-500 animate-counter" data-count="{{ stat.value | replace('+', '') | replace('%', '') | replace('K', '') | replace('/7', '') }}">
+                      0
+                    </div>
+                    <!-- Hover Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <!-- Label -->
+                  <div class="text-xs text-slate-500 uppercase tracking-wider font-medium group-hover:text-slate-700 transition-colors duration-300 text-center">
+                    {{ stat.label }}
+                  </div>
+                  
+                  <!-- Animated Underline -->
+                  <div class="w-0 group-hover:w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-2 transition-all duration-500"></div>
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+              
+              <!-- Center Trust Badge -->
+              <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                  <div class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Trusted Platform</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Floating Elements Around Stats -->
+            <div class="absolute top-8 left-8 w-4 h-4 bg-gradient-to-r from-blue-500/40 to-cyan-500/40 rounded-full animate-float-gentle opacity-60"></div>
+            <div class="absolute top-16 right-12 w-3 h-3 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full animate-float-slow opacity-50" style="animation-delay: -1s;"></div>
+            <div class="absolute bottom-12 left-16 w-2 h-2 bg-gradient-to-r from-cyan-500/40 to-blue-500/40 rounded-full animate-float-delayed opacity-70" style="animation-delay: -2s;"></div>
+            <div class="absolute bottom-8 right-8 w-5 h-5 bg-gradient-to-r from-pink-500/30 to-purple-500/30 rounded-full animate-float-gentle opacity-40" style="animation-delay: -3s;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-slate-400/60 rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</section>
