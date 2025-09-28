@@ -1,0 +1,180 @@
+Metadata-Version: 2.4
+Name: clipassgen
+Version: 1.2.0
+Summary:  Console Smart Passwords Generator. Cross-platform console utility for generating cryptographically strong, recoverable, smart passwords.
+Author-email: "A.A Suvorov" <smartlegiondev@gmail.com>
+License-Expression: BSD-3-Clause
+Project-URL: Homepage, https://github.com/smartlegionlab/clipassgen
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# clipassgen <sup>v1.2.0</sup>
+
+[![GitHub top language](https://img.shields.io/github/languages/top/smartlegionlab/clipassgen)](https://github.com/smartlegionlab/clipassgen)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/clipassgen?label=pypi%20downloads)](https://pypi.org/project/clipassgen/)
+[![GitHub release](https://img.shields.io/github/v/release/smartlegionlab/clipassgen)](https://github.com/smartlegionlab/clipassgen/)
+[![GitHub license](https://img.shields.io/github/license/smartlegionlab/clipassgen)](https://github.com/smartlegionlab/clipassgen/blob/master/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/clipassgen)](https://pypi.org/project/clipassgen)
+[![PyPI format](https://img.shields.io/pypi/format/clipassgen)](https://pypi.org/project/clipassgen)
+
+[![PyPI Downloads](https://static.pepy.tech/badge/clipassgen)](https://pepy.tech/projects/clipassgen)
+[![PyPI Monthly Downloads](https://static.pepy.tech/badge/clipassgen/month)](https://pepy.tech/projects/clipassgen)
+[![PyPI Weekly Downloads](https://static.pepy.tech/badge/clipassgen/week)](https://pepy.tech/projects/clipassgen)
+
+## 🖥️ Console Smart Password Generator
+
+A cross-platform command-line utility for generating smart password.
+
+> **Powered by** [smartpasslib](https://github.com/smartlegionlab/smartpasslib) - The core deterministic password generation library
+
+## 🌟 Key Features
+
+- 🔒 **Zero Storage** - Passwords generated on-demand, never stored
+- 🔄 **Deterministic Generation** - Same inputs always produce identical passwords
+- 📱 **Cross-Platform** - Works on Linux, Windows, macOS, and Android (Termux)
+- ⚡ **Instant Generation** - Generate passwords directly from command line
+- 🔐 **Multiple Modes** - Support for different generation strategies
+
+Your passwords don't need to be stored because they were never created - they already exist as mathematical certainties, waiting to be discovered through the correct combination of login and secret phrase.
+
+## 📦 Installation
+
+```bash
+pip install clipassgen
+```
+
+For systems with package conflicts:
+```bash
+pip install clipassgen --break-system-packages
+```
+
+## 🚀 Quick Start
+
+### Interactive Mode
+```bash
+clipassgen
+```
+
+### Command-Line Options
+```bash
+# Generate smart password with login and secret phrase
+clipassgen -l "your_login" -s "your_secret_phrase" -n 16
+
+# Generate using only secret phrase
+clipassgen -s "your_secret_phrase" -n 14
+
+# Generate base password (random)
+clipassgen -n 12
+```
+
+## 🎯 Generation Modes
+
+### 1. Smart Password (Login + Secret Phrase)
+```bash
+clipassgen -l "alice@example.com" -s "mySecret123" -n 16
+# Output: 'eTZj3ZOng8v$ql2v'
+```
+
+### 2. Smart Password (Secret Phrase Only)
+```bash
+clipassgen -s "myUniversalSecret" -n 14
+# Output: 'U7_HbTbKdcsl2#'
+```
+
+### 3. Base Password (Random)
+```bash
+clipassgen -n 12
+# Output: 'r4nD0m!P@ssw' (different each time)
+```
+
+## 🔧 Advanced Usage
+
+### Batch Generation
+```bash
+# Generate multiple passwords for different services
+clipassgen -l "github" -s "main_secret" -n 20
+clipassgen -l "email" -s "main_secret" -n 18
+```
+
+## 🏗️ Technical Foundation
+
+### How It Works
+- **Deterministic Algorithm**: Same inputs (login + secret) always produce identical output
+- **Zero Storage**: No passwords are stored - everything is generated on-demand
+
+### Recovery Process
+Your passwords can always be regenerated using the same:
+- Login/identifier
+- Secret phrase
+- Password length
+
+## 🔄 Ecosystem Integration
+
+### Complementary Tools
+- [**CLI PassMan**](https://github.com/smartlegionlab/clipassman/) - Console password manager for smart passwords
+- [**SmartPassLib**](https://github.com/smartlegionlab/smartpasslib/) - Core Python library for password generation
+- [**Desktop Manager**](https://github.com/smartlegionlab/smart-password-manager-desktop) - Graphical interface
+- [**Web Manager**](https://github.com/smartlegionlab/smart-password-manager) - Web-based interface
+
+### Consistency Guarantee
+Passwords generated with clipassgen are identical to those generated by other ecosystem tools when using the same inputs.
+
+## 🛡️ Security Features
+
+- **No Password Storage** - Eliminates risk of password database breaches
+- **Local Generation** - All processing happens on your local machine
+- **Deterministic Yet Secure** - Reproducible without being predictable
+
+## 🤝 Supported Platforms
+
+- **Linux** - All major distributions
+- **Windows** - 7, 8, 10, 11
+- **macOS** - Fully supported
+- **Android** - Via Termux
+
+## 🐛 Troubleshooting
+
+### Manual Installation
+```bash
+# Clone and run manually
+git clone https://github.com/smartlegionlab/clipassgen.git
+cd clipassgen
+python app.py
+python app.py -n 10 -s "secret" -l "login"
+```
+
+## 📜 License
+
+BSD 3-Clause License
+
+Copyright (c) 2025, Alexander Suvorov
+
+```
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+
+![CLI Interface](https://github.com/smartlegionlab/clipassgen/raw/master/data/images/clipassgen.png)
