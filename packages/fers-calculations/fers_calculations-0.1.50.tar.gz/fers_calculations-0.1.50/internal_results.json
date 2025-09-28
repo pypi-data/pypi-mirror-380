@@ -1,0 +1,2415 @@
+{
+  "member_sets": [
+    {
+      "id": 1,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 5,
+          "start_node": {
+            "id": 7,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": -0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 6,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.222404890174144,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 6,
+          "start_node": {
+            "id": 6,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "end_node": {
+            "id": 9,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.222404890174144,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 7,
+          "start_node": {
+            "id": 9,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 8,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 1.3,
+            "nodal_support": 1
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 26.668858682089727,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 13,
+          "start_node": {
+            "id": 18,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": -0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 17,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.222404890174144,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 14,
+          "start_node": {
+            "id": 17,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "end_node": {
+            "id": 20,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.222404890174144,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 15,
+          "start_node": {
+            "id": 20,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 19,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 1.3,
+            "nodal_support": 1
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 26.668858682089727,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 21,
+          "start_node": {
+            "id": 6,
+            "X": 0.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "end_node": {
+            "id": 4,
+            "X": 0.0,
+            "Y": 0.2,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": null,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 0.0,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Rigid"
+        },
+        {
+          "id": 1,
+          "start_node": {
+            "id": 4,
+            "X": 0.0,
+            "Y": 0.2,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 3,
+            "X": 0.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": 2,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 6.667214670522432,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 2,
+          "start_node": {
+            "id": 3,
+            "X": 0.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 2,
+            "X": 0.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 33.33607335261216,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 3,
+          "start_node": {
+            "id": 2,
+            "X": 0.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 1,
+            "X": 0.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 5.55601222543536,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 4,
+          "start_node": {
+            "id": 1,
+            "X": 0.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 5,
+            "X": 0.0,
+            "Y": 2.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 5.55601222543536,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 24,
+          "start_node": {
+            "id": 17,
+            "X": 1.0,
+            "Y": 0.1,
+            "Z": 0.0,
+            "nodal_support": 1
+          },
+          "end_node": {
+            "id": 15,
+            "X": 1.0,
+            "Y": 0.2,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": null,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 0.0,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Rigid"
+        },
+        {
+          "id": 9,
+          "start_node": {
+            "id": 15,
+            "X": 1.0,
+            "Y": 0.2,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 14,
+            "X": 1.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": 2,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 6.667214670522432,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 10,
+          "start_node": {
+            "id": 14,
+            "X": 1.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 13,
+            "X": 1.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 33.33607335261216,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 11,
+          "start_node": {
+            "id": 13,
+            "X": 1.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 12,
+            "X": 1.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 5.55601222543536,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        },
+        {
+          "id": 12,
+          "start_node": {
+            "id": 12,
+            "X": 1.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 16,
+            "X": 1.0,
+            "Y": 2.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 1,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 5.55601222543536,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 22,
+          "start_node": {
+            "id": 1,
+            "X": 0.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 10,
+            "X": 0.0,
+            "Y": 2.25,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "section": null,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 0.0,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Rigid"
+        },
+        {
+          "id": 8,
+          "start_node": {
+            "id": 10,
+            "X": 0.0,
+            "Y": 2.25,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 11,
+            "X": 0.0,
+            "Y": 2.2814123370338706,
+            "Z": 1.2995887899951677,
+            "nodal_support": null
+          },
+          "section": 2,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 9.665165568203944,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 23,
+          "start_node": {
+            "id": 12,
+            "X": 1.0,
+            "Y": 2.25,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 21,
+            "X": 1.0,
+            "Y": 2.25,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "section": null,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 0.0,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Rigid"
+        },
+        {
+          "id": 16,
+          "start_node": {
+            "id": 21,
+            "X": 1.0,
+            "Y": 2.25,
+            "Z": 0.1,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 22,
+            "X": 1.0,
+            "Y": 2.2814123370338706,
+            "Z": 1.2995887899951677,
+            "nodal_support": null
+          },
+          "section": 2,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 9.665165568203944,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 17,
+          "start_node": {
+            "id": 3,
+            "X": 0.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 14,
+            "X": 1.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 3,
+          "rotation_angle": 0.0,
+          "start_hinge": 1,
+          "end_hinge": 1,
+          "classification": "",
+          "weight": 2.7542276346815,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 18,
+          "start_node": {
+            "id": 2,
+            "X": 0.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 13,
+            "X": 1.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 3,
+          "rotation_angle": 0.0,
+          "start_hinge": 1,
+          "end_hinge": 1,
+          "classification": "",
+          "weight": 2.7542276346815,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Normal"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 19,
+          "start_node": {
+            "id": 3,
+            "X": 0.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 13,
+            "X": 1.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 5,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.249863995889529,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Tension"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "l_y": null,
+      "l_z": null,
+      "classification": null,
+      "members": [
+        {
+          "id": 20,
+          "start_node": {
+            "id": 2,
+            "X": 0.0,
+            "Y": 2.0,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "end_node": {
+            "id": 14,
+            "X": 1.0,
+            "Y": 0.5,
+            "Z": 0.0,
+            "nodal_support": null
+          },
+          "section": 5,
+          "rotation_angle": 0.0,
+          "start_hinge": null,
+          "end_hinge": null,
+          "classification": "",
+          "weight": 2.249863995889529,
+          "chi": null,
+          "reference_member": null,
+          "reference_node": null,
+          "member_type": "Tension"
+        }
+      ]
+    }
+  ],
+  "load_cases": [
+    {
+      "id": 1,
+      "name": "Load Case DA",
+      "nodal_loads": [],
+      "nodal_moments": [],
+      "distributed_loads": [
+        {
+          "member": 8,
+          "load_case": 1,
+          "distribution_shape": "Uniform",
+          "magnitude": 416.7,
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "start_frac": 0.0,
+          "end_frac": 1.0,
+          "end_magnitude": 416.7
+        },
+        {
+          "member": 16,
+          "load_case": 1,
+          "distribution_shape": "Uniform",
+          "magnitude": 416.7,
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "start_frac": 0.0,
+          "end_frac": 1.0,
+          "end_magnitude": 416.7
+        }
+      ],
+      "rotation_imperfections": [],
+      "translation_imperfections": []
+    },
+    {
+      "id": 2,
+      "name": "Load Case CA",
+      "nodal_loads": [
+        {
+          "id": 1,
+          "node": 1,
+          "load_case": 2,
+          "magnitude": 500.0,
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "load_type": "force"
+        },
+        {
+          "id": 2,
+          "node": 12,
+          "load_case": 2,
+          "magnitude": 500.0,
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "load_type": "force"
+        }
+      ],
+      "nodal_moments": [],
+      "distributed_loads": [],
+      "rotation_imperfections": [],
+      "translation_imperfections": []
+    },
+    {
+      "id": 3,
+      "name": "Load Case Vert",
+      "nodal_loads": [],
+      "nodal_moments": [],
+      "distributed_loads": [
+        {
+          "member": 8,
+          "load_case": 3,
+          "distribution_shape": "Uniform",
+          "magnitude": 416.7,
+          "direction": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "start_frac": 0.0,
+          "end_frac": 1.0,
+          "end_magnitude": 416.7
+        },
+        {
+          "member": 16,
+          "load_case": 3,
+          "distribution_shape": "Uniform",
+          "magnitude": 416.7,
+          "direction": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "start_frac": 0.0,
+          "end_frac": 1.0,
+          "end_magnitude": 416.7
+        }
+      ],
+      "rotation_imperfections": [],
+      "translation_imperfections": []
+    }
+  ],
+  "load_combinations": [],
+  "imperfection_cases": [],
+  "settings": {
+    "id": 1,
+    "analysis_option": {
+      "id": 1,
+      "solve_loadcases": true,
+      "solver": "newton_raphson",
+      "tolerance": 0.01,
+      "max_iterations": 30,
+      "dimensionality": "3D",
+      "order": "Nonlinear"
+    },
+    "general_info": {
+      "project_name": "Unnamed Project",
+      "author": "Unknown",
+      "version": "1.0"
+    }
+  },
+  "results": {
+    "loadcases": {
+      "Load Case DA": {
+        "name": "Load Case DA",
+        "result_type": {
+          "Loadcase": 1
+        },
+        "displacement_nodes": {
+          "1": {
+            "dx": 0.0004137935661467712,
+            "dy": 1.478016605447626e-6,
+            "dz": 4.598598318797472e-20,
+            "rx": 4.0859432610354535e-20,
+            "ry": 0.12902586446121078,
+            "rz": -0.00022710328727287526
+          },
+          "2": {
+            "dx": 0.0003621939815808341,
+            "dy": 1.4780166054476248e-6,
+            "dz": 3.632523877623194e-20,
+            "rx": 3.642199122557186e-20,
+            "ry": 0.11335285218760148,
+            "rz": -0.00016827193230872762
+          },
+          "3": {
+            "dx": 0.00013697978911625643,
+            "dy": 1.0859445606985207e-6,
+            "dz": 1.9494836640203044e-21,
+            "rx": 9.2602717965967e-21,
+            "ry": 0.01931477854594572,
+            "rz": -0.00025216924160677143
+          },
+          "4": {
+            "dx": 0.000038114100044087084,
+            "dy": 0.0,
+            "dz": 1.7488313107664977e-24,
+            "rx": 1.7488313107664976e-23,
+            "ry": 0.0005071638176145711,
+            "rz": -0.0003811410004408708
+          },
+          "5": {
+            "dx": 0.00047056938796499027,
+            "dy": 1.4780166054476259e-6,
+            "dz": 5.628978030412982e-20,
+            "rx": 4.145742130258665e-20,
+            "ry": 0.12902586446121,
+            "rz": -0.00022710328727287745
+          },
+          "6": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": 0.0,
+            "rx": 1.7488313107664976e-23,
+            "ry": 0.0005071638176145711,
+            "rz": -0.0003811410004408708
+          },
+          "7": {
+            "dx": -0.000050716381761457096,
+            "dy": 1.7488313107664973e-24,
+            "dz": 0.0,
+            "rx": 1.748831310766497e-23,
+            "ry": 0.0005071638176145708,
+            "rz": -0.0003811410004408708
+          },
+          "8": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": 0.0,
+            "rx": -8.744156553834982e-24,
+            "ry": -0.0002535819088072855,
+            "rz": -0.00038114100044087064
+          },
+          "9": {
+            "dx": 0.000045014540024961915,
+            "dy": -1.552217139733583e-24,
+            "dz": 0.0,
+            "rx": 1.3607770258331118e-23,
+            "ry": 0.000394627467552166,
+            "rz": -0.00038114100044087074
+          },
+          "10": {
+            "dx": 0.013316380012267849,
+            "dy": 1.478016605447622e-6,
+            "dz": 4.598598318797472e-20,
+            "rx": 4.0859432610354535e-20,
+            "ry": 0.12902586446121078,
+            "rz": -0.00022710328727287526
+          },
+          "11": {
+            "dx": 0.1724092502871267,
+            "dy": 0.00010166640027154338,
+            "dz": -2.623525078631952e-6,
+            "rx": -0.00016703787914940316,
+            "ry": 0.13440871401435597,
+            "rz": -0.00036805815928937693
+          },
+          "12": {
+            "dx": 0.0004072044539360246,
+            "dy": -5.934382427584668e-6,
+            "dz": -2.7722587135603003e-20,
+            "rx": -1.208680904762492e-20,
+            "ry": 0.12902586446121642,
+            "rz": -0.0002328882181427978
+          },
+          "13": {
+            "dx": 0.0003541586366526068,
+            "dy": -5.934382427584667e-6,
+            "dz": -2.4366181902263526e-20,
+            "rx": -1.460202216124046e-20,
+            "ry": 0.11335285218760643,
+            "rz": -0.00017405686317865227
+          },
+          "14": {
+            "dx": 0.00012922364738389785,
+            "dy": -1.0859445606985209e-6,
+            "dz": -2.0907493322649232e-21,
+            "rx": -9.262543904962024e-21,
+            "ry": 0.019314778545946563,
+            "rz": -0.00023773106362901276
+          },
+          "15": {
+            "dx": 0.00003596282848157726,
+            "dy": 0.0,
+            "dz": -6.742977293850762e-23,
+            "rx": -6.742977293850762e-22,
+            "ry": 0.0005071638176145933,
+            "rz": -0.00035962828481577255
+          },
+          "16": {
+            "dx": 0.00046542650847172394,
+            "dy": -5.934382427584668e-6,
+            "dz": -3.085879472220458e-20,
+            "rx": -1.3047075762458598e-20,
+            "ry": 0.12902586446121617,
+            "rz": -0.0002328882181427971
+          },
+          "17": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": 0.0,
+            "rx": -6.742977293850762e-22,
+            "ry": 0.0005071638176145933,
+            "rz": -0.00035962828481577255
+          },
+          "18": {
+            "dx": -0.00005071638176145931,
+            "dy": -6.74297729385076e-23,
+            "dz": 0.0,
+            "rx": -6.74297729385076e-22,
+            "ry": 0.0005071638176145929,
+            "rz": -0.00035962828481577255
+          },
+          "19": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": 0.0,
+            "rx": 3.3714886469253757e-22,
+            "ry": -0.00025358190880729657,
+            "rz": -0.0003596282848157726
+          },
+          "20": {
+            "dx": 0.00004501454002496389,
+            "dy": 5.984891089216641e-23,
+            "dz": 0.0,
+            "rx": -5.246754521546575e-22,
+            "ry": 0.0003946274675521833,
+            "rz": -0.0003596282848157727
+          },
+          "21": {
+            "dx": 0.013309790900057666,
+            "dy": -5.934382427584667e-6,
+            "dz": -2.7722587135603003e-20,
+            "rx": -1.208680904762492e-20,
+            "ry": 0.12902586446121642,
+            "rz": -0.0002328882181427978
+          },
+          "22": {
+            "dx": 0.17240284289312144,
+            "dy": 0.00009425400123851113,
+            "dz": -2.6235250786320264e-6,
+            "rx": -0.00016703787914940319,
+            "ry": 0.1344087140143615,
+            "rz": -0.00037384309015917646
+          }
+        },
+        "reaction_nodes": {
+          "6": {
+            "nodal_forces": {
+              "fx": -244.96797008320755,
+              "fy": -2165.879425010364,
+              "fz": -3.5249503495088494e-16,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "location": {
+              "X": 0.0,
+              "Y": 0.1,
+              "Z": 0.0
+            },
+            "support_id": 1
+          },
+          "8": {
+            "nodal_forces": {
+              "fx": -269.1732225188998,
+              "fy": 1.267221796852194e-16,
+              "fz": -0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "location": {
+              "X": 0.0,
+              "Y": 0.1,
+              "Z": 1.3
+            },
+            "support_id": 1
+          },
+          "17": {
+            "nodal_forces": {
+              "fx": -216.7655848789327,
+              "fy": 2165.8794250103642,
+              "fz": 1.3591232512135695e-14,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "location": {
+              "X": 1.0,
+              "Y": 0.1,
+              "Z": 0.0
+            },
+            "support_id": 1
+          },
+          "19": {
+            "nodal_forces": {
+              "fx": -269.17322251891176,
+              "fy": -4.886033175323617e-15,
+              "fz": -0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "location": {
+              "X": 1.0,
+              "Y": 0.1,
+              "Z": 1.3
+            },
+            "support_id": 1
+          }
+        },
+        "member_results": {
+          "1": {
+            "start_node_forces": {
+              "fx": -514.1411926021265,
+              "fy": -2165.879425010364,
+              "fz": -3.5249503495088494e-16,
+              "mx": -7.539167942938366e-14,
+              "my": -349.92518927457166,
+              "mz": -51.41411926021158
+            },
+            "end_node_forces": {
+              "fx": 514.1411926021265,
+              "fy": 2165.879425010364,
+              "fz": 3.5249503495088494e-16,
+              "mx": 7.528593091889849e-14,
+              "my": 349.92518927457166,
+              "mz": 205.65647704085018
+            },
+            "maximums": {
+              "fx": 514.1411926021265,
+              "fy": 2165.879425010364,
+              "fz": 3.5249503495088494e-16,
+              "mx": 7.528593091889849e-14,
+              "my": 349.92518927457166,
+              "mz": 205.65647704085018
+            },
+            "minimums": {
+              "fx": -514.1411926021265,
+              "fy": -2165.879425010364,
+              "fz": -3.5249503495088494e-16,
+              "mx": -7.539167942938366e-14,
+              "my": -349.92518927457166,
+              "mz": -51.41411926021158
+            }
+          },
+          "2": {
+            "start_node_forces": {
+              "fx": 95.79916687942159,
+              "fy": -156.39486684248448,
+              "fz": -1.65539941348324e-15,
+              "mx": -7.515715930162905e-14,
+              "my": -349.92518927457166,
+              "mz": -88.57205268546224
+            },
+            "end_node_forces": {
+              "fx": -95.79916687942159,
+              "fy": 156.39486684248448,
+              "fz": 1.65539941348324e-15,
+              "mx": 7.267406018140432e-14,
+              "my": 349.92518927457166,
+              "mz": -55.12669763367023
+            },
+            "maximums": {
+              "fx": 95.79916687942159,
+              "fy": 156.39486684248448,
+              "fz": 1.65539941348324e-15,
+              "mx": 7.267406018140432e-14,
+              "my": 349.92518927457166,
+              "mz": -55.12669763367023
+            },
+            "minimums": {
+              "fx": -95.79916687942159,
+              "fy": -156.39486684248448,
+              "fz": -1.65539941348324e-15,
+              "mx": -7.515715930162905e-14,
+              "my": -349.92518927457166,
+              "mz": -88.57205268546224
+            }
+          },
+          "3": {
+            "start_node_forces": {
+              "fx": -500.04000000000997,
+              "fy": -3.183231456205249e-12,
+              "fz": -1.775739918541595e-15,
+              "mx": -7.267603723443482e-14,
+              "my": -349.92518927457195,
+              "mz": 132.86371250521142
+            },
+            "end_node_forces": {
+              "fx": 500.04000000000997,
+              "fy": 3.183231456205249e-12,
+              "fz": 1.775739918541595e-15,
+              "mx": 7.223210225480265e-14,
+              "my": 349.92518927457195,
+              "mz": -7.853712505208932
+            },
+            "maximums": {
+              "fx": 500.04000000000997,
+              "fy": 3.183231456205249e-12,
+              "fz": 1.775739918541595e-15,
+              "mx": 7.223210225480265e-14,
+              "my": 349.92518927457195,
+              "mz": 132.86371250521142
+            },
+            "minimums": {
+              "fx": -500.04000000000997,
+              "fy": -3.183231456205249e-12,
+              "fz": -1.775739918541595e-15,
+              "mx": -7.267603723443482e-14,
+              "my": -349.92518927457195,
+              "mz": -7.853712505208932
+            }
+          },
+          "4": {
+            "start_node_forces": {
+              "fx": 2.7284841053187847e-12,
+              "fy": 4.547473508864641e-13,
+              "fz": -4.448620091097362e-14,
+              "mx": -1.5324670714174745e-14,
+              "my": 1.7280399333685637e-11,
+              "mz": 3.410605131648481e-12
+            },
+            "end_node_forces": {
+              "fx": -2.7284841053187847e-12,
+              "fy": -4.547473508864641e-13,
+              "fz": 4.448620091097362e-14,
+              "mx": 4.20312048643134e-15,
+              "my": -1.7280399333685637e-11,
+              "mz": -2.2737367544323206e-12
+            },
+            "maximums": {
+              "fx": 2.7284841053187847e-12,
+              "fy": 4.547473508864641e-13,
+              "fz": 4.448620091097362e-14,
+              "mx": 4.20312048643134e-15,
+              "my": 1.7280399333685637e-11,
+              "mz": 3.410605131648481e-12
+            },
+            "minimums": {
+              "fx": -2.7284841053187847e-12,
+              "fy": -4.547473508864641e-13,
+              "fz": -4.448620091097362e-14,
+              "mx": -1.5324670714174745e-14,
+              "my": -1.7280399333685637e-11,
+              "mz": -2.2737367544323206e-12
+            }
+          },
+          "5": {
+            "start_node_forces": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 1.9721522630525295e-31,
+              "my": 1.8189894035458565e-12,
+              "mz": 0.0
+            },
+            "end_node_forces": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 3.944304526105059e-31,
+              "my": 3.637978807091713e-12,
+              "mz": 0.0
+            },
+            "maximums": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 3.944304526105059e-31,
+              "my": 3.637978807091713e-12,
+              "mz": 0.0
+            },
+            "minimums": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 1.9721522630525295e-31,
+              "my": 1.8189894035458565e-12,
+              "mz": 0.0
+            }
+          },
+          "6": {
+            "start_node_forces": {
+              "fx": 269.1732225189189,
+              "fy": -1.2672217968521474e-16,
+              "fz": 0.0,
+              "mx": 1.6473883359083331e-16,
+              "my": 349.9251892745742,
+              "mz": -3.552713678800501e-15
+            },
+            "end_node_forces": {
+              "fx": -269.1732225189189,
+              "fy": 1.2672217968521474e-16,
+              "fz": 0.0,
+              "mx": -1.5206661562230983e-16,
+              "my": -323.0078670226776,
+              "mz": 3.552713678800501e-15
+            },
+            "maximums": {
+              "fx": 269.1732225189189,
+              "fy": 1.2672217968521474e-16,
+              "fz": 0.0,
+              "mx": 1.6473883359083331e-16,
+              "my": 349.9251892745742,
+              "mz": 3.552713678800501e-15
+            },
+            "minimums": {
+              "fx": -269.1732225189189,
+              "fy": -1.2672217968521474e-16,
+              "fz": 0.0,
+              "mx": -1.5206661562230983e-16,
+              "my": -323.0078670226776,
+              "mz": -3.552713678800501e-15
+            }
+          },
+          "7": {
+            "start_node_forces": {
+              "fx": 269.1732225188998,
+              "fy": -1.267221796852194e-16,
+              "fz": 0.0,
+              "mx": 1.5206661562229647e-16,
+              "my": 323.0078670226799,
+              "mz": -4.440892098500626e-16
+            },
+            "end_node_forces": {
+              "fx": -269.1732225188998,
+              "fy": 1.267221796852194e-16,
+              "fz": 0.0,
+              "mx": -3.325541753572328e-29,
+              "my": -1.1368683772161603e-13,
+              "mz": 4.440892098500626e-16
+            },
+            "maximums": {
+              "fx": 269.1732225188998,
+              "fy": 1.267221796852194e-16,
+              "fz": 0.0,
+              "mx": 1.5206661562229647e-16,
+              "my": 323.0078670226799,
+              "mz": 4.440892098500626e-16
+            },
+            "minimums": {
+              "fx": -269.1732225188998,
+              "fy": -1.267221796852194e-16,
+              "fz": 0.0,
+              "mx": -3.325541753572328e-29,
+              "my": -1.1368683772161603e-13,
+              "mz": -4.440892098500626e-16
+            }
+          },
+          "8": {
+            "start_node_forces": {
+              "fx": -250.01999999998952,
+              "fy": -6.544760421006935,
+              "fz": -249.9343243954931,
+              "mx": 50.00399999999996,
+              "my": -301.23014135878265,
+              "mz": -42.13315237389048
+            },
+            "end_node_forces": {
+              "fx": 250.01999999998952,
+              "fy": -6.544760421006938,
+              "fz": -249.9343243954932,
+              "mx": -50.003999999999905,
+              "my": 1.3089520842068392,
+              "mz": 49.98686487909836
+            },
+            "maximums": {
+              "fx": 250.01999999998952,
+              "fy": -6.544760421006935,
+              "fz": -249.9343243954931,
+              "mx": 50.00399999999996,
+              "my": 1.3089520842068392,
+              "mz": 49.98686487909836
+            },
+            "minimums": {
+              "fx": -250.01999999998952,
+              "fy": -6.544760421006938,
+              "fz": -249.9343243954932,
+              "mx": -50.003999999999905,
+              "my": -301.23014135878265,
+              "mz": -42.13315237389048
+            }
+          },
+          "9": {
+            "start_node_forces": {
+              "fx": -485.93880739785163,
+              "fy": 2165.8794250103642,
+              "fz": 1.3591232512135695e-14,
+              "mx": 7.124492840648832e-14,
+              "my": -349.92518927458696,
+              "mz": -48.59388073978556
+            },
+            "end_node_forces": {
+              "fx": 485.93880739785163,
+              "fy": -2165.8794250103642,
+              "fz": -1.3591232512135695e-14,
+              "mx": -6.716755865284776e-14,
+              "my": 349.92518927458696,
+              "mz": 194.3755229591403
+            },
+            "maximums": {
+              "fx": 485.93880739785163,
+              "fy": 2165.8794250103642,
+              "fz": 1.3591232512135695e-14,
+              "mx": 7.124492840648832e-14,
+              "my": 349.92518927458696,
+              "mz": 194.3755229591403
+            },
+            "minimums": {
+              "fx": -485.93880739785163,
+              "fy": -2165.8794250103642,
+              "fz": -1.3591232512135695e-14,
+              "mx": -6.716755865284776e-14,
+              "my": -349.92518927458696,
+              "mz": -48.59388073978556
+            }
+          },
+          "10": {
+            "start_node_forces": {
+              "fx": 89.1968052343791,
+              "fy": 1934.0088250131507,
+              "fz": 6.35265068572566e-14,
+              "mx": 6.217528540857413e-14,
+              "my": -349.92518927458696,
+              "mz": -79.58934731731492
+            },
+            "end_node_forces": {
+              "fx": -89.1968052343791,
+              "fy": -1934.0088250131507,
+              "fz": -6.35265068572566e-14,
+              "mx": 3.311447487731078e-14,
+              "my": 349.92518927458696,
+              "mz": -54.205860534253816
+            },
+            "maximums": {
+              "fx": 89.1968052343791,
+              "fy": 1934.0088250131507,
+              "fz": 6.35265068572566e-14,
+              "mx": 6.217528540857413e-14,
+              "my": 349.92518927458696,
+              "mz": -54.205860534253816
+            },
+            "minimums": {
+              "fx": -89.1968052343791,
+              "fy": -1934.0088250131507,
+              "fz": -6.35265068572566e-14,
+              "mx": 3.311447487731078e-14,
+              "my": -349.92518927458696,
+              "mz": -79.58934731731492
+            }
+          },
+          "11": {
+            "start_node_forces": {
+              "fx": -500.0399999999754,
+              "fy": 1.8189894035458565e-12,
+              "fz": 6.364377366571009e-14,
+              "mx": -3.3112659801405565e-14,
+              "my": -349.92518927458696,
+              "mz": 132.86371250520494
+            },
+            "end_node_forces": {
+              "fx": 500.0399999999754,
+              "fy": -1.8189894035458565e-12,
+              "fz": -6.364377366571009e-14,
+              "mx": 4.902360321783142e-14,
+              "my": 349.92518927458696,
+              "mz": -7.853712505210979
+            },
+            "maximums": {
+              "fx": 500.0399999999754,
+              "fy": 1.8189894035458565e-12,
+              "fz": 6.364377366571009e-14,
+              "mx": 4.902360321783142e-14,
+              "my": 349.92518927458696,
+              "mz": 132.86371250520494
+            },
+            "minimums": {
+              "fx": -500.0399999999754,
+              "fy": -1.8189894035458565e-12,
+              "fz": -6.364377366571009e-14,
+              "mx": -3.3112659801405565e-14,
+              "my": -349.92518927458696,
+              "mz": -7.853712505210979
+            }
+          },
+          "12": {
+            "start_node_forces": {
+              "fx": -1.8189894035458565e-12,
+              "fy": 0.0,
+              "fz": -1.733008010315703e-14,
+              "mx": 1.3512872508966188e-14,
+              "my": 5.9117155615240335e-12,
+              "mz": -1.5916157281026244e-12
+            },
+            "end_node_forces": {
+              "fx": 1.8189894035458565e-12,
+              "fy": 0.0,
+              "fz": 1.733008010315703e-14,
+              "mx": -1.7845392534755395e-14,
+              "my": -5.9117155615240335e-12,
+              "mz": 4.547473508864641e-13
+            },
+            "maximums": {
+              "fx": 1.8189894035458565e-12,
+              "fy": 0.0,
+              "fz": 1.733008010315703e-14,
+              "mx": 1.3512872508966188e-14,
+              "my": 5.9117155615240335e-12,
+              "mz": 4.547473508864641e-13
+            },
+            "minimums": {
+              "fx": -1.8189894035458565e-12,
+              "fy": 0.0,
+              "fz": -1.733008010315703e-14,
+              "mx": -1.7845392534755395e-14,
+              "my": -5.9117155615240335e-12,
+              "mz": -1.5916157281026244e-12
+            }
+          },
+          "13": {
+            "start_node_forces": {
+              "fx": 0.0,
+              "fy": -2.0194839173657902e-28,
+              "fz": 0.0,
+              "mx": -2.524354896707238e-29,
+              "my": -4.547473508864641e-13,
+              "mz": 0.0
+            },
+            "end_node_forces": {
+              "fx": 0.0,
+              "fy": 2.0194839173657902e-28,
+              "fz": 0.0,
+              "mx": -3.7865323450608567e-29,
+              "my": 1.8189894035458565e-12,
+              "mz": 0.0
+            },
+            "maximums": {
+              "fx": 0.0,
+              "fy": 2.0194839173657902e-28,
+              "fz": 0.0,
+              "mx": -2.524354896707238e-29,
+              "my": 1.8189894035458565e-12,
+              "mz": 0.0
+            },
+            "minimums": {
+              "fx": 0.0,
+              "fy": -2.0194839173657902e-28,
+              "fz": 0.0,
+              "mx": -3.7865323450608567e-29,
+              "my": -4.547473508864641e-13,
+              "mz": 0.0
+            }
+          },
+          "14": {
+            "start_node_forces": {
+              "fx": 269.1732225189189,
+              "fy": 4.886033175323181e-15,
+              "fz": 0.0,
+              "mx": -6.351843127920866e-15,
+              "my": 349.9251892745883,
+              "mz": 1.0658141036401503e-14
+            },
+            "end_node_forces": {
+              "fx": -269.1732225189189,
+              "fy": -4.886033175323181e-15,
+              "fz": 0.0,
+              "mx": 5.863239810388456e-15,
+              "my": -323.00786702269306,
+              "mz": -1.0658141036401503e-14
+            },
+            "maximums": {
+              "fx": 269.1732225189189,
+              "fy": 4.886033175323181e-15,
+              "fz": 0.0,
+              "mx": 5.863239810388456e-15,
+              "my": 349.9251892745883,
+              "mz": 1.0658141036401503e-14
+            },
+            "minimums": {
+              "fx": -269.1732225189189,
+              "fy": -4.886033175323181e-15,
+              "fz": 0.0,
+              "mx": -6.351843127920866e-15,
+              "my": -323.00786702269306,
+              "mz": -1.0658141036401503e-14
+            }
+          },
+          "15": {
+            "start_node_forces": {
+              "fx": 269.17322251891176,
+              "fy": 4.886033175323617e-15,
+              "fz": 0.0,
+              "mx": -5.863239810388352e-15,
+              "my": 323.00786702269403,
+              "mz": -6.661338147750939e-16
+            },
+            "end_node_forces": {
+              "fx": -269.17322251891176,
+              "fy": -4.886033175323617e-15,
+              "fz": 0.0,
+              "mx": 1.1832913578315177e-29,
+              "my": -5.684341886080802e-14,
+              "mz": 6.661338147750939e-16
+            },
+            "maximums": {
+              "fx": 269.17322251891176,
+              "fy": 4.886033175323617e-15,
+              "fz": 0.0,
+              "mx": 1.1832913578315177e-29,
+              "my": 323.00786702269403,
+              "mz": 6.661338147750939e-16
+            },
+            "minimums": {
+              "fx": -269.17322251891176,
+              "fy": -4.886033175323617e-15,
+              "fz": 0.0,
+              "mx": -5.863239810388352e-15,
+              "my": -5.684341886080802e-14,
+              "mz": -6.661338147750939e-16
+            }
+          },
+          "16": {
+            "start_node_forces": {
+              "fx": -250.01999999999316,
+              "fy": -6.54476042100688,
+              "fz": -249.93432439549315,
+              "mx": 50.00399999999995,
+              "my": -301.23014135878356,
+              "mz": -42.13315237389055
+            },
+            "end_node_forces": {
+              "fx": 250.01999999999316,
+              "fy": -6.544760421006994,
+              "fz": -249.93432439549315,
+              "mx": -50.003999999999905,
+              "my": 1.3089520842032047,
+              "mz": 49.98686487909855
+            },
+            "maximums": {
+              "fx": 250.01999999999316,
+              "fy": -6.54476042100688,
+              "fz": -249.93432439549315,
+              "mx": 50.00399999999995,
+              "my": 1.3089520842032047,
+              "mz": 49.98686487909855
+            },
+            "minimums": {
+              "fx": -250.01999999999316,
+              "fy": -6.544760421006994,
+              "fz": -249.93432439549315,
+              "mx": -50.003999999999905,
+              "my": -301.23014135878356,
+              "mz": -42.13315237389055
+            }
+          },
+          "17": {
+            "start_node_forces": {
+              "fx": 575.135612632228,
+              "fy": -231.8705999972139,
+              "fz": -38.29783812423841,
+              "mx": 7.177128262650577e-19,
+              "my": 19.148919062118793,
+              "mz": -117.08442435538785
+            },
+            "end_node_forces": {
+              "fx": -575.135612632228,
+              "fy": 231.8705999972139,
+              "fz": 38.29783812423841,
+              "mx": -7.177128262650577e-19,
+              "my": 19.148919062119614,
+              "mz": -114.78617564182608
+            },
+            "maximums": {
+              "fx": 575.135612632228,
+              "fy": 231.8705999972139,
+              "fz": 38.29783812423841,
+              "mx": 7.177128262650577e-19,
+              "my": 19.148919062119614,
+              "mz": -114.78617564182608
+            },
+            "minimums": {
+              "fx": -575.135612632228,
+              "fy": -231.8705999972139,
+              "fz": -38.29783812423841,
+              "mx": -7.177128262650577e-19,
+              "my": 19.148919062118793,
+              "mz": -117.08442435538785
+            }
+          },
+          "18": {
+            "start_node_forces": {
+              "fx": 595.8391668794211,
+              "fy": -156.39486684248132,
+              "fz": -224.75894164019394,
+              "mx": 1.9770530272108428e-18,
+              "my": 112.37947082009457,
+              "mz": -77.73701487153416
+            },
+            "end_node_forces": {
+              "fx": -595.8391668794211,
+              "fy": 156.39486684248132,
+              "fz": 224.75894164019394,
+              "mx": -1.9770530272108428e-18,
+              "my": 112.37947082009939,
+              "mz": -78.65785197094716
+            },
+            "maximums": {
+              "fx": 595.8391668794211,
+              "fy": 156.39486684248132,
+              "fz": 224.75894164019394,
+              "mx": 1.9770530272108428e-18,
+              "my": 112.37947082009939,
+              "mz": -77.73701487153416
+            },
+            "minimums": {
+              "fx": -595.8391668794211,
+              "fy": -156.39486684248132,
+              "fz": -224.75894164019394,
+              "mx": -1.9770530272108428e-18,
+              "my": 112.37947082009457,
+              "mz": -78.65785197094716
+            }
+          },
+          "19": {
+            "start_node_forces": {
+              "fx": 1185.0759721137767,
+              "fy": 1777.613958170665,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "end_node_forces": {
+              "fx": -1185.0759721137767,
+              "fy": -1777.613958170665,
+              "fz": -0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "maximums": {
+              "fx": 1185.0759721137767,
+              "fy": 1777.613958170665,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "minimums": {
+              "fx": -1185.0759721137767,
+              "fy": -1777.613958170665,
+              "fz": -0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            }
+          },
+          "20": {
+            "start_node_forces": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "end_node_forces": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "maximums": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            },
+            "minimums": {
+              "fx": 0.0,
+              "fy": 0.0,
+              "fz": 0.0,
+              "mx": 0.0,
+              "my": 0.0,
+              "mz": 0.0
+            }
+          }
+        },
+        "summary": {
+          "total_displacements": 24,
+          "total_reaction_forces": 1,
+          "total_member_forces": 24
+        },
+        "unity_checks": null
+      }
+    },
+    "loadcombinations": {},
+    "unity_checks_overview": null
+  },
+  "memberhinges": [
+    {
+      "id": 2,
+      "hinge_type": "Column base",
+      "translational_release_vx": null,
+      "translational_release_vy": null,
+      "translational_release_vz": null,
+      "rotational_release_mx": null,
+      "rotational_release_my": null,
+      "rotational_release_mz": 20344000.0,
+      "max_tension_vx": null,
+      "max_tension_vy": null,
+      "max_tension_vz": null,
+      "max_moment_mx": null,
+      "max_moment_my": null,
+      "max_moment_mz": null
+    },
+    {
+      "id": 1,
+      "hinge_type": "SPRING_Y",
+      "translational_release_vx": null,
+      "translational_release_vy": null,
+      "translational_release_vz": null,
+      "rotational_release_mx": null,
+      "rotational_release_my": 1000.0,
+      "rotational_release_mz": null,
+      "max_tension_vx": null,
+      "max_tension_vy": null,
+      "max_tension_vz": null,
+      "max_moment_mx": null,
+      "max_moment_my": null,
+      "max_moment_mz": null
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "S235",
+      "e_mod": 210000000000.0,
+      "g_mod": 80769000000.0,
+      "density": 7800.0,
+      "yield_stress": 235000000.0
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "IPE 200 Beam Section",
+      "material": 1,
+      "h": 0.2,
+      "b": 0.1,
+      "i_y": 1.423736918537006e-6,
+      "i_z": 0.00001943796829178698,
+      "j": 6.910636270828208e-8,
+      "area": 0.0028492370386848003,
+      "shape_path": 1
+    },
+    {
+      "id": 2,
+      "name": "IPE 100 Beam Section",
+      "material": 1,
+      "h": 0.1,
+      "b": 0.055,
+      "i_y": 1.591940616547585e-7,
+      "i_z": 1.7106128520799252e-6,
+      "j": 1.1669766129304922e-8,
+      "area": 0.0010326031589961478,
+      "shape_path": 2
+    },
+    {
+      "id": 3,
+      "name": "CFU",
+      "material": 1,
+      "h": 0.08,
+      "b": 0.05,
+      "i_y": 9.162909747785733e-8,
+      "i_z": 3.789966265137473e-7,
+      "j": 4.797323396675661e-10,
+      "area": 0.00035310610701044874,
+      "shape_path": 3
+    },
+    {
+      "id": 5,
+      "name": "FL 40x4x1.26",
+      "material": 1,
+      "h": null,
+      "b": null,
+      "i_y": 2.13e-10,
+      "i_z": 2.1333e-8,
+      "j": 0.08,
+      "area": 0.00016,
+      "shape_path": null
+    }
+  ],
+  "nodal_supports": [
+    {
+      "id": 1,
+      "classification": null,
+      "displacement_conditions": {
+        "X": {
+          "condition_type": "Fixed",
+          "stiffness": null
+        },
+        "Y": {
+          "condition_type": "Fixed",
+          "stiffness": null
+        },
+        "Z": {
+          "condition_type": "Fixed",
+          "stiffness": null
+        }
+      },
+      "rotation_conditions": {
+        "X": {
+          "condition_type": "Free",
+          "stiffness": null
+        },
+        "Y": {
+          "condition_type": "Free",
+          "stiffness": null
+        },
+        "Z": {
+          "condition_type": "Free",
+          "stiffness": null
+        }
+      }
+    }
+  ],
+  "shape_paths": [
+    {
+      "id": 1,
+      "name": "IPE 200 Beam Section",
+      "shape_commands": [
+        {
+          "command": "moveTo",
+          "y": 0.1,
+          "z": -0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.1,
+          "z": 0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.0915,
+          "z": 0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.0915,
+          "z": 0.0148,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.012,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.0795,
+          "z": 0.0028,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.012,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.0915,
+          "z": 0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.1,
+          "z": 0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.1,
+          "z": -0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.0915,
+          "z": -0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.0915,
+          "z": -0.0148,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.012,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.0795,
+          "z": -0.0028,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.012,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.0915,
+          "z": -0.05,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "closePath",
+          "y": null,
+          "z": null,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "IPE 100 Beam Section",
+      "shape_commands": [
+        {
+          "command": "moveTo",
+          "y": 0.05,
+          "z": -0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.05,
+          "z": 0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.044300000000000006,
+          "z": 0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.044300000000000006,
+          "z": 0.00905,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.007,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.03730000000000001,
+          "z": 0.00205,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.007,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.044300000000000006,
+          "z": 0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.05,
+          "z": 0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.05,
+          "z": -0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.044300000000000006,
+          "z": -0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.044300000000000006,
+          "z": -0.00905,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.007,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.03730000000000001,
+          "z": -0.00205,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.007,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.044300000000000006,
+          "z": -0.0275,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "closePath",
+          "y": null,
+          "z": null,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "CFU",
+      "shape_commands": [
+        {
+          "command": "moveTo",
+          "y": 0.04,
+          "z": -0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.04,
+          "z": 0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.038,
+          "z": 0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.038,
+          "z": -0.0214,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.0016,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.0364,
+          "z": -0.023,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "arcTo",
+          "y": null,
+          "z": null,
+          "r": 0.0016,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.038,
+          "z": 0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.04,
+          "z": 0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": -0.04,
+          "z": -0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "lineTo",
+          "y": 0.04,
+          "z": -0.025,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        },
+        {
+          "command": "closePath",
+          "y": null,
+          "z": null,
+          "r": null,
+          "control_y1": null,
+          "control_z1": null,
+          "control_y2": null,
+          "control_z2": null
+        }
+      ]
+    }
+  ]
+}
