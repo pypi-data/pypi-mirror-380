@@ -1,0 +1,7 @@
+database_automation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+database_automation/mongo_crud.py,sha256=XcNP3RcFoVehxINKKwxa1kJE63ACiJKaKWJweYv4aTU,2464
+mangodb_connect-0.0.1.dist-info/LICENSE,sha256=jAuM3BIHT9SZYBFT4cf0uRFJudIaXqZMSBqW2Vckklk,1069
+mangodb_connect-0.0.1.dist-info/METADATA,sha256=maW-4kiBun8iUxLyBs66lYxiZda5DLHpY-KPblWILVk,903
+mangodb_connect-0.0.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+mangodb_connect-0.0.1.dist-info/top_level.txt,sha256=M5AgnIEtQlXEpTZezriFJuOx1kbMhaxZL2TQdQnJick,20
+mangodb_connect-0.0.1.dist-info/RECORD,,
