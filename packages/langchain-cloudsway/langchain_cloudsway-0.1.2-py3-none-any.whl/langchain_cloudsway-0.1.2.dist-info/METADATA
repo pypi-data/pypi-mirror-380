@@ -1,0 +1,165 @@
+Metadata-Version: 2.4
+Name: langchain-cloudsway
+Version: 0.1.2
+Summary: An integration package connecting Cloudsway and LangChain
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: langchain-core (>=0.3.15,<0.4.0)
+Project-URL: Repository, https://github.com/langchain-ai/langchain
+Project-URL: Release Notes, https://github.com/langchain-ai/langchain/releases?q=tag%3A%22cloudsway%3D%3D0%22&expanded=true
+Project-URL: Source Code, https://github.com/langchain-ai/langchain/tree/master/libs/partners/cloudsway
+Description-Content-Type: text/markdown
+
+# langchain-cloudsway
+
+This package contains the LangChain integration with Cloudsway.
+
+## Installation
+
+```bash
+pip install -U langchain-cloudsway
+```
+
+## Configuration
+
+Set your Cloudsway API credentials as an environment variable:
+
+```bash
+# POSIX / Git Bash
+export CLOUDSWAY_SERVER_KEY="endpoint-accesskey"
+
+# Windows (cmd.exe)
+set CLOUDSWAY_SERVER_KEY=endpoint-accesskey
+```
+
+The value should be in the format:
+`endpoint-accesskey`
+
+To get your token and subscribe to a plan, please register at https://console.cloudsway.ai/.
+
+## Tool
+
+`SmartsearchTool` provides web search via the Cloudsway API.
+
+### Basic Usage
+
+```python
+from langchain_cloudsway.smartsearch import SmartsearchTool
+
+tool = SmartsearchTool()
+result = tool.invoke({
+    "query": "cloudsway.ai",
+    "count": 5,
+    "setLang": "en",
+})
+print(result)
+```
+
+### Available Parameters
+
+Notes:
+- Query should not be empty. Recommended max length: 100 characters.
+- count default: 10, valid range: 1–100.
+- setLang supports 2- or 4-letter ISO codes. Default behavior is automatic language detection if not provided.
+- mainText will only be returned when enableContent is true.
+- safeSearch controls adult-content filtering. Allowed values: Off, Moderate, Strict.
+
+| Parameter    | Required | Type    | Description |
+|--------------|----------|---------|-------------|
+| q / query    | Yes      | String  | Search query string. Cannot be empty. (Recommended ≤ 100 chars) |
+| count        | No       | Integer | Number of results to return. Default: 10. Range: 1–100. |
+| offset       | No       | Integer | Zero-based result offset. Default: 0 (start position). |
+| freshness    | No       | String  | Time filter for results. Allowed values: Day, Week, Month. Default: no time filter. |
+| setLang      | No       | String  | UI language code (ISO 639-1 or ISO 639-1 + '-' + ISO 3166). Default: auto detect. |
+| sites        | No       | String  | Host address filter (e.g., `baijiahao.baidu.com`). |
+| enableContent| No       | Boolean | Whether to return full content. Default: false. Must be true to return mainText. |
+| mainText     | No       | Boolean | Whether to return long summary (mainText). Requires `enableContent=true`. Default: false. |
+| safeSearch   | No       | String  | Adult-content filter. One of: `Off`, `Moderate`, `Strict`. Default: not set (server default). |
+
+
+### Advanced Usage Examples
+
+```python
+# Search with freshness and explicit language
+result = tool.invoke({
+    "query": "latest AI research",
+    "count": 20,
+    "freshness": "Week",
+    "setLang": "en-US"
+})
+
+# Search within a specific site and fetch full content + mainText
+result = tool.invoke({
+    "query": "machine learning tutorial",
+    "sites": "github.com",
+    "enableContent": True,
+    "mainText": True,
+})
+
+# Paginated search
+result = tool.invoke({
+    "query": "climate change",
+    "count": 10,
+    "offset": 10  # get next page of results
+})
+```
+
+## Response Structure
+
+The API returns JSON similar to:
+
+```json
+{
+  "queryContext": {
+    "originalQuery": "your search query"
+  },
+  "webPages": {
+    "value": [
+      {
+        "name": "Page Title",
+        "snippet": "Short description... (first 200 characters)",
+        "url": "https://example.com/page",
+        "displayUrl": "example.com/page",
+        "thumbnailUrl": "https://example.com/thumbnail.jpg",
+        "datePublished": "2025-07-14T00:00:00.0000000",
+        "datePublishedDisplayText": "Jul 14, 2025",
+        "dateLastCrawled": "2025-07-15T02:48:00.0000000Z",
+        "siteName": "Example Website",
+        "score": 0.95,
+        "mainText": "Longer extracted summary or main content (present when enableContent=true and mainText=true)"
+      }
+    ]
+  }
+}
+```
+
+### Response Field Notes
+
+- queryContext.originalQuery: Original search term.
+- webPages.value: Array of search results.
+- Each WebPage may include:
+  - name, url, displayUrl, snippet
+  - datePublished, dateLastCrawled (when available)
+  - siteName, thumbnailUrl, score
+  - mainText: long summary (only present when enabled)
+
+## Error Handling
+
+Common status codes:
+- 200: Success
+- 429: Rate limit exceeded (QPS limit). Contact Cloudsway support for higher QPS.
+
+If you encounter any problems, reach out to info@cloudsway.com.
+
+## License
+
+This project is open-sourced under the MIT License. See [LICENSE](./LICENSE) for details.
