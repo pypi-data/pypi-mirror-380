@@ -1,0 +1,116 @@
+[build-system]
+requires = ["setuptools>=62", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FEMlium"
+version = "0.1.1"
+authors = [
+    {name = "Francesco Ballarin", email = "francesco.ballarin@unicatt.it"},
+]
+maintainers = [
+    {name = "Francesco Ballarin", email = "francesco.ballarin@unicatt.it"},
+]
+description = "Interactive geographic plots of finite element data with folium"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "branca",
+    "folium >= 0.12.0",
+    "geojson",
+    "matplotlib",
+    "numpy",
+    "pyproj"
+]
+
+[project.urls]
+homepage = "https://femlium.github.io"
+repository = "https://github.com/FEMlium/FEMlium"
+issues = "https://github.com/FEMlium/FEMlium/issues"
+funding = "https://github.com/sponsors/francesco-ballarin"
+
+[project.optional-dependencies]
+backend-dolfinx = [
+    "fenics-dolfinx >= 0.8.0"
+]
+backend-firedrake = [
+    "firedrake >= 2025.4.0"
+]
+docs = [
+    "sphinx"
+]
+lint = [
+    "isort",
+    "nbqa",
+    "ruff",
+    "yamllint"
+]
+tests = [
+    "coverage[toml]",
+    "nbvalx[unit-tests]",
+    "pytest"
+]
+tutorials = [
+    "gmsh",
+    "meshio",
+    "nbvalx[notebooks]",
+    # cannot specify viskex[backend-{dolfinx,firedrake}] here without splitting the tutorials extra
+    # in two separate extras, one for each backend. If needed, manually add minimum required version
+    # of viskex that agrees with the constraints defined above for backend-{dolfinx,firedrake}.
+    "viskex"
+]
+
+[tool.coverage.paths]
+source = ["femlium", "*/dist-packages/femlium", "*/site-packages/femlium"]
+
+[tool.isort]
+line_length = 120
+multi_line_output = 4
+order_by_type = false
+
+[tool.pytest.ini_options]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ANN", "D", "E", "F", "FLY", "ICN", "N", "NPY", "Q", "RUF", "UP", "W"]
+ignore = []
+exclude = ["*.ipynb"]
+
+[tool.ruff.lint.per-file-ignores]
+"femlium/__init__.py" = ["F401"]
+"femlium/**/__init__.py" = ["F401"]
+"tutorials/**/tutorial_*.py" = ["D100"]
+"tutorials/**/generate_mesh*.py" = ["D100"]
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 120
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.setuptools.packages.find]
+namespaces = false
