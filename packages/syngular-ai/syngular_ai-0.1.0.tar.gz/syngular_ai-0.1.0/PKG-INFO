@@ -1,0 +1,192 @@
+Metadata-Version: 2.4
+Name: syngular-ai
+Version: 0.1.0
+Summary: Syngular lets you connect to AI agents running locally or in production, stream their outputs, and collect structured feedback without infrastructure overhead.
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: starlette>=0.47.1
+Requires-Dist: twine>=6.1.0
+Requires-Dist: uvicorn[standard]>=0.35.0
+Requires-Dist: websocket>=0.2.1
+Description-Content-Type: text/markdown
+
+# Syngular AI
+
+> **Run on your laptop, chat instantly on [syngularai.com](https://syngularai.com/)** 🚀
+
+Syngular lets you connect to AI agents running locally or in production, stream their outputs, and collect structured feedback without infrastructure overhead.
+
+## Features
+
+- 🚀 **Zero Infrastructure**: No need to build your own UI - just focus on your agent
+- 📡 **Real-time Streaming**: Stream agent responses character by character to the Syngular UI
+- 📊 **Rich Feedback Collection**: Built-in support for thumbs, text, and option-based feedback
+- 📁 **File Handling**: Seamless file upload and processing from the UI
+- 🔄 **Async Support**: Full async/await support for non-blocking operations
+
+## Installation
+
+```bash
+pip install syngular-ai
+```
+
+Or with uv:
+
+```bash
+uv add syngular-ai
+```
+
+## Quick Start
+
+### 1. Create Your First Agent
+
+```python
+from syngular_ai import entrypoint, MarkdownMessage, ThumbsFeedback
+
+@entrypoint('@helloworld')
+def helloworld(prompt: str):
+    for char in 'hello':
+        yield MarkdownMessage(
+            content=f'{char}',
+            feedback=[ThumbsFeedback(name='ratings')]
+        )
+```
+
+### 2. Run Your Agent
+
+For development (connects to Syngular cloud):
+
+```python
+from syngular_ai import dev_listen
+
+# Replace this with your API key from the profile section on syngularai.com.
+dev_listen('your-api-key-here')
+```
+
+## Advanced Examples
+
+### Agent with Inputs
+
+```python
+from syngular_ai import entrypoint, TextInput, FileInput, StatusUpdate, OptionFeedback
+
+@entrypoint(
+    '@syngular/analyse', 
+    inputs=[
+        TextInput(name='url', placeholder='Enter company URL'),
+        FileInput(name='file')
+    ]
+)
+def analyse(prompt: str, inputs: list):
+    # Process the inputs
+    url = inputs[0]  # TextInput
+    file_content = inputs[1].get_file_content()  # FileInput
+    
+    # Show status update
+    yield StatusUpdate(
+        icon='info', 
+        text='Starting the process...'
+    )
+    
+    # Stream response with feedback options
+    for char in 'processing':
+        yield MarkdownMessage(
+            content=f'{char}',
+            feedback=[
+                OptionFeedback(
+                    name='multioption', 
+                    options=['Complete', 'Relevant'],
+                    allow_multiple=True
+                ),
+                ThumbsFeedback(name='ratings'),
+                TextFeedback(name='Leave a comment')
+            ]
+        )
+```
+
+## API Reference
+
+### Decorators
+
+#### `@entrypoint(name, inputs=None)`
+Decorator for synchronous agent functions.
+
+**Parameters:**
+- `name` (str): Agent name, must start with '@'
+- `inputs` (List[Input], optional): List of input specifications
+
+### Input Types
+
+#### `TextInput`
+Text input field for user prompts.
+
+```python
+TextInput(name='prompt', placeholder='Enter your message')
+```
+
+#### `FileInput`
+File upload input.
+
+```python
+FileInput(name='document')
+```
+
+### Message Types
+
+#### `MarkdownMessage`
+Rich text message with markdown support.
+
+```python
+MarkdownMessage(
+    content='**Bold text** and *italic*',
+    feedback=[ThumbsFeedback(name='rating')]
+)
+```
+
+#### `StatusUpdate`
+Status indicator for long-running operations.
+
+```python
+StatusUpdate(icon='info', text='Processing...')
+```
+
+### Feedback Types
+
+#### `ThumbsFeedback`
+Thumbs up/down feedback.
+
+```python
+ThumbsFeedback(name='rating')
+```
+
+#### `OptionFeedback`
+Multiple choice feedback.
+
+```python
+OptionFeedback(
+    name='choice',
+    options=['Option 1', 'Option 2'],
+    allow_multiple=True
+)
+```
+
+#### `TextFeedback`
+Free text feedback.
+
+```python
+TextFeedback(name='comment')
+```
+
+### Server Functions
+
+#### `dev_listen(api_key)`
+Connect to Syngular cloud for development.
+
+**Parameters:**
+- `api_key` (str): Your Syngular API key
+
+## Support
+
+For support, please contact us at support@syngularai.com.
+
+---
