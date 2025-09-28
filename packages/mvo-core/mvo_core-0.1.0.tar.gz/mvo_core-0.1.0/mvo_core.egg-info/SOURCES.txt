@@ -1,0 +1,10 @@
+AUTHORS.txt
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mvo_core.egg-info/PKG-INFO
+mvo_core.egg-info/SOURCES.txt
+mvo_core.egg-info/dependency_links.txt
+mvo_core.egg-info/requires.txt
+mvo_core.egg-info/top_level.txt
