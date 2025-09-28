@@ -1,0 +1,17 @@
+codex_client/__init__.py,sha256=SQkFeU5BPQmkFCyEUgpO7IW3d31A5OK-B8gqlcZTP4E,2405
+codex_client/auth.py,sha256=noCrc-qD0QL7i93eEGRnShAq98A82kzryfUHJtK2F0g,10481
+codex_client/chat.py,sha256=Ea2sbDDwomQ1MMKsUulIp_mUir6HvkR4Rv6etFCoEk8,7140
+codex_client/cli.py,sha256=1kr3s8T6vLfwT55aA7Ft6Xz_DGc5Vw3qd0nsmXo5sFg,8541
+codex_client/client.py,sha256=cpuVRM43TfBcKjUv9z_5UWTpNCgN5cjsIFtu0IKRTz8,4038
+codex_client/config.py,sha256=4yMdpdsvk09QbKOzAV0dnTYI5EiMTlft7YUS7gq2mBc,5438
+codex_client/event.py,sha256=vNNSuH7RucTzYSe10UJ5ktTPzkR6aYMEzH6R9CNOlIA,12334
+codex_client/exceptions.py,sha256=mdDztEzUSlvqcGqUS3LcVqJCnTBMp1jvPKOqdXtdqcI,659
+codex_client/structured.py,sha256=Bd-MLDQjvWBZKLHqAbMjBlYPxpgskqTFh1AcGzknLkQ,11428
+codex_client/middleware/__init__.py,sha256=u11UWOa2ooZUMq8u03qA4XCSx7A_UjRCqyKZvU-M-qU,2285
+codex_client/middleware/filter.py,sha256=mkYedVZX-ouVf5PHhdpGSY688iukJmPCMWOTnCf-O4U,1498
+codex_client/middleware/parser.py,sha256=-depqdRR73rVSPzNvleTk9ZO5ILGU51kGjV4mLdqACM,3015
+codex_client-0.0.3.dist-info/METADATA,sha256=tmx7AFm2ViOuYtMJg8zt5lJQUzi3RfYxgONpt2PmBfE,6396
+codex_client-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+codex_client-0.0.3.dist-info/entry_points.txt,sha256=DLV3uUUvRge1AAYF6BftHJp7U521t_avywHAm_xnX5s,55
+codex_client-0.0.3.dist-info/top_level.txt,sha256=pUBL55dJi593OQoJr4kTCBc8ztBwCdVnAv2bcvHAaSg,13
+codex_client-0.0.3.dist-info/RECORD,,
