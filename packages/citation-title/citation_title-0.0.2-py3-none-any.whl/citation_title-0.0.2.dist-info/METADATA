@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: citation-title
+Version: 0.0.2
+Summary: Pattern matching Philippine Supreme Court citations.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# citation-title
+
+![Github CI](https://github.com/justmars/citation-title/actions/workflows/ci.yml/badge.svg)
+
+## Documentation
+
+See [documentation](https://justmars.github.io/citation-title).
