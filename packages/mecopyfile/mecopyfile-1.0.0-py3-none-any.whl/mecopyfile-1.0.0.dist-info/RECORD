@@ -1,0 +1,10 @@
+pyfile/__init__.py,sha256=PeuDgkvHxhDWvsMA_WZuzYVEcbxnKPGFN1Obia5stXY,114
+pyfile/directory.py,sha256=0d1BTY1jLK2f2SaYEtrn9QXApnxJc57i_feNGT2V7wo,6431
+pyfile/file.py,sha256=3pET3A788H-3kYLcQhhtgKtv8Os911soPPDu7xAVQNQ,4128
+pyfile/path.py,sha256=X66ylWaC5tNmXUAx6UeI1-15IMgCSluEhHuUEA-9kS0,2073
+pyfile/systorage.py,sha256=_kU0_g7Gi-dlkfqMWl-i2bIcPc09BHyCbAH0aooLQmA,2150
+pyfile/utils.py,sha256=V5yZjkvU49ueHUEjMLacIq7DskTVx9SJ9zOdZ1fG3YQ,227
+mecopyfile-1.0.0.dist-info/METADATA,sha256=sJvEV6pCPudoI-kLMDbZkeE5uQGQ6qmcmmS1C3axrME,12537
+mecopyfile-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mecopyfile-1.0.0.dist-info/top_level.txt,sha256=s2GAsOabkvXfQMeTWrIGSwH_1X3w8SytIl581kQrZnQ,7
+mecopyfile-1.0.0.dist-info/RECORD,,
