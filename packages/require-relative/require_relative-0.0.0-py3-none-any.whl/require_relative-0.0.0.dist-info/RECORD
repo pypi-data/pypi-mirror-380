@@ -1,0 +1,5 @@
+ca_certificates/__init__.py,sha256=dpZ0BCkFhv_KJBkOmVS6r1W7H4fbLMb3hqxDpSoW_NU,99
+require_relative-0.0.0.dist-info/METADATA,sha256=WfTdKgABZZUu3qeYMDg5XTJ5jdeQwj34lprl2ZEB__I,287
+require_relative-0.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+require_relative-0.0.0.dist-info/top_level.txt,sha256=FqvvAtXKQ3wx5C5dhtGES3NnNV52ftAi9Fz8iOMMAIY,16
+require_relative-0.0.0.dist-info/RECORD,,
