@@ -1,0 +1,7 @@
+boto3_dataclass_migrationhub_config/__init__.py,sha256=ys8NZitN3J8sSxEqsRpE-hxKoL21dJPeji4XPD7z_vw,132
+boto3_dataclass_migrationhub_config/caster.py,sha256=52-smudP0JKWAEUyFX_gU4Yy_jh3sT5KfbGtA84cS0w,919
+boto3_dataclass_migrationhub_config/type_defs.py,sha256=osyUVr4Tt2ZIG98MmfFg63tAWRVNUEUwuJklgPsdZUI,8977
+boto3_dataclass_migrationhub_config-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_migrationhub_config-1.40.0.dist-info/METADATA,sha256=h3h1x64qHTzbPBO3cYyqG5eYM4HvXh1kd1_qT8P3t64,1767
+boto3_dataclass_migrationhub_config-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_migrationhub_config-1.40.0.dist-info/RECORD,,
