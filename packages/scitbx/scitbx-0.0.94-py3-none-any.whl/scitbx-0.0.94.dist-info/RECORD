@@ -1,0 +1,11 @@
+scitbx/__init__.py,sha256=Gdw3itJFg1d3tz3Ayx7D5vgmhfwuce4xnwQMrRHRKbc,44
+scitbx/commons.py,sha256=zqg0zcvFagPL3hFGcDE61Rz0vbiaA5bziNBcwadAV48,780
+scitbx/easy_import.py,sha256=kfBD3ztAvny5OPHOTIcsFcLi9HP779bE2257Qa9cNFo,2344
+scitbx/files.py,sha256=f0GRZeIKaZS0YI3YkvJ4UgVptT1YbXpgXzhR3MaP_P8,5049
+scitbx/google.py,sha256=elikEYBn444RG7ITdnL5651D6gIH5yYRAQdi1pcQBvY,3084
+scitbx/sciplt.py,sha256=bdNOGQHbEEGgAAjWa82JtEaPyqJIC5G7UdZVxml1s5M,15676
+scitbx/utils.py,sha256=vC4Z6S49pDsGchD4pLnpCNeyf2t3KUvERHuHoOHyilg,9108
+scitbx-0.0.94.dist-info/METADATA,sha256=d5bDlpm8GAFhiqjhBsDkXGLHCVBPFk9hMIKCRh4LUsg,374
+scitbx-0.0.94.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+scitbx-0.0.94.dist-info/top_level.txt,sha256=k5P0RziW5SxhLnjrwZWsq-_xCuPTN7AiwdvZvwXu5lo,7
+scitbx-0.0.94.dist-info/RECORD,,
