@@ -1,0 +1,9 @@
+numpy
+gym
+robosuite
+termcolor
+
+[pc]
+torch
+open3d
+pytorch3d
