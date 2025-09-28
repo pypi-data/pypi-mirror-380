@@ -1,0 +1,8 @@
+httpx
+pandas
+
+[dev]
+pytest
+pytest-asyncio
+sphinx
+sphinx-rtd-theme

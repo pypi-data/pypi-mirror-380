@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+hidrowebsdk/__init__.py
+hidrowebsdk/client.py
+hidrowebsdk.egg-info/PKG-INFO
+hidrowebsdk.egg-info/SOURCES.txt
+hidrowebsdk.egg-info/dependency_links.txt
+hidrowebsdk.egg-info/requires.txt
+hidrowebsdk.egg-info/top_level.txt
+tests/test_bacias.py
+tests/test_entidades.py
+tests/test_estacoes.py
