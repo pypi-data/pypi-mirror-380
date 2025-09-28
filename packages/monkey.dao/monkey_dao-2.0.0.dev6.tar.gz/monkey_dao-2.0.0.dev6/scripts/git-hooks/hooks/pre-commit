@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Running the pre-commit hook in Git Bash..."
+black --check .
+if [ $? -ne 0 ]; then
+    echo "The code is not formatted. Execute 'black .' and re-commit."
+    exit 1
+fi

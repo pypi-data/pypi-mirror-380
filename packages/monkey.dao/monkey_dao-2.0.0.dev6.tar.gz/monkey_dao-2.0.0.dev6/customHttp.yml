@@ -1,0 +1,72 @@
+customHeaders:
+  - pattern: "**"
+    headers:
+      - key: "Content-Security-Policy"
+        value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://region1.google-analytics.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://static.socom.lu; object-src 'none'; connect-src 'self' https://region1.google-analytics.com; frame-src https://www.googletagmanager.com"
+      - key: "X-Content-Type-Options"
+        value: "nosniff"
+      - key: "Strict-Transport-Security"
+        value: "max-age=31536000; includeSubDomains; preload"
+
+  - pattern: '**/*'
+    headers:
+      - key: "Referrer-Policy"
+        value: "strict-origin-when-cross-origin"
+      - key: "Access-Control-Allow-Origin"
+        value: "https://pymongo-dao.monkey-python.org"
+      - key: "Access-Control-Allow-Origin"
+        value: "https://dev.pymongo-dao.monkey-python.org"
+      - key: "Access-Control-Allow-Origin"
+        value: "https://www.googletagmanager.com"
+      - key: "Access-Control-Allow-Methods"
+        value: "GET, POST, OPTIONS"
+      - key: "Access-Control-Allow-Headers"
+        value: "Content-Type, Authorization"
+      - key: "Access-Control-Allow-Credentials"
+        value: "false"
+
+  - pattern: "**/*.css"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "https://fonts.googleapis.com"
+      - key: "Access-Control-Allow-Methods"
+        value: "GET, OPTIONS"
+      - key: "Access-Control-Allow-Headers"
+        value: "Content-Type"
+
+  - pattern: "**/*.woff2"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "https://fonts.gstatic.com"
+      - key: "Access-Control-Allow-Methods"
+        value: "GET, OPTIONS"
+      - key: "Access-Control-Allow-Headers"
+        value: "Content-Type"
+
+  - pattern: "**/*.woff"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "https://fonts.gstatic.com"
+      - key: "Access-Control-Allow-Methods"
+        value: "GET, OPTIONS"
+      - key: "Access-Control-Allow-Headers"
+        value: "Content-Type"
+
+  - pattern: "**/*.ttf"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "https://fonts.gstatic.com"
+      - key: "Access-Control-Allow-Methods"
+        value: "GET, OPTIONS"
+      - key: "Access-Control-Allow-Headers"
+        value: "Content-Type"
+
+  # Optimiser les performances en pré-chargeant Google Fonts
+  - pattern: "https://fonts.googleapis.com/*"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "*"
+  - pattern: "https://fonts.gstatic.com/*"
+    headers:
+      - key: "Access-Control-Allow-Origin"
+        value: "*"
