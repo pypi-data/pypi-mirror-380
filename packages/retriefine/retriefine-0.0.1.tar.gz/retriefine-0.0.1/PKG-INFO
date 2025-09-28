@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: retriefine
+Version: 0.0.1
+Summary: RetrieFine TBD
+Requires-Dist: model2vec>=0.6.0 ; extra == 'model2vec'
+Requires-Dist: qdrant-client>=1.15.1 ; extra == 'qdrant'
+Requires-Python: >=3.10
+Provides-Extra: model2vec
+Provides-Extra: qdrant
+Description-Content-Type: text/markdown
+
+# retriefine-python
+
+TBD
