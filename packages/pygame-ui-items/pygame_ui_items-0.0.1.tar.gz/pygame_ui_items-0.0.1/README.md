@@ -1,0 +1,194 @@
+# pygame_ui_items
+
+pygame_ui_items es una librería open-source para Python que proporciona herramientas para la creación y gestión de elementos de interfaz de usuario (UI) en Pygame, con un enfoque en la personalización, uso de una sintaxis tipo CSS para los estilos y facilidad de uso. Actualmente en la versión 0.0.1, se centra en la creación de botones, permitiendo definirlos en una sola línea de código y modificarlos con total libertad.
+Por el momento, la librería incluye:
+- Botones (Button): Permite crear botones con texto, posición, tamaño y estilo definido de manera similar a CSS.
+- Temas (Themes): Permite cambiar la apariencia de los botones de manera sencilla (posteriormente se añadirán más elementos UI a los que se les podrá aplicar estilos de manera más sencilla).
+
+## Tabla de Contenidos
+
+- [Instalación](#instalación)
+- [Características](#características)
+- [Ejemplos de Uso](#ejemplos-de-uso)
+- [Pautas de Contribución](#pautas-de-contribución)
+- [Licencia](#licencia)
+
+## Instalación
+
+Para instalar pygame_ui_items ejecuta:
+
+```bash
+pip install pygame_ui_items
+```
+
+Asegúrate también de tener Pygame instalado. O tambien puedes ejecutar el requirements.txt que incluye Pygame y pytest:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Características
+
+- Creación de Botones en una Línea: Define botones con texto, posición, tamaño y estilo similar a CSS.
+- Personalización Completa: Modifica los botones por defecto o crea nuevos con estilos personalizados.
+- Fácil Integración: Se integra perfectamente con el ciclo principal de Pygame.
+- Temas: Permite cambiar la apariencia de los botones de manera sencilla.
+
+---
+
+## Ejemplos de Uso
+
+### 1. Creación de un botón simple
+
+```python
+import pygame
+from pygame_ui_items.ui_manager import UIManager
+from pygame_ui_items.button_factory import create_button
+
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+ui_manager = UIManager()
+
+button = create_button("Click Me", lambda: print("¡Clic!"), x=100, y=100)
+ui_manager.add_element(button)
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        ui_manager.handle_event(event)
+
+    ui_manager.update()
+    screen.fill((255, 255, 255))
+    ui_manager.draw(screen)
+    pygame.display.flip()
+
+pygame.quit()
+```
+
+### 2. Creación de múltiples botones con diferentes estilos predefinidos
+
+```python
+import pygame as pg
+import sys
+from pygame_ui_items.button_factory import (
+    button_red, 
+    button_blue, 
+    button_green, 
+    button_yellow
+)
+
+pg.init()
+
+if __name__ == "__main__":
+    screen = pg.display.set_mode((800, 600))
+    clock = pg.time.Clock()
+
+    btn_red = button_red("Rojo", lambda: print("¡Rojo!"), x=100, y=100)
+    btn_blue = button_blue("Azul", lambda: print("¡Azul!"), x=100, y=160)
+    btn_green = button_green("Verde", lambda: print("¡Verde!"), x=100, y=220)
+    btn_yellow = button_yellow("Amarillo", lambda: print("¡Amarillo!"), x=100, y=280)
+
+    buttons = [btn_red, btn_blue, btn_green, btn_yellow]
+
+    running = True
+    while running:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                running = False
+
+            for button in buttons:
+                button.handle_event(event)
+
+        screen.fill((240, 240, 240))
+
+        for button in buttons:
+            button.draw(screen)
+
+        pg.display.flip()
+        clock.tick(60)
+
+    pg.quit()
+    sys.exit()
+```
+
+
+### 3. Modificación de Estilos (Personalizado)
+
+```python
+import pygame as pg
+import sys
+from pygame_ui_items.button_factory import create_button
+
+pg.init()
+
+if __name__ == "__main__":
+    screen = pg.display.set_mode((800, 600))
+    clock = pg.time.Clock()
+    
+    btn_custom = create_button(
+        "Boton Personalizado", 
+        lambda: print("¡Personalizado!"),
+        x=100, 
+        y=340,
+        width=150,
+        height=45,
+        bg_color=(139, 0, 0),
+        hover_bg_color=(178, 34, 34),
+        text_color=(255, 255, 255),
+        border_radius=70
+    )
+    buttons = [btn_custom]
+    
+    running = True
+    while running:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                running = False
+            
+            for button in buttons:
+                button.handle_event(event)
+        
+        screen.fill((240, 240, 240))
+        
+        for button in buttons:
+            button.draw(screen)
+        
+        pg.display.flip()
+        clock.tick(60)
+    
+    pg.quit()
+    sys.exit()
+```
+
+### 4. Ejemplo completo (imagen)
+
+![Ejemplo Completo](../PG2_Practica7/images/example-complete_image.png)
+
+### 5. Pruebas unitarias (para botones)
+
+![Ejemplo de Pruebas Unitarias](../PG2_Practica7/images/test_button.png)
+
+
+## Pautas de Contribución
+
+¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza tus cambios y haz commit (`git commit -m 'feat: Añadir nueva característica'`).
+4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
+5. Abre un Pull Request.
+
+## Notas
+
+* La estructura del proyecto no sigue al ejemplo indicado por fallas de importación relativas y absolutas. Se probaron varias configuraciones, estructuras y esta es la que mejor funcionó.
+* El ejemplo de prueba example_buttons.py tampoco funciona si se coloca en una carpeta dedicada como puede ser "examples" o "tests", por lo que se dejó en la raíz del proyecto en el que sí funcionó sin problemas (también se probó en una carpeta dedicada "examples" pero no funcionó).
+* La librería está en una fase muy temprana de desarrollo (v0.0.1) y se planea añadir más elementos UI y funcionalidades, además de diseños predefinidos para ciertos tipos y estilos de juegos en el futuro.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.

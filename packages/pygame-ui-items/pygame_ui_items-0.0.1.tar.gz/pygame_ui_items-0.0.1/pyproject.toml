@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["pygame_ui_items"]
+
+[project]
+name = "pygame_ui_items"
+version = "0.0.1"
+description = "Creation of UI components in a simplified way and using a CSS-like syntax"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name="Adan", email="adancortez.sis.24ch@tecba.edu.bo" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "Pygame>=2.0.0"
+]
