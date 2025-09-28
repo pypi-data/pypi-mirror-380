@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=20.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agushuju"
+version = "0.1.2"
+description = "爱股数据（别名：A股数据），一个集A股、期货与一体的量化交易数据服务平台。"
+readme = "README.md"
+authors = [
+    { name = "安徽爱股科技有限公司", email = "jinguxun@qq.com" },
+]
+license = { text = "MIT" }
+keywords = ["agushuju","爱股数据","A股数据","aigushuju","agudata", "api", "sdk", "token"]
+requires-python = ">=2.7"
+dependencies = [
+    "requests>=2.20.0",
+    "pandas>=0.24.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+python2 = [
+    "requests>=2.20.0,<3.0.0",
+    "pandas>=0.24.0,<1.0.0",
+]
+python3 = [
+    "requests>=2.25.0",
+    "pandas>=1.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/agukeji/agushuju"
+
+[tool.setuptools.packages.find]
+where = ["src"]
