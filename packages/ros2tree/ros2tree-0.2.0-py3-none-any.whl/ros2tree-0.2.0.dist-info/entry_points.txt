@@ -1,0 +1,11 @@
+[ros2cli.command]
+tree = ros2tree.command.tree:TreeCommand
+
+[ros2cli.extension_point]
+ros2tree.verb = ros2tree.verb:VerbExtension
+
+[ros2tree.verb]
+all = ros2tree.verb.all:AllVerb
+nodes = ros2tree.verb.nodes:NodesVerb
+services = ros2tree.verb.services:ServicesVerb
+topics = ros2tree.verb.topics:TopicsVerb
