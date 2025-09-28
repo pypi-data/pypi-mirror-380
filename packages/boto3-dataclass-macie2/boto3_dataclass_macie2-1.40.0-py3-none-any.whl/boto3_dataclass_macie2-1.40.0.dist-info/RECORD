@@ -1,0 +1,7 @@
+boto3_dataclass_macie2/__init__.py,sha256=GHxh8IBZ0hmliPqXCXHDEMdUzeGKQWU0dr97E-FhQuw,106
+boto3_dataclass_macie2/caster.py,sha256=wQsjRdPN43QTmP9S4tqOdlwESEYzv0fFexUGRkLFChY,12815
+boto3_dataclass_macie2/type_defs.py,sha256=2Sjdb2aDljhBGM4B1_yT7Y_Dxz8l4VrkzdIvsejD7EI,299419
+boto3_dataclass_macie2-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_macie2-1.40.0.dist-info/METADATA,sha256=Da6HM7WiN5PjwZ7-YOA-8nntMm8eRvU9Cf2d-tLaVBo,1676
+boto3_dataclass_macie2-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_macie2-1.40.0.dist-info/RECORD,,
