@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/wofkfff/__init__.py
+src/wofkfff/core.py
+src/wofkfff/log.py
+src/wofkfff/server.py
+src/wofkfff.egg-info/PKG-INFO
+src/wofkfff.egg-info/SOURCES.txt
+src/wofkfff.egg-info/dependency_links.txt
+src/wofkfff.egg-info/requires.txt
+src/wofkfff.egg-info/top_level.txt
+tests/test_main.py
