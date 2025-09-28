@@ -1,0 +1,2 @@
+[console_scripts]
+iflow-mcp-vizro-mcp = vizro_mcp:main
