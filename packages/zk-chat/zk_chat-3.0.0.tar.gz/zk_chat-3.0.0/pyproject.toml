@@ -1,0 +1,49 @@
+[project]
+name = "zk-chat"
+version = "3.0.0"
+authors = [
+    { name = "Stacey Vetzal", email = "stacey@vetzal.com" },
+]
+description = "zk-chat is a command-line chat tool for your zettelkasten"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+dependencies = [
+    "chromadb==0.6.3",
+    "chroma-hnswlib==0.7.6",
+    "pyyaml",
+    "mojentic>=0.6.1",
+    "PySide6>=6.6.0",
+    "rich",
+]
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "pytest",
+    "pytest-spec",
+    "pytest-cov",
+    "pytest-mock",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zk_chat", "zk_chat.*"]
+
+[project.urls]
+Homepage = "https://github.com/svetzal/zk-chat"
+Issues = "https://github.com/svetzal/zk-chat/issues"
+
+[project.scripts]
+zkindex = "zk_chat.index:main"
+zkchat = "zk_chat.chat:main"
+zkagent = "zk_chat.agent:main"
+zkchat-gui = "zk_chat.qt:main"

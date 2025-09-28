@@ -1,0 +1,5 @@
+[console_scripts]
+zkagent = zk_chat.agent:main
+zkchat = zk_chat.chat:main
+zkchat-gui = zk_chat.qt:main
+zkindex = zk_chat.index:main
