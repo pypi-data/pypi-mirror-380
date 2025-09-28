@@ -1,0 +1,47 @@
+[project]
+name = "loan-analysis-toolkit"
+version = "0.2.0"
+description = "Provides various tools for loan analysis, including generating loan amortization schedule and total interest paid using daily calculation."
+readme = "README.md"
+authors = [
+    { name = "Salaken Syed", email = "salaken.buet.eee@gmail.com" }
+]
+maintainers = [
+  {name = "Salaken Syed", email = "salaken.buet.eee@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.3.2",
+    "pydantic>=2.11.9",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+
+]
+keywords = ["amortization", "interest schedule", "loan analytics", "financial strategy", "financial education"]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/salaken-ds/loan_analysis_toolkit"
+Issues = "https://github.com/salaken-ds/loan_analysis_toolkit/issues"
+
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+
+[dependency-groups]
+dev = [
+    "jupyter-book>=1.0.4.post1",
+    "pytest>=8.4.2",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["./"]
+include = ["loan_analysis_toolkit"]
