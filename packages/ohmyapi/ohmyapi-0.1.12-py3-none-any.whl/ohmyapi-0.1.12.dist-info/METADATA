@@ -1,0 +1,364 @@
+Metadata-Version: 2.4
+Name: ohmyapi
+Version: 0.1.12
+Summary: A Django-like but async web-framework based on FastAPI and TortoiseORM.
+License-Expression: MIT
+Keywords: fastapi,tortoise,orm,async,web-framework
+Author: Brian Wiborg
+Author-email: me@brianwib.org
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Provides-Extra: auth
+Requires-Dist: aerich (>=0.9.1,<0.10.0)
+Requires-Dist: argon2-cffi (>=25.1.0,<26.0.0)
+Requires-Dist: argon2-cffi ; extra == "auth"
+Requires-Dist: crypto (>=1.4.1,<2.0.0)
+Requires-Dist: crypto ; extra == "auth"
+Requires-Dist: fastapi (>=0.117.1,<0.118.0)
+Requires-Dist: ipython (>=9.5.0,<10.0.0)
+Requires-Dist: jinja2 (>=3.1.6,<4.0.0)
+Requires-Dist: passlib (>=1.7.4,<2.0.0)
+Requires-Dist: passlib ; extra == "auth"
+Requires-Dist: pyjwt (>=2.10.1,<3.0.0)
+Requires-Dist: pyjwt ; extra == "auth"
+Requires-Dist: python-multipart (>=0.0.20,<0.0.21)
+Requires-Dist: python-multipart ; extra == "auth"
+Requires-Dist: tortoise-orm (>=0.25.1,<0.26.0)
+Requires-Dist: typer (>=0.19.1,<0.20.0)
+Requires-Dist: uvicorn (>=0.36.0,<0.37.0)
+Description-Content-Type: text/markdown
+
+# OhMyAPI
+
+> Think: Django RestFramework, but less clunky and 100% async.
+
+OhMyAPI is a Django-flavored web-application scaffolding framework and management layer.
+Built around FastAPI and TortoiseORM, it is 100% async.
+
+It is ***blazingly fast***, ***fun to use*** and comes with ***batteries included***!
+
+**Features**
+
+- Django-like project-layout and -structure
+- Django-like project-level settings.py
+- Django-like models via TortoiseORM
+- Django-like `Model.Meta` class for model configuration
+- Easily convert your query results to `pydantic` models via `Model.Schema`
+- Django-like migrations (`makemigrations` & `migrate`) via Aerich
+- Django-like CLI tooling (`startproject`, `startapp`, `shell`, `serve`, etc)
+- Various optional builtin apps you can hook into your project
+- Highly configurable and customizable
+- 100% async
+
+OhMyAPI aims to:
+
+- combine FastAPI, TortoiseORM and Aerich migrations into a high-productivity web-application framework
+- tying everything neatly together into a project structure consisting of apps with models and a router
+- while ***AVOIDING*** to introduce any additional abstractions ontop of Tortoise's model-system or FastAPI's routing
+
+---
+
+## Getting started
+
+**Creating a Project**
+
+```
+pip install ohmyapi
+ohmyapi startproject myproject
+cd myproject
+```
+
+This will create the following directory structure:
+
+```
+myproject/
+  - pyproject.toml
+  - README.md
+  - settings.py
+```
+
+Run your project with:
+
+```
+ohmyapi serve
+```
+
+In your browser go to:
+- http://localhost:8000/docs
+
+**Creating an App**
+
+Create a new app by:
+
+```
+ohmyapi startapp tournament
+```
+
+This will create the following directory structure:
+
+```
+myproject/
+  - tournament/
+    - __init__.py
+    - models.py
+    - routes.py
+  - pyproject.toml
+  - README.md
+  - settings.py
+```
+
+Add 'tournament' to your `INSTALLED_APPS` in `settings.py`.
+
+### Models
+
+Write your first model in `turnament/models.py`:
+
+```python
+from ohmyapi.db import Model, field
+
+
+class Tournament(Model):
+    id = field.data.UUIDField(primary_key=True)
+    name = field.TextField()
+    created = field.DatetimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Event(Model):
+    id = field.data.UUIDField(primary_key=True)
+    name = field.TextField()
+    tournament = field.ForeignKeyField('tournament.Tournament', related_name='events')
+    participants = field.ManyToManyField('tournament.Team', related_name='events', through='event_team')
+    modified = field.DatetimeField(auto_now=True)
+    prize = field.DecimalField(max_digits=10, decimal_places=2, null=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Team(Model):
+    id = field.data.UUIDField(primary_key=True)
+    name = field.TextField()
+
+    def __str__(self):
+        return self.name
+```
+
+### API Routes
+
+Next, create your endpoints in `tournament/routes.py`:
+
+```python
+from ohmyapi.router import APIRouter, HTTPException
+from ohmyapi.db.exceptions import DoesNotExist
+
+from .models import Tournament
+
+# Expose your app's routes via `router = fastapi.APIRouter`.
+# Use prefixes wisely to avoid cross-app namespace-collisions.
+# Tags improve the UX of the OpenAPI docs at /docs.
+router = APIRouter(prefix="/tournament", tags=['Tournament'])
+
+
+@router.get("/")
+async def list():
+    queryset = Tournament.all()
+    return await Tournament.Schema.many.from_queryset(queryset)
+
+
+@router.get("/:id")
+async def get(id: str):
+    try:
+        queryset = Tournament.get(pk=id)
+        return await Tournament.Schema.one(queryset)
+    except DoesNotExist:
+        raise HTTPException(status_code=404, detail="item not found")
+
+...
+```
+
+## Migrations
+
+Before we can run the app, we need to create and initialize the database.
+
+Similar to Django, first run:
+
+```
+ohmyapi makemigrations [ <app> ]  # no app means all INSTALLED_APPS
+```
+
+This will create a `migrations/` folder in you project root.
+
+```
+myproject/
+  - tournament/
+    - __init__.py
+    - models.py
+    - routes.py
+  - migrations/
+    - tournament/
+  - pyproject.toml
+  - README.md
+  - settings.py
+```
+
+Apply your migrations via:
+
+```
+ohmyapi migrate [ <app> ]  # no app means all INSTALLED_APPS
+```
+
+Run your project:
+
+```
+ohmyapi serve
+```
+
+## Authentication
+
+A builtin auth app is available.
+
+Simply add `ohmyapi_auth` to your INSTALLED_APPS and define a JWT_SECRET in your `settings.py`.
+Remember to `makemigrations` and `migrate` for the necessary tables to be created in the database.
+
+`settings.py`:
+
+```
+INSTALLED_APPS = [
+    'ohmyapi_auth',
+    ...
+]
+
+JWT_SECRET = "t0ps3cr3t"
+```
+
+After restarting your project you will have access to the `ohmyapi_auth` app.
+It comes with a `User` and `Group` model, as well as endpoints for JWT auth.
+
+You can use the models as `ForeignKeyField` in your application models:
+
+```python
+class Team(Model):
+    [...]
+    members = field.ManyToManyField('ohmyapi_auth.User', related_name='tournament_teams', through='tournament_teams')
+    [...]
+```
+
+Remember to run `makemigrations` and `migrate` in order for your model changes to take effect in the database.
+
+Create a super-user:
+
+```
+ohmyapi createsuperuser
+```
+
+## Permissions
+
+### API-Level Permissions
+
+Use FastAPI's `Depends` pattern to implement API-level access-control.
+
+
+In your `routes.py`:
+
+```python
+from ohmyapi.router import APIRouter, Depends
+from ohmyapi_auth import (
+    models as auth,
+    permissions,
+)
+
+from .models import Tournament
+
+router = APIRouter(prefix="/tournament", tags=["Tournament"])
+
+
+@router.get("/")
+async def list(user: auth.User = Depends(permissions.require_authenticated)):
+    queryset = Tournament.all()
+    return await Tournament.Schema.many.from_queryset(queryset)
+
+
+...
+```
+
+### Model-Level Permissions
+
+Use Tortoise's `Manager` to implement model-level permissions.
+
+```python
+from ohmyapi.db import Manager
+from ohmyapi_auth.models import User
+
+
+class TeamManager(Manager):
+    async def for_user(self, user: User):
+        return await self.filter(members=user).all()
+
+
+class Team(Model):
+    [...]
+
+    class Meta:
+        manager = TeamManager()
+```
+
+Use the custom manager in your FastAPI route handler:
+
+```python
+from ohmyapi.router import APIRouter
+from ohmyapi_auth import (
+    models as auth,
+    permissions,
+)
+
+router = APIRouter(prefix="/tournament", tags=["Tournament"])
+
+
+@router.get("/teams")
+async def teams(user: auth.User = Depends(permissions.require_authenticated)):
+    queryset = Team.for_user(user)
+    return await Tournament.Schema.many.from_queryset(queryset)
+```
+
+## Shell
+
+Similar to Django, you can attach to an interactive shell with your project already loaded inside.
+
+```
+ohmyapi shell
+
+Python 3.13.7 (main, Aug 15 2025, 12:34:02) [GCC 15.2.1 20250813]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 9.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+OhMyAPI Shell | Project: {{ project_name }} [{{ project_path }}]
+Find your loaded project singleton via identifier: `p`
+```
+
+```python
+In [1]: p
+Out[1]: <ohmyapi.core.runtime.Project at 0xdeadbeefc0febabe>
+
+In [2]: p.apps
+Out[2]:
+{'ohmyapi_auth': App: ohmyapi_auth
+ Models:
+  - Group
+  - User
+ Routes:
+  - APIRoute(path='/auth/login', name='login', methods=['POST'])
+  - APIRoute(path='/auth/refresh', name='refresh_token', methods=['POST'])
+  - APIRoute(path='/auth/me', name='me', methods=['GET'])
+  - APIRoute(path='/auth/introspect', name='introspect', methods=['GET'])}
+
+In [3]: from tournament.models import Tournament
+Out[3]:
+
+```
+
+
