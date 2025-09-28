@@ -1,0 +1,15 @@
+ppdmod/__init__.py,sha256=Xybt2skBZamGMNlLuOX1IG-h4uIxqUDGAO8MIGWrJac,22
+ppdmod/base.py,sha256=nGhchWsftlLQXer5_31TudvprxPT3Pq7A1ET4Tis7qY,8014
+ppdmod/components.py,sha256=u4T7N6dVFswzrSFnn4Q5F7fDjQEnJW_cnfveTWYJspM,18667
+ppdmod/data.py,sha256=ecA3GYut1xbBK3LaeQSpKaUeJIVFaWUvNbwYhboYDbU,18799
+ppdmod/fitting.py,sha256=4eSL4h7HGnz83UPavRqf1stYgrxc4UBXuv6SqFZOJqk,17709
+ppdmod/options.py,sha256=quno44iRAfRoGRQwGOA3kSXVIJhr7iTiOOzWembnyIo,2803
+ppdmod/parameter.py,sha256=7i0Y6MhXtb1uXc5U9Aeg8vVVJJnOqtYUXJAYQ3Nz4gg,4561
+ppdmod/plot.py,sha256=pcNdtNesVuBK7KW-eV3iSfzw5frwKWWqELdXc2dN4C4,18119
+ppdmod/utils.py,sha256=qBdYhezhY_8lJP9bRbFWEVwlkehzyBQRjIbIiZ-hATw,19531
+ppdmod/config/standard_parameters.toml,sha256=IpVZ7h-J8fB0fEVq3BjMyXrhysu3ugxOtn1hHWpVYKk,4659
+ppdmod-2.1.0.dist-info/licenses/LICENSE,sha256=irnxzjYhypw50bcLL0NPDQtca3F8YVx_-C9ZZWw8PvA,1074
+ppdmod-2.1.0.dist-info/METADATA,sha256=HK4K-BXqj42W-9WxITuKWoxzqhvIC8FlnaJXhSLzc-4,2563
+ppdmod-2.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ppdmod-2.1.0.dist-info/top_level.txt,sha256=eGG2QZ-yCSQHXGJnZNwMXJomy9SKSUI_0Jk62wkLpGg,7
+ppdmod-2.1.0.dist-info/RECORD,,
