@@ -1,0 +1,2 @@
+[console_scripts]
+missmixed = missmixed.run:main

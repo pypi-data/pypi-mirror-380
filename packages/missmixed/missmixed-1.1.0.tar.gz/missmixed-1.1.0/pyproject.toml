@@ -1,0 +1,25 @@
+[project]
+name = "missmixed"
+version = "1.1.0"
+description = "An Adaptive, Extensible and Configurable Multi-Layer Framework for Iterative Missing Value Imputation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Mohammad Mahdi Kalhori", email = "mohammad.mahdi.kalhor.99@gmail.com" },
+    { name = "Fateme Akbari", email = "fatemeeakbari.97@gmail.com" },
+]
+dependencies = [
+    "tqdm>=4.66",
+    "pandas>=2.0.0",
+    "numpy>=1.23",
+    "scikit-learn>=1.4",
+    "scipy>=1.6.0",
+]
+
+[project.optional-dependencies]
+ml = ["xgboost>=3.0"]
+deep = ["tensorflow>=2.12"]
+
+[project.scripts]
+missmixed = "missmixed.run:main"
