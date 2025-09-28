@@ -1,0 +1,4 @@
+[console_scripts]
+voxtream = voxtream.run:main
+voxtream-app = voxtream.app:main
+voxtream-benchmark = voxtream.benchmark:main
