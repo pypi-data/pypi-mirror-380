@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: statskita
+Version: 0.1.0
+Summary: Python toolkit for Indonesian official microdata
+Project-URL: Homepage, https://github.com/okkymabruri/statskita
+Project-URL: Documentation, https://statskita.readthedocs.io
+Project-URL: Repository, https://github.com/okkymabruri/statskita
+Project-URL: Issues, https://github.com/okkymabruri/statskita/issues
+Author-email: Okky Mabruri <okkymbrur@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: employment,indonesia,labor,microdata,sakernas,statistics,survey
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Sociology
+Requires-Python: >=3.10
+Requires-Dist: dbf>=0.99.11
+Requires-Dist: dbfrs>=0.1.5
+Requires-Dist: openpyxl>=3.1.0
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: pathlib>=1.0.0
+Requires-Dist: polars>=0.20.0
+Requires-Dist: pyarrow>=10.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pyreadstat>=1.2.0
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: samplics>=0.4.0
+Requires-Dist: typing-extensions>=4.5.0
+Requires-Dist: xlsxwriter>=3.2.9
+Provides-Extra: cli
+Requires-Dist: rich>=13.0.0; extra == 'cli'
+Requires-Dist: typer>=0.9.0; extra == 'cli'
+Provides-Extra: dev
+Requires-Dist: mypy>=1.5.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-material>=9.0.0; extra == 'docs'
+Requires-Dist: mkdocs>=1.5.0; extra == 'docs'
+Requires-Dist: mkdocstrings[python]>=0.22.0; extra == 'docs'
+Provides-Extra: notebook
+Requires-Dist: ipykernel>=6.0.0; extra == 'notebook'
+Requires-Dist: matplotlib>=3.6.0; extra == 'notebook'
+Requires-Dist: seaborn>=0.12.0; extra == 'notebook'
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.6.0; extra == 'viz'
+Requires-Dist: seaborn>=0.12.0; extra == 'viz'
+Description-Content-Type: text/markdown
+
+# StatsKita
+
+> ⚠️ **v0.1.0 - Alpha Release**: This is an early release. The API may change in future versions. Use in production with caution.
+
+Python toolkit for Indonesian official microdata.
+
+## TL;DR
+
+**Load → Clean → Analyze → Export** Indonesian official microdata (SAKERNAS, SUSENAS, PODES) with proper survey weights, 10x faster than manual workflows, validated against official BPS publications.
+
+## Quick Start
+
+```python
+import statskita as sk
+
+# Load SAKERNAS data
+df = sk.load_sakernas("sakernas_2024.sav")
+
+# Wrangle and harmonize
+clean_df = sk.wrangle(df, harmonize=True, source_wave="2024")
+
+# Declare existing survey design
+spec = sk.declare_survey(clean_df, weight="survey_weight")
+
+# Calculate indicators
+results = sk.calculate_indicators(spec, ["lfpr", "unemployment_rate"])
+```
+
+## Installation
+
+```bash
+pip install statskita
+```
+
+## Features
+
+- Complex survey data loading with proper weights and design
+- Cross-wave harmonization for longitudinal analysis
+- Labor force indicator calculations (Labour Force Participation Rate, Unemployment Rate, etc.)
+- Export to multiple formats (Stata, Excel, Parquet)
+- Fast processing with Polars backend
+
+See examples/ directory for detailed usage.
