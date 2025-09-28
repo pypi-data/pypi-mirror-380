@@ -1,0 +1,464 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dumbjuice/__init__.py
+dumbjuice/__main__.py
+dumbjuice/__version__.py
+dumbjuice/build.py
+dumbjuice/create_ico_entry.py
+dumbjuice/utils.py
+dumbjuice.egg-info/PKG-INFO
+dumbjuice.egg-info/SOURCES.txt
+dumbjuice.egg-info/dependency_links.txt
+dumbjuice.egg-info/entry_points.txt
+dumbjuice.egg-info/requires.txt
+dumbjuice.egg-info/top_level.txt
+dumbjuice/assets/__init__.py
+dumbjuice/assets/djicon.ico
+dumbjuice/bin/__init__.py
+dumbjuice/bin/nsis/COPYING
+dumbjuice/bin/nsis/NSIS.chm
+dumbjuice/bin/nsis/NSIS.exe
+dumbjuice/bin/nsis/makensis.exe
+dumbjuice/bin/nsis/makensisw.exe
+dumbjuice/bin/nsis/nsisconf.nsh
+dumbjuice/bin/nsis/Bin/GenPat.exe
+dumbjuice/bin/nsis/Bin/MakeLangId.exe
+dumbjuice/bin/nsis/Bin/RegTool-x86.bin
+dumbjuice/bin/nsis/Bin/makensis.exe
+dumbjuice/bin/nsis/Bin/zip2exe.exe
+dumbjuice/bin/nsis/Bin/zlib1.dll
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/big.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/classic-cross.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/classic.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/colorful.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/grey-cross.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/grey.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/modern.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/red-round.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/red.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/simple-round.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/simple-round2.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Checks/simple.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis-r.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-branding-r.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-branding.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-grey-right.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-grey.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-metro-right.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-metro.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-vintage-right.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/nsis3-vintage.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-r-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-r.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-uninstall-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-uninstall-r-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-uninstall-r.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange-uninstall.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/orange.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Header/win.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/arrow-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/arrow-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/arrow2-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/arrow2-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/box-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/box-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/classic-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/classic-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/llama-blue.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/llama-grey.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-install-blue-full.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-install-blue.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-install-colorful.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-install-full.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-uninstall-blue-full.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-uninstall-blue.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-uninstall-colorful.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-uninstall-full.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/modern-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis-menu.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis1-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis1-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis3-install-alt.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis3-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/nsis3-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/orange-install-nsis.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/orange-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/orange-uninstall-nsis.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/orange-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/pixel-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/pixel-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/win-install.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Icons/win-uninstall.ico
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/arrow.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/llama.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nsis3-branding.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nsis3-grey.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nsis3-metro.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nsis3-vintage.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/nullsoft.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/orange-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/orange-uninstall-nsis.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/orange-uninstall.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/orange.bmp
+dumbjuice/bin/nsis/Contrib/Graphics/Wizard/win.bmp
+dumbjuice/bin/nsis/Contrib/Language files/Afrikaans.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Afrikaans.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Albanian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Albanian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Arabic.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Arabic.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Armenian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Armenian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Asturian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Asturian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Basque.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Basque.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Belarusian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Belarusian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Bosnian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Bosnian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Breton.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Breton.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Bulgarian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Bulgarian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Catalan.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Catalan.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Corsican.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Corsican.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Croatian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Croatian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Czech.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Czech.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Danish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Danish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Dutch.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Dutch.nsh
+dumbjuice/bin/nsis/Contrib/Language files/English.nlf
+dumbjuice/bin/nsis/Contrib/Language files/English.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Esperanto.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Esperanto.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Estonian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Estonian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Farsi.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Farsi.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Finnish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Finnish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/French.nlf
+dumbjuice/bin/nsis/Contrib/Language files/French.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Galician.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Galician.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Georgian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Georgian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/German.nlf
+dumbjuice/bin/nsis/Contrib/Language files/German.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Greek.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Greek.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Hebrew.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Hebrew.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Hindi.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Hindi.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Hungarian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Hungarian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Icelandic.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Icelandic.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Indonesian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Indonesian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Irish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Irish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Italian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Italian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Japanese.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Japanese.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Korean.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Korean.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Kurdish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Kurdish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Latvian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Latvian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Lithuanian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Lithuanian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Luxembourgish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Luxembourgish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Macedonian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Macedonian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Malay.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Malay.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Mongolian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Mongolian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Norwegian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Norwegian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/NorwegianNynorsk.nlf
+dumbjuice/bin/nsis/Contrib/Language files/NorwegianNynorsk.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Pashto.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Pashto.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Polish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Polish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Portuguese.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Portuguese.nsh
+dumbjuice/bin/nsis/Contrib/Language files/PortugueseBR.nlf
+dumbjuice/bin/nsis/Contrib/Language files/PortugueseBR.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Romanian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Romanian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Russian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Russian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/ScotsGaelic.nlf
+dumbjuice/bin/nsis/Contrib/Language files/ScotsGaelic.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Serbian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Serbian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/SerbianLatin.nlf
+dumbjuice/bin/nsis/Contrib/Language files/SerbianLatin.nsh
+dumbjuice/bin/nsis/Contrib/Language files/SimpChinese.nlf
+dumbjuice/bin/nsis/Contrib/Language files/SimpChinese.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Slovak.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Slovak.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Slovenian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Slovenian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Spanish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Spanish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/SpanishInternational.nlf
+dumbjuice/bin/nsis/Contrib/Language files/SpanishInternational.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Swedish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Swedish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Tatar.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Tatar.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Thai.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Thai.nsh
+dumbjuice/bin/nsis/Contrib/Language files/TradChinese.nlf
+dumbjuice/bin/nsis/Contrib/Language files/TradChinese.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Turkish.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Turkish.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Ukrainian.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Ukrainian.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Uzbek.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Uzbek.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Vietnamese.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Vietnamese.nsh
+dumbjuice/bin/nsis/Contrib/Language files/Welsh.nlf
+dumbjuice/bin/nsis/Contrib/Language files/Welsh.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI/System.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI/ioSpecial.ini
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Deprecated.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Interface.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Localization.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/MUI2.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/Components.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/Directory.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/Finish.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/InstallFiles.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/License.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/StartMenu.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/UninstallConfirm.nsh
+dumbjuice/bin/nsis/Contrib/Modern UI 2/Pages/Welcome.nsh
+dumbjuice/bin/nsis/Contrib/UIs/default.exe
+dumbjuice/bin/nsis/Contrib/UIs/modern.exe
+dumbjuice/bin/nsis/Contrib/UIs/modern_headerbmp.exe
+dumbjuice/bin/nsis/Contrib/UIs/modern_headerbmpr.exe
+dumbjuice/bin/nsis/Contrib/UIs/modern_nodesc.exe
+dumbjuice/bin/nsis/Contrib/UIs/modern_smalldesc.exe
+dumbjuice/bin/nsis/Contrib/UIs/sdbarker_tiny.exe
+dumbjuice/bin/nsis/Contrib/zip2exe/Base.nsh
+dumbjuice/bin/nsis/Contrib/zip2exe/Classic.nsh
+dumbjuice/bin/nsis/Contrib/zip2exe/Modern.nsh
+dumbjuice/bin/nsis/Docs/AdvSplash/advsplash.txt
+dumbjuice/bin/nsis/Docs/Banner/Readme.txt
+dumbjuice/bin/nsis/Docs/BgImage/BgImage.txt
+dumbjuice/bin/nsis/Docs/Dialer/Dialer.txt
+dumbjuice/bin/nsis/Docs/InstallOptions/Changelog.txt
+dumbjuice/bin/nsis/Docs/InstallOptions/Readme.html
+dumbjuice/bin/nsis/Docs/Math/Math.txt
+dumbjuice/bin/nsis/Docs/Modern UI/Changelog.txt
+dumbjuice/bin/nsis/Docs/Modern UI/License.txt
+dumbjuice/bin/nsis/Docs/Modern UI/Readme.html
+dumbjuice/bin/nsis/Docs/Modern UI 2/License.txt
+dumbjuice/bin/nsis/Docs/Modern UI 2/Readme.html
+dumbjuice/bin/nsis/Docs/Modern UI 2/images/closed.gif
+dumbjuice/bin/nsis/Docs/Modern UI 2/images/header.gif
+dumbjuice/bin/nsis/Docs/Modern UI 2/images/open.gif
+dumbjuice/bin/nsis/Docs/Modern UI 2/images/screen1.png
+dumbjuice/bin/nsis/Docs/Modern UI 2/images/screen2.png
+dumbjuice/bin/nsis/Docs/Modern UI/images/closed.gif
+dumbjuice/bin/nsis/Docs/Modern UI/images/header.gif
+dumbjuice/bin/nsis/Docs/Modern UI/images/open.gif
+dumbjuice/bin/nsis/Docs/Modern UI/images/screen1.png
+dumbjuice/bin/nsis/Docs/Modern UI/images/screen2.png
+dumbjuice/bin/nsis/Docs/MultiUser/Readme.html
+dumbjuice/bin/nsis/Docs/NSISdl/License.txt
+dumbjuice/bin/nsis/Docs/NSISdl/ReadMe.txt
+dumbjuice/bin/nsis/Docs/Splash/splash.txt
+dumbjuice/bin/nsis/Docs/StartMenu/Readme.txt
+dumbjuice/bin/nsis/Docs/StrFunc/StrFunc.txt
+dumbjuice/bin/nsis/Docs/System/System.html
+dumbjuice/bin/nsis/Docs/System/WhatsNew.txt
+dumbjuice/bin/nsis/Docs/VPatch/Readme.html
+dumbjuice/bin/nsis/Docs/makensisw/License.txt
+dumbjuice/bin/nsis/Docs/makensisw/Readme.txt
+dumbjuice/bin/nsis/Docs/nsDialogs/Readme.html
+dumbjuice/bin/nsis/Docs/nsExec/nsExec.txt
+dumbjuice/bin/nsis/Examples/AppGen.nsi
+dumbjuice/bin/nsis/Examples/FileFunc.ini
+dumbjuice/bin/nsis/Examples/FileFunc.nsi
+dumbjuice/bin/nsis/Examples/FileFuncTest.nsi
+dumbjuice/bin/nsis/Examples/Library.nsi
+dumbjuice/bin/nsis/Examples/LogicLib.nsi
+dumbjuice/bin/nsis/Examples/Memento.nsi
+dumbjuice/bin/nsis/Examples/MultiUser.nsi
+dumbjuice/bin/nsis/Examples/NSISMenu.nsi
+dumbjuice/bin/nsis/Examples/StrFunc.nsi
+dumbjuice/bin/nsis/Examples/TextFunc.ini
+dumbjuice/bin/nsis/Examples/TextFunc.nsi
+dumbjuice/bin/nsis/Examples/TextFuncTest.nsi
+dumbjuice/bin/nsis/Examples/VersionInfo.nsi
+dumbjuice/bin/nsis/Examples/WordFunc.ini
+dumbjuice/bin/nsis/Examples/WordFunc.nsi
+dumbjuice/bin/nsis/Examples/WordFuncTest.nsi
+dumbjuice/bin/nsis/Examples/bigtest.nsi
+dumbjuice/bin/nsis/Examples/example1.nsi
+dumbjuice/bin/nsis/Examples/example2.nsi
+dumbjuice/bin/nsis/Examples/gfx.nsi
+dumbjuice/bin/nsis/Examples/install-per-user.nsi
+dumbjuice/bin/nsis/Examples/install-shared.nsi
+dumbjuice/bin/nsis/Examples/languages.nsi
+dumbjuice/bin/nsis/Examples/makensis.nsi
+dumbjuice/bin/nsis/Examples/one-section.nsi
+dumbjuice/bin/nsis/Examples/primes.nsi
+dumbjuice/bin/nsis/Examples/rtest.nsi
+dumbjuice/bin/nsis/Examples/silent.nsi
+dumbjuice/bin/nsis/Examples/unicode.nsi
+dumbjuice/bin/nsis/Examples/waplugin.nsi
+dumbjuice/bin/nsis/Examples/AdvSplash/Example.nsi
+dumbjuice/bin/nsis/Examples/Banner/Example.nsi
+dumbjuice/bin/nsis/Examples/BgImage/Example.nsi
+dumbjuice/bin/nsis/Examples/InstallOptions/test.ini
+dumbjuice/bin/nsis/Examples/InstallOptions/test.nsi
+dumbjuice/bin/nsis/Examples/InstallOptions/testimgs.ini
+dumbjuice/bin/nsis/Examples/InstallOptions/testimgs.nsi
+dumbjuice/bin/nsis/Examples/InstallOptions/testlink.ini
+dumbjuice/bin/nsis/Examples/InstallOptions/testlink.nsi
+dumbjuice/bin/nsis/Examples/InstallOptions/testnotify.ini
+dumbjuice/bin/nsis/Examples/InstallOptions/testnotify.nsi
+dumbjuice/bin/nsis/Examples/Math/math.nsi
+dumbjuice/bin/nsis/Examples/Math/mathtest.ini
+dumbjuice/bin/nsis/Examples/Math/mathtest.nsi
+dumbjuice/bin/nsis/Examples/Math/mathtest.txt
+dumbjuice/bin/nsis/Examples/Modern UI/Basic.nsi
+dumbjuice/bin/nsis/Examples/Modern UI/HeaderBitmap.nsi
+dumbjuice/bin/nsis/Examples/Modern UI/MultiLanguage.nsi
+dumbjuice/bin/nsis/Examples/Modern UI/StartMenu.nsi
+dumbjuice/bin/nsis/Examples/Modern UI/WelcomeFinish.nsi
+dumbjuice/bin/nsis/Examples/Plugin/exdll-vs2008.sln
+dumbjuice/bin/nsis/Examples/Plugin/exdll-vs2008.vcproj
+dumbjuice/bin/nsis/Examples/Plugin/exdll.c
+dumbjuice/bin/nsis/Examples/Plugin/exdll.dpr
+dumbjuice/bin/nsis/Examples/Plugin/exdll.dsp
+dumbjuice/bin/nsis/Examples/Plugin/exdll.dsw
+dumbjuice/bin/nsis/Examples/Plugin/exdll_with_unit.dpr
+dumbjuice/bin/nsis/Examples/Plugin/extdll.inc
+dumbjuice/bin/nsis/Examples/Plugin/nsis.pas
+dumbjuice/bin/nsis/Examples/Plugin/nsis/api.h
+dumbjuice/bin/nsis/Examples/Plugin/nsis/nsis_tchar.h
+dumbjuice/bin/nsis/Examples/Plugin/nsis/pluginapi-x86-ansi.lib
+dumbjuice/bin/nsis/Examples/Plugin/nsis/pluginapi-x86-unicode.lib
+dumbjuice/bin/nsis/Examples/Plugin/nsis/pluginapi.h
+dumbjuice/bin/nsis/Examples/Splash/Example.nsi
+dumbjuice/bin/nsis/Examples/StartMenu/Example.nsi
+dumbjuice/bin/nsis/Examples/System/Resource.dll
+dumbjuice/bin/nsis/Examples/System/SysFunc.nsh
+dumbjuice/bin/nsis/Examples/System/System.nsh
+dumbjuice/bin/nsis/Examples/System/System.nsi
+dumbjuice/bin/nsis/Examples/UserInfo/UserInfo.nsi
+dumbjuice/bin/nsis/Examples/VPatch/example.nsi
+dumbjuice/bin/nsis/Examples/VPatch/newfile.txt
+dumbjuice/bin/nsis/Examples/VPatch/oldfile.txt
+dumbjuice/bin/nsis/Examples/VPatch/patch.pat
+dumbjuice/bin/nsis/Examples/nsDialogs/InstallOptions.nsi
+dumbjuice/bin/nsis/Examples/nsDialogs/example.nsi
+dumbjuice/bin/nsis/Examples/nsDialogs/timer.nsi
+dumbjuice/bin/nsis/Examples/nsDialogs/welcome.nsi
+dumbjuice/bin/nsis/Examples/nsExec/test.nsi
+dumbjuice/bin/nsis/Include/Colors.nsh
+dumbjuice/bin/nsis/Include/FileFunc.nsh
+dumbjuice/bin/nsis/Include/InstallOptions.nsh
+dumbjuice/bin/nsis/Include/Integration.nsh
+dumbjuice/bin/nsis/Include/LangFile.nsh
+dumbjuice/bin/nsis/Include/Library.nsh
+dumbjuice/bin/nsis/Include/LogicLib.nsh
+dumbjuice/bin/nsis/Include/MUI.nsh
+dumbjuice/bin/nsis/Include/MUI2.nsh
+dumbjuice/bin/nsis/Include/Memento.nsh
+dumbjuice/bin/nsis/Include/MultiUser.nsh
+dumbjuice/bin/nsis/Include/Sections.nsh
+dumbjuice/bin/nsis/Include/StrFunc.nsh
+dumbjuice/bin/nsis/Include/TextFunc.nsh
+dumbjuice/bin/nsis/Include/UpgradeDLL.nsh
+dumbjuice/bin/nsis/Include/Util.nsh
+dumbjuice/bin/nsis/Include/VB6RunTime.nsh
+dumbjuice/bin/nsis/Include/VPatchLib.nsh
+dumbjuice/bin/nsis/Include/WinCore.nsh
+dumbjuice/bin/nsis/Include/WinMessages.nsh
+dumbjuice/bin/nsis/Include/WinVer.nsh
+dumbjuice/bin/nsis/Include/WordFunc.nsh
+dumbjuice/bin/nsis/Include/nsDialogs.nsh
+dumbjuice/bin/nsis/Include/x64.nsh
+dumbjuice/bin/nsis/Include/Win/COM.nsh
+dumbjuice/bin/nsis/Include/Win/Propkey.nsh
+dumbjuice/bin/nsis/Include/Win/RestartManager.nsh
+dumbjuice/bin/nsis/Include/Win/WinDef.nsh
+dumbjuice/bin/nsis/Include/Win/WinError.nsh
+dumbjuice/bin/nsis/Include/Win/WinNT.nsh
+dumbjuice/bin/nsis/Include/Win/WinUser.nsh
+dumbjuice/bin/nsis/Plugins/x86-ansi/AdvSplash.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/Banner.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/BgImage.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/Dialer.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/INetC.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/InstallOptions.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/LangDLL.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/Math.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/NSISdl.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/Splash.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/StartMenu.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/System.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/TypeLib.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/UserInfo.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/VPatch.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/nsDialogs.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/nsExec.dll
+dumbjuice/bin/nsis/Plugins/x86-ansi/nsisunz.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/AdvSplash.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/Banner.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/BgImage.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/Dialer.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/INetC.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/InstallOptions.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/LangDLL.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/Math.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/NSISdl.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/Splash.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/StartMenu.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/System.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/TypeLib.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/UserInfo.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/VPatch.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/nsDialogs.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/nsExec.dll
+dumbjuice/bin/nsis/Plugins/x86-unicode/nsisunz.dll
+dumbjuice/bin/nsis/Stubs/bzip2-x86-ansi
+dumbjuice/bin/nsis/Stubs/bzip2-x86-unicode
+dumbjuice/bin/nsis/Stubs/bzip2_solid-x86-ansi
+dumbjuice/bin/nsis/Stubs/bzip2_solid-x86-unicode
+dumbjuice/bin/nsis/Stubs/lzma-x86-ansi
+dumbjuice/bin/nsis/Stubs/lzma-x86-unicode
+dumbjuice/bin/nsis/Stubs/lzma_solid-x86-ansi
+dumbjuice/bin/nsis/Stubs/lzma_solid-x86-unicode
+dumbjuice/bin/nsis/Stubs/uninst
+dumbjuice/bin/nsis/Stubs/zlib-x86-ansi
+dumbjuice/bin/nsis/Stubs/zlib-x86-unicode
+dumbjuice/bin/nsis/Stubs/zlib_solid-x86-ansi
+dumbjuice/bin/nsis/Stubs/zlib_solid-x86-unicode
