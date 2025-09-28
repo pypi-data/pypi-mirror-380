@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physai"
+version = "2.5.8"
+description = "Physics-Informed Neural Network (PINN) library for solving and animating ODEs/PDEs with visualization and training tools"
+readme = "README.md"
+requires-python = ">=3.9"
+
+authors = [
+    { name = "Mankrit Singh", email = "whataninfinity@gmail.com" }
+]
+
+# License (PyPI recognizes this)
+license = { file = "LICENSE" }
+
+# Dependencies
+dependencies = [
+    "torch>=2.8.0",
+    "matplotlib",
+    "numpy"
+]
+
+keywords = [
+    "PINN",
+    "Physics-Informed Neural Network",
+    "ODE",
+    "PDE",
+    "Deep Learning",
+    "Modular Library",
+    "Built-in PDE support",
+    "Efficient and Fast Training for Great PDE Solving and visualization",
+    "Built-in Partial Differential Equations using pre-made PINN"
+]
+
+[project.urls]
+homepage = "https://github.com/MS-AGI/PhysAI"
+documentation = "https://github.com/MS-AGI/PhysAI"
+source = "https://github.com/MS-AGI/PhysAI"
+doi = "https://doi.org/10.5281/zenodo.17214725"
