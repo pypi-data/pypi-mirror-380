@@ -1,0 +1,17 @@
+augllm/__init__.py,sha256=j2pwSS81R4WsFUONoaiOwlYAY0N-xAYIDQ9ZPaDH3jA,198
+augllm/augmented_llm.py,sha256=CVgJan5ZXMx6Kzv63E_fULqSvtPolqLuJ5hOHKROypI,11585
+augllm/function_calling.py,sha256=xnXqIGMudB9xibjLqxn--fktMH2p61i6cUhETMVdg1A,10739
+augllm/image_controller.py,sha256=1EJmL2dkDtHq3Z0gHMdDm7ySuXo4d3XXajJNu9Frgm8,5654
+augllm/llm_interface.py,sha256=5rs2-_WqSV_guoW7jHxWzzvW361BVikrQ4j-uNsZwsE,1943
+augllm/make_image_paths.py,sha256=T2TV3JACcAkhXsOxT-qUWloUf2xDDuXz1PMSZMuQ2tQ,1774
+augllm/prompt_builder.py,sha256=oowu9Jm3LeI1eXzfQ-f6TNZQZuBMXew6MAnuLUC7RxY,2124
+augllm/tool.py,sha256=2wgAZUCHXY1EcrVCBhp3OOAa2oqw9khMor744tYYYp8,1276
+augllm/tool_handler.py,sha256=2rBeI5GFTM_WMEGPC0ykeMUPuS4oI9HgSp8rA-S3M1Q,5799
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_chat.py,sha256=Zbt0ZF6eH18-u5bKnxuoZDU9JRc-rIeRaysmY4hhAlI,1720
+test/test_image.py,sha256=fncuR6Rkyr6Hp3M-7dARQ3H8QY1hG6AvXP2OFgolROQ,1418
+augllm-1.1.dist-info/LICENSE,sha256=tGTeSgUYzFsIJ_Oq75L9WcEp2g5DncN1qjflhOcjlqk,11356
+augllm-1.1.dist-info/METADATA,sha256=zT9Y04sjDiYxNlWI36rNfBZDzPXUeTeGNfAu9c3t3Zg,2671
+augllm-1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+augllm-1.1.dist-info/top_level.txt,sha256=3vjhChPSska-3k2P-nuvgzMFbJw49xvElMvlUf7W_o4,12
+augllm-1.1.dist-info/RECORD,,
