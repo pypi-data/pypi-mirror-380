@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: zoialib
+Version: 0.3.0
+Summary: A patch librarian for the Empress ZOIA
+Requires-Python: >=3.11
+Requires-Dist: rich>=14.1.0
+Requires-Dist: tomlkit>=0.13.3
+Requires-Dist: typer-slim>=0.19.2
+Description-Content-Type: text/markdown
+
+# zoialib
+
+Command line librarian for Empress ZOIA patches
+
+
+## Notes
+
+A file name looks like this:
+
+    021_zoia_Total_Random-680042cc3340b.bin
+    ^^^      ^^^^^^^^^^^^ ^^^^^^^^^^^^^
+    number        name   optional commit ID
+
+We will store them without the `023_zoai` prefix.
+
+    zoialib rename FILE [FILE...]
+
+
+Defs:
+
+* full patch name
+* short patch name
+* zdir - a zoia directory with files with full patch names
+
+
+Renames all files to get rid of the prefix and recreate them when writing a zdir
+
+We want to remember slot assignments. A file called slot_list.toml contains all the slots
+assignments that have ever been seen, a map from slots to assignments. Because
+many patches may want to go into the same slot, these assignments are ordered.
