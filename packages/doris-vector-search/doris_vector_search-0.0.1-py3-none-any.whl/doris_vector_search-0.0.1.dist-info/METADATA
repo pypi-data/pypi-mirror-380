@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: doris-vector-search
+Version: 0.0.1
+Summary: Doris Vector Search Python SDK
+Requires-Python: >=3.8
+Requires-Dist: sqlalchemy>=1.4.0
+Requires-Dist: pymysql>=1.0.0
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
