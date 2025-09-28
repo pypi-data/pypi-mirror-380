@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/baudream/__init__.py
+src/baudream/baudream.py
+src/baudream.egg-info/PKG-INFO
+src/baudream.egg-info/SOURCES.txt
+src/baudream.egg-info/dependency_links.txt
+src/baudream.egg-info/top_level.txt
