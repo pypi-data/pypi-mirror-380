@@ -1,0 +1,10 @@
+cjm_transcription_plugin_whisper/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+cjm_transcription_plugin_whisper/_modidx.py,sha256=MndXbUPDvEuhU2hXmfwW0sBExYz2BczkxoGdkTToaPc,5246
+cjm_transcription_plugin_whisper/core.py,sha256=f27lPATA1iQQF3zqhvMMeD__Y4deHOhnXKQJSJNkJVU,183
+cjm_transcription_plugin_whisper/plugin.py,sha256=ecC7d6SgYxrgUZFi6o7FDauJJYXt5oaoPaiEqZY6nTo,16925
+cjm_transcription_plugin_whisper-0.0.3.dist-info/licenses/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+cjm_transcription_plugin_whisper-0.0.3.dist-info/METADATA,sha256=0oXiIu_LYcRC9Mz7YA6h1uj3NbEf_9rC1Xt6_6ZjJcY,4681
+cjm_transcription_plugin_whisper-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cjm_transcription_plugin_whisper-0.0.3.dist-info/entry_points.txt,sha256=K5WIzSDs6z4QiH3UFWokyrMTQ6LyoQmvDjjuOD7TN44,186
+cjm_transcription_plugin_whisper-0.0.3.dist-info/top_level.txt,sha256=kUP1pthu_8XObkaDPL2JyOFNDjLvOHT9Xhm2uNBgtmE,33
+cjm_transcription_plugin_whisper-0.0.3.dist-info/RECORD,,
