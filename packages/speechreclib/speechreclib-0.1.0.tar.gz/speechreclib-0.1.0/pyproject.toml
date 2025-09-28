@@ -1,0 +1,34 @@
+[project]
+name = "speechreclib"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "avdonin.pb@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "openai-whisper (>=20250625,<20250626)",
+    "soundfile (>=0.13.1,<0.14.0)",
+    "transformers (>=4.56.2,<5.0.0)",
+    "torchaudio (>=2.8.0,<3.0.0)",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.packages]]
+include = "speechrec"
+from = "."
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)"
+]
