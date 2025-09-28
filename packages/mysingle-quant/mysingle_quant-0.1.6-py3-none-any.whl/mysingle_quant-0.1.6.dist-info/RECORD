@@ -1,0 +1,11 @@
+mysingle_quant/__init__.py,sha256=IKuSdo0TcgZ13tagBCj1RNy3cJGEdNoJtwmmJnnuCiM,204
+mysingle_quant/core/__init__.py,sha256=EE8PN6Us5FbezagOKLA-Tzdm7tIbZC6XTyic7gMcmE4,884
+mysingle_quant/core/app_factory.py,sha256=RsuM7uonhj6jE3YiO4768K4NGk0mZnCyJyoXUTxwpJI,7519
+mysingle_quant/core/config.py,sha256=msrsPknwcTrpObydyNnGvvMWflOR8XbyHRIGEjaR8IE,3592
+mysingle_quant/core/db.py,sha256=vcGmxmfPmm8IOnFYGj2t-lux7-1Cw9Y_y45nv3EwZyo,2197
+mysingle_quant/core/health.py,sha256=3kSbR_hp_kSkniy8nlXf-570DSDL7fPFwUdoeKFctKw,5392
+mysingle_quant/core/metrics.py,sha256=vq7Y6VWCWtKGhSTo7kS2h6JyBbtrwR_FgddMi7ZrfHU,6541
+mysingle_quant-0.1.6.dist-info/METADATA,sha256=i9mt8hS1PEpev6hlSK7-RuHr937E6o2umpu5eVkujF0,795
+mysingle_quant-0.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mysingle_quant-0.1.6.dist-info/top_level.txt,sha256=ZQjIel16iv-94Y3K3_AC5UQwjE485YcuyAf6Wei2Qlc,15
+mysingle_quant-0.1.6.dist-info/RECORD,,
