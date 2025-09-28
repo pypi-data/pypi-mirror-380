@@ -1,0 +1,15 @@
+python_test_aviz/__init__.py,sha256=LG-zblOfMP6hVPKsBg0_Vu7Np90aDwZoQtZkamDOsus,46
+python_test_aviz/aviz_test.py,sha256=ulEJqddvELsEsSSjVPdt213Bt70rQVzxffd3o1dCeqo,529
+python_test_aviz/custom_python_logger_test.py,sha256=y2h1VGG1KRgDFhKmOAdbXiIIsCFvySGeT85CpRWZLI4,1033
+python_test_aviz/notion_test.py,sha256=FyMEfFoLCKUsp3mZQLqqmGkYcwyfUGQxmDdRRmxlS50,1204
+python_test_aviz/python_jira_plus_test.py,sha256=9dKMx6Bg2NvSUtJYHF91yYySPAwimdakQtM1AxOVuU4,476
+python_test_aviz/python_pandas_translation_test.py,sha256=ld11UlMT4SqpBJ-XS8ZlpuzXVZ697GPE5C_DtLpamWg,578
+python_test_aviz/python_simple_email_sender_test.py,sha256=VHkNkSzFKQ5VmekaGvl2rMBjp4Fr8YbM9pdJkQSZ4vw,926
+python_test_aviz/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_test_aviz/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_test_aviz/tests/test_dummy.py,sha256=1yIOL6iHblXrfwGGO4ryahkHtOWpYdPQuPbZS7kTqWY,301
+python_test_aviz-1.0.10.dist-info/licenses/LICENSE,sha256=cSikHY6SZFsPZSBizCDAJ0-Bjjzxt-JtX6TVbKxwimo,1067
+python_test_aviz-1.0.10.dist-info/METADATA,sha256=ojd8fT8xhO7978AXZeNICK_MmraBPyUYd3qvDlypOFY,1196
+python_test_aviz-1.0.10.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+python_test_aviz-1.0.10.dist-info/top_level.txt,sha256=jy57AH-lupbs0Egx1RQpjX8OffCmAHYLom7Lq54LTeY,17
+python_test_aviz-1.0.10.dist-info/RECORD,,
