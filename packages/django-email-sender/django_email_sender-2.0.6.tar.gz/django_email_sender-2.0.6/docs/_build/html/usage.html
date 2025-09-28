@@ -1,0 +1,652 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>django-email-sender Usage Guide - django-email-sender documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=56c4699f" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">django-email-sender  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">django-email-sender  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/usage.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="django-email-sender-usage-guide">
+<h1><code class="docutils literal notranslate"><span class="pre">django-email-sender</span></code> Usage Guide<a class="headerlink" href="#django-email-sender-usage-guide" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">django-email-sender</span></code> package is a versatile email-sending tool designed to simplify email handling in Django applications. It offers a variety of features, including the ability to send emails using custom templates, handle multiple recipients, integrate with a logger, and persist logs to a database.</p>
+<p>This guide will walk you through how to configure and use the package, including advanced features like custom loggers, database integration, and custom email formatting.</p>
+</section>
+<hr class="docutils" />
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Install the package</strong> via pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>django-email-sender
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple" start="3">
+<li><p><strong>Set up your email backend in <code class="docutils literal notranslate"><span class="pre">settings.py</span></code></strong> (use the appropriate backend for your email provider):</p></li>
+</ol>
+<section id="email-settings">
+<h3>Email settings<a class="headerlink" href="#email-settings" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span>        <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+<span class="n">EMAIL_HOST</span>           <span class="o">=</span> <span class="s1">&#39;smtp.example.com&#39;</span>  <span class="c1"># Replace with your email provider&#39;s SMTP server</span>
+<span class="n">EMAIL_PORT</span>           <span class="o">=</span> <span class="mi">587</span>  <span class="c1"># Typically 587 for TLS</span>
+<span class="n">EMAIL_USE_TLS</span>        <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable TLS encryption</span>
+<span class="n">EMAIL_HOST_USER</span>      <span class="o">=</span> <span class="s1">&#39;your-email@example.com&#39;</span>  <span class="c1"># Your email address</span>
+<span class="n">EMAIL_HOST_PASSWORD</span>  <span class="o">=</span> <span class="s1">&#39;your-email-password&#39;</span>  <span class="c1"># Your email password (or app password if using 2FA)</span>
+<span class="n">DEFAULT_FROM_EMAIL</span>   <span class="o">=</span> <span class="n">EMAIL_HOST_USER</span>  <span class="c1"># Default email to send from</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h3>Email settings<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EMAIL_BACKEND</span>        <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+<span class="n">EMAIL_HOST</span>           <span class="o">=</span> <span class="s1">&#39;smtp.example.com&#39;</span>  <span class="c1"># Replace with your email provider&#39;s SMTP server</span>
+<span class="n">EMAIL_PORT</span>           <span class="o">=</span> <span class="mi">587</span>  <span class="c1"># Typically 587 for TLS</span>
+<span class="n">EMAIL_USE_TLS</span>        <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable TLS encryption</span>
+<span class="n">EMAIL_HOST_USER</span>      <span class="o">=</span> <span class="s1">&#39;your-email@example.com&#39;</span>  <span class="c1"># Your email address</span>
+<span class="n">EMAIL_HOST_PASSWORD</span>  <span class="o">=</span> <span class="s1">&#39;your-email-password&#39;</span>  <span class="c1"># Your email password (or app password if using 2FA)</span>
+<span class="n">DEFAULT_FROM_EMAIL</span>   <span class="o">=</span> <span class="n">EMAIL_HOST_USER</span>  <span class="c1"># Default email to send from</span>
+
+</pre></div>
+</div>
+<p>Note replace</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span> <span class="n">smtp</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="k">with</span> <span class="n">your</span><span class="o">-</span><span class="n">email</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
+  <span class="o">-</span> <span class="n">your</span><span class="o">-</span><span class="n">email</span><span class="o">-</span><span class="n">password</span> <span class="k">with</span> <span class="n">your</span> <span class="n">actual</span> <span class="n">email</span> <span class="n">service</span> <span class="n">provider</span><span class="s1">&#39;s SMTP details</span>
+
+</pre></div>
+</div>
+<p>If you are using gmail to send emails then the setup would look like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Email Backend</span>
+    <span class="n">EMAIL_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;django.core.mail.backends.smtp.EmailBackend&#39;</span>
+
+    <span class="c1"># Email Settings for Gmail</span>
+
+    <span class="n">EMAIL_USE_TLS</span>        <span class="o">=</span> <span class="kc">True</span>  
+    <span class="n">EMAIL_HOST</span>           <span class="o">=</span> <span class="s1">&#39;smtp.gmail.com&#39;</span>  
+    <span class="n">EMAIL_PORT</span>           <span class="o">=</span> <span class="mi">587</span>  
+    <span class="n">EMAIL_HOST_USER</span>      <span class="o">=</span> <span class="s1">&#39;your-email@gmail.com&#39;</span>  <span class="c1"># Your Gmail address</span>
+    <span class="n">EMAIL_HOST_PASSWORD</span>  <span class="o">=</span> <span class="s1">&#39;your-app-password&#39;</span>     <span class="c1"># Use the generated app password (if 2FA is enabled)</span>
+    <span class="n">DEFAULT_FROM_EMAIL</span>   <span class="o">=</span> <span class="n">EMAIL_HOST_USER</span>         <span class="c1"># Optional: Set default sender email (same as the one above)</span>
+
+
+</pre></div>
+</div>
+</section>
+<section id="important-notes">
+<h3>Important Notes:<a class="headerlink" href="#important-notes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>App Password: If you have two-factor authentication (2FA) enabled for your Gmail account, you’ll need to create an App Password instead of using your   regular Gmail password. You can generate it in your Google account settings.</p></li>
+<li><p>TLS: Setting EMAIL_USE_TLS = True ensures that emails are sent securely over TLS encryption.</p></li>
+</ul>
+<p>This configuration should allow you to send emails via Gmail’s SMTP server.</p>
+</section>
+<section id="step-4-create-email-templates">
+<h3>🧱 Step 4: Create Email Templates<a class="headerlink" href="#step-4-create-email-templates" title="Link to this heading">¶</a></h3>
+<p>Create the folder structure :</p>
+<ul class="simple">
+<li><p>See <a class="reference internal" href="#html-email-template-example"><span class="xref myst">HTML Email Template Example</span></a> and <a class="reference internal" href="#plain-text--multi-part-email-support"><span class="xref myst">Plain Text &amp; Multi-part Email Support</span></a>
+for how to create the files</p></li>
+<li><p>Replace the folder <code class="docutils literal notranslate"><span class="pre">emails</span></code> with <code class="docutils literal notranslate"><span class="pre">verification</span></code></p></li>
+<li><p>Do the same with the file names</p></li>
+</ul>
+<p>Then add the templates path in <code class="docutils literal notranslate"><span class="pre">config/settings.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django.template.backends.django.DjangoTemplates&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;templates&#39;</span><span class="p">],</span>  <span class="c1"># This is where you add the line</span>
+        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;context_processors&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s1">&#39;django.template.context_processors.debug&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;django.template.context_processors.request&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;django.contrib.auth.context_processors.auth&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;django.contrib.messages.context_processors.messages&#39;</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-5-add-a-test-view">
+<h3>🧪 Step 5: Add a Test View<a class="headerlink" href="#step-5-add-a-test-view" title="Link to this heading">¶</a></h3>
+<p>In <code class="docutils literal notranslate"><span class="pre">core/views.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django_email_sender.email_sender</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailSender</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_email_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="p">(</span>
+    <span class="n">EmailSender</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">from_address</span><span class="p">(</span><span class="s2">&quot;no-reply@example.com&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">to</span><span class="p">([</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">with_subject</span><span class="p">(</span><span class="s2">&quot;Verify Your Email&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">with_context</span><span class="p">({</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;verification_code&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">with_html_template</span><span class="p">(</span><span class="s2">&quot;verification.html&quot;</span><span class="p">,</span> <span class="n">folder_name</span><span class="o">=</span><span class="s2">&quot;verification&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">with_text_template</span><span class="p">(</span><span class="s2">&quot;verification.txt&quot;</span><span class="p">,</span> <span class="n">folder_name</span><span class="o">=</span><span class="s2">&quot;verification&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">send</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;Verification email sent!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-6-wire-up-urls">
+<h3>🔗 Step 6: Wire Up URLs<a class="headerlink" href="#step-6-wire-up-urls" title="Link to this heading">¶</a></h3>
+<p>Create <code class="docutils literal notranslate"><span class="pre">core/urls.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.views</span><span class="w"> </span><span class="kn">import</span> <span class="n">test_email_view</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;send-verification-email/&quot;</span><span class="p">,</span> <span class="n">test_email_view</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Then include it in <code class="docutils literal notranslate"><span class="pre">config/urls.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;admin/&quot;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">&quot;core.urls&quot;</span><span class="p">)),</span>
+<span class="p">]</span>
+
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-7-run-and-test">
+<h3>🚀 Step 7: Run and Test<a class="headerlink" href="#step-7-run-and-test" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+<p>Open <a class="reference external" href="http://localhost:8000/send-verification-email/">http://localhost:8000/send-verification-email/</a> in your browser and check your inbox!</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tips">
+<h2>💡 Tips<a class="headerlink" href="#tips" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>You can subclass <code class="docutils literal notranslate"><span class="pre">EmailSender</span></code> for different email types or simply wrap it in functions.</p></li>
+<li><p>Organise your templates by email type (<code class="docutils literal notranslate"><span class="pre">registration/</span></code>, <code class="docutils literal notranslate"><span class="pre">verification/</span></code>, etc.)</p></li>
+<li><p>Subject and context are fully customisable.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="advanced-usage">
+<h2>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">¶</a></h2>
+<section id="adding-multiple-recipients">
+<h3>Adding Multiple Recipients<a class="headerlink" href="#adding-multiple-recipients" title="Link to this heading">¶</a></h3>
+<p>To send an email to multiple recipients, you can pass a list of email addresses. If you want to add extra recipients dynamically, you can use the <code class="docutils literal notranslate"><span class="pre">add_new_recipient</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add extra recipients using add_new_recipient</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">add_new_recipient</span><span class="p">(</span><span class="s2">&quot;extra_recipient@example.com&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">add_new_recipient</span><span class="p">(</span><span class="s2">&quot;extra_recipient2@example.com&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">add_new_recipient</span><span class="p">(</span><span class="s2">&quot;extra_recipient3@example.com&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">add_new_recipient</span><span class="p">(</span><span class="s2">&quot;extra_recipient4@example.com&quot;</span><span class="p">)</span>
+
+<span class="c1"># Send to all recipients</span>
+
+</pre></div>
+</div>
+</section>
+<section id="customising-the-logger">
+<h3>Customising the Logger<a class="headerlink" href="#customising-the-logger" title="Link to this heading">¶</a></h3>
+<p>You can configure the logger to output email logs to different destinations (such as a file or database) and apply custom formats to your logs.</p>
+<section id="custom-formatter">
+<h4>Custom Formatter<a class="headerlink" href="#custom-formatter" title="Link to this heading">¶</a></h4>
+<p>You can add a custom formatter to modify how email logs are displayed. A custom formatter must be a callable function that accepts an <code class="docutils literal notranslate"><span class="pre">Exception</span></code> object (and optionally a traceback string) and returns a formatted string.</p>
+<p>Here’s an example custom formatter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">custom_email_formatter</span><span class="p">(</span><span class="n">exc</span><span class="p">:</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">trace</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Custom formatter that formats the exception message and traceback.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Custom Error: </span><span class="si">{</span><span class="n">exc</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">exc</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">Traceback:</span><span class="se">\n</span><span class="si">{</span><span class="n">trace</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;No traceback available&#39;</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>To use this formatter with the <code class="docutils literal notranslate"><span class="pre">EmailSenderLogger</span></code> logger, set it as the custom formatter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email_sender</span><span class="o">.</span><span class="n">set_logger</span><span class="p">(</span><span class="n">custom_formatter</span><span class="o">=</span><span class="n">custom_email_formatter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> Custom formatters should avoid using emojis or special characters like <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> in the output. Ensure your formatter returns a plain string that is suitable for logging.</p>
+</section>
+</section>
+<section id="logging-to-a-file-or-console">
+<h3>Logging to a File or Console<a class="headerlink" href="#logging-to-a-file-or-console" title="Link to this heading">¶</a></h3>
+<p>You can configure the logger to write email logs to a file, console, or both. Here’s how to set up logging:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+
+<span class="c1"># Set up logging to file</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;email_logs.log&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># Or set up logging to console</span>
+<span class="n">console_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+<span class="n">console_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="c1"># Add the handler to your email logger</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console_handler</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="database-configuration">
+<h2>Database Configuration<a class="headerlink" href="#database-configuration" title="Link to this heading">¶</a></h2>
+<section id="database-integration">
+<h3>Database Integration<a class="headerlink" href="#database-integration" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">EmailSenderLogger</span></code> allows users to optionally persist email metadata to a database. This is useful for audit logs, diagnostics, and history tracking.</p>
+<p>🔔 Note: <code class="docutils literal notranslate"><span class="pre">EmailSenderLogger</span></code> does not create or manage any database tables. You must define your own log model, and explicitly opt in to database logging.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Requirements</span></code>:</p>
+<blockquote>
+<div><p>You must create your own model that inherits from EmailBaseLog.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The model must be passed as a class, not an instance, using .add_log_model().</p>
+</div></blockquote>
+<blockquote>
+<div><p>You must explicitly enable database logging using .enable_email_meta_data_save().</p>
+</div></blockquote>
+<blockquote>
+<div><p>If no valid model is added, no data will be saved</p>
+</div></blockquote>
+</section>
+<section id="example-creating-a-custom-email-log-model">
+<h3>📄 Example: Creating a Custom Email Log Model<a class="headerlink" href="#example-creating-a-custom-email-log-model" title="Link to this heading">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># models.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">django_email_sender.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailBaseLog</span> 
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CustomEmailLog</span><span class="p">(</span><span class="n">EmailBaseLog</span><span class="p">):</span>  <span class="c1"># inherits from EmailBaseLog</span>
+    <span class="c1"># Optional: Add custom fields</span>
+    <span class="n">request_id</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">environment</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;production&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">recipient</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">subject</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">migrations</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">makemigrations</span>
+<span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Note</span></code>:
+The <code class="docutils literal notranslate"><span class="pre">EmailBaseLog</span></code> class is <code class="docutils literal notranslate"><span class="pre">an</span> <span class="pre">abstract</span> <span class="pre">model</span></code>, so it will not be created as a database table, even after running makemigrations and migrate.
+Only your subclass (e.g., <code class="docutils literal notranslate"><span class="pre">CustomEmailLog</span></code>) will be created in the table and nothing else.</p>
+</section>
+<section id="usage-in-code">
+<h3>🛠️ Usage in Code<a class="headerlink" href="#usage-in-code" title="Link to this heading">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django_email_sender.email_logger</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailSenderLogger</span>
+<span class="kn">from</span><span class="w"> </span><span class="s2">&quot;your-app&quot;</span><span class="o">.</span><span class="n">models</span> <span class="kn">import</span><span class="w"> </span><span class="nn">CustomEmailLog</span>
+
+
+<span class="n">email_sender</span> <span class="o">=</span> <span class="p">(</span> <span class="n">EmailSenderLogger</span><span class="o">.</span><span class="n">create</span><span class="p">()</span><span class="o">.</span><span class="n">start_logging_session</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">add_log_model</span><span class="p">(</span><span class="n">CustomEmailLog</span><span class="p">)</span>    <span class="c1"># customEmailLog</span>
+                <span class="o">.</span><span class="n">enable_email_meta_data_save</span><span class="p">()</span>    <span class="c1"># enable saving to the </span>
+                
+                <span class="c1"># Rest of the code here .</span>
+                <span class="c1"># .....</span>
+                <span class="o">.</span><span class="n">send</span><span class="p">()</span>
+<span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="clearing-fields">
+<h2>Clearing Fields<a class="headerlink" href="#clearing-fields" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">EmailSender</span></code> also provides methods to clear different email fields, such as <code class="docutils literal notranslate"><span class="pre">subject</span></code>, <code class="docutils literal notranslate"><span class="pre">from_email</span></code>, <code class="docutils literal notranslate"><span class="pre">to_email</span></code>, and more.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clear specific fields</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">clear_subject</span><span class="p">()</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">clear_to_email</span><span class="p">()</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">clear_html_template</span><span class="p">()</span>
+<span class="n">email_sender</span><span class="o">.</span><span class="n">clear_text_template</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you want to clear all fields at once, use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email_sender</span><span class="o">.</span><span class="n">clear_all_fields</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>These methods allow you to reset email properties, making it easier to send fresh emails with new details.</p>
+</section>
+<hr class="docutils" />
+<section id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h2>
+<p>For the latest updates and changes, refer to the <a class="reference internal" href="#CHANGELOG.md"><span class="xref myst">Changelog</span></a>.</p>
+</section>
+<hr class="docutils" />
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<p>This project is licensed under the MIT License - see the <a class="reference internal" href="#LICENSE.md"><span class="xref myst">LICENSE.md</span></a> file for details.</p>
+<hr class="docutils" />
+<p>This guide covers the core usage of the <code class="docutils literal notranslate"><span class="pre">django-email-sender</span></code> package, from setting up basic email functionality to advanced logging and database integration. For further customisation, refer to the documentation and adjust the settings to suit your project’s needs.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">django-email-sender</span></code> Usage Guide</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#basic-usage">Basic Usage</a><ul>
+<li><a class="reference internal" href="#email-settings">Email settings</a></li>
+<li><a class="reference internal" href="#id1">Email settings</a></li>
+<li><a class="reference internal" href="#important-notes">Important Notes:</a></li>
+<li><a class="reference internal" href="#step-4-create-email-templates">🧱 Step 4: Create Email Templates</a></li>
+<li><a class="reference internal" href="#step-5-add-a-test-view">🧪 Step 5: Add a Test View</a></li>
+<li><a class="reference internal" href="#step-6-wire-up-urls">🔗 Step 6: Wire Up URLs</a></li>
+<li><a class="reference internal" href="#step-7-run-and-test">🚀 Step 7: Run and Test</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tips">💡 Tips</a></li>
+<li><a class="reference internal" href="#advanced-usage">Advanced Usage</a><ul>
+<li><a class="reference internal" href="#adding-multiple-recipients">Adding Multiple Recipients</a></li>
+<li><a class="reference internal" href="#customising-the-logger">Customising the Logger</a><ul>
+<li><a class="reference internal" href="#custom-formatter">Custom Formatter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#logging-to-a-file-or-console">Logging to a File or Console</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#database-configuration">Database Configuration</a><ul>
+<li><a class="reference internal" href="#database-integration">Database Integration</a></li>
+<li><a class="reference internal" href="#example-creating-a-custom-email-log-model">📄 Example: Creating a Custom Email Log Model</a></li>
+<li><a class="reference internal" href="#usage-in-code">🛠️ Usage in Code</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clearing-fields">Clearing Fields</a></li>
+<li><a class="reference internal" href="#changelog">Changelog</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>
