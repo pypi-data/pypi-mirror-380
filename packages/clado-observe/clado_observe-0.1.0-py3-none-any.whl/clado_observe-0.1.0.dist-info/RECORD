@@ -1,0 +1,16 @@
+clado_observe/__init__.py,sha256=EpaD5Qz5Klk14GNdURcP5Mr9FRo8YFJSCk30AgsFozw,129
+clado_observe/agents/__init__.py,sha256=LTFZMwaCviJJgDw5u_pzV7j-1udZhoPrBQKaqVxmyeg,56
+clado_observe/agents/browser_use/__init__.py,sha256=Kp3tLIENUVEvRGAl7p5PdiHH7P8nBNLYHe-SbC3BuKo,46
+clado_observe/agents/browser_use/agent.py,sha256=g8C2kDbzDwFVVIB-t8PlcuFxe14LKfl3X9UjhxyK644,12435
+clado_observe/cdp/observer.py,sha256=EuW81k6MDMGfHJ1x54UBzwJuORxLxjfa7pkmSX-kptQ,10283
+clado_observe/cdp/utils/base_client.py,sha256=kefLfl0zChQ2hxHJj4ym-mi8ESSG-RxmttaabUJhTLk,5661
+clado_observe/cdp/utils/dom.py,sha256=xlz4ShFc6f_dOoYoR1wkRr3pGfdI5FP11VAy-DqEzOk,11685
+clado_observe/cdp/utils/screencast.py,sha256=-067mpcb5nzj85yaTcPSYUSBsj4kCRoyVODOPAgkPe8,12050
+clado_observe/cdp/utils/screenshot.py,sha256=uJ3H2dJgN2DSDwLIPgrL5m98VbHMtXtb8hqN-mEmLdU,3906
+clado_observe/cdp/utils/target_manager.py,sha256=RE9NU48XmTjevzsgOChTqDu4RdgBJfvwDFqRqlR8LuU,3253
+clado_observe/utils/api_client.py,sha256=Xgm6jN4kBAoatQE49DYZj-693s05kJXCrutdFbp_04o,9495
+clado_observe/utils/vlm_evaluator.py,sha256=GHcs2UKoorPkW5X_Y-Isr8cqB78C1Wc1P6NqD-ryT8g,7690
+clado_observe-0.1.0.dist-info/METADATA,sha256=vND5JY_Nmejda1DBfWUsRX0GofqfIFhN3ed4gViv3YE,2951
+clado_observe-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+clado_observe-0.1.0.dist-info/licenses/LICENSE.md,sha256=6oHojJIFnR5N7JzEyccsAKqrZYUrvNEIUIm4L35Vq50,1066
+clado_observe-0.1.0.dist-info/RECORD,,
