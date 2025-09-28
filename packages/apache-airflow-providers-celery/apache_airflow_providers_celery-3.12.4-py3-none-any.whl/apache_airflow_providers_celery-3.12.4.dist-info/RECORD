@@ -1,0 +1,17 @@
+airflow/providers/celery/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+airflow/providers/celery/__init__.py,sha256=Gsz2MeoQ7GOYD_c2JfIYk4kqVbWYmbyLFeN_4ZT99Mw,1496
+airflow/providers/celery/get_provider_info.py,sha256=RCVjl4-F--8LpJWqn0ZSytNTX4Fswklno7GDuG3QUeo,17362
+airflow/providers/celery/version_compat.py,sha256=qfgjBWG1bTLpXDoekjyzHnAxMHbe1vXqccIz2vd5Wbo,1382
+airflow/providers/celery/cli/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/celery/cli/celery_command.py,sha256=Bu1RMBVeN2l65rVh7yZK6GAFf53ucDutTl5XnB5gu34,14018
+airflow/providers/celery/executors/__init__.py,sha256=3UTn2iQhScUA_JL7jIRdg5Ez_02PwzAzvcN_4qouJJ4,1495
+airflow/providers/celery/executors/celery_executor.py,sha256=imINmhOM5oiuaJ2l2cXn5J1i3QRxFzwj7fxkBrTwRS8,21426
+airflow/providers/celery/executors/celery_executor_utils.py,sha256=UrFxpS3UgXVKaqhjJWdb_BQoaSrATVQ8O0r2Ec_k6s8,16705
+airflow/providers/celery/executors/celery_kubernetes_executor.py,sha256=2qV5cZo3reZY_xPE3GVpaa-cERkBN5l17U-48qjc-vU,13399
+airflow/providers/celery/executors/default_celery.py,sha256=nGM-iv_lWTBl5pceekNz7y1wywhyy0lze2AXGs-VNwM,6519
+airflow/providers/celery/sensors/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/celery/sensors/celery_queue.py,sha256=ylEGfIlZXtgA6KQyfT6PTryDUKOjsWgrszuWTnh-76k,3148
+apache_airflow_providers_celery-3.12.4.dist-info/entry_points.txt,sha256=6pTQwd4uJUaMMdF0xfaUsZis-pwX9SwTf4Hedf5M-F0,102
+apache_airflow_providers_celery-3.12.4.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+apache_airflow_providers_celery-3.12.4.dist-info/METADATA,sha256=CrmvRhfdYcobABAiqJXAz4NWk7cQJkwmoSriaZj6Ejs,5527
+apache_airflow_providers_celery-3.12.4.dist-info/RECORD,,
