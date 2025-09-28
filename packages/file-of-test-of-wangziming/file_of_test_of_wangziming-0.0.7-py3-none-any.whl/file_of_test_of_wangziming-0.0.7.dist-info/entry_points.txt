@@ -1,0 +1,2 @@
+[console_scripts]
+file_of_test_of_wangziming = file_of_test_of_wangziming:main
