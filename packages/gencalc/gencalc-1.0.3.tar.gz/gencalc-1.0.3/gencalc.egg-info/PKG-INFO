@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: gencalc
+Version: 1.0.3
+Summary: A Python library to calculate the start and end of any new or old generation.
+Author: Niral Bhatt
+Author-email: niralbhatt@hotmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# NovaCodon Gencalc
+
+'gencalc' is a Python library for calculating the start and end year of any generation, by Niral Bhatt.
+
+## Installation
+
+To install, simply add the library to your Python project.
+
+```bash
+pip install gencalc
