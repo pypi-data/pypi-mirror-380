@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+automation_framework/__init__.py
+automation_framework.egg-info/PKG-INFO
+automation_framework.egg-info/SOURCES.txt
+automation_framework.egg-info/dependency_links.txt
+automation_framework.egg-info/top_level.txt
