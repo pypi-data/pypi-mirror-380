@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "PagodaAL"
+version = "0.1.0"
+description = "A ZeroMQ-based communication library."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name="JiajiaLi", email="jjli2024@niaot.ac.cn" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+# 声明项目依赖
+dependencies = [
+  "pyzmq>=25.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+# 告诉 Hatchling 去哪里找你的包
+# 这里的 "src/pagoda" 对应上面创建的目录结构
+packages = ["src/pagodaAL"]
+
+[project.urls]
+"Homepage" = "https://github.com/Pagoda-AlphaLee/Pagoda"
+"Bug Tracker" = "https://github.com/Pagoda-AlphaLee/Pagoda/issues"
