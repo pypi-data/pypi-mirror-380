@@ -1,0 +1,4 @@
+[console_scripts]
+stable-delusion=stable_delusion.main:main
+stable-delusion-generate=stable_delusion.generate:main
+
