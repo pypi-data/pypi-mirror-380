@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+lifespring/__init__.py
+lifespring/external.py
+lifespring/i18n.py
+lifespring/typing.py
+lifespring.egg-info/PKG-INFO
+lifespring.egg-info/SOURCES.txt
+lifespring.egg-info/dependency_links.txt
+lifespring.egg-info/requires.txt
+lifespring.egg-info/top_level.txt
+lifespring/locales/en_US/LC_MESSAGES/messages.mo
+lifespring/locales/zh_CN/LC_MESSAGES/messages.mo
+lifespring/miscellaneous/__init__.py
+lifespring/miscellaneous/hello.py
