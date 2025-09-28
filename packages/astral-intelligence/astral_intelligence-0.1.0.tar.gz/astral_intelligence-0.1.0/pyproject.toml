@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astral_intelligence"
+version = "0.1.0"
+description = "Astral AI Python Library"
+authors = [
+    {name = "Rith", email = "joar@strombackfamily.com"}
+]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.setuptools]
+packages = ["Astral"]  # explicitly include only your library

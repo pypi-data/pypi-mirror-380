@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: astral_intelligence
+Version: 0.1.0
+Summary: Astral AI Python Library
+Author-email: Rith <joar@strombackfamily.com>
+License-Expression: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+Welcome to Astral AI! To use it, import as:
+import Astral
+
+Have fun!
