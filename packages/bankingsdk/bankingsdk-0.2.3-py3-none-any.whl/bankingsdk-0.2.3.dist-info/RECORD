@@ -1,0 +1,9 @@
+bankingsdk/__init__.py,sha256=WFwhecsmOl4AjRbKEra5D3GIW5E7Q-NmFXCQukRNjfk,83
+bankingsdk/bank_client.py,sha256=mipG8ooZ0vuVfjUgnb8ca_EK5MYZAXv8zeYxXKzoD50,6893
+bankingsdk/bank_config.py,sha256=eiNPlbGwOsWYFqSflmcA7oBGrCM6Z0HftltE1VbN7d8,1724
+bankingsdk/schemas/__init__.py,sha256=Uw7X_IETLqi92Fchse6LYuCiqEqCJ6vrD3mvBUf8DBU,158
+bankingsdk/schemas/schemas.py,sha256=hPgkBZiC1m0GD1ZqRYF1tIhh3xogsKG3Wbc48-oCCl0,3373
+bankingsdk-0.2.3.dist-info/METADATA,sha256=3eMDgbjUJE17ekHv3ua-KAaqyjErL1NJkt2Mh9CZFEw,2635
+bankingsdk-0.2.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bankingsdk-0.2.3.dist-info/top_level.txt,sha256=D3OUmLnohhDI4GAzw5kGtbpNJrAJ-JBecp-cQW8nUFY,11
+bankingsdk-0.2.3.dist-info/RECORD,,
