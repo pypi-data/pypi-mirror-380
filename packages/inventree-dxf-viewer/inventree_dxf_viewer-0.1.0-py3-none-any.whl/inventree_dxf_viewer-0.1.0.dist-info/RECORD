@@ -1,0 +1,11 @@
+dxf_viewer/__init__.py,sha256=AamVBjEe3jzcFGrwK_0mC4sI1NjzOOLvT9k7BvLzj7E,50
+dxf_viewer/core.py,sha256=d4t9al4QQ_JWVuUF8cvS0Lf885GzpIF8MXUojMeAOrw,3019
+dxf_viewer/static/Panel.js,sha256=ui0pR3XP70I0njAdzHOKYrGEIo8V62SIBJPeaLCjNA8,145490
+dxf_viewer/static/Panel.js.map,sha256=B6N_kM1yLCIY9hdmF-xLuQajeqte1fv3UsogWjWr3As,587329
+dxf_viewer/static/.vite/manifest.json,sha256=0lvCgG_zhxDa0EwHilFc5lWR6Kny2-kpywIHR3hVvvo,121
+inventree_dxf_viewer-0.1.0.dist-info/licenses/LICENSE,sha256=hSGLlUjh5ohNoqHrd_5fpZunFJqpdBfrJz0wlvFqGEQ,1102
+inventree_dxf_viewer-0.1.0.dist-info/METADATA,sha256=4NsHq4Xx_6aFbH8dHUgX8gkhkbEOQhePg0IfPEIqTXc,1235
+inventree_dxf_viewer-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+inventree_dxf_viewer-0.1.0.dist-info/entry_points.txt,sha256=JCoLxm5X20txj3GRIQJS2UlSRDhdrO6trg4wo1J1bbA,58
+inventree_dxf_viewer-0.1.0.dist-info/top_level.txt,sha256=HvVbbij5_-nyJyjSHyqdjq9Fpgf_k1DVN-pgbNNvCP4,11
+inventree_dxf_viewer-0.1.0.dist-info/RECORD,,
