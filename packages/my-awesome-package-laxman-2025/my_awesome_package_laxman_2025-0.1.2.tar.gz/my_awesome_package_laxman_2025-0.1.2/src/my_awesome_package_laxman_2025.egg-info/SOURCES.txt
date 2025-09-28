@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/my_awesome_package/__init__.py
+src/my_awesome_package/main.py
+src/my_awesome_package_laxman_2025.egg-info/PKG-INFO
+src/my_awesome_package_laxman_2025.egg-info/SOURCES.txt
+src/my_awesome_package_laxman_2025.egg-info/dependency_links.txt
+src/my_awesome_package_laxman_2025.egg-info/top_level.txt
