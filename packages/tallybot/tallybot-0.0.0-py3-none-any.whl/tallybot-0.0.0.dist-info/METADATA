@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: tallybot
+Version: 0.0.0
+Summary: Tallybot is your helpfull accountant
+Author-email: Juris Kaminskis <juris@kolumbs.net>
+Project-URL: Repository, https://github.com/Kolumbs/tallybot
+Keywords: accountant,finance,bot,chatbot,budget,expenses,income
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.11.1
+Description-Content-Type: text/markdown
+
+# tallybot
+Chat assistant to keep track of your accounting. Able to answer on slack and email messages.
+
+## installation
+
+```bash
+pip install tallybot
+```
+
+## usage
+
+```bash
+python tallybot --help
+```
+
+### example of configuration
+
+```toml
+[slack]
+port = 8080
+signing_secret = "absdefg145%$"
+workspace_token = "xoxb-1234567890"
+
+[email]
+enabled = true
+
+[tallybot]
+name = "tallybot"
+database = "sqlite:///tallybot.db"
+```
