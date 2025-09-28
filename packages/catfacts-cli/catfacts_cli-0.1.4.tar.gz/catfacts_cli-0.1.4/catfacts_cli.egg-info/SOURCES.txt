@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+catfacts/__init__.py
+catfacts/cli.py
+catfacts_cli.egg-info/PKG-INFO
+catfacts_cli.egg-info/SOURCES.txt
+catfacts_cli.egg-info/dependency_links.txt
+catfacts_cli.egg-info/entry_points.txt
+catfacts_cli.egg-info/requires.txt
+catfacts_cli.egg-info/top_level.txt
