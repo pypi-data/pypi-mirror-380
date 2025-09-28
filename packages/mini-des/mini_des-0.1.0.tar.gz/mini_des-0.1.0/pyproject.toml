@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-des"
+version = "0.1.0"
+description = "A minimalist, agent-based discrete event simulation engine in Python."
+authors = [{ name = "littleqjy", email = "littleqjy@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/littleQiu22/minimalist-discrete-event-simulation-engine"
+
+[tool.setuptools.packages.find]
+where = ["src"]
