@@ -1,0 +1,2 @@
+[console_scripts]
+parakeet-dictation = parakeet_dictation.main:main

@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: parakeet-dictation
+Version: 0.1.3
+Summary: A dication tool powered by Parakeet
+License: MIT
+Requires-Python: <3.13,>=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: parakeet-mlx
+Requires-Dist: soundfile>=0.12
+Requires-Dist: audresample>=0.3
+Requires-Dist: numpy<2.3
+Requires-Dist: dacite>=1.8
+Requires-Dist: tqdm>=4.66
+Requires-Dist: pyaudio~=0.2.14
+Requires-Dist: pynput~=1.8.1
+Requires-Dist: rumps~=0.4.0
+Requires-Dist: numba>=0.61.2
+Requires-Dist: pyperclip~=1.9.0
+Requires-Dist: python-dotenv~=1.1.1
+Requires-Dist: pyobjc-framework-Cocoa~=11.1; platform_system == "Darwin"
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: license-file
+
+# Parakeet Dictation
+
+**TODO**
