@@ -1,0 +1,4 @@
+docassemble.base==1.8.16
+googledrivedownloader
+ics
+matplotlib
