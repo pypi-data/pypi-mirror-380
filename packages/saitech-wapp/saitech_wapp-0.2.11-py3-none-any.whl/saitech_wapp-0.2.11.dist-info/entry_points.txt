@@ -1,0 +1,4 @@
+[console_scripts]
+wapp = wapp.cli:cli
+wapp-export = wapp.cli_commands.export:command
+wapp-init = wapp.cli_commands.init:command
