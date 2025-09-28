@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=78.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bankingsdk"
+version = "0.2.1"
+description = "Software Development Kit (SDK) client pour l'API Credit Risk"
+readme = "README.md"
+requires-python = ">=3.11.8"
+
+authors = [
+  { name = "N'DOUBA MÔH-ADJONLIN", email = "ndoubajeanclaude@outlook.com" }
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "httpx>=0.28.1",
+  "pydantic>=2.11.9",
+  "backoff>=2.2.1",
+  "python-dotenv"
+]
