@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: django-hx
+Version: 0.1.1
+Summary: Tools for using Django with HTMX
+Author-email: "Erlend D. Handeland" <hanerlend@icloud.com>
+Requires-Python: >=3.11
+Requires-Dist: django-template-partials>=25.2
+Description-Content-Type: text/markdown
+
+# Django-HX
+
+Breaking changes may occur at any time.
+
+Make sure to pin a specific version.
+
+ ```toml
+ # pyproject.toml
+ [project]
+ dependencies = [
+     "django-hx==1.2.3", # Pinning to exact version 1.2.3
+     # ... other dependencies
+ ]
+ ```
