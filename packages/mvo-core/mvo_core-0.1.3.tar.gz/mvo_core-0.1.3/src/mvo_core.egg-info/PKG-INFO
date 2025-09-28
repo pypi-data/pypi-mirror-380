@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: mvo-core
+Version: 0.1.3
+Summary: Mortality Vector Optimization (MVO) algorithm for patient outcome prediction and evaluation
+Author-email: real853 <2511063@zju.edu.cn>
+Maintainer-email: real853 <2511063@zju.edu.cn>
+License: MIT
+Project-URL: Homepage, https://github.com/real853/mvo-core
+Project-URL: Documentation, https://mvo-core.readthedocs.io/
+Project-URL: Repository, https://github.com/real853/mvo-core
+Project-URL: Issues, https://github.com/real853/mvo-core/issues
+Project-URL: Changelog, https://github.com/real853/mvo-core/releases
+Project-URL: Examples, https://github.com/real853/mvo-core/tree/main/my_mvo/examples
+Keywords: mortality-prediction,medical-outcomes,vector-optimization,clinical-prediction,bioinformatics,healthcare-ai
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.txt
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: lifelines>=0.27.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.9; extra == "dev"
+Requires-Dist: mypy>=0.900; extra == "dev"
+Requires-Dist: pre-commit>=2.15; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.12; extra == "docs"
+Provides-Extra: examples
+Requires-Dist: matplotlib>=3.5.0; extra == "examples"
+Requires-Dist: seaborn>=0.11.0; extra == "examples"
+Requires-Dist: jupyter>=1.0.0; extra == "examples"
+Requires-Dist: notebook>=6.0.0; extra == "examples"
+Requires-Dist: ipykernel>=6.0.0; extra == "examples"
+Dynamic: license-file
+
+markdown
+# my_mvo
+
+A Python package for **Mortality Vector Optimization (MVO)** to predict patient outcomes using multi-stage vector optimization.
+
+## Features
+
+- **Feature Normalization**: Robust preprocessing of feature matrices
+- **Multi-stage Optimization**: Sequential vector optimization for improved prediction accuracy
+- **Comprehensive Evaluation**: Bootstrap-based assessment with multiple metrics:
+  - AUC (Area Under the ROC Curve)
+  - Brier Score
+  - C-index (Concordance Index)
+- **Probability Prediction**: Logistic regression-based outcome probability estimation
+- **Modular Design**: Flexible components for custom pipeline integration
+
+## Installation
+
+```bash
+pip install mvo-core
