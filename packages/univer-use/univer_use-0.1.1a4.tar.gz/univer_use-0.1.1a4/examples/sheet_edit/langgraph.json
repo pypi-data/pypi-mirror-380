@@ -1,0 +1,7 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+		"spreadsheet_act": "./entry.py:build_graph"
+    },
+    "env": ".env"
+}
