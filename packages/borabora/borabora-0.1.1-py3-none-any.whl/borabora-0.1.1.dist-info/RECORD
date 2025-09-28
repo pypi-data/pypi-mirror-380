@@ -1,0 +1,11 @@
+borabora-0.1.1.dist-info/licenses/LICENSE,sha256=yYw7nDwlDUo-no1iR7ALcEWLBasrJI_WgwgM17qp_C0,1074
+clai/__init__.py,sha256=CXRNzmEIbv4T0R-E6yoblRzekQdyj3Xrwtd-slMLyNA,203
+clai/config.py,sha256=IrhZAOAxgw5hFJyja06ONJcsqL2WIGqeRnLAGzDk-Ps,2003
+clai/gemini_client.py,sha256=qQv5HyIqd2vIdZ3QTB0_AsvAJm0fz2KopzSbLDiciNM,2927
+clai/groq_client.py,sha256=qQv5HyIqd2vIdZ3QTB0_AsvAJm0fz2KopzSbLDiciNM,2927
+clai/main.py,sha256=ZAhTL41AfZ56wgEPMAxWJtKTc8w2sjZlOcZwslUSowM,3064
+borabora-0.1.1.dist-info/METADATA,sha256=11P61zRbdCcx1Opda5I-CheLCBJPx065bhI0RP-CIIA,6098
+borabora-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+borabora-0.1.1.dist-info/entry_points.txt,sha256=s1CEaLcU-4gAaBniyDk1D8Fflzenlnw2E24n5Ydxi4o,44
+borabora-0.1.1.dist-info/top_level.txt,sha256=nzx9su-hb1BUzW8L7tj6Hr4pQC50hBDIj3QzaIrT0cY,5
+borabora-0.1.1.dist-info/RECORD,,

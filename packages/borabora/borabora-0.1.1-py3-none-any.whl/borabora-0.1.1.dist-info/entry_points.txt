@@ -1,0 +1,2 @@
+[console_scripts]
+borabora = clai.main:main
