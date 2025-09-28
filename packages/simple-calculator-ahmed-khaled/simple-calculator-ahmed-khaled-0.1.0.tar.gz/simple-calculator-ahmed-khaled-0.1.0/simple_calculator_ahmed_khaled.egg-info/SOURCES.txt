@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+simple_calculator_ahmed_khaled/__init__.py
+simple_calculator_ahmed_khaled/calculator.py
+simple_calculator_ahmed_khaled.egg-info/PKG-INFO
+simple_calculator_ahmed_khaled.egg-info/SOURCES.txt
+simple_calculator_ahmed_khaled.egg-info/dependency_links.txt
+simple_calculator_ahmed_khaled.egg-info/top_level.txt
