@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: tissuelab-sdk
+Version: 0.1.8
+Summary: TissueLab Python SDK - OS-aware imaging wrappers
+Home-page: https://github.com/zhihuanglab/TissueLab-SDK.git
+Author: TissueLab Team
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pillow~=11.0.0
+Requires-Dist: tifffile>=2023.0.0
+Requires-Dist: tiffslide
+Requires-Dist: pydicom>=2.3.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: nibabel>=5.2.0
+Requires-Dist: czifile>=2019.7.2; platform_system == "Windows"
+Requires-Dist: pylibCZIrw>=3.3.0; platform_system == "Windows"
+Requires-Dist: pywin32; platform_system == "Windows"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TissueLab-SDK
+TissueLab SDK
