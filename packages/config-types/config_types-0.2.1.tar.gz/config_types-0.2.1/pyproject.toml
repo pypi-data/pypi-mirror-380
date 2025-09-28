@@ -1,0 +1,24 @@
+[project]
+name = "config-types"
+version = "0.2.1"
+description = "Types for use with environment imported configurations"
+readme = "README.md"
+authors = [
+    { name = "Melvyn Sopacua", email = "2403540-melvyn-sopacua@users.noreply.gitlab.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+pydantic = [
+    "pydantic-settings>=2.11.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pydantic-settings>=2.11.0",
+]
