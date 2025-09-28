@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: estimatePDF
+Version: 0.1.0
+Summary: Probability Density Function Estimation Library
+Home-page: https://github.com/ShanSarkar75/estimatePDF
+Author: Shantanu Sarkar
+Author-email: Shantanu Sarkar <shantanu75@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ShanSarkar75/estimatePDF
+Project-URL: Documentation, https://github.com/ShanSarkar75/estimatePDF#readme
+Project-URL: Repository, https://github.com/ShanSarkar75/estimatePDF
+Project-URL: BugTracker, https://github.com/ShanSarkar75/estimatePDF/issues
+Keywords: PDF,probability density,statistics,Python,data science
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: tensorflow
+
+# estimatePDF
+
+**A Python library for Probability Density Function (PDF) estimation using Kernel Density, Histogram Density, and Dual Polynomial Regression.**
+
+---
+
+## Overview
+
+`estimatePDF` estimatePDF is a Python package for probability density function (PDF) estimation and sampling. It provides computationally efficient, GPU-optimized implementations using TensorFlow along with custom polynomial regression methods designed to capture asymmetry in distributions.
+
+---
+
+## Features
+
+- **Density Estimation**
+  - SciPy Gaussian KDE
+  - TensorFlow-based KDE (for graph execution)
+  - Histogram Density Estimation (HDE)
+
+- **Probability Density Functions**
+  - Gaussian PDF
+  - Asymmetric Laplace PDF & sampling
+  - M-Wright functions and variants
+  - Inverse Transform Sampling
+
+- **Dual Polynomial Regression (DPR)**
+  - Piecewise polynomial PDF approximation
+  - Gradient-based threshold detection
+  - Fits multimodal or skewed PDFs
+
+---
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install estimatePDF

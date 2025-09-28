@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "estimatePDF"
+version = "0.1.0"
+description = "Probability Density Function Estimation Library"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Shantanu Sarkar", email = "shantanu75@gmail.com"}
+]
+keywords = ["PDF", "probability density", "statistics", "Python", "data science"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "tensorflow"
+]
+
+[project.urls]
+Homepage = "https://github.com/ShanSarkar75/estimatePDF"
+Documentation = "https://github.com/ShanSarkar75/estimatePDF#readme"
+Repository = "https://github.com/ShanSarkar75/estimatePDF"
+BugTracker = "https://github.com/ShanSarkar75/estimatePDF/issues"

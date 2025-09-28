@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+estimatePDF/DensityEstimate.py
+estimatePDF/DualPolyRegPDF.py
+estimatePDF/ProbabilityDensityFunction.py
+estimatePDF/__init__.py
+estimatePDF.egg-info/PKG-INFO
+estimatePDF.egg-info/SOURCES.txt
+estimatePDF.egg-info/dependency_links.txt
+estimatePDF.egg-info/requires.txt
+estimatePDF.egg-info/top_level.txt
