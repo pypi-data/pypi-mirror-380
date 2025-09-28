@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "django-apiblueprint-view"
+version = "3.0.0"
+description = "Render API Blueprints on-the-fly using Django templates"
+authors = ["chris48s"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/chris48s/django-apiblueprint-view"
+homepage = "https://github.com/chris48s/django-apiblueprint-view"
+classifiers = [
+    "Framework :: Django",
+]
+include = [
+    { path = "apiblueprint_view/templates/**", format = ["sdist", "wheel"] },
+    { path = "apiblueprint_view/lib/libdrafter.so", format = ["sdist", "wheel"] },
+]
+exclude = ["apiblueprint_view/tests/**"]
+packages = [ {include = "apiblueprint_view"} ]
+build = "build.py"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+Django = ">=4.2"
+markdown2 = ">=2.3.9"
+cffi = "^2.0.0"
+refract = "==0.4.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.11"
+flake8 = "^7.1.2"
+black = "==24.3.0"
+coverage = "^7.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
