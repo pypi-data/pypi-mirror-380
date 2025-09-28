@@ -1,0 +1,10 @@
+tptt/__init__.py,sha256=wcSxHLiN36m9haUM81MZCKL0kp3YTNMVNrgsz-iZNLs,799
+tptt/configuration_tptt.py,sha256=-2XjkMB4lV-AQ4gjuJu8QxCjqlolASQ_C3e3aRhLnpY,10963
+tptt/modeling_tptt.py,sha256=sW1SBpfevxiJuc94wTKRb62SRgIZT9ILFKL__JO9S9s,65870
+tptt/templates/home_card_template.md,sha256=QlUJGc0djQmdxJPbxrPFb2OIJ7WSpk6mr73f8Uw-1IQ,3176
+tptt/templates/model_card_template.md,sha256=Fsu8UynRzr6nm4M3MQbnSansQbp1YFmFhVQLfiBUR3I,3043
+tptt/train_tptt.py,sha256=gx4Hg4jZiJzgJRaKKZqZwqwnVD3ajVL9sT3K6y-cS_U,5861
+tptt-0.12.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tptt-0.12.1.dist-info/METADATA,sha256=3b0hwR-LkiA9bz5LNz3vmpHBorv0B6lOrMGISI_yLSQ,6116
+tptt-0.12.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+tptt-0.12.1.dist-info/RECORD,,
