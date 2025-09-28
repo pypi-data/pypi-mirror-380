@@ -1,0 +1,13 @@
+physai/__init__.py,sha256=FrvSe4-UPuJLaQQ4NnysW4XcNE2EE62RhS5dW8qxBr0,147
+physai/losses.py,sha256=ggQLiRr9GtaItoGVUFiTft2KS5tdGwRexdTbGvNHl28,2476
+physai/pde_residual.py,sha256=nUoEknSMRS8OQ9WyMSPddsxWZblUp_U6I4jcoAiR_yg,7319
+physai/physics.py,sha256=kE8Y3NPxuy7H731UB7t6DxghB758kpkmhkrNK2gdOis,2456
+physai/pinn.py,sha256=fz73puZRWMZG0zYSJj1fGHfoYGU6XVt62RzXcBTVANA,4006
+physai/trainer.py,sha256=dx38eXZ_51a2EJCmZNoxpVIiDlhLDvl5gcmJrEed8g0,3835
+physai/utils.py,sha256=gbYIH3nofds3u8iRauooTWeHVHi-2URddT7BkAaT0DE,84
+physai/visualization.py,sha256=Ecum1QPpl0c1OG5aHZigxl5Gn2S7OIIkXFmpO522Pug,5726
+physai-2.5.8.dist-info/licenses/LICENSE,sha256=SktfkGII7fruHKmaL3tPPSwf8QF2w0Zs7j7-N4zxhTQ,4592
+physai-2.5.8.dist-info/METADATA,sha256=MKJil_cmQraLMHWpSCsNnzCUR7az6r6CG8gTBConE4I,12910
+physai-2.5.8.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+physai-2.5.8.dist-info/top_level.txt,sha256=XasGUSPQXLDNo4l-dunwoQqXio1B878qCFcNao4GFqY,7
+physai-2.5.8.dist-info/RECORD,,
