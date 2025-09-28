@@ -1,0 +1,8 @@
+fastapi_reloader-1.2.1.dist-info/METADATA,sha256=6zo0A2A0mHvuK2wTyuv6VUMBf795MrYB3d4rL6ROwmE,2270
+fastapi_reloader-1.2.1.dist-info/WHEEL,sha256=pz1FfwQ2kf9tI4G8U2ObRTKdvsTSmrreuBTtdnO8pJw,94
+fastapi_reloader-1.2.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+fastapi_reloader/__init__.py,sha256=VE5m-0M92Weme8COqLs0LwIx5g6FHhqyOLGAgY6Zkzs,145
+fastapi_reloader/core.py,sha256=lrfBJoavB2sDzkvN5UyWV91Xm69iLCuigg7pzKKVGfc,1547
+fastapi_reloader/patcher.py,sha256=pwomRoZUbWth2SA5L7zEQsAy4qBuepnOYyOqCnqig2Y,1909
+fastapi_reloader/runtime.js,sha256=H9SCpyGpBUmfvcdlzpU4RXnIBCYSQwIqXZ7jd1bdtSo,743
+fastapi_reloader-1.2.1.dist-info/RECORD,,
