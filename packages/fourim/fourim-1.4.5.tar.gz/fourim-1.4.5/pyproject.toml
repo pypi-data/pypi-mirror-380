@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fourim"
+dynamic = ["version"]
+description = "A tool for visualization of diverse fourier transformations."
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+keywords = ["astronomy", "interferometry", "visualisation", "fourier"]
+authors = [
+	{name = "Marten Scheuck", email = "martenscheuck@gmail.com"}
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+	"Framework :: Sphinx",
+	"License :: OSI Approved :: MIT License",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.10",
+	"Topic :: Scientific/Engineering :: Astronomy",
+	"Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "astropy>=5.1",
+  "astroquery >= 0.4.6",
+  "pandas>=1.5.2",
+  "matplotlib>=3.5.3",
+  "numpy>=1.23.2",
+  "scipy>=1.9.1",
+  "tqdm>=4.64.0",
+  "pyside6>=6.8.1.1",
+  "toml>=0.10.2",
+  "pyyaml>=6.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ipython",
+  "pytest >= 7.2.1",
+  "pytest-cov >= 4.0.0",
+  "sphinx == 7.0.1",
+  "sphinx-autobuild == 2021.3.14",
+  "sphinx-autodoc-typehints == 1.23",
+  "pydata-sphinx-theme==0.13.3",
+  "numpydoc==1.5.0",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "fourim.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["fourim*"]
+
+[project.urls]
+repository = "https://github.com/MBSck/fourim"
+
+[project.entry-points.console_scripts]
+fourim = "fourim.main:main"

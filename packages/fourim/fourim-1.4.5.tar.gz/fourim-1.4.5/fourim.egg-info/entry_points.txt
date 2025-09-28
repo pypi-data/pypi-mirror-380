@@ -1,0 +1,2 @@
+[console_scripts]
+fourim = fourim.main:main
