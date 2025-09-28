@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: primarch
+Version: 0.1.0
+Summary: prediction metrics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Dist: paradigm-absorb
+Requires-Dist: plotly>=6.3.0
+Requires-Dist: polars>=1.33.1
+Requires-Dist: toolstr>=0.9.11
+Requires-Dist: tooltree
+Project-URL: Documentation, https://github.com/paradigmxyz/primarch
+Project-URL: Source, https://github.com/paradigmxyz/primarch
+
+
+# primarch
+
+functions for collecting and analyzing prediction market data
+
