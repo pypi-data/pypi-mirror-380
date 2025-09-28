@@ -1,0 +1,2 @@
+[console_scripts]
+wapp-init = wapp.cli:wapp_init
