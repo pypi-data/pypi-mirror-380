@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: mocktrics-exporter
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion }}
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/name: mocktrics-exporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: mocktrics-exporter
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/version: {{ .Chart.AppVersion }}
+        app.kubernetes.io/managed-by: Helm
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configMap.yaml") . | sha256sum }}
+    spec:
+      {{- if .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml .Values.nodeSelector | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: {{ .Release.Name }}
+        image: {{ .Values.image.name }}:{{ default .Chart.AppVersion .Values.image.tag }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http-api
+          containerPort: 8080
+          protocol: TCP
+        - name: http-metrics
+          containerPort: 8000
+          protocol: TCP
+        {{- with .Values.livenessProbe }}
+        {{- if .enabled }}
+        livenessProbe:
+          httpGet:
+            path: {{ default "/healthz" .path }}
+            port: {{ default 8080 .port }}
+            scheme: {{ default "HTTP" .scheme }}
+          initialDelaySeconds: {{ default 5 .initialDelaySeconds }}
+          periodSeconds: {{ default 10 .periodSeconds }}
+          timeoutSeconds: {{ default 2 .timeoutSeconds }}
+          failureThreshold: {{ default 3 .failureThreshold }}
+          successThreshold: {{ default 1 .successThreshold }}
+        {{- end }}
+        {{- end }}
+        {{- with .Values.readinessProbe }}
+        {{- if .enabled }}
+        readinessProbe:
+          httpGet:
+            path: {{ default "/healthz" .path }}
+            port: {{ default 8080 .port }}
+            scheme: {{ default "HTTP" .scheme }}
+          initialDelaySeconds: {{ default 2 .initialDelaySeconds }}
+          periodSeconds: {{ default 10 .periodSeconds }}
+          timeoutSeconds: {{ default 2 .timeoutSeconds }}
+          failureThreshold: {{ default 3 .failureThreshold }}
+          successThreshold: {{ default 1 .successThreshold }}
+        {{- end }}
+        {{- end }}
+        volumeMounts:
+        - name: config
+          mountPath: /opt/mocktrics-exporter/config.yaml
+          subPath: config
+        resources:
+          {{- .Values.resources | toYaml | nindent 10 }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: ["ALL"]
+      {{- if and (hasKey .Values "tolerations") (gt (len .Values.tolerations) 0) }}
+      tolerations:
+      {{- .Values.tolerations | toYaml | nindent 8 }}
+      {{- end }}
+      volumes:
+      - name: config
+        configMap:
+          name: {{ .Release.Name }}
