@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+aek_lregr_trainer/__init__.py
+aek_lregr_trainer.egg-info/PKG-INFO
+aek_lregr_trainer.egg-info/SOURCES.txt
+aek_lregr_trainer.egg-info/dependency_links.txt
+aek_lregr_trainer.egg-info/requires.txt
+aek_lregr_trainer.egg-info/top_level.txt
