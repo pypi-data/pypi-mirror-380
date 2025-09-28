@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+src/simple_googesheet_interface/__init__.py
+src/simple_googlesheet_interface.egg-info/PKG-INFO
+src/simple_googlesheet_interface.egg-info/SOURCES.txt
+src/simple_googlesheet_interface.egg-info/dependency_links.txt
+src/simple_googlesheet_interface.egg-info/requires.txt
+src/simple_googlesheet_interface.egg-info/top_level.txt
+test/test_process.py
