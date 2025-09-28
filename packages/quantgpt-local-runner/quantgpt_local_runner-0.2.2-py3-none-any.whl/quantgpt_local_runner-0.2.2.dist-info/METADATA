@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: quantgpt-local-runner
+Version: 0.2.2
+Summary: Local runner for QuantGPT with WebSocket support
+Author-email: Bailey <bailey@justright.pl>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi~=0.115.4
+Requires-Dist: uvicorn~=0.31.0
+Requires-Dist: typer~=0.11.0
+Requires-Dist: termcolor~=2.4.0
+
+QuantGPT Local Runner
+=====================
+
+Local WebSocket-capable runner for QuantGPT experiments.
+
+Usage
+-----
+
+```bash
+pip install quantgpt-local-runner
+quantgpt-run-local --port 8000 --host 0.0.0.0 --log-level debug
+```
+
+WebSocket
+---------
+
+- Endpoint: `/ws`
+- Send JSON with a `code` field containing Python to execute.
+
+Example message:
+
+```json
+{"code": "print('hello world')"}
+```
+
+Response:
+
+```json
+{"status":"completed","content":"hello world\n","timestamp":"..."}
+```
+
+Notes
+-----
+
+- If available, `numpy`, `pandas`, and `vectorbtpro` are imported into the execution namespace as `np`, `pd`, and `vbt`.
+
