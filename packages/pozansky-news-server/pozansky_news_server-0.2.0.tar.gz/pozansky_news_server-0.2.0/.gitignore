@@ -1,0 +1,7 @@
+# 创建 .gitignore 文件
+echo ".idea/" > .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo ".env" >> .gitignore
+echo "venv/" >> .gitignore
+echo ".venv/" >> .gitignore
