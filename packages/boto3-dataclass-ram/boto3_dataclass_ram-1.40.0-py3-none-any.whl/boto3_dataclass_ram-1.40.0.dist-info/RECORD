@@ -1,0 +1,7 @@
+boto3_dataclass_ram/__init__.py,sha256=wOXjXKbZ3QgzkgK0FDtYxpEASmR7oBsYiZRMR5g-yig,100
+boto3_dataclass_ram/caster.py,sha256=_ZFvrPqawmXkSdV3EXBKH886zOCJnpYRAjNxMEFEAUs,7667
+boto3_dataclass_ram/type_defs.py,sha256=2sqltegz6PhJdxlIRbf0jPKfxCPArbesZBd9pvJ69kk,90934
+boto3_dataclass_ram-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_ram-1.40.0.dist-info/METADATA,sha256=5yEJcx_jjcsXhAzN-3Iqst6k_pNlfsDQl7-zNhNLAkU,1655
+boto3_dataclass_ram-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_ram-1.40.0.dist-info/RECORD,,
