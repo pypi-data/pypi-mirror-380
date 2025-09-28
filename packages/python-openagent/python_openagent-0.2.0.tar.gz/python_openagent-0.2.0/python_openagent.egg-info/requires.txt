@@ -1,0 +1,6 @@
+litellm>=1.77.4
+matplotlib>=3.10.6
+networkx>=3.5
+openai>=1.109.1
+pydantic>=2.11.9
+pydantic-settings>=2.11.0
