@@ -1,0 +1,2 @@
+[console_scripts]
+pmk = prosemark.cli:main
