@@ -1,0 +1,2 @@
+epam.indigo
+colorama>=0.4.6
