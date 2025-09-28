@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aiuml"
+version = "0.0.0a0"
+description = "Reserved package name for AIUML (planning pre-release)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Jeremy Cottell" }]
+maintainers = [{ name = "AIUML Project", email = "team@aiuml.org" }]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Documentation",
+  "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://aiuml.org"
+Documentation = "https://aiuml.org"
+Source = "https://aiuml.org"
+Issues = "https://aiuml.org"
+
+[project.scripts]
+aiuml = "aiuml.cli:main"
+
+[tool.hatch.build]
+include = [
+  "src/aiuml/**",
+  "README.md",
+  "LICENSE",
+]
+exclude = [
+  "src/aiuml/spec/**",
+]
