@@ -1,0 +1,7 @@
+boto3_dataclass_marketplace_entitlement/__init__.py,sha256=I1-xay5_D9dAps7lHBFu1WM79-bka8Wh4mtDoB2thGg,140
+boto3_dataclass_marketplace_entitlement/caster.py,sha256=T6FvW-9BFjZQvOEmQTD5VUebrJuN0oLtlA4fGs9sdBE,484
+boto3_dataclass_marketplace_entitlement/type_defs.py,sha256=KfFq-JMUVP_v8XT9qb_Hv5SHRIO9xEt0lGcS6NvoDKw,6873
+boto3_dataclass_marketplace_entitlement-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_marketplace_entitlement-1.40.0.dist-info/METADATA,sha256=cpDaxms8k-mYzun_m5UQlY5F-weSY2mooqx7xlbiNQE,1795
+boto3_dataclass_marketplace_entitlement-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_marketplace_entitlement-1.40.0.dist-info/RECORD,,
