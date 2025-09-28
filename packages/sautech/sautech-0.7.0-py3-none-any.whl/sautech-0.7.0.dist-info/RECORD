@@ -1,0 +1,13 @@
+sautech/__init__.py,sha256=uF0HHgnikfe7h3hvQdhXBKSn9Zbqr9l29gj4pXyrVyA,44
+sautech/stt/__init__.py,sha256=PKSCIDA659P2WwEa1xuC7xjGgNynWw6REOHwgbe2FsQ,609
+sautech/stt/constants.py,sha256=EePVwxsGsg5sKDfvzNx7cupi4y3HMP3MJy9zyyxPlQA,1154
+sautech/stt/protocol.py,sha256=CKqEM9zLT4km_78-_EMHAVXJTp2FUcdQvV1QM6b5GHg,446
+sautech/stt/types.py,sha256=LtT3Yi5Byv0qL0KZVvAyQ47DiwPP561DR9iGkKoDxJk,2193
+sautech/stt/fasttranscription/__init__.py,sha256=up0Dh0eDzfhYZ6fmf_4prR8obdDH-OX3ez2HD6fp8fY,83
+sautech/stt/fasttranscription/client.py,sha256=bXcPjC1jWU_tGbiKLEouRU-RoAXWcmWWC-Lk_5yiytM,9564
+sautech/stt/realtime/__init__.py,sha256=kdv8Ahi-WL02UwLZ4yb25ZuCRN3yUYqxYuokWu16sJA,66
+sautech/stt/realtime/client.py,sha256=J2HYFp2DNDv2GgMZIWLlpgYevjcUgQd8MEvdiq-moYY,6333
+sautech-0.7.0.dist-info/METADATA,sha256=DZo3xA4gQhwXauHq0niVyElUxPIVRaDfHMIXYvV3vP8,355
+sautech-0.7.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sautech-0.7.0.dist-info/top_level.txt,sha256=h78DAW0pgM2exnmEhXxAld-zjfXcMyCgTreNUiwkcwY,8
+sautech-0.7.0.dist-info/RECORD,,
