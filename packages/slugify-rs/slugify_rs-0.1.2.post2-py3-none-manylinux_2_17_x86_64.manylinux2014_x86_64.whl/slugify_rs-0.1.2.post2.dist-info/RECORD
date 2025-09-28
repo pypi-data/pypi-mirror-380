@@ -1,0 +1,6 @@
+slugify_rs-0.1.2.post2.dist-info/METADATA,sha256=TqMOTZYvYTb5SyI0uEFBC6tCvANnPMB6YdzjVVRvLpA,6493
+slugify_rs-0.1.2.post2.dist-info/WHEEL,sha256=P8VMqD7VSVn5Fru62JBo2qWYx-Uqw0IyokwgCSv1OjI,126
+slugify_rs/__init__.py,sha256=Xjt6bb7mrASEMn6Y7HhwsWfVmziPxeNak-NYoyckGF8,143
+slugify_rs/ffi.py,sha256=l_i047dsYP8cOaqoz7oL9iajRvokRLdvFCPAGLcEz-U,118
+slugify_rs/libslugify_rs.so,sha256=WfKZvxP7VHKEj1RnAC0fnh1G9Pux8tMDalhBo8TrJUk,15544
+slugify_rs-0.1.2.post2.dist-info/RECORD,,
