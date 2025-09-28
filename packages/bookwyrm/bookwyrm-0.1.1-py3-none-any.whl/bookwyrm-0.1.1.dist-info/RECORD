@@ -1,0 +1,11 @@
+bookwyrm/__init__.py,sha256=vFr5AeS8rIdmPAlhD_RECK0drBl86O7VNC2xMaoVNQE,1696
+bookwyrm/async_client.py,sha256=Q0ir-a5GQ3FxaCVIyBaGcXQJRwms4FhzGc7tG6AMzyo,12859
+bookwyrm/cli.py,sha256=g20tmcY5BTB3AK5cM0kqRVxNpiBg_VqQGm-SbM8U59Q,45626
+bookwyrm/client.py,sha256=9NzuXVvqCgj2vPtR2w9y4blxZEMAOhPZRVAHiAO23nU,12896
+bookwyrm/main.py,sha256=fGcy2vcC5FGi3Cmbra830ZN8YId9W_luXcBT0xYr4Uc,205
+bookwyrm/models.py,sha256=vwlso2W2Effjz0RZAEHGjIrhs8j6vJ6y_stiB-HlNAU,9945
+bookwyrm-0.1.1.dist-info/METADATA,sha256=KePZbWRNnKXjb6KRQbWdUeEn_4CG0aDbGgxpGuNcCEQ,25831
+bookwyrm-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bookwyrm-0.1.1.dist-info/entry_points.txt,sha256=rmYB-MGJ4D5q0NHu4mmLVy7ruKLYVMu1gkSvAB3yuvg,127
+bookwyrm-0.1.1.dist-info/licenses/LICENSE,sha256=tivkQTosoqPwlKUe6212nU8C44uNQ0BLrYo5zIWo3Wk,11346
+bookwyrm-0.1.1.dist-info/RECORD,,
