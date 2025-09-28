@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: image-processing-yasmim
+Version: 0.0.3
+Summary: Image Processing Package using skimage
+Home-page: https://github.com/Yasmim/image-processing-yasmim
+Author: Yasmim
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# image processing
+
+**DescriÃ§Ã£o.**
+O pacote `image processing` Ã© usado para:
+* Histrogram matching
+* Structural similarity
+* Resize image
+
+**UtilitÃ¡rios:**
+* Read image
+* Save image
+* Plot image
+* Plot result
+* Plot histogram
+
+**InstalaÃ§Ã£o**
+Use o gerenciador de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar o pacote:
+
+```bash
+pip install image-processing-yasmim
+
+
+
