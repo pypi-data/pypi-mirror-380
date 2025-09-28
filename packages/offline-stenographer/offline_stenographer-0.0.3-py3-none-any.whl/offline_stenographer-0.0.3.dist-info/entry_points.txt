@@ -1,0 +1,3 @@
+[console_scripts]
+offline-stenographer=offline_stenographer.main:main
+
