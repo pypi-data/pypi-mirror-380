@@ -1,0 +1,12 @@
+lifespring/__init__.py,sha256=70rPTEapubvYjDsS_xUrQHDid8yQ2qBynbulwUyFmAw,126
+lifespring/external.py,sha256=hEunWMMu_okjj3H934LQU3O-R_mJ6X071EzbLRKyO2s,399
+lifespring/i18n.py,sha256=ZEEFC1_mruhWgf8N9dc_JwuYKOAqY7MQSYhtTJ83djA,1630
+lifespring/typing.py,sha256=uMAoxJ-XpsoEZ6A6jPbJw-pduGwU2SLJiKNO6wEF8_g,386
+lifespring/locales/en_US/LC_MESSAGES/messages.mo,sha256=5nqVqRkoDC60d53NTJmQSPRuvLpXt31DWSzgWkSJ76Q,1854
+lifespring/locales/zh_CN/LC_MESSAGES/messages.mo,sha256=vkn5-FrYbHFWxhkCwI1nESD8FPhLg31eTR_BviXl-Kk,1843
+lifespring/miscellaneous/__init__.py,sha256=Mv5Esn43PZ7kNEIVh7rNYLSsEsV4frWR00xy9OYUaFo,120
+lifespring/miscellaneous/hello.py,sha256=7EZC6m89DqfSZ58aTUd50vswYjXkPHN_UMYz6pPJDXk,272
+lifespring-0.0.0.1.dist-info/METADATA,sha256=-S9Iu8_kYfWakR_z5Q6TpcaDwY98l6BZV1YbXDELKEM,258
+lifespring-0.0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+lifespring-0.0.0.1.dist-info/top_level.txt,sha256=ZNdvBg5GSZ21Nwmu5P-vJUuJIYnkyNGtd4W8BxQKepc,11
+lifespring-0.0.0.1.dist-info/RECORD,,
