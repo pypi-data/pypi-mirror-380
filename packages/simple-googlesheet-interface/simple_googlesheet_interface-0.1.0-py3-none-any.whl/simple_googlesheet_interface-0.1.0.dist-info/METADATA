@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: simple_googlesheet_interface
+Version: 0.1.0
+Summary: simple_gsheet_interface: Module to work with the most simple version with Google Sheets: READ, WRITE and CLEAR data from an existing spreadsheet of Google
+Home-page: https://github.com/R-Rijnbeek/simple_googlesheet_interface
+Author: Robert Rijnbeek
+Author-email: robert270384@gmail.com
+Project-URL: Bug Tracker, https://github.com/R-Rijnbeek/simple_googlesheet_interface/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: google-auth-httplib2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PY_GoogleDriveBridge
+Test proyect to start with Google drive api
