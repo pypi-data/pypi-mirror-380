@@ -1,0 +1,7 @@
+boto3_dataclass_qconnect/__init__.py,sha256=vl1kY4QU_uKKCtZVCSHE2oeeuTe03C2ISbZ_hIq9QdA,110
+boto3_dataclass_qconnect/caster.py,sha256=O8pF9-05b731Rmt2MzMmz74GZlxPOQ0YGyB661QP0dc,15176
+boto3_dataclass_qconnect/type_defs.py,sha256=x04NONbX1gzKCP0sPft-32ZCYAZfS_h7wRGKoJ8Ipw0,391786
+boto3_dataclass_qconnect-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_qconnect-1.40.0.dist-info/METADATA,sha256=sAYWMoB2zbNKEamDDjCBQXFLMHo_PHVZEHNBEQsh7rE,1690
+boto3_dataclass_qconnect-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_qconnect-1.40.0.dist-info/RECORD,,
