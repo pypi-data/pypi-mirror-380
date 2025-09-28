@@ -1,0 +1,25 @@
+[project]
+name = "usfiscaldata"
+version = "0.1.0"
+description = "Client for US Treasury Fiscal Data API"
+authors = [{ name = "Christopher Doyle"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests>=2.0,<3"]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/christopherdoyle/usfiscaldata"
+Issues = "https://github.com/christopherdoyle/usfiscaldata/issues"
+
+[dependency-groups]
+test = [
+    "pytest>=6.0,<7",
+    "requests-mock~=1.12",
+    "pandas>=1.0,<3",
+]
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
