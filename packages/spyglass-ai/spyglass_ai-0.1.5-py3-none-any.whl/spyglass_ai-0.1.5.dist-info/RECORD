@@ -1,0 +1,10 @@
+spyglass_ai/__init__.py,sha256=2Vz3mSqPk2mjLU0LU2WOVOLezcXESuSffjUN8cpCBCM,754
+spyglass_ai/langchain_aws.py,sha256=i3IM4aYwqjx_npDFgx_6pNzSQ-GTOhgGshLgH4F32mU,11996
+spyglass_ai/mcp_tools.py,sha256=RpwJ4bzKsWdkoXS3eA6hHyNqLXbkvokvxlfvEKJy9mI,16320
+spyglass_ai/openai.py,sha256=Prlj3v21uHTmPLYHkEB1zMmA_rRbSsc86NJpFSkOG4Q,8928
+spyglass_ai/otel.py,sha256=GieDfnh4cFVNvDnWdvZIp4U_SrcUCeo69sYfFb1w3Ug,2977
+spyglass_ai/trace.py,sha256=mPLz0t5n81oZ8t5HbuWejzpQZknTd1Ww33eBDu9I8HE,4321
+spyglass_ai-0.1.5.dist-info/METADATA,sha256=Sw1IkNDzkK43GLn-ZUGs09qCi2ShT7FIIDvldVHjONY,5730
+spyglass_ai-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spyglass_ai-0.1.5.dist-info/licenses/LICENSE,sha256=QbFF5kvDnU9gKpcdJzuD5A7NmlO2EhGDm3D9EaxMrdw,1068
+spyglass_ai-0.1.5.dist-info/RECORD,,
