@@ -1,0 +1,7 @@
+boto3_dataclass_wellarchitected/__init__.py,sha256=dyxqjbXvlkDU2-lS2cTZ6xAJa2RKqlgQ72c6dVVDq5M,124
+boto3_dataclass_wellarchitected/caster.py,sha256=Ro8KUHEXUnBu0etcZFjNZMHf6R0joOWVjLxz2EAlld8,13998
+boto3_dataclass_wellarchitected/type_defs.py,sha256=PdPRA7vgNjqjTnVPHAJJjT_PJij--rWYCX8K7xHMHS0,190517
+boto3_dataclass_wellarchitected-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_wellarchitected-1.40.0.dist-info/METADATA,sha256=X2gpcJSOCi20YfWGXSF0qoUV311keI0dNUgtcvB2xko,1739
+boto3_dataclass_wellarchitected-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_wellarchitected-1.40.0.dist-info/RECORD,,
