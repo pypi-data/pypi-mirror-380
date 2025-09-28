@@ -1,0 +1,5 @@
+SQLAlchemy>=2.0.38
+fastapi>=0.115.8
+httpx>=0.28.1
+python-jose>=3.4.0
+redis>=5.2.1aiomysql>=0.2.0
