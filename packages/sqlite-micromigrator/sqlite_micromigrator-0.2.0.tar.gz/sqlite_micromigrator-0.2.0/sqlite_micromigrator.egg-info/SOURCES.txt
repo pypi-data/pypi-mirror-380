@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+pyproject.toml
+sqlite_micromigrator/__init__.py
+sqlite_micromigrator.egg-info/PKG-INFO
+sqlite_micromigrator.egg-info/SOURCES.txt
+sqlite_micromigrator.egg-info/dependency_links.txt
+sqlite_micromigrator.egg-info/top_level.txt
