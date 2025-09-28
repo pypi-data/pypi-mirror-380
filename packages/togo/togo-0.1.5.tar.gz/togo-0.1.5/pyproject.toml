@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+  "setuptools>=61",
+  "wheel",
+  "Cython>=3.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "togo"
+version = "0.1.5"
+description = "Lightweight Python bindings for the TG geometry library"
+readme = "README.md"
+authors = [
+  {name = "Giorgio Salluzzo", email = "giorgio.salluzzo@gmail.com"}
+]
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: C",
+  "Operating System :: POSIX :: Linux",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: GIS"
+]
+dynamic = ["license"]
+
+[project.urls]
+Homepage = "https://github.com/mindflayer/togo"
+Source = "https://github.com/mindflayer/togo"
+Tracker = "https://github.com/mindflayer/togo/issues"
+
+[tool.pytest.ini_options]
+addopts = "-v -x -q"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.cython-lint]
+max-line-length = 100
+
+[tool.cibuildwheel]
+#skip = ["*-musllinux_*"]
+build-verbosity = 1
+before-build = "bash tools/prepare_vendor.sh"
+# Compute platform ID from CIBW_BUILD and point LD_LIBRARY_PATH at the right vendor dir for repair
+repair-wheel-command = "PLATFORM_ID=$(echo \"$CIBW_BUILD\" | cut -d- -f2-); LD_LIBRARY_PATH=/project/vendor/geos/${PLATFORM_ID}/lib auditwheel repair -w {dest_dir} {wheel}"

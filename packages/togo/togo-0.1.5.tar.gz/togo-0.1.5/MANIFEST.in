@@ -1,0 +1,4 @@
+graft vendor
+include *.pyx
+include *.c
+include *.h
