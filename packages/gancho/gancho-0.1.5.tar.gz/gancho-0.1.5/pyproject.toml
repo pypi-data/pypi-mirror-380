@@ -1,0 +1,26 @@
+[project]
+name = "gancho"
+version = "0.1.5"
+description = "Gancho receives webhooks and triggers actions in response."
+keywords = ["webhooks", "automation", "http"]
+license = { text = "AGPL-3.0" }
+readme = "README.md"
+authors = [
+    { name = "Bruno Rocha", email = "rochacbruno@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.117.1",
+    "httpx>=0.28.1",
+    "uvicorn[standard]>=0.37.0",
+]
+
+[project.scripts]
+gancho = "gancho:main"
+
+[project.urls]
+repository = "https://github.com/rochacbruno/python-devops-linuxtips/tree/main/projetos/gancho"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
