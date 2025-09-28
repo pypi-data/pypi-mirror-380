@@ -1,0 +1,15 @@
+envon/__init__.py,sha256=L1muq5J64FVduo7f4jMavV7RJhw-pkXfDkqEz81G7O8,45
+envon/__main__.py,sha256=B_nfvywz9NmN_vzIVm4NGGxDegZP5Tf3K45vDMm3Xw4,85
+envon/bootstrap_bash.sh,sha256=gJbS9f4LyM6jK3pPDVwQO1uszlrW3Wgw1ssFen5x6Gg,310
+envon/bootstrap_csh.csh,sha256=oQ5iU9NE2YavrR0vIu40nAZ7bHJaLCj6DGptWEQcj3c,3482
+envon/bootstrap_csh_fixed.csh,sha256=zkogT4C2EjrnFo4eo60uIxNwh4rnQzXYL6SBQpVE-xg,59
+envon/bootstrap_fish.fish,sha256=Q9ET9BvptYbGtWJaJ__wBRs5OPotZgiYWiJJgY8btRk,417
+envon/bootstrap_nushell.nu,sha256=c4qBg93V7sXUNydWRVLjt2jVeA0Cw5ijTdnE406dnOw,896
+envon/bootstrap_powershell.ps1,sha256=wTOELnEEXMIWiOJykdllXE7MeGxDc5drtlfcGT5dWTU,642
+envon/bootstrap_sh.sh,sha256=rgPmSEGRLBxNtKYPKC2TLb4kteI28SyRNopmHxs2mBk,293
+envon/envon.py,sha256=coyROeMk0km62Y1V-8UKRutdnnC-vxhFpoWUfxk3l4I,33859
+envon-0.1.2.dist-info/METADATA,sha256=7ag7EpWakTODCXRuHdWOb1hAjDhoiRA-4FfqHviBAOw,6130
+envon-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+envon-0.1.2.dist-info/entry_points.txt,sha256=MLJGsYbk5lxcG79wz7JOnKsQPYrZhwcr3_f7cXNDPN4,43
+envon-0.1.2.dist-info/licenses/LICENSE,sha256=eotaS-mW-CzSjwLyDnd4g88Q5zpVIThqFtualZFY_Fw,1086
+envon-0.1.2.dist-info/RECORD,,
