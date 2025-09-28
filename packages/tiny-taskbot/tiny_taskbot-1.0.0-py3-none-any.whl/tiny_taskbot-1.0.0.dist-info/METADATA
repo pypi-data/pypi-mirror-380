@@ -1,0 +1,197 @@
+Metadata-Version: 2.4
+Name: tiny-taskbot
+Version: 1.0.0
+Summary: A lightweight Python scheduler for timer and file-change tasks.
+Home-page: https://gitlab.com/dmxsoftware/tiny-taskbot
+Author: dmx3377
+Author-email: david@dmx3377.uk
+Project-URL: Homepage, https://tinytaskbot.dmx3377.uk/
+Project-URL: Source, https://gitlab.com/dmxsoftware/tiny-taskbot
+Project-URL: Documentation, https://gitlab.com/dmxsoftware/tiny-taskbot/README.md
+Project-URL: Bug Tracker, https://gitlab.com/dmxsoftware/tiny-taskbot/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Requires-Dist: watchdog
+Requires-Dist: schedule
+Requires-Dist: plyer
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Tiny TaskBot
+
+Tiny TaskBot is a lightweight Python scheduler for **timer-based and file-change tasks**. It can send notifications or run commands, with optional logging.
+
+---
+
+## Features
+
+- Timer tasks: run daily at a specified time.
+- File-change tasks: monitor folders for changes.
+- Actions: notifications or shell commands.
+- Dry-run mode: see tasks without executing them.
+- Optional logging to a file.
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://gitlab.com/dmxsoftware/tiny-taskbot.git
+cd tiny-taskbot
+```
+
+2. Create a virtual environment
+```
+python3 -m venv venv
+source venv/bin/activate  # Linux/MacOS
+venv\scripts\activate     # Windows
+```
+3. Install the dependencies
+```bash
+pip install -r requirements.txt
+```
+4. Get the example `tasks.json` file:
+```
+cp example_tasks.json tasks.json
+```
+## Usage
+1. Edit `tasks.json` to define your tasks.
+2. Run Tiny Task-Bot:
+```bash
+python bot.py
+```
+3. <i>(Optional)</i> Dry-run mode: <i style="font-size: 12px;">[(What is dry-run mode?)](#dry-run-mode-explained)</i>
+```bash
+python bot.py --dry-run
+```
+4. Enable logging:
+```bash
+python bot.py --log scheduler.log
+```
+
+You can combine dry-run and logging if you want to.
+```bash
+python bot.py --dry-run --log dry_run.log
+```
+
+<details>
+<summary>Example <code>tasks.json</code></summary>
+
+<div style="background:#f6f8fa; border:1px solid #ddd; padding:10px; margin-top:5px;">
+<pre>
+[
+  {
+    "name": "Morning Reminder",
+    "trigger": {
+      "type": "timer",
+      "time": "09:00"
+    },
+    "action": {
+      "type": "notify",
+      "message": "Good morning! Time to start your day."
+    }
+  },
+  {
+    "name": "Run Backup Script",
+    "trigger": {
+      "type": "timer",
+      "time": "23:00"
+    },
+    "action": {
+      "type": "run_command",
+      "command": "python3 backup.py"
+    }
+  },
+  {
+    "name": "Watch Documents Folder",
+    "trigger": {
+      "type": "file_change",
+      "path": "/home/user/Documents"
+    },
+    "action": {
+      "type": "notify",
+      "message": "Documents folder has changed!"
+    }
+  }
+]
+</pre>
+</div>
+
+</details>
+
+---
+
+## Dry-run mode explained
+The dry-run mode previews all tasks without executing them. Useful to validate your `tasks.json` and see which tasks would run.
+
+**Input:**
+```bash
+python bot.py --dry-run
+```
+**Example output:**
+```
+1. Morning Reminder - Timer at 09:00 -> Notify: Good morning! Time to start your day.
+2. Run Backup Script - Timer at 23:00 -> Run command: python3 backup.py
+3. Watch Documents Folder - Watch folder /home/user/Documents -> Notify: Documents folder has changed!
+```
+
+---
+
+## Logging
+You can log all scheduler output to a file using the `--log` option:
+```bash
+python bot.py --log my_log.log
+```
+
+or specify a specific place to put the log file:
+```bash
+python bot.py --log /home/user/logs/my_log.log
+```
+* Logs all timer and file-change activity.
+* Preserves timestamps and action details.
+
+> [!tip]
+> You can name the log file **anything**. For example: `log_12-05-2025`.
+
+---
+
+## Dependencies
+
+- Python 3.7+
+- [Rich](https://pypi.org/project/rich/) - for console output
+- [Watchdog](https://pypi.org/project/watchdog/) - for file monitoring
+- [Schedule](https://pypi.org/project/schedule/) - for timer tasks
+- [Plyer](https://pypi.org/project/plyer/) - for notifications
+
+---
+### Useful tips
+
+- Ensure timer tasks use 24-hour format (HH:MM).
+- File-change tasks require a valid path. Use full paths if needed to arrive errors.
+---
+
+## Support
+
+If you find any issues or have suggestions, please open an issue on GitLab.
+
+---
+
+## License
+
+Tiny TaskBot is licensed under the MIT License. See the LICENSE file for details.

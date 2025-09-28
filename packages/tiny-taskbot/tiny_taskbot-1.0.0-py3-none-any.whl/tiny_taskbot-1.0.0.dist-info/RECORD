@@ -1,0 +1,10 @@
+tiny_taskbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tiny_taskbot/actions.py,sha256=m-rSz7zxrJUKJosLwb5hib0wqbCv5N7vj69NAFkBa5M,724
+tiny_taskbot/bot.py,sha256=ETaxxsoBYWyXxIxZANFoO7heYGlwmCf91muS6PryZfw,1703
+tiny_taskbot/scheduler.py,sha256=t3SkxUf8a9uqo9JBLPKDKKAVAx4_DT23qhAlLXwwjSw,2710
+tiny_taskbot-1.0.0.dist-info/licenses/LICENSE,sha256=Q5U7mKl9HojVr563RzrPW3o3CKpv6caOPz0LKm8ktSo,1468
+tiny_taskbot-1.0.0.dist-info/METADATA,sha256=07g8mcWbTNjo3G-LCLLZO9nGVUYEh5B62h0_rl4Hgt8,4716
+tiny_taskbot-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tiny_taskbot-1.0.0.dist-info/entry_points.txt,sha256=KznyCcWVLU-tV8GWrcS2oT1MU1I_M4DojRTQ6j13Imo,55
+tiny_taskbot-1.0.0.dist-info/top_level.txt,sha256=2O6TOHIBi5Jj33_F3R6uG5KnwZhpQzbnLhoc3tIYapk,13
+tiny_taskbot-1.0.0.dist-info/RECORD,,
