@@ -1,0 +1,6 @@
+pyyaml
+ollama
+PyMuPDF
+Pillow
+tqdm
+pytest
