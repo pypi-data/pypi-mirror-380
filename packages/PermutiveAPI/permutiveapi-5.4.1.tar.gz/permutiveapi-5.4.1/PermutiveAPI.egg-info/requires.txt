@@ -1,0 +1,9 @@
+requests
+python-dotenv
+
+[dev]
+pydocstyle
+pytest-pydocstyle
+pyright
+black
+pytest-cov
