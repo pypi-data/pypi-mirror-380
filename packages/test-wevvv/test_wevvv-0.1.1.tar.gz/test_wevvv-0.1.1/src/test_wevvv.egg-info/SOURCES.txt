@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/test_wevvv/__init__.py
+src/test_wevvv/core.py
+src/test_wevvv/log.py
+src/test_wevvv/server.py
+src/test_wevvv.egg-info/PKG-INFO
+src/test_wevvv.egg-info/SOURCES.txt
+src/test_wevvv.egg-info/dependency_links.txt
+src/test_wevvv.egg-info/requires.txt
+src/test_wevvv.egg-info/top_level.txt
+tests/test_main.py
