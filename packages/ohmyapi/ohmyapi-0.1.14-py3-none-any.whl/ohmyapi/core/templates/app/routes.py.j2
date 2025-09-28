@@ -1,0 +1,17 @@
+from ohmyapi.router import APIRouter
+
+from . import models
+
+# Expose your app's routes via `router = fastapi.APIRouter`.
+# Use prefixes wisely to avoid cross-app namespace-collisions.
+# Tags improve the UX of the OpenAPI docs at /docs.
+router = APIRouter(prefix="/{{ app_name }}", tags=[{{ app_name }}])
+
+
+@router.get("/")
+def hello_world():
+    return {
+        "project": "{{ project_name }}",
+        "app": "{{ app_name }}",
+    }
+
