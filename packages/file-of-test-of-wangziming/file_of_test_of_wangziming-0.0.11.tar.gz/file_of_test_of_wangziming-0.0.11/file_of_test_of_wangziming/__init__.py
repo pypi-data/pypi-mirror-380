@@ -1,0 +1,1 @@
+from .file_of_test import str1, str2

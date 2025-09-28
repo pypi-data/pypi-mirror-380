@@ -1,0 +1,4 @@
+include bin/*
+include README.md
+include LICENSE
+recursive-include file_of_test_of_wangziming/data *
