@@ -1,0 +1,17 @@
+drawsvg>=2.0
+matplotlib
+
+[dev]
+pytest>=6.0.0
+pytest-cov>=2.10.0
+flake8>=3.8.0
+black>=21.0.0
+build>=0.7.0
+twine>=3.4.0
+
+[docs]
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
+
+[png]
+cairosvg>=2.3.0
