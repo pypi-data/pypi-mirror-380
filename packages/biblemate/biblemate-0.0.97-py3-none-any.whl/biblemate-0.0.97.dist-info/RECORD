@@ -1,0 +1,24 @@
+biblemate/README.md,sha256=M9QRcq55u92ulZmUwvoa-o8s_DRrd81_kJNGSqH3f6A,1215
+biblemate/__init__.py,sha256=dh3B7dJxcytOOGbSBzrbyXNFtboe_IQHFUojuA0IKtU,2248
+biblemate/bible_study_mcp.py,sha256=CFx0il22fzI9AarJRoQTzu_H4aRiXaeixzIpKWt2vOY,66306
+biblemate/config.py,sha256=2ODu7Bl0Wmu8ynOVcst20V_s7q1IOVjqH0rVvy5lTxg,1922
+biblemate/main.py,sha256=bZ7ev0pmrjisybe7o8RP-zVzXuOdfcmtw6jLq7LvwT0,50563
+biblemate/package_name.txt,sha256=WkkuEEkgw7EKpXV8GshpzhZlwRor1wpotTS7vP24b_g,9
+biblemate/requirements.txt,sha256=OiJKjqOwPCeqdTWeeolNw3Tu3YK_AQ3HZeJWv3YMAwA,82
+biblemate/version.txt,sha256=sMeL7NrvrtdLlS9tRQYveodc5aai0IugNWksOpyVLqc,6
+biblemate/core/systems.py,sha256=aj097cZKs0g7XJfd8AX053JFdRhKj7sUjZzYJNmtaMM,2893
+biblemate/etextedit/README.md,sha256=vaovpZFmkJp5CGonAKqhZQrnGk8OleKIF7Ysa-4Cem0,33
+biblemate/etextedit/plugins/Extract Bible References.py,sha256=5l5daD_bMy9SN7INSAo-D3TC6wKNVaiSQDB5lND6I6I,415
+biblemate/etextedit/plugins/Insert Bible Text.py,sha256=YpBcFSlWsnrS1_Vj5qzQNQ30CfcXDEUrO2dozwZqqvU,561
+biblemate/uba/add_vector.py,sha256=yb6gRP8focZvAJzhR8gtQToxgVAS3BKeMJZH8HTPCZk,6815
+biblemate/uba/api.py,sha256=dGWpTw4NlQbUxJTIxLhLLBQY1jfBycHb9Es5OcgsYWo,4022
+biblemate/uba/bible.py,sha256=eF9ITJnEC8W2NcWZmMa0TUIcWeOT_MCAfWaLaEUcgP8,7385
+biblemate/uba/search.py,sha256=XiaYYIx_g-DZHt4idndhb3a8BgEsl7c2TOYVSHoTdRs,3042
+biblemate/ui/info.py,sha256=QRCno0CYUHVoOtVkZIxVamZONmtI7KRmOT2YoUagY5s,811
+biblemate/ui/prompts.py,sha256=Ka38G15-1ECawUzsXu-Z5a0SpdmpdxOwTDbsecI0nR8,4312
+biblemate/ui/selection_dialog.py,sha256=_URVZfSye7YsVeX6Q1vFgFP5jrqsKmXUK5Rgq-df8HU,3425
+biblemate-0.0.97.dist-info/METADATA,sha256=6YAjxuuGLdC2i_c9YVpBfrjfkcpRiEHbdq8-b-mUgiQ,2892
+biblemate-0.0.97.dist-info/WHEEL,sha256=nn6H5-ilmfVryoAQl3ZQ2l8SH5imPWFpm1A5FgEuFV4,91
+biblemate-0.0.97.dist-info/entry_points.txt,sha256=0JbdyyTDLG-feIFXChdqTgbekbL8t4yT4Nztav-wg6s,84
+biblemate-0.0.97.dist-info/top_level.txt,sha256=pq9uX0tAS0bizZcZ5GW5zIoDLQBa-b5QDlDGsdHNgiU,10
+biblemate-0.0.97.dist-info/RECORD,,
