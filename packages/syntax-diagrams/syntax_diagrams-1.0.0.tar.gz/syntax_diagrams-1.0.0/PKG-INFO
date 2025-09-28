@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: syntax-diagrams
+Version: 1.0.0
+Summary: A library for generating syntax diagrams
+Author-email: Tamika Nomara <taminomara@gmail.com>
+License-Expression: MIT
+Project-URL: Documentation, https://syntax-diagrams.readthedocs.io/en/stable/
+Project-URL: Issues, https://github.com/taminomara/syntax-diagrams/issues
+Project-URL: Source, https://github.com/taminomara/syntax-diagrams/
+Project-URL: Changelog, https://github.com/taminomara/syntax-diagrams/blob/main/CHANGELOG.md
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: grapheme~=0.6
+Requires-Dist: wcwidth~=0.2
+Dynamic: license-file
+
+# Syntax diagrams
+
+Render syntax diagrams (a.k.a. railroad diagrams) with ease.
+
+## Resources
+
+- [Documentation](https://taminomara.github.io/syntax-diagrams/)
+- [Quickstart](https://taminomara.github.io/syntax-diagrams/quickstart.html)
+- [Try it in your browser](https://taminomara.github.io/syntax-diagrams/try)
+
+## Requirements
+
+- python >= 3.12
+
+## Installation
+
+```sh
+pip install syntax-diagrams
+```
