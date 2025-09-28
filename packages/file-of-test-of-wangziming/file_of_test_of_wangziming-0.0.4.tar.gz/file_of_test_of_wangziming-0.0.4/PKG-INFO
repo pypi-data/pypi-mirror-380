@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: file-of-test-of-wangziming
+Version: 0.0.4
+Summary: 这是一个测试项目，测试成功。
+Home-page: 
+Author: 王梓明
+Author-email: 1272660211@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+这是一个测试项目，测试成功。
