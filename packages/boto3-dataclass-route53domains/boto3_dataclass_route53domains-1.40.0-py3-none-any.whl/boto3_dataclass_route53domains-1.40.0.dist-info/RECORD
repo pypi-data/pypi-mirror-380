@@ -1,0 +1,7 @@
+boto3_dataclass_route53domains/__init__.py,sha256=xssqp7igDgfGL82o6AhhcbVzUmGp0EukmppJL1Ok2Bc,122
+boto3_dataclass_route53domains/caster.py,sha256=b1tdjyrS1Ao9A8iOGF5l_Co9igO95V_1m5yhPQzA26I,7024
+boto3_dataclass_route53domains/type_defs.py,sha256=pLDbfL45YOghB0KkvuXAh4z5G4FVIqYKiv9aq1ULBPQ,85267
+boto3_dataclass_route53domains-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_route53domains-1.40.0.dist-info/METADATA,sha256=RtX2i3TWldzb1PffndWR1yt1WqERranz9lcpjTf4PKQ,1732
+boto3_dataclass_route53domains-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_route53domains-1.40.0.dist-info/RECORD,,
