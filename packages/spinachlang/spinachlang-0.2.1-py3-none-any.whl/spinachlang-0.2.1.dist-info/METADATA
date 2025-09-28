@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: spinachlang
+Version: 0.2.1
+Summary: A quantum programming language and compiler.
+Author-email: Cedrick Gauthier <spinachlang@proton.me>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lark==1.2.2
+Requires-Dist: pytket==2.9.1
+Requires-Dist: pytyping==0.0.1
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: pytket-qiskit==0.71.0
+Requires-Dist: pytket-cirq==0.40.0
+Requires-Dist: pytket-pyquil==0.40.0
+Requires-Dist: pytket-pennylane==0.20.0
+Requires-Dist: pytket-braket==0.43.0
+Requires-Dist: pytket-projectq==0.38.0
+Requires-Dist: pytket-qir==0.24.1
+Requires-Dist: pathlib==1.0.1
+Provides-Extra: dev
+Requires-Dist: pylint>=3.2.0; extra == "dev"
+Requires-Dist: pytest>=8.3.0; extra == "dev"
+Dynamic: license-file
+
+# Spinach lang
+![logo for Spinach](spinach.png "Spinach")
+Spinach is a quantum programming language.
+Its goal is to provide a dedicated language that can simulate and compile code for execution on quantum computers.
+
+[documentation](https://spinachlang.github.io/spinachsite/)
+
+
+[source](https://github.com/spinachlang/spinachlang)
+
+
+[examples](https://github.com/spinachlang/spinachlang-algorithms)

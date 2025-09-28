@@ -1,0 +1,15 @@
+spinachlang/__init__.py,sha256=QfpDtcJLWQ5uQUzPt0m1wu90TUYTpD_-Aw6axbDvF8M,302
+spinachlang/__main__.py,sha256=zXZV_39Ks-MCuRdf0r5c4jR71pfqWWAcdDsEv_HsxN0,93
+spinachlang/ast_builder.py,sha256=yXyqUbLFEHNxp0ahUvsMEf1XAOqSEXlQ-1X7pM1I7oE,3996
+spinachlang/backend.py,sha256=AoujO5Py_xMpr8wKw8xMTTnbpUQcGjhgUFsHD0_QFVU,12892
+spinachlang/exit_code.py,sha256=Vu0C0nf28izo-RV3tl8363ySij1YuhTYZOvBrGx3lw4,203
+spinachlang/main.py,sha256=imUMj_ic8egYasx3_YusPtPw8c0f36poaf7iST7QT-4,2644
+spinachlang/parser.py,sha256=mumNCBUW7ddLm1hZsldSu5ebJvfyn_GOANm_VUftUFQ,546
+spinachlang/spinach.py,sha256=CGmPko5rnaeTtgiP9J-cw8hoWePzwlzpZcYL-ZDorJY,916
+spinachlang/spinach_types.py,sha256=mqXuMPL7ppBnhRTtSzq5FBYqaEuSPvhHL_rJ9p7Qx0U,1470
+spinachlang-0.2.1.dist-info/licenses/LICENSE,sha256=DXZGDR0XWdP6KvD1uSYIxQSJoCyLVDMjVzahADhftl0,1074
+spinachlang-0.2.1.dist-info/METADATA,sha256=tFbzU6xSP-yAvkrfAkv1NSn8p_BXur3_J642lfgxfyQ,1204
+spinachlang-0.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+spinachlang-0.2.1.dist-info/entry_points.txt,sha256=SGGkvJqn9kheTt05lLab9JCci6lApCOLbHkr2Q9owlI,54
+spinachlang-0.2.1.dist-info/top_level.txt,sha256=HAXIiwo7_dyzv_qSt4KWhoa4hnr8knJujzplCh3xbOw,12
+spinachlang-0.2.1.dist-info/RECORD,,
