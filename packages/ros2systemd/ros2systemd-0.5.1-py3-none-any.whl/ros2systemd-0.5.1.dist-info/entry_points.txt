@@ -1,0 +1,21 @@
+[ros2cli.command]
+systemd = ros2systemd.command.systemd:SystemdCommand
+
+[ros2cli.extension_point]
+ros2systemd.verb = ros2systemd.verb:VerbExtension
+
+[ros2systemd.verb]
+create = ros2systemd.verb.create:CreateVerb
+diagnose = ros2systemd.verb.diagnose:DiagnoseVerb
+disable = ros2systemd.verb.disable:DisableVerb
+enable = ros2systemd.verb.enable:EnableVerb
+launch = ros2systemd.verb.launch:LaunchVerb
+list = ros2systemd.verb.list:ListVerb
+logs = ros2systemd.verb.logs:LogsVerb
+remove = ros2systemd.verb.remove:RemoveVerb
+restart = ros2systemd.verb.restart:RestartVerb
+run = ros2systemd.verb.run:RunVerb
+start = ros2systemd.verb.start:StartVerb
+status = ros2systemd.verb.status:StatusVerb
+stop = ros2systemd.verb.stop:StopVerb
+template = ros2systemd.verb.template:TemplateVerb
