@@ -1,0 +1,7 @@
+pandas
+pymysql
+duckdb
+sqlalchemy
+pdf2image
+pywinrm
+PyPDF2

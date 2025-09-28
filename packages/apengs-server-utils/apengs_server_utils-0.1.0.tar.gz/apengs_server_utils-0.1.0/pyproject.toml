@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apengs-server-utils"
+version = "0.1.0"
+authors = [
+  { name = "apengs", email = "humphrey.abc@gmail.com" }
+]
+description = "高效的数据库操作工具库，封装了MySQL和DuckDB的常用操作，支持数据同步、批量处理和缓存机制"
+readme = "README.md"          # ← 替代 long_description，PEP 621 标准
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Database",
+  "Topic :: Database :: Front-Ends",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = ["mysql", "duckdb", "database", "data-sync", "pandas"]
+dependencies = [
+    "pandas",
+    "pymysql",
+    "duckdb",
+    "sqlalchemy",
+    "pdf2image",
+    "pywinrm",
+    "PyPDF2",
+]
