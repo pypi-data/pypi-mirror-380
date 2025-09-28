@@ -1,0 +1,7 @@
+boto3_dataclass_omics/__init__.py,sha256=7Nn2iYBscvleFFQO02-CzQjeMF5vu8g3CfX-sWx0Bac,104
+boto3_dataclass_omics/caster.py,sha256=2YAI3aZO7jPRjf2jMp8INl6Qpv1IRAZYWFcrwk0CKWY,18158
+boto3_dataclass_omics/type_defs.py,sha256=U0IG11yNFOf1lCenw4T3iiaBd1HOa-Yhq4y0QoRBW8Y,307813
+boto3_dataclass_omics-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_omics-1.40.0.dist-info/METADATA,sha256=8dksQG7SwE9Boz5lOLwB28CnjG3e5QYsM7rhidaai7Q,1669
+boto3_dataclass_omics-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_omics-1.40.0.dist-info/RECORD,,
