@@ -1,0 +1,9 @@
+nokch/__init__.py,sha256=QTYqXqSTHFRkM9TEgpDFcHvwLbvqHDqvqfQ9EiXkcAM,23
+nokch/cli.py,sha256=lunaSgpWPenGfIk5iz5MzORg0MxnhzjLctudhAMV77o,1090
+nokch/interpreter.py,sha256=3v_cTWawyfDF_5Su6Tmden2rJkQaMGVWlJ1mUKVaGM0,210
+nokch-0.1.0.dist-info/licenses/LICENSE,sha256=e9j1fM4MCWBBzqcbCr3zNpyDbA8WOCjmA8hrwozgE34,1085
+nokch-0.1.0.dist-info/METADATA,sha256=NOYrbsjuCSpM01TsdX30UMiP4OlRKCByxnfmlB1oInY,301
+nokch-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+nokch-0.1.0.dist-info/entry_points.txt,sha256=Aetqsg41Nv2ulAWdpb91T-7rD59YKy2RxBdRAv6Se44,41
+nokch-0.1.0.dist-info/top_level.txt,sha256=b9sfcaH1FiZ4CCR8x6uOyoWP-RKThAuA6NhfgXULSO0,6
+nokch-0.1.0.dist-info/RECORD,,
