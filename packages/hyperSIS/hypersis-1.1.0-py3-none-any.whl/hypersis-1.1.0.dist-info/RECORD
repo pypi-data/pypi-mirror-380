@@ -1,0 +1,12 @@
+build/lib/hyperSIS/__init__.py,sha256=l6gx99Mpkl--hh4Cs_a8_k7xa33LmoIi12YeR9yLLrI,138
+build/lib/hyperSIS/core.py,sha256=LnZMeqR7dZGdqPnNmtSqT-QsOmB9s747g2mwS4O6-Lw,4022
+build/lib/hyperSIS/io_utils.py,sha256=p1bGTjbO7kUB5nVGDIgguNEyaBP8uHSnvAO1yLx7f14,15400
+build/lib/hyperSIS/types.py,sha256=Q7EiWTALFB_Y12x5j4S3TVoM_YGpYO4o5xBHPzl4FJ0,4310
+hyperSIS/__init__.py,sha256=l6gx99Mpkl--hh4Cs_a8_k7xa33LmoIi12YeR9yLLrI,138
+hyperSIS/core.py,sha256=LnZMeqR7dZGdqPnNmtSqT-QsOmB9s747g2mwS4O6-Lw,4022
+hyperSIS/io_utils.py,sha256=p1bGTjbO7kUB5nVGDIgguNEyaBP8uHSnvAO1yLx7f14,15400
+hyperSIS/types.py,sha256=Q7EiWTALFB_Y12x5j4S3TVoM_YGpYO4o5xBHPzl4FJ0,4310
+hypersis-1.1.0.dist-info/METADATA,sha256=LH-jDrPn9nHx_C6YPxngDjGKGkYT-nxGysnYgh3Vgjw,1273
+hypersis-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hypersis-1.1.0.dist-info/top_level.txt,sha256=87e9jzUfu1O7oztdfqcjF7XFVEwAPYvewh9HOzy4crE,15
+hypersis-1.1.0.dist-info/RECORD,,
