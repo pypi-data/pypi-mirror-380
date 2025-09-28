@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stashhouse_ssh"
+version = "0.0.2"
+dependencies = [
+    "asyncssh==2.21.0",
+    "stashhouse>=0.0.3"
+]
+requires-python = ">=3.11"
+authors = [
+    {name = "Jayson Fong", email = "jayson.fong@gatech.edu"}
+]
+description = "StashHouse plugin for SCP and SFTP"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+[project.urls]
+Homepage = "https://github.com/Jayson-Fong/stashhouse_ssh"
+Issues = "https://github.com/Jayson-Fong/stashhouse_ssh/issues"
+
+[project.entry-points.'stashhouse.plugins.server']
+ssh = "stashhouse_ssh.server:SSHServer"
+
+[project.entry-points.'stashhouse.plugins.cli.register']
+ssh = "stashhouse_ssh:register_arguments"
+
+[project.entry-points.'stashhouse.plugins.cli.parse']
+ssh = "stashhouse_ssh:parse_arguments"
