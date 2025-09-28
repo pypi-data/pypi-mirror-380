@@ -1,0 +1,13 @@
+citation_date/__init__.py,sha256=Bc7pABQ5f-tg5uZam5TGeFdTvXcESSD4NmrLM9l5RjQ,241
+citation_date/decoder.py,sha256=ABZt78xHeA7uCLj7osRug9BUtjt9p4WyZyTnypj_J4s,2989
+citation_date/base/__init__.py,sha256=l6nFnOw2Hw-2JLY8tBzD_O4qOZ19B8NAxhamq-jluNk,260
+citation_date/base/date_day.py,sha256=mdgtLmpL2OkvYrISKG1Z4K_IGj8dgrAcN25gbgII8T0,292
+citation_date/base/date_month.py,sha256=T6vrdHTwb3KUrA66mn1P5zSAYCt1-k6LmWLEIHf2mzU,338
+citation_date/base/date_year.py,sha256=wfUN-VuQOMa39K-L2G18d925XFKrp3WY7wOB6kVeawI,475
+citation_date/base/report.py,sha256=9muCLdYNXi655aQPxBxSn-IaptH4yPioQNznhTBq-PE,1573
+citation_date/base/us_uk.py,sha256=ww5lrI-UbeX0PXfvF4u8Eg_OeDbhYXK5eEnDoS0jdkc,1264
+citation_date-0.2.1.dist-info/licenses/LICENSE,sha256=1Cb7WbS8u8TvhoIvgytAtpp1hPkQVt3iH70d_NX6Dqw,1492
+citation_date-0.2.1.dist-info/METADATA,sha256=FQRxADJ-ccUbXSP2vX5OwP5oByyg426u6Pp2HKYfMZY,1897
+citation_date-0.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+citation_date-0.2.1.dist-info/top_level.txt,sha256=TUHobBg7YqmF8sWGLfz1krDNCE2qWBX_M_8E92Z4sQQ,14
+citation_date-0.2.1.dist-info/RECORD,,
