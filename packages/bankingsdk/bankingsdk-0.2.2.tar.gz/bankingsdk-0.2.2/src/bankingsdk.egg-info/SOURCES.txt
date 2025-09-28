@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/bankingsdk/__init__.py
+src/bankingsdk/bank_client.py
+src/bankingsdk/bank_config.py
+src/bankingsdk.egg-info/PKG-INFO
+src/bankingsdk.egg-info/SOURCES.txt
+src/bankingsdk.egg-info/dependency_links.txt
+src/bankingsdk.egg-info/requires.txt
+src/bankingsdk.egg-info/top_level.txt
+src/bankingsdk/schemas/__init__.py
+src/bankingsdk/schemas/schemas.py
