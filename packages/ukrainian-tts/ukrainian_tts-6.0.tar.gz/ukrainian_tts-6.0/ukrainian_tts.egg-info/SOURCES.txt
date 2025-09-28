@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tests/test_formatter.py
+tests/test_stress.py
+tests/test_tts.py
+ukrainian_tts/__init__.py
+ukrainian_tts/formatter.py
+ukrainian_tts/stress.py
+ukrainian_tts/tts.py
+ukrainian_tts.egg-info/PKG-INFO
+ukrainian_tts.egg-info/SOURCES.txt
+ukrainian_tts.egg-info/dependency_links.txt
+ukrainian_tts.egg-info/requires.txt
+ukrainian_tts.egg-info/top_level.txt
