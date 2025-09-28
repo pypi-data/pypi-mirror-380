@@ -1,0 +1,2 @@
+TypeTreeGeneratorAPIEx
+UnityPy>=1.21
