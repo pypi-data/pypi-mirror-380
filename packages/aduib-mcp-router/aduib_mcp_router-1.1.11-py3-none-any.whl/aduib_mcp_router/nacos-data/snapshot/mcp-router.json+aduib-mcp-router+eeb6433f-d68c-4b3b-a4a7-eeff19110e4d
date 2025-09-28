@@ -1,0 +1,13 @@
+{   
+  "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time"]
+    },
+"aduib_server":{
+            "type": "streamableHttp",
+            "url": "http://10.0.0.96:5002",
+            "headers": {
+                "Authorization": "Bearer $2b$12$WB2YoxB5CQtPbqN35UDso.of2n7BmDvvQpxmIUdKe2VHO.MAY1u26"
+            }
+        }
+}
