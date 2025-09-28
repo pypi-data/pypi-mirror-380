@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_core.py
+tests/test_io.py
+tests/test_mesh.py
+tests/test_mesh_draw.py
+voxelmap/__init__.py
+voxelmap/core.py
+voxelmap/io.py
+voxelmap/legacy.py
+voxelmap/mesh.py
+voxelmap.egg-info/PKG-INFO
+voxelmap.egg-info/SOURCES.txt
+voxelmap.egg-info/dependency_links.txt
+voxelmap.egg-info/requires.txt
+voxelmap.egg-info/top_level.txt

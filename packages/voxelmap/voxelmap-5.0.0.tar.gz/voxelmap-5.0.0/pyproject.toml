@@ -1,0 +1,39 @@
+[project]
+name = "voxelmap"
+version = "5.0.0"
+description = "A Python library for voxel modeling from NumPy arrays"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Andrew R. Garcia", email = "garcia.gtr@gmail.com" }]
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.24.1", "matplotlib>=3.6.2"]
+
+[project.optional-dependencies]
+io = [
+  "pandas>=2.1"          # 2.1+ supports Python 3.12
+]
+mesh = [
+  "pyvista>=0.44",       # modern pyvista, 3.12-compatible
+  "scikit-image>=0.22",  # 0.22+ supports Python 3.12
+  "opencv-python>=4.8",  # 4.8+ has wheels for 3.12
+  "scipy>=1.11"          # 1.11+ supports Python 3.12
+]
+all = [
+  "pandas>=2.1",
+  "pyvista>=0.44",
+  "scikit-image>=0.22",
+  "opencv-python>=4.8",
+  "scipy>=1.11"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+packages = ["voxelmap"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
