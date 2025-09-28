@@ -1,0 +1,7 @@
+boto3_dataclass_lightsail/__init__.py,sha256=SSOUqNEU_E1jmmLcjEAwTwiXwCKOeRUipZFeHy5ngqE,112
+boto3_dataclass_lightsail/caster.py,sha256=b0pABQOz2EVdpNcThG-r4E1WdaLHJXvPODDu3I6J6aw,33325
+boto3_dataclass_lightsail/type_defs.py,sha256=hQ5NUaIwze30-PFOR6A5GJ68NQOyUCnUgvfeH0A4KYY,464053
+boto3_dataclass_lightsail-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_lightsail-1.40.0.dist-info/METADATA,sha256=ahZT02cXzKAGZG7eo2py6TaZuIp4PBPoafB6HWgzS94,1697
+boto3_dataclass_lightsail-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_lightsail-1.40.0.dist-info/RECORD,,
