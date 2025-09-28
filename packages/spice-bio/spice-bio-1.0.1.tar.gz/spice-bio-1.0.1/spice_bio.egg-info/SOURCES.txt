@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+SPICE/Melange.py
+SPICE/Soma.py
+SPICE/__init__.py
+spice_bio.egg-info/PKG-INFO
+spice_bio.egg-info/SOURCES.txt
+spice_bio.egg-info/dependency_links.txt
+spice_bio.egg-info/requires.txt
+spice_bio.egg-info/top_level.txt
