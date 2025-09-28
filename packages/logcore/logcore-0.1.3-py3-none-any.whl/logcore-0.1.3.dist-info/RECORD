@@ -1,0 +1,11 @@
+logcore/__init__.py,sha256=qa5zZD-xp9f7DP20ysDCqVOzG-twbZ3dKUWDqFFeDSE,127
+logcore/config.py,sha256=GxQHiOeVq1lcyUz77FXgZt7nrYICJpe4QvuwONNmXqM,3325
+logcore/formatters.py,sha256=8kx5JnbDtEimG8YVmz3iVkcLW2XvxguEc-qIM8U66oE,5506
+logcore/handlers.py,sha256=sYo2w4S1o5Z_6agR5Lm0uXeU9bSLML4purtIH6VJk7E,1721
+logcore/logger.py,sha256=bveNrwxN0FyPRNop_4acD6mzlPbqiUh1YBXRPftRBVg,4891
+logcore/utils.py,sha256=QLOn3DT9MxhPql-MljRyBy0CRf6ZzoKtA7VrY-xIW9w,4353
+logcore-0.1.3.dist-info/licenses/LICENSE,sha256=FPc8dZSRELciLwhJqzl3EBRp8vh8WEeo9A55XvLsiL4,1077
+logcore-0.1.3.dist-info/METADATA,sha256=jV_MF0jQuXIrM7-Gl-V1Zy1Vl2NfBcZe9EaqnIzOKKU,13161
+logcore-0.1.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+logcore-0.1.3.dist-info/top_level.txt,sha256=UZ1Qx-hYfi0goPu2shFELdoJQKfKDJRD4p-_HVvBfj8,8
+logcore-0.1.3.dist-info/RECORD,,
