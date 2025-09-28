@@ -1,0 +1,16 @@
+univer_use/__init__.py,sha256=-yS3Doc32QSNcopHh1-xdAZG_j6ItKet3RULyovmKEM,145
+univer_use/artifact_aware_tool.py,sha256=JSVf1feGLwvEMVG0pqu9OLRTMlRAjBCtq96BvEp_2EU,8811
+univer_use/graph.py,sha256=cLU6qmaVFWP2AImW3JOGlm1M4Kb9Xpvp2p1CrELjONk,406
+univer_use/model.py,sha256=TT8yiSj0hVfgiKc6p9Hg0oUngKoZe1eTFCQBAZlAeuM,783
+univer_use/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+univer_use/spreadsheet_act.py,sha256=14s6GAQ56M8yV9S-3WqQbLsxB5esVII_6UdNmoqH6hg,1508
+univer_use/state.py,sha256=ilb5Hl_LA2dV4O8ySckumV-vZbrTXtOcTwJNsCbZ0Lg,336
+univer_use/tools.py,sha256=ld2lRyg7a__vWpdyYpioqHofBhPPsQ7IUg6X-iqcqkk,5352
+univer_use/prompts/__init__.py,sha256=t7ax8AAH0iHWglYyCaHeR2RPrIRIzIHgUSXM82NU6fo,80
+univer_use/prompts/prompts.py,sha256=USMlMRZvod5v7g1bB0PwPrhK0GpJBS7o2YUywMBgcrA,14074
+univer_use/prompts/spreadsheet_act_sysetm_prompt.md,sha256=t-VmL7cQDfKjp3NPNjRynwY7R_xunvnG680KIENxWnk,8643
+univer_use/prompts/template.py,sha256=8uGQUhJUf17WqpqNhVyDgcgRjDQNf3wOZIW8fZzIMuw,442
+univer_use-0.1.0a3.dist-info/METADATA,sha256=hHkSXSh4vdt6HRwwfbXTLNvVK4-97bpLuYxa-XPaGaw,4044
+univer_use-0.1.0a3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+univer_use-0.1.0a3.dist-info/licenses/LICENSE,sha256=adKjdvFnDBoPM4GxUN01GGvMr2Icuhqw9wOXwl0HIio,1069
+univer_use-0.1.0a3.dist-info/RECORD,,
