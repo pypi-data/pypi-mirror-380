@@ -1,0 +1,12 @@
+[build-system]
+requires = [
+    "setuptools>=77.0",
+    "pystache~=0.6"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --ignore=docs --cov=bcl --cov-report term-missing"
+
+[tool.coverage.run]
+omit = ["src/build.py"]
