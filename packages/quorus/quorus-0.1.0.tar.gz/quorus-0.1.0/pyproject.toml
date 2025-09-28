@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quorus"
+version = "0.1.0"
+description = "A framework for quantum federated learning across heterogeneous quantum clients"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+
+authors = [
+  { name = "Positive Technology Lab", email = "info@positivetechnologylab.com" }
+]
+
+keywords = [
+  "quantum", "federated-learning", "qml", "pennylane", "qiskit", "pytorch"
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+# Keep runtime deps focused. Use the "hardware" extra below for AWS/IBM backends, etc.
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "rich>=13.0",
+  "pennylane>=0.42",
+  "pennylane-lightning>=0.42",
+  "qiskit>=2.0",
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "pytorch-fid>=0.3"
+]
+
+[project.optional-dependencies]
+# Install with: pip install "quorus[hardware]"
+hardware = [
+  # AWS Braket stack (use only if you’re targeting AWS hardware)
+  "amazon-braket-sdk>=1.90",
+  "amazon-braket-schemas>=1.21",
+  "amazon-braket-default-simulator>=1.12",
+  "amazon-braket-pennylane-plugin>=1.26",
+
+  # IBM stack (use only if you’re targeting IBM hardware)
+  "qiskit-aer>=0.13",
+  "qiskit-ibm-runtime>=0.22",
+
+  # Misc helpers you previously listed
+  "python-dotenv>=1.0",
+  "requests>=2.32",
+]
+
+[project.urls]
+Homepage = "https://github.com/positivetechnologylab/Quorus"
+Repository = "https://github.com/positivetechnologylab/Quorus"
+Issues = "https://github.com/positivetechnologylab/Quorus/issues"
+Documentation = "https://github.com/positivetechnologylab/Quorus#readme"
+
+# CLI entry points (same names you already use)
+[project.scripts]
+quorus-exp = "quorus.cli.qfl_main_test:main"
+quorus-hardware = "quorus.cli.ibm_hardware_runs:main"
+
+# Use the src/ layout (your current config does this)
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["quorus*"]
+
+# If you have non-.py files to ship (configs, qasm, etc), uncomment and adjust:
+# [tool.setuptools.package-data]
+# "quorus" = ["**/*.qasm", "**/*.json", "**/*.yaml", "**/*.txt"]

@@ -1,0 +1,3 @@
+[console_scripts]
+quorus-exp = quorus.cli.qfl_main_test:main
+quorus-hardware = quorus.cli.ibm_hardware_runs:main
