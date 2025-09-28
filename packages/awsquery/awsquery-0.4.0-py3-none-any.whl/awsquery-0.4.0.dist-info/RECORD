@@ -1,0 +1,16 @@
+awsquery/__init__.py,sha256=91fG52iYTILK_fqkhmEeXyBiA3G8CrcJQlukF3u1smo,228
+awsquery/cli.py,sha256=fw2vOd1cuSZa3PZvxh7-6lUUSXL0mly50yasmtN4JMQ,37146
+awsquery/config.py,sha256=FuNp74vvtdhq_y8-sYw_KU6YRpd0IwUPY8vdj56SIpY,2300
+awsquery/core.py,sha256=t3EjpqkkRUCsn_cH7pB5vcCRJ94e8RbN0AjjlOcciLw,25113
+awsquery/default_filters.yaml,sha256=P0GwSTy2IIym1uueochVnN1QYMOaxY-8nKk7u5MIHO0,59237
+awsquery/filters.py,sha256=6ZSUKVEDiEOWX_aNVF182zs19VbvVYjKkw2Z8B2mrtY,14282
+awsquery/formatters.py,sha256=MP1uoOyQNiwMtx9lTrl3Id0TRfLIyXScTMyaPkri7-I,15376
+awsquery/policy.json,sha256=lsTUkMih4FqxpPDQOVYLb1VecqCicW5O_B-EIAhNFX0,139268
+awsquery/security.py,sha256=47f-C-WitWGE-2GMswu7ZDNj2-mVXNkxNa-Ow6pMDAg,3231
+awsquery/utils.py,sha256=-inox_eAE7T7V05I4divKzRw8CjPRTxcE26KSES0IZU,5866
+awsquery-0.4.0.dist-info/licenses/LICENSE,sha256=uTc7MudB1VeY8GmbqsmxGEt9r1jWXHHweLw_EtscHC0,1071
+awsquery-0.4.0.dist-info/METADATA,sha256=pw1uQ_xBP0alQ0sDXKRv5K4Em0J3IYq7aq2K9Ph3djw,21339
+awsquery-0.4.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+awsquery-0.4.0.dist-info/entry_points.txt,sha256=9aXzxQCYHsiPMurxLu1N9ZjeU8O_lHjdttJKvjQQgJE,47
+awsquery-0.4.0.dist-info/top_level.txt,sha256=XAKRoI5ah9q7IJiCM40yYo-Knv-N5dW_xVDal2-G0Ac,9
+awsquery-0.4.0.dist-info/RECORD,,
