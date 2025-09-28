@@ -1,0 +1,8 @@
+atomicx-0.0.15rc1.dist-info/METADATA,sha256=SkeebSTIL2dzFh_KyHRtA2_zB_0WtutxscsuwgX6JNM,4366
+atomicx-0.0.15rc1.dist-info/WHEEL,sha256=YCZ9Vxhf2aXNyfoR2QH-PPqnUr48Igr9zjgnGhp3xTc,96
+atomicx-0.0.15rc1.dist-info/licenses/LICENSE,sha256=6wYlWUju2aYiGVnmzmq-aHbX1vnWMKOwayeXmGT10yY,1085
+atomicx/__init__.py,sha256=YqpBIz_l4KgdNIx9TBqpN7JIT4nn1NxdxUpqWDLj7Yk,111
+atomicx/__init__.pyi,sha256=ZwsfzjpP8XgT0j3UINE36w8kNrkW4oCJO590l6i7RWo,11797
+atomicx/atomicx.cp311-win_amd64.pyd,sha256=dTQ-WD9zVDLj4TLMy8t_tLFKJD_HqhFA1dg1LPMKrMc,375296
+atomicx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atomicx-0.0.15rc1.dist-info/RECORD,,
