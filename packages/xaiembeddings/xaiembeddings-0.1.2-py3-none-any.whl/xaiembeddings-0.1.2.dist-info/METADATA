@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: xaiembeddings
+Version: 0.1.2
+Summary: A Python package for explainable AI embeddings analysis with perturbation-based methods.
+Author-email: Bartosz Rybiński <bartoszrybinski@proton.me>
+License: MIT
+Project-URL: Homepage, https://github.com/brybinski/xaiEmbeddings
+Project-URL: Repository, https://github.com/brybinski/xaiEmbeddings
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: tqdm>=4.60.0
+Requires-Dist: d3blocks>=1.4.11
+Requires-Dist: spacy<4.0.0,>=3.7.0
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: matplotlib>=3.6.0
+Dynamic: license-file
+
+# XAI Embeddings
+
+A Python package for explainable AI (XAI) embeddings analysis, using perturbation based explanation methods for transformer-based models. Explanations show how tokens influence position of each other.
+
+## Installation
+
+```bash
+pip install xai-embeddings
+```
+
+## Requirements for POS-PFI
+
+- **Spacy Model**: path to spacy model e.g.: `en_core_web_trf`
+- **Part-of-speech Dictionary**: dictionary with list of words for permutations.
+
+## Available Explainers
+
+- **AttentionExplainer**: Uses attention weights to explain token importance
+- **LOOExplainer**: Leave-one-out analysis
+- **POSPermutationExplainer**: Part-of-speech based permutation analysis
+- **SubsetExplainer**: Subset-based explanation generation
+
+## Models
+
+- **BERTModel**: BERT bert-base-uncased with embedding extraction
+- **Model**: Abstract base class for custom model implementations
+
+## Examples:
+Sample usage was provided in `examples.ipynb`
+
+## License
+
+This project is licensed under the MIT License.
