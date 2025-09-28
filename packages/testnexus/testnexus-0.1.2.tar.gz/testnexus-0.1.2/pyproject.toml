@@ -1,0 +1,23 @@
+[project]
+name = "testnexus"
+version = "0.1.2"
+description = "sj测试"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.15.0",
+]
+
+
+# ========== Key Configuration Section ==========
+# [project.scripts] 定义了标准的命令行入口点
+[project.scripts]
+# 脚本名称 (用户执行的命令) = '模块路径:可调用的函数名'
+# **已修正：现在指向 cli 函数，而不是 FastMCP 实例 mcp**
+mcp-nexus-server = "testnexus.main:cli"
+# ===============================================
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

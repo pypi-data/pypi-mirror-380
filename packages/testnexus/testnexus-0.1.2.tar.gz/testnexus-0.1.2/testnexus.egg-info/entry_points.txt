@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-nexus-server = testnexus.main:cli
