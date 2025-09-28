@@ -1,0 +1,2 @@
+[console_scripts]
+wathq-mcp-server = wathq_mcp_server.server:main
