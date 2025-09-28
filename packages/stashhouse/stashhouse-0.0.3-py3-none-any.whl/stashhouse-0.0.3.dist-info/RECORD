@@ -1,0 +1,10 @@
+stashhouse/__init__.py,sha256=x67_VNZR5_gx6hlIHkek5yZQc8ouh7JXUhYI3AuFMDA,165
+stashhouse/__main__.py,sha256=28Pi6egzZV_T-BuSBt2WiivF0RAbNIzlTCY_F8SGz3s,295
+stashhouse/cli.py,sha256=7kRPTKtYa5WKnzfu6QwHmTByv1_KUFV0whbR5cQvCtA,4391
+stashhouse/plugin.py,sha256=a00ROK2DbeyowBLDvOuCppTs67RL2LCjrjuW9_-7yV4,4210
+stashhouse/server.py,sha256=Fc_Jx_Cn7FWmMKZn5Kz8xEU6cKGJlKy-AOVRgTzOWl0,6249
+stashhouse-0.0.3.dist-info/METADATA,sha256=oClkvavHHyqvlL5BmjGaUpzt8EQc49uFSok4Vx8i6Ig,2312
+stashhouse-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+stashhouse-0.0.3.dist-info/entry_points.txt,sha256=g7Qe2R8DsnnLHZ4RFrUH-fxeeNFDyCTuHt9mge7FdCE,51
+stashhouse-0.0.3.dist-info/licenses/LICENSE,sha256=Xq0RPxJ5dNBvWyg7y66Z5b4TB54pS7px4yd2fBkmR0I,1068
+stashhouse-0.0.3.dist-info/RECORD,,
