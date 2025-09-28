@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "accurpy"
+version = "0.1.5"
+description = "Ultra-accurate and fast double-double FM_new approximation with ≤1 ULP guarantees"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "AccurPy Authors" }]
+keywords = ["numerics", "double-double", "special functions", "accuracy"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: C",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = ["numpy>=1.20"]
+
+[project.urls]
+Homepage = "https://github.com/yourname/accurpy"
+Issues = "https://github.com/yourname/accurpy/issues"
+Source = "https://github.com/yourname/accurpy"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["accurpy"]
+include-package-data = true
