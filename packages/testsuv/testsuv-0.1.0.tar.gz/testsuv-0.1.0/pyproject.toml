@@ -1,0 +1,20 @@
+[project]
+name = "testsuv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { email = "cv0028101@gamil.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "typer>=0.19.2",
+]
+
+[project.scripts]
+testsuv = "testsuv.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
