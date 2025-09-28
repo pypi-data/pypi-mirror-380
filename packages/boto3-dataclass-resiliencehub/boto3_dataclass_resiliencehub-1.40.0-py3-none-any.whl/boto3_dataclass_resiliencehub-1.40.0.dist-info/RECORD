@@ -1,0 +1,7 @@
+boto3_dataclass_resiliencehub/__init__.py,sha256=reI2pNnBHQ9cqBiQQB0Cih5VQQTlhOcOyKhFmEGa4vc,120
+boto3_dataclass_resiliencehub/caster.py,sha256=wpRg8NiRGKYt8_ozb47xLodPAxaKa-5gRejISN3Sl88,14714
+boto3_dataclass_resiliencehub/type_defs.py,sha256=llbP68OGE_-v55qd7Yzln5sxptn5PRMsNTT3ak9irhI,196573
+boto3_dataclass_resiliencehub-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_resiliencehub-1.40.0.dist-info/METADATA,sha256=q0ldR0VaP8J-7Kgw2XaVzkVgqOnngqf5urnsBZoCNXo,1725
+boto3_dataclass_resiliencehub-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_resiliencehub-1.40.0.dist-info/RECORD,,
