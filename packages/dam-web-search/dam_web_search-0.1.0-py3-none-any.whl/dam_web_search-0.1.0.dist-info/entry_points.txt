@@ -1,0 +1,2 @@
+[console_scripts]
+dam-search = dam_search.cli:main

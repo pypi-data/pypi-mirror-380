@@ -1,0 +1,9 @@
+dam_search/__init__.py,sha256=DkaxpvENtLj9C3LjZt911bubzWMQT5v_IKAZI5GQxTg,85
+dam_search/cli.py,sha256=rENZN9xJmHvfnvMtAhZLbxgmEGZDROlHuDUm67fBDAc,4916
+dam_web_search-0.1.0.dist-info/licenses/LICENSE,sha256=7g8QFvXWokFw56QokOLx9X40p3Cod2dkzGDAC1yZz1Y,1083
+tests/test_cli.py,sha256=IZBJ3aJIfhWqqMhZmwcWPlhP-Lp2VLSgxsPiaXXpQTY,2806
+dam_web_search-0.1.0.dist-info/METADATA,sha256=EriGLKVewIK6gxq1SnMumxQhndVxU3RZgZdb_LoCf_E,5961
+dam_web_search-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dam_web_search-0.1.0.dist-info/entry_points.txt,sha256=JGXhm_gJMHXCtYV72qPTaANtgOZliaAT5kpRaxJqBCI,51
+dam_web_search-0.1.0.dist-info/top_level.txt,sha256=rjPgNTFpO06uR6ZNFxYDpXyaMLi0_0DNrVxPSOFVtJE,17
+dam_web_search-0.1.0.dist-info/RECORD,,
