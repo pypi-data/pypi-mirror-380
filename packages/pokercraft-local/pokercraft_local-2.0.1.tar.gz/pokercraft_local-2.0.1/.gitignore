@@ -1,0 +1,32 @@
+# Env
+.direnv/
+.envrc
+
+# Caches
+**/__pycache__/
+.mypy_cache/
+
+# Playground and Data
+playground/
+output/
+data/
+
+# Dist
+dist/
+*.egg-info/
+build/
+run_gui.spec
+wheels/
+
+# IDE
+.vscode/
+.idea/
+
+# Rust
+Cargo.lock
+target/
+maturin_sample/
+**/*.so
+
+# Open source tools to analyze
+open_sources/
