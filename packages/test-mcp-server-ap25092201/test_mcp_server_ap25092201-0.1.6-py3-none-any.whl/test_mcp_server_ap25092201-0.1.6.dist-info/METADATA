@@ -1,0 +1,218 @@
+Metadata-Version: 2.4
+Name: test-mcp-server-ap25092201
+Version: 0.1.6
+Summary: Test MCP Server with media handling and prompt capabilities for bootstrap testing
+Project-URL: Homepage, https://github.com/apisani1/test-mcp-server-ap25092201
+Project-URL: Repository, https://github.com/apisani1/test-mcp-server-ap25092201
+Project-URL: Documentation, https://test-mcp-server-ap25092201.readthedocs.io/
+Project-URL: Changelog, https://github.com/apisani1/test-mcp-server-ap25092201/releases
+Project-URL: Issues, https://github.com/apisani1/test-mcp-server-ap25092201/issues
+Author-email: Antonio Pisani <antonio.pisani@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: ai,assistant,bootstrap,mcp,media,prompts,server,testing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: mcp[cli]>=1.14.1
+Requires-Dist: pillow>=10.0.0
+Provides-Extra: all
+Requires-Dist: black>=25.1.0; extra == 'all'
+Requires-Dist: doc8>=0.8.0; extra == 'all'
+Requires-Dist: flake8-pyproject>=1.2.0; extra == 'all'
+Requires-Dist: flake8>=7.1.0; extra == 'all'
+Requires-Dist: ipykernel>=6.29.5; extra == 'all'
+Requires-Dist: isort>=6.0.0; extra == 'all'
+Requires-Dist: mypy>=1.15; extra == 'all'
+Requires-Dist: myst-parser>=4.0.0; extra == 'all'
+Requires-Dist: pylint>=3.3.0; extra == 'all'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'all'
+Requires-Dist: pytest-cov>=6.1.0; extra == 'all'
+Requires-Dist: pytest>=7.4.0; extra == 'all'
+Requires-Dist: python-dotenv>=1.1.0; extra == 'all'
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == 'all'
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == 'all'
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == 'all'
+Requires-Dist: sphinx-sitemap>=2.6.0; extra == 'all'
+Requires-Dist: sphinx-tabs>=3.4.7; extra == 'all'
+Requires-Dist: sphinx>=8.1.3; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: ipykernel>=6.29.5; extra == 'dev'
+Requires-Dist: python-dotenv>=1.1.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: doc8>=0.8.0; extra == 'docs'
+Requires-Dist: myst-parser>=4.0.0; extra == 'docs'
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == 'docs'
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=3.0.2; extra == 'docs'
+Requires-Dist: sphinx-sitemap>=2.6.0; extra == 'docs'
+Requires-Dist: sphinx-tabs>=3.4.7; extra == 'docs'
+Requires-Dist: sphinx>=8.1.3; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: black>=25.1.0; extra == 'lint'
+Requires-Dist: flake8-pyproject>=1.2.0; extra == 'lint'
+Requires-Dist: flake8>=7.1.0; extra == 'lint'
+Requires-Dist: isort>=6.0.0; extra == 'lint'
+Requires-Dist: pylint>=3.3.0; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'test'
+Requires-Dist: pytest-cov>=6.1.0; extra == 'test'
+Requires-Dist: pytest>=7.4.0; extra == 'test'
+Provides-Extra: typing
+Requires-Dist: mypy>=1.15; extra == 'typing'
+Description-Content-Type: text/markdown
+
+# test-mcp-server-ap25092201
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+
+A test MCP (Model Context Protocol) server implementation with media handling and prompt capabilities, designed for testing bootstrap scripts and demonstrating MCP integration patterns.
+
+## Overview
+
+This package provides a complete MCP server implementation that includes:
+
+- **Media Handler**: Image and audio processing capabilities with PyAutoGUI integration
+- **Prompt Server**: FastMCP-based server with resource management and prompt handling
+- **Bootstrap Testing**: Designed to test mcp-python-bootstrap project
+
+## Features
+
+- 🖼️ **Image Processing**: Image proccesing using PyAutoGUI
+- 🎵 **Audio Handling**: Audio resource management and processing
+- 🔧 **MCP Protocol**: Full Model Context Protocol implementation using FastMCP
+- 🚀 **Bootstrap Ready**: Prepared for migration from Poetry to uv for bootstrap testing
+
+## Installation
+
+### From PyPI
+
+```bash
+pip install test-mcp-server-ap25092201
+```
+
+### From GitHub
+
+```bash
+pip install git+https://github.com/apisani1/test-mcp-server-ap25092201.git
+```
+
+## Quick Start
+
+### Running the MCP Server
+
+```bash
+# Using the package directly
+python -m test_mcp_server_ap25092201.prompt_server
+
+# Or using make commands for development
+make run prompt_server
+```
+
+## Development
+
+### Prerequisites
+
+- Python 3.10+
+- uv for dependency management
+- Git for version control
+
+### Setup Development Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/apisani1/test-mcp-server-ap25092201.git
+cd test-mcp-server-ap25092201
+
+# Install uv if not already installed
+pip install uv
+
+# Install dependencies
+make install-dev
+
+# Run tests
+make test
+
+# Run linting
+make lint
+
+# Format code
+make format
+```
+
+### Available Make Commands
+
+```bash
+make install      # Install core dependencies
+make install-dev  # Install development dependencies
+make test         # Run test suite
+make lint         # Run linting checks
+make format       # Format code with black/isort
+make docs         # Build documentation
+make build        # Build distribution packages
+make publish-test # Publish to TestPyPI
+make publish      # Publish to PyPI
+```
+
+## Testing Bootstrap Compatibility
+
+This package is specifically designed to test the mcp-python-bootstrap project:
+
+1. **Current State**: Uses uv for dependency management
+2. **Bootstrap Ready**: Prepared for bootstrap script compatibility testing
+3. **Testing Target**: Validates bootstrap scripts can properly handle MCP server packages
+
+## Project Structure
+
+```
+src/test_mcp_server_ap25092201/
+├── __init__.py           # Package initialization
+├── media_handler.py      # Image and audio processing
+├── prompt_client.py      # OpenAI client integration
+└── prompt_server.py      # Main MCP server implementation
+```
+
+## Dependencies
+
+### Core Dependencies
+- `mcp[cli]` - Model Context Protocol implementation
+- `openai` - OpenAI API client
+- `pyautogui` - GUI automation and screenshot capabilities
+- `pyscreeze` - Screen capture utilities
+- `pillow` - Image processing library
+
+### Development Dependencies
+- `pytest` - Testing framework
+- `black` - Code formatting
+- `flake8` - Linting
+- `mypy` - Type checking
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Related Projects
+
+- [mcp-python-bootstrap](https://github.com/your-org/mcp-python-bootstrap) - Bootstrap scripts for MCP projects
+- [FastMCP](https://github.com/jlowin/fastmcp) - Fast MCP server implementation
+
+## Support
+
+- 📖 [Documentation](https://test-mcp-server-ap25092201.readthedocs.io/)
+- 🐛 [Issue Tracker](https://github.com/apisani1/test-mcp-server-ap25092201/issues)
+- 💬 [Discussions](https://github.com/apisani1/test-mcp-server-ap25092201/discussions)
+
+---
+
+**Note**: This is a test package designed for bootstrap validation. For production MCP servers, consider using the patterns demonstrated here as a starting point for your own implementation.
