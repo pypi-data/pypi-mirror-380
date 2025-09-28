@@ -1,0 +1,132 @@
+# pyLiveKML: A python library that streams geospatial data using the KML protocol.
+# Copyright (C) 2022 smoke-you
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+"""Icon module."""
+
+from typing import Any
+
+from lxml import etree  # type: ignore
+
+from pyLiveKML.objects.Link import Link
+from pyLiveKML.objects.Object import _FieldDef
+from pyLiveKML.types import RefreshModeEnum, ViewRefreshModeEnum
+
+
+class Icon(Link):
+    """A KML `<Icon>` tag constructor.
+
+    Defines an image associated with an `IconStyle` or `Overlay`. The `href` attribute
+    defines the location of the image to be used as the overlay or as the icon for the
+    placemark. This location can either be on a local file system or a remote web server.
+    The `x`, `y`, `w`, and `h` attributes are used to select one icon from an image that
+    contains multiple icons (often referred to as an icon palette).
+
+    References
+    ----------
+    * https://developers.google.com/kml/documentation/kmlreference#icon
+
+    Parameters
+    ----------
+    href: str | None, default = None
+        An HTTP address or a local file specification used to load an icon.
+    refresh_mode: RefreshModeEnum | None, default = None,
+        Specifies a time-based refresh mode.
+    refresh_interval: float | None, default = None
+        Indicates to refresh the file every n seconds.
+    view_refresh_mode: ViewRefreshModeEnum, default | None = None
+        Specifies how the link is refreshed when the "camera" changes.
+    view_refresh_time: float | None, default = None
+        After camera movement stops, specifies the number of seconds to wait before
+        refreshing the view.
+    view_bound_scale: float | None, default = None
+        Scales the BBOX parameters before sending them to the server. A value less than 1
+        specifies to use less than the full view (screen). A value greater than 1
+        specifies to fetch an area that extends beyond the edges of the current view.
+    view_format: str | None, default = None
+        Specifies the format of the query string that is appended to `href` before the
+        file is fetched.
+    http_query: str | None, default = None
+        Appends information to the query string, based on the parameters specified.
+        (Google Earth substitutes the appropriate current value at the time it creates
+        the query string.) The following parameters are supported:
+        * [clientVersion]
+        * [kmlVersion]
+        * [clientName]
+        * [language]
+    x: int | None, default = None
+        If `href` specifies an icon palette, `x` and `y` identify the offsets, in
+        pixels, from the lower-left corner of the icon palette. If no values are
+        specified for `x` and `y`, the lower left corner of the icon palette is assumed
+        to be the lower-left corner of the icon to use.
+    y: int | None, default = None
+        If `href` specifies an icon palette, `x` and `y` identify the offsets, in
+        pixels, from the lower-left corner of the icon palette. If no values are
+        specified for `x` and `y`, the lower left corner of the icon palette is assumed
+        to be the lower-left corner of the icon to use.
+    w: int | None, default = None
+        If `href` specifies an icon palette, `w` and `h` specify the width and height, in
+        pixels, of the icon to use.
+    h: int | None, default = None
+        If `href` specifies an icon palette, `w` and `h` specify the width and height, in
+        pixels, of the icon to use.
+
+    Attributes
+    ----------
+    Same as parameters.
+
+    """
+
+    _kml_tag = "Icon"
+    _kml_fields = Link._kml_fields + (
+        _FieldDef("x", "gx:x"),
+        _FieldDef("y", "gx:y"),
+        _FieldDef("w", "gx:w"),
+        _FieldDef("h", "gx:h"),
+    )
+
+    def __init__(
+        self,
+        href: str | None = None,
+        refresh_mode: RefreshModeEnum | None = None,
+        refresh_interval: float | None = None,  # 4.0
+        view_refresh_mode: ViewRefreshModeEnum | None = None,
+        view_refresh_time: float | None = None,
+        view_bound_scale: float | None = None,
+        view_format: str | None = None,
+        http_query: str | None = None,
+        x: int | None = None,
+        y: int | None = None,
+        w: int | None = None,
+        h: int | None = None,
+        **kwargs: Any,
+    ):
+        """Icon instance constructor."""
+        Link.__init__(
+            self,
+            href=href,
+            refresh_mode=refresh_mode,
+            refresh_interval=refresh_interval,
+            view_refresh_mode=view_refresh_mode,
+            view_refresh_time=view_refresh_time,
+            view_bound_scale=view_bound_scale,
+            view_format=view_format,
+            http_query=http_query,
+            **kwargs,
+        )
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h

@@ -1,0 +1,169 @@
+# pyLiveKML: A python library that streams geospatial data using the KML protocol.
+# Copyright (C) 2022 smoke-you
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+"""Definitions of exceptions and/or errors."""
+
+from typing import Iterable
+
+##########################
+#
+# pyLiveKML base error class
+#
+##########################
+
+
+class KMLError(Exception):
+    """Wrapper class for all pyLiveKML errors."""
+
+
+##########################
+#
+# AbstractView errors
+#
+##########################
+
+
+class AbstractViewError(KMLError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.Feature` classes and subclasses."""
+
+    pass
+
+
+class ViewerOptionInvalidError(AbstractViewError):
+    """Indicates that one or more viewer options are not available for use by an `AbstractView` subclass."""
+
+    def __init__(self, options: str | Iterable[str]):
+        """ViewerOptionInvalidError instance constructor."""
+        conc_options: list[str] = []
+        if isinstance(options, str):
+            conc_options.append(f"'{options}'")
+        else:
+            conc_options.extend((f"'{opt}'" for opt in options))
+        if len(conc_options) == 1:
+            msg = f"Viewer option {conc_options[0]} is not permitted for this `AbstractView` subclass."
+        else:
+            msg = f"Viewer options {', '.join(conc_options)} are not permitted for this `AbstractView` subclass."
+        super().__init__(msg)
+
+
+##########################
+#
+# Feature errors
+#
+##########################
+
+
+class FeatureError(KMLError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.Feature` classes and subclasses."""
+
+    pass
+
+
+class FeatureInaccessibleError(FeatureError):
+    """Indicates that a :class:`pyLiveKML.objects.Feature` was not able to be updated.
+
+    This is typically because the `Feature` instance is visible in the UI. Only `Feature`
+    instances that are not visible may be updated.
+    """
+
+    pass
+
+
+##########################
+#
+# LinearRing errors
+#
+##########################
+
+
+class LinearRingError(KMLError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.LinearRing`."""
+
+    pass
+
+
+class LinearRingCoordsError(LinearRingError):
+    """Indicates that the :attr:`pyLiveKML.objects.LinearRing.coordinates` parameter was invalid.
+
+    This is typically because less than the minimum of 3 coordinates were supplied.
+    """
+
+
+##########################
+#
+# LineString errors
+#
+##########################
+
+
+class LineStringError(KMLError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.LineString`."""
+
+    pass
+
+
+class LineStringCoordsError(LineStringError):
+    """Indicates that the :attr:`pyLiveKML.objects.LineString.coordinates` parameter was invalid.
+
+    This is typically because less than the minimum of 2 coordinates were supplied.
+    """
+
+
+##########################
+#
+# NetworkLinkControl errors
+#
+##########################
+
+
+class NetworkLinkControlError(KMLError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.NetworkLinkControl` classes and subclasses."""
+
+    pass
+
+
+class NetworkLinkControlUpdateLimited(NetworkLinkControlError):
+    """Indicates that the maximum permitted number of entries has been added to a :class:`pyLiveKML.objects.Update` instance.
+
+    Primarily intended to be used to break out of a recursive loop in
+    :function:`pyLiveKML.objects.NetworkLinkControl.build_kml()` when the maximum update
+    size has been reached.
+    """
+
+    pass
+
+
+##########################
+#
+# Track errors
+#
+##########################
+
+
+class TrackError(FeatureError):
+    """Wrapper class for errors with :class:`pyLiveKML.objects.Track` classes and subclasses."""
+
+    pass
+
+
+class TrackElementsMismatch(TrackError):
+    """Indicates that there was a problem with the `elements` data passed to a :class:`pyLiveKML.objects.Track`.
+
+    This typically occurs when the `elements` data has mismatched lengths for the
+    elements of its `extended_data` fields.
+    """
+
+    pass

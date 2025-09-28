@@ -1,0 +1,65 @@
+# What is pyLiveKML?
+
+pyLiveKML is an implementation of Google's 
+[Keyhole Markup Language](https://developers.google.com/kml/documentation/kmlreference) (KML) that enables an 
+(approximately) live feed of geospatial information into [Google Earth Pro](https://www.google.com/earth/versions/) 
+(GEP). GEP is updated on the fly using an implementation of the mechanism described in 
+[Google's documentation](https://developers.google.com/kml/documentation/updates). KML tags are automatically created, updated and deleted as necessary.
+
+pyLiveKML also provides a means of constructing static KML files from Python.
+
+Several simple evaluation apps are included with the pyLiveKML source.  These projects use [Uvicorn](https://www.uvicorn.org/) and [FastAPI](https://fastapi.tiangolo.com/) to serve KML files to GEP, and to serve HTML etc files to provide a user interface via a browser.
+
+## Disclaimer
+
+Google Earth (TM) and Google Maps (TM) are registered trademarks of Google Inc. pyLiveKML is not affiliated with Google.
+
+## Changes from version 0 to version 1
+
+v1 is a major revision. Code relying upon pyLiveKML v0.0.x will need to be re-written to incorporate the changes, particularly around imports.
+
+# How does pyLiveKML work?
+
+See [how-it-works](https://github.com/smoke-you/pyLiveKML/blob/main/docs/how-it-works.md) for a reasonably detailed explanation.
+
+# Has the entire KML specification been implemented?
+
+From version 1.0.0, all of the KML classes described in [Google's KML specification](https://developers.google.com/kml/documentation/kmlreference) have been implemented. If anything is missing, please let me know.
+
+# GIS and OS Compatibility
+
+pyLiveKML has been tested:
+
+* Serving to Google Earth Pro on Microsoft Windows 10 with HTTP and HTTPS
+
+* Serving from Python 3.10 on Windows 10
+
+* Serving from Python 3.10 on Ubuntu 22.04
+
+It is possible, even probable, that pyLiveKML will (at least partially) work with other KML-compliant GIS's and/or other operating systems, and/or later versions of Python, but no such alternatives have been researched or tested by the author.
+
+# Evaluation Applications
+
+* [Aircraft Tracer](https://github.com/smoke-you/pyLiveKML/blob/main/evals/apps/aircraft_tracer/README.md)
+
+* [Aircraft Tracker](https://github.com/smoke-you/pyLiveKML/blob/main/evals/apps/aircraft_tracker/README.md)
+
+* [Aircraft Trail](https://github.com/smoke-you/pyLiveKML/blob/main/evals/apps/aircraft_trail/README.md)
+
+* [Geometry](https://github.com/smoke-you/pyLiveKML/blob/main/evals/apps/geometry/README.md)
+
+* [Simple](https://github.com/smoke-you/pyLiveKML/blob/main/evals/apps/simple/README.md)
+
+If GEP is started without any arguments, you will need to add a new NetworkLink object to "Temporary Places", with the link address set to the URI of the loader.kml file, e.g. `http(s)://addr:port/loader.kml`. GEP (as of at least v7.3.6) will not load loader.kml from the URI using File->Open.  However, if you start GEP with the URI of `loader.kml` as an argument, then it will load `loader.kml` on startup.
+
+# Documentation
+
+The code is reasonably thoroughly documented via docstrings.
+
+# Licence
+
+[Gnu Affero GPL v3](https://github.com/smoke-you/pyLiveKML/blob/main/LICENCE)
+
+# Contributions
+
+While I've done a fair bit of testing, I have no doubt that there are bugs. If you encounter something that needs to be fixed, please let me know via a [Github](https://github.com/smoke-you/pyLiveKML) Issue, Discussion topic and/or PR.
