@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: python-test-aviz
+Version: 1.0.9
+Summary: A test repository for testing the publishing process of a Python package.
+Home-page: https://github.com/aviz92/python-test-aviz
+Author: Avi Zaguri
+Author-email: 
+Project-URL: Repository, https://github.com/aviz92/python-test-aviz
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: dotenv
+Requires-Dist: twine
+Requires-Dist: pytest
+Requires-Dist: pandas
+Requires-Dist: pytest-mypy
+Requires-Dist: custom-python-logger
+Requires-Dist: python-jira-plus
+Requires-Dist: python-notion-plus
+Requires-Dist: python-pandas-translation
+Requires-Dist: python-simple-email-sender
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Python Test Package
+
+## Pre-requisites
+1. `brew install gh`
+2. `gh auth login`
+
+## Usage
+1. `./python_test_aviz/run_pytest_marker.sh <pytest_marker> (e.g. dummy, slow, integration)`
+   - `./python_test_aviz/run_pytest_marker.sh "dummy and not dummy2"`
+
+<br>
+
+---
