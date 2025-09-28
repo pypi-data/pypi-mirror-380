@@ -1,0 +1,17 @@
+quazy/__init__.py,sha256=T7vk509-AdCX_eCUT4nW4RUXsaJ_ZLSlTh5BEWIfk-s,502
+quazy/db.py,sha256=QThynp5pq60n66qFCvUw6R7tkpYx_EbqeKLTTGlQ0fQ,40660
+quazy/db_factory.py,sha256=Y1izqfRX7J8RkVmJtXUif5OW6e9FNsLpkQaJXlURDeM,25911
+quazy/db_field.py,sha256=CEp5ybe5RNtiMwGr5i9HAAFIHysM8V7G6ODCEreVTLI,5039
+quazy/db_query.py,sha256=GlnvGh1waw_BFzmWGBKmuUdmSlI2qMRSRGddVj3AvfY,34359
+quazy/db_table.py,sha256=vMS7dHD0f6Tzlmx7kyKL1sJeDZVKnNOWjZfiwPh1S7o,28246
+quazy/db_types.py,sha256=SDntPvQ3jpaFwJo6ztY48i06Lo8mZxsFA04seGFdxi8,2168
+quazy/exceptions.py,sha256=3_UEiKvZfvdlmRb7CW7T--2rUvOaYyxBrodXrATAR0M,745
+quazy/migrations.py,sha256=M25nsjMlu_kwnEDLaxgvTAVN4Jlxf9XgKAW5WFjAD5I,16487
+quazy/query.py,sha256=GHZ2RpkEQGaohaJ26aWPpe-VR-vNJalq5vZcj256UvI,20097
+quazy/stub.py,sha256=YY9jn1mknB301EowOeiik-hwyoa-ZHjGNVN2s4S6m8k,4943
+quazy/translator.py,sha256=sQk8zBSsEfSpYsuurH0pq343NnQtc_B78cN3s-bHN6w,18755
+quazydb-1.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+quazydb-1.0.1.dist-info/METADATA,sha256=UV8x31KmCvSJP-Iigo7HFnqgtjGLK94iMMqjODaY06c,1687
+quazydb-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+quazydb-1.0.1.dist-info/top_level.txt,sha256=6JxwnS4bkA-N38LOJSAMbGTPTSo7Y4_IzFztgYm3xGI,6
+quazydb-1.0.1.dist-info/RECORD,,
