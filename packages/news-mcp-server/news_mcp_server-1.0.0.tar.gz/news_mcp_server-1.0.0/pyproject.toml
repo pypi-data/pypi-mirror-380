@@ -1,0 +1,131 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "news-mcp-server"
+version = "1.0.0"
+description = "Hybrid MCP server for news aggregation with Press Monitor integration"
+authors = [
+    {name = "Your Organization", email = "dev@yourorg.com"},
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["mcp", "news", "ai", "agents", "press-monitor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+]
+
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "httpx>=0.25.0",
+    "redis>=5.0.0",
+    "pydantic>=2.4.0",
+    "pydantic-settings>=2.0.0",
+    "python-json-logger>=2.0.0",
+    "prometheus-client>=0.17.0",
+    "anyio>=3.7.0",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+# Minimal installation (core MCP server only)
+minimal = []
+
+# Full installation with all features
+full = [
+    "redis>=5.0.0",
+    "prometheus-client>=0.17.0",
+    "psutil>=5.9.0",
+]
+
+# AI framework integrations
+frameworks = [
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.10",
+]
+
+# Cloud provider integrations
+cloud = [
+    "boto3>=1.26.0",
+    "azure-identity>=1.12.0",
+    "google-cloud-core>=2.3.0",
+]
+
+# Development dependencies
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.4.0",
+]
+
+# All optional dependencies
+all = [
+    "redis>=5.0.0",
+    "prometheus-client>=0.17.0",
+    "psutil>=5.9.0",
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.10",
+    "boto3>=1.26.0",
+    "azure-identity>=1.12.0",
+    "google-cloud-core>=2.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourorg/news-mcp-server"
+Documentation = "https://docs.yourorg.com/news-mcp-server"
+Repository = "https://github.com/yourorg/news-mcp-server"
+Issues = "https://github.com/yourorg/news-mcp-server/issues"
+
+[project.scripts]
+news-mcp-server = "news_mcp_server.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/news_mcp_server"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/docs",
+    "/README.md",
+    "/LICENSE",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=src/news_mcp_server --cov-report=term-missing"
