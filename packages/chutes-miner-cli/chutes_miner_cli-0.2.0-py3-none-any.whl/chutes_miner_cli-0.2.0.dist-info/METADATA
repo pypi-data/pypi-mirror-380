@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: chutes-miner-cli
+Version: 0.2.0
+Summary: Chutes miner CLI
+License: MIT
+Author: Jon Durbin
+Author-email: jon@jondurbin.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: aiohttp[speedups] (>3.10,<4)
+Requires-Dist: click (>8.1.0,<8.2.0)
+Requires-Dist: loguru (>=0.7.3,<0.8.0)
+Requires-Dist: py-bip39-bindings (>=0.1.11,<0.2.0)
+Requires-Dist: pydantic (>2.9,<3)
+Requires-Dist: rich (>13.0.0)
+Requires-Dist: setuptools (>80.0)
+Requires-Dist: substrate-interface (>=1.7.11,<2.0.0)
+Requires-Dist: typer (>=0.14.0,<0.15.0)
+Project-URL: Homepage, https://github.com/rayonlabs/chutes-miner/tree/main/cli
+Description-Content-Type: text/markdown
+
+
