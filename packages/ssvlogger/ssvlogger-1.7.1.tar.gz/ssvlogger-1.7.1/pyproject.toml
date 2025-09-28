@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssvlogger"
+version = "1.7.1"
+description = "A simple python package to parse SSV node logs and make them legible"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file="LICENSE" }
+authors = [
+    { name = "SirSpudlington"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+keywords = ["SSV", "logging"]
+
+dependencies = [
+  'colorama >= 0.4.6'
+]
+
+[project.urls]
+Homepage = "https://github.com/SirSpudlington/ssvlogger"
+Issues = "https://github.com/SirSpudlington/ssvlogger/issues"
+
+[project.scripts]
+ssvlogger = "ssvlogger.logger:main"
