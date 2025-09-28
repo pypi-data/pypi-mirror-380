@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Test htag</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
+        <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+    </head>
+    <body>
+     loading...
+      <script type="py" config='{"packages":["htag==0.120.0"]}'>
+###############################################################################
+from htag import Tag
+import urllib.parse
+import json,sys
+import ast,os,re
+import base64,zlib
+
+
+DEFAULT="""from htag import Tag
+
+class App(Tag.body):
+    def init(self):
+        def say_hello(o):
+            self <= Tag.li("hello")
+        self <= Tag.button("click",_onclick = say_hello)
+        
+"""
+
+IMG="data:image/png;base64,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"
+
+TEMPLATE = base64.b64decode(b"""PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9weXNjcmlwdC5uZXQvcmVsZWFzZXMvMjAyNC4xMC4yL2NvcmUuY3NzIj4KICAgIDxzY3JpcHQgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vcHlzY3JpcHQubmV0L3JlbGVhc2VzLzIwMjQuMTAuMi9jb3JlLmpzIj48L3NjcmlwdD4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CjwvaGVhZD4KPGJvZHk+CjxzY3JpcHQgdHlwZT0icHkiIGNvbmZpZz0neyJwYWNrYWdlcyI6JXN9Jz4KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwolcwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCmZyb20gaHRhZy5ydW5uZXJzIGltcG9ydCBQeVNjcmlwdAoKUHlTY3JpcHQoIEFwcCApLnJ1biggKQo8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+""").decode()
+
+################################################################
+## pyodide.pyfetch -> request(url,**args)
+################################################################
+from pyodide.http import pyfetch
+async def request(url: str, method: str = "GET", body = None, headers = None, **fetch_kwargs ):
+    kwargs = {"method": method, "mode": "cors"}  # CORS: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+    if body and method not in ["GET", "HEAD"]:
+        kwargs["body"] = body
+    if headers:
+        kwargs["headers"] = headers
+    kwargs.update(fetch_kwargs)
+    return await pyfetch(url, **kwargs)
+################################################################
+    
+def zlibB64Encode(x:str) -> str:
+    return base64.urlsafe_b64encode( zlib.compress(x.encode()) ).decode()
+def b64ZlibDecode(x:str) -> str:
+    return zlib.decompress(base64.urlsafe_b64decode(x.encode())).decode()   
+
+
+def get_external_modules(code) -> list:
+    # https://stackoverflow.com/questions/2572582/return-a-list-of-imported-python-modules-used-in-a-script
+    modules = set()
+    
+    def visit_Import(node):
+        for name in node.names:
+            modules.add(name.name.split(".")[0])
+    
+    def visit_ImportFrom(node):
+        # if node.module is missing it's a "from . import ..." statement
+        # if level > 0 it's a "from .submodule import ..." statement
+        if node.module is not None and node.level == 0:
+            modules.add(node.module.split(".")[0])
+    
+    node_iter = ast.NodeVisitor()
+    node_iter.visit_Import = visit_Import
+    node_iter.visit_ImportFrom = visit_ImportFrom
+    node_iter.visit(ast.parse(code))
+    ll = list(modules - set(sys.stdlib_module_names))
+    ll = ["htag==0.120.0" if x == "htag" else x for x in ll]
+    return ll
+
+def generate_python(code:str) -> str:
+    top="# -*- coding: utf-8 -*-\n# YOU WILL NEED (at least) HTAG, just pip it:\n# python3 -m pip install htag\n"
+    sep="#"*78 +"\n"
+    end="""if __name__=="__main__":
+    from htag import Runner
+    Runner( App, interface=(640,480) ).run()"""
+    return top+sep+code+sep+end
+    
+def generate_pyscript(code:str) -> str:
+    externals = get_external_modules(code)
+    return TEMPLATE % (json.dumps( externals ),code)
+
+def dataurlh(data):
+    return 'data:text/html,'+urllib.parse.quote(data)
+def dataurlt(data):
+    data64 = base64.b64encode(data.encode())
+    return 'data:text/plain;base64,'+data64.decode()   
+
+
+class Ed(Tag.div):
+    """ A class which embed the ace editor (python syntax) """
+    statics = [
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/mode-python.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/theme-cobalt.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ext-searchbox.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ext-language_tools.js"),
+    ]
+        
+    def init(self,value,mode="python",onsave=None,**a):
+        self.value = value
+        
+        oed=Tag.div(self.value,_style="width:100%;height:100%;min-height:20px;")
+        self += oed
+        self.onsave=onsave
+    
+        self.js = """
+self.ed=ace.edit( "%s" );
+self.ed.setTheme("ace/theme/cobalt");
+self.ed.session.setMode("ace/mode/%s");
+self.ed.session.setUseWrapMode(false);
+self.ed.setOptions({"fontSize": "12pt", "enableBasicAutocompletion": true});
+self.ed.setBehavioursEnabled(false);
+self.ed.session.setUseWorker(false);
+self.ed.getSession().setUseSoftTabs(true);
+
+self.ed.commandSave=function() {%s}
+
+self.ed.commands.addCommand({
+    name: "commandSave1",
+    bindKey: {"win": "Ctrl-S",  "mac": "Command-S"},
+    readOnly: "True",
+    exec: self.ed.commandSave,
+})
+self.ed.commands.addCommand({
+    name: "commandSave2",
+    bindKey: {"win": "Ctrl-Enter",  "mac": "Command-Enter"},
+    readOnly: "True",
+    exec: self.ed.commandSave,
+})
+""" % (id(oed),mode, self.bind._save( b"self.ed.getValue()"))
+
+    def _save(self,value):
+        self.value = value
+        if self.onsave: self.onsave(self)
+
+class Back(Tag.div):
+    def init(self,o,actions=""):
+        # background = Tag.div( content=None,_style="z-index:1000000;position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:#EEE;opacity:0.5;cursor:pointer;",_onclick=self.close )
+        background = Tag.div( content=None,_style="z-index:1000000;position:absolute;top:0px;left:0px;right:0px;bottom:0px;background:#FFF;cursor:pointer;",_onclick=self.close )
+        background += Tag.button("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",_onclick=self.close,_class="right red")
+        background += actions
+       
+        inputs = Tag.div( o,_style="z-index:1000001;position:absolute;top:31px;left:0px;right:0px;bottom:0px;background:white;border:1px solid black" )
+        
+        # draw ui
+        self += background
+        self += inputs
+
+    def close(self,o=None):
+        self.remove()
+
+class HTDemo(Tag.body):
+    statics="""html, body {width:100%;height:100%;margin:0px;font-family:arial;}
+    * {box-sizing: border-box;}
+    .right {float:right}
+    
+    button {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 4px 14px 4px 14px;
+      border-radius: 4px;
+      display: inline-block;
+      border: none;
+      margin-left:2px;
+      margin-top:1px;
+      margin-bottom:1px;
+      cursor:pointer;
+      font-size:1.1em;
+    }    
+    button, button * {vertical-aligm:middle}
+
+    button.green {background:#1A1;}
+    button.red   {background:#A11;}
+    button.blue  {background:#22C;}
+    button.white {background:#EEE;color:black}
+    
+    iframe {width:100%;height:100% }
+    """
+    
+    imports=Ed,Back
+
+    def init(self, code:str=""):
+        if code:
+            if code.startswith("Z:"):
+                # a zip/b64 string to decode
+                code = b64ZlibDecode(code[2:])
+            elif re.match(r"\d+-.+\.py",code):
+                # it's a filename example (on mlan.fr/pub/htdemos/*)
+                self.call.preload(code)
+                code=DEFAULT
+        else:
+            code=DEFAULT
+        self._back = None
+        self.ed = Ed(code, onsave=self.do_preview,_style="height:100%;flex:1 1 auto")
+        self.ui = Tag.div()
+        
+        # draw ui
+        self.top=Tag.div(Tag.b("htag demo",_style="font-size:1.6em;padding:4px"),_class="top")
+        self.top += Tag.button("Run",_onclick=lambda o: self.ed.call("self.ed.commandSave()"),_class="right green",_title="Run this (CTRL+Enter)")
+        self.top += Tag.button("Help",_onclick=self.do_help,_class="blue right",_title="Need help")
+        
+        self += Tag.div( self.top + self.ed,_style="display:flex;flex-flow:column;height:100%;width:100%;overflow:hidden")
+        self += self.ui
+        
+        self.call( """
+window.addEventListener("message", (event) => {
+    if(event && event.data && event.data.startsWith && event.data.startsWith("Z:"))
+        %s;
+})
+""" % self.bind.updateFromMessageZB64( b"event.data.substr(2)" ) )
+
+    def updateFromMessageZB64(self,zb64):
+        self.setCode(b64ZlibDecode(zb64))
+
+    async def preload(self,htdemo_filename:str):
+        r=await request("https://www.mlan.fr/pub/htdemos/"+htdemo_filename)
+        if r.status==200:
+            self.setCode( await r.string() )
+        
+    def setCode(self,code):
+        o = json.dumps( dict(code=code) )
+        self.ed.call( f"""
+self.ed.setValue( {o}.code );
+self.ed.moveCursorToPosition( {{row:0,column:0}} );
+self.ed.scrollToLine( 0,true,true );
+self.ed.focus();
+        """)
+
+        if self._back:
+            self._back.close()
+            self._back=None
+        
+    def do_help(self,o):    
+        self._back = Back(Tag.iframe(_src="https://www.mlan.fr/htdemo"))
+        self.ui+= self._back
+    
+    def do_preview(self,o):
+        html = generate_pyscript(o.value)
+        test=Tag.button( Tag.img(_src=IMG,_width="18px")+"py",_style="float:right",_onclick=self.download_p,_class="button white",_title="Download as python file")
+        test2=Tag.button(Tag.img(_src=IMG,_width="18px")+"demo",_style="float:right",_onclick=self.download_h,_class="button white",_title="Download as pyscript/html demo file")
+        iframe = Tag.iframe(_src=dataurlh(html))
+        self.ui+=Back(iframe,test+test2)
+        iframe.call("""self.src = URL.createObjectURL(new Blob([`%s`], {type: 'text/html'}));""" % html)
+
+
+    def download_h(self,o):
+        self._download( dataurlh(generate_pyscript(self.ed.value)),"YourHtagApp.html")
+    def download_p(self,o):
+        self._download( dataurlt(generate_python(self.ed.value)),"YourHtagApp.py")
+
+    def _download(self,content,name="file.txt"):
+        self.call( f"""
+let a = document.createElement('a');
+a.href = `{content}`;
+a.target = '_blank';
+a.download = `{name}`;
+a.click();
+""")
+
+App=HTDemo
+###############################################################################
+from htag.runners import PyScript
+
+PyScript( HTDemo ).run( )
+
+</script>
+</body>
+</html>

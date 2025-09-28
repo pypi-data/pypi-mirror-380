@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Test htag</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
+        <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+    </head>
+    <body>
+     loading...
+      <script type="py" config='{"packages":["htag","matplotlib"]}'>
+from htag import Tag
+import io,base64,random
+import matplotlib.pyplot as plt
+
+class TagPlot(Tag.span):
+    def init(self,plt):
+        self["style"]="display:inline-block"
+        with io.StringIO() as fid:
+            plt.savefig(fid,format='svg',bbox_inches='tight')
+            self <= fid.getvalue()
+
+class App(Tag.body):
+    def init(self):
+        self.content = Tag.div()
+
+        # create the layout
+        self += Tag.h2("MatPlotLib " + Tag.button("Random",_onclick=self.redraw_plt))
+        self += self.content
+
+        self.redraw_plt()
+
+    def redraw_plt(self,obj=None):
+        plt.clf()
+        plt.ylabel('Some numbers')
+        plt.xlabel('Size of my list')
+        my_list=[random.randint(1,10) for i in range(random.randint(20,50))]
+        plt.plot( my_list )
+
+        self.content.clear()
+        self.content += Tag.div(f"My list: {my_list}")
+        self.content += TagPlot(plt)
+
+###############################################################################
+from htag.runners import PyScript
+
+PyScript( App ).run( )
+
+</script>
+</body>
+</html>

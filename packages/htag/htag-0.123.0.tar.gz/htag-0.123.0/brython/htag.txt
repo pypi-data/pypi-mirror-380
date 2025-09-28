@@ -1,0 +1,154 @@
+#-------------------------------------------------------------------------------------------------------------------------------
+# An "htag.Tag" implem for brython (see https://github.com/manatlan/htag/tree/main/brython)
+#-------------------------------------------------------------------------------------------------------------------------------
+from browser import html,document,window
+
+def importStatics():
+    import __main__
+    if not document.hasOwnProperty("htagStaticsImported"):
+        all_statics={}
+        for k,v in __main__.__dict__.items():
+            if v!=TAG and issubclass(v,TAG):
+                liste = v.statics
+                if not (isinstance( v.statics, list) or isinstance( v.statics, tuple)):
+                    liste=[v.statics]
+                    
+                for i in liste:
+                    if isinstance(i,str):
+                        i=Tag.style(i)                    
+                    elif isinstance(i,bytes):
+                        i=Tag.script(i.decode())                    
+                    else:
+                        assert isinstance(i,TAG)
+                        
+                    #computed_hash = hash(f"{i.tag} {i.attrs} {i.getInnerHTML()}")
+                    computed_hash = hash(f"{i.tag} {i.attrs} {i.innerHTML}")
+                    
+                    if i.attrs.get("src") or i.attrs.get("href"):
+                        i.setAttribute("htagNeedToLoadBeforeStart", True)
+                        i.onload = lambda ev: ev.target.removeAttribute("htagNeedToLoadBeforeStart")
+                    all_statics[ computed_hash ] = i
+            
+        document.head <= all_statics.values()
+        del all_statics
+        document.htagStaticsImported=True
+
+
+class TAG:
+    statics=[]
+
+    def __init__(self,*args,**kargs):
+        is_component=hasattr(self,"init")
+        attrs,events,props=self.__exkargs__(kargs)
+        if is_component:
+            importStatics()
+            
+            # component creation
+            constructor=getattr(self,"init")
+            
+            # print(f"TAG COMPONENT '{self.__class__.__name__}({self.tag})' with: {attrs=} {events=} {props=}")
+            if attrs or events:
+                # it's "open tag" (accept redef) (it should got a 'init( ..., **a)' )
+                # (because it tries call with "_var")
+                for k,v in attrs.items():
+                    if isinstance(v,bool):
+                        if v: self.attrs[k]=""
+                    else:
+                        self.attrs[k]=v
+                for k,v in events.items():
+                    self.bind(k,v)
+                
+                kargs={k:v for k,v in kargs.items() if k not in props}
+                try:
+                    constructor(*args,**props,**kargs) # to produce a typeerror if not "opened"
+                except Exception as e:
+                    print(f"***ERROR*** {self.__class__.__name__} constructor:",e)
+                    raise e
+            else:
+                # it's "closed tag" (refuse redef)
+                constructor(*args,**kargs)
+
+            if hasattr(self,"connected"):
+
+                def waitConnected( timeout ) -> "promise":
+                    # https://codepen.io/eanbowman/pen/jxqKjJ
+                    start = window.Date.now()
+                
+                    def waitParenting(resolve, reject):
+                        if self.parent != None:
+                            resolve()
+                        elif timeout and (window.Date.now() - start) >= timeout:
+                            reject(window.Error.new(f"Error waitConnected: Timeout waiting for '{obj_str}' ;-("))
+                        else:
+                            window.setTimeout( lambda: waitParenting(resolve, reject) , 30 )
+                    
+                    return window.Promise.new(waitParenting)
+    
+                waitConnected(2000).then( lambda *a,**k: window.setTimeout( self.connected,0) ) # 2sec for parent'ing, and defer the connected callback
+        else:
+            # simple creation
+            #print(f"TAG SIMPLE '{self.tag}' with: {args=} {kargs=}")
+            if len(args)>0:
+                content,*args = args
+                self <= content
+            
+            for k,v in attrs.items():
+                if isinstance(v,bool):
+                    if v: self.attrs[k]=""
+                else:
+                    self.attrs[k]=v
+            for k,v in events.items():
+                self.bind(k,v)
+            for k,v in props.items():
+                setattr(self,k,v)
+                
+    def __exkargs__(self,kargs:dict) -> (dict,dict,dict):
+        events={}   # events
+        attrs={}    # html attibuts
+        props={}    # instance properties
+        for k,v in kargs.items():
+            if k.startswith("_"):
+                k=TagCreator.cname(k[1:])
+                if k.startswith("on"):
+                    events[ k[2:] ] = v
+                else:
+                    attrs[ k ] = v
+            else:
+                props[k]=v
+        return (attrs,events,props)
+
+    def __iadd__(self,  elt):   # "+=" (like "<=")
+        self <= elt
+        return self
+        
+    def __enter__(self): # so can use construction with 'with as:' statement
+        return self
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass     
+
+class TagCreator(type):
+    types={}
+    def __getattr__(self, tagName:str):
+        nodeName = TagCreator.cname(tagName)
+        if nodeName not in TagCreator.types:
+            TagCreator.types[nodeName]=html.maketag(nodeName)
+        typ = TagCreator.types[nodeName]
+        return type("".join([i.capitalize() for i in ("tag_"+tagName).split("_")]), (TAG,typ), {**TAG.__dict__,"tag":nodeName})
+
+    @staticmethod
+    def cname(x:str) -> str:
+        return x.replace("_","-")
+
+class Tag(metaclass=TagCreator):
+
+    @staticmethod
+    def onload( cb ):
+        importStatics()
+        def startWhenReady( cb ):
+            if document.querySelector("*[htagNeedToLoadBeforeStart]"):
+                window.setTimeout( lambda: startWhenReady(cb), 100 )
+            else:
+                cb()
+        startWhenReady(cb)
+
+        

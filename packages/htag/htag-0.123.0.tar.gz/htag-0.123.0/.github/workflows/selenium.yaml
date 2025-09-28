@@ -1,0 +1,62 @@
+# taken from https://github.com/jsoma/selenium-github-actions
+name: Selenium GUI Tests
+on:
+  workflow_dispatch:
+  schedule:
+    # every day at 3:00 AM
+    - cron:  '0 3 * * *'  
+jobs:
+  selenium:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [app1, app2, app3, app4, app_all_bindings]
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Installed package list
+        run: apt list --installed
+      - name: Remove Chrome
+        run: sudo apt purge google-chrome-stable
+      - name: Remove default Chromium
+        run: sudo apt purge chromium-browser
+      - name: Install a new Chromium
+        run: sudo apt install -y chromium-browser
+      - name: Install selenium/poetry packages
+        run: pip install webdriver-manager selenium poetry
+      - name: pip list
+        run: pip list
+
+
+      #############################################################################
+      ## test the basic Runner (WS MODE)
+      #############################################################################
+      - name: Run Tests Runner/WS ${{ matrix.app }}
+        run: |
+          python selenium/run.py WS ${{ matrix.app }} &
+          python selenium/tests.py 8000 ${{ matrix.app }}
+
+      #############################################################################
+      ## test the basic Runner (HTTP MODE)
+      #############################################################################
+      - name: Run Tests Runner/HTTP ${{ matrix.app }}
+        run: |
+          python selenium/run.py HTTP ${{ matrix.app }} &
+          python selenium/tests.py 8000 ${{ matrix.app }}
+
+      #############################################################################
+      ## test with PyScript Runner
+      #############################################################################
+      - name: Build WHL for pyscript tests
+        run: uv build
+
+      - name: Run Tests PyScript (can't exit itself) ${{ matrix.app }}
+        run: |
+          python selenium/run.py PyScript ${{ matrix.app }} 8001 &
+          python selenium/tests.py 8001 ${{ matrix.app }}
+          killall python
+

@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test Coverage",
+            "type": "shell",
+            "command": "uv run pytest --cov-report html --cov=htag . && google-chrome htmlcov/index.html",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "clean repo",
+            "type": "shell",
+            "command": "rm -rf build __pycache__ htag/__pycache__ htag/runners/__pycache__ .pytest_cache .coverage htmlcov",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "Build zip with all",
+            "type": "shell",
+            "command": "rm -rf build __pycache__ htag/__pycache__ htag/runners/__pycache__ .pytest_cache .coverage htmlcov;  zip -r src.zip htag examples test_*",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "new",
+                "focus": true
+            }
+        },
+    ]
+}
