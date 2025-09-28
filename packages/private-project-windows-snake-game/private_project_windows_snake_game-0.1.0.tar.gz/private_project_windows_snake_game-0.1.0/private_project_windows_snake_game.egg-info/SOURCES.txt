@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+private_project_windows_snake_game/__init__.py
+private_project_windows_snake_game.egg-info/PKG-INFO
+private_project_windows_snake_game.egg-info/SOURCES.txt
+private_project_windows_snake_game.egg-info/dependency_links.txt
+private_project_windows_snake_game.egg-info/requires.txt
+private_project_windows_snake_game.egg-info/top_level.txt
