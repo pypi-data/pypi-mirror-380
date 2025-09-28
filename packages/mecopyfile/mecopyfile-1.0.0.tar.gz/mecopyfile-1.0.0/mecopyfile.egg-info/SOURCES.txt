@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+mecopyfile.egg-info/PKG-INFO
+mecopyfile.egg-info/SOURCES.txt
+mecopyfile.egg-info/dependency_links.txt
+mecopyfile.egg-info/top_level.txt
+pyfile/__init__.py
+pyfile/directory.py
+pyfile/file.py
+pyfile/path.py
+pyfile/systorage.py
+pyfile/utils.py
