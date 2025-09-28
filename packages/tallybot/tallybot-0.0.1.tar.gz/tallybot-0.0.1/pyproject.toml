@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+version = "0.0.1"
+name = "tallybot"
+authors = [{"name" = "Juris Kaminskis", "email" = "juris@kolumbs.net"}]
+readme = "README.md"
+description = "Tallybot is your helpfull accountant"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = ["accountant", "finance", "bot", "chatbot", "budget", "expenses", "income"]
+requires-python = ">=3.11.1"
+dependencies = [
+    "openpyxl==3.1.5",
+    "pdftotext==2.2.2",
+    "zoozl==0.2.0",
+    "reportlab==4.2.5",
+    "openai-agents==0.3.0",
+    "requests>=2.31.0",
+    "numpy>=1.26,<2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Kolumbs/tallybot"
+
+[tool.black]
+line-length = 80
+
+[tool.docformatter]
+wrap-summaries = 80
+
+[tool.mypy]
+python_version = "3.11"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["reportlab.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["tests"]
+ignore_errors = false

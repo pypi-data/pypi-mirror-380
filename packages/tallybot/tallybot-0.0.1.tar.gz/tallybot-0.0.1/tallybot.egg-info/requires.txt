@@ -1,0 +1,7 @@
+openpyxl==3.1.5
+pdftotext==2.2.2
+zoozl==0.2.0
+reportlab==4.2.5
+openai-agents==0.3.0
+requests>=2.31.0
+numpy<2.0,>=1.26
