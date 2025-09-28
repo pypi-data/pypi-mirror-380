@@ -1,0 +1,561 @@
+2025-09-24 17:29:22,404 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-24 17:29:22,404 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-24 17:29:22,405 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-24 17:29:22,723 - ubox_py_sdk.client - INFO - 已获取密钥信息 projectUuid=1400502362082115584, updateUuid=1049482942918688768
+2025-09-24 17:29:23,546 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: 正常模式设备占用失败: {'code': 3, 'msg': '手机掉线'}
+2025-09-24 17:29:23,552 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-24 17:29:23,552 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-24 17:29:23,553 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-24 17:29:23,553 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-24 17:29:37,151 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-24 17:29:37,151 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-24 17:29:37,151 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-24 17:29:37,159 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-24 17:29:37,159 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-24 17:29:37,159 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-24 17:29:37,159 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-24 17:29:40,431 - ubox_py_sdk - ERROR - 设备 CQEAORNNLR45HQEQ 获取屏幕分辨率 失败 - TraceID: 20250924172937_91ccf492-f22b-4c51-91a2-612ec4fb8e56 - 错误: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+NoneType: None
+
+2025-09-24 17:29:40,442 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 无法连接: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+Traceback (most recent call last):
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/client.py", line 416, in init_device
+    device.d_screen_size = device.screen_size(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device.py", line 345, in screen_size
+    return operation.execute(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 481, in execute
+    response_data = self._process_response(response)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 371, in _process_response
+    raise UBoxDeviceError(f"{config['name']}失败: {msg}")
+ubox_py_sdk.exceptions.UBoxDeviceError: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+
+2025-09-24 17:29:40,443 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: [CONNECTION_ERROR] 设备 CQEAORNNLR45HQEQ 无法连接，请确认设备序列号正确，并且设备正常
+2025-09-24 17:29:40,449 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-24 17:29:40,449 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 已自动释放
+2025-09-24 17:29:40,450 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-24 17:29:40,450 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-24 17:29:40,450 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-24 17:29:40,450 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-24 17:30:11,375 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-24 17:30:11,375 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-24 17:30:11,375 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-24 17:30:11,381 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-24 17:30:11,381 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-24 17:30:11,381 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-24 17:30:11,382 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-24 17:30:11,829 - ubox_py_sdk.client - INFO - 设备已初始化: CQEAORNNLR45HQEQ -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-24 17:30:12,375 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-24 17:30:12,375 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-24 17:30:12,378 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-24 17:30:12,378 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-24 17:30:12,378 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-24 17:30:12,378 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-24 17:30:12,378 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-24 17:30:12,378 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-24 17:31:08,573 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-24 17:31:08,573 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-24 17:31:08,573 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-24 17:31:08,579 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-24 17:31:08,579 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-24 17:31:08,579 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-24 17:31:08,579 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-24 17:31:18,669 - ubox_py_sdk - ERROR - 设备 CQEAORNNLR45HQEQ 获取屏幕分辨率 失败 - TraceID: 20250924173108_46c5cfe8-27d4-4792-8449-f8e6135654c2 - 错误: {'code': -32603, 'message': 'Internal error', 'data': 'USB device CQEAORNNLR45HQEQ is offline'}
+NoneType: None
+
+2025-09-24 17:31:18,679 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 无法连接: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32603, 'message': 'Internal error', 'data': 'USB device CQEAORNNLR45HQEQ is offline'}
+Traceback (most recent call last):
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/client.py", line 416, in init_device
+    device.d_screen_size = device.screen_size(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device.py", line 345, in screen_size
+    return operation.execute(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 481, in execute
+    response_data = self._process_response(response)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 371, in _process_response
+    raise UBoxDeviceError(f"{config['name']}失败: {msg}")
+ubox_py_sdk.exceptions.UBoxDeviceError: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32603, 'message': 'Internal error', 'data': 'USB device CQEAORNNLR45HQEQ is offline'}
+
+2025-09-24 17:31:18,679 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: [CONNECTION_ERROR] 设备 CQEAORNNLR45HQEQ 无法连接，请确认设备序列号正确，并且设备正常
+2025-09-24 17:31:18,684 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-24 17:31:18,684 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 已自动释放
+2025-09-24 17:31:18,685 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-24 17:31:18,685 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-24 17:31:18,685 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-24 17:31:18,685 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-24 17:31:45,901 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-24 17:31:45,901 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-24 17:31:45,901 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-24 17:31:45,912 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-24 17:31:45,912 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-24 17:31:45,912 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-24 17:31:45,912 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-24 17:31:50,371 - ubox_py_sdk.client - INFO - 设备已初始化: CQEAORNNLR45HQEQ -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-24 17:31:50,743 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-24 17:31:50,743 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-24 17:31:50,753 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-24 17:31:50,753 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-24 17:31:50,753 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-24 17:31:50,753 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-24 17:31:50,753 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-24 17:31:50,754 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 11:19:10,112 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 11:19:10,112 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 11:19:10,112 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 11:19:10,117 - ubox_py_sdk.client - DEBUG - 测试连接 http://127.0.0.1:26000 失败: HTTPConnectionPool(host='127.0.0.1', port=26000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1181cd820>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-09-25 11:19:10,117 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: 本地地址 http://127.0.0.1:26000 无法联通，请检查本地lab-agent是否启动
+2025-09-25 11:19:10,118 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 11:19:10,118 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-25 11:19:10,118 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 11:19:10,118 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 11:19:28,103 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 11:19:28,103 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 11:19:28,103 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 11:19:28,109 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 11:19:28,110 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 11:19:28,110 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 11:19:28,110 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 11:19:37,398 - ubox_py_sdk - ERROR - 设备 CQEAORNNLR45HQEQ 获取屏幕分辨率 失败 - TraceID: 20250925111928_4cd0273c-9034-4c48-b2d5-ac4a4910623d - 错误: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+NoneType: None
+
+2025-09-25 11:19:37,407 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 无法连接: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+Traceback (most recent call last):
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/client.py", line 424, in init_device
+    device.d_screen_size = device.screen_size(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device.py", line 345, in screen_size
+    return operation.execute(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 481, in execute
+    response_data = self._process_response(response)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 371, in _process_response
+    raise UBoxDeviceError(f"{config['name']}失败: {msg}")
+ubox_py_sdk.exceptions.UBoxDeviceError: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+
+2025-09-25 11:19:37,407 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: [CONNECTION_ERROR] 设备 CQEAORNNLR45HQEQ 无法连接，请确认设备序列号正确，并且设备正常
+2025-09-25 11:19:37,410 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 11:19:37,410 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 已自动释放
+2025-09-25 11:19:37,411 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 11:19:37,411 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-25 11:19:37,411 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 11:19:37,411 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 11:19:43,005 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 11:19:43,005 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 11:19:43,005 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 11:19:43,010 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 11:19:43,010 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 11:19:43,010 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 11:19:43,010 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 11:19:43,563 - ubox_py_sdk.client - INFO - 设备已初始化: CQEAORNNLR45HQEQ -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 11:19:44,717 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 11:19:44,717 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 11:19:44,719 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 11:19:44,719 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-25 11:19:44,719 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 11:19:44,719 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 11:19:44,720 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 11:19:44,720 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 11:23:55,145 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 11:23:55,145 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 11:23:55,145 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 11:23:55,153 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 11:23:55,153 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 11:23:55,153 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 11:23:55,153 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 11:23:55,410 - ubox_py_sdk.client - INFO - 设备已初始化: CQEAORNNLR45HQEQ -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 11:23:56,470 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 11:23:56,470 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 11:23:56,472 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 11:23:56,472 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-25 11:23:56,472 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 11:23:56,472 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 11:23:56,472 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 11:23:56,472 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 14:21:56,972 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 14:21:56,973 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 14:21:56,973 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 14:21:56,979 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 14:21:56,979 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 14:21:56,979 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 14:21:56,979 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 14:21:59,369 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 14:21:59,370 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 14:21:59,375 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 14:21:59,375 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-25 14:21:59,375 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 14:21:59,375 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 14:21:59,375 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 14:21:59,375 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:36:41,750 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:36:41,750 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:36:41,750 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:36:41,756 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:36:41,757 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:36:41,757 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:36:41,757 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:36:48,373 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:36:48,373 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:36:48,377 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 15:36:48,377 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-25 15:36:48,377 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:36:48,377 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:36:48,377 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:36:48,377 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:37:08,539 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:37:08,539 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:37:08,540 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:37:08,549 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:37:08,549 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:37:08,549 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:37:08,549 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:37:09,019 - ubox_py_sdk.client - INFO - 设备已初始化: 2NX0224424010291 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 15:37:27,436 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:37:27,437 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:37:27,443 - ubox_py_sdk.device - INFO - 本地模式设备 2NX0224424010291，无需释放
+2025-09-25 15:37:27,444 - ubox_py_sdk.client - INFO - 设备 2NX0224424010291 释放成功
+2025-09-25 15:37:27,444 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:37:27,444 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:37:27,444 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:37:27,444 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:41:30,420 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:41:30,420 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:41:30,420 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:41:30,426 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:41:30,426 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:41:30,426 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:41:30,426 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:41:30,610 - ubox_py_sdk.client - INFO - 设备已初始化: 2NX0224424010291 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 15:41:34,195 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:41:34,195 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:41:34,198 - ubox_py_sdk.device - INFO - 本地模式设备 2NX0224424010291，无需释放
+2025-09-25 15:41:34,198 - ubox_py_sdk.client - INFO - 设备 2NX0224424010291 释放成功
+2025-09-25 15:41:34,198 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:41:34,198 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:41:34,198 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:41:34,198 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:41:36,808 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:41:36,808 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:41:36,808 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:41:36,820 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:41:36,820 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:41:36,820 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:41:36,821 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:41:36,979 - ubox_py_sdk.client - INFO - 设备已初始化: 2NX0224424010291 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 15:43:15,642 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:43:15,643 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:43:15,652 - ubox_py_sdk.device - INFO - 本地模式设备 2NX0224424010291，无需释放
+2025-09-25 15:43:15,652 - ubox_py_sdk.client - INFO - 设备 2NX0224424010291 释放成功
+2025-09-25 15:43:15,652 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:43:15,652 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:43:15,653 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:43:15,653 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:49:51,355 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:49:51,355 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:49:51,355 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:49:51,361 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:49:51,361 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:49:51,362 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:49:51,362 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:49:51,917 - ubox_py_sdk.client - INFO - 设备已初始化: 2NX0224424010291 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 15:50:10,228 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:50:10,228 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:50:10,238 - ubox_py_sdk.device - INFO - 本地模式设备 2NX0224424010291，无需释放
+2025-09-25 15:50:10,238 - ubox_py_sdk.client - INFO - 设备 2NX0224424010291 释放成功
+2025-09-25 15:50:10,238 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:50:10,238 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:50:10,238 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:50:10,238 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:51:34,706 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:51:34,707 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:51:34,707 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:51:34,713 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:51:34,713 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:51:34,713 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:51:34,714 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:51:37,748 - ubox_py_sdk - ERROR - 设备 2NX0224424010291 获取屏幕分辨率 失败 - TraceID: 20250925155134_040710d0-0067-49ac-b732-90efa0895d3c - 错误: {'code': -32603, 'message': 'Internal error', 'data': 'USB device 2NX0224424010291 is offline'}
+NoneType: None
+
+2025-09-25 15:51:37,754 - ubox_py_sdk.client - ERROR - 设备 2NX0224424010291 无法连接: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32603, 'message': 'Internal error', 'data': 'USB device 2NX0224424010291 is offline'}
+Traceback (most recent call last):
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/client.py", line 424, in init_device
+    device.d_screen_size = device.screen_size(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device.py", line 345, in screen_size
+    return operation.execute(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 481, in execute
+    response_data = self._process_response(response)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 371, in _process_response
+    raise UBoxDeviceError(f"{config['name']}失败: {msg}")
+ubox_py_sdk.exceptions.UBoxDeviceError: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32603, 'message': 'Internal error', 'data': 'USB device 2NX0224424010291 is offline'}
+
+2025-09-25 15:51:37,754 - ubox_py_sdk.client - ERROR - 设备 2NX0224424010291 初始化失败，正在自动释放: [CONNECTION_ERROR] 设备 2NX0224424010291 无法连接，请确认设备序列号正确，并且设备正常
+2025-09-25 15:51:37,757 - ubox_py_sdk.device - INFO - 本地模式设备 2NX0224424010291，无需释放
+2025-09-25 15:51:37,757 - ubox_py_sdk.client - INFO - 设备 2NX0224424010291 已自动释放
+2025-09-25 15:51:37,758 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:51:37,758 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-25 15:51:37,758 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:51:37,758 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-25 15:51:42,061 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-25 15:51:42,061 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-25 15:51:42,061 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-25 15:51:42,066 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-25 15:51:42,066 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-25 15:51:42,066 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-25 15:51:42,066 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-25 15:51:50,968 - ubox_py_sdk.client - INFO - 设备已初始化: CQEAORNNLR45HQEQ -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-25 15:52:06,881 - ubox_py_sdk - ERROR - 设备 CQEAORNNLR45HQEQ 应用安装 失败 - TraceID: 20250925155150_2a480a17-f12a-4584-a4c2-dd2d2638ee32 - 错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+NoneType: None
+
+2025-09-25 15:52:06,889 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-25 15:52:06,889 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-25 15:52:06,893 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-25 15:52:06,893 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 释放成功
+2025-09-25 15:52:06,894 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-25 15:52:06,894 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-25 15:52:06,894 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-25 15:52:06,894 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-26 20:18:31,374 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-26 20:18:31,375 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-26 20:18:31,375 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-26 20:18:31,384 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-26 20:18:31,384 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-26 20:18:31,384 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-26 20:18:31,384 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-26 20:18:34,715 - ubox_py_sdk - ERROR - 设备 CQEAORNNLR45HQEQ 获取屏幕分辨率 失败 - TraceID: 20250926201831_f4f24fe1-acaf-4c04-8b16-840247a27bcf - 错误: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+NoneType: None
+
+2025-09-26 20:18:34,723 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 无法连接: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+Traceback (most recent call last):
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/client.py", line 424, in init_device
+    device.d_screen_size = device.screen_size(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device.py", line 345, in screen_size
+    return operation.execute(trace_id=trace_id)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 481, in execute
+    response_data = self._process_response(response)
+  File "/Users/xutianyi/Documents/lain_code/py-project/ubox-py-sdk/src/ubox_py_sdk/device_operations.py", line 371, in _process_response
+    raise UBoxDeviceError(f"{config['name']}失败: {msg}")
+ubox_py_sdk.exceptions.UBoxDeviceError: [DEVICE_ERROR] 获取屏幕分辨率失败: {'code': -32601, 'message': "Method 'screen_size' not found", 'data': {'os_type': 'android', 'udid': 'CQEAORNNLR45HQEQ'}}
+
+2025-09-26 20:18:34,723 - ubox_py_sdk.client - ERROR - 设备 CQEAORNNLR45HQEQ 初始化失败，正在自动释放: [CONNECTION_ERROR] 设备 CQEAORNNLR45HQEQ 无法连接，请确认设备序列号正确，并且设备正常
+2025-09-26 20:18:34,729 - ubox_py_sdk.device - INFO - 本地模式设备 CQEAORNNLR45HQEQ，无需释放
+2025-09-26 20:18:34,729 - ubox_py_sdk.client - INFO - 设备 CQEAORNNLR45HQEQ 已自动释放
+2025-09-26 20:18:34,730 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-26 20:18:34,730 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-26 20:18:34,730 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-26 20:18:34,730 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-26 20:19:02,270 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-26 20:19:02,270 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-26 20:19:02,270 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-26 20:19:02,277 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-26 20:19:02,277 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-26 20:19:02,277 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-26 20:19:02,277 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-26 20:19:02,368 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-26 20:19:12,718 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-26 20:19:12,718 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-26 20:19:12,723 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-26 20:19:12,723 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-26 20:19:12,724 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-26 20:19:12,724 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-26 20:19:12,724 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-26 20:19:12,724 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 10:19:29,568 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 10:19:29,568 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 10:19:29,568 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 10:19:29,584 - ubox_py_sdk.client - DEBUG - 测试连接 http://127.0.0.1:26000 失败: HTTPConnectionPool(host='127.0.0.1', port=26000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a7fd340>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-09-28 10:19:29,584 - ubox_py_sdk.client - ERROR - 设备 181QGEYK222E3 初始化失败，正在自动释放: 本地地址 http://127.0.0.1:26000 无法联通，请检查本地lab-agent是否启动
+2025-09-28 10:19:29,586 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 10:19:29,586 - ubox_py_sdk.client - INFO - 没有需要释放的设备
+2025-09-28 10:19:29,586 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 10:19:29,586 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 10:19:46,722 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 10:19:46,722 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 10:19:46,722 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 10:19:46,730 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 10:19:46,730 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 10:19:46,730 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 10:19:46,730 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 10:19:57,203 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 10:20:47,929 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 10:20:47,930 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 10:20:47,936 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 10:20:47,936 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 10:20:47,936 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 10:20:47,936 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 10:20:47,936 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 10:20:47,937 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 10:25:13,730 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 10:25:13,730 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 10:25:13,730 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 10:25:13,737 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 10:25:13,737 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 10:25:13,737 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 10:25:13,737 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 10:25:14,043 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 10:27:14,719 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 10:27:14,721 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 10:27:14,727 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 10:27:14,727 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 10:27:14,727 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 10:27:14,727 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 10:27:14,728 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 10:27:14,728 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 10:32:12,266 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 10:32:12,266 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 10:32:12,266 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 10:32:12,274 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 10:32:12,274 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 10:32:12,274 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 10:32:12,274 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 10:32:12,634 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 10:37:14,033 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 10:37:14,043 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 10:37:14,056 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 10:37:14,057 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 10:37:14,057 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 10:37:14,057 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 10:37:14,057 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 10:37:14,057 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:00:59,940 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:00:59,940 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:00:59,940 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:00:59,948 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:00:59,948 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:00:59,948 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:00:59,949 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:01:00,798 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:06:01,145 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:06:01,145 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:06:01,149 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:06:01,149 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:06:01,150 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:06:01,150 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:06:01,150 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:06:01,150 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:11:54,916 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:11:54,917 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:11:54,917 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:11:54,925 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:11:54,925 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:11:54,925 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:11:54,925 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:11:55,224 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:11:55,228 - ubox_py_sdk - ERROR - 设备 181QGEYK222E3 开始录制 时发生未知错误: expected str, bytes or os.PathLike object, not NoneType
+2025-09-28 11:11:55,230 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:11:55,230 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:11:55,232 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:11:55,232 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:11:55,232 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:11:55,232 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:11:55,232 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:11:55,232 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:12:32,623 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:12:32,623 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:12:32,623 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:12:32,629 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:12:32,629 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:12:32,629 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:12:32,629 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:12:32,964 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:12:35,254 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:12:35,255 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:12:35,258 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:12:35,258 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:12:35,258 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:12:35,258 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:12:35,258 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:12:35,258 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:12:53,253 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:12:53,253 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:12:53,253 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:12:53,259 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:12:53,259 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:12:53,259 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:12:53,259 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:12:53,528 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:12:53,650 - ubox_py_sdk - ERROR - 设备 181QGEYK222E3 开始录制 时发生未知错误: expected str, bytes or os.PathLike object, not NoneType
+2025-09-28 11:12:53,653 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:12:53,653 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:12:53,655 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:12:53,655 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:12:53,656 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:12:53,656 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:12:53,656 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:12:53,656 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:13:08,435 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:13:08,435 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:13:08,435 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:13:08,448 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:13:08,448 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:13:08,449 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:13:08,449 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:13:08,771 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:13:40,260 - ubox_py_sdk - ERROR - 设备 181QGEYK222E3 开始录制 时发生未知错误: expected str, bytes or os.PathLike object, not NoneType
+2025-09-28 11:13:44,055 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:13:44,056 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:13:44,069 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:13:44,069 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:13:44,070 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:13:44,070 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:13:44,070 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:13:44,070 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:14:03,784 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:14:03,784 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:14:03,784 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:14:03,794 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:14:03,794 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:14:03,794 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:14:03,795 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:14:04,136 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:14:20,593 - ubox_py_sdk - ERROR - 设备 181QGEYK222E3 开始录制 时发生未知错误: expected str, bytes or os.PathLike object, not NoneType
+2025-09-28 11:14:20,596 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:14:20,596 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:14:20,610 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:14:20,610 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:14:20,611 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:14:20,611 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:14:20,612 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:14:20,612 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:14:27,848 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:14:27,848 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:14:27,849 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:14:27,860 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:14:27,860 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:14:27,861 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:14:27,861 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:14:28,188 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:14:49,171 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:14:49,172 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:14:49,178 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:14:49,178 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:14:49,178 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:14:49,179 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:14:49,179 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:14:49,179 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:21:50,962 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:21:50,963 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:21:50,963 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:21:50,973 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:21:50,973 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:21:50,974 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:21:50,974 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:21:51,278 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:26:53,593 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:26:53,594 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:26:53,600 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:26:53,601 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:26:53,601 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:26:53,601 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:26:53,601 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:26:53,601 - ubox_py_sdk.client - INFO - UBox客户端已关闭
+2025-09-28 11:29:47,285 - ubox_py_sdk - INFO - 日志系统已配置 - 级别: DEBUG, 文件输出: ubox/ubox_sdk.log
+2025-09-28 11:29:47,286 - ubox_py_sdk.client - INFO - 本地模式，跳过设备占用流程
+2025-09-28 11:29:47,286 - ubox_py_sdk.client - INFO - 本地模式，使用地址: http://127.0.0.1:26000
+2025-09-28 11:29:47,306 - ubox_py_sdk.client - INFO - 本地地址联通，使用: http://127.0.0.1:26000
+2025-09-28 11:29:47,306 - ubox_py_sdk.device - INFO - 本地模式，跳过续期任务
+2025-09-28 11:29:47,306 - ubox_py_sdk.client - DEBUG - 生成新的JWT token
+2025-09-28 11:29:47,307 - ubox_py_sdk.client - DEBUG - JWT token已更新
+2025-09-28 11:29:48,755 - ubox_py_sdk.client - INFO - 设备已初始化: 181QGEYK222E3 -> http://127.0.0.1:26000 (模式: local, 代理: False)
+2025-09-28 11:34:53,956 - ubox_py_sdk.client - INFO - 正在关闭UBox客户端...
+2025-09-28 11:34:53,959 - ubox_py_sdk.client - INFO - 并发释放所有设备，共 1 台
+2025-09-28 11:34:53,971 - ubox_py_sdk.device - INFO - 本地模式设备 181QGEYK222E3，无需释放
+2025-09-28 11:34:53,972 - ubox_py_sdk.client - INFO - 设备 181QGEYK222E3 释放成功
+2025-09-28 11:34:53,972 - ubox_py_sdk.client - INFO - 设备释放完成: 成功 1 台，失败 0 台
+2025-09-28 11:34:53,972 - ubox_py_sdk.client - INFO - ✅ 全部设备释放成功
+2025-09-28 11:34:53,973 - ubox_py_sdk.client - INFO - HTTP会话已关闭
+2025-09-28 11:34:53,973 - ubox_py_sdk.client - INFO - UBox客户端已关闭
