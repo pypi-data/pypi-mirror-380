@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/ca_certificates/__init__.py
+src/require_relative.egg-info/PKG-INFO
+src/require_relative.egg-info/SOURCES.txt
+src/require_relative.egg-info/dependency_links.txt
+src/require_relative.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+[build-require_relativetem]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "require_relative"
+version = "0.0.0"
+description = "Dummy require_relative package for PyPI"
+authors = [{name="Your Name", email="you@example.com"}]
+readme = "README.md"
+requires-python = ">=3.7"
+
+[tool.setuptools.packages.find]
+where = ["src"]
