@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>io's log broadcast</title><link>https://io.openwrite.io</link><description>x</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://openwrite.io/static/favicon.png</url><title>io's log broadcast</title><link>https://io.openwrite.io</link></image><lastBuildDate>Sat, 13 Sep 2025 16:34:24 +0000</lastBuildDate><ttl>5</ttl><item><title>She's on Fedora again...</title><link>https://io.openwrite.io/shes-on-fedora-again</link><description>
+This post originates from iodomi.eu &gt; published on 18th of August 2025.
+
+Hiii and kindly welcome again. Today I'll be yapping about my latest
+experiences and why have I made a step...</description><content:encoded><![CDATA[<blockquote>
+  <p>This post originates from <a href="https://iodomi.eu/logs/2025-08-18/bye-alpine/">iodomi.eu</a> &gt; published on 18th of August 2025.</p>
+</blockquote>
+<p>Hiii and kindly welcome again. Today I'll be yapping about my latest
+experiences and why have I made a step back and went on <strong><a href="https://fedoraproject.org/atomic-desktops/kinoite/">Fedora Atomic</a></strong> (again, but Kinoite this time).</p>
+<h3>Why?</h3>
+<p>Using <strong>Fedora</strong> may seem obvious for numerous reasons for a security person, like me.
+Despite the fact that <strong>Fedora is not a very complicated distribution</strong> (I think <a href="https://www.reddit.com/r/Fedora/comments/px4d5q/is_fedora_difficult_for_newbies/">it's kinda newb friendly</a>) it has some good security measures f.e. <a href="https://jfearn.fedorapeople.org/fdocs/en-US/Fedora/20/html/Security_Guide/ch10.html#sect-Security-Enhanced_Linux-Introduction">SELinux</a> as a default <a href="https://en.wikipedia.org/wiki/Mandatory_access_control">MAC</a>, <a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module#TPM_2.0">TPM2</a> lock, LUKS on btrfs, <a href="https://en.wikipedia.org/wiki/UEFI#Secure_Boot">secure boot</a> and more…
+But I still didn't address the "Atomic" part of the question. Well the key differences that make <strong>atomic distros</strong> so superior are read-only rootfs, safe package manager, containers, layered packages, deployements, etc.
+But for the most part, there's a distro <strong>I have already used</strong>, but didn't liked that much before - <a href="https://secureblue.dev/">secureblue</a> (it is also in lowercase lol).</p>
+<h3>What is secureblue?</h3>
+<p><strong>secureblue</strong> is a security-focused desktop Linux distribution. It is generated with <a href="https://blue-build.org/">BlueBuild</a>, using <a href="https://fedoraproject.org/atomic-desktops/">Fedora Atomic Desktop's base images</a>.
+The goal of secureblue is to max out the security of Linux <strong>eliminating attack surface</strong>, <strong>increasing defense against exploits/vulnerabilities</strong> while <strong>avoiding sacrifising usability</strong> (for most).
+As they say it's mostly a distro for those who want to <strong>use Linux</strong> in the <strong>first place</strong> but also don't want to <strong>lose security</strong>. - based on <a href="https://secureblue.dev/#about">their website's about</a>.
+Basically it's a very good distro for my <a href="https://www.privacyguides.org/en/basics/threat-modeling/">threat model</a>.</p>
+<h3>But you'll be more vulnerable.</h3>
+<p>Is this a possiblity? Let's consider together. Fedora Atomic as a Linux distribution mostly focuses on things like <strong>containerization</strong>, <strong>reliablity</strong> and <strong>safety</strong>.
+all of the above are good traits, but there are also bad ones like using <a href="https://en.wikipedia.org/wiki/Systemd#Reception"><strong>systemd</strong></a>, <strong>glibc</strong> and <strong>fixed release model</strong>.
+And what do I do about it - as a person who used OpenRC and musl?
+I have to say that <strong>I don't really care that much</strong> anymore. I want my system to work well and be secure which is <a href="https://secureblue.dev/features">accomplished by secureblue developers</a>.
+I also think that secureblue gives much more security features than those I could apply by myself on Alpine.
+At the end of the day it's not only about init system, C library or release model (Alpine also had fixed), but more about <strong>hardening</strong> and <strong>preventing malicious use</strong> of existing software/hardware bugs/exploits.</p>
+<h3>Testing Plasma 6.4</h3>
+<p>I'm also moving away from <a href="https://swaywm.org/">Sway window manager</a>, <strong>for now</strong> at least. 
+As I was testing different desktop environments for a while. One desktop that caught my eye was exacly <strong>KDE</strong>. I enjoy their <strong>approach</strong> and <strong>convinience</strong> it gives. There are also <strong>some disadvantages</strong> f.e. too much <strong>bloat</strong> (which secureblue thankfully removes), <strong>highier resource usage</strong>, <strong>lower battery lifespan</strong>, etc.
+But on the bright side KDE is now <strong>securing privileged Wayland protocols</strong> since 6.4. This decision has meet with my apprication and <strong>I've waited for it</strong> for some time.
+I'll maybe go back to Sway someday, but for now I'm so sold :^)</p>
+<h3>Goodbye Alpine!</h3>
+<p>Finally the <strong>time has come</strong> to explain why have I made this <em>drastic</em> decision.
+To clear things out, I <strong>don't</strong> think that Alpine is a bad distro in any sense.
+I still love Alpine for its <strong>simplicity</strong> and <strong>minimalism</strong>, then why did I go on Fedora? - you may ask.
+Well I have my reasons. Alpine is not the best fit for <strong>desktop setups</strong>. And well it's obvious for most folks, even
+for a <strong>hardcore user</strong> like me, but it did not stop me in any sense. But I have to say it's sometimes <strong>annoying</strong> how I try to compile something,
+just to be greeted with <strong>compiler errors</strong> (mostly oriented about glibc which I
+don't have on Alpine ofc) that are sometimes just <strong>impossible</strong> to fix for an end user like me <strong>without hacking onto it</strong>.
+Well then how can you prevent this? <strong>Containers</strong> and <strong>gcompat</strong>. Did it solve the problem? No it didn't I tried fixing errors by running in container or with gcompat with basically <strong>no result</strong>.
+I think the worst case I had with this is trying to run <strong>Super Mario 64 decomp</strong>. So for some context me and my friend
+wanted to play sm64 on LAN together, so he tells me to <strong>compile the decomp</strong>, so well I go into it.
+How it ends? It ends on me reading a Makefile for half an hour, trying composing with docker (which <strong>almost</strong> worked out)
+and finally <strong>losing hope</strong>. It turned out that they <strong>hardcoded</strong> some things to <strong>only work with glibc</strong> systems.
+And don't even think that it was the first time I had problems like so, <strong>IT'S NOT THE FIRST TIME!!!</strong>
+Sometimes I also had problem with something not working just because I have OpenRC not systemd…
+In conclusion I was tired of <strong>troubleshooting every single thing that would take me minutes and not hours on a normal distro.</strong></p>
+<h3> </h3>
+<p>Thanks for listening to my distro rant, have a good day byeee!!!!</p>]]></content:encoded><pubDate>Mon, 01 Sep 2025 12:10:52 +0000</pubDate></item></channel></rss>

@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Openwrite Main</title><link>https://main.openwrite.io</link><description>
+Hello there! 👋
+This is main blog of openwrite.io. Here you can find posts about Markdown Syntax and Self-Host information.
+Have a nice time in openwrite!</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://openwrite.io/static/favicon.png</url><title>Openwrite Main</title><link>https://main.openwrite.io</link></image><lastBuildDate>Sat, 13 Sep 2025 16:34:24 +0000</lastBuildDate><ttl>5</ttl><item><title>Federation - how it works here?</title><link>https://main.openwrite.io/federation---how-it-works-here</link><description>After recent updates, I've made federation working properly. Now every change (new post, edited blog, edited post, deleted stuff) are pushed into your followers in ActivityPub protocol.
+How federation works in...</description><content:encoded><![CDATA[<p>After recent updates, I've made federation working properly. Now every change (new post, edited blog, edited post, deleted stuff) are pushed into your followers in ActivityPub protocol.</p>
+<h2>How federation works in openwrite?</h2>
+<p>Basically, from tools using Person activitypub object (like Mastodon) you can follow your blog and see/like posts in there. To view your blog in Mastodon, search for it, in searchbar type: <code>blogname@openwrite.io</code>, so looking for <em>this</em> blog, I will search for <code>main@openwrite.io</code>:</p>
+<p><img src="https://openwrite.b-cdn.net/dc54ce4dec6059d5ef26eba3546e7539.png" alt="search in mastodon" title="Search for blog in Mastodon"></p>
+<p>After accessing the profile, you'll see your description (set in dashboard under <em>Custom ActivityPub profile description</em> - marked in red), blog title as name and blog url as username:</p>
+<p><img src="https://openwrite.b-cdn.net/25dc335c41b256c39b1ac02bcebad22e.png" alt="blog profile in mastodon" title="Openwrite blog profile in Mastodon"></p>
+<p>If you don't see your previous posts, don't worry. Posts are not backpulled in mastodon, but after following the blog, you will see new posts in your feed.
+As for post types, if post is less than <strong>200</strong> characters long, it will be pushed as <em>Note</em> object. If longer, it will become an <em>Article</em>.</p>
+<p>So, after following your blog, you will see your post in Mastodon feed:</p>
+<p><img src="https://openwrite.b-cdn.net/5f69e40024585ae8754c109ded1a2d0f.png" alt="post in mastodon"></p>
+<p>And likes from Mastodon will transfer here :)</p>]]></content:encoded><pubDate>Wed, 30 Jul 2025 20:16:21 +0000</pubDate></item><item><title>Terms of Service</title><link>https://main.openwrite.io/terms-of-service</link><description>Terms of Service
+Welcome to Openwrite.
+By using this service, you agree to the following terms.
+
+1. Acceptable Use
+You may not use Openwrite to:
+
+Spread hate speech, racist, sexist, xenophobic, or otherwise discriminatory content...</description><content:encoded><![CDATA[<h1>Terms of Service</h1>
+<p>Welcome to Openwrite.</p>
+<p>By using this service, you agree to the following terms.</p>
+<hr>
+<h2>1. Acceptable Use</h2>
+<p>You <strong>may not</strong> use Openwrite to:</p>
+<ul>
+<li>Spread <strong>hate speech</strong>, <strong>racist</strong>, <strong>sexist</strong>, <strong>xenophobic</strong>, or otherwise <strong>discriminatory</strong> content  </li>
+<li>Post or link to <strong>pornographic</strong> or <strong>sexually explicit</strong> material  </li>
+<li>Share content that is <strong>illegal</strong> under the laws of your country or that of the service host  </li>
+<li><strong>Advertise commercial products or services</strong> (unless explicitly allowed)  </li>
+<li><strong>Harass</strong>, threaten, or impersonate others</li>
+</ul>
+<p>This platform is meant for personal publishing and creative expression within respectful, lawful boundaries.</p>
+<hr>
+<h2>2. Consequences of Violations</h2>
+<p>If you violate these rules, Openwrite reserves the right to:</p>
+<ul>
+<li>Remove your post from the <strong>Discover</strong> section  </li>
+<li>Remove your post entirely from the <strong>database</strong>  </li>
+<li>Delete your <strong>blog</strong>  </li>
+<li>Suspend or permanently delete your <strong>account</strong></li>
+</ul>
+<p>Decisions are made at the discretion of the service administrator.</p>
+<hr>
+<h2>3. Content Responsibility</h2>
+<p>You remain fully responsible for all content you publish.<br>
+Openwrite does <strong>not</strong> claim ownership of your content, but reserves the right to take action against content that violates these terms.</p>
+<hr>
+<h2>4. No Warranty</h2>
+<p>This service is provided <strong>as is</strong>, with <strong>no guarantees</strong> of uptime, availability, or support.
+Most likely you <strong>will</strong> get help, though. Just join matrix :)</p>
+<hr>
+<h2>5. Changes</h2>
+<p>These terms may change in the future. Continued use of the platform means you accept the updated version.</p>
+<hr>]]></content:encoded><pubDate>Tue, 29 Jul 2025 17:43:21 +0000</pubDate></item><item><title>Available themes</title><link>https://main.openwrite.io/available-themes</link><description>Here you will find all themes available in openwrite along with screenshot.
+Light
+
+Terminal
+
+Windows 98
+
+Cyberpunk
+
+Sticky note
+
+Warm night
+
+Obscura
+
+Paper
+...</description><content:encoded><![CDATA[<p>Here you will find all themes available in openwrite along with screenshot.</p>
+<h3>Light</h3>
+<p><img src="https://openwrite.b-cdn.net/b8eab8a3e96053162a2d59526405c179.png" alt="Light theme" title="Light theme"></p>
+<h3>Terminal</h3>
+<p><img src="https://openwrite.b-cdn.net/0eae8d0e8b1187a9b8a614aaa2b76cba.png" alt="Terminal theme" title="Terminal theme"></p>
+<h3>Windows 98</h3>
+<p><img src="https://openwrite.b-cdn.net/5bbe18ad59769a649f53b73ea0663c89.png" alt="Windows 98 theme" title="Windows 98 theme"></p>
+<h3>Cyberpunk</h3>
+<p><img src="https://openwrite.b-cdn.net/cbdbbed1442dd5066b7e882e03d175ca.png" alt="Cyberpunk theme" title="Cyberpunk theme"></p>
+<h3>Sticky note</h3>
+<p><img src="https://openwrite.b-cdn.net/436f75ada2e07db8ec470bf784e2c404.png" alt="Sticky note theme" title="Sticky note theme"></p>
+<h3>Warm night</h3>
+<p><img src="https://openwrite.b-cdn.net/7de045611b0e8c72b7bb7c84a00ef9c1.png" alt="Warm night theme" title="Warm night theme"></p>
+<h3>Obscura</h3>
+<p><img src="https://openwrite.b-cdn.net/4a324e79e4e7e1c5c9160b34c978094f.png" alt="Obscura theme" title="Obscura theme"></p>
+<h3>Paper</h3>
+<p><img src="https://openwrite.b-cdn.net/53b4715fdb1ae283765147bb06c09fdd.png" alt="Paper theme" title="Paper theme"></p>]]></content:encoded><pubDate>Fri, 27 Jun 2025 21:51:22 +0000</pubDate></item><item><title>Posts migration</title><link>https://main.openwrite.io/posts-migration</link><description>Here you'll find information about migrating posts from another platforms. Accepted formats are CSV and XML(from wordpress).
+Posts export from Wordpress
+
+To export posts from Wordpress, login into your blog, go to...</description><content:encoded><![CDATA[<p>Here you'll find information about migrating posts from another platforms. Accepted formats are CSV and XML(from wordpress).</p>
+<h2>Posts export from Wordpress</h2>
+<ol>
+<li><p>To export posts from Wordpress, login into your blog, go to admin page.</p></li>
+<li><p>Go to Tools -&gt; Export, select posts you want to export, click on <code>Download Export File</code>:</p>
+<p><img src="https://openwrite.b-cdn.net/admin_e18db627fe7aa258a50e50d7e6eb712b.png" alt="alt text" title="Data export from Wordpress"></p></li>
+</ol>
+<h2>Posts export from Write Freely</h2>
+<ol>
+<li><p>To export posts from Write Freely, login into the instance, then go to: <a href="https://write.as/me/export" rel="noopener noreferrer" target="_blank">export page</a>.</p></li>
+<li><p>Click on <code>csv</code> link in the row with Posts:</p>
+<p><img src="https://openwrite.b-cdn.net/admin_4532641e1a4bdc862cb0bb94edc38619.png" alt="alt text" title="Data export from Write Freely"></p></li>
+<li><p>Change headers in csv file to match this:</p>
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>content</th>
+<th>date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Post title</td>
+<td>Post content</td>
+<td>Post date</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+<h2>Posts export from Bear Blog</h2>
+<ol>
+<li><p>To export posts from Bear Blog, login into the instance, select your blog and go to settings.</p></li>
+<li><p>Click on <code>export all blog data</code>:</p>
+<p><img src="https://openwrite.b-cdn.net/admin_d3a06ad66581375afe04228b69f70748.png" alt="alt text" title="Data export from Bear Blog"></p></li>
+<li><p>Change headers in csv file to match this:</p>
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>content</th>
+<th>date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Post title</td>
+<td>Post content</td>
+<td>Post date</td>
+</tr>
+</tbody>
+</table></li>
+</ol>]]></content:encoded><pubDate>Wed, 25 Jun 2025 19:36:57 +0000</pubDate></item><item><title>Markdown syntax</title><link>https://main.openwrite.io/markdown-syntax</link><description>Here you will find the basics of Markdown usage:
+Headings
+You can create headings by starting a line with one or more # symbols.
+Heading 1
+Code: # Heading 1
+Heading 2
+Code: ## Heading 2
+Heading...</description><content:encoded><![CDATA[<p>Here you will find the basics of Markdown usage:</p>
+<h1>Headings</h1>
+<p>You can create headings by starting a line with one or more <code>#</code> symbols.</p>
+<h1>Heading 1</h1>
+<p>Code: <code># Heading 1</code></p>
+<h2>Heading 2</h2>
+<p>Code: <code>## Heading 2</code></p>
+<h3>Heading 3</h3>
+<p>Code: <code>### Heading 3</code></p>
+<hr>
+<h1>Text Styles</h1>
+<p>Style your text to add emphasis.</p>
+<p><strong>This is bold text</strong></p>
+<p>Code: <code>**This is bold text**</code> or <code>__This is bold text__</code></p>
+<p><em>This is italic text</em></p>
+<p>Code: <code>*This is italic text*</code> or <code>_This is italic text_</code></p>
+<p><del>This is strikethrough text</del></p>
+<p>Code: <code>~~This is strikethrough text~~</code></p>
+<blockquote>
+  <p>This is a quote.</p>
+</blockquote>
+<p>Code: <code>&gt; This is a quote.</code></p>
+<hr>
+<h1>Lists</h1>
+<h4>Unordered List</h4>
+<p>Use asterisks <code>*</code>, pluses <code>+</code>, or hyphens <code>-</code> to create bullet points.</p>
+<ul>
+<li>First item</li>
+<li>Second item<ul>
+<li>Nested item</li></ul></li>
+</ul>
+<p>Code:</p>
+<pre><code>* First item
+* Second item
+  * Nested item
+</code></pre>
+<h4>Ordered List</h4>
+<p>Use numbers followed by a period.</p>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<p>Code:</p>
+<pre><code>1. First item
+2. Second item
+3. Third item
+</code></pre>
+<hr>
+<h1>Links</h1>
+<p>Create a hyperlink by wrapping the link text in brackets <code>[ ]</code> and the URL in parentheses <code>( )</code>.</p>
+<p><a href="https://www.markdownguide.org" rel="noopener noreferrer" target="_blank">Visit the official Markdown guide</a></p>
+<p>Code: <code>[Visit the official Markdown guide](https://www.markdownguide.org)</code></p>
+<hr>
+<h3>Images</h3>
+<p>To add an image, use an exclamation mark <code>!</code> followed by alt text in brackets <code>[ ]</code> and the image URL in parentheses <code>( )</code>.</p>
+<p><img src="https://openwrite.io/static/logo.png" alt="openwrite logo"></p>
+<p>Code: <code>![openwrite logo](https://openwrite.io/static/logo.png)</code></p>
+<h4>Image options</h4>
+<p>To edit the image dimensions, you can use <code>=</code> followed by width and height. <code>*</code> can be used for "auto".</p>
+<p>To add caption to the image, you can use <code>"caption"</code> at the end.</p>
+<p><img src="https://openwrite.io/static/logo.png" alt="openwrite logo" title="This is resized image with caption" width="400" height="auto"></p>
+<p>Code: <code>![openwrite logo](https://openwrite.io/static/logo.png =400x* "This is resized image with caption")</code></p>
+<hr>
+<h3>Code</h3>
+<h4>Inline Code</h4>
+<p>Wrap your code with single backticks <code>`</code>.</p>
+<p>Use the <code>create_engine()</code> function to connect.</p>
+<p>Code: <code>Use the `create_engine()` function to connect.</code></p>
+<h4>Code Blocks</h4>
+<p>Wrap your code block with three backticks <code></code>. You can also specify the language for syntax highlighting.</p>
+<pre><code>from sqlalchemy import create_engine
+
+# Use the PyMySQL driver
+engine = create_engine('mysql+pymysql://user:pass@host/db')
+</code></pre>
+<p>Code:</p>
+<pre><code>```python
+from sqlalchemy import create_engine
+
+# Use the PyMySQL driver
+engine = create_engine('mysql+pymysql://user:pass@host/db')
+```
+</code></pre>
+<hr>]]></content:encoded><pubDate>Tue, 10 Jun 2025 01:23:45 +0000</pubDate></item></channel></rss>

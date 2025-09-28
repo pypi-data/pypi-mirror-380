@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>themes test</title><link>https://openwrite.io/b/themes-test</link><description>
+Hello there! 👋
+You can edit your blog description in dashboard</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://openwrite.io/static/favicon.png</url><title>themes test</title><link>https://openwrite.io/b/themes-test</link></image><lastBuildDate>Sat, 27 Sep 2025 16:04:51 +0000</lastBuildDate><ttl>5</ttl><item><title>qweqwe</title><link>https://openwrite.io/b/themes-test/qweqwe-3</link><description>xxxxcwasqedcwecwesdrcf...</description><content:encoded><![CDATA[<p>xxxxcwasqedcwecwesdrcf</p>]]></content:encoded><pubDate>Sat, 13 Sep 2025 16:39:58 +0000</pubDate></item><item><title>qweqwe1111</title><link>https://openwrite.io/b/themes-test/qweqwe1111</link><description>xxxxcwasqedcwecwesdrcf...</description><content:encoded><![CDATA[<p>xxxxcwasqedcwecwesdrcf</p>]]></content:encoded><pubDate>Sat, 13 Sep 2025 16:39:11 +0000</pubDate></item><item><title>qweqwe</title><link>https://openwrite.io/b/themes-test/qweqwe</link><description>xxxxcwasqedcwecwesdrcf...</description><content:encoded><![CDATA[<p>xxxxcwasqedcwecwesdrcf</p>]]></content:encoded><pubDate>Sat, 13 Sep 2025 16:39:02 +0000</pubDate></item><item><title>post 1</title><link>https://openwrite.io/b/themes-test/post-1</link><description>That's a post title 😎
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</description><content:encoded><![CDATA[<h3>That's a post title 😎</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><img src="https://openwrite.b-cdn.net/bca60191f495cd71ad8a94985f1271a8.jpg" alt="alt text" title="That's an owl" width="400" height="auto"></p>
+<hr>
+<h3>Things to remember:</h3>
+<ul>
+<li>First thing</li>
+<li>Second thing</li>
+<li>Third thing</li>
+</ul>
+<blockquote>
+  <p>It's so simple to be wise. Just think of something stupid to say and say the opposite.
+  ~ Sam Levenson</p>
+</blockquote>]]></content:encoded><pubDate>Fri, 18 Jul 2025 10:23:09 +0000</pubDate></item></channel></rss>
