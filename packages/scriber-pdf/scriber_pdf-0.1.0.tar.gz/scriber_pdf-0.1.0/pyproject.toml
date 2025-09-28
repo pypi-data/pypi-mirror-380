@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scriber-pdf"
+version = "0.1.0"
+description = "Build PDFs in Python easily using a component-based structure."
+authors = [{ name = "Fabian Serrano" }]
+requires-python = ">=3.10"
+dependencies = [
+  "reportlab>=3.6",
+]
+readme = "README.md"
+license = { text = "Proprietary" }
+
+[project.urls]
+Homepage = "https://example.com/" 
+
+[tool.uv]
+# uv will read standard PEP 621 metadata; this section can later host settings.
+
+[project.optional-dependencies]
+images = ["requests>=2.32"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scriber"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "scriber",
+  "README.md",
+  "pyproject.toml",
+  "uv.lock",
+]
+
+[dependency-groups]
+dev = [
+    "twine>=6.2.0",
+]
