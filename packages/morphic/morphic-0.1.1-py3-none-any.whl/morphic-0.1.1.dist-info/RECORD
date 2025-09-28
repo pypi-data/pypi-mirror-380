@@ -1,0 +1,11 @@
+morphic/__init__.py,sha256=t_wvNkswHUOcDJAi8jhixJ99fO7yAu0gn5FQUdIh9Ks,2249
+morphic/autoenum.py,sha256=oT2cKhlp7ogl8uTyv3QnhfMmhklgD0qxYtz8aoSZcfo,14889
+morphic/function.py,sha256=24pfsmM4v5hx2T9vUq8-ip0-Bj2Wi97vnHPsDcvUArs,10272
+morphic/imports.py,sha256=radmzaMYkAls9IAHKqxsq4tv3kTWF1zs2YXpLY2XBrE,3077
+morphic/registry.py,sha256=T5pqzdCREZJ1La9ef-XPFFcBoW6u9JxaCXKFc8T6k0c,38985
+morphic/structs.py,sha256=BWvj5dCeglkjqOFDSpEG-C7JdT32VvAdji-jArBKofY,10734
+morphic/typed.py,sha256=rmmL8B4-HwQhfS64uz2CdTiXsvynQPLptqUWbjJFjGs,56362
+morphic-0.1.1.dist-info/METADATA,sha256=8C1iQ10QjhZ1Qv3Y31txcvKRiIqKfmIeHc7kuldq6rE,10529
+morphic-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+morphic-0.1.1.dist-info/licenses/LICENSE,sha256=Fu83sfpznMNp6N5-PYx62oGz7AhwUOgI7dWuRL-Hh3M,1072
+morphic-0.1.1.dist-info/RECORD,,
