@@ -1,0 +1,1 @@
+ce package à été crée par Titouan CORRADO, ce package à pour but d'être amélioré tout au long de l'année scolaire 2025-2026 pour les premières spé NSI

@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/NSI_corrati/__init__.py
+src/NSI_corrati/func.py
+src/NSI_corrati.egg-info/PKG-INFO
+src/NSI_corrati.egg-info/SOURCES.txt
+src/NSI_corrati.egg-info/dependency_links.txt
+src/NSI_corrati.egg-info/top_level.txt
