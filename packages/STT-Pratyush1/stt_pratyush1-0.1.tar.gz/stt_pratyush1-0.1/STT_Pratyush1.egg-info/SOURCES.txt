@@ -1,0 +1,6 @@
+setup.py
+STT_Pratyush/__init__.py
+STT_Pratyush1.egg-info/PKG-INFO
+STT_Pratyush1.egg-info/SOURCES.txt
+STT_Pratyush1.egg-info/dependency_links.txt
+STT_Pratyush1.egg-info/top_level.txt
