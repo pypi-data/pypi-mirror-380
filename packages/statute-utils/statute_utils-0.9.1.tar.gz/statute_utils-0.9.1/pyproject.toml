@@ -1,0 +1,42 @@
+[project]
+name = "statute-utils"
+requires-python = ">=3.13"
+description = "Toolkit for Philippine rules."
+version = "0.9.1"
+dependencies = [
+  "prelawsql >= 0.0.13", # base
+  "markdownify >= 1.2.0", # fetch
+  "jinja2 >= 3.1.6", # template
+  "lxml >= 6.0.0", # template
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+    # testing
+    "pytest >= 8.4",
+    "pytest-cov >= 7.0",
+    # docs
+    "mkdocs >= 1.6.1",
+    "mkdocs-material >= 9.6.20",
+    "mkdocstrings[python] >= 0.30.1",
+]
+
+[project.scripts]
+builder = "statute_utils:cli"
+
+[tool.pytest.ini_options]
+minversion = "8.4"
+addopts = "-ra -q --cov --doctest-modules"
+testpaths = ["tests", "src/statute_utils"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = ["F401", "F403"]
+fixable = ["F", "E", "W", "I001"]
+select = ["F", "E", "W", "I001"]
+
+[tool.uv]
+package = true
