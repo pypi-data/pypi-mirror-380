@@ -1,0 +1,7 @@
+boto3_dataclass_notificationscontacts/__init__.py,sha256=9AnqQUFSPfktfd8mP6SV-ws2OoWM2EopCdg3SNhyeVM,136
+boto3_dataclass_notificationscontacts/caster.py,sha256=zv5x5QcTU1Ql9KegDG1TM5yHsJnwdkrRwXla4FMBIZc,1108
+boto3_dataclass_notificationscontacts/type_defs.py,sha256=CsFVppCKq9DgbpDn1vbzh9jQM3_dtcBZ8qfEp_W4XsQ,14992
+boto3_dataclass_notificationscontacts-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_notificationscontacts-1.40.0.dist-info/METADATA,sha256=dO3EUQrP0c3L3rAALj6q2uYc9VC9VNbSl7YEk5wcW2w,1781
+boto3_dataclass_notificationscontacts-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_notificationscontacts-1.40.0.dist-info/RECORD,,
