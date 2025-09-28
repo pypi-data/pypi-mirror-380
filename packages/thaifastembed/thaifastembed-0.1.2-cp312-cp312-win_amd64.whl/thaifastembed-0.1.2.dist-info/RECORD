@@ -1,0 +1,9 @@
+thaifastembed-0.1.2.dist-info/METADATA,sha256=4vFoXN5MOlyNUFvFg5x0McWc8tbHKm3ib__NqVISf_Q,4693
+thaifastembed-0.1.2.dist-info/WHEEL,sha256=4hYCffp0RsSVQAuv2PMtXQ9QS7YSHeZi4PrSg-wi2q0,96
+thaifastembed/__init__.py,sha256=Q89K1AuQxoCpghQMTm-n0kEEqsc_VgbxI34De2mvSsM,478
+thaifastembed/bm25.py,sha256=RPeLEW664jREne6cLiLbkYIvK96VNmTfn8ZR53_5xpc,5086
+thaifastembed/sparse_embedding.py,sha256=EsXXt38oRzUZ3m1ftCdHfAPI_Apffm4pDWnuvtWFd40,825
+thaifastembed/text_processor.py,sha256=FlH9vUmDpUwkSN-AY1zabZaDScbbzhOqIw2cfnoZWIo,6903
+thaifastembed/thaifastembed_rust.cp312-win_amd64.pyd,sha256=-cr_nH8Dgd9oY2S5KfsLVQqbwOyGckVNC7w2ZgxJNoA,4186624
+thaifastembed/types.py,sha256=GKUjuiJZTwkHTAu1jxZFlGnNHmJ_NaYTzmu9z1owW5s,483
+thaifastembed-0.1.2.dist-info/RECORD,,
