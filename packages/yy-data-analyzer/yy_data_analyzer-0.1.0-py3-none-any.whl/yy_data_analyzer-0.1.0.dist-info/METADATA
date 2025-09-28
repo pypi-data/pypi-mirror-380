@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: yy-data-analyzer
+Version: 0.1.0
+Summary: a analyzer mcp server
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.14.1
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: twine>=6.2.0
