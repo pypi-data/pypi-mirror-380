@@ -1,0 +1,95 @@
+Metadata-Version: 2.4
+Name: sphinx-a4doc
+Version: 1.7.0
+Summary: Sphinx domain and autodoc for Antlr4 grammars
+Home-page: https://github.com/taminomara/sphinx-a4doc
+Author: Tamika Nomara
+Author-email: taminomara@gmail.com
+License: MIT
+Project-URL: Documentation, https://taminomara.github.io/sphinx-a4doc/
+Project-URL: Source, https://github.com/taminomara/sphinx-a4doc
+Project-URL: Tracker, https://github.com/taminomara/sphinx-a4doc/issues
+Keywords: sphinx antlr4 autodoc
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Domain
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sphinx>=1.8.0
+Requires-Dist: antlr4-python3-runtime~=4.13.2
+Requires-Dist: PyYAML
+Requires-Dist: svglib
+Dynamic: license-file
+Dynamic: project-url
+
+# Sphinx plugin for Antlr4
+
+Sphinx-A4Doc is deprecated, please use [Sphinx-Syntax] instead.
+
+See [migration guide] for more info.
+
+[Sphinx-Syntax]: https://taminomara.github.io/sphinx-syntax/
+
+[migration guide]: https://taminomara.github.io/sphinx-syntax/sphinx-a4doc.html
+
+<!--- cut --->
+
+## Resources
+
+- [Documentation](https://taminomara.github.io/sphinx-a4doc/)
+
+## Changelog
+
+*v1.7.0*
+
+- End of support announcement.
+
+*v1.6.0*
+
+- Support LaTeX builder.
+
+*v1.5.0*
+
+- Fixed position of text in diagram nodes in Firefox.
+- Added an option to set custom classes to diagram nodes: `//@ doc:css-class`.
+
+*v1.4.0*
+
+- Fixed compatibility with `singlehtml` mode (see [#15](https://github.com/taminomara/sphinx-a4doc/issues/15)).
+
+*v1.3.0*
+
+- Fixed python 3.9 compatibility issue (by [@sandrotosi](https://github.com/sandrotosi)).
+
+*v1.2.2, v1.2.3, v1.2.4*
+
+- No functional changes, just setting up CI to push PyPI releases automatically.
+
+*v1.2.1*
+
+- Fixed integration with intersphinx.
+
+*v1.2.0*:
+
+- Renamed `conf.py` settings: `a4_autodoc_*` became `a4_autogrammar_*`.
+- Added support for section comments in grammar files.
+- Added flexible settings to control how literal lexer rules are rendered.
+- Added setting to convert rule names from ``CamelCase`` to ``dash-case``.
+- Fixed documentation comments are parsed incorrectly in some cases.
+
+*v1.0.1*:
+
+- Fixed absence of `.css` file for railroad diagrams.
+
+*v1.0.0*:
+
+- Initial release.
