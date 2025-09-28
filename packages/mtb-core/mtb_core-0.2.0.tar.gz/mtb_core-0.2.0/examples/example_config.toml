@@ -1,0 +1,6 @@
+username = "alice"
+retries = 3
+
+[database]
+host = "localhost"
+port = 5432

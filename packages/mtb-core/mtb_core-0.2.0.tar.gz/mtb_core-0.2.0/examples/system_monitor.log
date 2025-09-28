@@ -1,0 +1,13 @@
+2025-09-27 13:44:52 | Memory Usage | Status: normal -> warning | Value: 77.90%
+2025-09-27 13:50:23 | Memory Usage | Status: normal -> warning | Value: 79.90%
+2025-09-27 13:53:11 | Memory Usage | Status: normal -> warning | Value: 79.60%
+2025-09-27 13:54:05 | Memory Usage | Status: normal -> warning | Value: 78.80%
+2025-09-27 13:54:07 | Memory Usage | Status: normal -> warning | Value: 78.90%
+2025-09-27 13:57:30 | Memory Usage | Status: normal -> warning | Value: 78.20%
+2025-09-27 13:58:37 | Memory Usage | Status: normal -> warning | Value: 78.70%
+2025-09-27 13:58:38 | CPU Usage | Status: normal -> critical | Value: 88.30%
+2025-09-27 13:58:38 | CPU Temperature | Status: normal -> warning | Value: 74.15°C
+2025-09-27 13:58:39 | CPU Usage | Status: critical -> normal | Value: 17.30%
+2025-09-27 13:58:39 | CPU Temperature | Status: warning -> normal | Value: 38.65°C
+2025-09-27 13:59:15 | Memory Usage | Status: normal -> warning | Value: 78.90%
+2025-09-27 14:00:18 | Memory Usage | Status: normal -> warning | Value: 78.50%

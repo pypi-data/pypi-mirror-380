@@ -1,0 +1,8 @@
+numpy==1.25.2
+pyzmq
+keyboard
+rich
+rich_argparse
+msgpack
+watchdog
+aiofiles
