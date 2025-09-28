@@ -1,0 +1,2 @@
+[console_scripts]
+appcore = appcore.introspection:execute_cli
