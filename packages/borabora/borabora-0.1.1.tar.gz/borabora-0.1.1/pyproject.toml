@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "borabora"
+version = "0.1.1"
+description = "Command Line AI Assistant that converts natural language to Unix commands using Groq AI"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "AndreyZ", email = "andrey@invisible-hand.dev"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "groq>=0.4.0",
+]
+keywords = ["cli", "ai", "assistant", "unix", "commands", "groq", "natural-language"]
+
+[project.urls]
+Homepage = "https://github.com/invisible-hand/borabora"
+Repository = "https://github.com/invisible-hand/borabora"
+Issues = "https://github.com/invisible-hand/borabora/issues"
+
+[project.scripts]
+borabora = "clai.main:main"
+
+[tool.setuptools]
+packages = ["clai"]
+
+[tool.setuptools.package-data]
+clai = ["*.txt", "*.md"]
