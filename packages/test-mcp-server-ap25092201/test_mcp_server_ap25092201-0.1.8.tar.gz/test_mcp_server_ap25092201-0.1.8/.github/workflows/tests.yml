@@ -1,0 +1,55 @@
+name: Tests
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['^3.10']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache uv dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/uv
+          key: ${{ runner.os }}-uv-${{ hashFiles('**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+          uv --version
+
+      - name: Install dependencies
+        run: ./run.sh install:all
+
+      - name: Check code formatting with black
+        run: ./run.sh format:check:black
+
+      - name: Check import sorting with isort
+        run: ./run.sh format:check:isort
+
+      - name: Run type checking with mypy
+        run: ./run.sh lint:mypy
+
+      - name: Run linting with flake8
+        run: ./run.sh lint:flake8
+
+      - name: Run tests
+        run: ./run.sh tests || [ $? -eq 5 ]
