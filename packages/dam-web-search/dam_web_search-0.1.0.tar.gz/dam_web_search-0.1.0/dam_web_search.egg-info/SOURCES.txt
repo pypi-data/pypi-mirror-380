@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+dam_search/__init__.py
+dam_search/cli.py
+dam_web_search.egg-info/PKG-INFO
+dam_web_search.egg-info/SOURCES.txt
+dam_web_search.egg-info/dependency_links.txt
+dam_web_search.egg-info/entry_points.txt
+dam_web_search.egg-info/requires.txt
+dam_web_search.egg-info/top_level.txt
+tests/test_cli.py
