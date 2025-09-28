@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog igilq</title><link>https://igilq.openwrite.io</link><description>x</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://openwrite.io/static/favicon.png</url><title>Blog igilq</title><link>https://igilq.openwrite.io</link></image><lastBuildDate>Thu, 18 Sep 2025 15:22:36 +0000</lastBuildDate><ttl>5</ttl><item><title>GrapheneOS vs stockowy Android na Pixelu. Wady i zalety</title><link>https://igilq.openwrite.io/grapheneos-vs-stockowy-android-na-pixelu-wady-i-zalety-2</link><description>Hej, od jakiegoś czasu miałem zainstalowany GrapheneOS, ale po pewnym czasie zaczęły się problemy. com.android.systemui zaczął się zawieszać, pojawiał się komunikat o błędzie, a jedyną opcją było wymuszenie zamknięcia aplikacji....</description><content:encoded><![CDATA[<p>Hej, od jakiegoś czasu miałem zainstalowany GrapheneOS, ale po pewnym czasie zaczęły się problemy. <code>com.android.systemui</code> zaczął się zawieszać, pojawiał się komunikat o błędzie, a jedyną opcją było wymuszenie zamknięcia aplikacji. Mogłem też zamknąć powiadomienie, ale to nie pomagało, bo komunikat wracał po chwili. Po zamknięciu problem powracał. Napisałem więc na oficjalnym czacie GrapheneOS z prośbą o pomoc… i cisza. W związku z tym zdecydowałem się zainstalować stockowego Androida (fabrycznego systemu, który jest na urządzeniu po zakupie). Jest fajny, bo ma wiele ciekawych opcji, np. automatyczny hotspot Wi-Fi. Jednak jest też dużo zbędnego oprogramowania, a bateria szybko się wyczerpuje.</p>
+<p>Postanowiłem więc stworzyć tabelę zalet i wad dla obu systemów i udostępnić ją tutaj, gdyby ktoś potrzebował pomocy w podjęciu decyzji.</p>
+<table>
+<thead>
+<tr>
+<th><strong>GrapheneOS</strong></th>
+<th><strong>Stock Android</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zalety:</strong></td>
+<td><strong>Zalety:</strong></td>
+</tr>
+<tr>
+<td>Brak zbędnego oprogramowania (dzięki minimalnej instalacji)</td>
+<td>Automatyczny hotspot Wi-Fi</td>
+</tr>
+<tr>
+<td>Dłuższa żywotność baterii</td>
+<td>Portfel Google działa</td>
+</tr>
+<tr>
+<td>Możliwość ładowania telefonu z dowolnego portu (nawet w miejscach publicznych)</td>
+<td>Wsparcie techniczne</td>
+</tr>
+<tr>
+<td>Sandboxing <strong>wszystkich</strong> aplikacji</td>
+<td>Automatyczna instalacja aplikacji ze Sklepu Play</td>
+</tr>
+<tr>
+<td>Lepsze opcje tworzenia kopii zapasowych (można zapisać na dysku sieciowym lub USB)</td>
+<td>Łatwe zdalne blokowanie i formatowanie telefonu</td>
+</tr>
+<tr>
+<td>Natywna przeglądarka plików jest widoczna (na stocku ikona jest ukryta)</td>
+<td>Adaptacyjne wibracje i dźwięk</td>
+</tr>
+<tr>
+<td>Szybsze aktualizacje niż na stocku</td>
+<td>Wszystkie aplikacje działają</td>
+</tr>
+<tr>
+<td>Nie jest potrzebny antywirus (łatki są ogólne, a nie pod konkretne wirusy)</td>
+<td></td>
+</tr>
+<tr>
+<td>Tworzenie kopii zapasowych jest prostsze (wystarczy wybrać lokalizację i dane, reszta dzieje się automatycznie)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brak wycieków VPN</td>
+<td></td>
+</tr>
+<tr>
+<td>Losowe cyfry w kodzie PIN (trudniej go podglądnąć)</td>
+<td></td>
+</tr>
+<tr>
+<td>Możliwość dodania dodatkowego kodu PIN przy odcisku palca (dodatkowa ochrona)</td>
+<td></td>
+</tr>
+<tr>
+<td>Usługi Google są opcjonalne</td>
+<td></td>
+</tr>
+<tr>
+<td>Domyślne aplikacje GrapheneOS dbają o prywatność (np. kamera usuwa metadane, przeglądarka PDF działa w piaskownicy)</td>
+<td></td>
+</tr>
+<tr>
+<td>System nadal oparty na Androidzie</td>
+<td></td>
+</tr>
+<tr>
+<td>Google nie blokuje instalowania plików APK (GrapheneOS oparty na AOSP)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Wady:</strong></td>
+<td><strong>Wady:</strong></td>
+</tr>
+<tr>
+<td>Nie da się automatycznie instalować aplikacji ze Sklepu Play</td>
+<td>Krótsza żywotność baterii</td>
+</tr>
+<tr>
+<td>Brak możliwości płatności zbliżeniowych za pomocą Portfela Google</td>
+<td>Dużo oprogramowania szpiegującego od Google</td>
+</tr>
+<tr>
+<td>Brak automatycznego hotspotu (chyba że istnieje, ale nie odkryłem jak go włączyć)</td>
+<td>Dużo zbędnego oprogramowania</td>
+</tr>
+<tr>
+<td>Rzadkie wsparcie techniczne na oficjalnych czatach GrapheneOS</td>
+<td>Trudny dostęp do natywnej przeglądarki plików (ukryta ikona)</td>
+</tr>
+<tr>
+<td>Na niektórych lotniskach urządzenie z GrapheneOS może być automatycznie sprawdzane (jeśli ktoś zauważy Google Pixel z GrapheneOS)</td>
+<td>Automatyczna kopia zapasowa obejmuje tylko zdjęcia i niektóre dane, tylko na chmurę Google</td>
+</tr>
+<tr>
+<td>Nie wszystkie aplikacje są obsługiwane</td>
+<td>Wycieki VPN</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon bardziej podatny na ataki (ze względu na dużą ilość zbędnego oprogramowania)</td>
+</tr>
+</tbody>
+</table>]]></content:encoded><pubDate>Thu, 18 Sep 2025 15:22:36 +0000</pubDate></item><item><title>GrapheneOS vs stockowy Android na Pixelu. Wady i zalety</title><link>https://igilq.openwrite.io/grapheneos-vs-stockowy-android-na-pixelu-wady-i-zalety</link><description>Hej, od jakiegoś czasu miałem zainstalowany GrapheneOS, ale po pewnym czasie zaczęły się problemy. com.android.systemui zaczął się zawieszać, pojawiał się komunikat o błędzie, a jedyną opcją było wymuszenie zamknięcia aplikacji....</description><content:encoded><![CDATA[<p>Hej, od jakiegoś czasu miałem zainstalowany GrapheneOS, ale po pewnym czasie zaczęły się problemy. <code>com.android.systemui</code> zaczął się zawieszać, pojawiał się komunikat o błędzie, a jedyną opcją było wymuszenie zamknięcia aplikacji. Mogłem też zamknąć powiadomienie, ale to nie pomagało, bo komunikat wracał po chwili. Po zamknięciu problem powracał. Napisałem więc na oficjalnym czacie GrapheneOS z prośbą o pomoc… i cisza. W związku z tym zdecydowałem się zainstalować stockowego Androida (fabrycznego systemu, który jest na urządzeniu po zakupie). Jest fajny, bo ma wiele ciekawych opcji, np. automatyczny hotspot Wi-Fi. Jednak jest też dużo zbędnego oprogramowania, a bateria szybko się wyczerpuje.</p>
+<p>Postanowiłem więc stworzyć tabelę zalet i wad dla obu systemów i udostępnić ją tutaj, gdyby ktoś potrzebował pomocy w podjęciu decyzji.</p>
+<table>
+<thead>
+<tr>
+<th><strong>GrapheneOS</strong></th>
+<th><strong>Stock Android</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zalety:</strong></td>
+<td><strong>Zalety:</strong></td>
+</tr>
+<tr>
+<td>Brak zbędnego oprogramowania (dzięki minimalnej instalacji)</td>
+<td>Automatyczny hotspot Wi-Fi</td>
+</tr>
+<tr>
+<td>Dłuższa żywotność baterii</td>
+<td>Portfel Google działa</td>
+</tr>
+<tr>
+<td>Możliwość ładowania telefonu z dowolnego portu (nawet w miejscach publicznych)</td>
+<td>Wsparcie techniczne</td>
+</tr>
+<tr>
+<td>Sandboxing <strong>wszystkich</strong> aplikacji</td>
+<td>Automatyczna instalacja aplikacji ze Sklepu Play</td>
+</tr>
+<tr>
+<td>Lepsze opcje tworzenia kopii zapasowych (można zapisać na dysku sieciowym lub USB)</td>
+<td>Łatwe zdalne blokowanie i formatowanie telefonu</td>
+</tr>
+<tr>
+<td>Natywna przeglądarka plików jest widoczna (na stocku ikona jest ukryta)</td>
+<td>Adaptacyjne wibracje i dźwięk</td>
+</tr>
+<tr>
+<td>Szybsze aktualizacje niż na stocku</td>
+<td>Wszystkie aplikacje działają</td>
+</tr>
+<tr>
+<td>Nie jest potrzebny antywirus (łatki są ogólne, a nie pod konkretne wirusy)</td>
+<td></td>
+</tr>
+<tr>
+<td>Tworzenie kopii zapasowych jest prostsze (wystarczy wybrać lokalizację i dane, reszta dzieje się automatycznie)</td>
+<td></td>
+</tr>
+<tr>
+<td>Brak wycieków VPN</td>
+<td></td>
+</tr>
+<tr>
+<td>Losowe cyfry w kodzie PIN (trudniej go podglądnąć)</td>
+<td></td>
+</tr>
+<tr>
+<td>Możliwość dodania dodatkowego kodu PIN przy odcisku palca (dodatkowa ochrona)</td>
+<td></td>
+</tr>
+<tr>
+<td>Usługi Google są opcjonalne</td>
+<td></td>
+</tr>
+<tr>
+<td>Domyślne aplikacje GrapheneOS dbają o prywatność (np. kamera usuwa metadane, przeglądarka PDF działa w piaskownicy)</td>
+<td></td>
+</tr>
+<tr>
+<td>System nadal oparty na Androidzie</td>
+<td></td>
+</tr>
+<tr>
+<td>Google nie blokuje instalowania plików APK (GrapheneOS oparty na AOSP)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Wady:</strong></td>
+<td><strong>Wady:</strong></td>
+</tr>
+<tr>
+<td>Nie da się automatycznie instalować aplikacji ze Sklepu Play</td>
+<td>Krótsza żywotność baterii</td>
+</tr>
+<tr>
+<td>Brak możliwości płatności zbliżeniowych za pomocą Portfela Google</td>
+<td>Dużo oprogramowania szpiegującego od Google</td>
+</tr>
+<tr>
+<td>Brak automatycznego hotspotu (chyba że istnieje, ale nie odkryłem jak go włączyć)</td>
+<td>Dużo zbędnego oprogramowania</td>
+</tr>
+<tr>
+<td>Rzadkie wsparcie techniczne na oficjalnych czatach GrapheneOS</td>
+<td>Trudny dostęp do natywnej przeglądarki plików (ukryta ikona)</td>
+</tr>
+<tr>
+<td>Na niektórych lotniskach urządzenie z GrapheneOS może być automatycznie sprawdzane (jeśli ktoś zauważy Google Pixel z GrapheneOS)</td>
+<td>Automatyczna kopia zapasowa obejmuje tylko zdjęcia i niektóre dane, tylko na chmurę Google</td>
+</tr>
+<tr>
+<td>Nie wszystkie aplikacje są obsługiwane</td>
+<td>Wycieki VPN</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon bardziej podatny na ataki (ze względu na dużą ilość zbędnego oprogramowania)</td>
+</tr>
+</tbody>
+</table>]]></content:encoded><pubDate>Thu, 18 Sep 2025 15:22:02 +0000</pubDate></item><item><title>Pierwszy wpis</title><link>https://igilq.openwrite.io/pierwszy-wpis</link><description>Witam,
+oto piewszy wpis na moim blogu na tej stronie… na razie muszę się nauczyć co i jak ale wygląda ciekawie...</description><content:encoded><![CDATA[<p>Witam,
+oto piewszy wpis na moim blogu na tej stronie… na razie muszę się nauczyć co i jak ale wygląda ciekawie</p>]]></content:encoded><pubDate>Wed, 17 Sep 2025 17:37:49 +0000</pubDate></item></channel></rss>
