@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+testnexus/__init.py
+testnexus/main.py
+testnexus.egg-info/PKG-INFO
+testnexus.egg-info/SOURCES.txt
+testnexus.egg-info/dependency_links.txt
+testnexus.egg-info/entry_points.txt
+testnexus.egg-info/requires.txt
+testnexus.egg-info/top_level.txt

@@ -1,0 +1,30 @@
+[project]
+name = "testnexus"
+version = "0.1.0"
+description = "sj测试"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.15.0",
+]
+
+
+
+# ========== Key Configuration Section ==========
+# [project.scripts] defines standard command-line entry points
+[project.scripts]
+# Script Name (command user executes) = 'module_path:attribute_name'
+# The command run by the user is "mcp-nexus-server"
+mcp-nexus-server = "testnexus.main:mcp"
+# Ensure the module path 'mcp_nexus_up_uv.main' is correct,
+# and 'mcp' is the FastMCP instance created in main.py.
+# ===============================================
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# [tool.uv] section is reserved for uv-specific configuration, not standard entry points.
+# [tool.uv]
+# dev-dependencies = []
