@@ -1,0 +1,2 @@
+[console_scripts]
+pyinla = pyinla.installer:main
