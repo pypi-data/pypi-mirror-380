@@ -1,0 +1,13 @@
+pyinp-0.1.0.dist-info/licenses/LICENSE,sha256=XQid-SfjOz3U5wGaiSo479zl8YvlIupIQJROkKLVvz0,1054
+templates/.gitignore,sha256=XyyaK2V3JGIXm4A_vN3aOUNiZ9g0pdg4lW9Qze1Mp9s,4561
+templates/.pylintrc,sha256=zBtiVYQSFR4r2YJXFQ9fa-MJifQ2HbmUwrXjLBi4O8s,22061
+templates/LICENSE,sha256=3cvyTgRuT2_1XWeFktJPNq66t2NKO84iCh6NDFixbVU,1063
+templates/README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+templates/pylint.yml,sha256=HxD8qVxPkwBMzYGyWf5f68g3SVB_97ePfV0Hnd7IcWU,604
+templates/pyproject.toml,sha256=_ASHj0CanSOrf1MCNOyAEgnVa1-q3SuZoKFuI5P9peY,1066
+templates/python-publish.yml,sha256=Is6rCGD1xJPEtb1No2erm0GrK0G4CRpVVP7ocBmplbY,2043
+pyinp-0.1.0.dist-info/METADATA,sha256=fb_tM0I14vjnBV-I_nNglo71vvAUbrec4zIpsna0_nY,3393
+pyinp-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyinp-0.1.0.dist-info/entry_points.txt,sha256=L1dax60OOhoIm9UB3YJfa5mOaHzWvOJ_946_NHKsM3w,40
+pyinp-0.1.0.dist-info/top_level.txt,sha256=Fm_uifOIeZdeTkA7g1vBrg8_icDP_XC7Gw4TPobfX0s,10
+pyinp-0.1.0.dist-info/RECORD,,
