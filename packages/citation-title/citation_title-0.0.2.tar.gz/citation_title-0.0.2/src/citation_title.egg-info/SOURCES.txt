@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/citation_title/__init__.py
+src/citation_title/adverse.py
+src/citation_title/inre.py
+src/citation_title/titles.py
+src/citation_title.egg-info/PKG-INFO
+src/citation_title.egg-info/SOURCES.txt
+src/citation_title.egg-info/dependency_links.txt
+src/citation_title.egg-info/top_level.txt
+src/citation_title/litigants/__init__.py
+src/citation_title/litigants/humans.py
+src/citation_title/litigants/offices.py
+src/citation_title/litigants/utils.py
+tests/test_version.py
