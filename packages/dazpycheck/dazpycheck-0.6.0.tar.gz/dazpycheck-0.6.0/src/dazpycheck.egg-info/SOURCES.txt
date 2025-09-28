@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/dazpycheck/__init__.py
+src/dazpycheck/main.py
+src/dazpycheck/main_test.py
+src/dazpycheck.egg-info/PKG-INFO
+src/dazpycheck.egg-info/SOURCES.txt
+src/dazpycheck.egg-info/dependency_links.txt
+src/dazpycheck.egg-info/entry_points.txt
+src/dazpycheck.egg-info/top_level.txt
