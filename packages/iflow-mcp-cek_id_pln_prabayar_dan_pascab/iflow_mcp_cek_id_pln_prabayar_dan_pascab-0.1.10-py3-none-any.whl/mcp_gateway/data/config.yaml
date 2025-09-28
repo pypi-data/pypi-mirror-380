@@ -1,0 +1,39 @@
+server:
+  name: Cek ID PLN Prabayar Dan Pascabayar
+  description: "Cek Data Pelanggan PLN"
+  options:
+    requestTimeoutMillis: 15000
+
+tools:
+  - name: Cek PLN Prabayar (Token)
+    description: "PLN Prabayar"
+    args:
+      - name: "id"
+        description: "ID Pelanggan / Nomor Meteran"
+        required: "True"
+        default: "56802509879"
+
+    requestTemplate:
+      url: https://cek-id-pln-prabayar-dan-pascabayar.p.rapidapi.com/cekPrabayarPLN?id={{args.id}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "cek-id-pln-prabayar-dan-pascabayar.p.rapidapi.com"
+  - name: Cek PLN Pascabayar (Tagihan)
+    description: "PLN Pascabayar"
+    args:
+      - name: "id"
+        description: "ID Pelanggan / Nomor Meteran"
+        required: "True"
+        default: "521540026799"
+
+    requestTemplate:
+      url: https://cek-id-pln-prabayar-dan-pascabayar.p.rapidapi.com/cekPascabayarPLN?id={{args.id}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "cek-id-pln-prabayar-dan-pascabayar.p.rapidapi.com"
