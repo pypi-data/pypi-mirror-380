@@ -1,0 +1,13 @@
+setuptools
+wheel
+dotenv
+twine
+pytest
+pandas
+pytest-mypy
+
+custom-python-logger
+python-jira-plus
+python-notion-plus
+python-pandas-translation
+python-simple-email-sender
