@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: wejax
+Version: 1.0.1
+Summary: Compute the Fisher Information Matrix (FIM) of your favorite JAX models
+License: BSD-3-Clause
+Keywords: jax,fisher,fim,data analysis
+Author: Jean-Baptiste Bayle
+Author-email: j2b.bayle@gmail.com
+Maintainer: Jean-Baptiste Bayle
+Maintainer-email: j2b.bayle@gmail.com
+Requires-Python: >=3.12,<4
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: ipython (>=8.31.0,<9.0.0)
+Requires-Dist: jax (>=0.4.38,<0.5.0)
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: numpy (>=2.2.1,<3.0.0)
+Requires-Dist: scipy (>=1.15.0,<2.0.0)
+Requires-Dist: sphinx-copybutton (>=0.5.2,<0.6.0)
+Requires-Dist: sympy (>=1.13.3,<2.0.0)
+Project-URL: Bug Tracker, https://gitlab.com/lisamission/wejax/-/issues
+Project-URL: Documentation, https://lisamission.gitlab.com/wejax
+Project-URL: Repository, https://gitlab.com/lisamission/wejax
+Description-Content-Type: text/markdown
+
+# WeJAX
+
+Compute the Fisher Information Matrix (FIM) of your favorite models using
+their Jacobians; take advantage of automatic differentiation if your model
+is implemented in JAX to switly compute the Jacobian, or evaluate it
+numerically with finite differences.
+
+WeJAX also provide convenience fonctions to invert the FIM and compute error
+bars and correlations on the estimated parameters, as well as nice-looking
+plots.
+
+## Contributing
+
+This project uses Poetry for dependency management. To install the dependencies
+and the project itself, run the following command:
+
+```bash
+poetry install
+```
+
+You can now run commands inside a dedicated virtual environment by running:
+
+```bash
+poetry run <your-command>
+```
+
