@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gitbaba/__init__.py
+gitbaba/cli.py
+gitbaba2.egg-info/PKG-INFO
+gitbaba2.egg-info/SOURCES.txt
+gitbaba2.egg-info/dependency_links.txt
+gitbaba2.egg-info/entry_points.txt
+gitbaba2.egg-info/requires.txt
+gitbaba2.egg-info/top_level.txt
