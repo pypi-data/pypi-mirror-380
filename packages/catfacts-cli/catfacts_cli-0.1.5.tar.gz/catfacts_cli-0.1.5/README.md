@@ -1,0 +1,35 @@
+--------------------------------------
+A cat fact maker thats essential!
+(this is not actually made to be REALLY good so be prepared for some bugs....)
+
+--------------------------------------
+Known Bugs:
+
+    - If you put the count argument around ~1000 it gives you an traceback error. i dont know what causes it.
+
+Arguments:
+
+    --version
+
+    --count {number}
+
+    --unique
+
+    --source {api|local}
+
+    --output {list|json|text}
+
+--------------------------------------
+what does arguments do:
+
+    --version: displays version
+
+    --count {number}: displays {number} facts(explodes around 1000 as said)
+
+    --unique: guarantees no duplicates
+
+    --source {api|local}: API can do... idk facts meanwhile local is limited to 10 and is the default without this.
+
+    --output {list|json|text}: selects a specific output type, DOES NOT ACTUALLY SAVE THE FILE IN JSON,TXT, OR WHATEVER YOU THINK LIST IS
+    
+--------------------------------------
