@@ -1,0 +1,9 @@
+LICENSE,sha256=jauHIE2-JwvoaKBs4i7hLdl-UX3k25VEz6CuWcpot6c,1072
+README.md,sha256=D0g4cmYfmMawC5G0UjsnYa67GfxTR75Bat_Q7qY36IU,1073
+src/aiuml/__init__.py,sha256=HrvrLc793pOrbKjcymEloKzHmRgGv5jjdB50bNIXH2g,50
+src/aiuml/cli.py,sha256=BuDBzE0FT9rrSqqZEBtPkGyAwlt31_P_qIr2Uulzx7o,2032
+aiuml-0.0.0a0.dist-info/METADATA,sha256=uGiUW1k7HFajVHqGoSAsipmud2lL59bsvRV1f8fQ8aU,1773
+aiuml-0.0.0a0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aiuml-0.0.0a0.dist-info/entry_points.txt,sha256=MvwQzrqog49-uHaCkqqWJE1zoTYWlteHvZ8zD3_kUfM,41
+aiuml-0.0.0a0.dist-info/licenses/LICENSE,sha256=jauHIE2-JwvoaKBs4i7hLdl-UX3k25VEz6CuWcpot6c,1072
+aiuml-0.0.0a0.dist-info/RECORD,,

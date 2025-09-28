@@ -1,0 +1,2 @@
+[console_scripts]
+aiuml = aiuml.cli:main
