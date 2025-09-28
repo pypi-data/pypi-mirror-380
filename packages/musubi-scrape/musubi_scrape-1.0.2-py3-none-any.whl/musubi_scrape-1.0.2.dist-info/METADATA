@@ -1,0 +1,525 @@
+Metadata-Version: 2.4
+Name: musubi-scrape
+Version: 1.0.2
+Summary: A convenient crawling package for collecting web data.
+Project-URL: Homepage, https://github.com/Musubi-ai/Musubi
+Project-URL: Repository, https://github.com/Musubi-ai/Musubi
+Author-email: Lung-Chuan Chen <blaze7451@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+License-File: LICENSE
+Requires-Python: <4.0,>=3.9
+Requires-Dist: aiohttp<4.0.0,>=3.11.12
+Requires-Dist: anthropic<0.46.0,>=0.45.2
+Requires-Dist: apscheduler<4.0.0,>=3.11.0
+Requires-Dist: beautifulsoup4<5.0.0,>=4.13.3
+Requires-Dist: fastapi>=0.117.1
+Requires-Dist: groq<0.19.0,>=0.18.0
+Requires-Dist: huggingface-hub<0.29.0,>=0.28.1
+Requires-Dist: loguru<0.8.0,>=0.7.3
+Requires-Dist: openai<2.0.0,>=1.61.1
+Requires-Dist: orjson<4.0.0,>=3.11.3
+Requires-Dist: pandas<3.0.0,>=2.2.3
+Requires-Dist: pyarrow<20.0.0,>=19.0.0
+Requires-Dist: pymupdf4llm<0.0.18,>=0.0.17
+Requires-Dist: pymupdf<2.0.0,>=1.25.2
+Requires-Dist: python-dotenv<2.0.0,>=1.0.1
+Requires-Dist: requests<3.0.0,>=2.32.3
+Requires-Dist: rich<14.0.0,>=13.9.4
+Requires-Dist: selenium<5.0.0,>=4.28.1
+Requires-Dist: tqdm<5.0.0,>=4.67.1
+Requires-Dist: trafilatura==2.0.0
+Requires-Dist: uvicorn>=0.37.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <br>
+    <img src="assets\logo\FullLogo.png" width="600"/>
+    <br>
+</p>
+
+<h1 align="center">Weaving connection to the world.</h1>
+
+<p align="center">
+    <a href="https://github.com/Musubi-ai/Musubi/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/badge/license-Apache_2.0-blue"></a>
+    <a href="https://github.com/Musubi-ai"><img alt="Team" src="https://img.shields.io/badge/Built%20by-Musubi%20Team-blue"></a>
+</p>
+
+Musubi is a Python library designed for efficiently crawling and extracting website text, enabling users to construct scalable, domain-specific datasets from the ground up for training LLMs.
+
+With Musubi, you can:
+
+🕸️ Extract text data from most websites with common structures and transform them into markdown format.
+
+🤖 Deploy AI agents to help you find optimal parameters for website crawling and implement crawling automatically.
+
+📆 Set schedulers to schedule your crawling tasks.
+
+🗂️ Manage crawling configurations for each website conveniently.
+
+We've also developed a CLI tool that lets you crawl and deploy agents without the need to write any code!
+
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+  - [Python Package](#python-package)
+  - [From source](#from-source)
+- [Usage](#usage)
+  - [Key usage](#key-usage)
+  - [Scheduler](#scheduler)
+    - [Notification](#notification)
+  - [Agent](#agent)
+    - [Multi-agent System](#multi-agent-system)
+  - [CLI Tools](#cli-tools)
+- [License](#license)
+- [Background](#background)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
+
+# Installation
+
+## Python Package
+
+For installing Musubi with `pip`: .
+```bash
+pip install musubi-scrape
+``` 
+
+## From source
+
+You can also install Musubi from source to instantly use the latest features before the official release.
+```bash
+pip install git+https://github.com/Musubi-ai/Musubi.git
+``` 
+
+# Usage
+In Musubi, the overall crawling process can be generally split into two stages: the link-crawling stage and the content-crawling stage. In the link-crawling stage, Musubi extracts all links in the specified block on the website. For the link-crawling stage, Musubi provides four main crawling methods based on the website format to extract links of news, documents, and blogs: scan, scroll, click, and onepage. Next, the corresponding text content of each link is crawled and transformed into markdown format. 
+
+## Key usage
+To crawl website contents, you can easily use `pipeline` function:
+```python
+from musubi import Pipeline
+
+pipeline_kwargs = {
+    "dir_": dir_, # Name of directory to store links and text contents
+    "name": name, # Name of saved file 
+    "class_": class_,  # The type of data on the website.
+    "prefix": prefix, # Main prefix of website. 
+    "suffix": suffix, # The URL Musubi crawls will be formulated as "prefix" + str((page_init_val + pages) * multiplier) + "suffix".
+    "root_path": root_path, # Root of the URL if URLs in tags are presented in relative format.
+    "pages": max_pages, # Number of crawling pages if 'implementation' is 'scan' or number of scrolling times if 'implementation' is 'scroll'.
+    "page_init_val": page_init_val, # Initial value of page.
+    "multiplier": multiplier, # Multiplier of page.
+    "block1": block1, # List of HTML tag and its class. 
+    "block2": block2, # Second block if crawling nested structure
+    "implementation": crawling_implementation, # Type of crawling method to crawl URLs on the website
+    "async_": async_ # Whether to crawl website asynchronously or not
+}
+
+pipeline = Pipeline(website_config_path=website_config_path)
+pipeline.pipeline(**pipeline_kwargs)
+```
+
+
+## Scheduler
+Musubi allows users to set up a scheduler to run crawling tasks at specified times. To launch a scheduler:
+```python
+from musubi.scheduler import Controller
+
+controller = Controller()
+controller.launch_scheduler()
+```
+By default, the scheduler uses `tasks.json` in the config folder as a task management configuration and uses `websites.json` to implement crawling tasks. Users can customize these settings using arguments:
+```python
+from musubi.scheduler import Controller
+
+controller = Controller(
+        config_dir="folder-of-task.json"
+        website_config_path="path-of-website.json" 
+    )
+```
+After launching the scheduler, users can add tasks and set the scheduler to implement tasks regularly. Currently, we support users to set tasks with task type `update_all` or `by_idx`. The `update_all` task crawls all websites stored in the website configuration file and the `by_idx` task crawls the specific website as specified by its index. Note that in the Musubi scheduler, we follow the common cron format to define when to implement the task. For instance, to set a regular update task to crawl all websites stored in the `websites.json` file at 12:05:05 on the 5th day of May each year:
+```python
+from musubi.scheduler import Controller
+
+controller = Controller()
+
+def main():
+    status_code, _ = controller.check_status()
+    if status_code == 200:
+        controller.add_task(
+        task_type="update_all",
+        task_name="test1",
+        update_pages=15,
+        cron_params={"hour": 12, "second": 5, "minute": 5, "month": 5}
+    )
+
+if __name__ == "__main__":
+    main()
+```
+For valid cron_params arguments, check [reference](https://apscheduler.readthedocs.io/en/3.x/modules/triggers/cron.html).
+
+### Notification
+Users can set the argument `send_notification=True` in the `add_task` function so that the program will send Gmail notifications when scheduled tasks start and finish. Go to [this website](https://myaccount.google.com/apppasswords) to apply for an app password and set the environment variable in the `.env` file:
+
+```bash
+GOOGLE_APP_PASSWORD="your-app-password"
+```
+
+Then the notification can be used like:
+```python
+controller.add_task(
+    ...,
+    send_notification=True,
+    sender_email="youe-account@gmail.com"
+)
+```
+
+## Agent
+Musubi provides agents for users to crawl websites, set crawling schedulers, and analyze crawling configurations with the help of several top-tier proprietary LLMs from corporations such as OpenAI, Anthropic, Google, and open-source LLMs from Hugging Face. Set the API keys in the `.env` file to use these LLMs:
+
+```bash
+OPENAI_API_KEY=
+GROQ_API_KEY=
+XAI_API_KEY=
+DEEPSEEK_API_KEY=
+ANTHROPIC_API_KEY=
+GEMINI_API_KEY=
+```
+
+Alternatively, you can instantiate agents with an API key directly. The API key will be stored in the `.env` file once the agent is instantiated by default. For example, to utilize GPT-4o to build a pipeline agent in Musubi:
+
+```python
+from musubi.agent import PipelineAgent
+
+agent = PipelineAgent(
+    actions=[some-actions],
+    model_source="openai",
+    api_key="your-openai-apikey",
+    model_type="gpt-4o"
+)
+```
+
+Here is a basic example of using a pipeline agent in Musubi to crawl text contents in the 'Fiction and Poetry' category on Literary Hub:
+
+```python
+from musubi.agent import PipelineAgent
+from musubi.agent.actions import (
+    search_url,
+    analyze_website,
+    get_container,
+    get_page_info,
+    final_answer
+)
+
+
+actions = [search_url, analyze_website, get_container, get_page_info, final_answer]
+pipeline_agent = PipelineAgent(
+    actions=actions,
+    model_source="openai"
+)
+
+prompt = "Help me scrape all pages of articles from the 'Fiction and Poetry' category on Literary Hub."
+pipeline_agent.execute(prompt)
+```
+
+### Multi-agent System
+Beyond instantiating a single agent to perform specific tasks, agents can be coordinated into a hierarchical multi-agent system to execute tasks with greater efficiency, scalability, and adaptability. To build a hierarchical multi-agent system in Musubi, you can simply use `MusubiAgent`:
+
+```python
+from musubi.agent import PipelineAgent, GeneralAgent, SchedulerAgent, MusubiAgent
+from musubi.agent.actions import (
+    search_url,
+    analyze_website,
+    get_container,
+    get_page_info,
+    final_answer,
+    domain_analyze,
+    implementation_analyze,
+    update_all,
+    update_by_idx,
+    upload_data_folder,
+    del_web_config_by_idx
+)
+
+
+actions = [search_url, analyze_website, get_container, get_page_info, final_answer]
+pipeline_agent = PipelineAgent(
+    actions=actions
+)
+
+
+general_actions = [domain_analyze, implementation_analyze, update_all, update_by_idx, upload_data_folder, del_web_config_by_idx]
+general_agent = GeneralAgent(
+    actions=general_actions
+)
+
+main_agent = MusubiAgent(candidates=[general_agent, pipeline_agent])
+prompt = "Check how many websites I have scraped already."
+main_agent.execute(prompt)
+```
+
+## CLI Tools
+Musubi supports users to execute the aforementioned functions using the command line interface (CLI).
+The fundamental structure of the Musubi CLI tool is formed as:
+
+```bash
+musubi [COMMAND] [FLAGS] [ARGUMENTS]
+```
+
+For instance, to add openai api key into `.env` file with Musubi cli, you can use:
+
+```bash
+musubi env --openai your-openai-api-key
+``` 
+
+Use `pipeline` to crawl a website (Suppose that we want to crawl articles present in the first 5 pages of the Chinese website called '測試' with URL https://www.test.com/category?&pages=n):
+
+```bash
+musubi pipeline \
+  --dir_ 測試 \
+  --name 測試文章 \
+  --class_ 中文 \
+  --prefix https://www.test.com/category?&pages= \
+  --pages 5 \
+  --block1 ["div", "entry-image"] \
+  --implementation scan \
+```
+
+Use agent:
+
+```bash
+musubi agent \
+  --prompt "Help me crawl all pages of articles from the 'Fiction and Poetry' category on Literary Hub." \
+  --model_source anthropic \
+  --model_type claude-opus-4-20250514
+```
+
+Re-crawl all previously crawled websites according to the specified page numbers:
+
+```bash
+musubi strat-all \
+ --website_config_path config/websites.json \
+ --update-pages 80
+```
+
+# License
+This repository is licensed under the [Apache-2.0 License](LICENSE).
+
+# Background
+*Musubi* (結び) is a japanese word of meaning “to tie something like a string”. In Shinto (神道) and traditional Japanese philosophy, musubi also refers to life, birth, relationships, and the natural cycles of the world.
+
+# Citation
+If you use Musubi in your research or project, please cite it with the following BibTeX entry:
+```bibtex
+@misc{musubi2025,
+  title =        {Musubi: Weaving connection to the world.},
+  author =       {Lung-Chuan Chen},
+  howpublished = {\url{https://github.com/Musubi-ai/Musubi}},
+  year =         {2025}
+}
+```
+
+# Acknowledgement
+This repo benefits from [trafilatura](https://github.com/adbar/trafilatura) for extracting text contents from webpages and [PyMuPDF](https://github.com/pymupdf/PyMuPDF) for parsing online PDF documents.
