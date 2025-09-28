@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+Instaweb/__init__.py
+Instaweb/client.py
+Instaweb.egg-info/PKG-INFO
+Instaweb.egg-info/SOURCES.txt
+Instaweb.egg-info/dependency_links.txt
+Instaweb.egg-info/entry_points.txt
+Instaweb.egg-info/requires.txt
+Instaweb.egg-info/top_level.txt
