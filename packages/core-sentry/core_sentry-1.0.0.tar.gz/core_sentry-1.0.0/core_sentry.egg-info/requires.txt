@@ -1,0 +1,5 @@
+core-tests>=2.0.1
+sentry-sdk>=2.29.1
+
+[dev]
+core-dev-tools>=1.0.1
