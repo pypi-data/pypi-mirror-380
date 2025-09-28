@@ -1,0 +1,12 @@
+testcato/__init__.py,sha256=pDS8osRauGpz_QP72_2bsWOMRG-i9rTaqX8qGbFdNF8,495
+testcato/ai_agent.py,sha256=ZnuDeKC2sAVF-jsF7FhRWntZ8JCOFbfj1XcjqBKBd84,5617
+testcato/categorizer.py,sha256=Ibw9n3k3_yruBvCWPpgm5LUku1bm9FJJ1otxZXX4o4E,674
+testcato/conftest.py,sha256=j_YIv0lc11C23Lu0jWgVIijifmpl08QokAf4pd256Ro,46
+testcato/llm_providers.py,sha256=f4tzsjUHWWyzDmfJXRM3Ak3YKZjmt_RW_IHZfvcotBc,4017
+testcato/pytest_testcato.py,sha256=HnrAt3_DE4C4jWCQHc4jvL5JCJr6dVI30EM8OAGnBWM,2837
+testcato-1.2.5.dist-info/LICENSE,sha256=MAKUl9_BDEHnY-6XkcEO7EbqygdUvmUwScLyfoxwWLo,303
+testcato-1.2.5.dist-info/METADATA,sha256=mFCqM0R0frMdsWQJXjcb_hZZAyPcUjO7SRpUTXDNNqo,3238
+testcato-1.2.5.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+testcato-1.2.5.dist-info/entry_points.txt,sha256=hRGe0Yc93VHv_ltDhcEumtjVajzs-6KVkyJNXn5-nGs,47
+testcato-1.2.5.dist-info/top_level.txt,sha256=KjaYGtZHKn1eVBcTaXMTmEEgv4_n9X_t_MqqPagIyNs,9
+testcato-1.2.5.dist-info/RECORD,,
