@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meow-redis-ratelimiter"
+version = "0.1.0"
+description = "A framework-agnostic rate limiter for Python backends (Flask, Django, FastAPI, etc.)"
+authors = [
+  { name="Shashank Shekhar", email="shashankshekhar8534@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+
+dependencies = [
+  "redis>=5.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/shashaaankkkkk/meow-redis-ratelimiter"
+

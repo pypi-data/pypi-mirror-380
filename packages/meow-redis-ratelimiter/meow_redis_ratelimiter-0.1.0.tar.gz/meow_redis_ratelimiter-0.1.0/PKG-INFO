@@ -1,0 +1,187 @@
+Metadata-Version: 2.4
+Name: meow-redis-ratelimiter
+Version: 0.1.0
+Summary: A framework-agnostic rate limiter for Python backends (Flask, Django, FastAPI, etc.)
+Home-page: https://github.com/shashaaankkkkk/meow-redis-ratelimiter
+Author: Shashank Shekhar
+Author-email: Shashank Shekhar <shashankshekhar8534@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/shashaaankkkkk/meow-redis-ratelimiter
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: redis>=5.0.0
+
+#  Documentation
+
+##  Installation
+
+```bash
+pip install meow-redis-ratelimiter
+```
+
+Requires **Python 3.7+**.
+If using Redis, make sure you have it installed and running.
+
+---
+
+##  Basic Usage (In-Memory Store)
+
+```python
+from redis-rate_limiter import RateLimiter
+
+limiter = RateLimiter(max_requests=5, period=60)
+
+@limiter
+def my_function(req=None):
+    return "Allowed!"
+
+# Example
+print(my_function())  # Allowed
+```
+
+This version keeps counters **in memory**. Works for single-process apps (e.g., local dev, small deployments).
+
+---
+
+##  Usage with Redis (Distributed Store)
+
+```python
+import redis
+from redis-rate_limiter import RateLimiter
+
+redis_client = redis.StrictRedis.from_url("redis://localhost:6379/0")
+
+limiter = RateLimiter(
+    max_requests=5,
+    period=60,
+    redis_client=redis_client
+)
+
+@limiter
+def my_function(req=None):
+    return "Allowed!"
+```
+
+Use this for **production**, since Redis synchronizes counters across workers/servers.
+
+---
+
+##  Framework Integration
+
+###  Flask
+
+```python
+from flask import Flask, request, jsonify
+import redis
+from redis-rate_limiter import RateLimiter
+
+app = Flask(__name__)
+redis_client = redis.StrictRedis.from_url("redis://localhost:6379/0")
+
+limiter = RateLimiter(
+    max_requests=5,
+    period=10,
+    redis_client=redis_client,
+    identifier_func=lambda req: req.remote_addr,
+    error_handler=lambda: (jsonify({"error": "Too Many Requests"}), 429)
+)
+
+@app.route("/api/data")
+@limiter
+def data(req=None):
+    return {"message": "Success"}
+```
+
+---
+
+###  Django
+
+```python
+from django.http import JsonResponse
+from redis-rate_limiter import RateLimiter
+
+limiter = RateLimiter(
+    max_requests=5,
+    period=10,
+    identifier_func=lambda req: req.META.get("REMOTE_ADDR"),
+    error_handler=lambda: JsonResponse({"error": "Too Many Requests"}, status=429)
+)
+
+@limiter
+def my_view(request):
+    return JsonResponse({"message": "Success"})
+```
+
+---
+
+###  FastAPI
+
+```python
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+import redis
+from redis-rate_limiter import RateLimiter
+
+app = FastAPI()
+redis_client = redis.StrictRedis.from_url("redis://localhost:6379/0")
+
+limiter = RateLimiter(
+    max_requests=5,
+    period=10,
+    redis_client=redis_client,
+    identifier_func=lambda req: req.client.host,
+    error_handler=lambda: JSONResponse({"error": "Too Many Requests"}, status_code=429)
+)
+
+@app.get("/api/data")
+@limiter
+async def data(request: Request):
+    return {"message": "Success"}
+```
+
+---
+
+##  Parameters
+
+| Parameter         | Type                    | Default                | Description                                         |
+| ----------------- | ----------------------- | ---------------------- | --------------------------------------------------- |
+| `max_requests`    | `int`                   | `5`                    | Max requests allowed in period                      |
+| `period`          | `int`                   | `60`                   | Time window in seconds                              |
+| `redis_client`    | `redis.Redis` or `None` | `None`                 | Redis client for distributed limit                  |
+| `identifier_func` | `Callable`              | `lambda req: "global"` | Extracts a unique identifier (IP, user_id, API key) |
+| `error_handler`   | `Callable`              | returns `(msg, 429)`   | Handles blocked requests (custom error response)    |
+
+---
+
+##  How It Works
+
+* Keeps a **sliding window** of request timestamps.
+* On each request:
+
+  1. Expired timestamps are removed.
+  2. If count ≥ `max_requests`, request is blocked.
+  3. Otherwise, request is allowed.
+* With Redis, counters are **shared across all workers**.
+
+---
+
+##  Example with API Key Throttling
+
+```python
+limiter = RateLimiter(
+    max_requests=100,
+    period=60,
+    identifier_func=lambda req: req.headers.get("X-API-Key", "anonymous"),
+    error_handler=lambda: {"error": "Too Many Requests"}, 429
+)
+```
+
+---
+
+##  Roadmap
+
+* [ ] Async support for asyncio/Starlette
+* [ ] Token bucket mode
+* [ ] Middleware for direct integration (Flask, Django, FastAPI)
+
+
