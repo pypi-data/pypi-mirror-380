@@ -1,0 +1,2 @@
+[console_scripts]
+united-llm-test = united_llm.test:main
