@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: mcp-macos
+Version: 0.2.1
+Summary: Add your description here
+Author: Paul-Louis Pröve
+Author-email: Paul-Louis Pröve <plp@workgenius.com>
+Requires-Dist: fastmcp>=2.12.3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
