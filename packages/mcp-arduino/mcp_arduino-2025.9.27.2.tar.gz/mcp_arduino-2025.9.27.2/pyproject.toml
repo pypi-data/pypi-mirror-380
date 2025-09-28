@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-arduino"
+version = "2025.09.27.2"  # Date-based versioning as per your preference
+authors = [
+  { name="Ryan Malloy", email="ryan@supported.systems" },
+]
+description = "FastMCP-powered Arduino CLI server with WireViz integration for circuit diagrams"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file="LICENSE" }
+keywords = ["mcp", "model context protocol", "arduino", "arduino-cli", "llm", "ai", "fastmcp", "wireviz"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "fastmcp>=2.12.4",  # FastMCP includes MCP 1.15.0 and sampling support
+    "thefuzz[speedup]>=0.22.1",
+    "wireviz>=0.4.1",
+    "pyserial>=3.5",  # Serial communication support
+    "pyserial-asyncio>=0.6",  # Async serial support
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.2",
+    "mypy>=1.5.0",
+    "watchdog>=3.0.0",  # For hot-reloading in dev
+]
+
+[project.scripts]
+mcp-arduino = "mcp_arduino_server.server_refactored:main"
+
+[project.urls]
+Homepage = "https://git.supported.systems/MCP/mcp-arduino"
+Repository = "https://git.supported.systems/MCP/mcp-arduino"
+Issues = "https://git.supported.systems/MCP/mcp-arduino/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_arduino_server"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I", "N", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
