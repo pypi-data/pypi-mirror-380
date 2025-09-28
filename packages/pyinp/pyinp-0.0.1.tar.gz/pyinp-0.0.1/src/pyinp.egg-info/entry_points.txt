@@ -1,0 +1,2 @@
+[console_scripts]
+pyinp = pyinp.cli:app

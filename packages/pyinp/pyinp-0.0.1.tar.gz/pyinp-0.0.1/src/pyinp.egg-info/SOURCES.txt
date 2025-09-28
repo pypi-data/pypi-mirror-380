@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyinp/__init__.py
+src/pyinp/cli.py
+src/pyinp/dialogs.py
+src/pyinp/utils.py
+src/pyinp.egg-info/PKG-INFO
+src/pyinp.egg-info/SOURCES.txt
+src/pyinp.egg-info/dependency_links.txt
+src/pyinp.egg-info/entry_points.txt
+src/pyinp.egg-info/requires.txt
+src/pyinp.egg-info/top_level.txt

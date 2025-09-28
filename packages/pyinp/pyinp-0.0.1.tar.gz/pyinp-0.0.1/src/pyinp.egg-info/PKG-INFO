@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: pyinp
+Version: 0.0.1
+Summary: The best and most easy way to create a new python project
+Author-email: devs_des1re <arjunbrij8811@gmail.com>
+Maintainer-email: devs_des1re <arjunbrij8811@gmail.com>
+License-Expression: MIT
+Keywords: app,macOS,windows,linux,flatpak
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pip>=21.2
+Requires-Dist: tomli>=2.2
+Requires-Dist: typer>=0.16
+Dynamic: license-file
+
+![PyPI](https://img.shields.io/pypi/v/pyinp?color=green)
+![pylint](https://img.shields.io/badge/pylint-10.00-green)
+
+pyinp
+===
+The best and most easy way to create a new python project
+
+How to install?
+===
+To install pyinp, you will need `pip >= 21.2` and `Python >= 3.10`
+
+```
+pip install pyinp
+```
+
+or 
+
+```
+python -m pip install pyinp
+```
+
+To test its installed run
+
+```
+pyinp
+```
+
+This library *should* also work on Linux/MacOS
+
+Commands
+===
+Provides help on usage for pyinp
+
+```
+pyinp help
+```
+
+Gets the version of the library
+
+```
+pyinp version
+```
+
+Initializes a new project on the go
+
+```
+pyinp init
+```
+
+Cleans useless unwanted files 
+
+```
+pyinp clean
+```
+
+Gets a template and adds it to your project
+
+```
+pyinp get-template <template>
+```
+
+Lists all the available templates
+
+```
+pyinp templates
+```
+
+Gets the info on a command 
+
+```
+pyinp template-info <template>
+```
+
+Contributing
+===
+If you have any suggestions, or have found bugs, **make sure** the suggestion/bug is not already been said and create a issue in the repository.
