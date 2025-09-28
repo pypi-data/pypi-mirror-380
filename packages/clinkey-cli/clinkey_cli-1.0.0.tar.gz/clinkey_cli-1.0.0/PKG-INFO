@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: clinkey-cli
+Version: 1.0.0
+Summary: A command-line tool for generating strong passwords and secret keys.
+Author: Clinkey
+License-Expression: MIT
+Keywords: password,cli,security
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.1.0
+Requires-Dist: rich>=13.0.0
+Dynamic: license-file
+
+![](clinkey_preview.png)  
+
+---
+```bash
+Your password generator *'buddy'*, available on a CLI.  
+```
+---
+```bash
+Usage python3 heat.py clinkey [OPTIONS]
+```
+---
+```bash
+-l, --length				The desired length for the output password(s)
+-n, --number				The amount of password you are expecting from ClinKey to generate.
+-o, --output				The path of a file in which to print the result instead of echoing it into the Terminal.
+-t --type					The strength and complexity of the password content. 
+								Possible values:
+									- 'normal' - Containing only alphabetical characters.
+									- 'strong' - Mixing letters and digits.
+									- 'super_strong' - Adding special characters to the result.
+-ns, --no-sep				Clear the result from the hyphens used to separate the groups of letters usually forming the result.
+-low, --lower				Transform the output password in lowercase string.
