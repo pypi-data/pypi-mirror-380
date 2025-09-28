@@ -1,0 +1,15 @@
+ai_terminal/__init__.py,sha256=rqDjZTKs3X8Bd8jnLrqhr-66BKhDpYdYtmPADfRyM0Q,110
+ai_terminal/config_manager.py,sha256=kok9YRe1PWEsBIlGt7OFkIvB1RdYQBbGPucGw6Wqjgw,5122
+ai_terminal/core.py,sha256=0cVpIEt4zDvdCB3LGiLFKAh98faVpaj9Q_Yiykij4Wg,62735
+ai_terminal/history_manager.py,sha256=hhvQSL0wyZMd8iwFQPn5yeIJ1t9hMDd_IdqvuqBdlRo,2699
+ai_terminal/http_utils.py,sha256=LDaXmMf9qqAyOhB67mpxHoJwyGb0D4Ss3_gLrydDAfY,3510
+ai_terminal/llm_client.py,sha256=2AN93vhE-pmi57HGPt-Npsisu0BQvt7MQ9x4pall3-o,22196
+ai_terminal/main.py,sha256=uZFJpJinOpODHQm2HTrbgWrOQ6VKxjJJ-DneAVdALr4,5195
+ai_terminal/plan_executor.py,sha256=owrR44IsIqmsv-VTuTzJ_WxiibNSkIaCVu1hjr_pdSM,5616
+ai_terminal/safety.py,sha256=fsBlkucduT8EgFUEeO_eqisulLRaYdylEzEwEvANzMs,2781
+magic_terminal_cli-1.0.0.dist-info/licenses/LICENSE,sha256=JeaGkSDufX2_zLLG93O8sC2keS4v5TneaJRvBNuO4_o,1076
+magic_terminal_cli-1.0.0.dist-info/METADATA,sha256=q_IlpusR10uyhQbJqGPSHT5IBnoPAeuK2wIRRJ6_Oqk,10354
+magic_terminal_cli-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+magic_terminal_cli-1.0.0.dist-info/entry_points.txt,sha256=CZ5523SpWq6N9ueyn2bhIaoZRfkHh7acFl17PnG9DYc,114
+magic_terminal_cli-1.0.0.dist-info/top_level.txt,sha256=YfeIRP2uDQ4u-b7e-Krlo10ok0GvrTt4gmCfysaLcnw,12
+magic_terminal_cli-1.0.0.dist-info/RECORD,,
