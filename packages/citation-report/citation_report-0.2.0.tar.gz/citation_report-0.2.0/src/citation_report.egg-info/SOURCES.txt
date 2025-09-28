@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/citation_report/__init__.py
+src/citation_report/main.py
+src/citation_report/published_report.py
+src/citation_report/publisher.py
+src/citation_report.egg-info/PKG-INFO
+src/citation_report.egg-info/SOURCES.txt
+src/citation_report.egg-info/dependency_links.txt
+src/citation_report.egg-info/requires.txt
+src/citation_report.egg-info/top_level.txt
+tests/test_expanded.py
+tests/test_regular.py
+tests/test_report.py

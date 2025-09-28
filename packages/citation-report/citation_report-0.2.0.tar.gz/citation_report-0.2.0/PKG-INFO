@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: citation-report
+Version: 0.2.0
+Summary: Regex formula of Philippine Supreme Court citations in report format, i.e. SCRA, PHIL, OFFG.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: citation-date>=0.2.1
+Requires-Dist: pydantic>=2.11.9
+Dynamic: license-file
+
+![Github CI](https://github.com/justmars/citation-report/actions/workflows/ci.yml/badge.svg)
+
+# Citation Report Parser
+
+Regex formula of Philippine Supreme Court citations in report format, i.e. SCRA, PHIL, OFFG; utilized in the [LawSQL dataset](https://lawsql.com).
+
+## Documentation
+
+See [documentation](https://justmars.github.io/citation-report), building on top of [citation-date](https://justmars.github.io/citation-date).
+
+## Testing
+
+```sh
+uv pip install -e .
+pytest
+```
