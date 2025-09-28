@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+dxf_viewer/__init__.py
+dxf_viewer/core.py
+dxf_viewer/static/Panel.js
+dxf_viewer/static/Panel.js.map
+dxf_viewer/static/.vite/manifest.json
+inventree_dxf_viewer.egg-info/PKG-INFO
+inventree_dxf_viewer.egg-info/SOURCES.txt
+inventree_dxf_viewer.egg-info/dependency_links.txt
+inventree_dxf_viewer.egg-info/entry_points.txt
+inventree_dxf_viewer.egg-info/top_level.txt

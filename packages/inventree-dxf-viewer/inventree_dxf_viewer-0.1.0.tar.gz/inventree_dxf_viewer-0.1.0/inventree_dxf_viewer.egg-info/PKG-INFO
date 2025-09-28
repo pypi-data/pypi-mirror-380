@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: inventree-dxf-viewer
+Version: 0.1.0
+Summary: View DXF files if provided as an attachment to a part
+Author-email: Alec Delaney <tekktrik@tekktrik.dev>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/tekktrik/inventree-dxf-viewer-plugin
+Keywords: inventree,plugin
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: InvenTree
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# DXFViewer
+
+View DXF files if provided as an attachment to a part
+
+## Installation
+
+### InvenTree Plugin Manager
+
+Admins for the InvenTree instance can use the Admin panel to directly add the plugin, by using the package name `inventree-dxf-viewer`.
+
+### Command Line 
+
+To install manually via the command line, run the following command:
+
+```bash
+pip install inventree-dxf-viewer
+```
+
+Add  `inventree-dxf-viewer` to your InvenTree server's `plugins.txt`.
+
+## Configuration
+
+No configuration is currently available for this plugin.
+
+## Usage
+
+The DXF Viewer panel will automatically appear when looking at parts that have DXF files as attachments!  There will be a tab for each DXF file.
