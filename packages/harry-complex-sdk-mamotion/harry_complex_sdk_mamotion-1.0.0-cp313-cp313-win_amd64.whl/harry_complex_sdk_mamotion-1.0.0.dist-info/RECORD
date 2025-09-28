@@ -1,0 +1,11 @@
+my_sdk/__init__.py,sha256=P01Nojz-eUtC4NrTnkqxC012mC5rGNYImZrKf5twRhA,63
+my_sdk/api.c,sha256=DEFth4briS3UHCHMIDiKOq2_OZIlyW6GQe8BUVI5iPM,338930
+my_sdk/api.cp313-win_amd64.pyd,sha256=EHKDQ2S5e65D40TER-RRY0jJhXnExf3vcJUEREaAiGM,40448
+my_sdk/api.py,sha256=_AHXAPN1w_7P3pQ49gNxsOyE4HH2IvuxkUsqfZ1oe5w,400
+my_sdk/core.c,sha256=v5vNhZrczz7rLulYWSzEUveO-Yk1TsGHYTfEAp3QQCc,329948
+my_sdk/core.cp313-win_amd64.pyd,sha256=HSlUD2D9sr1JTaApc-4C28avzJXUzvUxNfbjZyJd5ac,37888
+my_sdk/core.py,sha256=9F2H9eUrF683WXgyVEf4qOs6sc-eQFr1Na-0yktF68k,301
+harry_complex_sdk_mamotion-1.0.0.dist-info/METADATA,sha256=ZWXnmLKC-qrjtU-ZAcZgK7qjvy18aNPy6t5jj-XfkuM,620
+harry_complex_sdk_mamotion-1.0.0.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+harry_complex_sdk_mamotion-1.0.0.dist-info/top_level.txt,sha256=aW2Kn7YYUXrjh-s3dPL3fz5j4c-Zm20qy-ptn5BiHRE,7
+harry_complex_sdk_mamotion-1.0.0.dist-info/RECORD,,
