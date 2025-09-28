@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyinla"
+version = "0.0.3" # We will use 0.0.3 for the new upload
+authors = [
+  { name="Your Name", email="you@example.com" },
+]
+description = "A convenient command-line utility for fetching and installing official INLA executables on Linux."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+keywords = ["inla", "bayesian", "statistics", "installer", "cli", "scientific computing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "requests",
+    "tqdm",
+    "packaging",
+    "inquirer",
+]
+
+[project.scripts]
+pyinla = "pyinla.installer:main"
