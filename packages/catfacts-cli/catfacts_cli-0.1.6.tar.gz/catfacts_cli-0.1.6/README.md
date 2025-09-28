@@ -1,0 +1,46 @@
+# Catfacts CLI 🐱  
+
+A cat fact maker that’s essential!  
+(This is not actually made to be *really good*, so be prepared for some bugs 😹)  
+
+---
+
+## Known Bugs  
+- If you request around **1000 facts**, it may give a **traceback error**. Cause unknown.  
+
+---
+
+## Arguments  
+
+### --version  
+Shows the current version of catfacts-cli.  
+
+### --count {number}  
+Displays the chosen number of facts.  
+⚠️ Very high numbers may cause errors.  
+
+### --unique  
+Ensures that no duplicate facts are shown.  
+
+### --source {api or local}  
+Choose where the facts come from:  
+- **api** → Fetches from the online cat facts API.  
+- **local** → Uses the small built-in local fact list (default, limited to ~10 facts).  
+
+### --output {text, json, list}  
+Changes how the facts are displayed in the terminal:  
+- **text** → Normal text format.  
+- **json** → JSON-like structure.  
+- **list** → A simple bullet-point list.  
+
+---
+
+## Example Usage  
+
+
+catfacts --count 5 --output json
+
+👉 Note: Output is only printed to the terminal! it does not save to a file.
+If you want to save it, redirect the output yourself:
+
+catfacts --count 5 --output json > facts.json
