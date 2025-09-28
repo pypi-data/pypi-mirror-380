@@ -1,0 +1,20 @@
+[project]
+name = "bibboost"
+version = "0.1.1"
+description = "Boost your bibliography by updating BibTeX entries with published conference versions"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bibtexparser>=1.4.3",
+    "click>=8.3.0",
+    "python-dotenv>=1.1.1",
+    "questionary>=2.1.1",
+    "requests>=2.32.5",
+    "tenacity>=9.1.2",
+]
+
+[project.scripts]
+bibboost = "main:cli"
+
+[tool.setuptools]
+py-modules = ["main", "bib_updater", "dblp_client"]
