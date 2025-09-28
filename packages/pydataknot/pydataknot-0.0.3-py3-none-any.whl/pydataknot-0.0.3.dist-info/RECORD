@@ -1,0 +1,12 @@
+pydataknot/__init__.py,sha256=GiqtaA2-yddiIFRu-pafhv_gduOkZ-SMzrDf5-2t97M,56
+pydataknot/data.py,sha256=YE4n30kEu-jLKC8wgzm3ADky22Y6p9xDz0u5hQl757E,396
+pydataknot/feature_selection.py,sha256=UrtPdTEIJlSjOwb7DPZfffwRhhNKDbYb3-ImfAu_qLI,2864
+pydataknot/mrmr.py,sha256=_g1ZJGjt7uDIxRwWt7X-V0UARdCsl9mFdBCkmAx3dMQ,2011
+pydataknot/optimize_classifier.py,sha256=BUHg_ev0_zKzjiFg6_tVhh8nPzhLyyXnRn8bqtqCDW0,6575
+pydataknot/train_classifier.py,sha256=B3vRc7cCcywonj04DlB77jAk2GgcmCIS4etj7d2tP_U,5037
+pydataknot/utils.py,sha256=H36oHqli9zE-qEdZbiPyhYR6IYWdNuLxyihmQ8IHgkw,2845
+pydataknot/config/__init__.py,sha256=5Z94pZu0a6XA2s6GasiFUSwA_i2dWvJE6xKj_AoqAfY,2630
+pydataknot-0.0.3.dist-info/METADATA,sha256=CaYou8boSzp_XBFEjtVUxOY-vzPlMlPGooHP-kTYCiA,4494
+pydataknot-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydataknot-0.0.3.dist-info/entry_points.txt,sha256=NM9neRmIfGZ3-GedruYCYphQQJ4xLWQXkQ-B_wnn8dU,164
+pydataknot-0.0.3.dist-info/RECORD,,

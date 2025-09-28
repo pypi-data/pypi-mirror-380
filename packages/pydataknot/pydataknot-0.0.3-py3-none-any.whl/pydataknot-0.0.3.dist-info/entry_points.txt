@@ -1,0 +1,4 @@
+[console_scripts]
+pydk-optimize = pydataknot:optimize_classifier.main
+pydk-select = pydataknot:feature_selection.main
+pydk-train = pydataknot:train_classifier.main
