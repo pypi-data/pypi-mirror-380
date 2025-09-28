@@ -1,0 +1,30 @@
+from .function_definitions import (
+    case,
+    first,
+    hide,
+    last,
+    load,
+    match,
+    rand,
+    repeat,
+    reverse,
+    save,
+    separator,
+    sync,
+)
+
+function_definitions = {
+    "case": case,
+    "first": first,
+    "hide": hide,
+    "last": last,
+    "load": load,
+    "match": match,
+    "rand": rand,
+    "rep": repeat,
+    "reverse": reverse,
+    "save": save,
+    "sep": separator,
+    "x": sync,
+    "sync": sync,
+}
