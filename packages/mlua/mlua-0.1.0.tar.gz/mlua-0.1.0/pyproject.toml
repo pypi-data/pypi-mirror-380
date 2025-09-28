@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlua"
+version = "0.1.0"
+description = "A lua module manager library for python, it can transfer lua module to python object and call it."
+readme = {file = "README.MD", content-type = "text/markdown"}
+authors = [
+    {name = "FreeStar007", email = "3089666858@qq.com"}
+]
+license = {text = "Apache Software License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "lupa",
+    "colorama"
+]
+
+[project.urls]
+Homepage = "https://github.com/FreeStar007/mlua"
+
+[tool.setuptools.packages.find]
