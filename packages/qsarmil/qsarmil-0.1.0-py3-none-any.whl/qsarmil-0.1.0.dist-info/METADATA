@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: qsarmil
+Version: 0.1.0
+Summary: Molecular multi-instance machine learning
+Author-email: Dmitry Zankov <dvzankov@gmail.com>
+License: MIT
+Description-Content-Type: text/x-rst
+Requires-Dist: mikit-learn
+Requires-Dist: rdkit
+Requires-Dist: molfeat
+Requires-Dist: py3Dmol
+Requires-Dist: tqdm
+Requires-Dist: huggingface_hub
