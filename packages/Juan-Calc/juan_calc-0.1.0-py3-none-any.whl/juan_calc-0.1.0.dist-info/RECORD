@@ -1,0 +1,16 @@
+calculadora/coolstuff.py,sha256=osixHEcLUCpE7sSC_V_PLj3-U1Dh7o-_ClhIXALwIJk,382
+calculadora/main.py,sha256=5yfDXjV-WgmJ7U0rHjFMuUmB7etJvxbk_6DOcbYSo1o,836
+calculadora/areas/IrrAreas.py,sha256=sGEOHbFxz7ehXhoECaacYXagratSWBr8MH9Vk8-L0iw,3470
+calculadora/areas/areas.py,sha256=O2pMGQG9qM1YEE-OzoybpbS4qUQJTitLzzsY6apWSXA,877
+calculadora/areas/areas2D.py,sha256=T5Rbtknv7Yn6aCLlbjo2STIU5L6iUhdk1wZZaObhwxo,5396
+calculadora/areas/areas3D.py,sha256=VySTwCJlxdU5Oo0d9qIwVnADOYB2PkfrzelyW13hnAA,8136
+calculadora/areas/test_irr_polygon.py,sha256=PAxDs2wqrR13N-CdEDFQo_TbBxI3R7DaCAsyDE4VpXA,3951
+calculadora/arithmetic/arithmetic.py,sha256=4TJoP7taT0qKiixds4mK-HRB7QQ8prOR8lWGF1AekYU,2006
+calculadora/graphics/graph.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+calculadora/special-functions/special-functions.py,sha256=d_l4wKvwR_IW9g5p8A8I-0xLSXoCmHNZ7-fAcuCFAGg,4908
+calculadora/trigonometry/trig.py,sha256=rpeTcdKkcNEWVu5b3NYVV8tiSSBDc4-EpCypB90DIIM,5777
+juan_calc-0.1.0.dist-info/licenses/LICENSE,sha256=MffPGDmSI52eqHGyrPTBghqdL_wJ61eraNOAf8364nA,151
+juan_calc-0.1.0.dist-info/METADATA,sha256=XidmolLQObFXfVZsD-UpjqtmjPTJtyVsvo-eVEBYCMk,756
+juan_calc-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+juan_calc-0.1.0.dist-info/top_level.txt,sha256=PghZUKe6nfDdhXpCcUuJeMkmdNGApn8bu_pVqYZne1s,12
+juan_calc-0.1.0.dist-info/RECORD,,
