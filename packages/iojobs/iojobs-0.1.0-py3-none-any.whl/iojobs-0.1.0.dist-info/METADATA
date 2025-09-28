@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: iojobs
+Version: 0.1.0
+Summary: Lightweight asynchronous job scheduler with cron-like syntax and delayed execution for Python functions
+Keywords: cron,cron-jobs,scheduler,delayed-tasks,job-scheduler,task-scheduler,background-tasks
+Author: Sergey Yavorsky
+Author-email: Sergey Yavorsky <maclovi.dev@gmail.com>
+License: MIT
+Classifier: Typing :: Typed
+Classifier: Topic :: Utilities
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Framework :: Pytest
+Classifier: Framework :: AsyncIO
+Classifier: Natural Language :: English
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: crontab==1.0.5
+Requires-Python: >=3.10
+Project-URL: Documentation, https://github.com/Maclovi/iojobs/README.md
+Project-URL: Homepage, https://github.com/Maclovi/iojobs
+Project-URL: Issues, https://github.com/Maclovi/iojobs/issues
+Project-URL: Repository, https://github.com/Maclovi/iojobs
+Description-Content-Type: text/markdown
+
