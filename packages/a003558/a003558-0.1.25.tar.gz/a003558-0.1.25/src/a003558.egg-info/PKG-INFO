@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: a003558
+Version: 0.1.25
+Summary: A003558 – universal clock
+Author-email: Bram Dhont <bram@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/bramdhontsr/A003558-universal-clock
+Project-URL: Repository, https://github.com/bramdhontsr/A003558-universal-clock
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26
+Provides-Extra: viz
+Requires-Dist: matplotlib; extra == "viz"
+Requires-Dist: numpy>=1.26; extra == "viz"
+Dynamic: license-file
+
+# A003558 Universal Clock
+
+WELKOM  
+Dit project combineert **kunst, mindfulness en ecologie**.  
+De klok visualiseert de recursieve structuur van [OEIS A003558](https://oeis.org/A003558) en verbindt getallen met ritme, tijd en patronen.
+
+---
+
+## 🌟 Wat kun je ermee?
+
+- Plotten van cycli en patronen in 2D  
+- 3D visualisatie van octaëders en kubusrelaties  
+- Automatische tests zodat niets breekt  
+- Werkend op elk platform (mits dependencies aanwezig)
+
+---
+
+## 🚀 Installeren
+
+1. Clone de repo:
+
+```bash
+git clone https://github.com/bramdhontsr/A003558-universal-clock.git
+cd A003558-universal-clock
