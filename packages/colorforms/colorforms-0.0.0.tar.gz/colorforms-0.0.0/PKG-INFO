@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: colorforms
+Version: 0.0.0
+Summary: Convert colors from one format to another.
+Author-email: Leon Dionne <ldionne@dridesign.sh.cn>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Home, https://github.com/Zen-Master-SoSo/colorforms
+
+# colorfoms
+
+Convert colors from one format to another.
+
+
