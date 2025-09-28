@@ -1,0 +1,7 @@
+boto3_dataclass_medical_imaging/__init__.py,sha256=4L1kfCBcnN0q_RxVOUKvosBgdPkO7TQaZG_FMXntk9M,124
+boto3_dataclass_medical_imaging/caster.py,sha256=Q8sqMNPudY4Rs3wXiRHki9_BiJW6pH7W0PgsBA4zFhc,3466
+boto3_dataclass_medical_imaging/type_defs.py,sha256=dWgsQs088RdBVsfSumpHTOrFqHtYS_PmFtmrzGtedbE,61973
+boto3_dataclass_medical_imaging-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_medical_imaging-1.40.0.dist-info/METADATA,sha256=ng-HICJxZOCouT9VR-wYo6Rws6avAe9Rt9xDmCkFo_Q,1739
+boto3_dataclass_medical_imaging-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_medical_imaging-1.40.0.dist-info/RECORD,,
