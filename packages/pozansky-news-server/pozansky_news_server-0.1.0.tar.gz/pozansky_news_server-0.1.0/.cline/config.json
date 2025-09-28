@@ -1,0 +1,9 @@
+{
+  "mcpServers": [
+    {
+      "name": "news-server",
+      "command": "python",
+      "args": ["src/news_server/server.py"]
+    }
+  ]
+}

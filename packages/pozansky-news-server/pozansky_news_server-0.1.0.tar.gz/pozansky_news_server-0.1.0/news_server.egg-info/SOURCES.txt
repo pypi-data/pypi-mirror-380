@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+news_server.egg-info/PKG-INFO
+news_server.egg-info/SOURCES.txt
+news_server.egg-info/dependency_links.txt
+news_server.egg-info/top_level.txt
+src/news_server/__init__.py
+src/news_server/server.py
