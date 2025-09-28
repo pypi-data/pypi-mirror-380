@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: catfacts-cli
+Version: 0.1.2
+Summary: A fun CLI that shows random cat facts!
+Author-email: Randomsy <RandomsySTZ@outlook.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file
