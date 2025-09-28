@@ -1,0 +1,191 @@
+Metadata-Version: 2.4
+Name: trace-mind
+Version: 0.2.1
+Summary: TraceMind smart agent runtime and tooling
+Project-URL: Homepage, https://github.com/trace-mind/trace-mind
+Project-URL: Documentation, https://github.com/trace-mind/trace-mind/tree/main/docs
+Author: TraceMind Authors
+License: MIT License
+        
+        Copyright (c) 2025 RaphaelYu
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: networkx>=3.2
+Provides-Extra: cron
+Requires-Dist: croniter>=1.4; extra == 'cron'
+Provides-Extra: mcp
+Requires-Dist: httpx>=0.25; extra == 'mcp'
+Provides-Extra: prom
+Requires-Dist: prometheus-client>=0.16; extra == 'prom'
+Provides-Extra: retrospect
+Requires-Dist: marimo>=0.7; extra == 'retrospect'
+Provides-Extra: yaml
+Requires-Dist: pyyaml>=6.0; extra == 'yaml'
+Description-Content-Type: text/markdown
+
+# TraceMind
+
+**TraceMind** – A lightweight, event-sourced smart agent framework.
+It records and reflects every transaction, supports pipeline-based field analysis, static flow export, and interactive summaries/diagnosis/plans.
+Designed with a clean DDD structure, minimal dependencies, and safe container execution.
+
+> Current release: **v0.2.1** — see [CHANGES.md](CHANGES.md) for highlights.
+
+---
+
+Agent Evolution Timeline
+─────────────────────────────────────────────
+(1) Client + Server        (2) Digital Twin         (3) Autonomous Agent
+    ───────────────        ───────────────          ────────────────────
+    • Proxy / Adapter      • Mirror of entity       • Observer
+    • Sip, Websocket       • Present + feedback     • Executor
+    • Hide protocol        • IoT, Telecom           • Collaborator
+      complexity           • State visualization    • AI-driven autonomy
+                           • Simulation / feedback  • Coordination in MAS
+
+ Value: simplify access    Value: insight + control Value: autonomy + learning
+
+---
+
+## ✨ Features
+
+* **Event Sourcing Core**: append-only event store powered by the Binary Segment Log (`tm/storage/binlog.py`). JSONL and SQLite remain optional adapters planned for future expansion.
+* **DDD Structure**: clear separation of domain, application, and infrastructure layers.
+* **Pipeline Engine**: field-driven processing (Plan → Rule → Step), statically analyzable.
+* **Tracing & Reflection**: every step produces auditable spans.
+* **Smart Layer**:
+
+  * Summarize: human-readable summaries of recent events.
+  * Diagnose: heuristic anomaly detection with suggested actions.
+  * Plan: goal → steps → optional execution.
+  * Reflect: postmortem reports and threshold recommendations.
+* **Visualization**:
+
+  * Static: export DOT/JSON diagrams of flows.
+  * Dynamic: SSE dashboard with live DAG and insights panel.
+* **Protocols**:
+
+  * MCP (Model Context Protocol) integration (JSON-RPC 2.0) – see the
+    [latest specification](https://modelcontextprotocol.io/specification/latest)
+    and the [community GitHub org](https://github.com/modelcontextprotocol).
+    Example flow recipe:
+    ```python
+    from tm.recipes.mcp_flows import mcp_tool_call
+
+    spec = mcp_tool_call("files", "list", ["path"])
+    runtime.register(_SpecFlow(spec))
+    ```
+* **Interfaces**:
+
+  * REST API: `/api/commands/*`, `/api/query/*`, `/agent/chat`.
+  * Metrics: `/metrics` (Prometheus format).
+  * Health checks: `/healthz`, `/readyz`.
+
+---
+
+## 📂 Architecture (ASCII Overview)
+
+```
+                +----------------+
+                |   REST / CLI   |
+                +----------------+
+                         |
+                    [Commands]
+                         v
+                +----------------+
+                |  App Service   |
+                +----------------+
+                         |
+                  +------+------+
+                  |             |
+             [Event Store]   [Event Bus]
+                  |             |
+          +-------+        +----+-----------------+
+          |                |                      |
+     [Projections]   [Pipeline Engine]      [Smart Layer]
+                          |              (Summarize/Diagnose/Plan/Reflect)
+                          v
+                      [Trace Store]
+```
+
+---
+
+## 📚 Documentation
+
+- [Flow & policy recipes](docs/recipes-v1.md)
+- [Helpers reference](docs/helpers.md)
+- [Policy lifecycle & MCP integration](docs/policy.md)
+- [Publishing guide](docs/publish.md)
+
+---
+
+## 🚀 Quick Start
+
+### Requirements
+
+* Python 3.11+
+* Standard library only (no third-party dependencies by default)
+
+### Run in development
+
+```bash
+# clone
+git clone https://github.com/<your-username>/trace-mind.git
+cd trace-mind
+
+# install and scaffold a demo project
+pip install -e .
+tm init demo
+cd demo
+
+# execute the sample flow
+tm run flows/hello.yaml -i '{"name":"world"}'
+```
+
+### Run in container
+
+```bash
+docker build -t trace-mind ./docker
+
+docker run --rm -it \
+  --read-only \
+  -v $(pwd)/data:/data \
+  -p 8080:8080 \
+  trace-mind
+```
+
+---
+
+## 🧩 Roadmap
+
+* [ ] More connectors (file bridge, http bridge, kafka bridge)
+* [ ] Richer dashboard with interactive actions
+* [ ] Adaptive thresholds in Reflector
+* [ ] Optional LLM integration for natural summaries
+
+---
+
+## 📜 License
+
+MIT (for personal and experimental use)
