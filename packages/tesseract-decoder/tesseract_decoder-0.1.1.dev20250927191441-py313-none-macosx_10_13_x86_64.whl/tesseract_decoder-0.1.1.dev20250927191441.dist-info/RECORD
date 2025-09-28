@@ -1,0 +1,5 @@
+LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tesseract_decoder.so,sha256=a8deloYzSuDwS8tPvLRCjyCfcGh5HiAAUEP0P9R7OWU,13723464
+tesseract_decoder-0.1.1.dev20250927191441.dist-info/WHEEL,sha256=GxGJV6GerMKfwha84y9QPfzzJQ1CkNU1TnCBb1PLueA,110
+tesseract_decoder-0.1.1.dev20250927191441.dist-info/METADATA,sha256=5iZ-MTUA8WSJ4XDSjjJkyXqqMpKoD7s1ICpbgzgGJnM,10889
+tesseract_decoder-0.1.1.dev20250927191441.dist-info/RECORD,,
