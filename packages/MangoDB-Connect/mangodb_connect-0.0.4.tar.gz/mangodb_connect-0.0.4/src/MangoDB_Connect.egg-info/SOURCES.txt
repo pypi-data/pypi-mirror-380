@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/MangoDB_Connect.egg-info/PKG-INFO
+src/MangoDB_Connect.egg-info/SOURCES.txt
+src/MangoDB_Connect.egg-info/dependency_links.txt
+src/MangoDB_Connect.egg-info/requires.txt
+src/MangoDB_Connect.egg-info/top_level.txt
+src/database_automation/__init__.py
+src/database_automation/mongo_crud.py
