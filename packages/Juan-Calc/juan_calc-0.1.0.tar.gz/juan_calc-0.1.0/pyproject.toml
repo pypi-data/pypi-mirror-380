@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Juan_Calc"
+version = "0.1.0"
+description = "La mejor calculadora nunca antes vista"
+readme = "README.md"
+authors = [
+    { name = "Juan Esteban Neira Díaz", email = "jueneirad@udistrital.edu.co" }
+]
+# Eliminada la línea: license = { file = "LICENSE" } para evitar el error.
+
+dependencies = ["tensorflow"]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # Puedes usar "License :: Other/Proprietary" si no quieres declarar MIT
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/configurarpc/calculadora"
+
+# 👇 Esta parte va al final
+[tool.setuptools.packages.find]
+where = ["src"]
