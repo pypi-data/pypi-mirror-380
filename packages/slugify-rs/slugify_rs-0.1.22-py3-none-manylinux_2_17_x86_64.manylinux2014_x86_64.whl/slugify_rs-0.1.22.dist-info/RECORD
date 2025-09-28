@@ -1,0 +1,7 @@
+slugify_rs-0.1.22.dist-info/METADATA,sha256=gqHN7VsaOIjl0l5PIsVT-TOdGn4_SiVi17bfSax31oo,6268
+slugify_rs-0.1.22.dist-info/WHEEL,sha256=P8VMqD7VSVn5Fru62JBo2qWYx-Uqw0IyokwgCSv1OjI,126
+slugify_rs-0.1.22.dist-info/licenses/LICENSE,sha256=iwpPbDUATJIKQLCwa-03fVUKeGH_mXHqI1fIynpjdvE,1061
+slugify_rs/__init__.py,sha256=Xjt6bb7mrASEMn6Y7HhwsWfVmziPxeNak-NYoyckGF8,143
+slugify_rs/ffi.py,sha256=l_i047dsYP8cOaqoz7oL9iajRvokRLdvFCPAGLcEz-U,118
+slugify_rs/libslugify_rs.so,sha256=l8VDZSF5PBVItz77CwS_kUMgaq5RpPThSjs4JddoOHE,15544
+slugify_rs-0.1.22.dist-info/RECORD,,
