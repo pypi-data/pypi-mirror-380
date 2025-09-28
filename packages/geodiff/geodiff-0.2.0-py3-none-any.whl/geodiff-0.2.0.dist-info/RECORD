@@ -1,0 +1,7 @@
+geodiff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geodiff/hicks_henne.py,sha256=nraFMdgXZGfZ2u21LY9eWQCzZneVKUrFmBxSInJGf_I,11791
+geodiff/loss_functions/chamfer.py,sha256=akyMbmKCnDkyjSgMwOlhAVH_YxKcMkQHtCMnupk3NZI,679
+geodiff-0.2.0.dist-info/licenses/LICENSE,sha256=AWIGioBehZ6v77dLaOqvGYOnRhrlHrI8rgFMRaOsiK8,1070
+geodiff-0.2.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+geodiff-0.2.0.dist-info/METADATA,sha256=vYGI6aTRn55pLZvX26cg9oOUzSweGJvcZ6BQ-xYUMTE,3106
+geodiff-0.2.0.dist-info/RECORD,,
