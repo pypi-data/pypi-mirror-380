@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: bitweb_yespower
+Version: 1.0.6
+Summary: Bindings for yespower-1.0 proof of work used by bitweb
+Home-page: https://github.com/bitweb-project/bitweb_yespower_python3
+Author: mraksoll
+Author-email: mraksoll4@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
