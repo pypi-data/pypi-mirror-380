@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: youtube-indirici-atilla
+Version: 0.1.2
+Summary: Komut satırından YouTube videolarını MP4 olarak indirmek için basit bir Python paketi.
+Author: Atilla
+License: MIT License
+        
+        Copyright (c) 2025 Atilla
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Keywords: youtube,indirici,yt-dlp
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: yt-dlp
+Requires-Dist: Pillow
+Dynamic: license-file
+
+# YouTube İndirici (youtube-indir)
+
+`youtube-indir`, **yt-dlp** kütüphanesini kullanarak YouTube videolarını mevcut en yüksek kalitede ve MP4 formatında indirmek için tasarlanmış basit ve güçlü bir Python aracıdır.
+
+Bu program, hem **komut satırından (CLI)** hızlı bir şekilde kullanılabilir hem de indirme öncesinde kullanıcının videoyu kaydetmek istediği konumu **"Farklı Kaydet" penceresi** (Tkinter) aracılığıyla seçmesini sağlayarak kullanıcı dostu bir deneyim sunar.
+
+---
+
+## 🚀 Özellikler
+
+* **Yüksek Kalite:** Video ve sesi ayrı ayrı indirip birleştirerek, çıktı olarak en iyi kalitede MP4 dosyası oluşturur.
+* **GUI Desteği:** İndirilecek dosyanın adını ve klasörünü seçmek için **Tkinter** tabanlı bir dosya kaydetme iletişim kutusu açar.
+* **Komut Satırı Arayüzü (CLI):** URL'yi doğrudan argüman olarak alarak veya etkileşimli olarak sorarak çalışabilir.
+* **Güvenilir Altyapı:** İndirme işlemlerini güncel ve güçlü **`yt-dlp`** kütüphanesi ile gerçekleştirir.
+* **`yt-dlp`** kütüphanesinin her zaman güncel versiyonda olmasına dikkat edin. Ne kadar güncel ise, o kadar güvenli ve sorunsuz olacaktır. Bu paket, **`yt-dlp`**’ye bağımlıdır.
+---
+
+## ⚙️ Kurulum
+
+Bu betiği kullanabilmeniz için **Python 3.x** kurulu olmalıdır. Ayrıca indirme ve birleştirme işlemleri için gerekli olan temel bağımlılıklar şunlardır:
+
+### Gereksinimler
+
+* **Python 3.x**
+* **`yt-dlp`** Python Kütüphanesi
+* **`ffmpeg`** (Video ve ses akışlarını birleştirmek için `yt-dlp` tarafından kullanılır. Sistem yolunda (PATH) kurulu olmalıdır.)
+
+### Bağımlılıkları Kurma
+
+Aşağıdaki komutu kullanarak gerekli Python kütüphanesini kurabilirsiniz:
+
+```bash
+pip install yt-dlp
