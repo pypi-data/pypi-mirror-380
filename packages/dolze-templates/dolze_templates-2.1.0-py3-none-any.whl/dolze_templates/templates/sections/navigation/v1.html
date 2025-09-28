@@ -1,0 +1,143 @@
+<nav
+  id="header"
+  class="sticky top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <a
+        href="/"
+        class="text-2xl sm:text-3xl font-['Montserrat'] text-primary truncate"
+      >
+        {{ (settings.seo.title or 'YourBrand').split(' - ')[0] }}
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center space-x-8">
+        {% for item in navigation.items %}
+        <a
+          href="{{ item.url }}"
+          class="nav-link text-gray-700 hover:text-primary transition-colors"
+        >
+          {{ item.label }}
+        </a>
+        {% endfor %}
+      </div>
+
+      <!-- Desktop CTA (optional) -->
+      {% if navigation.cta and navigation.cta.label and navigation.cta.url %}
+      <div class="hidden md:flex items-center">
+        <a
+          href="{{ navigation.cta.url }}"
+          class="inline-flex items-center rounded-md bg-primary px-4 py-2 text-white font-medium hover:opacity-90 transition"
+        >
+          {{ navigation.cta.label }}
+        </a>
+      </div>
+      {% endif %}
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button
+          id="mobile-menu-button"
+          class="text-gray-700 hover:text-primary focus:outline-none"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation"
+        >
+          <i class="ri-menu-line h-6 w-6 text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden border-t border-gray-100 bg-white"
+  >
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      {% for item in navigation.items %}
+      <a
+        href="{{ item.url }}"
+        class="mobile-nav-link block text-gray-700 hover:text-primary px-6 py-3 transition-colors"
+      >
+        {{ item.label }}
+      </a>
+      {% endfor %} {% if navigation.cta and navigation.cta.label and
+      navigation.cta.url %}
+      <a
+        href="{{ navigation.cta.url }}"
+        class="block mt-2 mx-4 rounded-md bg-primary px-4 py-3 text-center font-semibold text-white"
+      >
+        {{ navigation.cta.label }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    // Toggle mobile menu
+    const btn = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+    btn?.addEventListener("click", () => {
+      const isHidden = menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+    // Close menu on item click
+    document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+      link.addEventListener("click", () => menu.classList.add("hidden"));
+    });
+
+    // Smooth scroll with offset (accounts for sticky nav height)
+    const OFFSET = 72; // ~ h-16 plus a little buffer
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        if (!id || id.length < 2) return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - OFFSET;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      });
+    });
+
+    // Active link highlight (desktop)
+    const linkMap = {};
+    document
+      .querySelectorAll(".nav-link")
+      .forEach((a) => (linkMap[a.getAttribute("href")] = a));
+
+    const observed = Object.keys(linkMap)
+      .filter((h) => h && h.startsWith("#"))
+      .map((h) => document.querySelector(h))
+      .filter(Boolean);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = "#" + entry.target.id;
+          if (entry.isIntersecting) {
+            Object.values(linkMap).forEach((el) =>
+              el.classList.remove("text-primary", "font-semibold")
+            );
+            if (linkMap[id])
+              linkMap[id].classList.add("text-primary", "font-semibold");
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 }
+    );
+
+    observed.forEach((s) => io.observe(s));
+  </script>
+</nav>
+
+<style>
+  .nav-link {
+    /* keeps your original feel */
+    /* Tailwind utility aliases kept inline via classes above */
+  }
+</style>
