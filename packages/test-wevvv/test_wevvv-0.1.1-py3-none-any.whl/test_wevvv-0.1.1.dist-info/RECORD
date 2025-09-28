@@ -1,0 +1,8 @@
+test_wevvv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_wevvv/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_wevvv/log.py,sha256=2j5kThXlkh1pR-d7oD5XXuFAKNFMdy9xF7gmgGeCQb4,5102
+test_wevvv/server.py,sha256=hgqf825qym98AhKc5Dwjfo5jT4ypYgkZON0K97nCO6I,3261
+test_wevvv-0.1.1.dist-info/METADATA,sha256=kIHvhTkQC4bH5ez1tO8bElfapCrUcmv_7xBIiBqztL4,181
+test_wevvv-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+test_wevvv-0.1.1.dist-info/top_level.txt,sha256=Dk5P-MWHRM353mLAMOo-skI7WL9ywV_cI5pzS9tM2JU,11
+test_wevvv-0.1.1.dist-info/RECORD,,
