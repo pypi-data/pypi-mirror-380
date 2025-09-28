@@ -1,0 +1,9 @@
+colcon_meson/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colcon_meson/build.py,sha256=t_qRVDDeBqLn4yu1o1l3pZnvo7pQSzau97kL4-_P85k,11132
+colcon_meson/identification.py,sha256=JdE2c7fVnl_DEtO0re0XNUDCVoPJOUnpD1OoTdgVhig,4647
+colcon_meson-0.5.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+colcon_meson-0.5.0.dist-info/METADATA,sha256=RKpFcnHB5iUIR9fLpJNxLc4nzEBTQPHqXGvRjgXTi2c,1881
+colcon_meson-0.5.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+colcon_meson-0.5.0.dist-info/entry_points.txt,sha256=6fyg3O8SmwDOjzanqFO3Lp48SJVbZ8Y_13AhssWX9Ck,217
+colcon_meson-0.5.0.dist-info/top_level.txt,sha256=_ZQBikvXxgzx63PTYZqpz_e4ehzoFh_fBF02bVBYxpo,13
+colcon_meson-0.5.0.dist-info/RECORD,,
