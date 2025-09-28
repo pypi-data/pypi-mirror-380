@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: hic_io
+Version: 1.0.3
+Summary: Process hic files
+Author-email: Arthur Gouhier <ajgouhier@gmail.com>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/ajgouhier/hic_io
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pybind11>=2.6.0
+Dynamic: license-file
+
+## Installation
+
+```
+pip install hic-io
+```
+
+Requires numpy and pybind11.
+
+## Usage
+
+### Read signal
+
+```python
+reader = hic_io.Reader(path)
+values = reader.read_signal(...)
+```
