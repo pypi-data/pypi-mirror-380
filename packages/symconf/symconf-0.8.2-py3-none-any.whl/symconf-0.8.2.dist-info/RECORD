@@ -1,0 +1,14 @@
+symconf/__init__.py,sha256=LHzuGQrVh8iByIke-JQwemR3kGaEsqZ2BBew3Sd9O1k,361
+symconf/__main__.py,sha256=RfCn-UCNprVJRJYlsupyBJaWzlRaRQqMIL6Y85fFCRc,5704
+symconf/config.py,sha256=4uduAeTrB74dEy_4avdNQkdfbES8rcR1UJPSdrF4LkM,38958
+symconf/matching.py,sha256=QeldJk9DBQWq4wxmrTs89HKYSVMyWHo2ZfbqVBUv8sc,9781
+symconf/reader.py,sha256=XDeRc1Lq_3Y9DEW69SPG1zuUvPPucZiyel0SDCKAeuE,2760
+symconf/runner.py,sha256=4N8_bHiVOCAX5qwgcAD10yInEpabjE7hO12jjSiuIao,1595
+symconf/template.py,sha256=O51tW7ciCv7c87W-auJtVZdu2BqaTY6k18gwPYI26Dg,2518
+symconf/util.py,sha256=NMaesai3GFzgIh6yA5d7er9dfTT1imQ5N5mqD9rrfVk,3341
+symconf-0.8.2.dist-info/licenses/LICENSE,sha256=FXyb5PwRFpyvFDZvTk4pnSZPlyiEAkbLuawB2FVdMco,1071
+symconf-0.8.2.dist-info/METADATA,sha256=HOH-uunKOjOKFgAYhVs8VhQKFT0DIwretHaiSF8a7c0,8057
+symconf-0.8.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+symconf-0.8.2.dist-info/entry_points.txt,sha256=QzwW0eeC-ibhiHbG8BBOJ3gOpdYKS2eYXz_cOFuP3nY,50
+symconf-0.8.2.dist-info/top_level.txt,sha256=p30g3wWaJaWHxAw8lleqSgYCTvBsMXruDG3TXehkBZk,8
+symconf-0.8.2.dist-info/RECORD,,
