@@ -1,0 +1,10 @@
+alfred3_interact/templates/html/ChatElement.html.j2,sha256=mgH4fa0szdjbSWQb5dutaRoxPefJ_DyYp3Zyf30idrc,1160
+alfred3_interact/templates/html/ToggleMatchMakerActivation.html.j2,sha256=LRLdCcwBHEscFPpAvdyPAFLk6MGL9BMd02ZRAgSctZE,89
+alfred3_interact/templates/html/ViewMembersElement.html.j2,sha256=a7acUqZpbUIH8ktUrHXsbFxH_6SH93w7Fb_2NQ1o44o,647
+alfred3_interact/templates/js/chat_element.js.j2,sha256=jXeeggJa1iFmrQ_I6_NYmbwKv5kvKHXrN-ajqCoyMhE,2391
+alfred3_interact/templates/js/toggle_match_maker.js.j2,sha256=Dk51XgvPvyLwePekOLZuL5JOEJ04Ws7bpGSH53hUidE,636
+alfred3_interact/templates/js/view_members.js.j2,sha256=FI3GSa-odh8WaKYP_3BamAa9JN6XWivbmi23ybR08zw,636
+alfred3_interact-0.4.0.dist-info/METADATA,sha256=qgr0ETyAz6t8SXvMLgOEMX3jV7rGy7s7VgzMEUJGUEw,3815
+alfred3_interact-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+alfred3_interact-0.4.0.dist-info/licenses/LICENSE,sha256=E-aLN_D7Xj5mdjnRB821oVLU7n3H5wX-w9cHvgL_mqw,1101
+alfred3_interact-0.4.0.dist-info/RECORD,,
