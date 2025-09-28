@@ -1,0 +1,12 @@
+ormparams/__init__.py,sha256=jC5r9anlZ78_wcjeqWo2F81TbZiDLMLPrGJ5ggJJwfk,280
+ormparams/exceptions.py,sha256=i_xcIdeeV1FQ2Y_V1ZUPz7Om3gQp5F1VjQR76QNIkzU,621
+ormparams/fastapi_ext.py,sha256=dTpFoebT_LhO5pgqrIx4U4lzrIJBTXXRYNnctnLHFug,1602
+ormparams/filter.py,sha256=VMC0KOzVW-6v_0uwAk4_N536-Ojcl6IFzlLuwWQ-Gok,8269
+ormparams/mixin.py,sha256=9a754DoJe5cc-Yw9lSORl6-lDm1XMgYOhvr9nhFUoO0,175
+ormparams/parser.py,sha256=FoH2ik5-WpEAkKF22oevHGL4YZfMFQ3d3Adk2dzY6Ww,3696
+ormparams/rules.py,sha256=rdvk-Jte1oCs8VKuCepEIN94fTxI66smfuiysjr5RiU,1850
+ormparams/suffixes.py,sha256=Gzk5WXlsJaApNJ1t9O8WZoy0CFAj9Sn42N_Y70oLId4,3777
+ormparams-1.0.0.dist-info/METADATA,sha256=CxVBE8TotTHSxKfK8DEjeMHBm4lPVPp5C59GqjkZFo8,1696
+ormparams-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ormparams-1.0.0.dist-info/top_level.txt,sha256=j6oj06S9z6QMLQrxBvT2d6uQOi1zBRgapzhgq9XaimE,10
+ormparams-1.0.0.dist-info/RECORD,,
