@@ -1,0 +1,12 @@
+primarch/__init__.py,sha256=DoFwbf3RBPpg2lzRtwDotiy9-mESqKhQKu67DgTQ9aE,94
+primarch/categories.py,sha256=cKquRUXKtgZEX-qIcZnFoFBJgMRF6hd2Z3wKm9RLAs4,16102
+primarch/coverage.py,sha256=VNoGE6Hf1NInAb_Sol4zP_hPpBnbeV1gctUdDUZp-uU,2976
+primarch/loading.py,sha256=ByW8SjPIGHRIlbdFUBM3fGW0VOgU90GZ6OCviK1iJkQ,7607
+primarch/transforms.py,sha256=0noj4rnOTp5RABbw_czTkK3SE_lrvfOAvOakYa_AnJw,5407
+primarch/plots/__init__.py,sha256=8d-FFA63_ohowwed36M5ne5ztD2BsETFJRMfMtisJ6o,82
+primarch/plots/colors.py,sha256=hdOQXBect6oOxQXwUH2u6ulGj5_Yaa4stjCayXAI-aI,370
+primarch/plots/lineplots.py,sha256=CnnxAac03GSIfM0KQr_66nhijhnfwNyp15VODCzl7oE,5960
+primarch/plots/treemaps.py,sha256=EDA2KWIsnewBCyhRqFlZUwFT1oEyRoA1JUwsel_3YGA,2897
+primarch-0.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+primarch-0.1.0.dist-info/METADATA,sha256=uwQXfqGJ-IeVPBdHHlwlVw9vye-s66SvAmS_sIQLvK8,1320
+primarch-0.1.0.dist-info/RECORD,,
