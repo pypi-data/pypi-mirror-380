@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: opopoppo
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: anyio>=4.11.0
+Requires-Dist: fastapi>=0.117.1
+Requires-Dist: pytest>=8.4.2
+Requires-Dist: pytest-asyncio>=1.2.0
+Requires-Dist: pytest-tornasync>=0.6.0.post2
+Requires-Dist: toml>=0.10.2
+Requires-Dist: uvicorn>=0.37.0
+
+使用以下方式进行server 和测试 配置对应测试环境 
+uv run pytest -s tests/test_main.py::test_get_id_from_name 
+uv run python -m clientz.server 80 --prod
+
+docker-compose build --no-cache
