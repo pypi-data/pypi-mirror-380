@@ -1,0 +1,15 @@
+.decodiff {
+    color: #007000;
+    background-color: #80ee8040;
+}
+
+div > h2:has(.decodiff),
+div > p:has(.decodiff),
+div > blockquote:has(.decodiff) {
+    padding-left: 3px;
+    border-left: 3px solid #81ff4d;
+}
+
+div > ul:has(.decodiff) {
+    border-left: 3px solid #81ff4d;
+}
