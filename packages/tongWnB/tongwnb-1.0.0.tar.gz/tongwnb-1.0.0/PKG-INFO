@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: tongWnB
+Version: 1.0.0
+Summary: Python library for streamlined tracking and management of AI training processes.
+Project-URL: Homepage, https://github.com/tong-gpu-monitor/tongWnB
+Project-URL: Repository, https://github.com/tong-gpu-monitor/tongWnB
+Author-email: TongWnB <yangcan@tongtech.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.25.0
+Provides-Extra: test
+Requires-Dist: pytest-cov>=4.0.0; extra == 'test'
+Requires-Dist: pytest>=7.0.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+# TongSwan
+
+## 安装
+
+```shell
+# 进入目录后:
+pip install -U .
+```
+
+# 使用
+
+初始化
+
+```python
+import tongWnB
+
+tongWnB.init(
+    labHost="http://127.0.0.1:8081",  # tongswanLab 平台
+    nodeIP="10.10.10.10",  # 当前节点ip地址，选填。如果不传，工具会自动获取当前节点ip
+    gpus=[0],  # 训练用到的 gpu 编号
+    company="公司名",  # tongswanLab 平台中公司的名字
+    projectName="pythonTest",  # 项目名字
+    experimentName="python_package_thirdpart",  # 实验名。如果实验不存在会自动创建该名字
+    apiKey="xxx",  # 用户用到的swanKey。请到 tongswanLab 平台个人信息出查看 swanKey
+    experimentConfig={"day": "0829", "climate": "rainning"}  # 自定义的配置信息
+```
+
+然后即可上传用户关心的训练指标
+
+```python
+tongswan.log({"loss": 0.1, "acc": 0.9})
+tongswan.log({"loss": 0.2, "acc": 0.8})
+...
+```
+
+完整用例:
+
+```python
+import tongWnB
+
+tongWnB.init(
+    labHost="http://127.0.0.1:8081",
+    nodeIP="YOUR_NODE_IP",
+    gpus=[0],
+    company="YOUR_COMPANY",
+    projectName="YOUR_PROJECT",
+    experimentName="YOUR_EXPERIMENT",
+    apiKey="YOUR_API_KEY",
+    experimentConfig={"day": "0829", "climate": "rainning"}
+)
+
+for i in range(11):
+    tongWnB.log({"loss": i, "acc": 10 - i})
+```

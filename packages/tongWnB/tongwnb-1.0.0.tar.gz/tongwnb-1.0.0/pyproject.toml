@@ -1,0 +1,41 @@
+[build-system]  # 指定构建系统与一些依赖
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "tongWnB"
+description = "Python library for streamlined tracking and management of AI training processes." 
+authors = [
+    { name="TongWnB", email="yangcan@tongtech.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dynamic=["version"]
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/tong-gpu-monitor/tongWnB"
+Repository = "https://github.com/tong-gpu-monitor/tongWnB"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tongWnB"]  # 指定项目包名
+
+[tool.pyright] # 静态类型检查，暂时没有配置
+include = ["tongWnB/**/*.py"]  # 检查的文件
+exclude = []  # 排除的文件
+
+[tool.hatch.version] # 动态设置项目版本
+path = "tongWnB/package.json"  # package.json文件，从中获取版本号
+pattern = ".*\"version\":\\s*\"(?P<version>[^\"]+)\""
