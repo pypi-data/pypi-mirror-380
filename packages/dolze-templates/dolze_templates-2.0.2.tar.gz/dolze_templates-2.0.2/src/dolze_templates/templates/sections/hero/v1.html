@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="{{ settings.accessibility.lang }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ settings.seo.title }}</title>
+    <meta name="description" content="{{ settings.seo.description }}" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+  </head>
+  <body>
+    <!-- Styles Component -->
+    <style id="hero-styles">
+      :root {
+          --primary-color: {{ settings.theme.colors.primary }};
+          --secondary-color: {{ settings.theme.colors.secondary }};
+          --accent-color: {{ settings.theme.colors.accent }};
+          --text-color: {{ settings.theme.colors.text }};
+          --text-light: {{ settings.theme.colors.textLight }};
+          --surface-color: {{ settings.theme.colors.surface }};
+          --border-radius-medium: {{ settings.theme.borderRadius.medium }};
+      }
+
+      .font-inter {
+          font-family: {{ settings.fonts.heading }};
+      }
+
+      /* Typewriter cursor */
+      @keyframes cursor-blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+      }
+
+      .typewriter-cursor {
+          display: inline-block;
+          width: 2px;
+          height: 1em;
+          background: var(--primary-color);
+          margin-left: 2px;
+          animation: cursor-blink 1s infinite;
+      }
+
+      /* Button animations */
+      .btn-primary {
+          background: var(--primary-color);
+          color: white;
+          transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+          filter: brightness(0.9);
+          transform: translateY(-1px);
+          box-shadow: 0 10px 25px rgba(99, 102, 246, 0.25);
+      }
+
+      .btn-secondary {
+          transition: all 0.2s ease;
+          border: 1px solid #E5E7EB;
+          color: var(--text-color);
+      }
+
+      .btn-secondary:hover {
+          border-color: var(--primary-color);
+          background: #F8FAFC;
+      }
+
+      /* Trust indicator fade-in */
+      @keyframes fade-in-up {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .fade-in-up {
+          animation: fade-in-up 0.6s ease-out forwards;
+      }
+
+      /* Badge styles */
+      .hero-badge {
+          background: rgba(99, 102, 241, 0.1);
+          border: 1px solid rgba(99, 102, 241, 0.2);
+          color: var(--primary-color);
+      }
+
+      .badge-dot {
+          background: var(--primary-color);
+      }
+
+      /* Dark mode support */
+      {% if settings.theme.darkMode.enabled %}
+      @media (prefers-color-scheme: dark) {
+          :root {
+              --text-color: {{ settings.theme.darkMode.colors.text }};
+              --surface-color: {{ settings.theme.darkMode.colors.surface }};
+          }
+
+          body {
+              background-color: {{ settings.theme.darkMode.colors.background }};
+              color: var(--text-color);
+          }
+
+          .btn-secondary {
+              border-color: #374151;
+              color: var(--text-color);
+          }
+
+          .btn-secondary:hover {
+              background: #1F2937;
+          }
+      }
+      {% endif %}
+
+      /* Reduced motion support */
+      {% if settings.accessibility.reducedMotion %}
+      @media (prefers-reduced-motion: reduce) {
+          .typewriter-cursor,
+          .fade-in-up {
+              animation: none;
+          }
+
+          .btn-primary:hover,
+          .btn-secondary:hover {
+              transform: none;
+          }
+      }
+      {% endif %}
+    </style>
+
+    <!-- Hero Section -->
+    <div
+      id="hero"
+      class="font-inter relative min-h-screen flex items-center justify-center overflow-hidden"
+      style="background-color: {{ settings.theme.colors.background }};"
+      aria-labelledby="hero-heading"
+    >
+      {% if sections.hero.heroImage and sections.hero.heroImage.src %}
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url('{{ sections.hero.heroImage.src }}');"
+          {%
+          if
+          sections.hero.heroImage.lazyLoad
+          %}loading="lazy"
+          {%
+          endif
+          %}
+          role="img"
+          aria-label="{{ sections.hero.heroImage.alt or 'Hero background image' }}"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-800/50 to-gray-900/30"
+        ></div>
+      </div>
+      {% endif %}
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-28">
+          <!-- Trust Badge -->
+          {% if sections.hero.badge %}
+          <div class="text-center mb-8">
+            <div
+              class="inline-flex items-center px-4 py-2 rounded-full hero-badge text-sm font-medium"
+              style="border-radius: var(--border-radius-medium)"
+            >
+              <span
+                class="w-2 h-2 badge-dot rounded-full mr-3 animate-pulse"
+              ></span>
+              {{ sections.hero.badge }}
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Main Content -->
+          <div class="text-center max-w-4xl mx-auto">
+            <h1
+              id="hero-heading"
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              style="color: {% if sections.hero.heroImage %}white{% else %}var(--text-color){% endif %};"
+            >
+              {{ sections.hero.title }} {% if sections.hero.subtitles %}
+              <span
+                class="block mt-2"
+                style="color: {% if sections.hero.heroImage %}white{% else %}var(--primary-color){% endif %};"
+              >
+                <span
+                  id="typewriter"
+                  data-words="{{ sections.hero.subtitles | join('||') }}"
+                  data-speed="120"
+                  data-delete-speed="80"
+                  data-pause="2500"
+                  aria-live="polite"
+                >
+                  <span class="typing-text"
+                    >{{ sections.hero.subtitles[0] }}</span
+                  >
+                  <span class="typewriter-cursor"></span>
+                </span>
+              </span>
+              {% endif %}
+            </h1>
+
+            {% if sections.hero.description %}
+            <p
+              class="text-xl max-w-2xl mx-auto leading-relaxed mb-10"
+              style="color: {% if sections.hero.heroImage %}rgba(255,255,255,0.85){% else %}var(--text-light){% endif %};"
+            >
+              {{ sections.hero.description }}
+            </p>
+            {% endif %}
+
+            <!-- CTA Buttons -->
+            {% if sections.hero.ctaButtons %}
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            >
+              {% for button in sections.hero.ctaButtons %} {% if button.style ==
+              'filled' %}
+              <a
+                href="{{ button.url }}"
+                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold btn-primary focus:ring-4 focus:ring-opacity-20 focus:outline-none"
+                style="border-radius: var(--border-radius-medium); focus:ring-color: var(--primary-color);"
+                {%
+                if
+                button.ariaLabel
+                %}aria-label="{{ button.ariaLabel }}"
+                {%
+                endif
+                %}
+              >
+                {{ button.label }}
+                <i class="ri-arrow-right-line ml-2 text-lg"></i>
+              </a>
+              {% else %}
+              <a
+                href="{{ button.url }}"
+                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold btn-secondary focus:ring-4 focus:ring-gray-500/20 focus:outline-none"
+                style="border-radius: var(--border-radius-medium)"
+                {%
+                if
+                button.ariaLabel
+                %}aria-label="{{ button.ariaLabel }}"
+                {%
+                endif
+                %}
+              >
+                {{ button.label }} {% if button.modalVideo %}
+                <i class="ri-play-circle-line ml-2 text-lg"></i>
+                {% else %}
+                <i class="ri-external-link-line ml-2 text-lg"></i>
+                {% endif %}
+              </a>
+              {% endif %} {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Social Proof -->
+            <div class="fade-in-up" style="animation-delay: 0.3s">
+              <p
+                class="text-sm mb-8"
+                style="color: {% if sections.hero.heroImage %}rgba(255,255,255,0.6){% else %}var(--text-light){% endif %};"
+              >
+                No credit card required • 14-day free trial • Cancel anytime
+              </p>
+
+              <!-- Trust Metrics -->
+              {% if sections.hero.stats %}
+              <div
+                class="grid grid-cols-{{ sections.hero.stats | length }} gap-8 max-w-md mx-auto"
+              >
+                {% for stat in sections.hero.stats %}
+                <div class="text-center">
+                  <div
+                    class="text-2xl font-bold mb-1"
+                    style="color: {% if sections.hero.heroImage %}white{% else %}var(--text-color){% endif %};"
+                    data-count="{{ stat.value | replace('+', '') | replace('%', '') | replace('K', '') | replace('/7', '') }}"
+                  >
+                    0
+                  </div>
+                  <div
+                    class="text-xs uppercase tracking-wider"
+                    style="color: {% if sections.hero.heroImage %}rgba(255,255,255,0.6){% else %}var(--text-light){% endif %};"
+                  >
+                    {{ stat.label }}
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Features Preview -->
+            {% if sections.hero.features %}
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto"
+            >
+              {% for feature in sections.hero.features %}
+              <div
+                class="text-center p-6 rounded-lg"
+                style="background: {% if sections.hero.heroImage %}rgba(255,255,255,0.1){% else %}var(--surface-color){% endif %}; border-radius: var(--border-radius-medium);"
+              >
+                <div
+                  class="text-3xl mb-4"
+                  style="color: {% if sections.hero.heroImage %}white{% else %}var(--primary-color){% endif %};"
+                >
+                  <i class="{{ feature.icon }}"></i>
+                </div>
+                <h3
+                  class="text-lg font-semibold mb-2"
+                  style="color: {% if sections.hero.heroImage %}white{% else %}var(--text-color){% endif %};"
+                >
+                  {{ feature.title }}
+                </h3>
+                <p
+                  class="text-sm"
+                  style="color: {% if sections.hero.heroImage %}rgba(255,255,255,0.8){% else %}var(--text-light){% endif %};"
+                >
+                  {{ feature.description }}
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Component -->
+    <script>
+      class ProductionTypewriter {
+        constructor(element) {
+          this.element = element;
+          this.textElement = element.querySelector(".typing-text");
+          this.words = this.parseWords(element.getAttribute("data-words"));
+          this.typeSpeed = parseInt(
+            element.getAttribute("data-speed") || "120"
+          );
+          this.deleteSpeed = parseInt(
+            element.getAttribute("data-delete-speed") || "80"
+          );
+          this.pauseTime = parseInt(
+            element.getAttribute("data-pause") || "2500"
+          );
+
+          this.wordIndex = 0;
+          this.charIndex = 0;
+          this.isDeleting = false;
+          this.timeoutId = null;
+
+          if (this.words.length > 1) {
+            this.init();
+          }
+        }
+
+        parseWords(attr) {
+          if (!attr) return [];
+          try {
+            return JSON.parse(
+              "[" +
+                attr
+                  .split("||")
+                  .map((word) => '"' + word.trim() + '"')
+                  .join(",") +
+                "]"
+            );
+          } catch (e) {
+            return attr
+              .split("||")
+              .map((s) => s.trim())
+              .filter(Boolean);
+          }
+        }
+
+        init() {
+          // Start with first word visible
+          this.textElement.textContent = this.words[0];
+          this.charIndex = this.words[0].length;
+
+          // Wait then start the cycle
+          this.timeoutId = setTimeout(() => {
+            this.isDeleting = true;
+            this.type();
+          }, this.pauseTime);
+        }
+
+        type() {
+          const currentWord = this.words[this.wordIndex];
+
+          if (this.isDeleting) {
+            this.textElement.textContent = currentWord.substring(
+              0,
+              this.charIndex - 1
+            );
+            this.charIndex--;
+
+            if (this.charIndex === 0) {
+              this.isDeleting = false;
+              this.wordIndex = (this.wordIndex + 1) % this.words.length;
+              this.timeoutId = setTimeout(() => this.type(), 200);
+            } else {
+              this.timeoutId = setTimeout(() => this.type(), this.deleteSpeed);
+            }
+          } else {
+            this.textElement.textContent = currentWord.substring(
+              0,
+              this.charIndex + 1
+            );
+            this.charIndex++;
+
+            if (this.charIndex === currentWord.length) {
+              this.timeoutId = setTimeout(() => {
+                this.isDeleting = true;
+                this.type();
+              }, this.pauseTime);
+            } else {
+              this.timeoutId = setTimeout(() => this.type(), this.typeSpeed);
+            }
+          }
+        }
+
+        destroy() {
+          if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
+          }
+        }
+      }
+
+      // Counter animation
+      function animateCounter(element, target, originalValue) {
+        const duration = 1500;
+        const start = performance.now();
+
+        function update(currentTime) {
+          const elapsed = currentTime - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const current = Math.floor(target * progress);
+
+          // Format based on original value
+          if (originalValue.includes("%")) {
+            element.textContent = current + "%";
+          } else if (originalValue.includes("/")) {
+            element.textContent = current + "/7";
+          } else if (originalValue.includes("K")) {
+            element.textContent = current + "K+";
+          } else {
+            element.textContent = current;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize typewriter
+        const typewriterElement = document.getElementById("typewriter");
+        if (typewriterElement) {
+          new ProductionTypewriter(typewriterElement);
+        }
+
+        // Initialize counters with intersection observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const target = entry.target;
+                const count = parseInt(target.getAttribute("data-count"));
+                const originalText =
+                  target.parentElement.parentElement.querySelector(
+                    ".text-xs"
+                  ).textContent;
+                animateCounter(target, count, originalText);
+                observer.unobserve(target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        document.querySelectorAll("[data-count]").forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

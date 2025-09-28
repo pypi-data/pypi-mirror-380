@@ -1,0 +1,22 @@
+<section id="demo" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">{{ sections.demo.title }}</h2>
+        <p class="text-lg text-gray-600">{{ sections.demo.subtitle }}</p>
+      </div>
+
+      <!-- Video Container -->
+      <div id="video-container" class="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+        <div class="absolute inset-0 bg-gray-900/50 flex items-center justify-center group cursor-pointer z-10" id="video-overlay">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+            <i class="ri-play-fill text-4xl text-primary"></i>
+          </div>
+        </div>
+        <video id="demo-video" class="w-full h-full object-cover" poster="{{ sections.about.media.src }}" controls>
+          <source src="{{ sections.demo.video.src }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+  </section>

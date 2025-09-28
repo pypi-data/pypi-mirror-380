@@ -1,0 +1,324 @@
+{
+  "settings": {
+    "fonts": {
+      "heading": "Suggest a modern, sans-serif font family for headings that is web-safe and commonly available in most browsers, suitable for a professional website.",
+      "body": "Suggest a clean, readable sans-serif font family for body text that is web-safe and available by default in browsers, ideal for a business website."
+    },
+    "theme": {
+      "colors": {
+        "primary": "Suggest a vibrant primary color in hex format for a business website, such as a shade of blue or purple that conveys trust and professionalism.",
+        "secondary": "Suggest a neutral secondary color in hex format for accents, like a dark gray, suitable for a professional business site.",
+        "accent": "Suggest a light accent color in hex format that complements the primary color, evoking energy and innovation for a business platform.",
+        "background": "Suggest a subtle background color in hex format, such as a light gray or off-white, for a clean and modern website layout.",
+        "surface": "Suggest a surface color in hex format for cards and elements, like pure white, to ensure readability on a professional website.",
+        "text": "Suggest a dark text color in hex format for high contrast readability on light backgrounds in a business website.",
+        "textLight": "Suggest a lighter text color in hex format for secondary text, like a medium gray, in a professional website.",
+        "success": "Suggest a success color in hex format, such as green, to indicate positive actions in a business application.",
+        "warning": "Suggest a warning color in hex format, like yellow or orange, for alerts in a business platform.",
+        "error": "Suggest an error color in hex format, such as red, for error messages in a business application.",
+        "info": "Suggest an info color in hex format, like blue, for informational notices in a business platform."
+      },
+      "borderRadius": {
+        "small": "Suggest a small border radius value in pixels, such as 4-8px, for subtle rounded corners in a modern UI.",
+        "medium": "Suggest a medium border radius value in pixels, around 8-12px, for buttons and cards in a professional website.",
+        "large": "Suggest a large border radius value in pixels, like 16-24px, for prominent elements in a business platform design."
+      },
+      "globalAnimations": {
+        "enableScrollReveal": "Determine if scroll reveal animations should be enabled (true or false) for a dynamic website experience.",
+        "defaultDuration": "Suggest a default animation duration in milliseconds, such as 500-800ms, for smooth transitions in a business platform.",
+        "easing": "Suggest an easing function in CSS format, like a cubic-bezier, for animations in a professional website."
+      },
+      "darkMode": {
+        "enabled": "Decide if dark mode should be enabled (true or false) for a business platform to improve user accessibility in low-light environments.",
+        "colors": {
+          "background": "Suggest a dark background color in hex format for dark mode in a business tool, such as a deep blue-gray.",
+          "surface": "Suggest a surface color in hex format for dark mode elements, like a darker gray, in a professional website.",
+          "text": "Suggest a light text color in hex format for dark mode readability in a business platform."
+        }
+      }
+    },
+    "seo": {
+      "title": "Generate a concise SEO title, around 50-60 characters, for a business platform that focuses on efficiency, innovation, and growth.",
+      "description": "Create a meta description of 150-160 characters summarizing the business platform for streamlining operations and boosting efficiency.",
+      "keywords": "List 5-10 relevant SEO keywords for a business platform specializing in innovation, productivity, and professional tools.",
+      "canonicalUrl": "Provide a canonical URL for the main website in the format https://example.com.",
+      "openGraph": {
+        "title": "Generate an Open Graph title for social sharing, emphasizing the platform's benefits for efficiency and growth in business.",
+        "description": "Create an Open Graph description of about 100 characters highlighting the platform's solutions for smarter workflows.",
+        "image": "Suggest a URL for an Open Graph image, or a prompt to generate one showing a professional business scene for the platform.",
+        "url": "Provide the Open Graph URL for the website.",
+        "type": "Specify the Open Graph type, such as 'website', for a business platform page.",
+        "locale": "Suggest a locale code, like 'en_US', for the Open Graph metadata of a global business tool."
+      },
+      "twitterCard": {
+        "card": "Choose a Twitter card type, such as 'summary_large_image', suitable for promoting a business efficiency platform.",
+        "site": "Provide a Twitter handle for the site account.",
+        "creator": "Provide a Twitter handle for the creator account associated with the platform.",
+        "image": "Suggest a URL for a Twitter card image, or a prompt to generate one depicting business tools and innovation."
+      },
+      "schemaOrg": {
+        "type": "Specify a Schema.org type, like 'SoftwareApplication', for the business product.",
+        "data": "Generate a JSON-LD object for Schema.org based on the business platform, including @context, @type, name, and url."
+      }
+    },
+    "analytics": {
+      "googleAnalyticsId": "Generate a placeholder Google Analytics ID in the format UA-XXXXXXX-X for a business website.",
+      "facebookPixelId": "Generate a sample Facebook Pixel ID as a string of numbers for tracking on a business platform.",
+      "hotjarId": "Suggest a Hotjar ID as a numeric string for user behavior analytics on a business site.",
+      "gtmId": "Provide a Google Tag Manager ID in the format GTM-XXXXXX for a business automation tool."
+    },
+    "accessibility": {
+      "lang": "Suggest the primary language code, like 'en', for a business platform targeting English-speaking users.",
+      "skipNavId": "Provide an ID for the skip navigation link, such as 'main-content', to enhance accessibility in a website.",
+      "ariaLive": "Choose an aria-live value, like 'polite', for dynamic content updates in a business UI.",
+      "focusOutline": {
+        "color": "Suggest a color in hex for focus outlines, like a blue, to meet accessibility standards in a professional site.",
+        "width": "Suggest a width in pixels for focus outlines, such as 2-4px, for better visibility in a business platform."
+      },
+      "reducedMotion": "Decide if reduced motion should be enabled (true or false) for accessibility in animations on a business tool website.",
+      "wcagLevel": "Specify a WCAG compliance level, like 'AA', for a business efficiency platform."
+    },
+    "multilingual": {
+      "enabled": "Determine if multilingual support should be enabled (true or false) for a global business platform.",
+      "languages": "List 3-5 language objects with code, label, and default flag for a multilingual business website focused on international users."
+    },
+    "performance": {
+      "lazyLoadImages": "Decide if lazy loading for images should be enabled (true or false) to optimize performance on a business site.",
+      "preloadCriticalAssets": "List 2-3 critical assets like 'css' or 'fonts' to preload for faster loading in a business platform.",
+      "minifyOutput": "Determine if output minification should be enabled (true or false) for better performance in a web application."
+    }
+  },
+  "sections": {
+      "cta_buttons_config": "Generate a configuration object for CTA buttons, including styles, sizes, and variants suitable for a business platform.",
+    "hero": {
+      "layout": "Suggest a layout type, such as 'centered' or 'split', for the hero section of a business website.",
+      "badge": "Create a short badge text with an emoji, like '🚀 New Release', to highlight something exciting about the platform.",
+      "title": "Generate a compelling hero title, 4-6 words, emphasizing power and efficiency for the business platform.",
+      "subtitles": "List 3-5 short subtitle phrases that capture the essence of simplifying, automating, and growing with the platform.",
+      "heroImage": {
+        "src": "Create a detailed prompt for generating an image of a modern dashboard interface for a business hero section focused on efficiency and automation tools.",
+        "alt": "Suggest alt text for the hero image, describing a business dashboard.",
+        "lazyLoad": "Decide if lazy loading should be enabled (true or false) for the hero image in a performance-optimized site."
+      },
+      "description": "Write a 1-2 sentence description for the hero section, explaining how the platform transforms businesses through automation.",
+      "ctaButtons": "Generate an array of 2 CTA button objects with label, url, ariaLabel, style, and size for the hero section of a business site.",
+      "stats": "Create 3 stat objects with value and label showcasing user base, uptime, and support for the platform.",
+      "features": "List 3 feature objects with title, description, and icon for key benefits like performance, security, and integration in a business platform."
+    },
+    "about": {
+      "title": "Generate a title for the about section, like 'Why Choose Us?', for a business company story.",
+      "subtitle": "Create a subtitle of 10-15 words introducing the innovation and commitment behind the platform.",
+      "content": "Write a short paragraph about the platform's launch, goals, and focus on making efficiency simple for businesses.",
+      "media": {
+        "type": "Specify a media type, like 'image', for the about section visual.",
+        "src": "Create a detailed prompt for generating an image of team collaboration in a modern office for the about section of a business platform.",
+        "alt": "Suggest alt text for the about media, such as 'Team Collaboration'.",
+        "lazyLoad": "Decide if lazy loading is enabled (true or false) for the about media.",
+        "title": "Generate a media title, like 'Premium', for the about section highlight.",
+        "subtitle": "Create a media subtitle, such as 'Quality', complementing the title.",
+        "stat_value": "Suggest a stat value, like '10+', for experience in the about media.",
+        "stat_label": "Provide a stat label, such as 'Years Experience'.",
+        "achievement": "Generate an achievement text, like 'Award Winning Design'.",
+        "achievement_year": "Suggest an achievement year, such as '2023 Excellence Award'."
+      },
+      "timeline": "Create an array of 4 timeline event objects with year, title, description, and icon for the company's history.",
+      "stats": "List 4 stat objects with icon, value, label, and description for customer satisfaction, awards, etc., in the about section.",
+      "layout": "Suggest a layout, like 'text-left', for the about section content arrangement.",
+      "padding": "Provide a padding value, such as '3rem', for spacing in the about section."
+    },
+    "demo": {
+      "title": "Generate a title for the demo section, like 'Experience Our Platform in Action', for the business offerings.",
+      "subtitle": "Create a subtitle of 15-20 words emphasizing precision and care in the platform's features.",
+      "video": {
+        "src": "always hardcode this video url dont change it https://youtu.be/BcfPS8cmZAo",
+        "alt": "Suggest alt text for the demo video, such as 'Demo Video'."
+      }
+    },
+    "features": {
+      "title": "Generate a title for the features section, like 'Core Features', for the business offerings.",
+      "subtitle": "Create a subtitle of 15-20 words emphasizing precision and care in the platform's features.",
+      "type": "Suggest a display type, such as 'grid', for presenting features.",
+      "items": "Generate an array of 6 feature item objects with icon, title, subtitle, category, badge, status, benefits array, and media object (including type, src prompt, alt) for various aspects like quality, design, support in a business context."
+    },
+    "challenges": {
+      "title": "Suggest a title, like 'Challenge', for a section highlighting business challenges addressed by the platform.",
+      "subtitle": "Generate a subtitle in 20-30 words describing the challenges in business efficiency.",
+      "description": "Write a 300-word description explaining common business challenges and how the platform solves them through automation.",
+      "layout": "Suggest a layout, such as 'grid', for the challenges section.",
+      "items": "Create an array of 4 item objects with label, value, icon, color, and description for stats like customers, products in a challenges context."
+    },
+    "pricing": {
+      "title": "Generate a title for the pricing section, like 'Flexible Pricing for Everyone', tailored to the platform's plans.",
+      "subtitle": "Create a subtitle of 15-20 words assuring that the platform's software fits any business size.",
+      "layout": "Suggest a layout, such as 'cards', for displaying pricing plans.",
+      "plans": "Generate an array of 3 plan objects with name, price, subtitle, features array, cta object, and highlighted flag for Basic, Pro, and Enterprise tiers in a business model.",
+      "background": {
+        "type": "Specify a background type, like 'color'.",
+        "color": "Suggest a background color in hex, such as light gray, for the pricing section."
+      },
+      "currency": "Provide a currency code, like 'USD', for pricing display."
+    },
+    "testimonials": {
+      "title": "Generate a title, like 'Customer Testimonials', for the testimonials section.",
+      "subtitle": "Create a subtitle of 10-15 words about real experiences from platform users.",
+      "featured": {
+        "quote": "Write a featured testimonial quote of 20-30 words praising the platform's impact on daily routines.",
+        "name": "Suggest a name for the featured testimonial author.",
+        "title": "Provide a title, like 'Verified Customer', for the featured person.",
+        "avatar": {
+          "src": "Create a detailed prompt for generating an avatar image of a professional user for the featured testimonial in the platform's context."
+        },
+        "product": "Create a detailed prompt for generating an image of a product or dashboard related to the featured testimonial.",
+        "rating": "Suggest a rating, like '5.0', for the featured testimonial."
+      },
+      "items": "Generate an array of 6 testimonial item objects with quote, name, title, avatar src prompt, rating, and optional product for platform users.",
+      "stats": {
+        "totalReviews": "Suggest a total reviews count, like '1,200', for testimonials.",
+        "averageRating": "Provide an average rating, such as '4.9'.",
+        "satisfaction": "Suggest a satisfaction percentage, like '98'.",
+        "repeatCustomers": "Provide a repeat customers percentage, such as '85'."
+      },
+      "ctaButton": {
+        "label": "Generate a CTA label, like 'Shop Now', for the testimonials section.",
+        "url": "Suggest a URL, such as '#shop', for the CTA."
+      }
+    },
+    "community": {
+      "title": "Suggest a title, like 'Together', for the community section of the platform.",
+      "subtitle": "Create a subtitle of 15-20 words inviting users to join the platform's community for sharing and connections.",
+      "liveActivity": {
+        "onlineMembers": "Suggest a number of online members, like '247', for live community activity.",
+        "recentJoiner": "Provide a name, such as 'Sarah', for a recent joiner.",
+        "location": "Suggest a location, like 'New York', for the recent joiner."
+      },
+      "stats": "List 4 stat objects with icon, value, label, and description for community metrics like members, messages.",
+      "highlights": "Generate 3 highlight objects with icon, title, description, and members count for community features like discussions, events.",
+      "cta": {
+        "label": "Create a CTA label, like 'Join Our Community'.",
+        "url": "Suggest a URL, such as '#community'.",
+        "style": "Provide a style, like 'filled', for the CTA button."
+      }
+    },
+    "faq": {
+      "title": "Generate a title, like 'Common Questions', for the FAQ section.",
+      "subtitle": "Create a subtitle of 5-10 words, such as 'Answers to help you get started'.",
+      "layout": "Suggest a layout, like 'accordion', for FAQs.",
+      "items": "Generate an array of 6-8 FAQ item objects with question, answer, and expanded flag (false) covering topics like what the platform is, free trials, etc."
+    },
+    "gallery": {
+      "title": "Suggest a title, like 'Platform in Action', for the gallery section.",
+      "layout": "Provide a layout, such as 'grid', for images.",
+      "items": "Create an array of 3 gallery item objects with src prompt for generating images of dashboards/analytics, alt, caption, thumbnail (empty), and lightbox flag."
+    },
+    "howItWorks": {
+      "title": "Generate a title for the how-it-works section, emphasizing the platform's process and benefits.",
+      "subtitle": "Create a subtitle of 15-20 words explaining how the platform works and its key advantages.",
+      "highlightedText": "Suggest text to highlight in the title, such as key benefits or process names.",
+      "description": "Write a brief description of 1-2 sentences explaining the platform's workflow and user experience.",
+      "layout": "Suggest a layout type, such as 'grid' or 'timeline', for displaying the workflow steps.",
+      "steps": "Generate an array of 4 step objects with number, title, description, and optional icon for the workflow process.",
+      "ctaButton": {
+        "label": "Generate a CTA button label, like 'Explore the Platform' or 'Get Started'.",
+        "url": "Suggest a URL for the CTA button, such as '#signup' or '#demo'.",
+        "style": "Provide a button style, like 'filled' or 'outline'."
+      },
+      "showConnectors": "Decide if visual connectors between steps should be shown (true or false) for desktop view."
+    },
+    "team": {
+      "title": "Generate a title, like 'Meet Our Team', for the team section.",
+      "layout": "Suggest a layout, such as 'grid'.",
+      "members": "List 2 team member objects with name, role, photo URL or prompt, socialLinks array, and bio for the platform's key personnel."
+    },
+    "contact": {
+      "title": "Suggest a title, like 'Conversation', for the contact section.",
+      "subtitle": "Create a subtitle of 15-20 words encouraging users to reach out with questions.",
+      "liveStatus": {
+        "online": "Decide if live status is online (true or false).",
+        "responseTime": "Suggest a response time string, like 'Usually responds in 2 hours'.",
+        "onlineMembers": "Provide a number of online members, such as '247'."
+      },
+      "contactMethods": "Generate 3 contact method objects with icon, title, description, and value for email, phone, chat.",
+      "background": {
+        "color": "Suggest a background color in hex for the contact section.",
+        "overlay": "Decide if overlay is enabled (true or false)."
+      },
+      "form": {
+        "action": "Provide a form action URL, like '/contact'.",
+        "method": "Suggest a form method, such as 'POST'.",
+        "fields": "List 4 field objects with name, type, label, required, placeholder, and options for select, for a contact form.",
+        "submitText": "Generate submit button text, like 'Send Message'."
+      },
+      "address": "Create a full address string for the platform's location.",
+      "phone": "Suggest a phone number string.",
+      "email": "Provide an email address for contact.",
+      "socialLinks": "List 2 social link objects with platform and url for Twitter and LinkedIn.",
+      "info": "Generate 3 info objects with icon, title, and details array for visit, hours, support."
+    },
+    "cta": {
+      "badge": "Suggest a badge text, like 'Ready to Begin?', for the CTA section.",
+      "title": "Generate a title, such as 'Ready to Get'.",
+      "highlight": "Provide a highlight word, like 'Started?'.",
+      "description": "Write a 20-30 word description inviting users to join satisfied customers with the platform.",
+      "socialProof": {
+        "activities": "List 3 activity objects with name, action, location for recent user interactions.",
+        "viewingCount": "Suggest a viewing count, like '247'.",
+        "communityMessage": "Create a message, such as 'Join our growing community'."
+      },
+      "buttons": "Generate 2 button objects with label, url, icon for shopping and learning more.",
+      "trustIndicators": "List 4 indicator objects with value and label for customers, rating, etc.",
+      "guarantees": "Create 3 guarantee objects with icon, title, description for money back, secure, access.",
+      "features": "Generate 3 feature objects with icon, title, description for access, support, guarantee in CTA.",
+      "finalMessage": {
+        "title": "Suggest a final title, like 'Ready to Take the Next Step?'.",
+        "description": "Write a 20-word description encouraging joining the community.",
+        "encouragement": "Provide an encouragement phrase, such as 'Start your journey today'."
+      }
+    },
+    "footer": {
+      "maxWidth": "Suggest a max width class, like '7xl', for the footer.",
+      "padding": {
+        "x": "Provide base padding x value, like '6'.",
+        "smX": "Suggest small screen padding x, such as '8'.",
+        "lgX": "Provide large screen padding x, like '12'."
+      },
+      "copyright": "Generate a copyright text, like 'Dolze AI'.",
+      "grid": {
+        "cols": "Suggest number of columns, such as '4'.",
+        "gap": "Provide a gap value, like '8'."
+      },
+      "brand": {
+        "name": "Suggest a brand name, like 'Premium Brand'.",
+        "textClasses": "Provide text classes, such as 'text-2xl font-bold'.",
+        "description": {
+          "text": "Write a brand description of 15-20 words about crafting premium products for the platform."
+        },
+        "socialLinks": {
+          "links": "List 4 social link objects with url, icon, name for Facebook, Instagram, etc."
+        }
+      },
+      "navigation": "Generate an array of 3 navigation group objects with title, titleClasses, list spacing, and links array for products, care, company.",
+      "contact": {
+        "address": "Generate a business address string for the footer contact section.",
+        "email": "Provide a contact email address for the footer.",
+        "phone": "Suggest a phone number string for the footer contact."
+      },
+      "subscribe": {
+        "title": "Suggest a subscribe title, like 'Stay Connected'.",
+        "titleClasses": "Provide classes, such as 'text-lg font-bold'.",
+        "input": {
+          "placeholder": "Create a placeholder, like 'Enter your email for exclusive offers'."
+        },
+        "button": {
+          "text": "Suggest button text, such as 'Subscribe'."
+        },
+        "description": {
+          "text": "Write a description of 15 words about getting access to offers and tips."
+        }
+      }
+    },
+    "trustedUsers": {
+      "title": "Generate a title, like 'We are Trusted by these companies', for the trusted users section.",
+      "usersList": "List 6 user objects with name for companies trusting them and a icon field which will be icon name related to comany from remixIcons library."
+    }
+  }
+}
