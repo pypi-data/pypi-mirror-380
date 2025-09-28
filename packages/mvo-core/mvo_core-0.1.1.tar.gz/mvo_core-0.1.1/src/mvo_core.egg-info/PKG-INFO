@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: mvo-core
+Version: 0.1.1
+Summary: MVO algorithm for mortality vector optimization and evaluation
+Author-email: real853 <2511063@zju.edu.cn>
+Requires-Python: >=3.8
+License-File: LICENSE
+License-File: AUTHORS.txt
+Dynamic: license-file

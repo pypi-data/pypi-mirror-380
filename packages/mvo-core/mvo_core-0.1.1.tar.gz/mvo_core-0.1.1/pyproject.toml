@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvo-core"
+version = "0.1.1"
+description = "MVO algorithm for mortality vector optimization and evaluation"
+authors = [
+    { name = "real853", email = "2511063@zju.edu.cn" }
+]
+requires-python = ">=3.8"
+
+# 关键配置：告诉setuptools在哪里找包
+[tool.setuptools.packages.find]
+where = ["src"]
