@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: wathq-mcp-server
+Version: 0.1.0
+Summary: MCP server for Saudi company lookup via WATHQ API
+Author: WATHQ MCP Server
+Author-email: 
+Keywords: mcp,wathq,saudi,company,lookup,api,commercial-registration
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WATHQ MCP Server
+
+MCP server for Saudi company lookup via WATHQ API.
+
+## Install
+
+```bash
+pip install wathq-mcp-server
+```
+
+## Setup
+
+1. Get API key from [developer.wathq.sa](https://developer.wathq.sa/)
+2. Set environment variable:
+   ```bash
+   export WATHQ_API_KEY="your_api_key"
+   ```
+
+## Usage
+
+```bash
+wathq-mcp-server
+```
+
+## Claude Desktop
+
+```json
+{
+  "mcpServers": {
+    "wathq": {
+      "command": "wathq-mcp-server",
+      "env": {
+        "WATHQ_API_KEY": "your_api_key"
+      }
+    }
+  }
+}
+```

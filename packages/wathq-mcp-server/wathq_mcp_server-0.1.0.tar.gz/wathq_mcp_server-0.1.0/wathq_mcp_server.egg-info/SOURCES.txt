@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wathq_mcp_server/__init__.py
+wathq_mcp_server/server.py
+wathq_mcp_server.egg-info/PKG-INFO
+wathq_mcp_server.egg-info/SOURCES.txt
+wathq_mcp_server.egg-info/dependency_links.txt
+wathq_mcp_server.egg-info/entry_points.txt
+wathq_mcp_server.egg-info/requires.txt
+wathq_mcp_server.egg-info/top_level.txt
