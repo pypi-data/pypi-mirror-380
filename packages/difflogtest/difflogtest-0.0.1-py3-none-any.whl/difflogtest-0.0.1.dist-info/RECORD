@@ -1,0 +1,16 @@
+difflogtest/__init__.py,sha256=okhRwNBpxuArbvz3AuN7Iq1VckVgEVOYD8XKGzmtsK8,839
+difflogtest/cli.py,sha256=Yd0BgYidu9TL-zv5LjXfwEx3oQ1UHA0T347zAEeVnl4,521
+difflogtest/core.py,sha256=lqn2lsYHDlO-Dpaz_CY1liM-9FEu4xCjwhw33pqX3RI,25626
+difflogtest/decorators.py,sha256=G_XhFcCsBQ6_hb8e9t3Bs2zcmZXOWSbWz9CfZbuWG7Q,5209
+difflogtest/logging/__init__.py,sha256=XPMudm92kcoqYndrjloaAuowkvCWal8wudf2GbTPOU4,284
+difflogtest/logging/core.py,sha256=aiUCay5mn9AMBqSb315waQUds_ZIbmgAFQ2Io20v6C8,22192
+difflogtest/logging/utils.py,sha256=gXLHMEPpt7gd42lky9Ed_YzTiC4cnroYtbtX4-8IBt0,2583
+difflogtest/utils/__init__.py,sha256=WU2uUFjWAsStSDFh3IlH1NLgbMRRn7MjerdX5VWyEFA,970
+difflogtest/utils/mode.py,sha256=DN_j-kHx8b9mzh58EdozKzqFdikYeUFJ__aI4iZoZVM,1896
+difflogtest/utils/path.py,sha256=_p9XQ6Tag_1UXJYoQBubeecjYMIpWtk6gkot5VoQyoY,27826
+difflogtest/utils/replacements.py,sha256=xlJDu1bzrxtb70n7Kf658Yk-azMxWGqxOzoxX00hVeg,5353
+difflogtest/utils/strings.py,sha256=iomNtvgvvA2nlkBNqL3BmyrOkVpsRSuWPBMOIZv-ANs,942
+difflogtest-0.0.1.dist-info/METADATA,sha256=GTUFhU9bfuxoFKQ0A-8r7qDGNkizwgculy1PtdJHFBk,23369
+difflogtest-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+difflogtest-0.0.1.dist-info/entry_points.txt,sha256=X7XhYBYevtEATUnUZc27PWHZt_eMuyZF6UMLXDBeNXc,61
+difflogtest-0.0.1.dist-info/RECORD,,
