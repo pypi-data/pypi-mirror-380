@@ -1,0 +1,7 @@
+boto3_dataclass_vpc_lattice/__init__.py,sha256=7tHJZuJWa9Oo8KEqbjYGW3kOi-dY1cfTNAgU3FGaaQI,116
+boto3_dataclass_vpc_lattice/caster.py,sha256=1I-75KB9IEaGyDceQa8nopekFAsiVGsdxLexgIPV4Qg,13519
+boto3_dataclass_vpc_lattice/type_defs.py,sha256=IqxuNAzmVGtsqae24s8XMwho2m5H8G32qBUSOoK3Oz8,194245
+boto3_dataclass_vpc_lattice-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_vpc_lattice-1.40.0.dist-info/METADATA,sha256=8bIEte_GdWXY_BAEa7hmWABiDSJ3joOxpK6qWWU4jiY,1711
+boto3_dataclass_vpc_lattice-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_vpc_lattice-1.40.0.dist-info/RECORD,,
