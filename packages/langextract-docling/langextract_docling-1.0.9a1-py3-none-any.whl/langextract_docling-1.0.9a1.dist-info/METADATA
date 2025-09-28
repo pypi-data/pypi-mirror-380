@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: langextract-docling
+Version: 1.0.9a1
+Summary: Docling based wrapper for LangExtract
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docling>=2.53.0
+Requires-Dist: langextract>=1.0.9
+Provides-Extra: openai
+Requires-Dist: openai>=1.50.0; extra == "openai"
+Provides-Extra: all
+Requires-Dist: openai>=1.50.0; extra == "all"
+Provides-Extra: dev
+Requires-Dist: pyink~=24.3.0; extra == "dev"
+Requires-Dist: isort>=5.13.0; extra == "dev"
+Requires-Dist: pylint>=3.0.0; extra == "dev"
+Requires-Dist: pytype>=2024.10.11; extra == "dev"
+Requires-Dist: tox>=4.0.0; extra == "dev"
+Requires-Dist: import-linter>=2.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.4.0; extra == "test"
+Requires-Dist: tomli>=2.0.0; extra == "test"
+Dynamic: license-file
+
+# LangExtract Docling
+
+**LangExtract Docling** is a lightweight wrapper around [LangExtract](https://github.com/google/langextract) that adds native support for processing **PDF files** via [Docling](https://github.com/docling-project/docling).
+
+## Installation
+
+```bash
+pip install langextract-docling
+````
+
+## Usage
+
+```python
+import langextract_docling as lx
+
+# Extract from plain text (same as LangExtract)
+result = lx.extract(
+    text_or_documents="Your document text here.",
+    prompt_description="Extract entities",
+    examples=[...]
+)
+
+# Extract from a local PDF
+result = lx.extract(
+    text_or_documents="path/to/document.pdf",
+    prompt_description="Extract entities",
+    examples=[...]
+)
+
+# Extract from a PDF URL
+result = lx.extract(
+    text_or_documents="https://example.com/document.pdf",
+    prompt_description="Extract entities",
+    examples=[...]
+)
+```
+
+## License
+
+MIT License
