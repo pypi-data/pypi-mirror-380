@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: argmin-testfunctions-py
+Version: 0.3.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Home-Page: http://argmin-rs.org
+Author-email: Stefan Kroboth <stefan.kroboth@gmail.com>
+Requires-Python: >=3.8
