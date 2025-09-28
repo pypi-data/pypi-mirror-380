@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: baseline-checker
+Version: 0.1.6
+Summary: A modern web compatibility scanner
+Author-email: Veeresh Hanni <veereshhanni347@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Veeresh-Hanni/baseline-checker
+Project-URL: Repository, https://github.com/Veeresh-Hanni/baseline-checker/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: python-docx
+Requires-Dist: reportlab
+Requires-Dist: fpdf
