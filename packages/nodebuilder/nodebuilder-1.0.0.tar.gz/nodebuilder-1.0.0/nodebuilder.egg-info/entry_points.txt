@@ -1,0 +1,2 @@
+[console_scripts]
+nodebuilder = nodebuilder.cli:app
