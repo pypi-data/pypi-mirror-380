@@ -1,0 +1,3 @@
+[console_scripts]
+mrtrixBot = agent.cli:run
+mrtrixBot-setup = agent.setup_config:setup_config
