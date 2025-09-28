@@ -1,0 +1,20 @@
+point:
+  - x
+  - y
+  - fr
+  - cinc
+  - pa
+
+background:
+
+gauss:
+  - fwhm
+
+lorentz:
+  - hlr
+
+uniform_disc:
+  - diam
+
+Iring:
+  - rin
