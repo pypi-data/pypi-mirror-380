@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ascii_announcers/__init__.py
+src/ascii_announcers/__main__.py
+src/ascii_announcers/impl.py
+src/ascii_announcers.egg-info/PKG-INFO
+src/ascii_announcers.egg-info/SOURCES.txt
+src/ascii_announcers.egg-info/dependency_links.txt
+src/ascii_announcers.egg-info/top_level.txt
