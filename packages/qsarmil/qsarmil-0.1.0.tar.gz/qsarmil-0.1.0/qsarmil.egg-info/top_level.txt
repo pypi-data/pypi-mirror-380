@@ -1,0 +1,5 @@
+data
+dist
+michal_data
+new_data
+qsarmil
