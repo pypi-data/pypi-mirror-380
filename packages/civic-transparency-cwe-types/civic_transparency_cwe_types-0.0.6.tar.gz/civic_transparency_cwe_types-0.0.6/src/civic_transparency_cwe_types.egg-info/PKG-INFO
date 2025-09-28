@@ -1,0 +1,145 @@
+Metadata-Version: 2.4
+Name: civic-transparency-cwe-types
+Version: 0.0.6
+Summary: Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows
+Author: Civic Interconnect
+Project-URL: Bug Tracker, https://github.com/civic-interconnect/civic-transparency-cwe-types/issues
+Project-URL: Documentation, https://civic-interconnect.github.io/civic-transparency-cwe-types/latest/
+Project-URL: Homepage, https://github.com/civic-interconnect/civic-transparency-cwe-types
+Project-URL: Repository, https://github.com/civic-interconnect/civic-transparency-cwe-types
+Keywords: cwe,security,vulnerability,dataclasses,types,validation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: bandit[toml]; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: deptry; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pyright; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: validate-pyproject; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-gen-files; extra == "docs"
+Requires-Dist: mkdocs-git-revision-date-localized-plugin; extra == "docs"
+Requires-Dist: mkdocs-include-markdown-plugin; extra == "docs"
+Requires-Dist: mkdocs-literate-nav; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocs-static-i18n; extra == "docs"
+Requires-Dist: mkdocstrings[python]>=0.18; extra == "docs"
+Requires-Dist: mike; extra == "docs"
+Dynamic: license-file
+
+# Civic Transparency CWE Types
+
+[![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://civic-interconnect.github.io/civic-transparency-cwe-types/)
+[![PyPI](https://img.shields.io/pypi/v/civic-transparency-cwe-types.svg)](https://pypi.org/project/civic-transparency-cwe-types/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue?logo=python)](#)
+[![CI Status](https://github.com/civic-interconnect/civic-transparency-cwe-types/actions/workflows/ci.yml/badge.svg)](https://github.com/civic-interconnect/civic-transparency-cwe-types/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+
+> Maintained by [**Civic Interconnect**](https://github.com/civic-interconnect).
+
+- **Documentation:** https://civic-interconnect.github.io/civic-transparency-cwe-types/
+- **Contributing:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+## Overview
+
+Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows. Provides strongly-typed Python models with zero runtime dependencies.
+
+**Key Features:**
+
+- **Zero Dependencies:** Pure Python with no external requirements
+- **Immutable Design:** Functional-style helpers return new instances
+- **Type Safety:** Full static typing with py.typed marker
+- **Memory Efficient:** Slotted dataclasses for better performance
+- **CWE Ecosystem:** Foundation types for transparency workflows
+
+## Installation
+
+```bash
+pip install civic-transparency-cwe-types
+```
+
+For development:
+
+```bash
+pip install "civic-transparency-cwe-types[dev]"
+```
+
+---
+
+## Quick Start
+
+```python
+
+# Multiple result types available
+from ci.transparency.cwe.types.base import BaseResult, add_error
+from ci.transparency.cwe.types.schema_result_loading import SchemaLoadingResult
+from ci.transparency.cwe.types.standards_result_validation import StandardsValidationResult
+
+# Import CWE Loading Result and Add CWE function
+from ci.transparency.cwe.types.cwe_result_loading import CweLoadingResult, add_cwe
+
+# Create and work with immutable result types
+result = CweLoadingResult()
+result = add_cwe(result, "CWE-79", {"name": "Cross-site Scripting"})
+
+print(f"Loaded CWEs: {result.cwe_count}")
+print(f"Success rate: {result.success_rate}")
+```
+
+See the [Usage Guide](https://civic-interconnect.github.io/civic-transparency-cwe-types/usage/) for more examples.
+
+## Development Setup
+
+```bash
+git clone https://github.com/civic-interconnect/civic-transparency-cwe-types
+cd civic-transparency-cwe-types
+uv venv
+.venv\Scripts\activate
+uv sync --extra dev --extra docs --upgrade
+```
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
+
+---
+
+## Support and Community
+
+- **Documentation:** https://civic-interconnect.github.io/civic-transparency-cwe-types/
+- **Issues:** [GitHub Issues](https://github.com/civic-interconnect/civic-transparency-cwe-types/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/civic-interconnect/civic-transparency-cwe-types/discussions)
+- **Email:** info@civicinterconnect.org
+
+---
+
+## About Civic Transparency
+
+Civic Transparency is an open standard for privacy-preserving, non-partisan analysis of how information spreads in civic contexts. The specification enables researchers, platforms, and civic organizations to share insights while protecting individual privacy.
+
+**Core Principles:**
+- **Privacy by Design:** No personally identifiable information
+- **Aggregation First:** Time-bucketed, statistical summaries
+- **Open Standard:** Collaborative, transparent development
+- **Practical Implementation:** Real-world deployment focus

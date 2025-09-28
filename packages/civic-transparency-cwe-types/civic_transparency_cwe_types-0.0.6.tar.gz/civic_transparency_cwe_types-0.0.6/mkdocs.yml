@@ -1,0 +1,72 @@
+site_name: Civic Transparency CWE Types
+site_description: Immutable datatype library for Common Weakness Enumeration (CWE) analysis and validation workflows
+site_author: Civic Interconnect
+site_url: https://civic-interconnect.github.io/civic-transparency-cwe-types/
+repo_url: https://github.com/civic-interconnect/civic-transparency-cwe-types
+edit_uri: edit/main/docs/en/
+
+theme:
+    name: material
+    language: en
+    favicon: img/favicon.png
+    palette:
+        scheme: default
+        primary: indigo
+        accent: indigo
+    features:
+        - content.footer
+        - navigation.tabs
+        - navigation.top
+        - navigation.expand
+        - navigation.sections
+        - navigation.indexes
+        - navigation.tracking
+    copyright: Copyright &copy; 2025 Civic Interconnect
+
+nav:
+    - Home: index.md
+    - Usage: usage.md
+    - Types:
+        - Base: api/base.md
+        - Batch: api/batch.md
+        - CWE: api/cwe.md
+        - CWE Schema: api/cwe_schema.md
+        - Schema: api/schema.md
+        - Schema Evolution: api/schema_evolution.md
+        - Standards: api/standards.md
+        - Validation: api/validation.md
+
+docs_dir: docs/en
+
+plugins:
+    - search
+    - include-markdown
+    - i18n:
+          docs_structure: folder
+          languages:
+              - locale: en
+                default: true
+                name: English
+
+    - git-revision-date-localized:
+          type: iso_date
+          fallback_to_build_date: true
+          enable_creation_date: false
+
+    - mkdocstrings:
+          handlers:
+              python:
+                paths: [src]
+                options:
+                    docstring_style: google
+                    show_source: false
+                    show_signature: true
+                    group_by_category: true
+                    filters: ["!^_"] # hide private members
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - pymdownx.snippets
+    - pymdownx.tabbed
+    - toc
