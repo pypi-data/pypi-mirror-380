@@ -1,0 +1,11 @@
+README.md
+bib_updater.py
+dblp_client.py
+main.py
+pyproject.toml
+bibboost.egg-info/PKG-INFO
+bibboost.egg-info/SOURCES.txt
+bibboost.egg-info/dependency_links.txt
+bibboost.egg-info/entry_points.txt
+bibboost.egg-info/requires.txt
+bibboost.egg-info/top_level.txt

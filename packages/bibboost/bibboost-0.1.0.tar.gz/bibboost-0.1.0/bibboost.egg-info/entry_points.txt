@@ -1,0 +1,2 @@
+[console_scripts]
+bibboost = main:cli
