@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: pashassh
+Version: 0.1.0
+Summary: PashaSSH kontrol kütüphanesi + CLI
+Home-page: https://github.com/yourusername/pashassh
+Author: Kanka
+Author-email: kanka@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: paramiko>=2.0; python_version >= "3.7"
+
+# PashaSSH by Pasha Network DDNS
+Pasha Network YouTube @GoblinPasha Tarafından Yapılan Bir DDNS Servisidir.
+
+6 Saatimi Harcadır Emeğe Saygı linktr.ee/pshgoblin den bütün hesaplarıma abone ol xD
+
+`import pashassh` veya terminalde `pashassh` komutuyla interaktif CLI (Komut Satırı) kullan.
+
+## Kurulum (Local "Lokal")
+```bash
+Python:
+Selamlar Bu Kütüphane Kodu için Tam 6 Saatimi Verdim Bu Emeğe Karşın linktr.ee/pshgbln adresinden  
+Patreon Hesabımdan Para Atarsan Beni Mutlu Edersin Şimdiden Sağol.
+
+
+Python:
+
+# Geliştirme modunda
+pip install -e .

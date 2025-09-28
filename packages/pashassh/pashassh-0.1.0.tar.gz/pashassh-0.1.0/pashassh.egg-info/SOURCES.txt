@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pashassh.egg-info/PKG-INFO
+pashassh.egg-info/SOURCES.txt
+pashassh.egg-info/dependency_links.txt
+pashassh.egg-info/entry_points.txt
+pashassh.egg-info/requires.txt
+pashassh.egg-info/top_level.txt
