@@ -1,0 +1,7 @@
+boto3_dataclass_storagegateway/__init__.py,sha256=amL4y0fdWCZ2ZbjGTDA2zpbRjUkY8uRi8qzsqQn6pyw,122
+boto3_dataclass_storagegateway/caster.py,sha256=lFPJuL9tBeOmCPaENayb57mjndcMeqyrDHkuuhk2cyY,20358
+boto3_dataclass_storagegateway/type_defs.py,sha256=tlTQuMv_jjynJuojZKEvycuaZ8ky_V_F1bO93Em85og,241386
+boto3_dataclass_storagegateway-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_storagegateway-1.40.0.dist-info/METADATA,sha256=jR-dtnYXCDPRic_EugWhbp_X5hBjykgOuYM7fdHawRg,1732
+boto3_dataclass_storagegateway-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_storagegateway-1.40.0.dist-info/RECORD,,
