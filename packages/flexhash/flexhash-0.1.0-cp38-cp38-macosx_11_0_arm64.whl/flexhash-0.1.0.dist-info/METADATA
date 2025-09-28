@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: flexhash
+Version: 0.1.0
+Summary: Kylacoin Flex hashing (C extension)
+Requires-Python: >=3.8
+License-File: LICENSE
+
