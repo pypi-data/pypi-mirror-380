@@ -1,0 +1,175 @@
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "src"
+
+[project]
+name = "iojobs"
+version = "0.1.0"
+description = "Lightweight asynchronous job scheduler with cron-like syntax and delayed execution for Python functions"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Sergey Yavorsky", email = "maclovi.dev@gmail.com" },
+]
+keywords = [
+    "cron",
+    "cron-jobs",
+    "scheduler",
+    "delayed-tasks",
+    "job-scheduler",
+    "task-scheduler",
+    "background-tasks",
+]
+classifiers = [
+    "Typing :: Typed",
+    "Topic :: Utilities",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Framework :: Pytest",
+    "Framework :: AsyncIO",
+    "Natural Language :: English",
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+]
+dependencies = ["crontab==1.0.5"]
+
+[dependency-groups]
+lint = [
+    "mypy==1.18.2",
+    "ruff==0.13.2",
+    "bandit==1.8.6",
+    "zizmor==1.13.0",
+    "semgrep==1.137.0",
+    "codespell==2.4.1",
+    "basedpyright==1.31.5",
+    # mypy extensions
+    "mypy-extensions==1.1.0",
+    "types-setuptools",
+]
+test = [
+    "coverage[toml]==7.10.7",
+    "pytest==8.4.2",
+    "pytest-asyncio==1.2.0",
+]
+docs = [
+    "mkdocs==1.6.1",
+    "mkdocs-material==9.6.20",
+    "mkdocstrings[python]==0.30.1",
+]
+dev = [
+    {include-group = "lint"},
+    {include-group = "test"},
+    {include-group = "docs"},
+    "pre-commit==4.3.0",
+    "detect-secrets==1.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Maclovi/iojobs"
+Documentation = "https://github.com/Maclovi/iojobs/README.md"
+Repository = "https://github.com/Maclovi/iojobs"
+Issues = "https://github.com/Maclovi/iojobs/issues"
+
+[tool.pytest.ini_options]
+xfail_strict = true
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+markers = []
+
+[tool.basedpyright]
+include = ["src", "tests"]
+ignore = ["**/__pycache__", "**/alembic"]
+pythonVersion = "3.10"
+reportImplicitStringConcatenation = false
+reportImplicitOverride = false
+reportAny = false
+
+[tool.mypy]
+mypy_path = "src"
+files = ["src", "tests"]
+python_version = "3.10"
+
+strict = true
+pretty = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+allow_redefinition = true
+allow_untyped_calls = true
+disallow_any_explicit = false
+disallow_any_generics = false
+disallow_subclassing_any = false
+disallow_untyped_decorators = false
+show_error_codes = true
+show_error_context = true
+show_column_numbers = true
+check_untyped_defs = true
+namespace_packages = true
+ignore_missing_imports = true
+
+[tool.ruff]
+src = ["src"]
+include = ["src/**.py", "tests/**.py"]
+target-version = "py310"
+line-length = 79
+fix = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "D"]
+"tests/__init__.py" = ["D400", "D415", "D104"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.isort]
+known-first-party = ["src", "tests"]
+no-lines-before = ["local-folder"]
+
+[tool.coverage.run]
+parallel = true
+branch = true
+concurrency = ["thread", "multiprocessing"]
+source = ["src", "tests"]
+omit = ["**/__init__.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+exclude_also = [
+    'if TYPE_CHECKING:',
+    "if __name__ == .__main__.:",
+    '@()?abstractmethod',
+    "raise NotImplementedError",
+    "pass",
+    '\.\.\.',
+]
+omit = [
+    '*/__init__.py',
+]
+
+[tool.semgrep]
+paths = ["src"]
+include = ["src"]
+
+[tool.bandit]
+targets = "src"
+
+[tool.codespell]
+skip = "*.pyi,*.pyc,./site"
