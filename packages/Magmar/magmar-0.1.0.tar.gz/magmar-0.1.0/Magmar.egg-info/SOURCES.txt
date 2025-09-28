@@ -1,0 +1,9 @@
+README.md
+setup.py
+Magmar/__init__.py
+Magmar/utils.py
+Magmar.egg-info/PKG-INFO
+Magmar.egg-info/SOURCES.txt
+Magmar.egg-info/dependency_links.txt
+Magmar.egg-info/requires.txt
+Magmar.egg-info/top_level.txt

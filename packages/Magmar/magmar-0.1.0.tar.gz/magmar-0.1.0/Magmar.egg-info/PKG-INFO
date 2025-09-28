@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: Magmar
+Version: 0.1.0
+Summary: Some cool tools to automate tasks in Tabular Data Analysis
+Requires-Python: >=3.7
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: lightgbm
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
