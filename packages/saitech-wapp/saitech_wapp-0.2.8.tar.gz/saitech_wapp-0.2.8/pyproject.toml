@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saitech-wapp"
+dynamic = ["version"]
+description = "A lightweight FastAPI helper framework with async SQLAlchemy auto-CRUD and migrations"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "saitech" }]
+dependencies = ["alembic","python-dotenv","fastapi","uvicorn[standard]","sqlalchemy","pydantic","aiosqlite"]
+
+[project.urls]
+Homepage = "https://github.com/saitech-org/wapp"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"wapp.templates" = ["*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wapp*"]
+
+[tool.setuptools_scm]
+version_scheme = "no-guess-dev"
+local_scheme = "no-local-version"
+
+[project.scripts]
+wapp-init = "wapp.cli:wapp_init"
