@@ -1,0 +1,14 @@
+[project]
+name = "vppppppp"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [ "numpy>=2.3.3", "toml>=0.10.2",]
+
+[tool.setuptools.package-data]
+vppppppp = [ "config.yaml",]
+
+[tool.pytest.ini_options]
+testpaths = [ "tests",]
+pythonpath = [ "src",]

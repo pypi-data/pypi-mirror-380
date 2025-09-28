@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: vppppppp
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: toml>=0.10.2
+
+cmake --build .
+conan list = pip list
+conan info .
