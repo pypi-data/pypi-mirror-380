@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+francis_agent.egg-info/PKG-INFO
+francis_agent.egg-info/SOURCES.txt
+francis_agent.egg-info/dependency_links.txt
+francis_agent.egg-info/entry_points.txt
+francis_agent.egg-info/top_level.txt
+tests/test_cli.py
+tools/__init__.py
+tools/gitops.py
+tools/hello.py
+tools/httpjson.py
+tools/kvstore.py
+tools/search.py
+tools/zipper.py
