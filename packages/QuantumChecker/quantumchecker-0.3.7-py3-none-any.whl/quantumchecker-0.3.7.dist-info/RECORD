@@ -1,0 +1,11 @@
+QuantumCheck/__init__.py,sha256=R42a4ISBeZiBEcYfJQMDXj0SDcbLVEfH46qLBXDl6Eo,37
+QuantumCheck/main.py,sha256=l2RwnEXSMO3bj7tm6ZZVX8LDhzQjNDzHyd4bkUvumUk,5202
+QuantumCheck/powerbi_evaluator.py,sha256=30M40hOZNDUQkYzxliSj9mq8SnYx7fdQTezV4StA-SE,19263
+QuantumCheck/prompts.py,sha256=SOsuQ8VEO0N1Q1PFXZQRyFA4K43YJ9HzagnLIkyIzZs,8495
+QuantumCheck/python_evaluator.py,sha256=jH0K_5kjNp42dBKjsFW55GJaA43b4cGzqA9SvYEoIl8,7626
+QuantumCheck/sql_evaluator.py,sha256=vgWuHrVjOTsvxTit1gSt9OTCNMfQHF8EplpAOxrJlrg,7574
+QuantumCheck/ssis_evaluator.py,sha256=hHAxePmaGdYo6aPYUl0iMnnqs5C3WlKrUArtrAdkX4w,19329
+quantumchecker-0.3.7.dist-info/METADATA,sha256=JOEayhtKhdOP0wnGFMG9rMtrF-n-S0cliMbgP1wqIUY,1451
+quantumchecker-0.3.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+quantumchecker-0.3.7.dist-info/top_level.txt,sha256=F-dIBymOeeSbbMGjXSgZHiZ_Z8nzjgS5P78KY6nweQo,13
+quantumchecker-0.3.7.dist-info/RECORD,,
