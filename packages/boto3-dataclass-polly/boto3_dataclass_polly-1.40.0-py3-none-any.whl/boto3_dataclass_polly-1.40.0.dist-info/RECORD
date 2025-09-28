@@ -1,0 +1,7 @@
+boto3_dataclass_polly/__init__.py,sha256=wyOW0wlkk7qL4xfeXugaJepEGBlNdB_u-UinpcCdYhc,104
+boto3_dataclass_polly/caster.py,sha256=tytnjD0w-9cOrhNOri1clSeWwFgIxDyG0cMFmtuvjuc,1620
+boto3_dataclass_polly/type_defs.py,sha256=45nnexJpe6kc4sMMRFq_fyI-08qEk5fZQgedcTfbKQ0,25151
+boto3_dataclass_polly-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_polly-1.40.0.dist-info/METADATA,sha256=QKS7AP-FuTXGaHaQBfKVqoE33nkXXB_EB95EYQlGgfY,1669
+boto3_dataclass_polly-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_polly-1.40.0.dist-info/RECORD,,
