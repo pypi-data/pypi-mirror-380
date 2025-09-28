@@ -1,0 +1,124 @@
+{% if feeds %}
+<div class="i-box info">
+    <div class="i-box-header">
+        <div class="i-box-title">{{ _('Feed status') }}</div>
+        <div class="i-box-buttons">
+            <form method="post" action="{{ url_for('plugin_feed_sync.refresh_all') }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+                <button type="submit" class="i-button highlight small">{{ _('Refresh all feeds now') }}</button>
+            </form>
+            <form method="post" action="{{ url_for('plugin_feed_sync.refresh_all', force=1) }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+                <button type="submit" class="i-button small danger"
+                        onclick="return confirm({{ _('This will re-import every feed even if nothing changed. Continue?')|tojson }});">{{ _('Force sync all') }}</button>
+            </form>
+        </div>
+    </div>
+    <div class="i-box-content">
+        <p class="text-muted">{{ _('Configured feeds and their latest synchronization state.') }}</p>
+        <table class="i-table">
+            <thead>
+                <tr>
+                    <th style="width: 34%">{{ _('Feed') }}</th>
+                    <th style="width: 10%">{{ _('Category') }}</th>
+                    <th style="width: 16%">{{ _('Status') }}</th>
+                    <th style="width: 20%">{{ _('Last sync') }}</th>
+                    <th style="width: 10%">{{ _('Last error') }}</th>
+                    <th class="i-table-actions" style="width: 10%">{{ _('Actions') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feed in feeds %}
+                    {% set state = feed_state.get(feed.id or feed['id'], {}) %}
+                    <tr>
+                        <td style="word-break: break-word;">
+                            <strong>{{ feed.title or feed['id'] }}</strong><br>
+                            <small><a href="{{ feed.url }}" target="_blank" rel="noreferrer">{{ feed.url|replace('/', '/\u200b') }}</a></small><br>
+                            <small>{{ _('Enabled') }}: {{ 'yes' if feed.get('enabled') else 'no' }}</small>
+                            {% if feed.get('max_items') %}<br>
+                                <small>{{ _('Max items') }}: {{ feed.get('max_items') }}</small>
+                            {% endif %}
+                            {% if feed.get('allow_deletions') is not none %}<br>
+                                <small>{{ _('Allow deletions') }}: {{ 'yes' if feed.get('allow_deletions') else 'no' }}</small>
+                            {% endif %}
+                            {% if feed.get('use_event_details') is not none %}<br>
+                                <small>{{ _('Use event details') }}: {{ 'yes' if feed.get('use_event_details') else 'no' }}</small>
+                            {% endif %}
+                        </td>
+                        <td>{{ feed.category_id or '–' }}</td>
+                        <td>
+                            {% set status = state.get('status') %}
+                            {% set meta = state.get('status_meta') or {} %}
+                            {% set summary = state.get('last_summary') or {} %}
+                            {% if status == 'running' %}
+                                <span class="text-warning">{{ _('Processing') }}</span><br>
+                                <small>
+                                    {{ meta.get('processed', 0) }} / {{ meta.get('total', 0) }}
+                                    ({{ meta.get('created', 0) }} {{ _('created') }},
+                                     {{ meta.get('updated', 0) }} {{ _('updated') }},
+                                     {{ meta.get('unchanged', 0) }} {{ _('unchanged') }},
+                                     {{ meta.get('deleted', 0) }} {{ _('deleted') }})
+                                </small>
+                            {% elif status == 'queued' %}
+                                <span class="text-muted">{{ _('Queued') }}</span>
+                                {% if meta.get('task_id') %}
+                                    <br><small>{{ _('Task') }}: {{ meta.get('task_id') }}</small>
+                                {% endif %}
+                            {% elif status == 'completed' %}
+                                {% set summary_parts = [
+                                    _('%(count)s created', count=summary.get('created', 0)),
+                                    _('%(count)s updated', count=summary.get('updated', 0)),
+                                    _('%(count)s unchanged', count=summary.get('unchanged', 0)),
+                                    _('%(count)s deleted', count=summary.get('deleted', 0))
+                                ] if summary else [] %}
+                                <span class="text-success" {% if summary_parts %}title="{{ summary_parts | join(', ') }}"{% endif %}>{{ _('Completed') }}</span>
+                            {% elif status == 'failed' %}
+                                <span class="text-error">{{ _('Failed') }}</span>
+                            {% else %}
+                                <span class="text-muted">{{ _('Idle') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if state.last_synced_at or state.get('last_synced_at') %}
+                                {% set synced_dt = state.last_synced_at or state.get('last_synced_at') %}
+                                {% set display_sync = synced_dt[:16].replace('T', ' ') %}
+                                {{ display_sync }}
+                            {% else %}
+                                <span class="text-muted">{{ _('Never') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if state.last_error or state.get('last_error') %}
+                                <span class="text-error">{{ state.last_error or state.get('last_error') }}</span>
+                            {% else %}
+                                <span class="text-success">{{ _('None') }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="i-table-actions">
+                            <form method="post" action="{{ url_for('plugin_feed_sync.refresh_feed', feed_id=feed.id or feed['id']) }}">
+                                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+                                <button type="submit" class="i-button small">{{ _('Refresh now') }}</button>
+                            </form>
+                            <form method="post" action="{{ url_for('plugin_feed_sync.refresh_feed', feed_id=feed.id or feed['id'], force=1) }}"
+                                  style="margin-top: 4px;">
+                                <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+                                <button type="submit" class="i-button small danger"
+                                        onclick="return confirm({{ _('This will re-import all events from this feed. Continue?')|tojson }});">{{ _('Force sync') }}</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% else %}
+<div class="i-box info">
+    <div class="i-box-header">
+        <div class="i-box-title">{{ _('Feed status') }}</div>
+    </div>
+    <div class="i-box-content">
+        <p class="text-muted">{{ _('No feeds configured yet. Add entries in the JSON field above to start importing events.') }}</p>
+    </div>
+</div>
+{% endif %}

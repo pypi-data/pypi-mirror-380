@@ -1,0 +1,57 @@
+<script>
+(() => {
+  const refreshUrl = {{ refresh_url | tojson | safe }};
+  const csrfToken = {{ session.csrf_token | tojson | safe }};
+  const buttonLabel = {{ _('Force resync') | tojson | safe }};
+  const buttonTitle = {{ _('Force resync via feed') | tojson | safe }};
+  function attachButton() {
+    const groups = document.querySelectorAll('.action-menu .group');
+    if (!groups.length) {
+      return false;
+    }
+    const cloneGroup = Array.from(groups).find(group => group.querySelector('.icon-copy'));
+    if (!cloneGroup) {
+      return false;
+    }
+    if (document.querySelector('.feed-sync-force-button')) {
+      return true;
+    }
+    const form = document.createElement('form');
+    form.method = 'post';
+    form.action = refreshUrl;
+    form.className = 'feed-sync-event-action';
+    form.style.display = 'inline';
+    const csrf = document.createElement('input');
+    csrf.type = 'hidden';
+    csrf.name = 'csrf_token';
+    csrf.value = csrfToken;
+    form.appendChild(csrf);
+    const button = document.createElement('button');
+    button.type = 'submit';
+    button.className = 'i-button icon-redo feed-sync-force-button';
+    button.textContent = buttonLabel;
+    button.title = buttonTitle;
+    form.appendChild(button);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'group feed-sync-group';
+    wrapper.style.marginLeft = '0.5em';
+    wrapper.appendChild(form);
+    cloneGroup.insertAdjacentElement('afterend', wrapper);
+    return true;
+  }
+  function scheduleAttach(retries = 30) {
+    if (attachButton()) {
+      return;
+    }
+    if (retries <= 0) {
+      return;
+    }
+    setTimeout(() => scheduleAttach(retries - 1), 200);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => scheduleAttach());
+  } else {
+    scheduleAttach();
+  }
+})();
+</script>

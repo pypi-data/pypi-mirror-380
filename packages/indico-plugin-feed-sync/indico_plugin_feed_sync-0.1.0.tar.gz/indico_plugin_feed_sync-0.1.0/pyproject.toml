@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indico-plugin-feed-sync"
+version = "0.1.0"
+description = "Indico plugin for synchronizing external Indico feeds into local events"
+readme = "README.md"
+authors = [
+  {name = "Attila Debreczeni", email = "attila.debreczeni@dkf.hu"}
+]
+license = "MIT"
+keywords = ["indico", "plugin", "sync", "events"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: System Administrators",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11"
+]
+requires-python = ">=3.11"
+dependencies = [
+  "indico>=3.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/Atisom/indico-plugin-feed-sync"
+Source = "https://github.com/Atisom/indico-plugin-feed-sync"
+Tracker = "https://github.com/Atisom/indico-plugin-feed-sync"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = {find = {where = ["."]}}
+include-package-data = true
+
+[tool.setuptools.package-data]
+indico_feed_sync = [
+  "templates/**/*.html"
+]
+
+[project.entry-points."indico.plugins"]
+feed_sync = "indico_feed_sync:FeedSyncPlugin"
