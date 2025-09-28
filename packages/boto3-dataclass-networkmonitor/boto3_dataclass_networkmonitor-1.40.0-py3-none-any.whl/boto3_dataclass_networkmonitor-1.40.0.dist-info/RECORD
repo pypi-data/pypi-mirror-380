@@ -1,0 +1,7 @@
+boto3_dataclass_networkmonitor/__init__.py,sha256=-d1iske_jwQCEDjfZN5H-D3-aldPN4asXcrgssQXq8w,122
+boto3_dataclass_networkmonitor/caster.py,sha256=I8hCFSVA6rUc24oILZmS_Xhf-Q1L1br8RCvLKFxqCCc,1681
+boto3_dataclass_networkmonitor/type_defs.py,sha256=ioh5NVNUpj5-U4E481n3fKnESRnlf56YNuPO2XgekyQ,25884
+boto3_dataclass_networkmonitor-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_networkmonitor-1.40.0.dist-info/METADATA,sha256=A6PYT47EzSGwy1e7vU5mWGCONmH7bP-OyTl-zm0wPac,1732
+boto3_dataclass_networkmonitor-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_networkmonitor-1.40.0.dist-info/RECORD,,
