@@ -1,0 +1,8 @@
+README.md
+setup.py
+simple_math_moh/__init__.py
+simple_math_moh/operations.py
+simple_math_moh.egg-info/PKG-INFO
+simple_math_moh.egg-info/SOURCES.txt
+simple_math_moh.egg-info/dependency_links.txt
+simple_math_moh.egg-info/top_level.txt
