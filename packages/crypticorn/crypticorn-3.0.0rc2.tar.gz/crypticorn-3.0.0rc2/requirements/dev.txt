@@ -1,0 +1,20 @@
+build
+twine
+black
+ruff
+isort
+mypy
+# pinning the version here because its a core dependency
+# 7.15 introduced lazy imports which are broken due to missing imports and also have some other issues, so we pin to 7.14
+# see https://github.com/OpenAPITools/openapi-generator/pull/21486/
+openapi-generator-cli==7.14.0
+python-semantic-release==9.21.0
+# openapi-generator-cli[jdk4py] # use jdk4py instead of java binary
+pre-commit
+pytest==8.3.5
+pytest-asyncio==0.26.0
+pytest-cov==6.1.1
+python-dotenv==1.0.1
+PyJWT==2.10.0
+httpx>=0.27.0
+
