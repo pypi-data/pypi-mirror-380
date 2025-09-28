@@ -1,0 +1,9 @@
+.idea
+*.log
+*.iml
+**/*/wxauto_logs
+**/*/wxauto文件下载
+logs
+wechat_agent/ui
+dist/
+build/
