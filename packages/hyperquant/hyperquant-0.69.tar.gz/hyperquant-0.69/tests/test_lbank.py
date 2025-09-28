@@ -1,0 +1,254 @@
+import asyncio
+import json
+import time
+import zlib
+from typing import Literal
+
+from aiohttp import ClientWebSocketResponse
+import pybotters
+
+
+def callback(msg, ws: ClientWebSocketResponse = None):
+    # print("Received message:", msg)
+    decompressed = zlib.decompress(msg, 16 + zlib.MAX_WBITS)
+    text = decompressed.decode("utf-8")
+    print(f"Decoded text: {text}")
+
+def callback2(msg, ws: ClientWebSocketResponse = None):
+    # print("Received message:", msg)
+    # print(str(msg))
+    data = json.loads(msg)  
+    print(data.get('y'))
+
+
+async def main():
+    async with pybotters.Client() as client:
+        # webData2
+        client.ws_connect(
+            "wss://ccws.rerrkvifj.com/ws/V3/",
+            send_json={
+                "dataType": 3,
+                "depth": 200,
+                "pair": "arb_usdt",
+                "action": "subscribe",
+                "subscribe": "depth",
+                "msgType": 2,
+                "limit": 10,
+                "type": 10000,
+            },
+            hdlr_bytes=callback,
+        )
+
+        while True:
+            await asyncio.sleep(1)
+
+
+async def main2():
+    async with pybotters.Client() as client:
+        # webData2
+        # x 为chanel, y为唯一标识, a为参数, z为版本号
+        wsapp = client.ws_connect(
+            "wss://uuws.rerrkvifj.com/ws/v3",
+            send_json={'x': 3, 'y': '3000000001', 'a': {'i': 'SOLUSDT_0.01_25'}, 'z': 1},
+            hdlr_bytes=callback2,
+        )
+        await wsapp._event.wait()
+
+        async with pybotters.Client() as client2:
+            client2.ws_connect(
+                "wss://uuws.rerrkvifj.com/ws/v3",
+                send_json={'x': 3, 'y': '3000000002', 'a': {'i': 'XRPUSDT_0.0001_25'}, 'z': 1},
+                hdlr_bytes=callback2,
+            )
+            await wsapp.current_ws.send_json({'x': 3, 'y': '3000000002', 'a': {'i': 'XRPUSDT_0.0001_25'}, 'z': 1})
+
+        while True:
+            await asyncio.sleep(1)
+
+from hyperquant.broker.lbank import Lbank
+
+async def test_broker():
+    async with pybotters.Client() as client:
+        async with Lbank(client) as lb:
+            print(lb.store.detail.find())
+
+
+async def test_broker_detail():
+    async with pybotters.Client() as client: 
+        data = await client.post(
+            "https://uuapi.rerrkvifj.com/cfd/agg/v1/instrument",
+            headers={"source": "4", "versionflage": "true"},
+            json={
+            "ProductGroup": "SwapU"
+            }
+        ) 
+        res = await data.json()
+        print(res)
+
+async def test_broker_subbook():
+    async with pybotters.Client() as client:
+        async with Lbank(client) as lb:
+            symbols = [item['symbol'] for item in lb.store.detail.find()]
+            symbols = symbols[10:30]
+            print(symbols)
+
+            await lb.sub_orderbook(symbols, limit=1)
+            
+            while True:
+                print(lb.store.book.find({
+                    "s": symbols[8]
+                }))
+                await asyncio.sleep(1)
+
+async def test_update():
+    async with pybotters.Client(apis='./apis.json') as client:
+        async with Lbank(client) as lb:
+            # await lb.update('position')
+            # print(lb.store.position.find())
+            # await lb.update('balance')
+            # print(lb.store.balance.find())
+            await lb.update('detail')
+            print(lb.store.detail.find())
+            # await lb.update('orders_finish')
+            # print(lb.store.order_finish.find())
+
+async def test_place():
+    async with pybotters.Client(apis='./apis.json') as client:
+        async with Lbank(client) as lb:
+            order = await lb.place_order(
+                "0GUSDT",
+                direction="buy",
+                order_type='limit_gtc',
+                price=3.5342,
+                volume=4.176760504552669,
+            )
+            print(order)
+
+async def test_cancel():
+    async with pybotters.Client(apis='./apis.json') as client:
+        async with Lbank(client) as lb:
+            res = await lb.cancel_order("1000624020664540")
+            print(res)
+
+
+async def wait_order_state_poll(
+    broker: Lbank,
+    order_id: str,
+    symbol: str,
+    seconds: float,
+    poll_interval: float = 0.5,
+) -> dict:
+    """轮询 REST 接口，等待订单进入终态。"""
+
+    async with asyncio.timeout(seconds):
+        last_snapshot: dict | None = None
+        while True:
+            await broker.update("orders")
+            snapshot = broker.store.orders.get({"order_id": order_id})
+            if snapshot:
+                last_snapshot = snapshot
+                status = snapshot.get("status")
+                if status in {"filled", "canceled"}:
+                    return snapshot
+            else:
+                await broker.update_finish_order(instrument_id=symbol)
+                finished = broker.store.order_finish.get({"order_id": order_id})
+                if finished:
+                    return finished
+            await asyncio.sleep(poll_interval)
+
+    # asyncio.timeout will raise TimeoutError; this return is defensive
+    return last_snapshot or {}
+
+
+async def order_sync_polling(
+    broker: Lbank,
+    *,
+    symbol: str,
+    direction: Literal["buy", "sell"] = "buy",
+    order_type: Literal["market", "limit_gtc", "limit_ioc", "limit_GTC", "limit_IOC"] = "limit_gtc",
+    price: float | None = None,
+    volume: float | None = None,
+    window_sec: float = 5.0,
+    grace_sec: float = 5.0,
+    poll_interval: float = 0.5,
+) -> dict:
+    """
+    由于 LBank 暂无订单推送，这里通过 ``update`` 轮询同步订单状态。
+    
+    - window_sec: 主轮询窗口，订单若持续存在则触发撤单流程。
+    - grace_sec: 撤单后的额外等待窗口。
+    """
+
+    norm_type = order_type.lower()
+    if norm_type not in {"market", "limit_gtc", "limit_ioc"}:
+        raise ValueError(f"unsupported order_type: {order_type}")
+
+    if norm_type != "market" and price is None:
+        raise ValueError("price is required for limit orders")
+    if volume is None:
+        raise ValueError("volume is required for LBank orders")
+
+    started = int(time.time() * 1000)
+    resp = await broker.place_order(
+        symbol,
+        direction=direction,
+        order_type=norm_type,
+        price=price,
+        volume=volume,
+    )
+    latency = int(time.time() * 1000) - started
+    print(f"下单延迟 {latency} ms")
+
+    order_id = (
+        resp.get("orderSysID")
+        or resp.get("OrderSysID")
+        or resp.get("order_id")
+        or resp.get("orderId")
+    )
+    if not order_id:
+        raise RuntimeError(f"place_order 返回缺少 order_id: {resp}")
+
+    try:
+        return await wait_order_state_poll(
+            broker,
+            order_id,
+            symbol,
+            window_sec,
+            poll_interval=poll_interval,
+        )
+    except TimeoutError:
+        try:
+            await broker.cancel_order(order_id)
+        except Exception as exc:
+            print(f"cancel failed: {exc}")
+        try:
+            return await wait_order_state_poll(
+                broker,
+                order_id,
+                symbol,
+                grace_sec,
+                poll_interval=poll_interval,
+            )
+        except TimeoutError:
+            return {"order_id": order_id, "symbol": symbol, "state": "timeout"}
+
+
+async def test_order_sync_polling():
+    async with pybotters.Client(apis="./apis.json") as client:
+        async with Lbank(client) as lb:
+            result = await order_sync_polling(
+                lb,
+                symbol="SOLUSDT",
+                direction="buy",
+                order_type="market",
+                price=200,
+                volume=0.03,
+                window_sec=3.0,
+                grace_sec=3.0,
+                poll_interval=1.0,
+            )
+            print(result)
+
+if __name__ == "__main__":
+    asyncio.run(test_place())
