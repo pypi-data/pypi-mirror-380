@@ -1,0 +1,17 @@
+playpi/__init__.py,sha256=dTsEzyCiHciltcwydVlbdGVVjRz5Mrv-HdyjU5L09vA,1147
+playpi/__version__.py,sha256=r9csd7YQr6ubaa9S-K5iWXSr4c-RpLuQWy5uJw8f4MU,704
+playpi/cli.py,sha256=AuKXrqpLUCXt7YhFM-SDRkcI9m3Gs-XegPT3cJnlWMI,2518
+playpi/config.py,sha256=rue01FsRNT88vlWu8SOJVt2LmeID4J0K0KL-n38r2yk,1444
+playpi/example_prompts.py,sha256=08pibVb-U4hUFtPXV1zB4-PybY4fPqql5A2pI8OrunU,1537
+playpi/exceptions.py,sha256=ZBxicaGQ4Hb2sTQZXU26wtR564ae_1qFVG63_yYfu3I,632
+playpi/html.py,sha256=WKq0L9Yh3RDyQFwnU1084W8hrFCtYN0fo-98Dq_rnzU,2620
+playpi/session.py,sha256=sHDtiiFUqvWNWp4IPkbAcSWZejvafA8-JFXB0HK5U-8,4648
+playpi/providers/__init__.py,sha256=luDtjI29QvZnheB6nh0sNJYm3SADik0iXPZ6-vvs57E,571
+playpi/providers/google/__init__.py,sha256=4z_szjqdlJfVOIA5f617U6LniT2rLxxLRpQ0PTHF3rE,511
+playpi/providers/google/auth.py,sha256=lA6UIccZyCK8oCQUz1XefxyPTDQmzLZGm99WA-MSk24,2168
+playpi/providers/google/gemini.py,sha256=_bUKDCR1NpCH3fCJpTZ3WLK81yp356pId2gigr5OGLQ,27525
+playpi-1.0.6.dist-info/METADATA,sha256=VqAI-uOS7YmuwBjDCIjzRy831cH22rX0haWJXEopM3s,5854
+playpi-1.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+playpi-1.0.6.dist-info/entry_points.txt,sha256=au--HXD3XGTYIEAbmllRrUF0B89B2a5qS5w7uBgf_hs,43
+playpi-1.0.6.dist-info/licenses/LICENSE,sha256=owbwpVdTHiU18mRyRzvr1DDQe_Rjs1FCkEdzMGJIU9U,1069
+playpi-1.0.6.dist-info/RECORD,,
