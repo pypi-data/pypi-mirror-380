@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: easier-openai
+Version: 0.2.52
+Summary: Utilities for orchestrating OpenAI chat, tool calling, search, audio, and images from one helper package.
+Author-email: Advik Mathur <pranit.advik@gmail.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/Adpros7/easier-gpt
+Project-URL: Repository, https://github.com/Adpros7/easier-gpt
+Project-URL: Documentation, https://github.com/Adpros7/easier-gpt
+Project-URL: Issues, https://github.com/Adpros7/easier-gpt/issues
+Keywords: openai,assistant,chat,responses,audio,images,vector
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=1.43.0
+Requires-Dist: typing-extensions>=4.7.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: simpleaudio>=1.0.4
+Requires-Dist: openai-stt>=0.1.0
+Requires-Dist: whisper>=1.1.10
+Requires-Dist: ez-openai>=0.0.7
+Requires-Dist: setuptools>=80.9.0
+Provides-Extra: function-tools
+Requires-Dist: ez-openai; extra == "function-tools"
+Provides-Extra: speech-models
+Requires-Dist: whisper>=1.0; extra == "speech-models"
+Dynamic: license-file
+
+# Easier OpenAI
+
+Easier OpenAI offers a light wrapper around the OpenAI Python SDK so you can chat with models, toggle built-in tools, upload reference files, and request images through one unified helper.
+
+## Highlights
+
+- Single `Assistant` class for conversational flows, tool selection, and multi-turn context.
+- Temporary vector store support to search across local reference documents during a chat.
+- Flags for web search or code interpreter when the selected OpenAI model supports them.
+- Image helpers for `gpt-image-1`, `dall-e-2`, and `dall-e-3` with convenient file handling.
+
+## Installation
+
+```bash
+pip install easier-openai
+```
+
+Set `OPENAI_API_KEY` in your environment or pass an explicit key when you build the assistant instance.
+
+## Usage Example
+
+```python
+from easier_openai import Assistant
+
+assistant = Assistant(model="gpt-4o", system_prompt="You are concise.")
+response_text = assistant.chat("Summarize Rayleigh scattering in one sentence.")
+print(response_text)
+```
+
+### File Search Example
+
+```python
+notes = ["notes/overview.md", "notes/data-sheet.pdf"]
+reply = assistant.chat(
+    "Highlight key risks from the attached docs",
+    file_search=notes,
+    tools_required="auto",
+)
+print(reply)
+```
+
+## Requirements
+
+- Python 3.10 or newer
+- `openai>=1.43.0`
+- `typing_extensions>=4.7.0`
+- `pydantic>=2.0.0`
+
+## Contributing
+
+Issues and pull requests are welcome. Please run checks locally before submitting changes.
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
