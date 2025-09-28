@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: bento-sgl-router
+Version: 0.0.2
+Summary: Bento service with SGLang Router included
+Author-Email: Frost Ming <frost@bentoml.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: bentoml>=1.4.25
+Requires-Dist: sglang-router>=0.1.9
+Description-Content-Type: text/markdown
+
+# bento-sgl-router
+
+Helper utilities for bundling an [SGLang Router](https://github.com/sgl-project/sglang) inside a [BentoML](https://github.com/bentoml/BentoML) service. It exposes a drop-in replacement for `bentoml.service` that starts the router sidecar, keeps it in sync with your LLM workers, and surfaces router metrics alongside your Bento.
+
+## Overview
+
+- Wraps an existing BentoML service definition and injects an `sglang-router` process.
+- Automatically syncs worker hosts discovered from your `llm` dependency during readiness probes.
+- Exposes router Prometheus metrics by merging them into the Bento service metrics endpoint.
+
+## Installation
+
+```bash
+pip install bento-sgl-router
+```
+
+Python 3.10 or newer is required. The package installs `bentoml>=1.4.25` and `sglang-router>=0.1.9` as dependencies.
+
+## Quickstart
+
+Decorate an existing BentoML LLM service to bundle it with an SGLang Router:
+
+```python
+import bentoml
+from bento_sgl_router import service
+
+
+@service(name="chat-router")
+class ChatLLM:
+    ...
+```
+
+Any keyword arguments supported by `bentoml.service` (such as `image`, `labels`, or resource configs) can be passed through the decorator.
+
+### Router configuration
+
+Control router behaviour via environment variables:
+
+| Variable        | Default       | Description                                                |
+| --------------- | ------------- | ---------------------------------------------------------- |
+| `ROUTER_POLICY` | `cache_aware` | Scheduling policy passed to `sglang_router.launch_router`. |
+
+Set the variable in your deployment environment or via `envs=[...]` when declaring the service.
+
+## Development
+
+```bash
+pdm install
+pdm run pytest
+```
+
+The project keeps the code in `bento_sgl_router.py` and lightweight tests under `tests/`.
