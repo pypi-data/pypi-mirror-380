@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: omfiles
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: zarr>=2.18.2 ; extra == 'codec'
+Requires-Dist: numcodecs>=0.12.1 ; extra == 'codec'
+Requires-Dist: xarray>=2023.1.0 ; extra == 'xarray'
+Requires-Dist: fsspec>=2023.1.0 ; extra == 'fsspec'
+Requires-Dist: s3fs>=2023.1.0 ; extra == 'fsspec'
+Requires-Dist: zarr>=2.18.2 ; extra == 'all'
+Requires-Dist: numcodecs>=0.12.1 ; extra == 'all'
+Requires-Dist: xarray>=2023.1.0 ; extra == 'all'
+Requires-Dist: fsspec>=2023.1.0 ; extra == 'all'
+Requires-Dist: s3fs>=2023.1.0 ; extra == 'all'
+Provides-Extra: codec
+Provides-Extra: xarray
+Provides-Extra: fsspec
+Provides-Extra: all
+License-File: LICENSE
+Requires-Python: >=3.9
