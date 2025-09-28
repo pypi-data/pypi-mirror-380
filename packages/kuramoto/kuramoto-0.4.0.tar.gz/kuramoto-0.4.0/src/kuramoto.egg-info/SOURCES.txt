@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/kuramoto/__init__.py
+src/kuramoto/kuramoto.py
+src/kuramoto/plotting.py
+src/kuramoto.egg-info/PKG-INFO
+src/kuramoto.egg-info/SOURCES.txt
+src/kuramoto.egg-info/dependency_links.txt
+src/kuramoto.egg-info/requires.txt
+src/kuramoto.egg-info/top_level.txt
+tests/test_initialization.py
