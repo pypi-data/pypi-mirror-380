@@ -1,0 +1,12 @@
+duplicaid/__init__.py,sha256=SjcN1qlz_GpRBMLQNWu3nVEpYE07jlsnb2AqnPjnEzc,80
+duplicaid/backup.py,sha256=qWHhqgY_pE9EwKbBzoeQ3BB1ZUWru53TBEkhlue4nS8,17786
+duplicaid/cli.py,sha256=oGZVFsK1kUwpqGKqCzwxYLiilDRDTKrs1Lxh3Aq3O6Y,10305
+duplicaid/config.py,sha256=m4iY5iAR56e-Qf2JI0z-J6rGPxkrVIgKK9TUkvB_Ffc,7565
+duplicaid/discovery.py,sha256=AVDS5K5vp8E420NntfF_7YqS4M8Buw9rDvDreywYz30,5434
+duplicaid/executor.py,sha256=RnY7jFMxLbddZsoHE2usH9s48258hnoXSg78bveaSoM,1008
+duplicaid/local.py,sha256=ZGcMKZhD4bojjxB5zWozafki1ff5B8y2I9bfiwYfgoQ,2803
+duplicaid/ssh.py,sha256=ZMsz9lIxJ3k6CbJaB5i5epqQqURBtqY27DS7IyiLzws,5883
+duplicaid-0.2.0.dist-info/METADATA,sha256=YMpzt573uT7Lp4D0eMAn06y5pqzwfUc5MuRi86TyWpc,10011
+duplicaid-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+duplicaid-0.2.0.dist-info/entry_points.txt,sha256=-COR_sDtxAg7qd92kldeLkXtZp58QAzFUWoPw630tA4,48
+duplicaid-0.2.0.dist-info/RECORD,,
