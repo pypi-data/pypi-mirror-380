@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/parakeet_dictation/__init__.py
+src/parakeet_dictation/logger_config.py
+src/parakeet_dictation/main.py
+src/parakeet_dictation/text_selection.py
+src/parakeet_dictation.egg-info/PKG-INFO
+src/parakeet_dictation.egg-info/SOURCES.txt
+src/parakeet_dictation.egg-info/dependency_links.txt
+src/parakeet_dictation.egg-info/entry_points.txt
+src/parakeet_dictation.egg-info/requires.txt
+src/parakeet_dictation.egg-info/top_level.txt
