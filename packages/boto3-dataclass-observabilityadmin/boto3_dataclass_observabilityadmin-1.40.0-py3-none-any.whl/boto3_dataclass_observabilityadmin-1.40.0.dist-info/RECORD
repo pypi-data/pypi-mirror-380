@@ -1,0 +1,7 @@
+boto3_dataclass_observabilityadmin/__init__.py,sha256=Tm_-tqyDFOD4nzRWTS9du1at8_1eDKPTpQsK5hzgUaM,130
+boto3_dataclass_observabilityadmin/caster.py,sha256=znWz_wvX7fgakmCLMAN-zdZkW6zWtoQbgoR1Com31eU,6341
+boto3_dataclass_observabilityadmin/type_defs.py,sha256=kO8whzIyerP40_Th4TXVctLzYNhtdk3EEs2wRBnbvjQ,62389
+boto3_dataclass_observabilityadmin-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_observabilityadmin-1.40.0.dist-info/METADATA,sha256=S3zy8F9lSDVS5xDyrbmQZGmvmuSJpaVoqxKi9rqZUJI,1760
+boto3_dataclass_observabilityadmin-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_observabilityadmin-1.40.0.dist-info/RECORD,,
