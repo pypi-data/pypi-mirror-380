@@ -1,0 +1,3 @@
+[console_scripts]
+rockerc = rockerc.rockerc:run_rockerc
+rockervsc = rockerc.rockervsc:main
