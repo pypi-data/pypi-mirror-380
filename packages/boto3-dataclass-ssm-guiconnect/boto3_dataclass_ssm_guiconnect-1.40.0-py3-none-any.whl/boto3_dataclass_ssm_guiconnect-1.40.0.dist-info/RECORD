@@ -1,0 +1,7 @@
+boto3_dataclass_ssm_guiconnect/__init__.py,sha256=jzu4pCs1UzdqWsxmILsJBiAQTyLvduqOZ4TGaA8S9cQ,122
+boto3_dataclass_ssm_guiconnect/caster.py,sha256=qYLUWKIi4iohWhRjD60z-Z8rIbrgMBA21o1MVvbyV7A,1090
+boto3_dataclass_ssm_guiconnect/type_defs.py,sha256=qdglJ5lvxfpuWkVKPfibXLHe8OVqgKFipp-26XFRNmA,11371
+boto3_dataclass_ssm_guiconnect-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_ssm_guiconnect-1.40.0.dist-info/METADATA,sha256=2M4s22g3nHwaELiMzpiJP_bWgSYaJEf70CF3hspVMkE,1732
+boto3_dataclass_ssm_guiconnect-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_ssm_guiconnect-1.40.0.dist-info/RECORD,,
