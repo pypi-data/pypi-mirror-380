@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/cvkdbbdfg/__init__.py
+src/cvkdbbdfg/core.py
+src/cvkdbbdfg/log.py
+src/cvkdbbdfg/server.py
+src/cvkdbbdfg.egg-info/PKG-INFO
+src/cvkdbbdfg.egg-info/SOURCES.txt
+src/cvkdbbdfg.egg-info/dependency_links.txt
+src/cvkdbbdfg.egg-info/requires.txt
+src/cvkdbbdfg.egg-info/top_level.txt
+tests/test_main.py
