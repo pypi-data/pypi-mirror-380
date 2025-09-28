@@ -1,0 +1,7 @@
+boto3_dataclass_securityhub/__init__.py,sha256=I4RX5ZwYmfQQPoHOMFJiTQHV5MK18YaK7QrY7o0zZzA,116
+boto3_dataclass_securityhub/caster.py,sha256=KK69qasDQd375NyQcPuftk2sDDWhCZwwDKwaA8MvVqQ,17431
+boto3_dataclass_securityhub/type_defs.py,sha256=lcOKxj7vWa8xmKrNmL6RVitbAMaMGIcHY4ebePybqhI,1397677
+boto3_dataclass_securityhub-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_securityhub-1.40.0.dist-info/METADATA,sha256=LwkWNyCqCn9qzUQPvTTydCCMYlkGoYSzWfCS7txGWCU,1711
+boto3_dataclass_securityhub-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_securityhub-1.40.0.dist-info/RECORD,,
