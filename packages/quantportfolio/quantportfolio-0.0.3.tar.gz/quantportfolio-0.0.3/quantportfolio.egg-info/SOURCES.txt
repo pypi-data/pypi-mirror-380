@@ -1,0 +1,11 @@
+License
+README.md
+pyproject.toml
+quantportfolio/__init__.py
+quantportfolio/data.py
+quantportfolio/optimizer.py
+quantportfolio/performance.py
+quantportfolio.egg-info/PKG-INFO
+quantportfolio.egg-info/SOURCES.txt
+quantportfolio.egg-info/dependency_links.txt
+quantportfolio.egg-info/top_level.txt
