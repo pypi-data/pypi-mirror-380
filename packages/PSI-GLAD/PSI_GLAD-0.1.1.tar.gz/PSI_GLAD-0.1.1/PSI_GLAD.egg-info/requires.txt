@@ -1,0 +1,6 @@
+cvxpy
+mpmath
+numpy
+POT
+scikit-learn
+scipy
