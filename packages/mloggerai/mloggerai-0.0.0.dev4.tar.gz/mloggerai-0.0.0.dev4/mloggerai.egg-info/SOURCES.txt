@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+mloggerai/__init__.py
+mloggerai/errosolver.py
+mloggerai.egg-info/PKG-INFO
+mloggerai.egg-info/SOURCES.txt
+mloggerai.egg-info/dependency_links.txt
+mloggerai.egg-info/requires.txt
+mloggerai.egg-info/top_level.txt
