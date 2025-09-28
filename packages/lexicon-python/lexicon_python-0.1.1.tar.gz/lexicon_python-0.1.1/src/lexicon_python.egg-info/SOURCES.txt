@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/lexicon/__init__.py
+src/lexicon/lexicon.py
+src/lexicon_python.egg-info/PKG-INFO
+src/lexicon_python.egg-info/SOURCES.txt
+src/lexicon_python.egg-info/dependency_links.txt
+src/lexicon_python.egg-info/requires.txt
+src/lexicon_python.egg-info/top_level.txt
+tests/test_lexicon.py
