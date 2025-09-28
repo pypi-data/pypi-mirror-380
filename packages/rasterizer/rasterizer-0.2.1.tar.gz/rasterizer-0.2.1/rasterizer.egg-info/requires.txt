@@ -1,0 +1,10 @@
+geopandas
+xarray
+numpy
+shapely
+rioxarray
+numba
+
+[test]
+pytest
+scipy
