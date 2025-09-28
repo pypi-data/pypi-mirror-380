@@ -1,0 +1,9 @@
+estimatePDF/DensityEstimate.py,sha256=sGkgMgOgm0sMXQu2fg7tiL034kfd2GHHPOYHDkF3Y4Q,35945
+estimatePDF/DualPolyRegPDF.py,sha256=Lk0zsk7A3q4g-Z5Oz4BH0475GSP5lnHn6T4JoqaQO08,33908
+estimatePDF/ProbabilityDensityFunction.py,sha256=7VPhHs7ZneWzgBO4yM8ZzwGQyc2-DUQgQ-Wf11XCuRM,29182
+estimatePDF/__init__.py,sha256=9Rv6VWu5OsacY7lgp9WUw4COctFidg9gPzfV6KPnE7A,1444
+estimatepdf-0.1.0.dist-info/LICENSE,sha256=8i1JSQQrG9EDElxa0v0dFAkvE_MlTSxaw1-soWB3Pjw,1069
+estimatepdf-0.1.0.dist-info/METADATA,sha256=yYiexiCW3rUdKqKZIQ3yOPPZ9WV_XdCmqL404TSfQEM,2037
+estimatepdf-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+estimatepdf-0.1.0.dist-info/top_level.txt,sha256=7KGnxtHRQ6mBqNTQiVfECKzIP198DwJH_5CrkWmh9Cc,12
+estimatepdf-0.1.0.dist-info/RECORD,,
