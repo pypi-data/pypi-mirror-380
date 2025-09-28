@@ -1,0 +1,9 @@
+faster-whisper
+PyQt6
+PyQt6-Qt6
+PyQt6-sip
+numpy
+pydub
+soundfile
+sounddevice
+deep-translator

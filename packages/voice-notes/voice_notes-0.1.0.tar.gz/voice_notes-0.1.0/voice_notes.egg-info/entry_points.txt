@@ -1,0 +1,2 @@
+[console_scripts]
+voice-notes = voice_notes.app:main
