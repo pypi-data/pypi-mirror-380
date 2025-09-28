@@ -1,0 +1,15 @@
+native_dumper/__init__.py,sha256=RG7rw6V3GH3DwrJ6LGubPtSQoGz8Tibp4xc7ydKxb0o,770
+native_dumper/connector.py,sha256=zC-RG9jhIdR-wZTGB_CapYjDL1iTBUtghLtOymCzSmM,368
+native_dumper/cursor.py,sha256=mCSlALAHs878H5uDcfeNOudzfdjEVa14dnjZs7wMqUQ,3974
+native_dumper/defines.py,sha256=duxxBRReZ-FQJSB0cZ0ge-jLGXeRJywvK17StqIXuVI,125
+native_dumper/dumper.py,sha256=61NGZVNG9FlE7r8kT_j1fMrsw8cp8ZVmcnc2R7_o9-c,9765
+native_dumper/enums.py,sha256=R33b-9PkIw3-TNmW3oAW8M67pXS9VQvZerrUFlXh4MI,272
+native_dumper/errors.py,sha256=Yv82z-Sn50Bo5qTw-ZPkRj1U3Q_DKxysBoG5u1eD5uw,337
+native_dumper/logger.py,sha256=cuAEB7EViJ1tup9poW37HEJdze7XOSsuGeoa4zmcJ08,1744
+native_dumper/multiquery.py,sha256=rBvZ4ZHt6ec4SexHpo5gqg1umKdUuJkWFKIlBOZNU7s,590
+native_dumper/stream.py,sha256=ECQfNn-XyrfvOyzTVap6KDuE8xJZ0TFb-CSVlIsfFUk,2346
+native_dumper/version.py,sha256=nzTiiLW3Y9o_oGEzY9jo55-7JY8yK78-t4Oyl3Ilo0I,25
+native_dumper-0.2.0.0.dist-info/METADATA,sha256=Dbg_6UiQ-kHUutv4efsC2d7dPl9vmNfP5VRh6EGSwKk,4568
+native_dumper-0.2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+native_dumper-0.2.0.0.dist-info/top_level.txt,sha256=mRPA9FLefVYq0__gRJ2LVJeFyIG_EmfYkKXBLdj0u54,14
+native_dumper-0.2.0.0.dist-info/RECORD,,
