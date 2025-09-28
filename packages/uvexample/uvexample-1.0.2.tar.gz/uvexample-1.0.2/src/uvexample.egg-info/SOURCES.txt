@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/myproject/__init__.py
+src/myproject/main.py
+src/myproject/sample.py
+src/uvexample.egg-info/PKG-INFO
+src/uvexample.egg-info/SOURCES.txt
+src/uvexample.egg-info/dependency_links.txt
+src/uvexample.egg-info/requires.txt
+src/uvexample.egg-info/top_level.txt
+tests/test_sample.py
