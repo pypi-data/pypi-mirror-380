@@ -1,0 +1,17 @@
+mol2chemfigPy3/__init__.py,sha256=Hjhj0lrvORCeJ5fGDeQ5sytSWLp5qkRbfzUdgFLB3yg,2608
+mol2chemfigPy3/__main__.py,sha256=4Pcj-E3UCFAkEzcQCzsGDYVTxYc32_W80j6eVtEujUc,187
+mol2chemfigPy3/atom.py,sha256=bMtupRfxyKZyi-Zg_Ix6KObn_Z__cKfrd3m7E5CtUFA,6109
+mol2chemfigPy3/bond.py,sha256=yrU4BCjoySSBB2kjgsdow4WFbY6BB8BdH7VGsHXaGac,18133
+mol2chemfigPy3/chemfig_mappings.py,sha256=CCBEoEWD4s5wCR5fvrZYiIvscaCrqK6lQ0Lr3bnJpeQ,15809
+mol2chemfigPy3/common.py,sha256=A9rSsazw9EW9AM1MjTm8YspHO_zXzqCtv6eXWpSPnpo,3070
+mol2chemfigPy3/main.py,sha256=3lror5Do1O_CqQlzqdHZ7oZtsB-nJcpyUKdyV-Hhn28,516
+mol2chemfigPy3/molecule.py,sha256=Kp-1kTjcIR6rUQegh69DItrdhph63fdtMTR7FAElUvU,24224
+mol2chemfigPy3/optionparser.py,sha256=lBrbDM_pB6CxeZOaPuu60du7is9qvaP5LFdcvz1aLtA,14000
+mol2chemfigPy3/options.py,sha256=jzpvm29kJKO7C5FAqTQhJv5p6TXzYYgFpODZ8GzhvSI,7706
+mol2chemfigPy3/processor.py,sha256=KZ5BpNOWZvyHCf3OsEpdd_Ol40SJg_GMjGswkwDQhP4,7118
+mol2chemfigpy3-1.5.12.dist-info/licenses/LICENSE,sha256=SZRIe5kz5WRs_nv5leQrcVlC5EQ3W1RI2lFgumtW_0c,1089
+mol2chemfigpy3-1.5.12.dist-info/METADATA,sha256=bQTDZ-01v4ox7bmxVZ3pe9HTL1nxIRf8oZWSnSZkeLw,3620
+mol2chemfigpy3-1.5.12.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mol2chemfigpy3-1.5.12.dist-info/entry_points.txt,sha256=n4hYN2pxpIykDWNEecBje7hNfis-PbXQ87l5CTTpSq4,57
+mol2chemfigpy3-1.5.12.dist-info/top_level.txt,sha256=X9VIntqI1PdKR1--m7MI-QdRAomM0fiLtW-jfwQVFL0,15
+mol2chemfigpy3-1.5.12.dist-info/RECORD,,
