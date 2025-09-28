@@ -1,0 +1,10 @@
+qmvvm/__init__.py,sha256=tLYFIgRiS-groz95KyqTTDNCN6F22Lmimlcq1o-e2eQ,451
+qmvvm/computed.py,sha256=uw2YRBX55HgJQ7TbwwOwouNX1hs_N3nI_EsfGxrDowA,873
+qmvvm/mvvm.py,sha256=-332HNNuJKJ7RVsITUH7wraNe9GA20hO0bna-Ww9S_4,519
+qmvvm/proxy.py,sha256=NHi3sAcb7P1U0qzHrQsSmI6gvD5_43uvCkcKTWHAYeo,3645
+qmvvm/ref.py,sha256=bK-zT5w4_663qQ-hTuAGQQp0mFEnN3FxvNamtb9-w5E,1322
+qmvvm-0.0.4.dist-info/LICENSE,sha256=1Pp-YOqi2NiDUPfld6Ni3pxf0OK-35mXK1QIhmM1jlk,11360
+qmvvm-0.0.4.dist-info/METADATA,sha256=_rPV_oOaoUlXVoG2u59RDldHcxg4hCuAH5YqGnVxe94,1535
+qmvvm-0.0.4.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+qmvvm-0.0.4.dist-info/top_level.txt,sha256=hphh1Vjc3TR9hBzk_yhPF5F4li9yM2Ix8zYg9fm-EbQ,6
+qmvvm-0.0.4.dist-info/RECORD,,
