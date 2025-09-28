@@ -1,0 +1,9 @@
+confkit/__init__.py,sha256=jIpAPI--SbioU7lm3GgbiWTCQVRkFhNaZAYfugMcb3U,766
+confkit/config.py,sha256=YI7gX6fD0uYomfQEl5ayuiTY9kl5DZSi7-vi5bRkrds,12317
+confkit/data_types.py,sha256=qEwzZ-cLtNg_ngiBrI4GrcmcxOZfDzYcPE-u4hCMup0,12809
+confkit/exceptions.py,sha256=IlSnRkQM4hueDxK0kpGzcC3_ZPH9gMGEMtLTuE-zW_g,269
+confkit/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+confkit/sentinels.py,sha256=qiqeYxW7Mavhedd9RaVHqNn71vok-x9PJBlbYxnmcRY,372
+confkit-0.5.0.dist-info/METADATA,sha256=gVVaTwP-Qc8AxrC3RYT6-Ly_0ztUS9KaPsKmurjaZ9k,2739
+confkit-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+confkit-0.5.0.dist-info/RECORD,,
