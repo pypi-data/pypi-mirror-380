@@ -1,0 +1,14 @@
+vizro_mcp/__init__.py,sha256=Xnw2iOxb_1D0HOirFuhRSJawhwkNhySB5agUG7QLP6o,384
+vizro_mcp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vizro_mcp/server.py,sha256=dWMydNnfJlvCX0nVbYzfgWn_G3wtWtGt9jeisd6Pdgs,13258
+vizro_mcp/_schemas/__init__.py,sha256=0lk_CiNjo4QFyX0i-VuSeL7EMM6sD_2p836y-ftM3Gs,196
+vizro_mcp/_schemas/schemas.py,sha256=gwDJL_9OK_S0NrZTk1rmJCVP6LLqsMIbVh-s-nZmBrw,8808
+vizro_mcp/_utils/__init__.py,sha256=r57TYaklMaV5TYD8HUG6uv-whvMFfyuULs4cqEZXGkg,1182
+vizro_mcp/_utils/configs.py,sha256=28ALgRgKYzRnPunSTjZxHFz2kyQy8yW4ZLhDgCUkE0s,3627
+vizro_mcp/_utils/prompts.py,sha256=6GyBDF2flmLn5YO2hkD-m7Y0QwW5iYMS9zUMsoH5xWk,11777
+vizro_mcp/_utils/utils.py,sha256=ZzBp6_jHMI6VsaptWC6WFMf1S4QCnrbo2Iq1-O4QH0A,8199
+iflow_mcp_vizro_mcp-0.1.0.dist-info/METADATA,sha256=9wrc8v3R9HGmOXzlh221SxwXrLF7C1xSwavNs6q1b8E,12372
+iflow_mcp_vizro_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+iflow_mcp_vizro_mcp-0.1.0.dist-info/entry_points.txt,sha256=iSUzPHvx4Ogsn91tK2C0OHxI44SNCHT1F1zUqbTj5O0,45
+iflow_mcp_vizro_mcp-0.1.0.dist-info/licenses/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+iflow_mcp_vizro_mcp-0.1.0.dist-info/RECORD,,
