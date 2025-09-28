@@ -1,0 +1,15 @@
+torchcurves/__init__.py,sha256=H7N8gj07cJhUkQYs-4Se2Jyx5J2Cca4HP3k7JpGVIG0,142
+torchcurves/types.py,sha256=KGJH7t4ueHBCyzbwHFERhDHnwWA9khzanK0waVwlIIc,754
+torchcurves/functional/__init__.py,sha256=mc2-nePX7Seq4i2X20puEnankclFQ0OkoizCSHzrYkE,284
+torchcurves/functional/_bspline.py,sha256=opEUEvnzK4WJYlUr7vkQuAv0aPweKPpPayDBGTCnM2o,20442
+torchcurves/functional/_legendre.py,sha256=oW_uQVAT4sq9QB92XV7dOuVfAs2-xUhY26DMTgI-1Tw,1398
+torchcurves/functional/_normalization.py,sha256=9pNVp3jxHbU_Pw9jCMaC8xR7AERVDWsFT8kpl7_2670,1851
+torchcurves/modules/__init__.py,sha256=6aTCY27sx3OXGop3MTZT9YbT0I5DLzWRty3u3QNtiIo,192
+torchcurves/modules/_bspline.py,sha256=WOAicaZTADpj72NVvZVXIA6XlU_g2P__UJgGFStPtoo,8090
+torchcurves/modules/_kan_tools.py,sha256=eCi8eP1210PxLPrgbw7wyRpaw35Sk7a1_92_P-gg8Ec,354
+torchcurves/modules/_legendre.py,sha256=bYUJhaom_HfLeXkgBbb-k-ERROs3aos16HxI45wldpo,3897
+torchcurves/modules/_normalization.py,sha256=_gz-4oaL7U8B1uW_HkJoHhJGdNQ3KXRES9Dk6-8ayFA,183
+torchcurves-0.1.1.dist-info/METADATA,sha256=cCY-d2wIiEdyBJZev3arx5TW5aRpX-EpeVSRwOk2qWU,8701
+torchcurves-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+torchcurves-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+torchcurves-0.1.1.dist-info/RECORD,,
