@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+inventree_stl_viewer.egg-info/PKG-INFO
+inventree_stl_viewer.egg-info/SOURCES.txt
+inventree_stl_viewer.egg-info/dependency_links.txt
+inventree_stl_viewer.egg-info/entry_points.txt
+inventree_stl_viewer.egg-info/top_level.txt
+stl_viewer/__init__.py
+stl_viewer/core.py
+stl_viewer/static/Panel.js
+stl_viewer/static/Panel.js.map
+stl_viewer/static/.vite/manifest.json

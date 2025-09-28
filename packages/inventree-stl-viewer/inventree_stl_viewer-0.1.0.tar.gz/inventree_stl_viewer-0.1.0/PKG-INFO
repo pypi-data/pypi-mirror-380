@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: inventree-stl-viewer
+Version: 0.1.0
+Summary: View STL files if provided as an attachment to a part
+Author-email: Alec Delaney <tekktrik@tekktrik.dev>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/tekktrik/inventree-stl-viewer-plugin
+Keywords: inventree,plugin
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: InvenTree
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# STLViewer
+
+View STL files if provided as an attachment to a part
+
+## Installation
+
+### InvenTree Plugin Manager
+
+Admins for the InvenTree instance can use the Admin panel to directly add the plugin, by using the package name `inventree-stl-viewer`.
+
+### Command Line 
+
+To install manually via the command line, run the following command:
+
+```bash
+pip install inventree-stl-viewer
+```
+
+Add  `inventree-stl-viewer` to your InvenTree server's `plugins.txt`.
+
+## Configuration
+
+Users can set their preferred STL model color in their user settings.
+
+## Usage
+
+The STL Viewer panel will automatically appear when looking at parts that have STL files as attachments!  There will be a tab for each STL file.
