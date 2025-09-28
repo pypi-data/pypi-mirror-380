@@ -1,0 +1,3 @@
+[console_scripts]
+art_studio_tz=art_studio_tz.cli:app
+
