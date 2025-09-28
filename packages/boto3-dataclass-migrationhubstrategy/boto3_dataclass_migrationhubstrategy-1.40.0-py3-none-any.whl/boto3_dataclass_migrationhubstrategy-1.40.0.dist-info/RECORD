@@ -1,0 +1,7 @@
+boto3_dataclass_migrationhubstrategy/__init__.py,sha256=qNP2fMwFd9g68rCjPlSznSC10vt-Oxk1-z3Ea_fXyX0,134
+boto3_dataclass_migrationhubstrategy/caster.py,sha256=Cd1uzTOud-yhs32ownYrMyJtVR1qWWpJi8pN09h2RSc,4251
+boto3_dataclass_migrationhubstrategy/type_defs.py,sha256=IzEZdnhSS9DQgLXwnMtU_6ZQd47XuH0HyCMZSfbZZys,110631
+boto3_dataclass_migrationhubstrategy-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_migrationhubstrategy-1.40.0.dist-info/METADATA,sha256=9WON43ORhF5SMIv2VjBS2yWmm8AEK9028b6_t_wqOY8,1774
+boto3_dataclass_migrationhubstrategy-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_migrationhubstrategy-1.40.0.dist-info/RECORD,,
