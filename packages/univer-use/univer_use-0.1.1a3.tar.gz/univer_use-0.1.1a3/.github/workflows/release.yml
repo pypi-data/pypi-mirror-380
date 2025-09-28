@@ -1,0 +1,73 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish-univer-use:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build sdist and wheel (univer-use)
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+          python -m build
+          python -m twine check dist/*
+
+      - name: Publish univer-use to PyPI
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          verbose: true
+          packages-dir: dist/
+
+  publish-spreadsheet-use:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Derive release version from tag
+        run: echo "RELEASE_VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
+
+      - name: Build sdist and wheel (spreadsheet-use)
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+          mkdir -p build-spreadsheet-use
+          cp -R . build-spreadsheet-use
+          cd build-spreadsheet-use
+          sed -i 's/^name = "univer-use"$/name = "spreadsheet-use"/' pyproject.toml
+          sed -i "s/^dynamic = \[\"version\"\]$/version = \"${RELEASE_VERSION}\"/" pyproject.toml
+          python -m build
+          python -m twine check dist/*
+
+      - name: Publish spreadsheet-use to PyPI
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          verbose: true
+          packages-dir: build-spreadsheet-use/dist/
