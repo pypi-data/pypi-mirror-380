@@ -1,0 +1,9 @@
+[console_scripts]
+arithmetic-math-utils = minimcp_servers.servers.arithmetic_math_utils:main
+continuous-math-utils = minimcp_servers.servers.continuous_math_utils:main
+datetime-utils = minimcp_servers.servers.datetime_utils:main
+discrete-math-utils = minimcp_servers.servers.discrete_math_utils:main
+math-utils = minimcp_servers.servers.math_utils:main
+random-generator = minimcp_servers.servers.random_generator:main
+statistics-math-utils = minimcp_servers.servers.statistics_math_utils:main
+text-utils = minimcp_servers.servers.text_utils:main
