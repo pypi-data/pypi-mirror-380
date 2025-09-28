@@ -1,0 +1,6 @@
+ab_core/alembic_auto_migrate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ab_core/alembic_auto_migrate/service.py,sha256=JTY5jtXorUj8c2hG49urTaN3TFelvLR6ERpJJqHkx0g,5439
+ab_alembic_auto_migrate-0.1.0.dist-info/METADATA,sha256=iS5K3rOCLRJNmuZ-FKfX3gqwm6N_0m-vpd-FLK0-KPE,5613
+ab_alembic_auto_migrate-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ab_alembic_auto_migrate-0.1.0.dist-info/licenses/LICENSE,sha256=REBFOD_HdKi9ZZ38nP3A_NjpLFaijF1A6_PDiMglbLk,1072
+ab_alembic_auto_migrate-0.1.0.dist-info/RECORD,,
