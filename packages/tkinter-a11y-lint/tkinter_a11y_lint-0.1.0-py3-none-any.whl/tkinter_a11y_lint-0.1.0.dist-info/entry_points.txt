@@ -1,0 +1,2 @@
+[pylint.plugins]
+tkinter_a11y = tkinter_a11y_lint.plugin
