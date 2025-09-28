@@ -1,0 +1,10 @@
+iamex/__init__.py,sha256=70tGuA1KQetT70JHkHW7XBqvoPyhuAaHjbT6Mz-MYeQ,3646
+iamex/async_client.py,sha256=Uhg5QMLMkx4EooIbVgF20oEBMwbEZZtMc4Zppgo2UNk,10240
+iamex/client.py,sha256=Xz1Rj93k2-TU0eN--yiiSDfG1vgx3jZWkdBBryVEWeI,15346
+iamex/compat.py,sha256=KPMOacEOu-9WuxBtdxc2UOFels2w0TNEQzBlTw4aDAk,22562
+iamex/errors.py,sha256=NwqldRIQa11UY34DinG2ao3U2KKo69sGZ5P8pKyAGPQ,1168
+iamex-0.0.5.dist-info/licenses/LICENSE,sha256=Aztugdls_OAMaGqv3mMM5CGhDxd4Srn1ZJJ2GSBzdPM,1109
+iamex-0.0.5.dist-info/METADATA,sha256=XR7LNLsGDc6WT1Nd1FpKIoUpRhOSoi9Eblx-M2gbTqs,19863
+iamex-0.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+iamex-0.0.5.dist-info/top_level.txt,sha256=ISeoX_bR82UTb_jC2rL6_jY22n3uRAqm2g_T_4ITR_E,6
+iamex-0.0.5.dist-info/RECORD,,
