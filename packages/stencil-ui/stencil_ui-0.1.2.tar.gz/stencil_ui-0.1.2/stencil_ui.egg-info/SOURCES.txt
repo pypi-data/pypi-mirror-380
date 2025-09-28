@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+stencil/__init__.py
+stencil/cli.py
+stencil/main.py
+stencil_ui.egg-info/PKG-INFO
+stencil_ui.egg-info/SOURCES.txt
+stencil_ui.egg-info/dependency_links.txt
+stencil_ui.egg-info/entry_points.txt
+stencil_ui.egg-info/requires.txt
+stencil_ui.egg-info/top_level.txt
