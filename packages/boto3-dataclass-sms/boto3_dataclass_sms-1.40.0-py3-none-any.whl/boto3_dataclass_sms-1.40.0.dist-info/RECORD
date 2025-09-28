@@ -1,0 +1,7 @@
+boto3_dataclass_sms/__init__.py,sha256=5gFmP552LjnI8TI7vSGVRJvelrPjYWly3H7MZxsrJdQ,100
+boto3_dataclass_sms/caster.py,sha256=jDY39dJiDCbgXTS_-ubxAaicNDbsmz8dyeIYRnoXEkE,3498
+boto3_dataclass_sms/type_defs.py,sha256=QVs-g2zkv90iOsSjcnyJuhkDfeHcJif4Wn_mUCUo9cI,90814
+boto3_dataclass_sms-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_sms-1.40.0.dist-info/METADATA,sha256=psJ1VH2hYTJgux6_DJ6V4DlML6kyrvc7W-3UjxtvI_Q,1655
+boto3_dataclass_sms-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_sms-1.40.0.dist-info/RECORD,,
