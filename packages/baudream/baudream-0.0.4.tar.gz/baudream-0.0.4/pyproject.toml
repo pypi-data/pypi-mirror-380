@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baudream"
+version = "0.0.4"
+authors = [
+  { name="xlav", email="cedric.guevremont@umontreal.ca" },
+]
+description = "Python package for the presentation of packet managers."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.scripts]
+baudream = "baudream.baudream:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+baudream = ["resources/*"]
+
+[project.urls]
+Homepage = "https://github.com/xlav94/baudream"
