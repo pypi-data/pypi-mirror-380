@@ -1,0 +1,10 @@
+[project]
+name = "suture-run"
+version = "0.1.2"
+description = "Prompt Surgery"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
