@@ -1,0 +1,7 @@
+boto3_dataclass_quicksight/__init__.py,sha256=UatSGeCHC5q8TZWh8KSPtDw2ymfxCQlNCvy4CGHNyoU,114
+boto3_dataclass_quicksight/caster.py,sha256=gyxtHVExWQyOMuCw_QlUsegytJroB49_y_oAgaPiv6s,46873
+boto3_dataclass_quicksight/type_defs.py,sha256=OjpatkLVQrA_xphk6flZpsCgPXbcLJScfv5AbuGytno,1983846
+boto3_dataclass_quicksight-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_quicksight-1.40.0.dist-info/METADATA,sha256=xoKvL7laEauVWj8Qx-fdZzKbnvX4QDYIg0_QX7YLQPo,1704
+boto3_dataclass_quicksight-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_quicksight-1.40.0.dist-info/RECORD,,
