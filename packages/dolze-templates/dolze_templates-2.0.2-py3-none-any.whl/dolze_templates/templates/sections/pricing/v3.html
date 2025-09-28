@@ -1,0 +1,49 @@
+  <section id="pricing" class="py-20"{% if sections.pricing.background.color %} style="background-color: {{ sections.pricing.background.color }};"{% endif %}>
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">{{ sections.pricing.title }}</h2>
+        <p class="text-lg text-gray-600">{{ sections.pricing.subtitle }}</p>
+      </div>
+      <div class="flex justify-center items-center mb-12">
+        <span class="text-gray-600 mr-3">Monthly</span>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="pricing-toggle" class="sr-only peer">
+          <div class="w-14 h-7 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+          <span class="text-gray-600 ml-3">Yearly <span class="text-xs text-primary font-medium ml-1">Save 20%</span></span>
+        </label>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {% for plan in sections.pricing.plans %}
+        <div class="bg-white rounded-lg shadow-sm border{% if plan.highlighted %} border-2 border-primary overflow-hidden transform md:scale-105{% else %} border-gray-100 overflow-hidden{% endif %}">
+          {% if plan.highlighted %}
+          <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1">MOST POPULAR</div>
+          {% endif %}
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">{{ plan.name }}</h3>
+            <p class="text-gray-600 mb-4">{{ plan.subtitle }}</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold">{{ sections.pricing.currency }}{{ plan.price.monthly }}</span>
+              <span class="text-gray-500">/month</span>
+            </div>
+            <ul class="space-y-3 mb-6">
+              {% for feature in plan.features %}
+              <li class="flex items-center">
+                <span class="w-5 h-5 flex items-center justify-center text-primary mr-2"><i class="ri-check-line"></i></span>
+                <span>{{ feature }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            <a href="{{ plan.cta.url }}" class="block w-full py-2 text-center{% if plan.highlighted %} bg-primary text-white{% else %} border border-primary text-primary{% endif %} !rounded-button font-medium whitespace-nowrap get-started-btn">{{ plan.cta.label }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if sections.pricing.customSolution %}
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 mb-4">{{ sections.pricing.customSolution.description }}</p>
+        <a href="{{ sections.pricing.customSolution.url }}" class="text-primary font-medium get-started-btn">{{ sections.pricing.customSolution.label }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>

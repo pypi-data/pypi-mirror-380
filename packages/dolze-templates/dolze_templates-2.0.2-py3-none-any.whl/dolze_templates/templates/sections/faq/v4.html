@@ -1,0 +1,21 @@
+<section class="py-24 bg-primary/5" id="faq">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-playfair font-bold text-gray-900 mb-4">{{ sections.faq.title }}</h2>
+      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">{{ sections.faq.subtitle }}</p>
+    </div>
+    <div class="max-w-3xl mx-auto">
+      <div class="space-y-6">
+        {% for item in sections.faq.items %}
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <button class="w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
+            <h3 class="text-xl font-bold text-gray-900">{{ item.question }}</h3>
+            <i class="ri-arrow-down-s-line text-2xl text-gray-500 transition-transform"></i>
+          </button>
+          <div class="hidden mt-4 text-gray-600">{{ item.answer }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

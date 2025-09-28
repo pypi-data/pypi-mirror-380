@@ -1,0 +1,705 @@
+{
+  "version": "1.0.0",
+  "description": "Asset registry for Dolze Templates - manages CSS and JS assets for sections and templates",
+  "global": {
+    "css": [
+      "assets/global/base.css"
+    ],
+    "js": [
+      "assets/global/base.js"
+    ],
+    "dependencies": []
+  },
+  "sections": {
+    "hero": {
+      "v1": {
+        "css": [
+          "templates/sections/hero/v1.css"
+        ],
+        "js": [
+          "templates/sections/hero/v1.js"
+        ],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [
+          "templates/sections/hero/v2.css"
+        ],
+        "js": [
+          "templates/sections/hero/v2.js"
+        ],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "navigation": {
+      "v1": {
+        "css": [
+          "templates/sections/navigation/v1.css"
+        ],
+        "js": [
+          "templates/sections/navigation/v1.js"
+        ],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [
+          "templates/sections/navigation/v3.js"
+        ],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [
+          "templates/sections/navigation/v4.js"
+        ],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "howItWorks":{
+      "v3": {
+        "css": [],
+        "js": [
+        ],
+        "dependencies": []
+      }
+    },
+    "about": {
+      "v1": {
+        "css": [
+          "templates/sections/about/v1.css"
+        ],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "features": {
+      "v1": {
+        "css": [
+          "templates/sections/features/v1.css"
+        ],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "pricing": {
+      "v1": {
+        "css": [
+          "templates/sections/pricing/v1.css"
+        ],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [
+          "templates/sections/pricing/v3.js"
+        ],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "testimonials": {
+      "v1": {
+        "css": [
+          "templates/sections/testimonials/v1.css"
+        ],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "demo": {
+      "v3": {
+        "css": [],
+        "js": [
+          "templates/sections/demo/v3.js"
+        ],
+        "dependencies": []
+      }
+    },
+    "contact": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [
+          "templates/sections/contact/v4.js"
+        ],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "footer": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "faq": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [
+          "templates/sections/faq/v3.js"
+        ],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [
+          "templates/sections/faq/v4.js"
+        ],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "cta": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [
+          "templates/sections/cta/v3.js"
+        ],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "challenges": {
+      "v1": {
+        "css": [
+          "templates/sections/challenges/v1.css"
+        ],
+        "js": [
+          "templates/sections/challenges/v1.js"
+        ],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "community": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v4": {
+        "css": [],
+        "js": [
+          "templates/sections/community/v4.js"
+        ],
+        "dependencies": []
+      },
+      "v5": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v6": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "product_grid": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    },
+    "service_features": {
+      "v1": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v2": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      },
+      "v3": {
+        "css": [],
+        "js": [],
+        "dependencies": []
+      }
+    }
+  },
+  "templates": {
+    "brand_service_digital_saas": {
+      "css": [],
+      "js": [],
+      "dependencies": [ {
+        "cinzel": {
+          "type": "css",
+          "css_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+        }
+      }],
+      "pages": {
+        "index": {
+          "template_path": "templates/layouts/template.html",
+          "sections": [
+            "navigation",
+            "hero",
+            "trustedUsers",
+            "features",
+            "demo",
+          "howItWorks",
+            "testimonials",
+            "pricing",
+            "faq",
+            "cta",
+            "footer"
+          ]
+        }
+      },
+      "section_variants": {
+        "index": {
+          "navigation": "v3",
+          "hero": "v3",
+          "trustedUsers": "v3",
+          "demo": "v3",
+          "features": "v3",
+          "testimonials": "v3",
+          "pricing": "v3",
+          "howItWorks": "v3" ,
+          "footer": "v3",
+          "faq": "v3",
+          "cta": "v3"
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "url": "#about",
+            "label": "About",
+            "type": "navitem"
+          },
+          {
+            "url": "#features",
+            "label": "Features",
+            "type": "navitem"
+          },
+          {
+            "url": "#community",
+            "label": "Community",
+            "type": "navitem"
+          },
+          {
+            "url": "#contact",
+            "label": "Contact Us",
+            "type": "navitem"
+          }
+        ]
+      }
+    },
+    "brand_service_physical": {
+      "css": [],
+      "js": [],
+      "dependencies": [],
+      "pages": {
+        "index": {
+          "template_path": "templates/layouts/template.html",
+          "sections": [
+            "navigation",
+            "hero",
+            "features",
+            "cta",
+            "testimonials",
+            "pricing",
+            "faq",
+            "contact",
+            "footer"
+          ]
+        }
+      },
+      "section_variants": {
+        "index": {
+          "navigation": "v8",
+          "hero": "v8",
+          "features": "v8",
+          "testimonials": "v8",
+          "faq": "v8",
+          "cta": "v8",
+          "contact": "v8",
+          "footer": "v8",
+          "pricing": "v8"
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "url": "#about",
+            "label": "About",
+            "type": "navitem"
+          },
+          {
+            "url": "#features",
+            "label": "Feature",
+            "type": "navitem"
+          },
+          {
+            "url": "#faq",
+            "label": "FAQ",
+            "type": "navitem"
+          },
+          {
+            "url": "#contact",
+            "label": "Contact Us",
+            "type": "navitem"
+          }
+        ]
+      }
+    },
+    "brand_product_physical": {
+      "css": [],
+      "js": [],
+      "dependencies": [
+        {
+          "cinzel": {
+            "type": "css",
+            "css_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+          }
+        }
+      ],
+      "pages": {
+        "index": {
+          "template_path": "templates/layouts/template.html",
+          "sections": [
+            "navigation",
+            "hero",
+            "about",
+            "features",
+            "gallery",
+            "challenges",
+            "faq",
+            "community",
+            "contact",
+            "footer"
+          ]
+        }
+      },
+      "section_variants": {
+        "index": {
+          "navigation": "v4",
+          "hero": "v4",
+          "challenges": "v4",
+          "features": "v4",
+          "about": "v4",
+          "faq": "v4",
+          "contact": "v4",
+          "footer": "v4",
+          "gallery": "v4",
+          "community": "v4"
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "url": "#about",
+            "label": "About",
+            "type": "navitem"
+          },
+          {
+            "url": "#gallery",
+            "label": "Gallery",
+            "type": "navitem"
+          },
+          {
+            "url": "#faq",
+            "label": "FAQ",
+            "type": "navitem"
+          },
+          {
+            "url": "#contact",
+            "label": "Contact Us",
+            "type": "navitem"
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "aos": {
+      "type": "both",
+      "version": "2.3.4",
+      "css_url": "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css",
+      "js_url": "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js",
+      "css_local": "assets/dependencies/aos.css",
+      "js_local": "assets/dependencies/aos.js"
+    },
+    "gsap": {
+      "type": "js",
+      "version": "3.12.2",
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "local": "assets/dependencies/gsap.min.js"
+    },
+    "swiper": {
+      "type": "both",
+      "version": "8.4.7",
+      "css_url": "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css",
+      "js_url": "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js",
+      "css_local": "assets/dependencies/swiper.css",
+      "js_local": "assets/dependencies/swiper.js"
+    }
+  },
+  "loading_order": {
+    "css": [
+      "dependencies",
+      "global",
+      "templates",
+      "sections"
+    ],
+    "js": [
+      "dependencies",
+      "global",
+      "templates",
+      "sections"
+    ]
+  },
+  "settings": {
+    "inline_assets": true,
+    "minify_assets": false,
+    "combine_assets": false,
+    "cache_assets": true,
+    "validate_assets": true,
+    "auto_discover": true
+  }
+}

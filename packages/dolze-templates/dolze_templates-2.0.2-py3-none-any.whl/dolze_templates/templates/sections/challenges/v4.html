@@ -1,0 +1,29 @@
+<section id="challenges" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-cinzel">
+        {{ sections.challenges.title }}
+      </h2>
+      <p class="text-base text-gray-600 max-w-2xl mx-auto font-cinzel">
+        {{ sections.challenges.subtitle }}
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      {% for item in sections.challenges.items[:3] %}
+      <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="{{ item.icon | default('ri-bar-chart-line') }} text-primary text-xl"></i>
+        </div>
+        
+        <div class="text-2xl font-semibold text-gray-900 mb-2 font-cinzel">{{ item.value }}</div>
+        <div class="text-sm font-semibold text-gray-700 mb-1 font-cinzel">{{ item.label }}</div>
+        
+        {% if item.description %}
+        <p class="text-xs text-gray-600 font-cinzel">{{ item.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
