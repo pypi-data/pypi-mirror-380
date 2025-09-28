@@ -1,0 +1,43 @@
+# Justfile for docdocgo example project
+
+# Default recipe
+default:
+    @just --list
+
+# Install dependencies
+install:
+    @echo "📦 Installing dependencies..."
+    uv sync --index-strategy unsafe-best-match
+    @echo "✅ Dependencies installed successfully!"
+
+# Run the example
+run:
+    @echo "🚀 Running docdocgo example..."
+    uv run python main.py
+    @echo "✅ Example completed!"
+
+# Generate template Word document
+generate-template:
+    @echo "📄 Generating Word template with marker..."
+    uv run python ../generate_example_template.py
+    @echo "✅ Template generation completed!"
+
+# Clean generated files
+clean:
+    @echo "🧹 Cleaning generated files..."
+    rm -f *.docx
+    @echo "✅ Cleaned all .docx files!"
+
+# Test the template with docdocgo
+test-template:
+    @echo "🧪 Testing template with sample data..."
+    uv run python test_template.py
+    @echo "✅ Template test completed!"
+
+# Full workflow: generate template, test it, and run main example
+demo:
+    @echo "🎬 Running full demo workflow..."
+    just generate-template
+    just test-template
+    just run
+    @echo "🎉 Full demo completed!"

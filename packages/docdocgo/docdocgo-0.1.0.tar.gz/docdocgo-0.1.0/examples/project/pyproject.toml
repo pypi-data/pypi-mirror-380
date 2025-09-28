@@ -1,0 +1,22 @@
+[project]
+name = "example-docdocgo-usage"
+version = "0.1.0"
+description = "Example project demonstrating docdocgo package usage from TestPyPI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "docdocgo",
+    "pandas",
+]
+
+[tool.uv.sources]
+docdocgo = { workspace = true }
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+default = true
