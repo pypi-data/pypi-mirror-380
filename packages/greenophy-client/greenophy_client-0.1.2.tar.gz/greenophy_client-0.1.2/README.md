@@ -1,0 +1,48 @@
+# Greenophy Client
+
+Small Python helper package for calling the Greenophy substantiveness API.
+
+## Installation
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+from greenophy_client import SubstantivenessClient
+
+# Option 1: pass connection info explicitly
+client = SubstantivenessClient(
+    base_url="https://greenophy-service-xyz.a.run.app",
+    api_key="your-shared-token",  # optional
+)
+
+results = client.classify_esg_text("We transitioned 70% of our fleet to EVs in 2023.\nWe value teamwork.")
+for item in results:
+    print(item.index, item.label_name, item.sentence)
+```
+
+The same client exposes `classify_esg_sentences([...])` if you prefer passing your own sentence list.
+
+Use `client.close()` when you are done (or create it with a context manager).
+
+### Generic classification
+
+Need broader categories? Use the generic helpers, which call `/api/generic_classification`:
+
+```python
+generic_results = client.classify_generic_text("Our ESG disclosures are independently assured by EY.")
+```
+
+### Environment-variable configuration
+
+You can also set the connection details once for the whole environment:
+
+```bash
+export GREENOPHY_API_BASE_URL="https://greenophy-service-xyz.a.run.app"
+export GREENOPHY_API_KEY="your-shared-token"
+```
+
+Then simply instantiate `SubstantivenessClient()` without arguments.
