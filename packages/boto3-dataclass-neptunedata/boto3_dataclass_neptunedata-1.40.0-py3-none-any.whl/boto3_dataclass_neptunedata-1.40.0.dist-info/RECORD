@@ -1,0 +1,7 @@
+boto3_dataclass_neptunedata/__init__.py,sha256=iBoku6VhXwldRCCgI2eCTfmAXO8-rOwZf1wsT-Z3APk,116
+boto3_dataclass_neptunedata/caster.py,sha256=HqbBTmqlG6hXJPOqWsG-TrerwTDHBOIpux9y-7RL8qQ,9485
+boto3_dataclass_neptunedata/type_defs.py,sha256=yUCDY1ogd1R0D5BDZtZlLO5tU4aPbDo07x5CF2PcX78,106419
+boto3_dataclass_neptunedata-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_neptunedata-1.40.0.dist-info/METADATA,sha256=iG_T5a_FjzWVjF2qhcfkCy-30LWg80HrUqWDcK52J9U,1711
+boto3_dataclass_neptunedata-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_neptunedata-1.40.0.dist-info/RECORD,,
