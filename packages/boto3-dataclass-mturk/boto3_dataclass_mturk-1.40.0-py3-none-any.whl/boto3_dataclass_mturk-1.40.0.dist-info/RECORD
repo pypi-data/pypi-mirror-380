@@ -1,0 +1,7 @@
+boto3_dataclass_mturk/__init__.py,sha256=DMRALw3FLXC_YUAbb3C18jSfjK3ACkAR2yhmGi_HB2w,104
+boto3_dataclass_mturk/caster.py,sha256=E_QTm3Z1PUDpUIm_HwnDw0rYVdUkBHYcNQ3VGzP1Sl8,4861
+boto3_dataclass_mturk/type_defs.py,sha256=cQHPNQGYwj-jz6WQ_pL2KsGSwPqgF9PhdmfrPIB3JRM,93429
+boto3_dataclass_mturk-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_mturk-1.40.0.dist-info/METADATA,sha256=2yp-O8R9GIKdpLIwNmuivL9ud1H4eEWjCfEkHImp0w8,1669
+boto3_dataclass_mturk-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_mturk-1.40.0.dist-info/RECORD,,
