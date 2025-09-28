@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: automation-framework
+Version: 0.1.0
+Summary: A Python framework for automation projects
+Author-email: Paras <parasdattera555@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/automation-framework
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Automation Framework
+
+This is the first version (0.1.0) of the Automation Framework.  
+Currently, it only provides the package structure — upcoming versions will add core functionality.
