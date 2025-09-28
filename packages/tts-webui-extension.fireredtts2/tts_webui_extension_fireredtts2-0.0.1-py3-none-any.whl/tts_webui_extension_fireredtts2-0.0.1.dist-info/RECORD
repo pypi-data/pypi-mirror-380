@@ -1,0 +1,11 @@
+tts_webui_extension/fireredtts2/__init__.py,sha256=6WVZkdrgIJik8On6yPL6-0W0LJevsmM0KYo7MDgM9A0,24
+tts_webui_extension/fireredtts2/api.py,sha256=0S6hVGhW9v9o0BYwglg3CC5l5uwor6qrKALZpFvlYiM,1643
+tts_webui_extension/fireredtts2/api_dialogue.py,sha256=8-q4SykcoSgxfV9C3jCf2z-7A4E-fRIRb2EtxbW_xMQ,3740
+tts_webui_extension/fireredtts2/dialogue_ui.py,sha256=jg2t8mfBO1QrtrAh_dd9ULbpDUK0jgShGYVHHcCtmFo,4660
+tts_webui_extension/fireredtts2/main.py,sha256=wWO3V2q_hwjgsMe1SQ58bARoFRrUKOT0ZiJ9ORA4nxs,1393
+tts_webui_extension/fireredtts2/tts_ui.py,sha256=y-SzgpPJUSJQib8UyCA4OzHX5fF2dA_lV7gSREqhY1Q,1733
+tts_webui_extension_fireredtts2-0.0.1.dist-info/licenses/LICENSE,sha256=l6425dmjnidzk4JQwhT01C8SpICmjSBMNREAdPnPA9E,1087
+tts_webui_extension_fireredtts2-0.0.1.dist-info/METADATA,sha256=fYN2VM0enHtJ0k81sJF0XgdQkuAc_UsTQrpiYx32Upk,1188
+tts_webui_extension_fireredtts2-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tts_webui_extension_fireredtts2-0.0.1.dist-info/top_level.txt,sha256=K_JKsKEyaZs5RnmdAjEe1w7Tk6Yd6s1aL3ZHi3IlBwA,25
+tts_webui_extension_fireredtts2-0.0.1.dist-info/RECORD,,
