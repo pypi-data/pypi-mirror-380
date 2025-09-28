@@ -1,0 +1,7 @@
+boto3_dataclass_pinpoint_sms_voice_v2/__init__.py,sha256=l8oB0S5lgAm_FMU_qiXvlN94NQMyaWZKfcHYeMlYIcQ,136
+boto3_dataclass_pinpoint_sms_voice_v2/caster.py,sha256=uMJZcpBWnLFwpiu5u4DeZPdPDlLOhap_sZwE7kvXPv8,20530
+boto3_dataclass_pinpoint_sms_voice_v2/type_defs.py,sha256=AUHwEoXwVs-bKGH_KCEMHj-NrMhxTIeLsU3A759FTFE,273811
+boto3_dataclass_pinpoint_sms_voice_v2-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_pinpoint_sms_voice_v2-1.40.0.dist-info/METADATA,sha256=maP56p-qRbKdQB5lKVnlGVUHXA1CL7N7yHHmYc-94oc,1781
+boto3_dataclass_pinpoint_sms_voice_v2-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_pinpoint_sms_voice_v2-1.40.0.dist-info/RECORD,,
