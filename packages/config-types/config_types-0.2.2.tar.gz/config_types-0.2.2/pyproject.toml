@@ -1,0 +1,39 @@
+[project]
+name = "config-types"
+version = "0.2.2"
+description = "Types for use with environment imported configurations"
+readme = "README.md"
+authors = [
+    { name = "Melvyn Sopacua", email = "2403540-melvyn-sopacua@users.noreply.gitlab.com" }
+]
+license = "BSD-2-Clause"
+license-files = ["LICENSE.txt"]
+keywords = ["12-factor", "configuration", "typing", "validation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Pydantic :: 2",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+pydantic = [
+    "pydantic-settings>=2.11.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pydantic-settings>=2.11.0",
+]
