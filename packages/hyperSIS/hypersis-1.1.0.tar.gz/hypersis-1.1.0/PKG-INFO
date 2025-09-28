@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: hyperSIS
+Version: 1.1.0
+Summary: Python wrapper for hyperSIS Fortran simulations
+Author-email: Wesley Cota <wesley.cota@ufv.br>
+Maintainer-email: Wesley Cota <wesley.cota@ufv.br>
+License-Expression: LGPL-3.0-or-later
+Project-URL: Documentation, http://pages.giscbr.org/hyperSIS/
+Project-URL: Bug Reports, https://github.com/gisc-ufv/hyperSIS/issues
+Project-URL: Source, https://github.com/gisc-ufv/hyperSIS
+Keywords: network science,simplicial complexes,higher order networks,spreading processes,hypergraphs,fortran package manager
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26
+Requires-Dist: xgi>=0.10
+Requires-Dist: matplotlib>=3.4
+Dynamic: requires-python

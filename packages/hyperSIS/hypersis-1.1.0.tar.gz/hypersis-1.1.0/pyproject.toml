@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "fpm>=0.12.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperSIS"
+dynamic = ["version"]
+readme = 'README.md'
+requires-python = ">=3.10"
+license = "LGPL-3.0-or-later"
+description = "Python wrapper for hyperSIS Fortran simulations"
+authors = [
+  {name = "Wesley Cota", email = "wesley.cota@ufv.br"}
+]
+maintainers = [
+  {name = "Wesley Cota", email = "wesley.cota@ufv.br"}
+]
+keywords = [
+    "network science",
+    "simplicial complexes",
+    "higher order networks",
+    "spreading processes",
+    "hypergraphs",
+    "fortran package manager"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Intended Audience :: Science/Research"
+]
+dependencies = [
+  "numpy>=1.26",
+  "xgi>=0.10",
+  "matplotlib>=3.4"
+]
+
+[project.urls]
+Documentation = "http://pages.giscbr.org/hyperSIS/"
+"Bug Reports" = "https://github.com/gisc-ufv/hyperSIS/issues"
+Source = "https://github.com/gisc-ufv/hyperSIS"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic.version]
+attr = "hyperSIS.__version__"
+
+[tool.cibuildwheel]
+build-verbosity = 3
+
+[tool.cibuildwheel.macos]
+archs = ["auto"]
+environment = { FC = "gfortran-12", FFLAGS = "-O3 -ffree-line-length-512 -march=native -funroll-loops" }
+before-all = "brew install gcc@12"
+
+[tool.cibuildwheel.windows]
+archs = ["auto64"]
+environment = { FC = "gfortran", FFLAGS = "-O3 -ffree-line-length-512" }
+
+[tool.cibuildwheel.linux]
+environment = { FC = "gfortran", FFLAGS = "-O3 -ffree-line-length-512 -march=native -funroll-loops" }
