@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: Instaweb
+Version: 1.4
+Summary: Instagram Web automation and utilities
+Home-page: https://github.com/Trade999/Instaweb
+Author: Lariot & Horte
+Author-email: lariot.antsa@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: bs4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Instaweb is a Python package to interact with Instagram web features programmatically.
