@@ -1,0 +1,136 @@
+[project]
+name = "kronoterm2mqtt"
+dynamic = ["version"]
+description = "Sends MQTT events from KRONOTERM heat pump"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+authors = [
+    {name = 'Leon Kos', email = 'leon.kos@lecad.fs.uni-lj.si'}
+]
+requires-python = ">=3.11, <4"
+dependencies = [
+    "ha-services >= 2.10.0",  # https://github.com/jedie/ha-services
+    "cli-base-utilities>=0.17.0",  # https://github.com/jedie/cli-base-utilities
+    "pymodbus[serial] >= 3.10.0",  # https://github.com/pymodbus-dev/pymodbus/
+    "bx_py_utils",  # https://github.com/boxine/bx_py_utils
+    "tyro",  # https://github.com/brentyi/tyro
+    "rich",  # https://github.com/Textualize/rich
+]
+
+[dependency-groups]
+dev = [
+    "manageprojects",  # https://github.com/jedie/manageprojects
+    "urllib3", # for bx_py_utils.test_utils.deny_requests.deny_any_real_request() in tests
+    "uv",  # https://github.com/astral-sh/uv
+    "hatchling",  # https://github.com/pypa/hatch/tree/master/backend
+    "nox",  # https://github.com/wntrblm/nox
+    "coverage",  # https://github.com/nedbat/coveragepy
+    "ruff", # https://github.com/astral-sh/ruff
+    "codespell",  # https://github.com/codespell-project/codespell
+    "EditorConfig",  # https://github.com/editorconfig/editorconfig-core-py
+    "pip-audit",  # https://github.com/pypa/pip-audit
+    "mypy",  # https://github.com/python/mypy
+    "twine",  # https://github.com/pypa/twine
+    "pre-commit",  # https://github.com/pre-commit/pre-commit
+    "typeguard",  # https://github.com/agronholm/typeguard/
+    "platformio>=6.1.18", # https://github.com/platformio/platformio-core
+]
+
+[project.urls]
+Documentation = "https://github.com/kosl/kronoterm2mqtt"
+Source = "https://github.com/kosl/kronoterm2mqtt"
+
+[project.scripts]
+kronoterm2mqtt_app = "kronoterm2mqtt.__main__:main"
+kronoterm2mqtt_dev = "kronoterm2mqtt.cli_dev:main"
+
+[build-system]
+requires =  ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["kronoterm2mqtt"]
+
+[tool.hatch.version]
+path = "kronoterm2mqtt/__init__.py"
+
+[tool.cli_base.pip_audit]
+requirements=["requirements.dev.txt"]
+strict=true
+require_hashes=true
+ignore-vuln=["GHSA-2c2j-9gv5-cj73"]
+
+[tool.cli_base]
+version_module_name = "kronoterm2mqtt"  # Used by "update-readme-history" git hook
+
+[tool.ruff]
+# https://docs.astral.sh/ruff/configuration/
+line-length = 120
+exclude = [
+  ".*/",
+]
+
+[tool.ruff.lint]
+preview = true  # Needed for some of the rules
+extend-select = [
+    "E", # pycodestyle: https://docs.astral.sh/ruff/rules/#error-e
+    "I", # isort: https://docs.astral.sh/ruff/rules/#isort-i
+]
+ignore = [
+    "E402", # https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file/
+    "E731", # https://docs.astral.sh/ruff/rules/lambda-assignment/
+]
+
+[tool.ruff.lint.isort]
+# https://docs.astral.sh/ruff/rules/#isort-i
+lines-after-imports = 2
+force-sort-within-sections = true
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+concurrency = ["multiprocessing"]
+source = ['kronoterm2mqtt']
+command_line = '-m unittest --verbose --locals --buffer'
+
+[tool.coverage.report]
+omit = ['.*', '*/tests/*']
+skip_empty = true
+fail_under = 25
+show_missing = true
+exclude_lines = [
+    'if self.debug:',
+    'pragma: no cover',
+    'raise NotImplementedError',
+    'if __name__ == .__main__.:',
+]
+
+[tool.mypy]
+warn_unused_configs = true
+ignore_missing_imports = true
+allow_redefinition = true  # https://github.com/python/mypy/issues/7165
+show_error_codes = true
+plugins = []
+exclude = ['.venv', 'tests']
+
+
+[manageprojects] # https://github.com/jedie/manageprojects
+initial_revision = "765b8fb"
+initial_date = 2024-03-12T09:08:01+01:00
+cookiecutter_template = "https://github.com/jedie/cookiecutter_templates/"
+cookiecutter_directory = "uv-python"
+
+[manageprojects.cookiecutter_context.cookiecutter]
+full_name = "Leon Kos"
+github_username = "kosl"
+author_email = "leon.kos@lecad.fs.uni-lj.si"
+package_name = "kronoterm2mqtt"
+package_version = "0.1.11"
+package_description = "Sends MQTT events from KRONOTERM device"
+package_url = "https://github.com/kosl/kronoterm2mqtt"
+issues_url = "https://github.com/kosl/kronoterm2mqtt/issues"
+license = "GPL-3.0-or-later"
+_template = "https://github.com/jedie/cookiecutter_templates/"

@@ -1,0 +1,58 @@
+name: Build and Release project on tag push
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/pip
+          ~/.platformio/.cache
+        key: ${{ runner.os }}-pio
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Build pyproject package
+      run: |
+        cd ./pyetera-uart-bridge
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade build
+        python -m build
+    
+    - name: Install PlatformIO Core
+      run: pip install --upgrade platformio
+    
+    - name: Build PlatformIO project
+      run: |
+        cd ./pio-eub-firmware
+        pio run
+        mv .pio/build/nanoatmega328/{firmware.hex,pio-eub-firmware-${{ github.ref_name }}.hex}
+        mv .pio/build/nanoatmega328/{firmware.elf,pio-eub-firmware-${{ github.ref_name }}.elf}
+
+    - name: Create new release with build artifact
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          ./pyetera-uart-bridge/dist/*
+          ./pio-eub-firmware/.pio/build/nanoatmega328/pio-eub-firmware-*
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag_name: ${{ github.ref }}
+        name: Release ${{ github.ref_name}}
+        body: "Release ${{ github.ref_name }}"
+        

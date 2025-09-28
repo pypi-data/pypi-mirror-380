@@ -1,0 +1,221 @@
+https://github.com/aljazkosir/kronoterm-mqtt
+
+Aug 19 22:44:47 eteradxa systemd[1]: Stopping kronoterm2mqtt.service - kronoterm2mqtt...
+Aug 19 22:44:47 eteradxa systemd[1]: kronoterm2mqtt.service: Deactivated successfully.
+Aug 19 22:44:47 eteradxa systemd[1]: Stopped kronoterm2mqtt.service - kronoterm2mqtt.
+Aug 19 22:44:47 eteradxa systemd[1]: kronoterm2mqtt.service: Consumed 2h 48min 15.232s CPU time.
+-- Boot 0b03972c110942f3b13a0d2b317b834b --
+Aug 19 22:46:04 eteradxa systemd[1]: Started kronoterm2mqtt.service - kronoterm2mqtt.
+Aug 19 22:46:06 eteradxa kronoterm2mqtt[1707]: kronoterm2mqtt v0.1.12 955879b (/home/leon/kronoterm2mqtt)
+Aug 19 22:46:06 eteradxa kronoterm2mqtt[1707]:                                                         (Set log level 0: ERROR)
+Aug 19 22:46:06 eteradxa kronoterm2mqtt[1707]: Error: [Errno 111] Connection refused <class 'ConnectionRefusedError'>
+Aug 19 22:46:06 eteradxa kronoterm2mqtt[1707]: Retrying in 10 seconds...
+Aug 19 22:46:16 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:16.739849] ERROR    failed to receive on socket:  client.py:3259
+Aug 19 22:46:16 eteradxa kronoterm2mqtt[1707]:                                     [Errno 104] Connection reset
+Aug 19 22:46:16 eteradxa kronoterm2mqtt[1707]:                                     by peer
+Aug 19 22:46:17 eteradxa kronoterm2mqtt[1707]: Connect to /dev/serial/by-path/platform-xhci-hcd.1.auto-usb-0:1:1.0-port0...
+Aug 19 22:46:17 eteradxa kronoterm2mqtt[1707]: Custom expander is using port /dev/serial/by-path/platform-fe3e0000.usb-usb-0:1:1.0-port0
+Aug 19 22:46:17 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:17.748562] ERROR    failed to receive on socket:  client.py:3259
+Aug 19 22:46:17 eteradxa kronoterm2mqtt[1707]:                                     [Errno 104] Connection reset
+Aug 19 22:46:17 eteradxa kronoterm2mqtt[1707]:                                     by peer
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: etera-uart-bridge expander debug ('h' for help)
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: Temperature Controller setup found 9 sensors.
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: Addresses:
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #0        10:22:49:09:00:00:00:AA        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #1        10:DA:4A:09:00:00:00:37        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #2        10:6E:47:09:00:00:00:00        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #3        10:EE:47:09:00:00:00:EA        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #4        10:21:47:09:00:00:00:51        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #5        10:99:48:09:00:00:00:98        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #6        10:D3:49:09:00:00:00:EF        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #7        10:5B:49:09:00:00:00:A4        External
+Aug 19 22:46:18 eteradxa kronoterm2mqtt[1707]: #8        28:FF:64:1E:DF:A5:FA:36        External
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: Device is ready on /dev/serial/by-path/platform-fe3e0000.usb-usb-0:1:1.0-port0 (state=_ParseState.WAIT_READY)
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: Kronoterm to MQTT publish loop started...
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.570448] ERROR    Error subscribing               switch.py:62
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     self.command_topic='homeassista
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nt/switch/kronoterm/kronoterm-d
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     hw_circulation_switch/command':
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                                                                 
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     result=<MQTTErrorCode.MQTT_ERR_
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     NO_CONN: 4>
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.583184] ERROR    Error subscribing               switch.py:62
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     self.command_topic='homeassista
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nt/switch/kronoterm/kronoterm-a
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     dditional_source_switch/command
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     ':
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     result=<MQTTErrorCode.MQTT_ERR_
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     NO_CONN: 4>
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.615544] ERROR    Error subscribing               select.py:59
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     self.command_topic='homeassista
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nt/select/kronoterm-expander/kr
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     onoterm-expander-Spalnice/comma
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nd':
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     result=<MQTTErrorCode.MQTT_ERR_
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     NO_CONN: 4>
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.628039] ERROR    Error subscribing               select.py:59
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     self.command_topic='homeassista
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nt/select/kronoterm-expander/kr
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     onoterm-expander-Mansarda/comma
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nd':
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     result=<MQTTErrorCode.MQTT_ERR_
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     NO_CONN: 4>
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.640460] ERROR    Error subscribing               select.py:59
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     self.command_topic='homeassista
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     nt/select/kronoterm-expander/kr
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     onoterm-expander-Nadgarazje/com
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     mand':
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     result=<MQTTErrorCode.MQTT_ERR_
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     NO_CONN: 4>
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]: [08/19/25 22:46:19.757244] ERROR    failed to receive on socket:  client.py:3259
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     [Errno 104] Connection reset
+Aug 19 22:46:19 eteradxa kronoterm2mqtt[1707]:                                     by peer
+Aug 19 22:50:29 eteradxa systemd[1]: Stopping kronoterm2mqtt.service - kronoterm2mqtt...
+Aug 19 22:50:29 eteradxa systemd[1]: kronoterm2mqtt.service: Deactivated successfully.
+Aug 19 22:50:29 eteradxa systemd[1]: Stopped kronoterm2mqtt.service - kronoterm2mqtt.
+Aug 19 22:50:29 eteradxa systemd[1]: kronoterm2mqtt.service: Consumed 7.357s CPU time.
+Aug 19 22:50:29 eteradxa systemd[1]: Started kronoterm2mqtt.service - kronoterm2mqtt.
+Aug 19 22:50:30 eteradxa kronoterm2mqtt[6708]: kronoterm2mqtt v0.1.12 955879b (/home/leon/kronoterm2mqtt)
+Aug 19 22:50:30 eteradxa kronoterm2mqtt[6708]:                                                         (Set log level 0: ERROR)
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: Connect to /dev/serial/by-path/platform-xhci-hcd.1.auto-usb-0:1:1.0-port0...
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: Custom expander is using port /dev/serial/by-path/platform-fe3e0000.usb-usb-0:1:1.0-port0
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: etera-uart-bridge expander debug ('h' for help)
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: Temperature Controller setup found 9 sensors.
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: Addresses:
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #0        10:22:49:09:00:00:00:AA        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #1        10:DA:4A:09:00:00:00:37        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #2        10:6E:47:09:00:00:00:00        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #3        10:EE:47:09:00:00:00:EA        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #4        10:21:47:09:00:00:00:51        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #5        10:99:48:09:00:00:00:98        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #6        10:D3:49:09:00:00:00:EF        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #7        10:5B:49:09:00:00:00:A4        External
+Aug 19 22:50:32 eteradxa kronoterm2mqtt[6708]: #8        28:FF:64:1E:DF:A5:FA:36        External
+Aug 19 22:50:33 eteradxa kronoterm2mqtt[6708]: Device is ready on /dev/serial/by-path/platform-fe3e0000.usb-usb-0:1:1.0-port0 (state=_ParseState.WAIT_READY)
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]: Kronoterm to MQTT publish loop started...
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]: [08/20/25 05:45:13.767947] ERROR    Task exception was never base_events.py:1771
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     retrieved
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     future: <Task finished
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     name='Task-4'
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     coro=<EteraUartBridge.ru
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     n_forever() done,
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     defined at
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     /home/leon/kronoterm2mqt
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     t/kronoterm2mqtt/pyetera
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     _uart_bridge/EteraUartBr
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     idge.py:210>
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     exception=OSError(5,
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     'Input/output error')>
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     Traceback (most recent
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     call last):
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                       File
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     "/home/leon/kronoterm2mq
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     tt/kronoterm2mqtt/pyeter
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     a_uart_bridge/EteraUartB
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     ridge.py", line 218, in
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     run_forever
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                         while
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     self._s.in_waiting != 0
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     or
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     len(self._command_read_b
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     uffer) != 0:
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                               ^^^^^^^^^^^^^^
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     ^^^^
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                       File
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     "/home/leon/kronoterm2mq
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     tt/.venv-app/lib/python3
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     .11/site-packages/serial
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     /serialposix.py", line
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     549, in in_waiting
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                         s =
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     fcntl.ioctl(self.fd,
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     TIOCINQ, TIOCM_zero_str)
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                             ^^^^^^^^^^^^^^^^
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     ^^^^^
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     OSError: [Errno 5]
+Aug 20 05:45:13 eteradxa kronoterm2mqtt[6708]:                                     Input/output error
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]: [09/14/25 06:45:16.009971] ERROR    Task exception was never base_events.py:1771
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     retrieved
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     future: <Task finished
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     name='Task-4'
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     coro=<EteraUartBridge.ru
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     n_forever() done,
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     defined at
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     /home/leon/kronoterm2mqt
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     t/kronoterm2mqtt/pyetera
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     _uart_bridge/EteraUartBr
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     idge.py:210>
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     exception=OSError(5,
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     'Input/output error')>
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     Traceback (most recent
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     call last):
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                       File
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     "/home/leon/kronoterm2mq
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     tt/kronoterm2mqtt/pyeter
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     a_uart_bridge/EteraUartB
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     ridge.py", line 218, in
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     run_forever
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                         while
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     self._s.in_waiting != 0
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     or
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     len(self._command_read_b
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     uffer) != 0:
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                               ^^^^^^^^^^^^^^
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     ^^^^
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                       File
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     "/home/leon/kronoterm2mq
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     tt/.venv-app/lib/python3
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     .11/site-packages/serial
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     /serialposix.py", line
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     549, in in_waiting
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                         s =
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     fcntl.ioctl(self.fd,
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     TIOCINQ, TIOCM_zero_str)
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                             ^^^^^^^^^^^^^^^^
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     ^^^^^
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     OSError: [Errno 5]
+Sep 14 06:45:16 eteradxa kronoterm2mqtt[1696]:                                     Input/output error
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]: [09/22/25 22:30:11.567168] ERROR    Task exception was never base_events.py:1771
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     retrieved
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     future: <Task finished
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     name='Task-4'
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     coro=<EteraUartBridge.ru
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     n_forever() done,
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     defined at
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     /home/leon/kronoterm2mqt
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     t/kronoterm2mqtt/pyetera
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     _uart_bridge/EteraUartBr
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     idge.py:210>
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     exception=OSError(5,
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     'Input/output error')>
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     Traceback (most recent
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     call last):
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                       File
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     "/home/leon/kronoterm2mq
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     tt/kronoterm2mqtt/pyeter
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     a_uart_bridge/EteraUartB
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     ridge.py", line 218, in
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     run_forever
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                         while
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     self._s.in_waiting != 0
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     or
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     len(self._command_read_b
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     uffer) != 0:
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                               ^^^^^^^^^^^^^^
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     ^^^^
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                       File
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     "/home/leon/kronoterm2mq
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     tt/.venv-app/lib/python3
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     .11/site-packages/serial
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     /serialposix.py", line
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     549, in in_waiting
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                         s =
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     fcntl.ioctl(self.fd,
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     TIOCINQ, TIOCM_zero_str)
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                             ^^^^^^^^^^^^^^^^
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     ^^^^^
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     OSError: [Errno 5]
+Sep 22 22:30:11 eteradxa kronoterm2mqtt[3176]:                                     Input/output error
