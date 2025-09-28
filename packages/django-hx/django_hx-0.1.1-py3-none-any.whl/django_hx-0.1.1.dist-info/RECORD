@@ -1,0 +1,9 @@
+django_hx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_hx/apps.py,sha256=-hM8ugsfmd8Ktj38oxH9XMRme1XKESz8b-zx5n-pjZ4,149
+django_hx/decorators.py,sha256=RtJ3JJJ-fbd1T3Ydn1ZrlANesmfoHZILP4RBXSvmur0,1202
+django_hx/tests.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_hx/utils.py,sha256=rsEjrujM52guF98brTLWUbvZTi0psLRt06PMbrtcbnY,1217
+django_hx/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_hx-0.1.1.dist-info/METADATA,sha256=LOCISNKQ2dauChBeQ9_zE8bDu8TI9ED6kiCCK4BUtwA,509
+django_hx-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_hx-0.1.1.dist-info/RECORD,,
