@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: pozansky-news-server
+Version: 0.1.0
+Summary: MCP server for news services with RSS feed support
+Project-URL: Homepage, https://github.com/yourusername/news_server
+Project-URL: Repository, https://github.com/yourusername/news_server
+Project-URL: Issues, https://github.com/yourusername/news_server/issues
+Author-email: Your Name <your.email@example.com>
+Keywords: ai,mcp,news,rss,server
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: feedparser>=6.0.0
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: mcp-server-fastmcp>=1.0.0
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: uvicorn>=0.23.0
+Description-Content-Type: text/markdown
+
+# News MCP Server
+
+基于MCP协议的新闻获取服务器，支持热点新闻获取和新闻搜索功能。
+
+## 功能特性
+
+- 🔥 获取热点新闻（多个分类）
+- 🔍 搜索新闻
+- 🌐 RESTful API 接口
+- 🐳 Docker 容器化部署
+- 📊 健康检查
+
+## API接口
+
+### 健康检查
+GET /health
+
+### 获取新闻分类
+GET /news/categories
+
+
+### 获取热点新闻
+GET /news/hot?category=general&limit=10
+
+### 搜索新闻
+GET /news/search?keyword=科技&limit=10
+
+
+### MCP接口
+/mcp
+
+
+## 本地测试
+
+
+1. 安装依赖：
+```bash
+pip install -r requirements.txt
+运行测试：
+
+bash
+python src/mcp_server.py
+启动服务器：
+
+bash
+python app.py
