@@ -1,0 +1,2 @@
+[console_scripts]
+polychromatic_effects_generator = polychromatic_effects_generator.__main__:cli
