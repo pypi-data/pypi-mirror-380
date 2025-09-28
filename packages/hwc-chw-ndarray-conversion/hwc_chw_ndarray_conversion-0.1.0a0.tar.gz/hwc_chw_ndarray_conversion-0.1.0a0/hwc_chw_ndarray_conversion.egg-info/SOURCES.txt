@@ -1,0 +1,10 @@
+LICENSE
+README.md
+hwc_chw_ndarray_conversion.py
+pyproject.toml
+setup.cfg
+hwc_chw_ndarray_conversion.egg-info/PKG-INFO
+hwc_chw_ndarray_conversion.egg-info/SOURCES.txt
+hwc_chw_ndarray_conversion.egg-info/dependency_links.txt
+hwc_chw_ndarray_conversion.egg-info/requires.txt
+hwc_chw_ndarray_conversion.egg-info/top_level.txt
