@@ -1,0 +1,7 @@
+boto3_dataclass_servicecatalog_appregistry/__init__.py,sha256=ltneMxlJUcWbVe3Cvj0s5gFVA0DBW0B8dwAF9nN33cg,146
+boto3_dataclass_servicecatalog_appregistry/caster.py,sha256=sKWvroj_amOYxcPqUFhpjkhRhRi6vPW9dIOJHT7-YBg,5012
+boto3_dataclass_servicecatalog_appregistry/type_defs.py,sha256=shIv53_K5PRvEM-WVQLmeAENHKZ4pJiAkTHUE_NEmtw,64554
+boto3_dataclass_servicecatalog_appregistry-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_servicecatalog_appregistry-1.40.0.dist-info/METADATA,sha256=Hir-R9F0vs9d8NELcR_Z3LrYvq8Xkvt6137QdJ_rqcI,1816
+boto3_dataclass_servicecatalog_appregistry-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_servicecatalog_appregistry-1.40.0.dist-info/RECORD,,
