@@ -1,0 +1,91 @@
+Using a series of cascading loops, the Johann Looper warps time, making sound seem to coalesce out of nothing, arpeggiate of its own accord, and change its nature from moment to moment.  At its default settings, it sounds rather like an orchestra that accompanies your melody.
+
+The loops fade in and out, thanks to a quadrature LFO set-up, making sounds seem to rise and fall out of nowhere.  Different tracks run at different pitches, some are reversed.  They are all fed into a hall reverb, set fully wet, which smears them.  At fast tempos, looper arpeggiates quite nicely.  At slower speeds, it seems to stretch time, as the loops trail behind their source, echoing it at odd intervals and pitches.
+
+=========== V3 patch notes ================
+
+JohannLooper V3
+
+JohannLooper V3 is hopefully not a radical departure from the previous iterations, but one that adds some valuable updates to my most well-received patch.
+
+So, let's start with additions:
+
+-- Pre-looper delay:  This is controlled with a single, front-page control titled "Delay level," which governs both the output level and the feedback level of the delay.  The delay is synced to the time of the total loop recording cycle, and its purpose is basically to allow more extension for the loops, as what is played into the patch will be extended through delay regeneration.
+
+-- Tone control:  This is located next to the delay level on the front page.  It is a tilt EQ -- positive values boost highs and cut lows, negative numbers boost lows and cut highs -- which can give you a lot more control over how JL sits in a mix.
+
+Changes:
+
+-- Separate wet/dry/pad loop levels:  instead of mix controls, mixing for the patch is now handled with separate levels, which should give you more precision in controlling the output.
+
+-- Pad loop mutes:  As before, pressing the middle stompswitch will record a "pad loop," drawn from the other four loopers' output.  It's meant to add a textural/bed-like element to be played over, if you want.  In the original version, I lamented that I didn't have a method to reset the loops (the original patch, if I recall correctly, pre-dates overdubbing and its reset option).  I considered using an overdubbing looper to achieve this, but I decided on a simpler solution:  The first press of the stompswitch will open a VCA post looper, the second will close it.  So, in effect, the first time a stompswitch is pressed, a loop will be recorded and then heard; the second time it is pressed, the loop will be muted; the third time, a new loop will be recorded and heard.
+
+-- Loop buffer hold:  The right stompswitch used to cycle through different muting options for the loops.  Now, holds the loops' buffers.  If you found a little sound you want to play over, you can use this option; it's a nice performance tool.  This stompswitch is latching (and tied to the patch clock).
+
+-- More under-the-hood controls pulled to the surface:  In particular, you can mess around now with the pitch of the loops.  I'll upload the patch with the pitch set to "classic," but if you want to play around with changing the pitch or playback direction of the loops, it's right there on the front page.  The muting function once controlled by the right stomp is now replaced with pushbuttons in the top right corner that allow you to mute loops as you please.
+
+-- Some signal path improvements (better stereo imaging) and other under-the-hood stuff to improve performance, etc..
+
+You can always set the tone to 0, delay to 0, and enjoy the patch as it was in V2, more or less.  But I hope the additions add to the usefulness of the patch as much for you as they do for me.
+
+=============================================
+
+Beneath the main loops, another set of loopers allows you to create a "pad" of sound to play over by capturing the output and cycling it.  Depending on how you capture it, it can sound quite lush, or it can sound like an eerie soundscape, or rhythmic.
+
+Named for the late Johann Johannsson, because picking random arpeggios reminded me of his score for Arrival for some reason.
+
+SOUND CLIP:
+
+0:00-0:31--Guitar. 50/50 wet/dry mix.
+
+0:32-0:54--Guitar. No dry signal.
+
+0:55-1:32--Guitar. Pad employed. Slow tempo tapped in.
+
+1:33-2:10--Electric piano. Default settings.
+
+2:12-5:16--Drum machine. Playing with mutes, changing loop speed & direction. (Probably would have been more interesting if I hadn't matched the tempos.)
+
+PATCH NOTES:
+
+Starred parameters:
+
+1.  Loop/pad mix.  This is a pre-reverb mix.  I tend to keep the pad mixed low, because it can become rather obnoxious.
+2.  Wet/dry mix.  (Although I think I set it up as dry/wet mix....)  For anyone who downloaded the work-in-progress patch and wants to return to those settings, just kill the dry.  The rest of the signal path from there is unchanged.
+
+Footswitches:
+
+Left--tap tempo (self-explanatory)
+
+Middle--pad record.  This is a momentary footswitch, so the longer you hold it down, the longer the pad loops will be.
+
+Right--loop mute.  Quasi-momentary.  Tapping this will mute various loops: 1, 2, 3, 4, 1 & 3, 2 & 4.  If you get lost on what loop is muted, or you want to return to the default settings, hold down the footswitch for ~2 seconds.  The next time you tap it, it will return to default (no loops muted).  Muting loops can help create variations in the arpeggios, but I have to admit... if I do another revision, it will probably be to using this footswitch in another way.
+
+
+0th page--the loops, audio in and out, tap tempo.
+
+There are four loops, each one cascading into the next.  Try experimenting with different pitches and reverse/forward combinations.  Changing these, and the tap tempo.
+
+1st page--reverb & mixes.
+
+The mix between the main loops & the pad loops is on this page.
+
+Below it is the wet/dry mix.  The dry signal passes in and out of the pedal, unaffected.
+
+As all of the looping passes through the reverb, the tone controls for the reverb itself can be quite useful for shaping the sound of the effect.
+
+2nd page--vcas & lfos.  They look pretty as they cycle around, twinkling.  
+
+Each loop and its VCA/LFO counterpart are color-coordinated.  You might try different LFO shapes for a (wildly) different sound, as the LFOs effectively function as cycling envelopes.
+
+3rd page--pads.
+
+The two loopers which form the pad are set to an octave below and five semitones below the sound they gather.  One is set to cycle in reverse.  They also listen to different loops:  the top one is connected to loops 1 & 3, the bottom to loops 2 & 4.
+
+4th page--the loopers' sequencer.
+
+I threw a clock divider in, if you wanted to try some (much) faster or (much) slower speeds.
+
+5th page--muting.
+
+This page is really not that interesting, unless you want to change the muting options.  Basically, the way it works is the CV switch sends a -1 value to whichever destination is attached to that channel.

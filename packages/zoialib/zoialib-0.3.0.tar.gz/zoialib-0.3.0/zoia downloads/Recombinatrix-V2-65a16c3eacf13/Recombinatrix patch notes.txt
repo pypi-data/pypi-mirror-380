@@ -1,0 +1,35 @@
+Recombinatrix V2 -- a more controllable fork of Recombinator
+
+Recombinator is a crazy whirlwind -- drawing from probability and randomness to mangle and reshape audio buffers.  It's fun and chaotic and produces unexpected results.  The buffers are more submissive and open to direction when processed through Recombinatrix.
+
+Most of the patches are identical, so I will direct you to the Recombinator patch notes and attached walkthrough video for the most part:  https://patchstorage.com/recombinator-a-destructive-reconstructive-glitch-delay-looper/
+
+The major difference between the two is that Recombinator used a probability mixer to determine which of five programmed variations would be employed in its "Replace" buffer composed of loopers.  Since you set the probabilities, you had some control over the outcome, but it was also left to chance and probability, which meant the patch might zig where you would zag.
+
+Recombinatrix switches out this probability mixer for a set of 2x5 white pads, which can be used in "LIVE" mode to immediately affect the Replace buffer, or when "Live" is off, they can be used to determine what speed-pitch and direction setting will affect the Replace buffer the next time it is probabilistically selected as determined by the Replace Chance parameter or the middle stompswitch.  (In "Live" mode, Replace Chance is still active, so if a pad is not pressed, and that signal path is selected, the last used pad parameter will be employed.)
+
+These 2x5 pads are a simple set of buttons:  Across the top row is FORWARD playback.  Across the bottom row is REVERSE playback.
+
+The SPEED-PITCH settings above the pads determine the speed-pitch effect when the pads below are selected, while the forward and reverse buttons choose the playback direction at that speed-pitch.
+
+The SYNC DIRECTION button remains, but unlike in Recombinator, where it draws upon the relative probability of playback direction, here it inverts the playback in left and right channels when the button is off.  Using the Forward button, one side will play forward and the other in reverse; using the Reverse button, the playback direction of each side will switch.
+
+Other than these changes, the two patches operate in identical manners, but I think you will find produce quite different results.
+
+========================
+
+The singular change in V2 is relatively simple, but very effective.  On the second page (because there was no room on the first), I added a control called REPLACE FEEDBACK.  In the original configuration, feedback into the replace loopers was derived from the Recombinated delay line.  This meant that changes in speed-pitch and direction compounded:  if a sound had already been pitched an octave up, when it fed back into the loopers, if it was once again pitched an octave up, it would be two octaves up.  Or it might be pitched an octave down, then a fifth up, resulting in a fourth down.  What was reversed might get reversed again, playing forward.  And so on.  Beautiful, happy accidents occurred, but it was also a road to chaos.
+
+The REPLACE FEEDBACK controls a mix between two sources for feedback.  
+
+At 0, the feedback is derived from the Restore delay line.  This means that pitch-speed and playback direction effects -will not- compound:  instead, new Replace instructions will fully replace what is in the buffer.  If audio had been pitched up, and a Replace instruction says pitch down, then the replacement will only be the pitched down sound.
+
+At 1, the feedback is derived (as in the original) from the Recombinate delay line.  This means, as in the original, changes to speed-pitch and playback direction will compound, producing fluctuating pitches and playback directions, as different layers of replacement instructions affect one another.
+
+Since it is a mix, you can also have these compounding effects present but mitigated by choosing a value between 0 and 1.
+
+Two things to keep in mind:
+
+Although it was always possible, the additional CPU for this addition makes it likely that adjusting the filter frequency will cause clicking (as it employs a multi-filter).  I would think, in most cases, this would be a fairly "set and forget" control, but if you find yourself "playing the filter" a lot, you may prefer V1.
+
+The additional CPU may also affect Euroburo functionality.  Again, V1 was largely programmed on Euroburo (outside of adding stompswitches), so it should run fine on Euroburo, if you find V2 does not.  Get it contact with me if you would prefer to remove compounding feedback on a V1 iteration of the patch; we can't add the control, but I could instruct you on how to rewire the internal connections to produce the same result.

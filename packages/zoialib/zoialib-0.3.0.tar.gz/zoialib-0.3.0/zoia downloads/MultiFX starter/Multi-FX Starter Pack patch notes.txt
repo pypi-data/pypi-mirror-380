@@ -1,0 +1,424 @@
+Multi-FX Starter Pack
+
+This is a pack of 30 multi-effects patches.  The intention behind the pack is two-fold:  one, to supply some ready-made multi-effects patches to anyone who might have a need for them, and, two, to provide some patches that might be modified or used as templates for those interested in using ZOIA as a multi-effects unit but are unsure of where to start; these patches are designed to be easily broken down and the signal paths followed.  
+
+To the first end, I have tried to make these patches as ready-to-use/plug-n-play as possible; they may be "starters," but they are meant to be playable from go and patched accordingly.  (You may still want to adjust parameters to taste, of course, as my idea of plug-n-play and yours might diverge quite a bit, but I have taken time to tune the patches so that they sound good to me.)
+
+Patches 0 - 9 are mono (left input to left output).
+
+Patches 10 - 19 are mono to stereo (left input to both outputs).
+
+Patches 20 - 29 are stereo throughout.
+
+There are gain patches, modulation patches, ambient patches, mixes of these, etc.  I tried to do a little of everything.  Mono patches favor gain; stereo patches favor ambient sounds; but I tried to make sure there were different types of patches in each group.
+
+To that second end, of creating readily understood and moddable starters, these patches have been designed with some specific characteristics in mind.
+
+1.  Modules are color-coded:  interface modules (such as audio inputs/outputs and stompswitches) are always white, audio routing (usually switches) is red, effects modules and audio processors (e.g. filters) are either aqua or magenta, expression pedal inputs are always green, CV is always blue, and ganged controls (used in stereo patches where no stereo version of the module exists, these controls allow the simultaneous adjustment of parameters in doubled modules; e.g. using two filters in parallel, a single yellow control will control the cutoff frequency).
+
+2.  Nothing has been renamed; no modules overlap one another; wherever possible, I have tried to keep any connected modules as close as possible.  Signal flow moves down the page.  Each patch begins with a white input module in the top left corner of a page and ends with an output module at the bottom right corner of a page.
+
+3.  The only connections that are made across pages are audio connections or, in a few instances, stompswitch modules which control more than one effect (e.g. tap tempo for two delays) or more than one audio routing (e.g. series/parallel routing).
+
+4.  Most patches have quite a lot of CPU headroom available for further modification/additions to the signal path/routing options, etc.  (Except patch 29; three plate reverbs'll take up a lot of CPU, but boy do they sound pretty.)
+
+
+A quick note about expression routing:  All of the patches have been routed for expression, but depending on how you want to use your expression pedal, you may want to adjust the parameter it controls and the connection strength between the expression module and that parameter.  If you want to have the expression pedal lower the set value, place a cv invert module and connect the expression module to its input, then reconnect from the cv invert's output.
+
+
+
+A special thanks to my patrons on Patreon for their support: Rob Flax, Stepan Grammatik, brockstar, Mats Unnerholm, D Sing, Will Scott, drew batchelor, Miguel, Steve Bragg, Joab Eastley, Tomi Kokki, Mitch Lantz, Ben Norland, Daniel Morris, Roman Jakobej, Mark Crosbie, Steve Codling, Timothy Cleary, Soren Made, and Ken Luke!
+
+I'd also like to single out Mats Unnerholm, who provided valuable feedback and insight as I was forming the idea for this project.  Thanks for all the help, Mats!
+
+If you would like to support my work on ZOIA, please visit patreon.com/chmjacques
+
+
+
+0.  Gainfully fun
+
+Fuzz (efuzzy) into overdrive (germ) into tone control.
+
+Left SW -- fuzz bypass
+Middle SW -- overdrive bypass
+Right SW -- tone control bypass
+
+Exp -- routed to tone control mid frequency (allows for filter sweep/phaser sounds)
+
+
+
+
+1.  Angry robots
+
+Bit crusher and aliaser into random-modulated ring modulator (triangle, 75% mix) into home-brewed envelope filter (low-pass, up).
+
+For modding purposes, pay attention to the gain compensation at various stages (see connections to audio switches); due to the gain increases (bit crusher) and band-limiting (everything else, which results in gain losses) balancing some of these modules can be tricky.
+
+With the CV connections, playing around with the connection strength and the bias of the control the modules affect will yield different ranges.
+
+
+Left SW -- bit crusher and aliaser bypass
+Middle SW -- ring mod bypass
+Right SW -- envelope filter bypass
+
+Exp -- aliaser frequency
+
+
+
+2.  4-track punk
+
+An overdrive (pushed) into a boost meant to simulate input clipping on a cheap 4-track into a vibrato, culminating in a 1x8 lofi cab sim.
+
+Left SW -- overdrive bypass
+Middle SW -- boost bypass
+Right SW -- vibrato bypass
+
+Exp -- vibrato rate
+
+
+
+3.  80s night
+
+A fairly aggressive compressor into a hi-gain overdrive (plexi) into a chorus.
+
+Left SW -- compressor bypass
+Middle SW -- overdrive bypass
+Right SW -- chorus bypass
+
+Exp -- chorus mix
+
+
+
+
+4. Hi-gain hijinks
+
+An amp-like overdrive (plexi) into a hi-gain overdrive (edgy) into a heavily scooped tone section, culminating in a 4x12 cab sim.
+
+Left SW -- overdrive 1 bypass
+Middle SW -- overdrive 2 bypass
+Right SW -- tone control bypass
+
+Exp -- tone control mid band 2 frequency
+
+
+
+
+5.  Spaced
+
+Fuzz (efuzzy) into an 8-step sequenced low-pass filter into a delay with mod (tape).  Change the sequencer steps to change the sound of the filter.
+
+Left SW -- fuzz and filter bypass
+Middle SW -- tap tempo for filter sequence
+Right SW -- delay bypass
+
+Exp -- delay time
+
+
+
+
+6.  Swirly
+
+A deep phaser (6 stage) or a liquidy flanger (thru-0) into a tap-tempo controlled delay with mod (old tape).
+
+Left SW -- switch between phaser or flanger
+Middle SW -- tap tempo for delay
+Right SW -- delay bypass
+
+Exp -- phaser/flanger time
+
+
+
+
+7.  Lo-fi fun
+
+A vibrato into a chorus into a lo-fi cab sim.
+
+Left SW -- vibrato bypass
+Middle SW -- chorus bypass
+Right SW -- cab sim bypass
+
+Exp -- vibrato rate
+
+
+
+
+8.  Get subby
+
+A simple square wave synth (monophonic, tuned one octave down) into a fuzz and fixed filter with a wet/dry blend (adjust using the audio balance on the second page).
+
+Left SW -- fuzz bypass
+Middle SW -- filter bypass
+Right SW -- effect bypass (passes clean signal only)
+
+Exp -- filter frequency
+
+
+
+
+9.  Mix-n-Match
+
+Choose from an overdrive (edgy) or a bit crusher or an aliaser or a bit modulator (XOR against -6 dB signal) into a flanger (60s) or phaser (4-stage, set very fast) or tremolo (square wave) into delay with mod (clean) or ghostverb.
+
+Left SW -- choose between overdrive, bit crusher, aliaser or bit modulator
+Middle SW -- choose between flanger, phaser, or tremolo
+Right SW -- choose between delay or ghostverb
+
+Exp -- flanger/phaser/tremolo rate
+
+
+
+
+10.  Angelic
+
+An octave-up pitch shifter (followed by a low-pass filter to help cut some of the sharpness) into a chorus into a clean ping pong delay.
+
+Left SW -- pitch shifter bypass
+Middle SW -- chorus bypass
+Right SW -- delay bypass
+
+Exp -- delay time
+
+
+
+11.  Woozy
+
+A delay with mod (BBD) into a plate reverb into a vibrato.
+
+Left SW -- delay bypass
+Middle SW -- reverb bypass
+Right SW -- vibrato bypass
+
+Exp -- delay feedback (a BBD delay will begin to oscillate as its feedback is pushed)
+
+
+
+
+12.  Signal strength
+
+A fuzz (scoopy) into a tremolo (Voxish, 100% depth) into a delay with mod (tape).
+
+Left SW -- fuzz bypass
+Middle SW -- tremolo bypass
+Right SW -- delay bypass
+
+Exp -- tremolo rate
+
+
+
+
+13.  Swinging phaser
+
+An overdrive (germ) into a phaser (6 stage) into a panner controlled by a triangle LFO (to adjust panner speed, change LFO rate; to adjust its rate, adjust the signal strength to something below 50%).
+
+Left SW -- overdrive bypass
+Middle SW -- phaser bypass
+Right SW -- panner bypass
+
+Exp -- phaser rate
+
+
+
+14.  Dirty spaces
+
+A delay with mod (BBD) into an overdrive (plexi) into a stereo phaser (6-stage).
+
+Left SW -- delay bypass
+Middle SW -- overdrive bypass
+Right SW -- phaser bypass
+
+Exp -- delay time
+
+
+
+
+15.  Clean gain
+
+A compressor into an overdrive (classic) into a room reverb.
+
+Left SW -- compressor bypass
+Middle SW -- overdrive bypass
+Right SW -- reverb bypass
+
+Exp -- reverb mix
+
+
+
+16. Grub brain
+
+A fuzz (scoopy) into a bandpass filter with a high resonance (think parked wah) into a ping pong delay (tape).
+
+Left SW -- fuzz bypass
+Middle SW -- bandpass bypass
+Right SW -- delay bypass
+
+Exp -- filter frequency
+
+
+
+17.  Classic (stereo) amp
+
+An overdrive (classic) into an order-switchable combination of room reverb and stereo tremolo (Fenderish), ending in a 1x12 vintage cab sim.
+
+Left SW -- overdrive bypass
+Middle SW -- order switch:  'verb into trem, or trem into 'verb
+Right SW -- tremolo tap tempo
+
+Exp -- tremolo depth
+
+
+
+
+18.  Cosmic fuzz
+
+A gated fuzz (burly; to change the gate, adjust the threshold of the gate module which follows the fuzz) into a delay with mod (tape) into dual flangers running in parallel, outputting to left and right respectively (1970s).
+
+Left SW -- fuzz bypass
+Middle SW -- delay bypass
+Right SW -- flangers bypass
+
+Exp -- flangers mix
+
+
+
+
+19.  Delay-ay-ay
+
+A delay with mod (BBD, 1:1 tap ratio) split into left and right delays with mod (tape, 2:3 and 3:8).
+
+Left SW -- tap tempo (try changing around the ratios within the modules or using clock dividers for more exotic time ratios)
+Middle SW -- BBD delay bypass
+Right SW -- tape delays bypass
+
+Exp -- BBD delay feedback
+
+
+
+
+20.  Stereo depths
+
+A phaser (4 stage) into a tremolo (sine) into a chorus, all in glorious stereo.
+
+Left SW -- phaser bypass
+Middle SW -- tremolo bypass
+Right SW -- chorus bypass
+
+Exp -- rates of all effects, connected at different strengths
+
+
+
+
+21.  Betmax
+
+A mid-focused clean boost (accomplished with a tone control module) into a chorus into a hall reverb.
+
+Left SW -- boost bypass
+Middle SW -- chorus bypass
+Right SW -- reverb bypass
+
+Exp -- chorus rate
+
+
+
+
+22.  Broken ghosts
+
+A ghostverb into aliasers into a vibrato, culminating in a 1x12 cabinet (that is somehow stereo).
+
+Left SW -- ghostverb bypass
+Middle SW -- aliasers bypass
+Right SW -- vibrato bypass
+
+Exp -- ghostverb decay
+
+
+
+
+23.  Passing through
+
+A tap-tempo controlled delay with mod (3:8, dirty tape) into a phaser (8 stage) into a ping-pong delay (1:1, clean).
+
+Left SW -- tap tempo
+Middle SW -- phaser bypass
+Right SW -- selects between:  both delays on, first delay on, second delay on (and back to both delays on)
+
+Exp -- phaser rate
+
+
+
+
+
+24.  Smashed snarl
+
+A highly resonant envelope-controlled low-pass filter is fed into a high-gain fuzz then smashed and squashed by a very heavy-handed compressor.  High-pass filters end the chain to help clear up some of the low muck as the filters return to their "closed" position.
+
+Left SW -- envelope filter bypass
+Middle SW -- fuzz bypass
+Right SW -- compressor bypass (not advised while envelope filter is active; expect volume spikes)
+
+Exp -- high-pass filters' frequency (can be used to band-pass the sound)
+
+
+
+
+25.  Wash
+
+A plate reverb is fed into a delay with mod (clean) then split into two choruses running parallel.
+
+Left SW -- reverb bypass
+Middle SW -- delay bypass
+Right SW -- chorus bypass
+
+Exp -- reverb decay and mix
+
+
+
+
+26.  Shine
+
+A compressor leads either to a slow chorus or a fast vibrato, then into a delay with mod (clean).
+
+Left SW -- compressor bypass
+Middle SW -- chorus or vibrato select
+Right SW -- delay tap tempo
+
+Exp -- delay feedback
+
+
+
+
+27.  Grungy
+
+A gain-compensated bit crusher (this isn't done perfectly, but the idea is that as you push the bit depth, you won't get blown out by the gain staging; this could probably use some finessing if someone wanted a project; there's also a gate side-chained to the left input to help with the noise when there's no input at all) into aliasers to reduce the sample frequency, with a pair of semi-resonant low-pass filters to smooth out the sound.
+
+Left SW -- bit crusher bypass
+Middle SW -- aliaser bypass
+Right SW -- filter bypass
+
+Exp -- filter frequency
+
+
+
+
+28.  Ambient repeats
+
+A reverb lite feeds into two delays with mod controlled by tap tempo (one 2:3, BBD, the other 1:2, clean) that can be configured in either series or parallel.
+
+Left SW -- tap tempo 
+Middle SW -- reverb bypass
+Right SW -- series/parallel select
+
+Exp -- mix control of all effects
+
+
+
+
+29.  Parallel air
+
+Two plate reverbs with long decays (one eq'd to favor low frequencies, the other to favor high frequencies) can be configured in series or parallel.  An additional plate reverb, with an even longer decay can be engaged or bypassed to finish the signal path.
+
+Left SW -- series/parallel select
+Middle SW -- third/final plate reverb bypass
+Right SW -- sets all mixes to 100%
+
+Exp -- lowers the decay of all reverbs
+
