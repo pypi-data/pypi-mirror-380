@@ -1,0 +1,239 @@
+0.60.0
+------------------
+- black formatting
+- inline doc addition
+- replaced outdated terms with more inclusive language
+- integrated with pre-commit
+- added `.api_versions` file
+- stopped testing against old apis
+- packaging layout
+- reorganized source files; removed `facebook_` prefix to filenames
+- new `.utils` namespace;
+- * migrated some functions into it
+- * added a dedicated parser for environment variables; designed to streamline testing
+- removed `cgi.parse_qs` as it was dropped in python 3.8
+- env var `FBUTILS_APP_SECRETPROOF` is now `FBUTILS_ENABLE_SECRETPROOF`
+- `.verify_signed_request` will now ALWAYS raise `NotImplementedError`.
+  It is unclear if Facebook still creates signed requests with this method, or
+  how to trigger them. Due to the lack of useful documentation from Facebook and
+  the inability to create and test against one of these payloads, the function
+  is not just a referece and will immediately raise an Exception if accessed.
+- drop python 2.7, 3.5, 3.6
+  
+
+0.50.5 (2019-04-26)
+------------------
+- undid some aggressive 2to3 conversions
+- integrating ratelimit detection and errors
+- last_response_usage is a property now
+
+
+0.50.4 (2019-04-25)
+------------------
+- now testing facebook api versions 2.7 - 3.2
+- renamed `last_response_ratelimited` to `last_response_usage`; now checking two fields
+- marked `last_response_ratelimited` for deprecation
+- added `last_response_is_ratelimited`
+- tested/works under python3
+- added todo
+
+
+0.50.3 (2018-08-08)
+------------------
+- catching another form of expired auth access
+
+0.50.2 (2017-07-11)
+------------------
+- storing the api version internally
+- doing some regex checking to ensure a valid api version is sent to the constructor
+- reorganized tests to run against multiple API endpoint versions
+- adding `fields` argument to:
+	* graph__url_me_for_access_token (passthrough to `graph__get_profile_for_access_token`)
+	* graph__url_user_for_access_token (passthrough to `graph__get_profile_for_access_token`)
+	* oauth_code__get_access_token_and_profile (passthrough to `graph__get_profile_for_access_token`)
+	* graph__get_profile_for_access_token
+- restructured some url templates to use a `qs` querystring instead of attribute names
+
+The reason for the above changes: the `v2.3` deprecation changed some Facebook API behaviors in undocumented ways. Most notably, `email` is not automatically returned with a profile. It must be queried specifically.
+
+0.50.1 (2017-03-31)
+------------------
+- added 'secure_only' constructor, default True, to ensure https requests
+- fixed how pyramid support used 'ssl_verify'
+- made url optional to api_proxy, defaulting to the graph url otherwise
+- appsecret_proof upgrades for get_data too
+
+
+0.50.0 (2017-03-29)
+------------------
+- updates to work with recent facebook api changes
+- - some apis now hit different endpoints
+- - some response formats have now changed; the minimum 2.3 now uses a json payload instead of urlencoded
+- will now look to environment for default api version (`export FBUTILS_FB_API_VERSION=v2.8`)
+- will now look to environment for debug (`export FBUTILS_DEBUG=True`)
+- fixed typo/rename `fb_grap_api_version` > `fb_api_version`
+- redid how urls are generated for clarity
+- updated tests
+- made interactive tests public
+- pyramid integration namespace change -- now `fbutils.`.  this is to ensure things break and people upgrade correctly
+- set a custom prefix for pyramid paster integration via `fbutils.prefix`
+- now supports appsecret_proof
+- the url/payload will be inspected for app_secret; if present and the appsecret_proof is required, will augment the requests as needed. this allows for paginated urls from API results to be automatically followed
+
+"""
+https://developers.facebook.com/docs/apps/changelog
+	[Oauth Access Token] Format - The response format of https://www.facebook.com/v2.3/oauth/access_token returned when you exchange a code for an access_token now return valid JSON instead of being URL encoded. The new format of this response is {"access_token": {TOKEN}, "token_type":{TYPE}, "expires_in":{TIME}}. We made this update to be compliant with section 5.1 of RFC 6749.
+"""
+
+
+0.40.4 (2017-01-11)
+------------------
+- packaging fix
+- flake8
+- version number now in library itself
+
+0.40.3 (2017-01-11)
+------------------
+- support for non-authenticated queries (such as opengraph lookups)
+- api_proxy now supports `get_data` kwarg, which is passed into the `requests` library as `params`.
+- FacebookHub now accepts an `unauthenticated_hub` argument
+- cleaned up some whitespace
+- stashing last-repsonse for later inspection
+- supporting inspection of `last_response_ratelimited`
+
+0.40.2 (2015-10-15)
+------------------
+- aliased `request.registry.settings` to `registry_settings` on setup.
+
+0.40.1 (2015-10-15)
+------------------
+- added auth_type to FacebookApiUrls.oauth_token__url_dialog
+- fixed how auth_type is appended to urls
+- BREAKING CHANGE FacebookApiUrls.oauth_code__url_dialog now expects `redirect_uri, scope` NOT `scope, redirect_uri`.  this is the only place in the code where `scope` preceded `redirect_uri`.
+
+
+0.30.3 (2015-10-08)
+------------------
+- added `auth_type` to `oauth_code__url_dialog` methods (see https://developers.facebook.com/docs/facebook-login/permissions/v2.5#adding)
+- added `access_token` arg to `api_proxy`
+- cleaned up some misc formatting
+
+0.30.2 (2015-04-09)
+------------------
+- fixed wrong kwargs on `oauth_code__url_access_token` and `self.oauth_code__get_access_token`
+
+
+0.30.0 (2015-04-01)
+------------------
+- added in corred BSD license
+- merging in changes from kalilou/facebook_utils
+
+
+0.20.3 (2014-07-17)
+------------------
+- updated batch process logic to be backwards compatible.
+
+
+0.20.2 (2013-05-21)
+------------------
+- updated batch process logic to be backwards compatible.
+
+
+0.20.1 (2013-05-21)
+------------------
+- added in ssl_verify param to __init__ and api_proxy calls
+
+
+0.20.0 (2013-05-20)
+------------------
+
+- migrated to requests.  this sucks less.
+
+
+0.19 (2013-05-7)
+------------------
+
+- catching the following exceptions:
+	httplib.BadStatusLine
+	httplib.InvalidUrl
+	urllib2.URLError
+- ensured correct ordering of exceptions caught
+
+
+0.18 (2013-05-7)
+------------------
+
+- batch requests to the graph return a json document , where the 'body' of each page is a (escaped) json document.  a second json decoding is necessary.
+
+
+0.17 (2013-05-7)
+------------------
+- added the following exception clases ( inheritance shown )
+
+	ApiError
+		ApiAuthError
+			ApiAuthExpiredError
+		ApiApplicationError
+		ApiResponseError
+		ApiRuntimeError
+			ApiRuntimeVerirficationFormatError
+			ApiRuntimeGrantError
+			ApiRuntimeScopeError
+			ApiRuntimeGraphMethodError
+		ApiUnhandledError
+
+- extended exceptions to include the originally raised error ( `raised` ) and the the `response` if available
+
+- added format checking to the response during batch requests
+
+- extended unit tests to ensure everything works.  they could be better
+
+- consolidated the parsing of the response into the api_proxy.  facebook's graph has different response types and behaviors.  this helps consolidate it for developers.
+
+- added `mask_unhandled_exceptions` kwarg to hub init.
+	1. this defaults to False
+	2. this is just testing.  please don't rely on it. it could go away.
+	when set to True, it wraps uncaught exceptions in an ApiUnhandledError exception.  This allows you to only care about pass/fail if needed
+
+
+0.16 (2013-05-2)
+------------------
+- added AuthException to better catch auth failures
+
+
+0.15 (2013-01-2)
+------------------
+- Adding Facebook OpenGraph actions API support
+-- graph__action_create
+-- graph__action_delete
+-- graph__action_list
+
+tests are tbd
+
+0.14 (2012-04-16)
+------------------
+- Updated to Pyramid Classifier
+
+
+0.13 (2012-03-23)
+------------------
+- added support for extending access tokens see https://developers.facebook.com/roadmap/offline-access-removal/
+
+
+0.12 (2012-01-26)
+------------------
+- added 'verify_signed_request' , which does exactly what the name suggests
+
+
+0.11 (2012-01-26)
+------------------
+- turned FacebookPyramid into a subclass of FacebookHub, and overloaded some methods with calls to the original.  This removed a need for staching a FacebookHub object.
+- renamed two functions that improperly suggested their functionality.
+-- deprecated 'graph__url_me' ; replaced with 'graph__url_me_for_access_token'
+-- deprecated 'graph__get_profile' ; replaced with 'graph__get_profile_for_access_token'
+- started planning real tests using ENV vars
+
+
+0.1 (2012-01-25)
+------------------
+- initial release
