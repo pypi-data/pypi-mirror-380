@@ -1,0 +1,2 @@
+[console_scripts]
+baseline-checker = baseline_checker.core:run

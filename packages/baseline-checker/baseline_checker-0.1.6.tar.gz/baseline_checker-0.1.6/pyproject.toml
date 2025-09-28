@@ -1,0 +1,27 @@
+[project]
+name = "baseline-checker"
+version = "0.1.6"   # ⬅️ increase this!
+description = "A modern web compatibility scanner"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Veeresh Hanni", email = "veereshhanni347@gmail.com" }
+]
+
+dependencies = [
+    "rich",
+    "tqdm",
+    "pandas",
+    "python-docx",
+    "reportlab",
+    "fpdf"
+]
+
+[project.urls]
+Homepage = "https://github.com/Veeresh-Hanni/baseline-checker"
+Repository = "https://github.com/Veeresh-Hanni/baseline-checker/issues"
+
+[project.scripts]
+baseline-checker = "baseline_checker.core:run"
