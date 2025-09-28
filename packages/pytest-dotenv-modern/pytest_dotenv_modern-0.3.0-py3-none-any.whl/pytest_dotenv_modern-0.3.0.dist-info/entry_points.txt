@@ -1,0 +1,2 @@
+[pytest11]
+dotenv = pytest_dotenv_modern.plugin
