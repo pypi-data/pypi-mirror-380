@@ -1,0 +1,7 @@
+boto3_dataclass_timestream_query/__init__.py,sha256=XXLAguquQyXYjIWWBFYinri9be9qvo1xy-5V964XzXo,126
+boto3_dataclass_timestream_query/caster.py,sha256=IAbMm6NDd7ZEvCexRE6UpemTv0AtBWRiuHu5ok6hR7c,2889
+boto3_dataclass_timestream_query/type_defs.py,sha256=AtwmDMVru_ceBjNp7g6R9vpe-kS7GQ8xoBcROvLfoVk,81626
+boto3_dataclass_timestream_query-1.40.0.dist-info/LICENSE.txt,sha256=Vc2EgX0hR-6Qw_RxS1IR-2qllqh4PiqSWFvrdnqZSDU,1084
+boto3_dataclass_timestream_query-1.40.0.dist-info/METADATA,sha256=vW6pWRkiClupoeYpWmcsn4yqm7o3iuzrLHY09oqSBIk,1746
+boto3_dataclass_timestream_query-1.40.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_dataclass_timestream_query-1.40.0.dist-info/RECORD,,
