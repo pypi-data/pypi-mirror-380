@@ -1,0 +1,62 @@
+name: pytest
+
+on:
+  push:
+    branches: [main,develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mongodb-version: ['7.0']
+        python-version: ["3.13"]
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v4
+
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.12.0
+      with:
+        mongodb-version: ${{ matrix.mongodb-version }}
+
+    - name: Install uv and set the python version
+      uses: astral-sh/setup-uv@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        enable-cache: true
+        cache-dependency-glob: "uv.lock"
+
+
+    - name: Install Package
+      run: uv sync --locked --group dev
+
+    - name: Run pytest
+      run: uv run pytest --cov=alfred3_interact tests/
+
+    - name: coverage.py badge
+      uses: tj-actions/coverage-badge-py@v2
+
+    - name: Verify Changed files
+      uses: tj-actions/verify-changed-files@v18
+      id: changed_files
+      with:
+        files: coverage.svg
+
+    - name: Commit files
+      if: steps.changed_files.outputs.files_changed == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add coverage.svg
+        git commit -m "Updated coverage.svg"
+
+    - name: Push changes
+      if: steps.changed_files.outputs.files_changed == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
