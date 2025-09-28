@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+file_of_test_of_wangziming.py
+setup.py
+bin/file_of_test_of_wangziming
+data/text.txt
+file_of_test_of_wangziming.egg-info/PKG-INFO
+file_of_test_of_wangziming.egg-info/SOURCES.txt
+file_of_test_of_wangziming.egg-info/dependency_links.txt
+file_of_test_of_wangziming.egg-info/top_level.txt
