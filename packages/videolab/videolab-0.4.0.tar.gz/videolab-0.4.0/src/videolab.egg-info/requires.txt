@@ -1,0 +1,14 @@
+av>=15.1.0
+Pillow>=10.4.0
+numpy>=1.26.0
+tqdm>=4.66.0
+
+[dev]
+nox
+
+[lint]
+mypy
+pre-commit
+
+[test]
+pytest
