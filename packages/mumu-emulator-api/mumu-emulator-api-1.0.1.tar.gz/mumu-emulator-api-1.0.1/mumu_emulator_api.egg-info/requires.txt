@@ -1,0 +1,9 @@
+opencv-python
+numpy==1.24.4
+adbutils==1.2.15
+
+[gui]
+opencv-python
+
+[scrcpy]
+scrcpy-client

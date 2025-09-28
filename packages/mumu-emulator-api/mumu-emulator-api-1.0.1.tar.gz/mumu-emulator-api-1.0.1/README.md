@@ -1,0 +1,427 @@
+# MuMu Python API
+
+A comprehensive Python library for controlling MuMu Android Emulator, providing automation capabilities for emulator management, app operations, screen control, and more.
+
+## Features
+
+- 🎮 **Emulator Management**: Create, clone, delete, rename emulators
+- 📱 **App Operations**: Install, uninstall, launch, close applications
+- 🔧 **Device Configuration**: Modify device info, resolution, performance settings
+- 🖥️ **Screen Control**: Screenshot, GUI automation, image recognition
+- 🌐 **Network Management**: Bridge mode, NAT configuration
+- 🔐 **Permission Control**: Root access management
+- 📦 **Backup & Restore**: Export/import emulator configurations
+- ⚡ **ADB Operations**: Click, swipe, input text, file transfer
+
+## Requirements
+
+- Python 3.7 or higher
+- Windows operating system
+- MuMu Android Emulator (version >= 4.0.0)
+
+## Installation
+
+### From PyPI
+
+```bash
+pip install mumu-emulator-api
+```
+
+### From Source (Development)
+
+```bash
+# Clone the repository
+git clone https://github.com/wlkjyy/mumu-python-api.git
+cd mumu-python-api
+
+# Install in development mode
+pip install -e .
+```
+
+### With Optional Dependencies
+
+```bash
+# Install with GUI automation support
+pip install mumu-emulator-api[gui]
+
+# Install with scrcpy support for advanced features
+pip install mumu-emulator-api[scrcpy]
+
+# Install with all optional dependencies
+pip install mumu-emulator-api[gui,scrcpy]
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from mumu import Mumu
+
+# Initialize MuMu API (use default path)
+mumu = Mumu().select(1)  # Select emulator with index 1
+
+# Start the emulator
+mumu.power.start()
+
+# Enable root permission
+mumu.permission.root.enable()
+
+# Install an app
+mumu.app.install("path/to/app.apk")
+
+# Launch an app
+mumu.app.launch("com.example.app")
+```
+
+### Custom MuMu Manager Path
+
+```python
+from mumu import Mumu
+
+# If MuMu is installed in a custom location
+mumu = Mumu(r"D:\NetEase\MuMuPlayer\nx_main\MuMuManager.exe").select(1)
+```
+
+### Multiple Emulator Operations
+
+```python
+from mumu import Mumu
+
+# Select multiple emulators
+mumu = Mumu().select([1, 2, 3])  # Select emulators 1, 2, 3
+# or
+mumu = Mumu().select(1, 2, 3)   # Same as above
+# or
+mumu = Mumu().all()             # Select all emulators
+
+# Operations will apply to all selected emulators
+mumu.power.start()
+mumu.permission.root.enable()
+```
+
+## Usage Examples
+
+### Demo Script
+
+Run the included demo script to see the API in action:
+
+```bash
+python demo.py
+```
+
+The demo script demonstrates:
+1. Creating a new emulator
+2. Randomizing device information (MAC address, IMEI, etc.)
+3. Setting screen resolution to mobile format
+4. Exporting the emulator as a backup
+
+### Complete Emulator Setup
+
+```python
+from mumu import Mumu
+from mumu.constant import MacAddress, IMEI, IMSI, AndroidID, PhoneNumber
+
+def setup_emulator():
+    # Initialize
+    mumu = Mumu().select(1)
+    
+    # Randomize device info
+    mumu.simulation.mac_address(MacAddress.random())
+    mumu.simulation.imei(IMEI.random())
+    mumu.simulation.imsi(IMSI.random())
+    mumu.simulation.android_id(AndroidID.random())
+    mumu.simulation.phone_number(PhoneNumber.random())
+    
+    # Set device model
+    mumu.simulation.model("Pixel 6 Pro")
+    mumu.simulation.brand("Google")
+    
+    # Configure screen
+    mumu.screen.resolution_mobile()
+    mumu.screen.brightness(80)
+    
+    # Set performance
+    mumu.performance.set(4, 4)
+    
+    # Enable root
+    mumu.permission.root.enable()
+    
+    # Start emulator
+    mumu.power.start()
+    
+    print("Emulator setup complete!")
+
+if __name__ == "__main__":
+    setup_emulator()
+```
+
+### Batch Operations
+
+```python
+from mumu import Mumu
+
+def batch_setup():
+    # Select multiple emulators
+    mumu = Mumu().select([1, 2, 3, 4, 5])
+    
+    # Configure all emulators
+    mumu.screen.resolution_mobile()
+    mumu.performance.set(2, 2)
+    mumu.permission.root.enable()
+    
+    # Start all emulators
+    mumu.power.start()
+    
+    print("Batch setup complete!")
+
+if __name__ == "__main__":
+    batch_setup()
+```
+
+## API Reference
+
+### Core Operations
+
+#### Emulator Management
+```python
+# Create emulators
+indices = mumu.core.create(5)  # Create 5 emulators
+
+# Clone emulator
+indices = mumu.select(1).core.clone(3)  # Clone emulator 1 three times
+
+# Delete emulator
+mumu.select(1).core.delete()
+
+# Rename emulator
+mumu.select(1).core.rename("My Emulator")
+
+# Export emulator
+mumu.select(1).core.export("backup/", "my_backup", True)  # Export with zip compression
+
+# Import emulator
+mumu.select(1).core.import_("backup/my_backup.mumudata")
+```
+
+#### Power Management
+```python
+# Start emulator
+mumu.select(1).power.start()
+
+# Start emulator and launch specific app
+mumu.select(1).power.start("com.example.app")
+
+# Shutdown emulator
+mumu.select(1).power.shutdown()
+
+# Restart emulator
+mumu.select(1).power.restart()
+```
+
+#### App Operations
+```python
+# Install app
+mumu.select(1).app.install("path/to/app.apk")
+
+# Uninstall app
+mumu.select(1).app.uninstall("com.example.app")
+
+# Launch app
+mumu.select(1).app.launch("com.example.app")
+
+# Close app
+mumu.select(1).app.close("com.example.app")
+
+# Check if app exists
+if mumu.select(1).app.exists("com.example.app"):
+    print("App is installed")
+
+# Get installed apps list
+apps = mumu.select(1).app.get_installed()
+```
+
+### Device Configuration
+
+#### Screen Settings
+```python
+# Set mobile resolution (1080x1920)
+mumu.select(1).screen.resolution_mobile()
+
+# Set tablet resolution (1920x1080)
+mumu.select(1).screen.resolution_tablet()
+
+# Set custom resolution
+mumu.select(1).screen.resolution(800, 600)
+
+# Adjust DPI
+mumu.select(1).screen.dpi(480)
+
+# Set brightness (0-100)
+mumu.select(1).screen.brightness(80)
+
+# Set frame rate
+mumu.select(1).screen.max_frame_rate(60)
+```
+
+#### Device Identity
+```python
+from mumu.constant import MacAddress, IMEI, IMSI, AndroidID, PhoneNumber
+
+# Randomize device info
+mumu.select(1).simulation.mac_address(MacAddress.random())
+mumu.select(1).simulation.imei(IMEI.random())
+mumu.select(1).simulation.imsi(IMSI.random())
+mumu.select(1).simulation.android_id(AndroidID.random())
+mumu.select(1).simulation.phone_number(PhoneNumber.random())
+
+# Set device model
+mumu.select(1).simulation.model("Pixel 6 Pro")
+mumu.select(1).simulation.brand("Google")
+mumu.select(1).simulation.solution("qcom")
+```
+
+#### Performance Settings
+```python
+# Set CPU and memory
+mumu.select(1).performance.set(4, 4)  # 4 CPU cores, 4GB RAM
+
+# Set CPU cores
+mumu.select(1).performance.cpu(4)
+
+# Set memory
+mumu.select(1).performance.memory(4)
+
+# Force discrete graphics
+mumu.select(1).performance.force_discrete_graphics(True)
+```
+
+### ADB Operations
+
+```python
+# Click on screen
+mumu.select(1).adb.click(100, 200)
+
+# Swipe on screen
+mumu.select(1).adb.swipe(100, 200, 300, 400, 500)  # Start, end, duration(ms)
+
+# Input text
+mumu.select(1).adb.input_text("Hello World")
+
+# Simulate key press
+from mumu.constant import AndroidKey
+mumu.select(1).adb.key_event(AndroidKey.KEYCODE_HOME)
+
+# Upload file
+mumu.select(1).adb.push("local/file.txt", "/sdcard/file.txt")
+
+# Download file
+mumu.select(1).adb.pull("/sdcard/file.txt", "local/file.txt")
+
+# Clear app data
+mumu.select(1).adb.clear("com.example.app")
+```
+
+### GUI Automation
+
+```python
+# Note: Requires opencv-python
+import cv2
+
+def handle_frame(frame, mumu):
+    # Process frame (frame is numpy array)
+    cv2.imshow("Emulator", frame)
+    
+    # Find image on screen
+    pos = mumu.auto.locateOnScreen(frame, "template.png")
+    if pos:
+        x, y = mumu.auto.center(pos)
+        mumu.adb.click(x, y)
+
+# Start frame processing
+mumu.select(1).auto.create_handle(handle_frame)
+```
+
+### Network Configuration
+
+```python
+# Get available network cards
+cards = mumu.select(1).network.get_bridge_card()
+
+# Set bridge mode
+mumu.select(1).network.bridge(True, "Ethernet")
+
+# Set NAT mode
+mumu.select(1).network.nat()
+
+# Set static IP for bridge mode
+mumu.select(1).network.bridge_static("192.168.1.100", "255.255.255.0", "192.168.1.1")
+```
+
+## Error Handling
+
+```python
+from mumu import Mumu
+
+try:
+    mumu = Mumu().select(1)
+    mumu.power.start()
+except RuntimeError as e:
+    print(f"Error: {e}")
+except FileNotFoundError as e:
+    print(f"File not found: {e}")
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **MuMuManager.exe not found**
+   - Ensure MuMu emulator is installed
+   - Provide the correct path to MuMuManager.exe when initializing
+
+2. **Permission errors**
+   - Some operations require administrator privileges
+   - Run your script as administrator when needed
+
+3. **Import errors**
+   - Ensure all dependencies are installed
+   - Check Python version compatibility
+
+4. **ADB connection issues**
+   - Ensure emulator is running
+   - Check if ADB is properly configured
+
+### Getting Help
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/wlkjyy/mumu-python-api/issues)
+- **Email**: wlkjyy@vip.qq.com
+- **WeChat**: laravel_debug
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Changelog
+
+### Version 1.0.1
+- Updated README with comprehensive English documentation
+- Added Usage Examples section with demo script
+- Improved installation instructions
+- Enhanced API documentation with more examples
+
+### Version 1.0.0
+- Initial release
+- Complete emulator management API
+- ADB operations support
+- GUI automation capabilities
+- Network configuration
+- Backup and restore functionality
+
+---
+
+**Made with ❤️ by wlkjyy**
