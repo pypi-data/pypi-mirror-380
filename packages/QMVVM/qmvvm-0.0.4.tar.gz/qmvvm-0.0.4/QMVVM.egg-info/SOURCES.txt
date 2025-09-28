@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+QMVVM.egg-info/PKG-INFO
+QMVVM.egg-info/SOURCES.txt
+QMVVM.egg-info/dependency_links.txt
+QMVVM.egg-info/requires.txt
+QMVVM.egg-info/top_level.txt
+qmvvm/__init__.py
+qmvvm/computed.py
+qmvvm/mvvm.py
+qmvvm/proxy.py
+qmvvm/ref.py
