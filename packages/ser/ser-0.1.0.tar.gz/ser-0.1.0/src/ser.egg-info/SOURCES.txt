@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ser/__init__.py
+src/ser/ser.py
+src/ser.egg-info/PKG-INFO
+src/ser.egg-info/SOURCES.txt
+src/ser.egg-info/dependency_links.txt
+src/ser.egg-info/requires.txt
+src/ser.egg-info/top_level.txt
+tests/test_ser.py
