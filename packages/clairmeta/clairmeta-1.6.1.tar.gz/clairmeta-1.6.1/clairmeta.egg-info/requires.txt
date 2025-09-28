@@ -1,0 +1,7 @@
+cryptography>=44.0.0
+dicttoxml>=1.7.16
+freetype-py>=2.5.1
+lxml>=5.3.0
+pycountry>=24.6.1
+python-dateutil>=2.9.0.post0
+xmltodict>=0.14.2
