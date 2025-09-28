@@ -1,0 +1,2 @@
+[console_scripts]
+larf-weather-sse = larf_weather_sse:main
