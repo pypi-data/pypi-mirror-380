@@ -1,0 +1,17 @@
+fastapi==0.116.1
+uvicorn==0.35.0
+sqlalchemy==2.0.41
+python-dotenv==1.1.1
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.5.0
+pytest==8.4.1
+tomlkit==0.13.3
+semver==3.0.4
+qwen-agent[code_interpreter,gui,mcp,rag]
+click==8.2.1
+openai==1.108.1
+rich==14.0.0
+fastmcp==2.12.3
+pydantic[email]==2.11.7
+langgraph==0.6.7
+langchain-openai==0.3.33
