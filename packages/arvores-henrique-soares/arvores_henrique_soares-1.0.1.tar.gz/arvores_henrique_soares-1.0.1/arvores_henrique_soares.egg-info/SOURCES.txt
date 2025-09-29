@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+arvores_henrique_soares.egg-info/PKG-INFO
+arvores_henrique_soares.egg-info/SOURCES.txt
+arvores_henrique_soares.egg-info/dependency_links.txt
+arvores_henrique_soares.egg-info/requires.txt
+arvores_henrique_soares.egg-info/top_level.txt
+minhas_arvores/__init__.py
+minhas_arvores/arvore_base.py
+minhas_arvores/c45.py
+minhas_arvores/cart.py
+minhas_arvores/id3.py
+minhas_arvores/utilidades.py
