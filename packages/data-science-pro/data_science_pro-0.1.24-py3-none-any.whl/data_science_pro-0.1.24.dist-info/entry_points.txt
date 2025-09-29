@@ -1,0 +1,2 @@
+[console_scripts]
+data-science-pro = data_science_pro.pipeline:main
