@@ -1,0 +1,14 @@
+pygfn0/_pygfn0.py,sha256=IvLYVLKI-WYY3OGkyPKQi81OdYGWru6jLO0Jn0mfeeY,4127
+pygfn0/_pygfn0lib.cp311-win_amd64.pyd,sha256=eQHPqFnKv5Tn2tNAmY5lhBcoos159jDvHYBDCMokQJE,1436160
+pygfn0/__init__.py,sha256=T7cWoOys9qaXp2DYtnyD8WL1P1JRIzsIENe1noKD3LU,391
+pygfn0-0.0.3.dist-info/DELVEWHEEL,sha256=HWB-OWnURdR6Zm1kSGftEbsCf0NgMtl2zwt8M-xre1w,171
+pygfn0-0.0.3.dist-info/METADATA,sha256=iQAFRARUUJlXzbaum3KJsNbAG29rcB5nkABPP5HEG3k,43781
+pygfn0-0.0.3.dist-info/RECORD,,
+pygfn0-0.0.3.dist-info/WHEEL,sha256=oXhHG6ewLm-FNdEna2zwgy-K0KEl4claZ1ztR4VTx0I,106
+pygfn0-0.0.3.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pygfn0.libs/libgcc_s_seh-1-a5cfe8cfb2aa53091ed4abf760c793d8.dll,sha256=EJOrJa5NBc_QZPXPYGT-Y4sVhGDQ0hA7UGhzAmvhtNw,150196
+pygfn0.libs/libgfortran-5-de5438f4e626fb9e07c7960cfb6d8c17.dll,sha256=H3EuGWrSsjxqI1AvZfWeSXA-K2T7zANx0TY414-zx48,3769079
+pygfn0.libs/libgomp-1-dcc9488abd09a5d6dfb2a83b55b01ad8.dll,sha256=2NzkEe00wzJA94JO4GYqVzGbMUXvh3bDAgdHJodjrsA,311445
+pygfn0.libs/libopenblas-cbaa1c1ed6a29413ccd35a823fcfd419.dll,sha256=mESTyzQno4bnEKlBqL9M8OFmB6-K_2T_bKOQHsE9BVY,43739819
+pygfn0.libs/libquadmath-0-69046f1c08c739ef456a368364a85e10.dll,sha256=F2vAVWCcTJ5DQ2nYoOUO0gDCql0on48iqRVJrlvSO50,398767
+pygfn0.libs/libwinpthread-1-e0a6c4ecd73a25b5dfa375302b06a133.dll,sha256=8MSLzx8fCmW0-ZQG9W23NJ3tiGbNhlSGh6tqmOhZrzU,64403
