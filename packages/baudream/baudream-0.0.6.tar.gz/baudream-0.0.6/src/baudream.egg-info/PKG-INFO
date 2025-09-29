@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: baudream
+Version: 0.0.6
+Summary: Python package for the presentation of packet managers.
+Author-email: xlav <cedric.guevremont@umontreal.ca>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/xlav94/baudream
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Baudream
+
+## Installation
+
+### Pre-requisites
+Python 3.9+
+
+### Run
+```bash
+mkdir presentation && cd presentation
+python3 -m venv venv
+source venv/bin/activate
+pip install baudream
+python -c "from baudream import baudrem; baudream.main()"
