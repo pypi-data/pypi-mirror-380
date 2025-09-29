@@ -1,0 +1,3 @@
+[console_scripts]
+synt_example = rna_synthub.analyze.script_example:main
+viz_cli = rna_synthub.viz.viz_cli:main
