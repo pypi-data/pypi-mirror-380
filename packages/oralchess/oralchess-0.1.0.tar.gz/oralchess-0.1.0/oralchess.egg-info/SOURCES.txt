@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+oralchess/__init__.py
+oralchess/core.py
+oralchess.egg-info/PKG-INFO
+oralchess.egg-info/SOURCES.txt
+oralchess.egg-info/dependency_links.txt
+oralchess.egg-info/requires.txt
+oralchess.egg-info/top_level.txt
+tests/test_basic.py
