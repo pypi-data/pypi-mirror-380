@@ -1,0 +1,82 @@
+Metadata-Version: 2.3
+Name: polymo
+Version: 0.1.0
+Summary: API ingestion for PySpark
+Author: Daniel Tom
+Author-email: Daniel Tom <d.e.tom89@gmail.com>
+Requires-Dist: httpx>=0.26
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: polymo[builder,smoke] ; extra == 'all'
+Requires-Dist: fastapi>=0.110 ; extra == 'builder'
+Requires-Dist: uvicorn>=0.24 ; extra == 'builder'
+Requires-Dist: jinja2>=3.1.6 ; extra == 'builder'
+Requires-Dist: pyspark>=4 ; extra == 'builder'
+Requires-Dist: pyarrow>=13 ; extra == 'builder'
+Requires-Dist: pyspark>=4 ; extra == 'smoke'
+Requires-Dist: pyarrow>=13 ; extra == 'smoke'
+Requires-Python: >=3.10
+Provides-Extra: all
+Provides-Extra: builder
+Provides-Extra: smoke
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img src="builder-ui/public/logo.png" alt="Polymo" width="220">
+</p>
+
+Polymo makes it easy to read REST APIs into Spark DataFrames. 
+Just a config file and read it with Spark.
+
+## Quick start
+
+1. Define a config file:
+
+   ```yaml
+   version: 0.1
+   source:
+     type: rest
+     base_url: https://jsonplaceholder.typicode.com
+   stream:
+     path: /posts
+     params:
+       _limit: 20
+     infer_schema: true
+   ```
+
+2. Register the source and read data:
+
+   ```python
+   from pyspark.sql import SparkSession
+   from polymo import ApiReader 
+
+   spark = SparkSession.builder.getOrCreate()
+   spark.dataSource.register(ApiReader)
+
+   df = (
+       spark.read.format("polymo")
+       .option("config_path", "./config.yml")
+       .option("token", "<YOUR_BEARER_TOKEN>")  
+       .load()
+   )
+   ```
+
+## Builder UI
+
+Want a friendly way to craft configs? Launch the local builder:
+
+```bash
+polymo builder --port 9000
+```
+
+# Installation
+Base version without spark and builder:
+
+`pip install polymo`
+
+For builder UI:
+
+`pip install polymo[builder]` 
+
+- Incremental cursors, partitioning, and advanced pagination strategies are on the roadmap.
+
+Contributions and early feedback welcome!
