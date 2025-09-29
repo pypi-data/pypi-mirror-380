@@ -1,0 +1,10 @@
+pypdftotext/__init__.py,sha256=HDtkIj7zqvEcCBeWuEpsNAoM7SNulvM7baEr9CjcnQk,4726
+pypdftotext/_config.py,sha256=aoBppd4Zrjsmj6AtzmS-EAmu1DhktVoS63Kw5Ao8O4E,12690
+pypdftotext/azure_docintel_integrator.py,sha256=F5RqgbH0yOU4hXeIVBbXKi8nFToL5eLASLymDqfiIn8,8531
+pypdftotext/batch.py,sha256=tcvbu-tLTfxPWRxHDjA-OGH2geCqOcFfiyoj38AgBGA,6941
+pypdftotext/layout.py,sha256=D7lf7qoRKNSdmrHfLX418ZGO1Pj2BAZhts7auMgbpxo,10904
+pypdftotext/pdf_extract.py,sha256=IYbgdPiX73WLGDC014xHvqvfjNsRhH47ykPH1RGq2nY,23944
+pypdftotext-0.2.0.dist-info/LICENSE,sha256=8tEVOc1zyL228aRzmZSTHD-f3V9c_cEpHQKviIqe7YY,1085
+pypdftotext-0.2.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+pypdftotext-0.2.0.dist-info/METADATA,sha256=tufciSOpw08YVtdSt08wjNqLQojGdILkvsLzplCrpvc,10065
+pypdftotext-0.2.0.dist-info/RECORD,,
