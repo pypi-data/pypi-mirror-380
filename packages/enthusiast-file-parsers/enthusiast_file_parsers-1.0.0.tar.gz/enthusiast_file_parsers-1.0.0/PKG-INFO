@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: enthusiast-file-parsers
+Version: 1.0.0
+Summary: A plugin for Enthusiast that provides a file parsers.
+Author: Damian Sowiński
+Author-email: damian.sowinski@upsidelab.io
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: enthusiast-common (>=1,<2)
+Requires-Dist: pillow (>=11.3.0,<12.0.0)
+Requires-Dist: pypdf (>=6.0.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+
