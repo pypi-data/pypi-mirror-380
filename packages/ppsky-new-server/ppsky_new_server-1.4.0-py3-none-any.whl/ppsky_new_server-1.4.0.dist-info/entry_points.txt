@@ -1,0 +1,2 @@
+[console_scripts]
+news_server = news_server:main
