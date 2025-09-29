@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+minhas_arvores/__init__.py
+minhas_arvores/arvore_base.py
+minhas_arvores/c45.py
+minhas_arvores/cart.py
+minhas_arvores/id3.py
+minhas_arvores/utilidades.py
+minhas_arvores.egg-info/PKG-INFO
+minhas_arvores.egg-info/SOURCES.txt
+minhas_arvores.egg-info/dependency_links.txt
+minhas_arvores.egg-info/requires.txt
+minhas_arvores.egg-info/top_level.txt
