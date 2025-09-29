@@ -1,0 +1,10 @@
+- move common-use thing to top-level pkg
+- metric storage 
+- metric plotter
+- customizable metric
+- customizable model saver
+- customizable logger
+- customizable stop criteria
+- cli
+- example
+- doc
