@@ -1,0 +1,288 @@
+MCC,DESCRIPTION,STRIPE CODE,DESCRIPTION_UZ,DESCRIPTION_RU
+742,Veterinary Services,veterinary_services,Veterinariya xizmatlari,Ветеринарные услуги
+763,Agricultural Cooperative,agricultural_cooperative,Qishloq xo'jaligi kooperativi,Сельскохозяйственный кооператив
+780,Landscaping Services,landscaping_services,Aarding xizmatlari,Ландшафтные услуги
+1520,General Services,general_services,Umumiy xizmatlar,Общие службы
+1711,"Heating, Plumbing, A/C",heating_plumbing_a_c,"Isitish, sanitariya, A / c","Нагрев, сантехника, кондиционер"
+1731,Electrical Services,electrical_services,Elektr xizmatlari,Электрические услуги
+1740,"Masonry, Stonework, and Plaster",masonry_stonework_and_plaster,"Mayonry, toshma va gips","Каменная кладка, каменная кладка и штукатурка"
+1750,Carpentry Services,carpentry_services,Duradgorlik xizmatlari,Службы плотницки
+1761,"Roofing/Siding, Sheet Metal",roofing_siding_sheet_metal,"Tom yopish / siding, metall","Кровя/сайдинг, листовой металл"
+1771,Concrete Work Services,concrete_work_services,Beton ish xizmatlari,Бетонные рабочие услуги
+1799,Special Trade Services,special_trade_services,Maxsus savdo xizmatlari,Специальные торговые услуги
+2741,Miscellaneous Publishing and Printing,miscellaneous_publishing_and_printing,Turli nashriyot va matbaa,Разное публикация и печать
+2791,"Typesetting, Plate Making, and Related Services",typesetting_plate_making_and_related_services,"Yozish, plastinka qilish va tegishli xizmatlarni o'rnatish","Наборы, создание тарелок и связанные с ним услуги"
+2842,Specialty Cleaning,specialty_cleaning,Mutaxassisligi,Специальная уборка
+4011,Railroads,railroads,Temir yo'l,Железные дороги
+4111,"Commuter Transport, Ferries",commuter_transport_and_ferries,"Mahkum transport, temirchilar","Пригородный транспорт, паромы"
+4112,Passenger Railways,passenger_railways,Yo'lovchi temir yo'llari,Пассажирские железные дороги
+4119,Ambulance Services,ambulance_services,Tez yordam xizmati,Службы скорой помощи
+4121,Taxicabs/Limousines,taxicabs_limousines,Soliqqa tortish / limuzinlar,Такси/лимузины
+4131,Bus Lines,bus_lines,Avtobus chiziqlari,Автобусные линии
+4214,"Motor Freight Carriers and Trucking - Local and Long Distance, Moving and Storage Companies, and Local Delivery Services",motor_freight_carriers_and_trucking,"Avtotransport yuk tashuvchilar va yuk mashinasi - mahalliy va shaharlar, harakatlanuvchi va saqlash korxonalari va mahalliy etkazib berish xizmatlari","Автомобильные перевозчики и грузоперевозки - местные и большие расстояния, транспортные и хранения, а также местные услуги доставки"
+4215,Courier Services,courier_services,Kurerlik xizmatlari,Курьерские услуги
+4225,"Public Warehousing and Storage - Farm Products, Refrigerated Goods, Household Goods, and Storage",public_warehousing_and_storage,"Ommaviy omborxonalar va saqlash - ferma mahsulotlari, muzlatgichli tovarlar, uy-ro'zg'or buyumlari va saqlash","Общественные склады и хранение - сельскохозяйственные товары, охлажденные товары, товары для дома и хранение"
+4411,Cruise Lines,cruise_lines,Kruiz liniyalari,Круизные линии
+4457,Boat Rentals and Leases,boat_rentals_and_leases,Qayiqni ijaraga berish va ijaraga berish,Аренда лодок и аренда
+4468,"Marinas, Service and Supplies",marinas_service_and_supplies,"Marinalar, xizmat va materiallar","Марины, обслуживание и расходные материалы"
+4511,"Airlines, Air Carriers",airlines_air_carriers,"Aviakompaniyalar, aviakompaniya tashuvchilar","Авиакомпании, авианосцы"
+4582,"Airports, Flying Fields",airports_flying_fields,"Aeroportlar, uchadigan maydonlar","Аэропорты, летающие поля"
+4722,"Travel Agencies, Tour Operators",travel_agencies_tour_operators,"Sayyohlik agentliklari, turoperatorlar","Туристические агентства, туроператоры"
+4723,TUI Travel - Germany,t_ui_travel_germany,Tui sayohat - Germaniya,Tui Travel - Германия
+4784,Tolls/Bridge Fees,tolls_bridge_fees,Tolls / Bridge to'lovlari,Плата/плата за мост
+4789,Transportation Services (Not Elsewhere Classified),transportation_services,Transport xizmatlari (boshqa joyda tasniflangan),Транспортные услуги (не в других местах классифицируются)
+4812,Telecommunication Equipment and Telephone Sales,telecommunication_equipment_and_telephone_sales,Telekommunikatsiya uskunalari va telefon sotish,Телекоммуникационное оборудование и продажи по телефону
+4814,Telecommunication Services,telecommunication_services,Telekommunikatsiya xizmatlari,Телекоммуникационные услуги
+4816,Computer Network Services,computer_network_services,Kompyuter tarmoqlari xizmatlari,Услуги компьютерных сети
+4821,Telegraph Services,telegraph_services,Telegraf xizmatlari,Телеграфские услуги
+4829,"Wires, Money Orders",wires_money_orders,"Simlar, pul buyurtmalari","Провода, денежные переводы"
+4899,"Cable, Satellite, and Other Pay Television and Radio",cable_satellite_and_other_pay_television_and_radio,"Kabel, yo'ldosh va boshqa to'lovlar televideniesi va radiosi","Кабельный, спутник и другие платные телевидения и радио"
+4900,Utilities,utilities,Kommunal xizmatlar,Коммунальные услуги
+5013,Motor Vehicle Supplies and New Parts,motor_vehicle_supplies_and_new_parts,Avtotransport vositalari va yangi qismlar,Поставки автомобилей и новые детали
+5021,Office and Commercial Furniture,office_and_commercial_furniture,Ofis va tijorat mebellari,Офисная и коммерческая мебель
+5039,Construction Materials (Not Elsewhere Classified),construction_materials,Qurilish materiallari (boshqa joyda tasniflangan),Строительные материалы (не классифицируются в другом месте)
+5044,"Photographic, Photocopy, Microfilm Equipment, and Supplies",photographic_photocopy_microfilm_equipment_and_supplies,"Fotografik, fotokopiya, mikrofilm uskunalari va materiallar","Фотографический, фотокопия, микрофильмное оборудование и расходные материалы"
+5045,"Computers, Peripherals, and Software",computers_peripherals_and_software,"Kompyuterlar, periferiya va dasturiy ta'minot","Компьютеры, периферийные устройства и программное обеспечение"
+5046,Commercial Equipment (Not Elsewhere Classified),commercial_equipment,Tijorat uskunalari (boshqa joyda tasniflangan),Коммерческое оборудование (не классифицировано в других местах)
+5047,"Medical, Dental, Ophthalmic, and Hospital Equipment and Supplies",medical_dental_ophthalmic_and_hospital_equipment_and_supplies,"Tibbiy, stomatologiya, oftalmika va kasalxona jihozlari va materiallari","Медицинское, стоматологическое, офтальмологическое и больничное оборудование и расходные материалы"
+5051,Metal Service Centers,metal_service_centers,Metallga xizmat ko'rsatish markazlari,Металлические сервисные центры
+5065,Electrical Parts and Equipment,electrical_parts_and_equipment,Elektr qismlari va uskunalari,Электрические детали и оборудование
+5072,"Hardware, Equipment, and Supplies",hardware_equipment_and_supplies,"Uskunalar, uskunalar va materiallar","Оборудование, оборудование и расходные материалы"
+5074,"Plumbing, Heating Equipment, and Supplies",plumbing_heating_equipment_and_supplies,"Santexnika, isitish uskunalari va materiallar","Сантехника, оборудование для отопления и расходные материалы"
+5085,Industrial Supplies (Not Elsewhere Classified),industrial_supplies,Sanoat ta'minoti (boshqa joyda tasniflangan emas),Промышленные принадлежности (не классифицируются в других местах)
+5094,"Precious Stones and Metals, Watches and Jewelry",precious_stones_and_metals_watches_and_jewelry,"Qimmatbaho toshlar va metallar, soatlar va zargarlik buyumlari","Драгоценные камни и металлы, часы и украшения"
+5099,Durable Goods (Not Elsewhere Classified),durable_goods,Bardoshli mahsulotlar (boshqa joyda tasniflangan emas),Проверенные товары (не классифицируются в другом месте)
+5111,"Stationary, Office Supplies, Printing and Writing Paper",stationary_office_supplies_printing_and_writing_paper,"Statsionar, ofis materiallari, bosib chiqarish va yozma qog'oz","Стационарные, офисные принадлежности, печать и писательская бумага"
+5122,"Drugs, Drug Proprietaries, and Druggist Sundries",drugs_drug_proprietaries_and_druggist_sundries,"Giyohvand moddalar, giyohvandlik vositalari va dorixonalar sunmistikasi","Лекарства, владения лекарствами и аптекание солнат"
+5131,"Piece Goods, Notions, and Other Dry Goods",piece_goods_notions_and_other_dry_goods,"Buyumlar, tushunchalar va boshqa quruq mahsulotlar","Товары, представления и другие сухие товары"
+5137,"Uniforms, Commercial Clothing",uniforms_commercial_clothing,"Formalar, tijorat kiyimlari","Униформа, коммерческая одежда"
+5139,Commercial Footwear,commercial_footwear,Tijorat poyafzallari,Коммерческая обувь
+5169,Chemicals and Allied Products (Not Elsewhere Classified),chemicals_and_allied_products,Kimyoviy va ittifoq mahsulotlari (boshqa joyda tasniflangan),Химикаты и союзные продукты (не классифицируются в других местах)
+5172,Petroleum and Petroleum Products,petroleum_and_petroleum_products,Neft va neft mahsulotlari,Нефтяная и нефтяная продукция
+5192,"Books, Periodicals, and Newspapers",books_periodicals_and_newspapers,"Kitoblar, davriy nashrlar va gazetalar","Книги, периодические издания и газеты"
+5193,"Florists Supplies, Nursery Stock, and Flowers",florists_supplies_nursery_stock_and_flowers,"Floristlar materiallari, bolalar bog'chasi va gullar","Флористы поставки, питомник и цветы"
+5198,"Paints, Varnishes, and Supplies",paints_varnishes_and_supplies,"Bo'yoqlar, laklar va materiallar","Краски, лаки и припасы"
+5199,Nondurable Goods (Not Elsewhere Classified),nondurable_goods,Numbaqli mahsulotlar (boshqa joyda tasniflangan emas),Незуманенные товары (не классифицируются в другом месте)
+5200,Home Supply Warehouse Stores,home_supply_warehouse_stores,Uy ta'minotining ombori do'konlari,Складские магазины на дому
+5211,"Lumber, Building Materials Stores",lumber_building_materials_stores,"Yog'och, qurilish materiallari do'konlari","Пиломатериалы, строительные материалы магазины"
+5231,"Glass, Paint, and Wallpaper Stores",glass_paint_and_wallpaper_stores,"Shisha, bo'yoq va devor qog'ozi do'konlari","Стеклянные, краски и обои магазины"
+5251,Hardware Stores,hardware_stores,Apparat do'konlari,Аппаратные магазины
+5261,"Nurseries, Lawn and Garden Supply Stores",nurseries_lawn_and_garden_supply_stores,"Bolalar, maysazor va bog 'ta'minoti do'konlari","Питомники, газонные и садовые магазины"
+5271,Mobile Home Dealers,mobile_home_dealers,Mobil uy dilerlari,Дилеры мобильных домов
+5300,Wholesale Clubs,wholesale_clubs,Ulgurji klublar,Оптовые клубы
+5309,Duty Free Stores,duty_free_stores,Bojsiz do'konlar,Duty Free Stores
+5310,Discount Stores,discount_stores,Chegir do'konlari,Дисконтные магазины
+5311,Department Stores,department_stores,Kafedra do'konlari,Универмаги
+5331,Variety Stores,variety_stores,Turli xil do'konlar,Разнообразные магазины
+5399,Miscellaneous General Merchandise,miscellaneous_general_merchandise,Umumiy umumiy mahsulot,Разное общее товары
+5411,"Grocery Stores, Supermarkets",grocery_stores_supermarkets,"Oziq-ovqat do'konlari, supermarketlar","Продуктовые магазины, супермаркеты"
+5422,Freezer and Locker Meat Provisioners,freezer_and_locker_meat_provisioners,Muzlatgich va echinish go'shti,Заказера -морозильник и шкаф
+5441,"Candy, Nut, and Confectionery Stores",candy_nut_and_confectionery_stores,"Konfet, yong'oq va qandolat mahsulotlari","Конфеты, ореховые и кондитерские магазины"
+5451,Dairy Products Stores,dairy_products_stores,Sut mahsulotlari do'konlari,Молочные продукты магазины
+5462,Bakeries,bakeries,Novvoyxonalar,Пекарни
+5499,Miscellaneous Food Stores - Convenience Stores and Specialty Markets,miscellaneous_food_stores,Oziq-ovqat do'konlari - qulayliklar va ixtisoslik bozorlari,Разное продовольственные магазины - магазины и специализированные рынки
+5511,"Car and Truck Dealers (New & Used) Sales, Service, Repairs Parts and Leasing",car_and_truck_dealers_new_used,"Avtomobil va yuk mashinalari sotuvchilari (yangi va ishlatilgan) savdo, xizmat ko'rsatish, ehtiyot qismlar va lizing","Дилеры автомобилей и грузовиков (новые и подержанные) Продажи, обслуживание, ремонт деталей и лизинг"
+5521,"Car and Truck Dealers (Used Only) Sales, Service, Repairs Parts and Leasing",car_and_truck_dealers_used_only,"Avtomobil va yuk mashinalari (faqat ishlatilgan) savdo, xizmat ko'rsatish, ehtiyot qismlar va lizing","Дилеры автомобилей и грузовиков (только используются) Продажи, обслуживание, ремонт деталей и лизинг"
+5531,Auto and Home Supply Stores,auto_and_home_supply_stores,Avtomobil va uy ta'minoti do'konlari,Автоматические и домашние снабжения
+5532,Automotive Tire Stores,automotive_tire_stores,Avtomobil texnologiyasi,Автомобильные шинные магазины
+5533,Automotive Parts and Accessories Stores,automotive_parts_and_accessories_stores,Avtomobil ehtiyot qismlari va jihozlari,Автомобильные запчасти и аксессуары магазинов
+5541,Service Stations,service_stations,Xizmat stantsiyalari,Станции обслуживания
+5542,Automated Fuel Dispensers,automated_fuel_dispensers,Avtomatlashtirilgan yonilg'i quyish vositalari,Автоматизированный топливный дозаторы
+5551,Boat Dealers,boat_dealers,Qayiq sotuvchilari,Лодочные торговцы
+5561,"Motorcycle Shops, Dealers",motorcycle_shops_dealers,"Mototsikl do'konlari, dilerlar","Мотоциклетные магазины, дилеры"
+5571,Motorcycle Shops and Dealers,motorcycle_shops_and_dealers,Mototsikl do'konlari va dilerlar,Мотоциклетные магазины и дилеры
+5592,Motor Homes Dealers,motor_homes_dealers,Motorli uylar dilerlari,Дилеры моторных домов
+5598,Snowmobile Dealers,snowmobile_dealers,Qor avtomobilining dilerlari,Дилеры снегоходов
+5599,Miscellaneous Auto Dealers,miscellaneous_auto_dealers,Turli xil avtobus dilerlari,Разные автодилеры
+5611,Mens and Boys Clothing and Accessories Stores,mens_and_boys_clothing_and_accessories_stores,Uylar va o'g'il bolalar kiyim-kechak va aksessuarlar do'konlari,Мужские и мальчики одежда и аксессуары
+5621,Womens Ready-To-Wear Stores,womens_ready_to_wear_stores,Ayollar uchun tayyor do'konlar,Женские готовые магазины
+5631,Womens Accessory and Specialty Shops,womens_accessory_and_specialty_shops,Ayollar va mutaxassislik do'konlari,Женские аксессуары и специальные магазины
+5641,Childrens and Infants Wear Stores,childrens_and_infants_wear_stores,Bolalar va go'daklar do'konlar kiyishadi,Дети и младенцы носят магазины
+5651,Family Clothing Stores,family_clothing_stores,Oilaviy kiyim-kechak do'konlari,Семейная одежда магазинов
+5655,Sports and Riding Apparel Stores,sports_and_riding_apparel_stores,Sport va minish yo'laklari do'konlari,Спортивные и верховые магазины одежды
+5661,Shoe Stores,shoe_stores,Poyafzal do'konlari,Обувные магазины
+5681,Furriers and Fur Shops,furriers_and_fur_shops,Furries va mo'ynali do'konlar,Фурриеры и меховые магазины
+5691,"Mens, Womens Clothing Stores",mens_womens_clothing_stores,"Uylar, ayollar kiyimlari","Мужские, женские магазины одежды"
+5697,"Tailors, Alterations",tailors_alterations,"Tikuvchilar, o'zgartirishlar","Портные, изменения"
+5698,Wig and Toupee Stores,wig_and_toupee_stores,Wig va Toupee do'konlari,Магазины париков и toupee
+5699,Miscellaneous Apparel and Accessory Shops,miscellaneous_apparel_and_accessory_shops,Turli xil kiyim va aksessuar do'konlari,Разное магазины одежды и аксессуаров
+5712,"Furniture, Home Furnishings, and Equipment Stores, Except Appliances",furniture_home_furnishings_and_equipment_stores_except_appliances,"Mebel, Uy jihozlari va uskunalar do'konlari, jihozlardan tashqari","Мебель, домашняя мебель и магазины оборудования, кроме приборов"
+5713,Floor Covering Stores,floor_covering_stores,Zamin qoplamasi do'konlari,Полное покрытие магазинов
+5714,"Drapery, Window Covering, and Upholstery Stores",drapery_window_covering_and_upholstery_stores,"Draper, deraza qoplamalari va qoplamali do'konlar","Драпировка, окно -покрытие и обивки"
+5718,"Fireplace, Fireplace Screens, and Accessories Stores",fireplace_fireplace_screens_and_accessories_stores,"Kamin, kamin ekranlari va aksessuarlar do'konlari","Камин, каминные экраны и магазины аксессуаров"
+5719,Miscellaneous Home Furnishing Specialty Stores,miscellaneous_home_furnishing_specialty_stores,Turli xil uy jihozlari bo'yicha mutaxassislik do'konlari,Разное домашнее предоставление специальных магазинов
+5722,Household Appliance Stores,household_appliance_stores,Uy jihozlari do'konlari,Магазины бытовых приборов
+5732,Electronics Stores,electronics_stores,Elektron do'konlar,Электронные магазины
+5733,"Music Stores-Musical Instruments, Pianos, and Sheet Music",music_stores_musical_instruments_pianos_and_sheet_music,"Musiqiy do'konlar - musiqa asboblari, pianino va varaq musiqasi","Музыкальные магазины-музыкальные инструменты, фортепиано и ноты"
+5734,Computer Software Stores,computer_software_stores,Kompyuter dasturiy do'konlari,Компьютерное программное обеспечение
+5735,Record Stores,record_stores,Yozuv do'konlari,Записывающие магазины
+5811,Caterers,caterers,Tanturer,Поставщики
+5812,"Eating Places, Restaurants",eating_places_restaurants,"Ovqatlanish joylari, restoranlar","Места для еды, рестораны"
+5813,Drinking Places,drinking_places,Ichish joylari,Питье места
+5814,Fast Food Restaurants,fast_food_restaurants,Tez ovqatlanish restoranlari,Рестораны быстрого питания
+5815,"Digital Goods Media - Books, Movies, Music",digital_goods_media,"Raqamli tovarlar OAV - kitoblar, filmlar, musiqa","Цифровые товары - книги, фильмы, музыка"
+5816,Digital Goods - Games,digital_goods_games,Raqamli tovarlar - o'yinlar,Цифровые товары - игры
+5817,Digital Goods - Applications (Excludes Games),digital_goods_applications,Raqamli tovarlar - arizalar (o'yinlar bundan mustasno),Цифровые товары - приложения (исключает игры)
+5818,Digital Goods - Large Digital Goods Merchant,digital_goods_large_volume,Raqamli tovarlar - katta raqamli tovar savdogar,Цифровые товары - крупный торговец цифровыми товарами
+5912,Drug Stores and Pharmacies,drug_stores_and_pharmacies,Dorixonalar va dorixonalar,Аптеки и аптеки
+5921,"Package Stores-Beer, Wine, and Liquor",package_stores_beer_wine_and_liquor,"Paketli do'konlar, sharob va likyor","Пакетные магазины, вино и ликер"
+5931,Used Merchandise and Secondhand Stores,used_merchandise_and_secondhand_stores,Ishlatilgan tovarlar va ikkinchi darajali do'konlar,Использовали товары и подержанные магазины
+5932,Antique Shops,antique_shops,Antik do'konlar,Антикварные магазины
+5933,Pawn Shops,pawn_shops,Garov do'konlari,Ломбарды
+5935,Wrecking and Salvage Yards,wrecking_and_salvage_yards,Vayronagarchilik va qutqarish hovlilari,Разрушение и спасение ярдов
+5937,Antique Reproductions,antique_reproductions,Antik repretsiyalar,Антикварные размножения
+5940,Bicycle Shops,bicycle_shops,Velosiped do'konlari,Велосипедные магазины
+5941,Sporting Goods Stores,sporting_goods_stores,Sport buyumlari do'konlari,Спортивные товары магазинов
+5942,Book Stores,book_stores,Kitob do'konlari,Книжные магазины
+5943,"Stationery Stores, Office, and School Supply Stores",stationery_stores_office_and_school_supply_stores,"Kantselyariya turlari, ofis va maktab ta'minoti do'konlari","Магазины канцелярских товаров, офис и школьные снабжения"
+5944,"Jewelry Stores, Watches, Clocks, and Silverware Stores",jewelry_stores_watches_clocks_and_silverware_stores,"Zargarlik buyumlari, soatlar, soatlar va kumush buyumlar do'konlari","Ювелирные магазины, часы, часы и магазины серебра"
+5945,"Hobby, Toy, and Game Shops",hobby_toy_and_game_shops,"Xobbi, o'yinchoq va o'yin do'konlari","Хобби, игрушка и игровые магазины"
+5946,Camera and Photographic Supply Stores,camera_and_photographic_supply_stores,Kamera va fotosuratlar savdo do'konlari,Камера и фотопроводные магазины
+5947,"Gift, Card, Novelty, and Souvenir Shops",gift_card_novelty_and_souvenir_shops,"Sovg'a, karta, yangilik va yodgorxonalar","Подарки, карта, новинка и сувенирные магазины"
+5948,Luggage and Leather Goods Stores,luggage_and_leather_goods_stores,Bagaj va charm buyumlari,Магазины багажа и кожи
+5949,"Sewing, Needlework, Fabric, and Piece Goods Stores",sewing_needlework_fabric_and_piece_goods_stores,"Tikuv, tikuv, mato va buyumlar do'konlari","Швейные, рукоделия, ткань и товары для товаров"
+5950,"Glassware, Crystal Stores",glassware_crystal_stores,"Shisha buyumlar, kristalli do'konlar","Стеклянная посуда, хрустальные магазины"
+5960,Direct Marketing - Insurance Services,direct_marketing_insurance_services,To'g'ridan-to'g'ri marketing - sug'urta xizmatlari,Прямой маркетинг - страховые услуги
+5962,Direct Marketing - Travel,direct_marketing_travel,To'g'ridan-to'g'ri marketing - sayohat,Прямой маркетинг - путешествие
+5963,Door-To-Door Sales,door_to_door_sales,Eshikning uyma-uy savdosi,Продажи двери до двери
+5964,Direct Marketing - Catalog Merchant,direct_marketing_catalog_merchant,To'g'ridan-to'g'ri marketing - Katalog savdogar,Прямой маркетинг - продавец каталога
+5965,Direct Marketing - Combination Catalog and Retail Merchant,direct_marketing_combination_catalog_and_retail_merchant,To'g'ridan-to'g'ri marketing - kombinatsiya katalog va chakana savdogar,Прямой маркетинг - комбинированный каталог и торговец розничной торговлей
+5966,Direct Marketing - Outbound Telemarketing,direct_marketing_outbound_telemarketing,To'g'ridan-to'g'ri marketing - tashqarida telemarketing,Прямой маркетинг - исходящий телемаркетинг
+5967,Direct Marketing - Inbound Telemarketing,direct_marketing_inbound_telemarketing,To'g'ridan-to'g'ri marketing - Kirish Telemarketing,Прямой маркетинг - входящая телемаркета
+5968,Direct Marketing - Subscription,direct_marketing_subscription,To'g'ridan-to'g'ri marketing - obuna,Прямой маркетинг - подписка
+5969,Direct Marketing - Other,direct_marketing_other,To'g'ridan-to'g'ri marketing - boshqa,Прямой маркетинг - другой
+5970,Artists Supply and Craft Shops,artists_supply_and_craft_shops,Rassomlar va hunarmandchilik do'konlari,Художники поставки и ремесленные магазины
+5971,Art Dealers and Galleries,art_dealers_and_galleries,Badiiy dilerlar va galereyalar,Художественные дилеры и галереи
+5972,Stamp and Coin Stores,stamp_and_coin_stores,Shtamp va tanga do'konlari,Магазины штампов и монет
+5973,Religious Goods Stores,religious_goods_stores,Diniy buyumlar do'konlari,Религиозные товары магазины
+5975,Hearing Aids Sales and Supplies,hearing_aids_sales_and_supplies,Eshitish OITSni sotish va materiallar,Продажи и расходные материалы для слуховых аппаратов
+5976,Orthopedic Goods - Prosthetic Devices,orthopedic_goods_prosthetic_devices,Ortopedik buyumlar - protez qurilmalar,Ортопедические товары - протезные устройства
+5977,Cosmetic Stores,cosmetic_stores,Kosmetik do'konlar,Косметические магазины
+5978,Typewriter Stores,typewriter_stores,Yozuv mashinkasi do'konlar,Магазины пишущей машинки
+5983,Fuel Dealers (Non Automotive),fuel_dealers_non_automotive,Yoqilg'i dilerlari (avtomobilsozlik),Дилеры топлива (не автомобильная)
+5992,Florists,florists,Floristlar,Флористы
+5993,Cigar Stores and Stands,cigar_stores_and_stands,Sigaret do'konlari va stendlar,Сигарные магазины и стенды
+5994,News Dealers and Newsstands,news_dealers_and_newsstands,Yangiliklar va yangiliklar dasturlari,Новости и газетные киоски
+5995,"Pet Shops, Pet Food, and Supplies",pet_shops_pet_food_and_supplies,"Uy hayvonlari do'konlari, uy hayvonlari ovqat va materiallar","Домашние магазины, корма для домашних животных и припасы"
+5996,Swimming Pools Sales,swimming_pools_sales,Basseynlar sotilishi,Продажи бассейнов
+5997,Electric Razor Stores,electric_razor_stores,Elektr strator do'konlari,Электрические магазины бритвы
+5998,Tent and Awning Shops,tent_and_awning_shops,Chodir va ochmoq do'konlari,Палатка и ввесы
+5999,Miscellaneous Specialty Retail,miscellaneous_specialty_retail,Mutaxassislik chakana,Разное специализированная розничная торговля
+6010,Manual Cash Disburse,manual_cash_disburse,Qo'lda pul mablag'lari,Ручная денежная распада
+6011,Automated Cash Disburse,automated_cash_disburse,Avtomatlashtirilgan naqd pul mablag'lari,Автоматизированное денежное рассеяние
+6012,Financial Institutions,financial_institutions,Moliyaviy institutlar,Финансовые учреждения
+6051,"Non-FI, Money Orders",non_fi_money_orders,"Fi bo'lmagan, pul buyurtmalari","Не-Fi, денежные переводы"
+6211,Security Brokers/Dealers,security_brokers_dealers,Xavfsizlik brokerlari / dilerlari,Брокеры безопасности/дилеры
+6300,"Insurance Underwriting, Premiums",insurance_underwriting_premiums,"Sug'urta anderrising, mukofotlar","Страховой андеррайтинг, премии"
+6399,Insurance - Default,insurance_default,Sug'urta - odatiy,Страхование - по умолчанию
+6513,Real Estate Agents and Managers - Rentals,real_estate_agents_and_managers_rentals,Ko'chmas mulk agentlari va menejerlar - Ijaraga berish,Агенты и менеджеры по недвижимости - аренда
+6540,"Non-FI, Stored Value Card Purchase/Load",non_fi_stored_value_card_purchase_load,"FI bo'lmagan, saqlangan qiymat kartani sotib olish / yuk","Не FI, сохраненная стоимость карты покупка/загрузка"
+7011,"Hotels, Motels, and Resorts",hotels_motels_and_resorts,"Mehmonxonalar, motellar va kurortlar","Отели, мотели и курорты"
+7012,Timeshares,timeshares,Vaqtinchalik,Таймшеры
+7032,Sporting/Recreation Camps,sporting_recreation_camps,Sporting / Dam olish lagerlari,Спортивные/отдыхающие лагеря
+7033,"Trailer Parks, Campgrounds",trailer_parks_campgrounds,"Treyler bog'lari, lagerlar","Трейлерные парки, кемпинги"
+7210,"Laundry, Cleaning Services",laundry_cleaning_services,"Kir yuvish, tozalash xizmatlari","Прачечная, уборка"
+7211,Laundries,laundries,Kir yuvish,Прачечные
+7216,Dry Cleaners,dry_cleaners,Quruq tozalagichlar,Сухой чистки
+7217,Carpet/Upholstery Cleaning,carpet_upholstery_cleaning,Gilam / qoplash,Ковер/обивка
+7221,Photographic Studios,photographic_studios,Fotosuratlar,Фото студий
+7230,Barber and Beauty Shops,barber_and_beauty_shops,Sartarosh va go'zallik do'konlari,Парикмахерские и красоты
+7251,Shoe Repair/Hat Cleaning,shoe_repair_hat_cleaning,Poyafzal ta'mirlash / shlyapa Tozalash,Ремонт обуви/очистка шляпы
+7261,"Funeral Services, Crematories",funeral_services_crematories,"Dafn xizmatlari, krematiyalar","Похороны, крематории"
+7273,Dating/Escort Services,dating_escort_services,Tanishuv / Escort xizmatlari,Службы знакомств/эскорт
+7276,Tax Preparation Services,tax_preparation_services,Soliqlarni tayyorlash xizmatlari,Услуги подготовки налогов
+7277,Counseling Services,counseling_services,Maslahat xizmati,Консультационные услуги
+7278,Buying/Shopping Services,buying_shopping_services,Xarid qilish / xarid qilish xizmatlari,Покупка/покупки услуг
+7296,Clothing Rental,clothing_rental,Kiyim ijarasi,Прокат одежды
+7297,Massage Parlors,massage_parlors,Massaj xonalari,Массажные салоны
+7298,Health and Beauty Spas,health_and_beauty_spas,Salomatlik va go'zallik spaas,Здоровье и красота
+7299,Miscellaneous General Services,miscellaneous_general_services,Turli xil umumiy xizmatlar,Разное общие услуги
+7311,Advertising Services,advertising_services,Reklama xizmatlari,Рекламные услуги
+7321,Credit Reporting Agencies,credit_reporting_agencies,Kredit-hisobot agentliklari,Кредитные агентства
+7333,"Commercial Photography, Art and Graphics",commercial_photography_art_and_graphics,"Tijorat fotosuratlari, san'at va grafika","Коммерческая фотография, искусство и графика"
+7338,"Quick Copy, Repro, and Blueprint",quick_copy_repro_and_blueprint,"Tez nusxa, Rexro va Slewraint","Quick Copy, Repro и Blueprint"
+7339,Secretarial Support Services,secretarial_support_services,Kotiblarni qo'llab-quvvatlash xizmatlari,Секретационная поддержка службы
+7342,Exterminating Services,exterminating_services,Qudillagichni yo'q qilish,Истребительные услуги
+7349,Cleaning and Maintenance,cleaning_and_maintenance,Tozalash va texnik xizmat ko'rsatish,Очистка и техническое обслуживание
+7361,Employment/Temp Agencies,employment_temp_agencies,Bandlik / TMT agentliklari,Занятость/временные агентства
+7372,Computer Programming,computer_programming,Kompyuter dasturlash,Компьютерное программирование
+7375,Information Retrieval Services,information_retrieval_services,Axborotni olish xizmatlari,Службы поиска информации
+7379,Computer Repair,computer_repair,Kompyuterlarni ta'mirlash,Ремонт компьютера
+7392,"Consulting, Public Relations",consulting_public_relations,"Konsalting, jamoatchilik bilan aloqalar","Консалтинг, отношения с общественностью"
+7393,Detective Agencies,detective_agencies,Detektiv agentliklar,Детективные агентства
+7394,Equipment Rental,equipment_rental,Uskunalar Ijaraga,Прокат оборудования
+7395,Photo Developing,photo_developing,Fotosuratni rivojlantirish,Фото разработка
+7399,Miscellaneous Business Services,miscellaneous_business_services,Biznes xizmatlari,Разное бизнес -услуги
+7511,Truck StopIteration,truck_stop_iteration,Yuk mashinasi to'xtash joyi,Стоптарация грузовика
+7512,Car Rental Agencies,car_rental_agencies,Avtomobilni ijaraga berish agentliklari,Агентства по прокату автомобилей
+7513,Truck/Utility Trailer Rentals,truck_utility_trailer_rentals,Yuk mashinasi / kommunal retser ijarasi,Аренда грузовика/коммунальных прицепов
+7519,Recreational Vehicle Rentals,recreational_vehicle_rentals,Dam olish masofani ijaraga olish,Рекреационная аренда транспортных средств
+7523,"Parking Lots, Garages",parking_lots_garages,"Avtomobillar, Garajlar","Парковки, гаражи"
+7531,Auto Body Repair Shops,auto_body_repair_shops,Avtomatik tanani ta'mirlash sexlari,Автоматические мастерские ремонта кузова
+7534,Tire Retreading and Repair,tire_retreading_and_repair,Shinani qayta ishlash va ta'mirlash,Шиновое восстановление и ремонт
+7535,Auto Paint Shops,auto_paint_shops,Avtomatik bo'yoq do'konlari,Автократные магазины
+7538,Auto Service Shops,auto_service_shops,Avtomatik xizmat ko'rsatish do'konlari,Авто сервисные магазины
+7542,Car Washes,car_washes,Avtomobil yuvish,Автомобильные стирки
+7549,Towing Services,towing_services,Exish xizmatlari,Буксирные услуги
+7622,Electronics Repair Shops,electronics_repair_shops,Electronicik ta'mirlash do'konlari,Электронные ремонтные мастерские
+7623,"A/C, Refrigeration Repair",ac_refrigeration_repair,"A / C, Sovutgichni ta'mirlash","A/C, ремонт охлаждения"
+7629,Small Appliance Repair,small_appliance_repair,Kichik jihozni ta'mirlash,Ремонт небольшого устройства
+7631,Watch/Jewelry Repair,watch_jewelry_repair,Watch / zargarlik buyumlarini ta'mirlash,Смотреть/ювелирные изделия
+7641,"Furniture Repair, Refinishing",furniture_repair_refinishing,"Mebelni ta'mirlash, qayta ochish","Ремонт мебели, ремонт"
+7692,Welding Repair,welding_repair,Payvandlash,Сварка ремонта
+7699,Miscellaneous Repair Shops,miscellaneous_repair_shops,Turli xil ta'mirlash do'konlari,Разное ремонтные мастерские
+7829,Picture/Video Production,picture_video_production,Rasm / video ishlab chiqarish,Изображение/видеопроизводство
+7832,Motion Picture Theaters,motion_picture_theaters,Motion Teatr teatrlari,Кинотеатры
+7841,Video Tape Rental Stores,video_tape_rental_stores,Video lenta ijarasi do'konlari,С магазина аренды видеокассеры
+7911,"Dance Hall, Studios, Schools",dance_hall_studios_schools,"Raqs zali, studiyalar, maktablar","Танцевальный зал, студии, школы"
+7922,Theatrical Ticket Agencies,theatrical_ticket_agencies,Teatr chiptasining agentliklari,Театральные билетные агентства
+7929,"Bands, Orchestras",bands_orchestras,"Bands, orkestrlar","Группы, оркестры"
+7932,Billiard/Pool Establishments,billiard_pool_establishments,Bilyard / basseyn muassasalari,Бильярд/пул
+7933,Bowling Alleys,bowling_alleys,Bouling xiyobonlari,Боулинг -переулки
+7941,Sports Clubs/Fields,sports_clubs_fields,Sport klublari / sohalari,Спортивные клубы/поля
+7991,Tourist Attractions and Exhibits,tourist_attractions_and_exhibits,Turistik diqqatga sazovor joylar va eksponatlar,Туристические достопримечательности и экспонаты
+7992,Golf Courses - Public,golf_courses_public,Golf kurslari - ommaviy,Поля для гольфа - общественность
+7993,Video Amusement Game Supplies,video_amusement_game_supplies,Video o'yin-kulgi o'yinlari,Видеоализация Game Supplies
+7994,Video Game Arcades,video_game_arcades,Video o'yini arkades,Видеоигры аркады
+7995,Betting/Casino Gambling,betting_casino_gambling,Pul tikish / kazino qimor,Ставки/азартные игры казино
+7996,Amusement Parks/Carnivals,amusement_parks_carnivals,Ko'mir bog'lari / karnivials,Парки/карнавалы развлечений
+7997,Country Clubs,country_clubs,Mamlakat klublari,Загородные клубы
+7998,Aquariums,aquariums,Akvariumlar,Аквариумы
+7999,Miscellaneous Recreation Services,miscellaneous_recreation_services,Turli xil dam olish xizmatlari,Разные службы отдыха
+8011,Doctors,doctors,Shifokorlar,Врачи
+8021,"Dentists, Orthodontists",dentists_orthodontists,"Stomatologlar, ortodontlar","Стоматологи, ортодонт"
+8031,Osteopaths,osteopaths,Osteopatlar,Остеопаты
+8041,Chiropractors,chiropractors,Chiropraktors,Хиропрактики
+8042,"Optometrists, Ophthalmologist",optometrists_ophthalmologist,"Opometristlar, oftalmolog","Оптометристы, офтальмолог"
+8043,"Opticians, Eyeglasses",opticians_eyeglasses,"Optikaliklar, ko'zoynaklar","Оптики, очки"
+8049,"Chiropodists, Podiatrists",chiropodists_podiatrists,"Chiropodchilar, podiatrlar","Хироподисты, Подиатры"
+8050,Nursing/Personal Care,nursing_personal_care,Hamshiralik / shaxsiy parvarish,Уход/личная помощь
+8062,Hospitals,hospitals,Kasalxonalar,Больницы
+8071,Medical and Dental Labs,medical_and_dental_labs,Tibbiy va stomatologik laboratoriyalar,Медицинские и стоматологические лаборатории
+8099,Medical Services,medical_services,Tibbiy xizmatlar,Медицинские услуги
+8111,"Legal Services, Attorneys",legal_services_attorneys,"Yuridik xizmatlar, advokatlar","Юридические услуги, адвокаты"
+8211,"Elementary, Secondary Schools",elementary_secondary_schools,"Boshlang'ich, o'rta maktablar","Начальные, средние школы"
+8220,"Colleges, Universities",colleges_universities,"Kollejlar, universitetlar","Колледжи, университеты"
+8241,Correspondence Schools,correspondence_schools,Masoratsizlik maktablari,Переписка школ
+8244,Business/Secretarial Schools,business_secretarial_schools,Biznes / kotibiyat maktablari,Бизнес/секретарские школы
+8249,Vocational/Trade Schools,vocational_trade_schools,Kasb-tijorat maktablari,Профессиональные/торговые школы
+8299,Educational Services,educational_services,Ta'lim bo'yicha xizmatlar,Образовательные услуги
+8351,Child Care Services,child_care_services,Bolalar parvarishlari,Услуги по уходу за детьми
+8398,Charitable and Social Service Organizations - Fundraising,charitable_and_social_service_organizations_fundraising,Xayriya va ijtimoiy xizmat tashkilotlari - mablag 'yig'ish,Благотворительные и социальные услуги - сбор средств
+8641,"Civic, Social, Fraternal Associations",civic_social_fraternal_associations,"Fuqarolik, ijtimoiy, qardosh birlashmalar","Гражданские, социальные, братские ассоциации"
+8651,Political Organizations,political_organizations,Siyosiy tashkilotlar,Политические организации
+8661,Religious Organizations,religious_organizations,Diniy tashkilotlar,Религиозные организации
+8675,Automobile Associations,automobile_associations,Avtomobillar uyushmalari,Автомобильные ассоциации
+8699,Membership Organizations,membership_organizations,A'zolik tashkilotlari,Членские организации
+8734,Testing Laboratories,testing_laboratories,Sinov laboratoriyalari,Тестирование лабораторий
+8911,Architectural/Surveying Services,architectural_surveying_services,Arxitektura / qidiruv xizmatlari,Архитектурные/съемки услуг
+8931,Accounting/Bookkeeping Services,accounting_bookkeeping_services,Buxgalteriya / buxgalteriya xizmatlari,Служба бухгалтерского учета/бухгалтерского учета
+8999,Professional Services,professional_services,Kasblar,Профессиональные услуги
+9211,"Court Costs, Including Alimony and Child Support - Courts of Law",court_costs,"Sud xarajatlari, aliment va bolalarni qo'llab-quvvatlash - qonun mukofoti","Судебные издержки, включая алименты и алименты - суды"
+9222,Fines - Government Administrative Entities,fines_government_administrative_entities,Jarimalar - davlat boshqaruvi organlari,Штрафы - государственные административные организации
+9223,"Bail and Bond Payments (payment to the surety for the bond, not the actual bond paid to the government agency)",bail_and_bond_payments,"Garov va obligatsiya to'lovlari (davlat idorasiga to'lanadigan haqiqiy obliga emas, balki rishtalar uchun emas)","Оплата залога и облигаций (оплата поручителю за облигацию, а не фактическую облигацию, уплаченную государственному агентству)"
+9311,Tax Payments - Government Agencies,tax_payments_government_agencies,Soliq to'lovlari - davlat idoralari,Налоговые платежи - государственные учреждения
+9399,Government Services (Not Elsewhere Classified),government_services,Davlat xizmatlari (boshqa joyda tasniflangan emas),Государственные услуги (не в других местах классифицируются)
+9402,Postal Services - Government Only,postal_services_government_only,Pochta xizmatlari - Faqat hukumat,Почтовые услуги - только правительство
+9405,U.S. Federal Government Agencies or Departments,u_s_federal_government_agencies_or_departments,U.S. AQSh Federal hukumat idoralari yoki bo'limlar,Федеральные правительственные органы США или департаменты
+9950,Intra-Company Purchases,intra_company_purchases,Kompaniya ichidagi xaridlar,Внутренние покупки
