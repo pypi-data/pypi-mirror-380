@@ -1,0 +1,138 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spicelab"
+version = "0.3.1"
+description = "Circuit Toolkit (package: spicelab) – typed SPICE orchestration, sweeps, and Monte Carlo."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name="Luiz Carlos Gili" }]
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "polars>=1.33.1",
+    "typing-extensions>=4.9",
+    "xarray>=2025.6.1",
+    "pydantic>=2.7",
+]
+
+keywords = ["spice", "circuit", "simulation", "ngspice", "electronics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+[project.urls]
+Homepage = "https://github.com/lgili/circuit_toolkit"
+Repository = "https://github.com/lgili/circuit_toolkit.git"
+Issues = "https://github.com/lgili/circuit_toolkit/issues"
+Documentation = "https://lgili.github.io/CircuitToolkit/"
+
+[project.scripts]
+spicelab-doctest = "spicelab:__init__"
+spicelab-measure = "spicelab.cli.measure:main"
+
+[project.optional-dependencies]
+opt = ["scipy>=1.12"]
+viz = ["plotly>=5.20", "kaleido>=0.2.1", "ipywidgets>=8.1", "anywidget>=0.9", "nbformat>=5.0"]
+data = ["xarray>=2024.1", "polars>=1.6.0"]
+xarray = ["xarray>=2024.1"]
+polars = ["polars>=1.6.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["spicelab*", "spicelab"]
+
+[tool.setuptools.package-data]
+spicelab = ["py.typed", "library/data/opamps/*.sub"]
+
+[tool.pytest.ini_options]
+    addopts = "-q --maxfail=1 --disable-warnings --cov=spicelab --cov-report=term-missing --cov-report=xml"
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+markers = [
+    "engine: tests that require external SPICE engine executables (ngspice, ltspice, xyce)",
+    "local: tests meant to run only on developer machines (skipped in CI unless explicitly enabled)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["spicelab", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+# root layout
+explicit_package_bases = true
+mypy_path = "."
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+allow_untyped_defs = true
+allow_untyped_calls = true
+allow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = ["examples.*"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = [
+    "polars",
+    "polars.*",
+    "xarray",
+    "xarray.*",
+    "pandas",
+    "pandas.*",
+    "ipywidgets",
+    "ipywidgets.*",
+    "plotly",
+    "plotly.*",
+]
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "mypy",
+    "ruff",
+    "hypothesis",
+    "pre-commit",
+    "build>=1.3.0",
+    "twine>=6.1.0",
+    "lark>=1.0.0",
+    "plotly>=5.20",
+    "kaleido>=0.2.1",
+    "xarray>=2024.1",
+    "polars>=1.6.0",
+    "ipywidgets>=8.1",
+    "anywidget>=0.9",
+    "nbformat>=5.0",
+]

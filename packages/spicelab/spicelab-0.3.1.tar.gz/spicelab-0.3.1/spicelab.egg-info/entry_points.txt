@@ -1,0 +1,3 @@
+[console_scripts]
+spicelab-doctest = spicelab:__init__
+spicelab-measure = spicelab.cli.measure:main

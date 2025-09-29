@@ -1,0 +1,231 @@
+"""Top-level exports for spicelab.
+
+Exposes the high-level helpers documented throughout the docs site.
+"""
+
+from importlib.metadata import PackageNotFoundError, version
+
+# Package version
+try:  # pragma: no cover - metadata resolution may vary in editable installs
+    __version__ = version("spicelab")
+except PackageNotFoundError:  # pragma: no cover
+    __version__ = "0.0.0"
+
+# Top-level convenient API imports
+
+# Core building blocks
+# Analyses and utilities
+from .analysis import (
+    AnalysisResult,
+    Dist,
+    GainSpec,
+    GridResult,
+    GridRun,
+    LogNormalPct,
+    MonteCarloResult,
+    NormalPct,
+    OvershootSpec,
+    SettlingTimeSpec,
+    SweepResult,
+    SweepRun,
+    TriangularPct,
+    UniformAbs,
+    UniformPct,
+    measure,
+    monte_carlo,
+    run_param_grid,
+    run_value_sweep,
+)
+
+# Plotting
+from .core.circuit import Circuit
+from .core.components import (
+    CCCS,
+    CCVS,
+    IA,
+    IP,
+    IPWL,
+    IPWL_T,
+    ISIN,
+    ISIN_T,
+    OA,
+    VA,
+    VCCS,
+    VCVS,
+    VP,
+    VPWL,
+    VPWL_T,
+    VSIN,
+    VSIN_T,
+    C,
+    Capacitor,
+    D,
+    Diode,
+    E,
+    F,
+    G,
+    H,
+    I,
+    Iac,
+    Idc,
+    Inductor,
+    Ipulse,
+    Ipwl,
+    L,
+    OpAmpIdeal,
+    R,
+    Resistor,
+    V,
+    Vdc,
+    Vpulse,
+    Vpwl,
+)
+from .core.net import GND, Net
+from .library import (
+    BjtFactory,
+    CapacitorFactory,
+    ComponentFactory,
+    ComponentFactoryProtocol,
+    ComponentSpec,
+    ControlledSourceFactory,
+    CurrentSourceFactory,
+    DiodeFactory,
+    IdealOpAmpFactory,
+    InductorFactory,
+    ISwitchFactory,
+    MosfetFactory,
+    OpAmpSubcktFactory,
+    ResistorFactory,
+    VSwitchFactory,
+    apply_metadata_to_circuit,
+    create_component,
+    get_component_spec,
+    list_components,
+    register_component,
+    unregister_component,
+)
+from .utils.topologies import opamp_buffer, opamp_inverting
+from .viz import (
+    VizFigure,
+    bode_view,
+    monte_carlo_histogram,
+    monte_carlo_kde,
+    monte_carlo_param_scatter,
+    params_scatter_matrix,
+    plot_bode,
+    plot_sweep_df,
+    plot_traces,
+    sweep_curve,
+    time_series_view,
+)
+
+__all__ = [
+    "__version__",
+    # Core
+    "Circuit",
+    "Net",
+    "GND",
+    "Resistor",
+    "Capacitor",
+    "Vpulse",
+    "Ipulse",
+    "Vpwl",
+    "Ipwl",
+    "Inductor",
+    "Vdc",
+    "VA",
+    "VP",
+    "VSIN",
+    "ISIN",
+    "VPWL",
+    "IPWL",
+    "OpAmpIdeal",
+    "OA",
+    "Diode",
+    "D",
+    "VCVS",
+    "VCCS",
+    "CCCS",
+    "CCVS",
+    "E",
+    "G",
+    "F",
+    "H",
+    "R",
+    "C",
+    "V",
+    "L",
+    "Idc",
+    "Iac",
+    "I",
+    "IA",
+    "IP",
+    # Component library
+    "ComponentFactory",
+    "ComponentSpec",
+    "ComponentFactoryProtocol",
+    "ResistorFactory",
+    "CapacitorFactory",
+    "InductorFactory",
+    "DiodeFactory",
+    "CurrentSourceFactory",
+    "VSwitchFactory",
+    "ISwitchFactory",
+    "MosfetFactory",
+    "BjtFactory",
+    "IdealOpAmpFactory",
+    "OpAmpSubcktFactory",
+    "ControlledSourceFactory",
+    "apply_metadata_to_circuit",
+    "register_component",
+    "unregister_component",
+    "create_component",
+    "get_component_spec",
+    "list_components",
+    # Analyses helpers
+    "AnalysisResult",
+    "measure",
+    "GainSpec",
+    "OvershootSpec",
+    "SettlingTimeSpec",
+    "Dist",
+    "NormalPct",
+    "UniformPct",
+    "LogNormalPct",
+    "TriangularPct",
+    "UniformAbs",
+    "MonteCarloResult",
+    "monte_carlo",
+    "SweepRun",
+    "SweepResult",
+    "GridRun",
+    "GridResult",
+    "run_value_sweep",
+    "run_param_grid",
+    # Plotting
+    "plot_traces",
+    "plot_bode",
+    "plot_sweep_df",
+    "VizFigure",
+    "time_series_view",
+    "bode_view",
+    "sweep_curve",
+    "monte_carlo_histogram",
+    "monte_carlo_param_scatter",
+    "monte_carlo_kde",
+    "params_scatter_matrix",
+]
+
+# Typed source helpers (also export for convenience)
+__all__ += [
+    "VSIN_T",
+    "ISIN_T",
+    "VPWL_T",
+    "IPWL_T",
+]
+
+# Topology helpers
+__all__ += [
+    "opamp_buffer",
+    "opamp_inverting",
+]
