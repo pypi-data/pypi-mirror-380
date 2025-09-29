@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: EnigmaAPI
+Version: 1.0.0
+Summary: Python ctypes wrapper for Enigma Protector API
+Author-email: Kevin Hsu <vmcgresh@proton.me>
+License: MIT
+Keywords: enigma,protector,ctypes,license,wrapper
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8
