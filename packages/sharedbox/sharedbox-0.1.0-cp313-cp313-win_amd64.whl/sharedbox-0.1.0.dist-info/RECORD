@@ -1,0 +1,12 @@
+sharedbox/__init__.py,sha256=eXnGQaG6CewxDJ7sGZjKbQ8zRXYzllcwDnx8HK1lBQY,65
+sharedbox/_shareddict.cp313-win_amd64.pyd,sha256=n2sH_RPpyDWr9rmzMZJHrSIj96jHhe3-DpN77AD04TU,227328
+sharedbox/_shareddict.pyi,sha256=bnSxe1V2H28o4OmKYKUmWM7aOLt3PfeyN10swaixTiY,1029
+sharedbox/_shareddict.pyx,sha256=hrU1MqcozLBooxTR5gLoju-h2dvBVuYOaCcKv0sNQtA,13879
+sharedbox/_version.py,sha256=7VAwr_Y4I30gkfUzxKxH2NbnLcgKYS2eJ7xUHD2f5t4,746
+sharedbox/utils.cp313-win_amd64.pyd,sha256=5TeGVW-K8yPibdcuIBktD_own90f7JZV5G74kzhhVPQ,81408
+sharedbox/utils.py,sha256=9sTzgKYMj4dj_Ks2Q1dbTCWDKxeD-aNAkDog6CI_aNc,10893
+sharedbox-0.1.0.dist-info/licenses/LICENSE,sha256=lj5YNz2g66TL33fWs0aLU5qLgALPnOvnb0xVk6whWbA,11546
+sharedbox-0.1.0.dist-info/METADATA,sha256=LCTMS_3Wooxzx0aXsxl1E3Y3tucZdu0kL5ZxANhHO64,4239
+sharedbox-0.1.0.dist-info/WHEEL,sha256=qV0EIPljj1XC_vuSatRWjn02nZIz3N1t8jsZz7HBr2U,101
+sharedbox-0.1.0.dist-info/top_level.txt,sha256=efvcA1LLG6nAoGlbTnKFlWWtIau3MXustUMsATPQMZE,10
+sharedbox-0.1.0.dist-info/RECORD,,
