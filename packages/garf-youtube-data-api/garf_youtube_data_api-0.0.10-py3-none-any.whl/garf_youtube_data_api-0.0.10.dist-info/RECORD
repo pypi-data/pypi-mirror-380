@@ -1,0 +1,12 @@
+garf_youtube_data_api/__init__.py,sha256=ArfstdlMLv53S_Z_39fI3125lu33y_2IskIQ6QGjJZ8,889
+garf_youtube_data_api/api_clients.py,sha256=XZIOAYNyO1c16fCdfEuo9oaZtkMdzmdgypg6xpvgaT8,3186
+garf_youtube_data_api/exceptions.py,sha256=uXZK7fQGWjfihovwiY2SpU-w-eqi_A2Rdwd6c-W-rUw,708
+garf_youtube_data_api/query_editor.py,sha256=iFZizQEoZikPTFxItyozZkSD8yqHGLPsJNtoAS9aA4A,743
+garf_youtube_data_api/report_fetcher.py,sha256=MnYm79x6KKIPp8fDvJCNoeU8khz8_CScNBtVIchuFoE,2897
+garf_youtube_data_api/builtins/__init__.py,sha256=LhnSUHeUPYGTt7EmPyvHZrJFcmy2R6OXdetsTMByJlE,143
+garf_youtube_data_api/builtins/channel_videos.py,sha256=MHYOB4iU_gfd8WfOk098wmLsj6cu1dCJfgznJiuX-YI,1486
+garf_youtube_data_api-0.0.10.dist-info/METADATA,sha256=4GjvylrEqaG-zAfDqqVHg54ASa-wcWBm2mbl4ML5mFQ,2696
+garf_youtube_data_api-0.0.10.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+garf_youtube_data_api-0.0.10.dist-info/entry_points.txt,sha256=J0sOGlDFXeajkp4Hku73EmtYtXlWzBufcKWg3qmwsRo,63
+garf_youtube_data_api-0.0.10.dist-info/top_level.txt,sha256=BYMvQfmuEVfPMGeLVx4jok6ctqvt4UmPuptWm4ykpxY,22
+garf_youtube_data_api-0.0.10.dist-info/RECORD,,
