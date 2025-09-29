@@ -1,0 +1,2 @@
+[console_scripts]
+uniscan = uniscan.main:main
