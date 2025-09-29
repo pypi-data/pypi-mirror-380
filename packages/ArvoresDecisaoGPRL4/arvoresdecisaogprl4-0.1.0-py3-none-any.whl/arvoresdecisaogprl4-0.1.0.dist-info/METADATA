@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ArvoresDecisaoGPRL4
+Version: 0.1.0
+Summary: Algoritmos de árvore de decisão: CART, C4.5, ID3
+Author: Gustavo
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+
