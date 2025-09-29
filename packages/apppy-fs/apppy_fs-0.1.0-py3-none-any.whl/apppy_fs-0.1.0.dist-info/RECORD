@@ -1,0 +1,11 @@
+apppy/fs/__init__.py,sha256=GTHUk0-RTu3z210UDd0IZupzNCSjiNt_eYxStB-Fw1w,33408
+apppy/fs/errors.py,sha256=9f9f5yhbwH_K4TONnWH2Np1lO1AKVrQbDVMszDHjlQQ,1586
+apppy/fs/fs_unit_test.py,sha256=X7eH6sA9JBIWVDTQKdfZNEGP4Ncs_q3wEk77Qczj0so,8844
+apppy/fs/hash.py,sha256=jBVs4N7XWSGMc_MrDTXfz49Kv1pcvZai07WpHsi72Hg,630
+apppy/fs/local.py,sha256=D30jIOMRIzsw_8TDa1xuKt6vchL7ctjaGRUdig9jwPM,4381
+apppy/fs/local_test.py,sha256=ij8WuCWn1KD1QRrfX4QSfOFVKhhoL7_NWdbEw1AbxH0,2461
+apppy/fs/local_unit_test.py,sha256=uPUksEmPGvP5XYfN6jjOrTyw_FMOo8mGkBH6xteO9uE,5567
+apppy/fs/test_examples/quick_brown_fox.txt,sha256=ychcqlqTqtK_zJG5oC1BhaDwNIqsBJ5lC9D03qEKc5M,46
+apppy_fs-0.1.0.dist-info/METADATA,sha256=VvDSiU1d4mplclWas6W3eSHd3rGtOxaR4C2WckZJRRs,521
+apppy_fs-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+apppy_fs-0.1.0.dist-info/RECORD,,
