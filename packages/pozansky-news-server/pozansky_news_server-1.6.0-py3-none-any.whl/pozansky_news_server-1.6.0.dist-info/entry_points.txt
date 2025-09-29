@@ -1,0 +1,2 @@
+[console_scripts]
+pozansky-news-server = pozansky_news_server.__main__:main
