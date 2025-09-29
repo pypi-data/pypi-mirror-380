@@ -1,0 +1,31 @@
+"""
+App configuration for {{ app_name }}.
+
+{{ description }}
+"""
+
+from django.apps import AppConfig
+{% if app_type == 'django_cfg' %}
+from django_cfg.apps import BaseCfgAppConfig
+{% endif %}
+
+
+{% if app_type == 'django_cfg' %}
+class {{ app_name|pascal_case }}Config(BaseCfgAppConfig):
+{% else %}
+class {{ app_name|pascal_case }}Config(AppConfig):
+{% endif %}
+    """Configuration for {{ app_name }} application."""
+    
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = '{{ app_name }}'
+    verbose_name = '{{ app_name|title_case }}'
+    
+    {% if features.signals %}
+    def ready(self):
+        """Import signals when app is ready."""
+        try:
+            import {{ app_name }}.signals  # noqa F401
+        except ImportError:
+            pass
+    {% endif %}

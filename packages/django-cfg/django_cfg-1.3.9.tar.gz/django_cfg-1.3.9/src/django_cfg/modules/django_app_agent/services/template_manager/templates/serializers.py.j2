@@ -1,0 +1,91 @@
+"""
+DRF Serializers for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from rest_framework import serializers
+{% if features.nested_serializers %}
+from rest_framework.fields import SerializerMethodField
+{% endif %}
+from .models import {{ app_name|pascal_case }}Model
+{% if features.related_models %}
+from .models import {{ app_name|pascal_case }}Category, {{ app_name|pascal_case }}Tag
+{% endif %}
+
+
+class {{ app_name|pascal_case }}Serializer(serializers.ModelSerializer):
+    """Serializer for {{ app_name }} model."""
+    
+    {% if features.computed_fields %}
+    display_name = serializers.SerializerMethodField()
+    is_published = serializers.SerializerMethodField()
+    {% endif %}
+    
+    class Meta:
+        model = {{ app_name|pascal_case }}Model
+        fields = [
+            'id',
+            'name',
+            'description',
+            {% if features.status_tracking %}'status',{% endif %}
+            {% if features.user_relations %}'owner',{% endif %}
+            'created_at',
+            'updated_at',
+            {% if features.computed_fields %}
+            'display_name',
+            'is_published',
+            {% endif %}
+        ]
+        read_only_fields = ['id', 'created_at', 'updated_at']
+    
+    {% if features.computed_fields %}
+    def get_display_name(self, obj):
+        """Get formatted display name."""
+        return obj.get_display_name()
+    
+    def get_is_published(self, obj):
+        """Check if item is published."""
+        return obj.is_published()
+    {% endif %}
+    
+    def validate_name(self, value):
+        """Validate name field."""
+        if len(value.strip()) < 2:
+            raise serializers.ValidationError(
+                "Name must be at least 2 characters long."
+            )
+        return value.strip()
+
+
+{% if features.list_serializers %}
+class {{ app_name|pascal_case }}ListSerializer(serializers.ModelSerializer):
+    """Lightweight serializer for {{ app_name }} lists."""
+    
+    class Meta:
+        model = {{ app_name|pascal_case }}Model
+        fields = [
+            'id',
+            'name',
+            {% if features.status_tracking %}'status',{% endif %}
+            'created_at'
+        ]
+{% endif %}
+
+
+{% if features.related_models %}
+class {{ app_name|pascal_case }}CategorySerializer(serializers.ModelSerializer):
+    """Serializer for {{ app_name }} categories."""
+    
+    class Meta:
+        model = {{ app_name|pascal_case }}Category
+        fields = ['id', 'name', 'slug', 'description']
+
+
+class {{ app_name|pascal_case }}TagSerializer(serializers.ModelSerializer):
+    """Serializer for {{ app_name }} tags."""
+    
+    class Meta:
+        model = {{ app_name|pascal_case }}Tag
+        fields = ['id', 'name', 'color']
+{% endif %}

@@ -1,0 +1,107 @@
+"""
+Forms for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django import forms
+from django.core.exceptions import ValidationError
+{% if features.crispy_forms %}
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit, Row, Column
+{% endif %}
+from .models import {{ app_name|pascal_case }}Model
+
+
+class {{ app_name|pascal_case }}Form(forms.ModelForm):
+    """Form for {{ app_name }} model."""
+    
+    class Meta:
+        model = {{ app_name|pascal_case }}Model
+        fields = [
+            'name', 
+            'description',
+            {% if features.status_tracking %}'status',{% endif %}
+        ]
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 4}),
+            {% if features.status_tracking %}
+            'status': forms.Select(attrs={'class': 'form-select'}),
+            {% endif %}
+        }
+        help_texts = {
+            'name': 'Enter a descriptive name for this {{ app_name|singular }}',
+            'description': 'Provide additional details (optional)',
+        }
+    
+    {% if features.crispy_forms %}
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            Row(
+                Column('name', css_class='form-group col-md-8 mb-0'),
+                {% if features.status_tracking %}
+                Column('status', css_class='form-group col-md-4 mb-0'),
+                {% endif %}
+                css_class='form-row'
+            ),
+            'description',
+            Submit('submit', 'Save {{ app_name|title_case }}', css_class='btn btn-primary')
+        )
+    {% endif %}
+    
+    def clean_name(self):
+        """Validate name field."""
+        name = self.cleaned_data.get('name')
+        if name:
+            # Check for duplicate names (case-insensitive)
+            existing = {{ app_name|pascal_case }}Model.objects.filter(
+                name__iexact=name
+            )
+            if self.instance.pk:
+                existing = existing.exclude(pk=self.instance.pk)
+            
+            if existing.exists():
+                raise ValidationError(
+                    f'A {{ app_name|singular }} with this name already exists.'
+                )
+        
+        return name
+    
+    def clean(self):
+        """Additional form validation."""
+        cleaned_data = super().clean()
+        
+        # Add any cross-field validation here
+        name = cleaned_data.get('name')
+        description = cleaned_data.get('description')
+        
+        if name and description and name.lower() in description.lower():
+            self.add_error('description', 
+                'Description should not just repeat the name.')
+        
+        return cleaned_data
+
+
+{% if features.search_forms %}
+class {{ app_name|pascal_case }}SearchForm(forms.Form):
+    """Search form for {{ app_name }}."""
+    
+    query = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Search {{ app_name|plural }}...',
+            'class': 'form-control'
+        })
+    )
+    
+    {% if features.status_tracking %}
+    status = forms.ChoiceField(
+        choices=[('', 'All')] + {{ app_name|pascal_case }}Model.STATUS_CHOICES,
+        required=False,
+        widget=forms.Select(attrs={'class': 'form-select'})
+    )
+    {% endif %}
+{% endif %}

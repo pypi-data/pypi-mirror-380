@@ -1,0 +1,195 @@
+"""
+Tests for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django.test import TestCase, Client
+from django.urls import reverse
+{% if features.user_relations %}
+from django.contrib.auth.models import User
+{% endif %}
+{% if features.api_tests %}
+from rest_framework.test import APITestCase
+from rest_framework import status
+{% endif %}
+from .models import {{ app_name|pascal_case }}Model
+
+
+class {{ app_name|pascal_case }}ModelTest(TestCase):
+    """Test cases for {{ app_name }} model."""
+    
+    def setUp(self):
+        """Set up test data."""
+        {% if features.user_relations %}
+        self.user = User.objects.create_user(
+            username='testuser',
+            email='test@example.com',
+            password='testpass123'
+        )
+        {% endif %}
+        
+        self.{{ app_name|snake_case }} = {{ app_name|pascal_case }}Model.objects.create(
+            name='Test {{ app_name|title_case }}',
+            description='Test description',
+            {% if features.status_tracking %}status='draft',{% endif %}
+            {% if features.user_relations %}owner=self.user{% endif %}
+        )
+    
+    def test_string_representation(self):
+        """Test string representation of model."""
+        self.assertEqual(str(self.{{ app_name|snake_case }}), 'Test {{ app_name|title_case }}')
+    
+    def test_get_absolute_url(self):
+        """Test get_absolute_url method."""
+        url = self.{{ app_name|snake_case }}.get_absolute_url()
+        expected_url = reverse('{{ app_name }}:detail', kwargs={'pk': self.{{ app_name|snake_case }}.pk})
+        self.assertEqual(url, expected_url)
+    
+    {% if features.custom_methods %}
+    def test_is_published(self):
+        """Test is_published method."""
+        {% if features.status_tracking %}
+        self.assertFalse(self.{{ app_name|snake_case }}.is_published())
+        
+        self.{{ app_name|snake_case }}.status = 'published'
+        self.{{ app_name|snake_case }}.save()
+        self.assertTrue(self.{{ app_name|snake_case }}.is_published())
+        {% else %}
+        self.assertTrue(self.{{ app_name|snake_case }}.is_published())
+        {% endif %}
+    
+    def test_get_display_name(self):
+        """Test get_display_name method."""
+        display_name = self.{{ app_name|snake_case }}.get_display_name()
+        self.assertEqual(display_name, 'Test {{ app_name|title_case }}')
+    {% endif %}
+
+
+{% if features.view_tests %}
+class {{ app_name|pascal_case }}ViewTest(TestCase):
+    """Test cases for {{ app_name }} views."""
+    
+    def setUp(self):
+        """Set up test data."""
+        self.client = Client()
+        {% if features.user_relations %}
+        self.user = User.objects.create_user(
+            username='testuser',
+            email='test@example.com',
+            password='testpass123'
+        )
+        {% endif %}
+        
+        self.{{ app_name|snake_case }} = {{ app_name|pascal_case }}Model.objects.create(
+            name='Test {{ app_name|title_case }}',
+            description='Test description',
+            {% if features.status_tracking %}status='published',{% endif %}
+            {% if features.user_relations %}owner=self.user{% endif %}
+        )
+    
+    {% if features.function_based_views %}
+    def test_index_view(self):
+        """Test index view."""
+        {% if features.authentication %}
+        self.client.login(username='testuser', password='testpass123')
+        {% endif %}
+        
+        url = reverse('{{ app_name }}:index')
+        response = self.client.get(url)
+        
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Test {{ app_name|title_case }}')
+    
+    def test_detail_view(self):
+        """Test detail view."""
+        {% if features.authentication %}
+        self.client.login(username='testuser', password='testpass123')
+        {% endif %}
+        
+        url = reverse('{{ app_name }}:detail', kwargs={'pk': self.{{ app_name|snake_case }}.pk})
+        response = self.client.get(url)
+        
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, self.{{ app_name|snake_case }}.name)
+    {% endif %}
+    
+    {% if features.class_based_views %}
+    def test_list_view(self):
+        """Test list view."""
+        {% if features.authentication %}
+        self.client.login(username='testuser', password='testpass123')
+        {% endif %}
+        
+        url = reverse('{{ app_name }}:list')
+        response = self.client.get(url)
+        
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, self.{{ app_name|snake_case }}.name)
+    {% endif %}
+    
+    {% if features.crud_views %}
+    def test_create_view(self):
+        """Test create view."""
+        {% if features.authentication %}
+        self.client.login(username='testuser', password='testpass123')
+        {% endif %}
+        
+        url = reverse('{{ app_name }}:create')
+        
+        # Test GET request
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        
+        # Test POST request
+        data = {
+            'name': 'New {{ app_name|title_case }}',
+            'description': 'New description',
+            {% if features.status_tracking %}'status': 'draft'{% endif %}
+        }
+        response = self.client.post(url, data)
+        self.assertEqual(response.status_code, 302)  # Redirect after success
+        
+        # Verify object was created
+        self.assertTrue(
+            {{ app_name|pascal_case }}Model.objects.filter(name='New {{ app_name|title_case }}').exists()
+        )
+    {% endif %}
+{% endif %}
+
+
+{% if features.api_tests %}
+class {{ app_name|pascal_case }}APITest(APITestCase):
+    """Test cases for {{ app_name }} API."""
+    
+    def setUp(self):
+        """Set up test data."""
+        {% if features.user_relations %}
+        self.user = User.objects.create_user(
+            username='testuser',
+            email='test@example.com',
+            password='testpass123'
+        )
+        {% endif %}
+        
+        self.{{ app_name|snake_case }} = {{ app_name|pascal_case }}Model.objects.create(
+            name='Test {{ app_name|title_case }}',
+            description='Test description',
+            {% if features.status_tracking %}status='published',{% endif %}
+            {% if features.user_relations %}owner=self.user{% endif %}
+        )
+    
+    def test_api_view(self):
+        """Test API view."""
+        {% if features.authentication %}
+        self.client.force_authenticate(user=self.user)
+        {% endif %}
+        
+        url = reverse('{{ app_name }}:api')
+        response = self.client.get(url)
+        
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(response.data['success'])
+        self.assertEqual(len(response.data['data']), 1)
+        self.assertEqual(response.data['data'][0]['name'], 'Test {{ app_name|title_case }}')
+{% endif %}

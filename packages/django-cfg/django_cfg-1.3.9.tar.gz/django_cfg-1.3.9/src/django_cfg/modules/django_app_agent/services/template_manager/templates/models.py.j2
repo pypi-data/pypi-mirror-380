@@ -1,0 +1,139 @@
+"""
+Models for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django.db import models
+from django.urls import reverse
+from django.core.validators import MinLengthValidator, MaxLengthValidator
+{% if app_type == 'django_cfg' %}
+from django_cfg.models import BaseCfgModel
+{% endif %}
+{% if features.user_relations %}
+from django.contrib.auth.models import User
+{% endif %}
+{% if features.uuid_primary_keys %}
+import uuid
+{% endif %}
+
+
+{% if app_type == 'django_cfg' %}
+class {{ app_name|pascal_case }}Model(BaseCfgModel):
+{% else %}
+class {{ app_name|pascal_case }}Model(models.Model):
+{% endif %}
+    """Main model for {{ app_name }} application."""
+    
+    {% if features.uuid_primary_keys %}
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+        help_text="Unique identifier"
+    )
+    {% endif %}
+    
+    name = models.CharField(
+        max_length=100,
+        validators=[MinLengthValidator(2)],
+        help_text="Name of the {{ app_name|singular|title_case }}"
+    )
+    
+    description = models.TextField(
+        blank=True,
+        help_text="Detailed description"
+    )
+    
+    {% if features.status_tracking %}
+    STATUS_CHOICES = [
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+        ('archived', 'Archived'),
+    ]
+    
+    status = models.CharField(
+        max_length=20,
+        choices=STATUS_CHOICES,
+        default='draft',
+        help_text="Current status"
+    )
+    {% endif %}
+    
+    {% if features.user_relations %}
+    owner = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="{{ app_name }}_owned",
+        help_text="Owner of this {{ app_name|singular }}"
+    )
+    {% endif %}
+    
+    {% if not app_type == 'django_cfg' %}
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    {% endif %}
+    
+    class Meta:
+        verbose_name = "{{ app_name|singular|title_case }}"
+        verbose_name_plural = "{{ app_name|plural|title_case }}"
+        ordering = ['-created_at']
+        {% if features.database_indexes %}
+        indexes = [
+            models.Index(fields=['name']),
+            models.Index(fields=['created_at']),
+            {% if features.status_tracking %}
+            models.Index(fields=['status']),
+            {% endif %}
+        ]
+        {% endif %}
+    
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('{{ app_name }}:detail', kwargs={'pk': self.pk})
+    
+    {% if features.custom_methods %}
+    def is_published(self):
+        """Check if the item is published."""
+        {% if features.status_tracking %}
+        return self.status == 'published'
+        {% else %}
+        return True
+        {% endif %}
+    
+    def get_display_name(self):
+        """Get formatted display name."""
+        return self.name.title()
+    {% endif %}
+
+
+{% if features.related_models %}
+class {{ app_name|pascal_case }}Category(models.Model):
+    """Category model for {{ app_name }}."""
+    
+    name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(unique=True)
+    description = models.TextField(blank=True)
+    
+    class Meta:
+        verbose_name_plural = "Categories"
+        ordering = ['name']
+    
+    def __str__(self):
+        return self.name
+
+
+class {{ app_name|pascal_case }}Tag(models.Model):
+    """Tag model for {{ app_name }}."""
+    
+    name = models.CharField(max_length=30, unique=True)
+    color = models.CharField(max_length=7, default='#007bff')  # Hex color
+    
+    class Meta:
+        ordering = ['name']
+    
+    def __str__(self):
+        return self.name
+{% endif %}
