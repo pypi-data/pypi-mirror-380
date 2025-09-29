@@ -1,0 +1,2 @@
+[console_scripts]
+gweasy = gweasy.gweasy:main
