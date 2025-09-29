@@ -1,0 +1,28 @@
+<section id="how-it-works" class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+           <span class="text-primary">{{ sections.howItWorks.title }}</span> 
+        </h2>
+        <p class="text-lg text-gray-600">{{ sections.howItWorks.subtitle }}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for step in sections.howItWorks.steps %}
+          <div class="relative">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 h-full">
+              <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mb-4 font-bold">1</div>
+              <h3 class="text-xl font-semibold mb-3">{{ step.title }}</h3>
+              <p class="text-gray-600">{{ step.description }}</p>
+            </div>
+            
+              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-1 bg-gray-200"></div>
+            
+          </div>
+        {% endfor %}
+        
+      </div>
+      <div class="mt-16 text-center">
+        <a href="#" class="bg-primary text-white px-8 py-3 !rounded-button font-medium inline-block whitespace-nowrap get-started-btn">{{ sections.howItWorks.ctaButton.label }}</a>
+      </div>
+    </div>
+  </section>
