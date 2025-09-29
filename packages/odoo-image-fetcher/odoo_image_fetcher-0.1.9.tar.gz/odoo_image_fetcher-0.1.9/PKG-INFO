@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: odoo-image-fetcher
+Version: 0.1.9
+Summary: A simple utility to fetch images from Odoo via XML-RPC.
+Home-page: https://github.com/cloudtechy/odoo-image-fetcher
+Download-URL: https://github.com/cloudtechy/odoo-image-fetcher/archive/refs/tags/v0.1.9.tar.gz
+Author: Onyekelu Chukwuebuka
+Author-email: conyekelu@yahoo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: urllib3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# odoo-image-fetcher
+
+Fetch product images from Odoo using session-based authentication.
+
+## Installation
+
+```bash
+pip install odoo-image-fetcher
+````
+
+## Usage
+
+```python
+from odoo_image_fetcher import ImageFetcher
+
+image_bytes = ImageFetcher.fetch_image("/web/image/product.template/17956/image_128")
+if image_bytes:
+    with open("product_image.png", "wb") as f:
+        f.write(image_bytes)
+    print("✅ Image saved.")
+else:
+    print("❌ Image fetch failed.")
+
+```
+
+## Environment Variables
+
+Put these in a `.env` file or your environment:
+
+```
+ODOO_BASE_URL=https://your.odoo.instance
+ODOO_USERNAME=your@email.com
+ODOO_PASSWORD=yourpassword
+ODOO_DB=your_db_name
+```
+
+Enjoy!
+[![PyPI version](https://badge.fury.io/py/odoo-image-fetcher.svg)](https://pypi.org/project/odoo-image-fetcher/)
