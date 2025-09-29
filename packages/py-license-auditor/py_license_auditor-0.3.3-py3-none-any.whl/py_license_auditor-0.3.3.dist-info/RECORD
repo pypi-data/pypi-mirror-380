@@ -1,0 +1,12 @@
+py_license_auditor/__init__.py,sha256=LpAfJm1FX3Dio6Pr9_qX-roJ1sPLYWtPctuQVrf857M,2280
+py_license_auditor/bin/py-license-auditor-linux-aarch64,sha256=ixDU0_2GXnRIuuux3SaQlWx7PNRF_DmKOgMxbMZpiDQ,1250080
+py_license_auditor/bin/py-license-auditor-linux-x86_64,sha256=3in3kZSF2uH1xvz36_uQNCraqTEB4cX9-dm0soPhZ8A,1479320
+py_license_auditor/bin/py-license-auditor-macos-aarch64,sha256=w1wMp8L98e_JxXRSjGLw9s58GQ2fSqGFtmbLsATixPI,1165248
+py_license_auditor/bin/py-license-auditor-macos-x86_64,sha256=U8m3RAgCsvEUUNuQhlUVSzIp8el63-ritc0v5C-USk0,1328280
+py_license_auditor-0.3.3.dist-info/licenses/LICENSE-APACHE,sha256=4awURC2VK84STHFi3S3-yZncxdldecDhCjeftynWvkU,10610
+py_license_auditor-0.3.3.dist-info/licenses/LICENSE-MIT,sha256=hwbcOrxoK-8kDomTf8SsouzoJYC8C_Ku4KjWZIldrhk,1088
+py_license_auditor-0.3.3.dist-info/METADATA,sha256=230mpHDv8vBaFSORao1Ln4tbN9YRKyownJptuXkJUow,8979
+py_license_auditor-0.3.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py_license_auditor-0.3.3.dist-info/entry_points.txt,sha256=puQLPvMWsOaX2VNLHov_uVvaupZ5pX96WOKJ1LGz8ms,63
+py_license_auditor-0.3.3.dist-info/top_level.txt,sha256=vB32dBysaNlTak6qlJFy22fgO7eGDxxl7rKAmF8pUDw,19
+py_license_auditor-0.3.3.dist-info/RECORD,,
