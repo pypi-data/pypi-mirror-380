@@ -1,0 +1,8 @@
+framework_translator/__init__.py,sha256=8OHaKbedyjBFdwK4lkeESwmlps4ci-8K8C7SAOWfKFE,60
+framework_translator/cli.py,sha256=137Rh6KZrqaOmKtJtwYXXUjAZ2fhXeUla1UYC2-ciJY,5643
+framework_translator/config.py,sha256=1OBsGX2L9sHFGNCl-w0KWtG-ruUTOxIuRdj2Wu7QLVQ,2147
+framework_translator/model.py,sha256=8X6AGAWJw3_oxRdnPAxaFeBF76YXLS0w2K_L3PhVYEU,1610
+framework_translator-1.0.0.dist-info/METADATA,sha256=QVVO4pIbHgWybltY4unAUEGqZagKmRhHT6X13KBGXa4,698
+framework_translator-1.0.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+framework_translator-1.0.0.dist-info/entry_points.txt,sha256=5H7va_Rf4u5RUXh8ClEcHlQ_iE0qxp88rT7UyDsuxW0,53
+framework_translator-1.0.0.dist-info/RECORD,,
