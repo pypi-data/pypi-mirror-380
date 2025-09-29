@@ -1,0 +1,26 @@
+[project]
+name = "memorecall"
+version = "0.1.0"
+description = "A memory and recall enhancement library for AI agents."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Hoseyn Amiri", email = "aamirihoseyn@gmail.com" }]
+keywords = ["memory", "recall", "ai", "agent"]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hoseyn-amiri/memorecall"
+Repository = "https://github.com/hoseyn-amiri/memorecall"
+Issues = "https://github.com/hoseyn-amiri/memorecall/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+name = "memorecall"
+version = "0.1.0"
+description = "A memory and recall enhancement library for AI agents."
+url = "https://github.com/hoseyn-amiri/memorecall"
+publish-url = "https://upload.pypi.org/"
