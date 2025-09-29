@@ -1,0 +1,11 @@
+napari_flowreg/__init__.py,sha256=0eLrRqip2gZQBhfr7cB85LXYYGI7em1kH2qGxKyxPfs,844
+napari_flowreg/_version.py,sha256=RKT8i6IwMbYJ4XsZxi1o5bm1cYzdfKYFqTI6XthJIa8,712
+napari_flowreg/flow_visualization_widget.py,sha256=-RofX_SmqpGtoyNg7AJIMxScAAVZ8VTr1DhZdt0xC7Y,39120
+napari_flowreg/flowreg_widget.py,sha256=6modMzLz3fVSkSlpxsb_TOxLqBrrm00NmcoBKCUi_VY,25737
+napari_flowreg/motion_analysis_widget.py,sha256=p8HWHghJtEBy-yApVThwyfoM7sOcI25ibO_WsoQaLC4,61452
+napari_flowreg/napari.yaml,sha256=lPgEDTQGYQ4YAf6FP3HXj_kDP9N8zL4kHKGt4eHOiXs,371
+napari_flowreg-0.1.0a3.dist-info/METADATA,sha256=hVNfDjRqO8fubKz0IA8Zm5TWSTN78D4rBzX5s4zUjBM,4931
+napari_flowreg-0.1.0a3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+napari_flowreg-0.1.0a3.dist-info/entry_points.txt,sha256=abtPe060tlRB3uRQU6idQyUoSAm3iO4zwL_NQANEKxE,62
+napari_flowreg-0.1.0a3.dist-info/top_level.txt,sha256=M6G8zGt3JQD95zhZjuucmHe1iKWcNVLhi2j_-L_-RMQ,15
+napari_flowreg-0.1.0a3.dist-info/RECORD,,
