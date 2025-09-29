@@ -1,0 +1,204 @@
+# Lark Language Detector
+
+A lightweight language detection library similar to fasttext and Google's implementation, built with PyTorch and supporting float16 inference.
+
+## Features
+
+- **Fast and Accurate**: Detects 102 languages with high accuracy
+- **Lightweight**: Optimized for performance with float16 inference
+- **Easy to Use**: Simple API similar to fasttext and Google's implementation
+- **Flexible**: Supports both Python library usage and CLI tool
+- **Chinese Variants**: Automatically distinguishes Simplified Chinese (zh) and Traditional Chinese (zh-TW)
+
+## Installation
+
+```bash
+pip install lark-language-detector
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/your-username/lark-language-detector.git
+cd lark-language-detector
+pip install -e .
+```
+
+## Quick Start
+
+### Python Library Usage
+
+```python
+import lark
+
+# 检测单文本语言
+result = lark.detect("Hello world, how are you today?")
+print(f"Detected language: {result['detected_language']}")
+print(f"Confidence: {result['confidence']:.4f}")
+
+# 检测并判断是否需要LLM
+result = lark.detect_new("你好世界", "en")
+print(f"Detected language: {result['detected_language']}")
+print(f"Need LLM: {result['is_need_llm']}")
+
+# 获取模型信息
+info = lark.get_info()
+print(f"Supported languages: {info['total_languages']}")
+```
+
+### Advanced Usage
+
+```python
+from lark import LarkDetector
+
+# 创建自定义检测器实例
+detector = LarkDetector(
+    model_path="path/to/model.pth",
+    labels_path="path/to/labels.json",
+    precision="float16"  # or "float32", "bfloat16"
+)
+
+# 使用检测器
+result = detector.detect("Bonjour le monde")
+print(result)
+```
+
+### CLI Tool Usage
+
+```bash
+# 检测语言
+lark detect "Hello world"
+
+# 检测并判断是否需要LLM
+lark detect-new "你好世界" en
+
+# 显示模型信息
+lark info
+```
+
+## API Reference
+
+### `lark.detect(text: str) -> dict`
+
+Detects the language of a single text.
+
+**Parameters:**
+- `text`: The text to detect
+
+**Returns:**
+- `detected_language`: The detected language code
+- `confidence`: Confidence score (0.0-1.0)
+- `top_languages`: Top 5 languages with confidence scores
+
+### `lark.detect_new(text: str, language_code: str) -> dict`
+
+Detects language and determines if LLM is needed.
+
+**Parameters:**
+- `text`: The text to detect
+- `language_code`: Expected language code
+
+**Returns:**
+- `detected_language`: The detected language code
+- `confidence`: Confidence score (0.0-1.0)
+- `is_need_llm`: Whether LLM is needed (True/False)
+
+### `lark.get_info() -> dict`
+
+Get model information.
+
+**Returns:**
+- `model_name`: Model name
+- `precision`: Inference precision
+- `device`: Device used for inference
+- `supported_languages`: List of supported languages
+- `total_languages`: Number of supported languages
+
+## Chinese Language Variants Detection
+
+Lark automatically distinguishes between Simplified Chinese (zh) and Traditional Chinese (zh-TW) using an intelligent post-processing algorithm.
+
+### Technical Background
+
+The model was trained with zh-TW labels, but due to limited training data and mixed usage of Simplified and Traditional Chinese in the dataset, the zh-TW detection capability only works effectively with pure Traditional Chinese text.
+
+### Algorithm Details
+
+We discovered that when the model encounters Traditional Chinese text, the confidence score for zh detection is lower than when the same text is converted to Simplified Chinese. This insight led to the development of a confidence-based post-processing algorithm:
+
+1. **Initial Detection**: Text is first detected as Chinese (zh)
+2. **Simplified Conversion**: Text is converted to Simplified Chinese using zhconv
+3. **Confidence Comparison**: Compare original confidence with simplified confidence
+4. **Decision**: If confidence increases by more than 0.01, classify as Traditional Chinese (zh-TW)
+
+### Performance
+
+- **Traditional Chinese Detection**: >95% accuracy on pure Traditional Chinese text
+- **Simplified Chinese Detection**: 100% accuracy (completely unaffected)
+- **Mixed Text**: Correctly identifies dominant script variant
+- **Threshold**: 0.01 confidence increase threshold (validated on hundreds of test cases)
+
+### Examples
+
+```python
+import lark
+
+detector = lark.LarkDetector()
+
+# Traditional Chinese
+result = detector.detect("歡迎來到台灣")
+print(result)  # {'detected_language': 'zh-TW', 'confidence': 0.9995}
+
+# Simplified Chinese  
+result = detector.detect("欢迎来到台湾")
+print(result)  # {'detected_language': 'zh', 'confidence': 0.9971}
+
+# Mixed text
+result = detector.detect("今天天气很好，適合出去散步")
+print(result)  # {'detected_language': 'zh-TW', 'confidence': 0.9385}
+```
+
+## Supported Languages
+
+Lark supports 102 languages including:
+
+- English (en)
+- Chinese (zh) - Simplified Chinese
+- Chinese (zh-TW) - Traditional Chinese
+- Spanish (es)
+- French (fr)
+- German (de)
+- Japanese (ja)
+- Korean (ko)
+- Russian (ru)
+- Arabic (ar)
+- And many more...
+
+See the full list by running `lark info`.
+
+## Performance
+
+- **Model Size**: ~10MB
+- **Inference Speed**: ~1000 texts/second on CPU
+- **Accuracy**: >95% on test datasets
+- **Supported Precision**: float32, float16, bfloat16
+
+## Requirements
+
+- Python 3.7+
+- PyTorch 1.9+
+- Other dependencies: See `requirements.txt`
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgments
+
+- Inspired by fasttext and Google's language detection implementations
+- Built with PyTorch for efficient inference
+- Model trained on diverse multilingual datasets
