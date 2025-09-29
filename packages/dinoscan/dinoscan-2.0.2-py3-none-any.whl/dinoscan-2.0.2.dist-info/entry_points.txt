@@ -1,0 +1,8 @@
+[console_scripts]
+dinoscan=dinoscan.cli:main
+dinoscan-circular=dinoscan.analyzers.circular_import_analyzer:main
+dinoscan-deadcode=dinoscan.analyzers.dead_code_analyzer:main
+dinoscan-docs=dinoscan.analyzers.doc_quality_analyzer:main
+dinoscan-duplicates=dinoscan.analyzers.duplicate_code_analyzer:main
+dinoscan-security=dinoscan.analyzers.advanced_security_analyzer:main
+
