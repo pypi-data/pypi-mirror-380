@@ -1,0 +1,7 @@
+pyiceberg_core-0.7.0rc2.dist-info/METADATA,sha256=mBsiT7gibNmAtikLnI7_GBMCP6dIaJKI7ceOFztV0xk,1654
+pyiceberg_core-0.7.0rc2.dist-info/WHEEL,sha256=EmbG9zyqShfWQD8iunhabgzlMZGQwxFV_zZkaywLDn0,127
+pyiceberg_core-0.7.0rc2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyiceberg_core-0.7.0rc2.dist-info/licenses/NOTICE,sha256=vjNyX3kfkQ1uZtLftbWEvzNMzm9zuXo8pRUauAYORu0,173
+pyiceberg_core/__init__.py,sha256=JUdRvA9ulxrsSH7gwTIWxy5TH2AXVIiRamitFdeheIc,898
+pyiceberg_core/pyiceberg_core_rust.abi3.so,sha256=bM9pZrl_ZMDoEkj6x8N-T1BdiEx5KEJVasNyoqFCgks,108052704
+pyiceberg_core-0.7.0rc2.dist-info/RECORD,,
