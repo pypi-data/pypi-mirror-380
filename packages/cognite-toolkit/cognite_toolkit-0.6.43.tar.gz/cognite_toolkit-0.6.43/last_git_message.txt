@@ -1,0 +1,25 @@
+[CDF-25754]  minor annoyances in intro posters (#2025)
+
+# Description
+
+Deprecating the `cdf init` command and improving the user guide poster
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Improved
+
+- Improved guidance when starting toolkit. 
+
+### Added
+
+-  Deprecation warning on cdf init command
+
+
+## templates
+
+No changes.
