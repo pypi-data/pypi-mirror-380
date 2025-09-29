@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "common-py-config"
+version = "0.1.0"
+description = "Shared dev/test/lint configuration for all projects"
+authors = ["Your Team <team@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "common_py_config", from = "src" }]
+
+# [tool.poetry.repositories]
+# githu = { url = "https://pypy.pkg.github.com/beniamin" }
+
+# [tool.poetry.publish]
+# repository = "github"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest_cov = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
