@@ -1,0 +1,3 @@
+[console_scripts]
+orchesity = main:main
+orchesity-cli = cli:main
