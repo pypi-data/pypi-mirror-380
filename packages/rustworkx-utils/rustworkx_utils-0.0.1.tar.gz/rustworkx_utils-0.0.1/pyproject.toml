@@ -1,0 +1,28 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rustworkx_utils"
+dynamic = ["version", "dependencies", "optional-dependencies"]
+description = "Provides utils for for graphs constructed with rustworkx"
+readme = "README.md"
+authors = [{ name = "Abdelrhman Bassiouny", email = "abassiou@uni-bremen.de" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+keywords = ["rustworkx", "graphs", "utils", "visualization"]
+
+[project.urls]
+Homepage = "https://github.com/AbdelrhmanBassiouny/rustworkx_utils"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rustworkx_utils"]
+
+[tool.setuptools.dynamic]
+version = {attr = "rustworkx_utils.__version__"}
+dependencies = { file = ["requirements.txt"] }
