@@ -1,0 +1,12 @@
+bafser_tgapi/__init__.py,sha256=48FFgWgJ5pS17xcS75j0lbMurskn47IjDxXKlS6iIlw,316
+bafser_tgapi/bot.py,sha256=obBM2cWGZEZ4lXJ4higIIaKIbb6z03BkrlUG1W4v_E4,13834
+bafser_tgapi/bot_with_db.py,sha256=-UwbqxhccJMM4cek9LKvLx_AyJy8FBsnOwbXSBi4ZyM,1642
+bafser_tgapi/methods.py,sha256=D6riCkIa89zt4mzlF2Ta8gmK4EVbr1jEorD2LLW66qk,11503
+bafser_tgapi/types.py,sha256=hGDQvlQsiJ6SGx_IRJz5itAd7qkk-wOIwlVHRQcj7Fg,9902
+bafser_tgapi/utils.py,sha256=iWpsek9G3YfUrhjfSDshUjQb_CGrggXuotTrC3EW8W8,6063
+bafser_tgapi/db/msg.py,sha256=eE6Yl9BnnOfEBl-siPUVlyyVNDMGFDyG5ffd_L3kx4w,1897
+bafser_tgapi/db/user.py,sha256=3CvRBnqhNfIWWtvmFxXKRx4NX3dSY-IyFiIf1o-LXL0,3164
+bafser_tgapi-1.3.1.dist-info/METADATA,sha256=VxDC8i93FFC6bwFx9ikMXd_QvNsRI-c5b-nDssW3LiU,1927
+bafser_tgapi-1.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bafser_tgapi-1.3.1.dist-info/licenses/LICENSE,sha256=KnwobioUD95na9chjt9X3VNZRoNm373L-htaEgrQkCc,1064
+bafser_tgapi-1.3.1.dist-info/RECORD,,
