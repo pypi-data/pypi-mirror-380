@@ -1,0 +1,11 @@
+pure_function_decorators/__init__.py,sha256=TtkhGzcIpVNnT6MWxRPnLWW9ZYN6F_0IW1eRYOE53Dk,431
+pure_function_decorators/enforce_deterministic.py,sha256=scsykkYZRoQxxkGHDVc4IfZ4Q2JKl91R41YLMOhUlpA,5605
+pure_function_decorators/forbid_globals.py,sha256=rrbM1tkJ9Yy2XBueGG5gEWaw8bMMRK4vhp6QRPInYUA,8272
+pure_function_decorators/forbid_side_effects.py,sha256=Ar9ocATkmsgAEKKFTAEdQmWILwNn53DK5eb-tvqRu_k,15053
+pure_function_decorators/immutable_arguments.py,sha256=MQFlrUIncghH3FWneNN0r-xyMP8FmClXzrHy7uz3wHE,8791
+pure_function_decorators/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pure_function_decorators/version.py,sha256=vecW1Pb9X9tB7MUXpBAxbVSx0xVgcKnlfb6Gzu8cjJk,1027
+pure_function_decorators-0.1.4.dist-info/METADATA,sha256=gA-ZmpJWiu-ZjiWeDeai1zq8H82DIOLIx1e6XxlYVBk,6390
+pure_function_decorators-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pure_function_decorators-0.1.4.dist-info/licenses/LICENSE.md,sha256=gQFnbG3qm0MDIuOejfsV3D9LXRgUY8mq7aflS2_1Gys,1075
+pure_function_decorators-0.1.4.dist-info/RECORD,,
