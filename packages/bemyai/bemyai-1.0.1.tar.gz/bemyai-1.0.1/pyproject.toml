@@ -1,0 +1,28 @@
+[project]
+name = "bemyai"
+version = "1.0.1"
+description = "Be My AI API"
+authors = [{ name = "Alexey", email = "aleks-samos@yandex.ru" }]
+requires-python = ">3.8.0"
+readme = "README.md"
+dependencies = [
+    "aiohttp>=3.9.1,<4",
+    "pydantic>=2.5.3,<3",
+    "pillow>=10.2.0,<11",
+    "loguru>=0.7.2,<0.8",
+    "aiofiles>=23.2.1,<24",
+]
+
+[project.scripts]
+bm = "bemyai.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4.4,<8",
+    "pytest-aiohttp>=1.0.5,<2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
