@@ -1,0 +1,11 @@
+maleo/toolkit/iamging/__init__.py,sha256=3jjenuJxTsJPOWqej8YdKD84LJoOIlQ5AsRxaxlcecc,1135
+maleo/toolkit/iamging/converter.py,sha256=2XVoNHC_6KFnEXV2aAkiJ8wdZ2wC8xfPu4dbPBToHMg,4129
+maleo/toolkit/iamging/detection.py,sha256=YCZNPbQ0mfEaemck63Evsu8PmFb7-guv21AZvhjXu6A,1712
+maleo/toolkit/iamging/enums.py,sha256=MbPnt0xvLWNmiIBbM54MsNLy7gQtTzZOQznPdkSMoDU,686
+maleo/toolkit/iamging/processor.py,sha256=vi9dbaybz7vt3jcWfm9w22lls7A47yw2YkyjvGKdJ6U,2115
+maleo/toolkit/iamging/reader.py,sha256=5fpcNR1LPySgmkSf73NAVWwRj_s_vrOIfU4dpfAb7VA,1587
+maleo_toolkit_imaging-0.0.7.dist-info/licenses/LICENSE,sha256=aftGsecnk7TWVX-7KW94FqK4Syy6YSZ8PZEF7EcIp3M,2621
+maleo_toolkit_imaging-0.0.7.dist-info/METADATA,sha256=gDnqZZW75y8Y7NmWWyC1f86Ot61ZzSyqhu-1pkJ4L5o,1960
+maleo_toolkit_imaging-0.0.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+maleo_toolkit_imaging-0.0.7.dist-info/top_level.txt,sha256=3Tpd1siVsfYoeI9FEOJNYnffx_shzZ3wsPpTvz5bljc,6
+maleo_toolkit_imaging-0.0.7.dist-info/RECORD,,
