@@ -1,0 +1,13 @@
+fleetfluid/__init__.py,sha256=2z0vuscCWMx21YnSXoafUricuqA61pmhoi5DCyzc35w,3934
+fleetfluid/core.py,sha256=5LROro9jbGJuC1qcf_fE9oJzbGSQd6SOv7qcehUm04k,8885
+fleetfluid/models.py,sha256=6AMRT1o9SGrYnFyqEbWAevLWi40f_0FD0sN9OwcvZPg,838
+fleetfluid/modes/__init__.py,sha256=7Dx813bYVTl9UWBh5aCtDJLFxomnMj7l2oZJssPM35w,303
+fleetfluid/modes/base.py,sha256=4N_d6osph7iNEEt_vVfSml5BcM6OZmgGO70WiTN5ndc,1623
+fleetfluid/modes/cloud.py,sha256=At3ykZDDwlTR3O6KoXnSf3Q6w2uD2MAW5DY1df0Oae8,7525
+fleetfluid/modes/factory.py,sha256=diRkAsQpK2VAXNJBO1B4K86_hK1QVP1hlS4JbjXGgas,1807
+fleetfluid/modes/opensource.py,sha256=_DV7yTAd_44TPPEcZJuh3FVtCuq3B_Fb14EwxUGhbuw,15569
+fleetfluid-0.1.4.dist-info/licenses/LICENSE,sha256=GTVQl3vH6ht70wJXKC0yMT8CmXKHxv_YyO_utAgm7EA,1065
+fleetfluid-0.1.4.dist-info/METADATA,sha256=XZrhozn2zBUq3gbG5cGtX0CoErGsWhfm9a9234YO3jg,10410
+fleetfluid-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fleetfluid-0.1.4.dist-info/top_level.txt,sha256=TUbnGGj3zCdRy6GDfm31MEWwmqf73TxPOy76_o8VJKk,11
+fleetfluid-0.1.4.dist-info/RECORD,,
