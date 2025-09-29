@@ -1,0 +1,7 @@
+Historical Data/*_1min_90days.parquet
+Historical Data/*_1min_90days.xlsx
+scripts/Strategy_Selection/backtest_results/
+scripts/Strategy_Selection/Temp/
+scripts/Strategy_Selection/EE_backtest_results/
+__pycache__/
+.ipynb_checkpoints/

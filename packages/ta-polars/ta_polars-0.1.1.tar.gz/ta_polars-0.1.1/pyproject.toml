@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ta-polars"                  # pip name
+version = "0.1.1"                   # bump for republish
+description = "TA-Lib-like technical indicators powered by Polars"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Yuvaraj"}]
+dependencies = ["polars>=1.0.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["ta_polars"]            # importable package folder
