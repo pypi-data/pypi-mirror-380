@@ -1,0 +1,10 @@
+nbcmdio/__init__.py,sha256=74IgZkp6nTvXA_U8a8nrjUfR8FefNLYEm3gCvd-hN9M,372
+nbcmdio/input.py,sha256=VbYpLIhdFZV1fvDuslw4AIOUzJJ4hd19wLa5fdfO0Lo,3729
+nbcmdio/output.py,sha256=L10QilL7Kuanz-JkyD28ZO6BIt9RXeSDgLOJe-yWoJI,30270
+nbcmdio/style.py,sha256=KUHr4kqs4mHA2XQU5_RkNWoQyGPm2NUQlCUwzVvV7dw,2264
+nbcmdio/utils.py,sha256=aXZ7FUmmyC64mLxBryo-SpmZoZYFLW7nzt_N6PBjA9c,5940
+nbcmdio-1.8.64.dist-info/LICENSE,sha256=7Sk7C78aVAaZiixJH_BtklygUxRJx5kzq4B2zF8H6Bg,1079
+nbcmdio-1.8.64.dist-info/METADATA,sha256=WckdOZFtznffDjSJs72D6GbX00Hw1v8DFQW0D3is4MQ,6876
+nbcmdio-1.8.64.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+nbcmdio-1.8.64.dist-info/top_level.txt,sha256=mvmP0xGBRgFD-xLetXL-kZg7OutkRTVwmTk7OTnNoJk,8
+nbcmdio-1.8.64.dist-info/RECORD,,
