@@ -1,0 +1,12 @@
+srpc/__init__.pyd,sha256=ByeRQtJnDKx2kfIem1LCp988YYpt0kOh0jvCJbSUDO4,20480
+srpc/client.pyd,sha256=siJ4dz_CZgWhLB7ocgg2zm4l7C6UjgwXvQd3E8Prd2U,97280
+srpc/idg.pyd,sha256=RpibXWq8TF_LfPzjz5McOxNWiKq0XV-G4gnsL27qFt8,56320
+srpc/protocol.pyd,sha256=AkZMfq0lXNNWWxmow14Oi_ZRJ8OoW6QpPITMJzi3soo,91648
+srpc/ring.pyd,sha256=-jmP0q3vnqkUmON5aK3L0It5DiwfCyoLuNqVlQr6WSI,67584
+srpc/server.pyd,sha256=ME00wi1vndsVBqjunUa_Yu3bO3CWE60LhURqDWR7drg,100864
+srpc/ulog.pyd,sha256=JnmPTUuZAudXL-5ys2NuSab5sezVwzdahxA5PNGIYMM,121344
+srpc-4.6.3.dist-info/licenses/project/LICENSE,sha256=kEkzZcZuF9IyQREr1Wzn50Bl4UmKMnXTEJrlWANur74,1084
+srpc-4.6.3.dist-info/METADATA,sha256=HXKEubPjppE5bsILm6eeKH5Dk1JyH9IG6kxSWnrDf6w,974
+srpc-4.6.3.dist-info/WHEEL,sha256=esMkmamTONcqY63yyR4EW44SJ2xm4VPaPFwpwnvwOrM,100
+srpc-4.6.3.dist-info/top_level.txt,sha256=C-qARuJY0GBGbGX4vzD9TUSK6qWr5Dq1a0Wpb9xxrbU,5
+srpc-4.6.3.dist-info/RECORD,,
