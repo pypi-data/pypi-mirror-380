@@ -1,0 +1,13 @@
+uutel/__init__.py,sha256=Bg-Dho7Lw7-d6pSYJO1wUVqmRSIRj_Vq3MwSFf8oacU,1673
+uutel/_version.py,sha256=jp1Oow7okdi1HqeKIp8SmyysmUf-oq2X9syICfrgATI,704
+uutel/uutel.py,sha256=1n1Zy5_ONmUXLvrKPXqmrqaSDo1I0QPdGhjulfHLqR4,1627
+uutel/core/__init__.py,sha256=Rh5CuF2MG5VXnQJTbtI5LXbQB4Y7OGb-aazS3yt_qeE,1400
+uutel/core/auth.py,sha256=bv0NzKftY21ncosShgXx4WbbFgzbnD4MX5Qqz7UGR4U,3556
+uutel/core/base.py,sha256=STgnhdf4zW0yaNhw2kTVoUqZYzLcag_1V5nEZnBCH4k,8876
+uutel/core/exceptions.py,sha256=D4_Mn1H1mrmBwpc0VCpbhTK19ZMFv6oGlSXmIVgL5f4,6610
+uutel/core/utils.py,sha256=ATxN56Y4CwWk8uf5_4LPOc0bKj-0w0JLriiuooEhtbE,11825
+uutel/providers/__init__.py,sha256=xlS_7gktQ7OPH1h1giEjBJR8QpqJRSQ263G5PEWlmpA,152
+uutel-1.0.4.dist-info/METADATA,sha256=vsCZRfcVVMeZclB1H7r07jtrSozTMXEc_1bsO8x-7pg,8096
+uutel-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uutel-1.0.4.dist-info/licenses/LICENSE,sha256=owbwpVdTHiU18mRyRzvr1DDQe_Rjs1FCkEdzMGJIU9U,1069
+uutel-1.0.4.dist-info/RECORD,,
