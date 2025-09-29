@@ -1,0 +1,16 @@
+[project]
+name = "py_me"
+version = "1.1"
+description = "Biblioteca Python com módulos para música e interface gráfica"
+authors = [{ name = "Seu Nome", email = "seu@email.com" }]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+dependencies = [
+    "pygame",
+    "pydub"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
