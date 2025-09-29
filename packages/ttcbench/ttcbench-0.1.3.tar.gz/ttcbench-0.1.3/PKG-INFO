@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: ttcbench
+Version: 0.1.3
+Summary: Simple vLLM/OpenAI textgen benchmark with optional GPU telemetry
+Author-email: Your Name <you@example.com>
+License-Expression: MIT
+Keywords: vllm,benchmark,openai,chat-completions,gpu,nvml
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests>=2.32
+Requires-Dist: pydantic>=2.8
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: nvidia-ml-py>=12.555.43
+Requires-Dist: psutil>=6.0
+Requires-Dist: rich>=13.7
+Provides-Extra: server
+Requires-Dist: fastapi>=0.111; extra == "server"
+Requires-Dist: uvicorn[standard]>=0.30; extra == "server"
+Dynamic: license-file
+
+# ttc_bench
+
+Benchmark for OpenAI/vLLM `/v1/chat/completions` endpoints with optional local GPU telemetry.
+
+## Install
+
+```bash
+pip install ttc_bench
+
+
+# env (optional)
+echo 'MODEL_BASE_URL=http://host:3000/v1' > .env
+echo 'MODEL_API_KEY=' >> .env
+echo 'DEFAULT_MODEL=Qwen2.5-72B-Instruct-GPTQ-Int4' >> .env
+
+# run
+ttc_bench run --task textgen --steps 10 --batch 2 --seq-out 128 \
+  --base-url "http://host:3000/v1" --model "Qwen2.5-72B-Instruct-GPTQ-Int4"

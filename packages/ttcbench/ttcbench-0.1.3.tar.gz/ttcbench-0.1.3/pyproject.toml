@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttcbench"
+version = "0.1.3"
+description = "Simple vLLM/OpenAI textgen benchmark with optional GPU telemetry"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"  # SPDX-выражение
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["vllm", "benchmark", "openai", "chat-completions", "gpu", "nvml"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "requests>=2.32",
+  "pydantic>=2.8",
+  "python-dotenv>=1.0",
+  "nvidia-ml-py>=12.555.43",
+  "psutil>=6.0",
+  "rich>=13.7"
+]
+
+[project.optional-dependencies]
+server = ["fastapi>=0.111", "uvicorn[standard]>=0.30"]
+
+[project.scripts]
+ttcbench = "TTC.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["TTC"]
