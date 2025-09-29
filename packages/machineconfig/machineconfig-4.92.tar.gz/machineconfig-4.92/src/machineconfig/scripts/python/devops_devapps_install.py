@@ -1,0 +1,212 @@
+"""Devops Devapps Install"""
+
+from machineconfig.utils.installer import get_installers_system_groups
+import typer
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
+from platform import system
+from typing import Optional, cast, get_args
+from machineconfig.jobs.installer.package_groups import PACKAGE_GROUPS
+
+console = Console()
+
+
+def _handle_installer_not_found(search_term: str, all_installers: list["InstallerData"]) -> None:  # type: ignore
+    """Handle installer not found with friendly suggestions using fuzzy matching."""
+    from difflib import get_close_matches
+
+    all_names = []
+    for inst in all_installers:
+        exe_name = inst["appName"]
+        all_names.append(exe_name)
+    close_matches = get_close_matches(search_term, all_names, n=5, cutoff=0.4)
+    console.print(f"\n❌ '[red]{search_term}[/red]' was not found.", style="bold")
+
+    if close_matches:
+        console.print("🤔 Did you mean one of these?", style="yellow")
+        table = Table(show_header=False, box=None, pad_edge=False)
+        for i, match in enumerate(close_matches, 1):
+            table.add_row(f"[cyan]{i}.[/cyan]", f"[green]{match}[/green]")
+        console.print(table)
+    else:
+        console.print("📋 Here are some available options:", style="blue")
+        # Show first 10 installers as examples
+        sample_names = []
+        for inst in all_installers[:10]:
+            exe_name = inst["appName"]
+            sample_names.append(exe_name)
+
+        table = Table(show_header=False, box=None, pad_edge=False)
+        for i, name in enumerate(sample_names, 1):
+            table.add_row(f"[cyan]{i}.[/cyan]", f"[green]{name}[/green]")
+        console.print(table)
+
+        if len(all_installers) > 10:
+            console.print(f"   [dim]... and {len(all_installers) - 10} more[/dim]")
+
+    panel = Panel(
+        f"[bold blue]💡 Use 'ia' to interactively browse all available installers.[/bold blue]\n[bold blue]💡 Use one of the categories: {list(get_args(PACKAGE_GROUPS))}[/bold blue]", title="[yellow]Helpful Tips[/yellow]", border_style="yellow"
+    )
+    console.print(panel)
+
+
+def main_with_parser():
+    import typer
+
+    app = typer.Typer()
+    app.command()(main)
+    app()
+
+
+def main(
+    which: Optional[str] = typer.Option(None, "--which", "-w", help="Comma-separated list of program names to install."),
+    group: Optional[PACKAGE_GROUPS] = typer.Option(None, "--group", "-g", help=f"Group name (one of {list(get_args(PACKAGE_GROUPS))})"),
+    interactive: bool = typer.Option(False, "--interactive", "-ia", help="Interactive selection of programs to install."),
+) -> None:
+    if which is not None:
+        return install_clis(clis_names=[x.strip() for x in which.split(",") if x.strip() != ""])
+    if group is not None:
+        return get_programs_by_category(package_group=group)
+    if interactive:
+        return install_interactively()
+    typer.echo("❌ You must provide either --which, --group, or --interactive/-ia option.")
+    import click
+    ctx = click.get_current_context()
+    typer.echo(ctx.get_help())
+    raise typer.Exit(1)
+
+
+def install_interactively():
+    from machineconfig.utils.options import choose_from_options
+    from machineconfig.utils.schemas.installer.installer_types import get_normalized_arch, get_os_name
+    from machineconfig.utils.installer import get_installers
+    from machineconfig.utils.installer_utils.installer_class import Installer
+    installers = get_installers(os=get_os_name(), arch=get_normalized_arch(), which_cats=["ESSENTIAL", "DEV"])
+    installer_options = []
+    for x in installers:
+        installer_options.append(Installer(installer_data=x).get_description())
+    category_options = [f"📦 {cat}" for cat in get_args(PACKAGE_GROUPS)]
+    options = category_options + ["─" * 50] + installer_options
+    program_names = choose_from_options(multi=True, msg="Categories are prefixed with 📦", options=options, header="🚀 CHOOSE DEV APP OR CATEGORY", default="📦 essentials", fzf=True)
+    installation_messages: list[str] = []
+    for _an_idx, a_program_name in enumerate(program_names):
+        if a_program_name.startswith("─"):  # 50 dashes separator
+            continue
+        if a_program_name.startswith("📦 "):
+            category_name = a_program_name[2:]  # Remove "📦 " prefix
+            if category_name in get_args(PACKAGE_GROUPS):
+                get_programs_by_category(package_group=cast(PACKAGE_GROUPS, category_name))
+        else:
+            installer_idx = installer_options.index(a_program_name)
+            an_installer_data = installers[installer_idx]
+            status_message = Installer(an_installer_data).install_robust(version=None)  # finish the task - this returns a status message, not a command
+            installation_messages.append(status_message)
+    if installation_messages:
+        panel = Panel("\n".join([f"[blue]• {message}[/blue]" for message in installation_messages]), title="[bold green]📊 Installation Summary[/bold green]", border_style="green", padding=(1, 2))
+        console.print(panel)
+
+
+def get_programs_by_category(package_group: PACKAGE_GROUPS):
+    panel = Panel(f"[bold yellow]Installing programs from category: [green]{package_group}[/green][/bold yellow]", title="[bold blue]📦 Category Installation[/bold blue]", border_style="blue", padding=(1, 2))
+    console.print(panel)
+    from machineconfig.utils.installer import get_installers, install_all
+    from machineconfig.utils.schemas.installer.installer_types import get_normalized_arch, get_os_name
+    match package_group:
+        case "ESSENTIAL":
+            installers_ = get_installers(os=get_os_name(), arch=get_normalized_arch(), which_cats=["ESSENTIAL"])
+            install_all(installers_data=installers_)
+        case "DEV":
+            installers_ = get_installers(os=get_os_name(), arch=get_normalized_arch(), which_cats=["DEV", "ESSENTIAL"])
+            install_all(installers_data=installers_)
+        case "DEV_SYSTEM" | "ESSENTIAL_SYSTEM":
+            options_system = get_installers_system_groups()
+            from machineconfig.utils.schemas.installer.installer_types import get_normalized_arch, get_os_name
+            for an_item in options_system:
+                if an_item["appName"] == package_group:
+                    program = an_item["fileNamePattern"][get_normalized_arch()][get_os_name()]
+                    if program is not None:
+                        install_terminal_packages(program)
+
+
+def choose_from_system_package_groups(options_system: dict[str, tuple[str, str]]) -> str:
+    from machineconfig.utils.options import choose_from_options
+    display_options = []
+    for group_name, (description, _) in options_system.items():
+        if description:
+            display_options.append(f"{group_name:<20} - {description}")
+        else:
+            display_options.append(group_name)
+    program_names = choose_from_options(multi=True, msg="", options=sorted(display_options), header="🚀 CHOOSE DEV APP", fzf=True)
+    program = ""
+    for display_name in program_names:
+        # Extract the actual group name (everything before " - " if present)
+        group_name = display_name.split(" - ")[0].strip() if " - " in display_name else display_name.strip()
+        console.print(f"\n[bold cyan]⚙️  Installing: [yellow]{group_name}[/yellow][/bold cyan]", style="bold")
+        _, sub_program = options_system[group_name]  # Extract content from tuple
+        if sub_program.startswith("#winget"):
+            sub_program = sub_program[1:]
+        program += "\n" + sub_program
+    return program
+
+
+def install_terminal_packages(program: str):
+    from pathlib import Path
+
+    if system() == "Windows":
+        temp_script_path = Path("C:/Windows/Temp/temp_install_script.ps1")
+        lexer = "powershell"
+    else:
+        temp_script_path = Path("/tmp/temp_install_script.sh")
+        lexer = "bash"
+    temp_script_path.write_text(program, encoding="utf-8")
+    console.print(f"📝 [blue]Temporary script written to:[/blue] [green]{temp_script_path}[/green]")
+    from rich.syntax import Syntax
+
+    console.print(Panel(Syntax(code=program, lexer=lexer), title="📄 Installation Program", subtitle="shell code"), style="bold red")
+    console.print("🚀 [bold yellow]Starting installation...[/bold yellow]")
+    if system() == "Windows":
+        import subprocess
+
+        subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", str(temp_script_path)], check=True)
+    elif system() == "Linux":
+        import subprocess
+
+        subprocess.run(["bash", str(temp_script_path)], check=True)
+    console.print("✅ [bold green]Installation completed.[/bold green]")
+    temp_script_path.unlink(missing_ok=True)
+
+
+def install_clis(clis_names: list[str]):
+    from machineconfig.utils.schemas.installer.installer_types import get_normalized_arch, get_os_name
+    from machineconfig.utils.installer import get_installers
+    from machineconfig.utils.installer_utils.installer_class import Installer
+
+    total_messages: list[str] = []
+    for a_which in clis_names:
+        all_installers = get_installers(os=get_os_name(), arch=get_normalized_arch(), which_cats=["ESSENTIAL", "DEV"])
+        selected_installer = None
+        for installer in all_installers:
+            exe_name = installer["appName"]
+            app_name = installer["appName"]
+            if exe_name == a_which or app_name == a_which:
+                selected_installer = installer
+                break
+        if selected_installer is None:
+            _handle_installer_not_found(a_which, all_installers)
+            return None
+        message = Installer(selected_installer).install_robust(version=None)  # finish the task
+        total_messages.append(message)
+    if total_messages:
+        console.print("\n[bold green]📊 Installation Results:[/bold green]")
+        for a_message in total_messages:
+            console.print(f"[blue]• {a_message}[/blue]")
+    return None
+
+
+if __name__ == "__main__":
+    from machineconfig.utils.schemas.installer.installer_types import InstallerData
+    from machineconfig.utils.installer_utils.installer_class import Installer
+
+    _ = InstallerData, Installer
+    pass
