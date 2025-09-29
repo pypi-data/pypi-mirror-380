@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: easyascii-py
+Version: 1.0.3
+Summary: A simple, zero-dependency library for creating ASCII art and console UIs.
+Home-page: https://github.com/Matt-The-Generico/easyascii
+Author: Matttz
+Author-email: proactivestudiocomercial@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Terminals
+Classifier: Topic :: Text Processing :: General
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Easy ASCII - A comprehensive, single-file, zero-dependency Python library for creating beautiful and functional text-based user interfaces and ASCII art.  | Github Page for full documentation: https://github.com/Matt-The-Generico/easyascii  |  License: MIT: https://opensource.org/licenses/MIT  |  Easy ASCII is designed to be incredibly simple to use while providing a powerful set of tools for command-line applications. Whether you need to display data in a clean table, create an eye-catching banner, or show progress for a long-running task, this library has you covered.

@@ -1,0 +1,7 @@
+README.md
+easyascii.py
+setup.py
+easyascii_py.egg-info/PKG-INFO
+easyascii_py.egg-info/SOURCES.txt
+easyascii_py.egg-info/dependency_links.txt
+easyascii_py.egg-info/top_level.txt
