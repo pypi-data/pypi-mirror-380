@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: py_me
+Version: 1.1.3
+Summary: Biblioteca Python com módulos para música e interface gráfica
+Author: Seu Nome
+Author-email: isaias da silva nobrega <isaiasdasilvanobrega@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pygame
+Requires-Dist: pydub
+Dynamic: author
+Dynamic: license-file
