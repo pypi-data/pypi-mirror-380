@@ -1,0 +1,3 @@
+[console_scripts]
+jaywei-calculate-bmi-mcp = jaywei_calculate_bmi_mcp:main
+
