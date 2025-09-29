@@ -1,0 +1,14 @@
+p2p_copy/__init__.py,sha256=REKqCPoAayXATFNykaXADo1aMA4J9hOsWMRvzDK9TGs,390
+p2p_copy/api.py,sha256=tsaOrs0m9_rBBffJOjHqV7X9gMo55GGlHm8WE4Pdnno,17614
+p2p_copy/compressor.py,sha256=g9P3hraoxvfuaPv7kRALOgTF2AJPwT4IqiyBXUxj3j8,3158
+p2p_copy/io_utils.py,sha256=OYoKwua6HNgHRXaAL-r0bdC3yGEtZY42kztzWJRoEJ0,3483
+p2p_copy/protocol.py,sha256=Bj-j2SJ-EK6RENf_vMs1xIUM4Yu1VgVQ_16TP5PGNxU,7045
+p2p_copy/security.py,sha256=spDkDLlMfTgAv7yf3bNWXCNhWvPKjIaeRY5Z6koddQ4,4409
+p2p_copy_cli/main.py,sha256=DTXRI0MnYTFh7R6-r-7aMA79s5e86UOoF_2vluyv9LM,7016
+p2p_copy_server/__init__.py,sha256=Z7Si4oI6P0dYEDLHZsn5dhEUW6SyWFF1VwZtGBT0dLw,174
+p2p_copy_server/relay.py,sha256=hsQUiyRt3P48XKFA3rA51u25N0KtYpfJVIXPDMCdFFE,5814
+p2p_copy-0.1.1.dist-info/METADATA,sha256=2NKRGtaxeNQNTodIl4T0epb00CRsc5W5VloPFm-S3cE,3564
+p2p_copy-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+p2p_copy-0.1.1.dist-info/entry_points.txt,sha256=aYFlyinExyGT4GatYyw3ULXNsnp1fpLVfinaCf3P_5A,51
+p2p_copy-0.1.1.dist-info/licenses/LICENSE,sha256=JkOK70vnyGgCliw7W9SAyXzfwRzZsglVyb1LhJJ8dXE,1062
+p2p_copy-0.1.1.dist-info/RECORD,,
