@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: schibsted-search-mpc
+Version: 0.0.1
+Summary: Package name reserved by Schibsted Application Security Team
+Author-email: media-appsec <media-appsec@schibsted.com>
+License: MIT
+Keywords: security,dependency confusion,placeholder
+Description-Content-Type: text/markdown
+
+# schibsted-search-mpc
+
+This is a package owned by Schibsted Appication Security Team.
+
+**Dependency Confusion Prevention.**
