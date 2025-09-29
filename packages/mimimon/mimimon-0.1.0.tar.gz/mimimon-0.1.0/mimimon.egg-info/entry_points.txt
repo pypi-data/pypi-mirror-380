@@ -1,0 +1,2 @@
+[console_scripts]
+mimimon = mimimon.cli.main:app
