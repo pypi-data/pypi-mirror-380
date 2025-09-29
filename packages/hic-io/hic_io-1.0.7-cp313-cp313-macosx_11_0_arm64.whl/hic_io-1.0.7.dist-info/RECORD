@@ -1,0 +1,14 @@
+hic_io.cpython-313-darwin.so,sha256=-h8cEKnl9Lxk4e603oKooQBBr87Ye11tAxFtLYwEAjQ,461280
+hic_io/python_binding.cpp,sha256=4oMVd-J2EcDfXZax5oTIol2AeayrrzznEE-JqpvOE4Y,10543
+hic_io/reading/hic_slice.h,sha256=iti0lcq9rxRh2BsZA3RNdO3T8QcsJsLzs_DWGAqCAJ8,920
+hic_io/reading/straw.cpp,sha256=B-eziIy0fB9Wi4ds4SumjhsjhwSbchHBtfyz3tPnMW8,79697
+hic_io/reading/straw.h,sha256=a7NQl7nrl2la9-fn6SaPGJntsIfGIo9hiCIvv3l90uo,3852
+hic_io-1.0.7.data/data/hic_io/hic_slice.h,sha256=iti0lcq9rxRh2BsZA3RNdO3T8QcsJsLzs_DWGAqCAJ8,920
+hic_io-1.0.7.data/data/hic_io/python_binding.cpp,sha256=4oMVd-J2EcDfXZax5oTIol2AeayrrzznEE-JqpvOE4Y,10543
+hic_io-1.0.7.data/data/hic_io/straw.cpp,sha256=B-eziIy0fB9Wi4ds4SumjhsjhwSbchHBtfyz3tPnMW8,79697
+hic_io-1.0.7.data/data/hic_io/straw.h,sha256=a7NQl7nrl2la9-fn6SaPGJntsIfGIo9hiCIvv3l90uo,3852
+hic_io-1.0.7.dist-info/licenses/LICENSE,sha256=Zyf91_75Sxqaf9OujLXoH-dpd8xB4FWGehorGf_lI5E,1070
+hic_io-1.0.7.dist-info/METADATA,sha256=synOxg774-_wR706WWJFdE67Srz-ccJcxD_URsMipds,2130
+hic_io-1.0.7.dist-info/WHEEL,sha256=KreXLeNnYSLDPpk7qnNyKd0DQEhtY-je-mdlEpkBMmo,109
+hic_io-1.0.7.dist-info/top_level.txt,sha256=mrgfy7d_WozlKAoXVQsU83vOIMLDx6V1CJ_wTFQVfbY,7
+hic_io-1.0.7.dist-info/RECORD,,
