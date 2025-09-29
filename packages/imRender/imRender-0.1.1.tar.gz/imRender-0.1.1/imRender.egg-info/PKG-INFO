@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: imRender
+Version: 0.1.1
+Summary: .
+License: Apache-2.0
+Project-URL: Github, https://github.com/firstelfin/imRender
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# imRender
+
+> Github: [https://github.com/firstelfin/imRender](https://github.com/firstelfin/imRender)
+> PYPI: [https://pypi.org/project/imRender/](https://pypi.org/project/imRender/)
+
+Image Display
+
+- [x] Draw label annotations in labelme format onto the image.
+- [x] Customize the display of flags attributes.
