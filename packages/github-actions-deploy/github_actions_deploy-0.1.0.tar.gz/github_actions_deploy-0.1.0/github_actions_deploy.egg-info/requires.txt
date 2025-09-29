@@ -1,0 +1,16 @@
+google-cloud-run>=0.10.0
+google-cloud-build>=3.13.0
+google-auth>=2.17.0
+PyGithub>=1.58.0
+pydantic>=2.0.0
+click>=8.0.0
+rich>=12.0.0
+pyyaml>=6.0
+
+[dev]
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.0.0
+pre-commit>=3.0.0
