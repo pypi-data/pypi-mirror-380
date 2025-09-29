@@ -1,0 +1,13 @@
+mysingle_quant/__init__.py,sha256=DRfd_Mbvo_tddqSZwreVjxmADHihXkKNTI0PgbEPsB4,270
+mysingle_quant/clients/__init__.py,sha256=joQbUdegr3VcKcp9RW8ziYZvcjDut9LX7EoCC6pX0c4,87
+mysingle_quant/clients/alpha_vantage_client.py,sha256=WxRK2GGwTx9Ly7LwQWgfM7iQOH6hfXBY5M6jwr2YFC0,7613
+mysingle_quant/core/__init__.py,sha256=MRU0NUlPYwTSLCqcjF1JqjKFkoD5vbNrhaGXZFwyNCQ,918
+mysingle_quant/core/app_factory.py,sha256=sBv223Xs1rBAzHXQShVkm1Tm13DjuawvkeRSsOexnZg,7126
+mysingle_quant/core/config.py,sha256=zPQPoGNZIUS6_V_wSW20ktxzyu7W0WiLS8jeaRcbb8g,2906
+mysingle_quant/core/db.py,sha256=ba2DN3ftF54UljEFaVyi2yP0SJ8OTMoaM-lIpWm3ilk,2205
+mysingle_quant/core/health.py,sha256=3kSbR_hp_kSkniy8nlXf-570DSDL7fPFwUdoeKFctKw,5392
+mysingle_quant/core/metrics.py,sha256=vq7Y6VWCWtKGhSTo7kS2h6JyBbtrwR_FgddMi7ZrfHU,6541
+mysingle_quant-0.1.13.dist-info/METADATA,sha256=V-QWPPpUd611aqIk9AAgTQcFJfR5ZOYTun4GLe31nuI,826
+mysingle_quant-0.1.13.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mysingle_quant-0.1.13.dist-info/top_level.txt,sha256=ZQjIel16iv-94Y3K3_AC5UQwjE485YcuyAf6Wei2Qlc,15
+mysingle_quant-0.1.13.dist-info/RECORD,,
