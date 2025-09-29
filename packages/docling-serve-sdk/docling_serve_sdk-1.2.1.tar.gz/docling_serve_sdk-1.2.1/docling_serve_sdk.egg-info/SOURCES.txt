@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+./docling_serve_sdk/__init__.py
+./docling_serve_sdk/client.py
+./docling_serve_sdk/examples.py
+./docling_serve_sdk/models.py
+docling_serve_sdk/__init__.py
+docling_serve_sdk/client.py
+docling_serve_sdk/examples.py
+docling_serve_sdk/models.py
+docling_serve_sdk.egg-info/PKG-INFO
+docling_serve_sdk.egg-info/SOURCES.txt
+docling_serve_sdk.egg-info/dependency_links.txt
+docling_serve_sdk.egg-info/requires.txt
+docling_serve_sdk.egg-info/top_level.txt
