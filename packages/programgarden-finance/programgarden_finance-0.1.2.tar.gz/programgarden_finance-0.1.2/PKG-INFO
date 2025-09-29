@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: programgarden-finance
+Version: 0.1.2
+Summary: 프로그램 동산 운영진이 관리하는 증권사 데이터 오픈소스
+Author: 프로그램동산
+Author-email: coding@programgarden.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.10.0,<4.0.0)
+Requires-Dist: programgarden-core (>=0.1.1,<0.2.0)
+Requires-Dist: pydantic (>=2.11.7,<3.0.0)
+Requires-Dist: redis (>=6.4.0,<7.0.0)
+Requires-Dist: requests (>=2.32.4,<3.0.0)
+Requires-Dist: websockets (>=15.0.1,<16.0.0)
+Description-Content-Type: text/markdown
+
+## Finance Guide
+
+`programgarden-finance` 라이브러리는 LS 증권의 API를 빠르게 사용 가능하도록 간소화 시킨 오픈소스입니다. 해외주식 및 해외선물 등의 금융 데이터를 조회하고 실시간으로 모니터링할 수 있는 사용하기 쉬운 라이브러리입니다.
+
+비전공 투자자도 사용하기 쉽도록 설계되었으며, 동시성, 증권데이터 업데이트 등의 백그라운드 작업은 Program Garden에서 관리하고 있음으로 투자자는 손쉽게 사용만 하면 됩니다.
+
+자세한 사용법은 [Finance 가이드](https://programgarden.gitbook.io/docs/undefined-1/finance_guide)를 참조하세요.
