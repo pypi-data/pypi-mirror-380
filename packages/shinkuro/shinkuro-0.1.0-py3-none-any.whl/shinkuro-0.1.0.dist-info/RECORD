@@ -1,0 +1,11 @@
+shinkuro/__init__.py,sha256=sx3wH7QnG94aHRf-NfXz--mjE9-N_D51e5rvg7EUrM8,47
+shinkuro/main.py,sha256=i92P84uWFTf8KsSuJKH1gw2VPEQEV2YI8TeRo9c26Bw,1004
+shinkuro/server.py,sha256=r0VeGXox-IDYvyB1CDVNo-zOBwqQqKLWfjl9JLl7Zwc,899
+shinkuro/utils/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+shinkuro/utils/file.py,sha256=WoZj40_8omtgWdtz_NIwPsOQa5QLddEOwBOPDI2lhv8,1353
+shinkuro/utils/github.py,sha256=SEV3sVMCog0YGffn2oWZXKuK9wN-PqlOWg7BHnE5ghk,1678
+shinkuro-0.1.0.dist-info/METADATA,sha256=6m2tlSNd2SN4J8VuBtyLp4D_9IYsEQPdWQmtBrNUQzA,2538
+shinkuro-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shinkuro-0.1.0.dist-info/entry_points.txt,sha256=iWtHocMEI1taoHFBXeZUposSljQ4PhGwrKufTf_Iv5M,48
+shinkuro-0.1.0.dist-info/licenses/LICENSE,sha256=WV0dxca98gx2Wops4SgudesOPrXaTy0TLd84JFamog4,1068
+shinkuro-0.1.0.dist-info/RECORD,,
