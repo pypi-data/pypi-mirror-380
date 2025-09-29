@@ -1,0 +1,31 @@
+[project]
+name = "parse-pcap"
+version = "0.2.0"
+description = "A Python package for extracting indicators of compromise (IOCs) from PCAP files."
+authors = [
+    { name = "Joshua Bone", email = "jbone.data@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GNU GENERAL PUBLIC LICENSE" }
+keywords = ["pcap", "ioc", "security", "network"]
+dependencies = [
+    "pyshark >= 0.6", "requests>=2.32.5"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+
+[project.scripts]
+parse_pcap = "parse_pcap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/josh-bone/Network-Threat-Detection"
+Repository = "https://github.com/josh-bone/Network-Threat-Detection"
+Issues = "https://github.com/josh-bone/Network-Threat-Detection/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
