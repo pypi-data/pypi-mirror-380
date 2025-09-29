@@ -1,0 +1,16 @@
+bazarrbulksync-0.0.0.dist-info/licenses/LICENSE,sha256=xS6JKiweSchBZBoSfD1D0tKPupwYH26T7dkq0Vk2t9k,1092
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/cli.py,sha256=MyyZwwsiBokaXCUOgDoaRvYz8846MXRTJG2MxvKDy8Y,9063
+cli/config.py,sha256=eIGy3RwNg5YG-aiyKLXUHI-OXPnhoQbzanL55kuEUL4,1964
+sync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sync/bazarr.py,sha256=-cd1R8JY1On9gaqgA-luinp3RRhn_SnGKLrGhr_ttZ0,10549
+sync/sync.py,sha256=UQbp7RhPF0kLXt-1blIsy9mZZOSUktsDA1e0wfAwteA,12198
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/config.py,sha256=DgPHNFLqEEs_MiQ9RwiXn9LyEKW36jRix-kvzxxsWm8,385
+tests/test_bazarr.py,sha256=o3AeFYOYR_840ntK9dYVfcj3Mhrm1GwMOXRAbLL9GpE,2906
+tests/test_bazarr_api.py,sha256=9NYDpxys4hHQmOa4fkhrILNCYWeH53hvHJScrA3ZOVw,2654
+bazarrbulksync-0.0.0.dist-info/METADATA,sha256=TdgzFfoWKl0oMQirFgAMElkvEMD3YXe7i9ZY6Vm-01Q,14407
+bazarrbulksync-0.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bazarrbulksync-0.0.0.dist-info/entry_points.txt,sha256=lsopl1HKYcVuE4V5gCSFsTeBc8XL7ZQenurREm_AKls,48
+bazarrbulksync-0.0.0.dist-info/top_level.txt,sha256=rJ5KyWeMLnYTSORFkVL8DDjPL_OpwkGvluPWgqZq360,15
+bazarrbulksync-0.0.0.dist-info/RECORD,,
