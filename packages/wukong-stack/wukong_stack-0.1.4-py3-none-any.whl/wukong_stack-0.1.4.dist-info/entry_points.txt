@@ -1,0 +1,2 @@
+[console_scripts]
+wukong = wukong.cli:cli
