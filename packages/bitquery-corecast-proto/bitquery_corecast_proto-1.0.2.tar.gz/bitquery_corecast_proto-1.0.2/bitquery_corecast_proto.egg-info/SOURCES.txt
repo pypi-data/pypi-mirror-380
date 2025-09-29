@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+bitquery_corecast_proto.egg-info/PKG-INFO
+bitquery_corecast_proto.egg-info/SOURCES.txt
+bitquery_corecast_proto.egg-info/dependency_links.txt
+bitquery_corecast_proto.egg-info/not-zip-safe
+bitquery_corecast_proto.egg-info/requires.txt
+bitquery_corecast_proto.egg-info/top_level.txt
