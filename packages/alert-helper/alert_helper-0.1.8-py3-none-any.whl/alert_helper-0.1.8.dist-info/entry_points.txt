@@ -1,0 +1,3 @@
+[console_scripts]
+alert = alert_helper.cli:main
+
