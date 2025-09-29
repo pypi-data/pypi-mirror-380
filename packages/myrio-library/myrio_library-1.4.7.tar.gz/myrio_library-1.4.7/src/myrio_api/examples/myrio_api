@@ -1,0 +1,37 @@
+#!/bin/sh
+
+DAEMON="/usr/bin/python3"
+DAEMON_ARGS="/usr/lib/python3.5/site-packages/myrio_api/myrio_api.py"
+PIDFILE="/var/run/myrio_api.pid"
+
+start() {
+    echo "Starting myrio_api..."
+    nohup $DAEMON $DAEMON_ARGS > /var/tmp/myrio_api_log.txt 2>&1 &
+    echo $! > $PIDFILE
+}
+
+stop() {
+    echo "Stopping myrio_api..."
+    PID=$(cat $PIDFILE)
+    kill $PID
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0
