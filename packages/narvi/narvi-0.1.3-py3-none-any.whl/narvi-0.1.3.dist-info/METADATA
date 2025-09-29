@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: narvi
+Version: 0.1.3
+Summary: A lightweight Python application server
+Author-email: Visual Topology <dev@visualtopology.com>
+License-Expression: MIT
+Project-URL: Homepage, https://visualtopology.org/narvi
+Project-URL: Documentation, https://visualtopology.org/narvi
+Project-URL: Repository, https://codeberg.org/visual-topology/narvi
+Project-URL: Issues, https://codeberg.org/visual-topology/narvi/issues
+Project-URL: Changelog, https://codeberg.org/visual-topology/hyrrokkin/src/branch/main/CHANGELOG.md
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: tornado
+Requires-Dist: tornado; extra == "tornado"
+Dynamic: license-file
+
+# narvi
+
+A lightweight Python Web Application Server based on a threading model (each web service instance runs in its own thread)
+
+## Installation Options
+
+Narvi supports python versions >= 3.11 and is tested on linux
+
+Installation with tornado is recommended:
+
+```
+pip install narvi[tornado]
+```
+
+Installation without dependencies (using slower built-in webserver):
+
+```
+pip install narvi
+```
+
+## Documentation
+
+For documentation please see the user guide: https://www.visualtopology.org/docs/narvi/index.html
+
+## Building Documentation
+
+Documentation is built using mkdocs which can be installed using:
+
+```
+pip install mkdocs
+python -m pip install "mkdocstrings[python]"
+python -m pip install mkdocs-material
+```
+
+To build documentation:
+
+```
+cd docs
+./build.sh
+```
+
