@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "petfetchpy"
+version = "1.0.0"
+authors = [
+  { name="KittKat", email="kittkat@kittkat.xyz" },
+]
+description = "A cute pet fetch utility"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+  "distro>=1.9.0",
+  "py-cpuinfo>=9.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/KittKat7/petfetchpy"
+Issues = "https://github.com/KittKat7/petfetchpy/issues"
+
+[project.scripts]
+petfetchpy = "petfetchpy.cli:app"

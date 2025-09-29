@@ -1,0 +1,3 @@
+[submodule "ascii-pets"]
+	path = ascii-pets
+	url = git@github.com:KittKat7/ascii-pets.git
