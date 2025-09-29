@@ -1,0 +1,8 @@
+livekit/plugins/hume/__init__.py,sha256=yYTwSJaYq5ufZ_EnoSuLa2FfSsnOZu-swAzYjNQAhhw,1374
+livekit/plugins/hume/log.py,sha256=TwpK1FOwgD6Jb0A2nl-9nIgi0q5qWo9HGDrDuV_2g0g,67
+livekit/plugins/hume/py.typed,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+livekit/plugins/hume/tts.py,sha256=ORsMhu4GjrVFPHgzDfEi7AL9PS1bOnfM6h9e3DwxxKo,10586
+livekit/plugins/hume/version.py,sha256=FFZEM9AZqNGa7X1KLzO4dlhVQdX4Rd0rYeC6lTB3HD4,601
+livekit_plugins_hume-1.2.12.dist-info/METADATA,sha256=v8D6L6W25eMbjsmLY1x6Yv9IRIzxUvbU-6LPnYgKbBg,1356
+livekit_plugins_hume-1.2.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_hume-1.2.12.dist-info/RECORD,,
