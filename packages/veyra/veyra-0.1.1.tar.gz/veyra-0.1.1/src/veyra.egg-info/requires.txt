@@ -1,0 +1,10 @@
+
+[dev]
+black
+flake8
+mypy
+pytest
+
+[test]
+pytest
+pytest-cov
