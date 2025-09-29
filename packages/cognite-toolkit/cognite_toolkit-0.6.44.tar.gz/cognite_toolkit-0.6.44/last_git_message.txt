@@ -1,0 +1,27 @@
+[CDF-25748] Support search configuration dump (#2003)
+
+# Description
+
+Recently we added support for a new resource type `search configuration`
+for configuring the search application for a particular view. This adds
+support to dump the already existing `search configuration`.
+
+<img width="733" height="78" alt="Screenshot 2025-09-23 at 3 06 18 PM"
+src="https://github.com/user-attachments/assets/b0f5cbda-1868-4b6d-ac7e-6a4d9c08bffd"
+/>
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Added
+
+- [alpha] Support dumping search configurations, `cdf dump
+search-config`.
+
+## templates
+
+No changes.
