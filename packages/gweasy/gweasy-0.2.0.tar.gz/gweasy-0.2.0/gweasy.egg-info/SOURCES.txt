@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gweasy.egg-info/PKG-INFO
+gweasy.egg-info/SOURCES.txt
+gweasy.egg-info/dependency_links.txt
+gweasy.egg-info/entry_points.txt
+gweasy.egg-info/requires.txt
+gweasy.egg-info/top_level.txt
