@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: NaviNIBS_Cobot
+Version: 0.1.6
+Summary: NaviNIBS addon for Cobot control
+License: LGPL-3.0-only
+Author: Christopher C. Cline
+Author-email: chriscline@users.noreply.github.com
+Requires-Python: >=3.10,<3.14
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Requires-Dist: navinibs (>=0.2.4)
+Project-URL: Documentation, https://precisionneurolab.github.io/navinibs-docs
+Project-URL: Homepage, https://github.com/PrecisionNeuroLab/NaviNIBS
+Project-URL: Repository, https://github.com/PrecisionNeuroLab/NaviNIBS_Cobot
+Description-Content-Type: text/markdown
+
+# NaviNIBS Cobot addon
+
+An addon to support control of the Axilum TMS Cobot with [NaviNIBS](https://github.com/PrecisionNeuroLab/NaviNIBS). See [NaviNIBS documentation](https://precisionneurolab.github.io/navinibs-docs) for more information.
+
+Note: this code is not supported nor endorsed by Axilum Robotics. It is provided as-is.  
+
+
+

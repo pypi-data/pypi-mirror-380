@@ -1,0 +1,32 @@
+[project]
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)"
+]
+name = "NaviNIBS_Cobot"
+version = "0.1.6"
+description = "NaviNIBS addon for Cobot control"
+readme = "README.md"
+authors = [
+    {name= "Christopher C. Cline", email="chriscline@users.noreply.github.com"},
+]
+license = "LGPL-3.0-only"
+
+[project.urls]
+homepage = "https://github.com/PrecisionNeuroLab/NaviNIBS"
+repository = "https://github.com/PrecisionNeuroLab/NaviNIBS_Cobot"
+documentation = "https://precisionneurolab.github.io/navinibs-docs"
+
+[tool.poetry]
+packages = [
+    { include = "NaviNIBS_Cobot", from = ".." }
+]
+include = [
+    { path = "Devices/**/*.*", format=["sdist", "wheel"] },
+    { path = "Navigator/**/*.*", format=["sdist", "wheel"] },
+    { path = "*.json", format=["sdist", "wheel"] }
+]
+exclude = ["dist"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+navinibs = ">=0.2.4"
