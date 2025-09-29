@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-bookmark-server = mcpserver.__main__:main
