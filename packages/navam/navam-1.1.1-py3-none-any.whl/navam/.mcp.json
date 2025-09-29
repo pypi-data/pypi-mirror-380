@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "stock-analyzer": {
+      "command": "python",
+      "args": [
+        "-m",
+        "stock_mcp.server",
+        "stdio"
+      ]
+    },
+    "company-research": {
+      "command": "python",
+      "args": [
+        "-m",
+        "company_mcp.server",
+        "stdio"
+      ]
+    },
+    "news-analyzer": {
+      "command": "python",
+      "args": [
+        "-m",
+        "news_mcp.server",
+        "stdio"
+      ]
+    }
+  }
+}
