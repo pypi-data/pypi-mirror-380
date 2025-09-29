@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gridworldpy"
+version = "0.1.0"
+description = "A flexible and interactive grid world environment for reinforcement learning"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "LIC", email = "liuchen.lic@gmail.com"}
+]
+maintainers = [
+    {name = "LIC", email = "liuchen.lic@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["reinforcement learning", "grid world", "environment", "RL", "AI", "machine learning", "visualization"]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+]
+
+[project.optional-dependencies]
+examples = [
+    "matplotlib>=3.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hitlic/gridworldpy"
+Repository = "https://github.com/hitlic/gridworldpy"
+Documentation = "https://github.com/hitlic/gridworldpy#readme"
+"Bug Reports" = "https://github.com/hitlic/gridworldpy/issues"
+
+[tool.setuptools]
+packages = ["gridworldpy"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
