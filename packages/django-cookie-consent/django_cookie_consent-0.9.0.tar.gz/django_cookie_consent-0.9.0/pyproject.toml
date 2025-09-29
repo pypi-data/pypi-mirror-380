@@ -1,0 +1,122 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-cookie-consent"
+description = "Django cookie consent application"
+authors = [
+    {name = "Informatika Mihelac", email = "bmihelac@mihelac.org"}
+]
+readme = "README.md"
+license = "BSD-2-Clause-first-lines"
+license-files = ["LICENSE"]
+keywords = ["cookies", "cookie-consent", "cookie bar"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "django>=4.2",
+    "django-appconf",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://django-cookie-consent.readthedocs.io/en/latest/"
+Changelog = "https://github.com/django-commons/django-cookie-consent/blob/master/docs/changelog.rst"
+"Bug Tracker" = "https://github.com/django-commons/django-cookie-consent/issues"
+"Source Code" = "https://github.com/django-commons/django-cookie-consent"
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-cov",
+    "pytest-django",
+    "pytest-playwright",
+    "hypothesis",
+    "tox",
+    "ruff",
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+]
+release = [
+    "tbump",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "cookie_consent.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["cookie_consent*"]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+DJANGO_SETTINGS_MODULE = "testapp.settings"
+markers = [
+    "e2e: mark tests as end-to-end tests, using playwright (deselect with '-m \"not e2e\"')",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["cookie_consent"]
+omit = [
+    # migrations run while django initializes the test db
+    "*/migrations/*",
+]
+
+[tool.coverage.report]
+skip_covered = true
+exclude_also = [
+    "if (typing\\.)?TYPE_CHECKING:",
+    "@(typing\\.)?overload",
+    "class .*\\(.*Protocol.*\\):",
+    "@(abc\\.)?abstractmethod",
+    "raise NotImplementedError",
+    "\\.\\.\\.",
+    "\\bpass$",
+]
+
+[tool.ruff.lint]
+extend-select = [
+    "UP",  # pyupgrade
+    "DJ",  # django
+    "LOG", # logging
+    "G",
+    "I",   # isort
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "PERF",# perflint
+    "B",   # flake8-bugbear
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+section-order = [
+    "future",
+    "standard-library",
+    "django",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+"django" = ["django"]
