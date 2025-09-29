@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: odoo-isabel-connect
+Version: 1.0.0
+Summary: Isabel Connect Lib for Odoo
+Requires-Python: >=3.8
+License-File: LICENSE
+
