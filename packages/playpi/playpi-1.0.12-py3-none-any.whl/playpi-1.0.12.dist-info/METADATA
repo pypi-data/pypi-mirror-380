@@ -1,0 +1,190 @@
+Metadata-Version: 2.4
+Name: playpi
+Version: 1.0.12
+Summary: Automate AI chat workflows through browser automation
+Project-URL: Documentation, https://github.com/twardoch/playpi#readme
+Project-URL: Issues, https://github.com/twardoch/playpi/issues
+Project-URL: Source, https://github.com/twardoch/playpi
+Author-email: Adam Twardoch <adam+github@twardoch.com>
+License: MIT
+License-File: LICENSE
+Keywords: ai,automation,browser,chat,gemini,playwright
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.12
+Requires-Dist: fire>=0.5.0
+Requires-Dist: html2text>=2020.1.16
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: platformdirs>=3.0.0
+Requires-Dist: playwright>=1.40.0
+Requires-Dist: playwrightauthor>=1.0.13
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: all
+Provides-Extra: dev
+Requires-Dist: absolufy-imports>=0.3.1; extra == 'dev'
+Requires-Dist: isort>=6.0.1; extra == 'dev'
+Requires-Dist: mypy>=1.15.0; extra == 'dev'
+Requires-Dist: pre-commit>=4.1.0; extra == 'dev'
+Requires-Dist: pyupgrade>=3.19.1; extra == 'dev'
+Requires-Dist: ruff>=0.9.7; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=3.0.0; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx>=7.2.6; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: coverage[toml]>=7.6.12; extra == 'test'
+Requires-Dist: pytest-asyncio>=0.25.3; extra == 'test'
+Requires-Dist: pytest-benchmark[histogram]>=5.1.0; extra == 'test'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'test'
+Requires-Dist: pytest-playwright>=0.4.0; extra == 'test'
+Requires-Dist: pytest-xdist>=3.6.1; extra == 'test'
+Requires-Dist: pytest>=8.3.4; extra == 'test'
+Description-Content-Type: text/markdown
+
+# PlayPi
+
+Automate AI chat workflows through browser automation.
+
+PlayPi provides simple, high-level functions for automating browser-based AI chat workflows, starting with Google Gemini Deep Research. The package delegates all browser lifecycle management to the [`playwrightauthor`](https://pypi.org/project/playwrightauthor/) library, so Chrome for Testing installation and profile handling happen automatically.
+
+## Installation
+
+```bash
+pip install playpi
+```
+
+Or for development:
+
+```bash
+git clone https://github.com/twardoch/playpi
+cd playpi
+uv sync
+```
+
+## Quick Start
+
+### Google Deep Research
+
+```python
+import asyncio
+from playpi import google_gemini_deep_research
+
+async def main():
+    # Perform deep research on a topic
+    result = await google_gemini_deep_research(
+        "Analyze the impact of quantum computing on cryptography",
+        headless=True,  # Retained for compatibility; playwrightauthor runs headed
+        timeout=600,    # 10 minute timeout
+        verbose=True    # Enable detailed logging
+    )
+
+    print(result)  # Markdown-formatted research results
+
+asyncio.run(main())
+```
+
+### Command Line Interface
+
+```bash
+# Standard Gemini prompt with optional file prompt + Deep Think toggle
+playpi gemi --file_prompt prompt.md --prompt "Add a concise summary" --deep --output_file response.md
+
+# Single or multi Deep Research via JSON piped on stdin
+printf '{"prompt": "What are the latest developments in renewable energy?"}' | playpi gemi_dr
+cat jobs.json | playpi gemi_dr
+
+# Test browser session
+playpi test
+```
+
+Headless flags are currently ignored because playwrightauthor always operates Chrome in headed mode.
+
+## Prerequisites
+
+### Authentication
+
+Before using Google Deep Research, you need to:
+
+1. **Login to Google**: Open https://gemini.google.com in your browser and sign in
+2. **Browser profiles**: PlayPi relies on playwrightauthor-managed profiles, so you only need to login once in the selected profile
+
+### System Requirements
+
+- Python 3.12+
+- Chrome for Testing (downloaded automatically by playwrightauthor)
+- 2GB+ RAM for browser automation
+- Internet connection
+
+## Features
+
+- ✅ **Google Gemini Deep Research** - Automated research with source compilation
+- ✅ **Session Management** - Persistent authentication across multiple queries
+- ✅ **Cross-Platform** - Works on Windows, macOS, and Linux
+- ✅ **Concurrent Processing** - Run up to 3 research tasks simultaneously
+- ✅ **Rich Output** - Clean Markdown formatting with links and structure
+- ✅ **Error Handling** - Graceful handling of timeouts and UI changes
+
+## API Reference
+
+### `google_gemini_deep_research(prompt, **options)`
+
+Perform Google Gemini Deep Research on a given prompt.
+
+**Parameters:**
+- `prompt` (str): Research query or question
+- `headless` (bool): Retained for compatibility; playwrightauthor currently launches Chrome in headed mode (default: True)
+- `timeout` (int): Maximum wait time in seconds (default: 600)
+- `verbose` (bool): Enable detailed logging (default: False)
+- `profile` (str): Browser profile name managed by playwrightauthor (default: `"default"`)
+
+**Returns:**
+- `str`: Research results formatted as Markdown
+
+**Raises:**
+- `AuthenticationError`: Not logged in to Google/Gemini
+- `PlayPiTimeoutError`: Research exceeded timeout limit
+- `ProviderError`: UI elements not found or changed
+
+## Development
+
+### Running Tests
+
+```bash
+# Run all tests without hitting live Gemini login
+PLAYPI_FORCE_AUTH_FAILURE=1 uvx hatch run test:python -m pytest
+
+# Run with coverage (same auth guard applies)
+PLAYPI_FORCE_AUTH_FAILURE=1 uvx hatch run test:python -m pytest --cov=src/playpi --cov-report=html
+
+# Run specific test categories
+PLAYPI_FORCE_AUTH_FAILURE=1 uvx hatch run test:python -m pytest tests/test_session.py -v
+```
+
+`PLAYPI_FORCE_AUTH_FAILURE=1` short-circuits the authentication check during testing so suites do not wait for manual Google sign-in.
+
+### Code Quality
+
+```bash
+# Format code
+uv run ruff format
+
+# Lint code
+uv run ruff check
+
+# Type checking
+uv run mypy src/playpi
+```
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
