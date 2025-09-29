@@ -1,0 +1,14 @@
+tinypg/__init__.py,sha256=ACOsQtU9oYjW6AyPd2JiDX2noOHY643LCoOECiLCO1c,7085
+tinypg/binaries.py,sha256=CzvCEOVnjABNP6lRpx-7AEkVU133Gk0__uVTDRMyzZ0,19877
+tinypg/config.py,sha256=HZhBqwXkmcN1L5c1k4A1p5G9NKJWf66zpXKav7LkH-k,3162
+tinypg/context.py,sha256=DgOpQ1Nnl_RKAs532Lgg2zmwZUu7fDiyKf1lyoYDHIE,7902
+tinypg/core.py,sha256=rHKgvWPgxpJs338U17XbFLQl7V9cWYeWrvo1vr3XxxY,26632
+tinypg/exceptions.py,sha256=eY6ql-tAtVBAFUhCxsrVMQirrzh8N6i_Fj5SDUJ6G34,718
+tinypg/extensions.py,sha256=iEb5QxmOA77Yxae8upFDD43DrwyQyStqiZTqymqABkg,5007
+tinypg/port_manager.py,sha256=IOeFjDl2yxzicgu5gDe2CI3SnDlhUq2Dq5HUH2mDuB8,1607
+tinypg/docs/__init__.py,sha256=TOL_azBVFgVg2gFPRC44bDwiH7-8mdEPbLuDWgKNTnM,65
+tinypg/docs/extensions.py,sha256=6g1cjdWiDv7pJkdVY4WT-i-ENaiki2WRIBH1UShI5AU,4283
+tinypg-0.3.0.dist-info/METADATA,sha256=bUcM1xELRSWvFwy6_MKNyxmXNPs4gp6UNBsTL-Tel6Q,10505
+tinypg-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tinypg-0.3.0.dist-info/top_level.txt,sha256=4WpnDfko0697irTaK5Q5s8UoGS4gYtTAfRSnbltBnso,7
+tinypg-0.3.0.dist-info/RECORD,,
