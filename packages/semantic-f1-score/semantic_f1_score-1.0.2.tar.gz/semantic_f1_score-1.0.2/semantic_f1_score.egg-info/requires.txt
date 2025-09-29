@@ -1,0 +1,10 @@
+pandas
+scipy
+
+[dev]
+black
+pytest
+
+[test]
+pytest
+scikit-learn

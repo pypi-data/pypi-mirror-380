@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+semantic_f1_score/__init__.py
+semantic_f1_score/hungarian.py
+semantic_f1_score/semantic_f1.py
+semantic_f1_score.egg-info/PKG-INFO
+semantic_f1_score.egg-info/SOURCES.txt
+semantic_f1_score.egg-info/dependency_links.txt
+semantic_f1_score.egg-info/requires.txt
+semantic_f1_score.egg-info/top_level.txt
+tests/test_semantic_f1_identity.py
+tests/test_semantic_f1_interface.py
