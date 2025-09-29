@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: pypeertube
+Version: 1.0.0
+Summary: Python module to interact with a Peertube instance's API.
+Author-email: CaramelConnoisseur <me@caramelconnoisseur.dev>
+License-Expression: GPL-3.0-only
+Project-URL: Source, https://github.com/CaramelConnoisseur/PyPeertube
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Multimedia :: Video :: Display
+Classifier: Typing :: Typed
+Requires-Python: ~=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests~=2.32.5
+Dynamic: license-file
+
+# PyPeertube
+
+Python module to interact with a Peertube instance's API.
+
+## Example
+
+Search for videos tagged `animal` or `dog` and containing `puppy` in the title or description,
+printing the video's title and link of each result.
+
+```python
+from pypeertube.client import ApiClient
+from pypeertube.videos import search_videos
+
+PEERTUBE_URL = "https://my.peertube.tld"
+PEERTUBE_USERNAME = "my_username"
+PEERTUBE_PASSWORD = "my_password"
+SEARCH_STRING = "Puppy"
+SEARCH_TAGS = ["animal", "dog"]
+
+with ApiClient(PEERTUBE_URL, PEERTUBE_USERNAME, PEERTUBE_PASSWORD) as client:
+    for video in search_videos(client, SEARCH_STRING, tags_or=SEARCH_TAGS):
+        print(f"{video.name}: {client.base_url}/w/{video.short_uuid}")
+```
