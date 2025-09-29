@@ -1,0 +1,7 @@
+importlib_resources
+lxml
+lxml-stubs
+cython
+numpy
+scipy
+scikit-learn
