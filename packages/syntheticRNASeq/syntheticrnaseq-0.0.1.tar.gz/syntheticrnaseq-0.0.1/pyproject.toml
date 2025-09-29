@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["syntheticRNASeq*"]
+
+
+[project]
+name = "syntheticRNASeq"
+version = "0.0.1"
+authors = [
+  { name="Theodoros Karalis", email="ttkaralis@gmail.com" },
+]
+description = "This package can be used to generate syntheticRNASeq data by sampling a negative binomial distribution."
+readme = "README.md"
+requires-python = ">=3.12.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/ttkaralis/syntheticRNASeq"
+Issues = "https://github.com/ttkaralis/syntheticRNASeq"

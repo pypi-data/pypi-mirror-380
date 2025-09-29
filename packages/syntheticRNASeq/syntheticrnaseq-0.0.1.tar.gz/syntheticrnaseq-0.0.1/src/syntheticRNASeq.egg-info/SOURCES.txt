@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/syntheticRNASeq/__init__.py
+src/syntheticRNASeq/syntheticRNASeq.py
+src/syntheticRNASeq.egg-info/PKG-INFO
+src/syntheticRNASeq.egg-info/SOURCES.txt
+src/syntheticRNASeq.egg-info/dependency_links.txt
+src/syntheticRNASeq.egg-info/top_level.txt
