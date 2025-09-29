@@ -1,0 +1,8 @@
+remip_client/__init__.py,sha256=xkAkG3nqQQBlRifuXtuteQpgQJA5dFA7alOV_wzYlQk,1020
+remip_client/_version.py,sha256=lemL_4Kl75FgrO6lVuFrrtw6-Dcf9wtXBalKkXuzkO4,704
+remip_client/environment.py,sha256=8cPEoZvIlV5yFD12FMvIFtv6mTI28YkN3s-9LCphYzM,336
+remip_client/http_client.py,sha256=7_0jbdM7gHUvL7ofHf3FfUHsf1HwjiLyunE4zvh--q8,4717
+remip_client/solver.py,sha256=9GAU-mDjqv8BPnSCnBp3WCHkezibzGBzMN4AvMxNQBo,5112
+remip_client-0.3.3.dist-info/METADATA,sha256=UycoKyNDAJ_vReL8VKnWkhFT7zib9Sy0jq-sVbtEk4c,9166
+remip_client-0.3.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+remip_client-0.3.3.dist-info/RECORD,,
