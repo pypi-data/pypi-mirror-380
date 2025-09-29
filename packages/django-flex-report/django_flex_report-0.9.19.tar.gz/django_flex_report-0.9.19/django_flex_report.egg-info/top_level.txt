@@ -1,0 +1,4 @@
+build
+dist
+flex_report
+static
