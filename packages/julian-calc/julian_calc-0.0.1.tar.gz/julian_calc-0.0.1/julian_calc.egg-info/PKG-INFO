@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: julian-calc
+Version: 0.0.1
+Summary: A comprehensive command-line calculator.
+Author-email: "Julian A." <jlavilam@udistrital.edu.co>
+Project-URL: Homepage, https://github.com/Julian-L-Avila-M/Julian-calc
+Project-URL: Bug Tracker, https://github.com/Julian-L-Avila-M/Julian-calc/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy

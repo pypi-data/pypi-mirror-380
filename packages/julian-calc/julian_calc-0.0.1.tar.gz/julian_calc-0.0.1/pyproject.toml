@@ -1,0 +1,33 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "julian-calc"  # The name used on PyPI (must be unique)
+version = "0.0.1"
+authors = [
+{ name="Julian A.", email="jlavilam@udistrital.edu.co" },
+]
+description = "A comprehensive command-line calculator."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = [
+	"numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/Julian-L-Avila-M/Julian-calc"
+"Bug Tracker" = "https://github.com/Julian-L-Avila-M/Julian-calc/issues"
+
+# This is the crucial part for your terminal interface!
+[project.scripts]
+mycalc = "julian_calc.main:main"

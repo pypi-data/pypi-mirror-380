@@ -1,0 +1,2 @@
+[console_scripts]
+mycalc = julian_calc.main:main
