@@ -1,0 +1,12 @@
+hoopoe_iam_sdk/__init__.py,sha256=7GTtEkjKTPTPXy4ne-kgUNrb_Nff15HR4WNgustrpms,2943
+hoopoe_iam_sdk/client.py,sha256=m31khr5xUD-jTOjEFGoCgecrWLe4EEowub3p5tN8Hec,35089
+hoopoe_iam_sdk/exceptions.py,sha256=ioCGUKvkYreC1Y-E3_ncU0Y_n4EaMY564sF96VN1OOM,4473
+hoopoe_iam_sdk/middleware.py,sha256=d7zI8Sx2TOxlJRNRaELAxUCdAZtjrG30TKjOd-j6eNc,11982
+hoopoe_iam_sdk/models.py,sha256=H8BQ4y77KwEiirQLHjUT-vfzN3vThjJbFd6cWWqhIO0,9662
+hoopoe_iam_sdk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hoopoe_iam_sdk/version.py,sha256=dQbivOvlMup6HDblY5ug4c_yPsAbaAKulNWdtHDSU50,1250
+hoopoe_iam_sdk-1.0.16.dist-info/licenses/LICENSE,sha256=WQIvq0eVmYD1gNBRRCnhv6Wgujq-wCXDB62NQKybdtU,1091
+hoopoe_iam_sdk-1.0.16.dist-info/METADATA,sha256=m3ZjO38Yy9MMJBtAV_OqT0QHVhUjcyW9U7JwLDmPa2Y,10285
+hoopoe_iam_sdk-1.0.16.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hoopoe_iam_sdk-1.0.16.dist-info/top_level.txt,sha256=2gHSJaMNdOytVIw7v_bqMmTEB7Tl9XPLsl6Kpgbof90,15
+hoopoe_iam_sdk-1.0.16.dist-info/RECORD,,
