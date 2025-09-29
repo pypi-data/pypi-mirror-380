@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: giga-test
+Version: 0.1.0
+Home-page: https://codeup.aliyun.com/645a08b9d983fb47ec1d5df2/algorithm/giga_codes/giga-test
+Author: GigaAI
+License: Apache Software License 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: decord
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+
+# Giga Test
