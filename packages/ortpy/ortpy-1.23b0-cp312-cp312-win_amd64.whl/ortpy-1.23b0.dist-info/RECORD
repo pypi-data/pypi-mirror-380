@@ -1,0 +1,9 @@
+ortpy/LICENSE,sha256=F0lKwY_0mT4l4ld2fE6PB4dlBW_LDs9Q-R5gTRfslng,1087
+ortpy/__init__.py,sha256=FkPQE7Y5wh-TEDs6lCPmZxIxc6y4YZGq1TVKHdv1ANQ,23
+ortpy/__init__.pyi,sha256=FkPQE7Y5wh-TEDs6lCPmZxIxc6y4YZGq1TVKHdv1ANQ,23
+ortpy/_ortpy.cp312-win_amd64.pyd,sha256=uf0UlJ3oVRxCJzTQnwQQHJPDI4Qgx_c8eHCnkcwclNw,188416
+ortpy/_ortpy.pyi,sha256=wrlL96zUkkM-ku5xJOTpnJZd-Wz4H4pGz2x-AXcb6_4,2882
+ortpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ortpy-1.23b0.dist-info/METADATA,sha256=d47wyfBNS5VxATVCeQKrJxLRhwz3i8WiXDkOWTu8FFo,695
+ortpy-1.23b0.dist-info/WHEEL,sha256=t7CxYB0eI5HZRa2s0pB_kGfiV2XV_d8NAfEjOUgLmGE,72
+ortpy-1.23b0.dist-info/RECORD,,
