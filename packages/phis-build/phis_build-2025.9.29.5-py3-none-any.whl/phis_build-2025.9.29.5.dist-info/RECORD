@@ -1,0 +1,15 @@
+phis_build/__main__.py,sha256=hrOLJVyYDH6KGXA_j1hMRjhWiZLWVD0zEepadnOK8lY,752
+phis_build/build_steps.py,sha256=s04XtIRy3A0OINC47WgmzLIBn6zPU32iLsZ4L_ZxdxM,10401
+phis_build/build_zipapp.py,sha256=9aTaHpQAxdokcgpKU7ewEsa_CxriMxHUEvzORw4BLS0,3209
+phis_build/config.py,sha256=NzVcPipZoP1Ggb9MJ5BYxHR0nAG3hGQwL2WVKmrhbZI,3730
+phis_build/config_tool.bat,sha256=4hqq4ghnllZbWNzDU3LPW3szTyvbth4kghTdGIrSNRk,2240
+phis_build/get_args.py,sha256=_Fs6rR8MJdEkNUYcqa7WUtkkw_YSwutdYMSksZmbSHE,1036
+phis_build/logging_config.py,sha256=-EpICuV4q9THmcm7IPVnEst_HfefbSTnB8lGntpkvX4,1307
+phis_build/main.py,sha256=HQ9GUnFOycOjtMjriHM-Mq31d3WeyM_Advv9HwPlZFY,3912
+phis_build/no_gui_run.bat,sha256=TQbtdjjlxqQv0NFAoth6CKJiO0McPLUE9zYc1FLK4fE,2228
+phis_build/version.py,sha256=C-NRyRbKPgQYw6jwezYAI0J8x-t-gebm7ZQkAo4f4Wg,1557
+phis_build-2025.9.29.5.dist-info/METADATA,sha256=VRzxXn44smok2wJjY0xc5tnUDeHuXUXbh3sDnq8VMRI,660
+phis_build-2025.9.29.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+phis_build-2025.9.29.5.dist-info/entry_points.txt,sha256=21b2q5L4MrlQNn99j9jM0f3uGBR7CpnuSKxIwEIVAOg,86
+phis_build-2025.9.29.5.dist-info/licenses/LICENSE,sha256=aFLFZg6LEJFpTlNQ8su3__jw4GfV-xWBmC1cePkKZVw,35802
+phis_build-2025.9.29.5.dist-info/RECORD,,
