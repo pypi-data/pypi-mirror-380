@@ -1,0 +1,11 @@
+freemework_abstractions-0.0.3.dist-info/METADATA,sha256=-BO7qGmloIJcGYOixNHYCWrOWBtisxpegW4hD1elLxM,288
+freemework_abstractions-0.0.3.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+freemework_abstractions-0.0.3.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+freemework_abstractions/__init__.py,sha256=ynVSR-F9YVwf23ExoVPOxfIoTT0RVafsCGE5-3hJgn0,452
+freemework_abstractions/channel_consumer.py,sha256=14qsU4HV-j0jO20GxilgEXNk4MQbjn6Ov3yN1u6VtH4,886
+freemework_abstractions/channel_consumer_unbreakable.py,sha256=ynGn5nhckdyCmuPJm6-nXvtQ8KdOTYZt1iZGIeGnUoA,925
+freemework_abstractions/channel_event.py,sha256=I_7hhZ6q648k7pJ0va-wQ3ZyGt8Oy6ZNJPkS74u-3Fg,327
+freemework_abstractions/channel_publisher.py,sha256=5DErHubb_lBA5mrkUtb85fRfxJrfPFU4SRlR3J6Y0uU,395
+freemework_abstractions/exception.py,sha256=D-h60fFK_1NKDLMyPruCr49VJIXWV9snOHJDiHU_7Dw,41
+freemework_abstractions/execution_context.py,sha256=Y6FWMGYMh27CkoTw-hC92JiaNbwjs-uALiTDsRAUO3Q,212
+freemework_abstractions-0.0.3.dist-info/RECORD,,
