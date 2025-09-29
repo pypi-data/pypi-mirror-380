@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/time_my_func/__init__.py
+src/time_my_func/decorator.py
+src/time_my_func.egg-info/PKG-INFO
+src/time_my_func.egg-info/SOURCES.txt
+src/time_my_func.egg-info/dependency_links.txt
+src/time_my_func.egg-info/requires.txt
+src/time_my_func.egg-info/top_level.txt
+tests/test_decorator.py

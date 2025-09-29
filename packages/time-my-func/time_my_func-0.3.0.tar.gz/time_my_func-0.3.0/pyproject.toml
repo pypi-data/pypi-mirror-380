@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "time_my_func"
+version = "0.3.0"
+description = "A lightweight Python decorator to measure and print function execution time."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name="Luca Paesano"}
+]
+requires-python = ">=3.7"
+keywords = ["timing", "decorator", "performance", "benchmark"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/DeathlyDestiny/function_timer"
+Bug_Tracker = "https://github.com/DeathlyDestiny/function_timer/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio", "build", "twine"]

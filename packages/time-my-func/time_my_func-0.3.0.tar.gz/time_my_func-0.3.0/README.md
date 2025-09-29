@@ -1,0 +1,142 @@
+# time_my_func
+
+A lightweight Python decorator for measuring and printing function execution time.  
+It provides a convenient `@timeit()` decorator that works on any function (sync or async) and prints execution time in the most appropriate unit, even if the function raises an exception.
+Supports Python 3.7 and newer (recommended)
+May work in 3.6 if perf_counter_ns() is adjusted to have a fallback.
+
+---
+
+## Installation
+
+```bash
+# Install from PyPI
+pip install time_my_func
+
+# Or install from source
+git clone https://github.com/DeathlyDestiny/function_timer
+cd time_my_func
+pip install .
+
+```
+
+## Usage Synchronous functions
+
+```bash
+from time_my_func import timeit
+import time
+
+@timeit()
+def fast_function():
+    sum(range(100))
+
+@timeit(decimals=5, unit="ms")
+def slow_function():
+    time.sleep(0.123)
+
+fast_function()
+slow_function()
+
+```
+
+## Usage Asynchronous functions
+
+```bash
+import asyncio
+from time_my_func import timeit
+
+@timeit(unit="ms", decimals=4)
+async def async_task():
+    await asyncio.sleep(0.05)
+
+asyncio.run(async_task())
+
+```
+
+## Handling exceptions
+```bash
+import asyncio
+from time_my_func import timeit
+
+@timeit(unit="ms", decimals=4)
+async def async_task():
+    await asyncio.sleep(0.05)
+
+asyncio.run(async_task())
+
+```
+
+## Global Toggle
+```bash
+from time_my_func import set_enabled
+
+set_enabled(False)  # Disable all @timeit() decorators
+set_enabled(True)   # Re-enable
+
+## Example Output
+[fast_function] Execution time: 12.345 µs
+[slow_function] Execution time: 123.45678 ms
+[async_task] Execution time: 50.1234 ms
+[failing] Execution time: 0.001 ms
+
+```
+
+## Aggregated Results & Manual Dump
+You can aggregate execution times across multiple calls and functions and print them all at once using dump().
+
+```bash
+from time_my_func import timeit, dump
+import time
+
+@timeit(verbose=False)  # Don't print after each call
+def foo():
+    time.sleep(0.01)
+
+@timeit(verbose=False)
+def bar():
+    time.sleep(0.02)
+
+foo()
+foo()
+bar()
+
+# Print aggregated stats
+dump()
+
+## Example Output
+[foo] calls=2, avg=10.123 ms, total=20.246 ms
+[bar] calls=1, avg=20.456 ms, total=20.456 ms
+
+```
+
+## Options
+
+The decorator accepts two optional arguments:
+
+```bash
+
+decimals (int, default = 3)
+Number of decimal places to display.
+
+unit (str, default = "auto")
+Force the time unit. Options:
+
+"auto" → automatically choose the best unit based on elapsed time
+"ns" → nanoseconds
+"us" or "µs" → microseconds
+"ms" → milliseconds
+"s" → seconds
+"m" → minutes
+
+verbose (bool, default=True)
+    If True, prints execution time immediately after each call.
+    If False, only aggregates for later dump().
+
+```
+The decorator works for both synchronous and asynchronous functions, and will always print execution time, even if the function raises an exception.
+
+## Contributing
+Contributions are welcome!
+
+## License
+This project is licensed under the MIT License – see the LICENSE file for details.
