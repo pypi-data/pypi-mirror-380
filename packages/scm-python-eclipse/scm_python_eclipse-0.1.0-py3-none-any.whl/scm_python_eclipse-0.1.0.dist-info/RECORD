@@ -1,0 +1,15 @@
+scm_python_eclipse/lib/eclipse.py,sha256=ek7HaRr0NqtIZXsdx29HZLkArFYkbRKCFjnh79iNd-k,10392
+scm_python_eclipse/lib/eclipse_exercise.py,sha256=UdeFRZr32AKbeyFhaJQYYN74tVCyrlQOLGmH9O8i5Y0,426
+scm_python_eclipse/tapps/eclipse/eiumCommon.py,sha256=sIHOV3E4CtOEn5a2eeKR_6EzUGg6FQqcoV9L38_sxgs,8271
+scm_python_eclipse/tapps/eclipse/eiumExternalServer.py,sha256=S2oH9EvbjV29Su5G347dbtB7PoWfDjZJBocIIiCGJH4,5855
+scm_python_eclipse/tapps/eclipse/eiumIde.py,sha256=woFAT0Txaj2n5X9F8JabcOAcDzH5_rjFc9hy7ZYg4bA,9498
+scm_python_eclipse/tapps/eclipse/eiumRuntime.py,sha256=fLss-yampiypKRKkAM7GhES0uwXf9TcHenvdhkY08Mg,934
+scm_python_eclipse/tapps/eclipse/eiumType.py,sha256=3OSQBjJtGUED3udOgV6tDeVsDrdy-5JYIJRyiToJ5XY,438
+scm_python_eclipse/tapps/eclipse/eiumWebApp.py,sha256=u9VEIJq6VzuFiaEGp4iIQwfKm9XgEtLtmZPus5Nj3cw,20343
+scm_python_eclipse/tapps/eclipse/metaFile.py,sha256=GISqzitzhNc4x_MoA3C3vDfVj_G2nxbSkRN46_WD5vw,4341
+scm_python_eclipse/tapps/eclipse/workaround.py,sha256=bIt9a8Tc5Gls5zMPtXi7pVo0ZJawuH2fyxA-VCMMBbg,1502
+scm_python_eclipse/tapps/exercise/lib_webapp.py,sha256=M6gmNAjdw_DwzE7nxLnkUEHvn5CUrK2oGgG9rKr-qVo,994
+scm_python_eclipse-0.1.0.dist-info/METADATA,sha256=gn2x425WfjIwM6ulUavkhL9EwcdceR99UvHBiaw9H00,473
+scm_python_eclipse-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scm_python_eclipse-0.1.0.dist-info/top_level.txt,sha256=a3oIDQS1xqzD_jUV44452FJJ84fcYwGmjmSO4UDduS4,19
+scm_python_eclipse-0.1.0.dist-info/RECORD,,
