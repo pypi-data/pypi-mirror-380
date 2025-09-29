@@ -1,0 +1,54 @@
+# Система учёта оценок студентов
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.grades = []
+    
+    def add_grade(self, grade):
+        if grade >= 2 and grade <= 5:
+            self.grades = self.grades + [grade]
+            print("Оценка", grade, "добавлена для", self.name)
+        else:
+            print("Ошибка: оценка должна быть от 2 до 5")
+    
+    def get_average(self):
+        if len(self.grades) == 0:
+            return 0
+        return sum(self.grades) / len(self.grades)
+    
+    def get_info(self):
+        average = self.get_average()
+        print("Студент:", self.name)
+        print("Оценки:", self.grades)
+        print("Средний балл:", round(average, 2))
+        
+        if average >= 4.5:
+            print("Статус: Отличник! 🌟")
+        elif average >= 3.5:
+            print("Статус: Хорошист 👍")
+        elif average >= 2.5:
+            print("Статус: Нужно подтянуть учёбу 📚")
+        else:
+            print("Статус: Требуется серьёзная работа ⚠️")
+
+# Создаем студентов
+alice = Student("Алиса")
+bob = Student("Боб")
+
+# Добавляем оценки
+alice.add_grade(5)
+alice.add_grade(4)
+alice.add_grade(5)
+alice.add_grade(3)
+
+bob.add_grade(3)
+bob.add_grade(3)
+bob.add_grade(4)
+bob.add_grade(2)
+
+# Показываем информацию
+print("\n=== Информация о студентах ===")
+alice.get_info()
+print()
+bob.get_info()
