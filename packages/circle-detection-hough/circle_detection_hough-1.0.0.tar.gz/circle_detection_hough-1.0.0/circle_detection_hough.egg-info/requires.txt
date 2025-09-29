@@ -1,0 +1,20 @@
+opencv-python>=4.5.0
+numpy>=1.19.0
+matplotlib>=3.3.0
+scipy>=1.6.0
+torch>=1.9.0
+ultralytics>=8.0.0
+
+[:python_version < "3.4"]
+pathlib2>=2.3.0
+
+[dev]
+pytest>=6.0
+pytest-cov>=2.0
+black>=21.0
+flake8>=3.8
+mypy>=0.800
+
+[docs]
+sphinx>=4.0
+sphinx-rtd-theme>=0.5
