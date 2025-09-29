@@ -1,0 +1,13 @@
+ordered-enum
+pyyml
+importlib_resources
+jsonschema
+requests
+reportlab
+svglib==1.5.1
+pytz
+
+[dev]
+pytest
+requests-mock
+pdf2image
