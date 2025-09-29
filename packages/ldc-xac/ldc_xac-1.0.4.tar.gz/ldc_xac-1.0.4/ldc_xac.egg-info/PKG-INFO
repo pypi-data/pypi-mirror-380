@@ -1,0 +1,309 @@
+Metadata-Version: 2.4
+Name: ldc-xac
+Version: 1.0.4
+Summary: External API Caller with comprehensive logging
+Home-page: https://github.com/ayushsonar-lendenclub/ldc-xac
+Author: Ayush Sonar
+Author-email: Ayush Sonar <ayush.sonar@lendenclub.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ayushsonar-lendenclub/ldc-xac
+Project-URL: Repository, https://github.com/ayushsonar-lendenclub/ldc-xac
+Project-URL: Issues, https://github.com/ayushsonar-lendenclub/ldc-xac
+Keywords: api,http,requests,logging,external-api
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.8; extra == "dev"
+Requires-Dist: mypy>=0.800; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# LDC-XAC
+
+> **External API Caller with Comprehensive Logging**
+
+A Python package for making external API calls with automatic request/response logging, error tracking, and performance monitoring.
+
+## Features
+
+- **Automatic Logging**: Structured JSON logs for all API requests and responses
+- **Performance Tracking**: Request duration and timing metrics
+- **Error Handling**: Detailed error logging with exception information
+- **Data Management**: Automatic truncation of large payloads for logging
+- **Flexible Configuration**: Custom API codes, system identifiers, and SSL options
+- **SSL Support**: Configurable SSL certificate verification
+
+## Installation
+
+```bash
+pip install ldc-xac
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+import logging
+from ldc_xac import make_external_api_request
+
+# Configure logging to see API call logs
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+# Make a simple GET request
+response = make_external_api_request(
+    url="https://api.example.com/data",
+    method="GET",
+    api_code="EXAMPLE_API",
+    system="MY_SYSTEM"
+)
+
+print(f"Status: {response.status_code}")
+print(f"Response: {response.json()}")
+```
+
+### POST Request with JSON Data
+
+```python
+response = make_external_api_request(
+    url="https://api.example.com/users",
+    method="POST",
+    json={"name": "John Doe", "email": "john@example.com"},
+    api_code="CREATE_USER",
+    system="USER_MANAGEMENT"
+)
+```
+
+### Handling SSL Issues
+
+```python
+# For testing with self-signed certificates or SSL issues
+response = make_external_api_request(
+    url="https://api.example.com/data",
+    method="GET",
+    api_code="EXAMPLE_API",
+    system="MY_SYSTEM",
+    verify=False  # Disable SSL verification
+)
+```
+
+## Advanced Usage
+
+### Manual Logging Control
+
+```python
+from ldc_xac import ExternalAPICaller
+import requests
+
+# Log a request manually
+start_time = ExternalAPICaller.log_external_api_request(
+    url="https://api.example.com/users",
+    method="POST",
+    api_code="CREATE_USER",
+    system="USER_MANAGEMENT"
+)
+
+# Make your request
+response = requests.post(
+    "https://api.example.com/users",
+    json={"name": "John Doe", "email": "john@example.com"}
+)
+
+# Log the response
+ExternalAPICaller.log_external_api_response(
+    url="https://api.example.com/users",
+    response=response,
+    start_time=start_time,
+    api_code="CREATE_USER",
+    system="USER_MANAGEMENT"
+)
+```
+
+### Request with Headers and Parameters
+
+```python
+response = make_external_api_request(
+    url="https://api.example.com/search",
+    method="GET",
+    headers={
+        "Authorization": "Bearer your-token",
+        "Content-Type": "application/json"
+    },
+    params={"q": "search term", "limit": 10},
+    api_code="SEARCH_API",
+    system="SEARCH_SYSTEM"
+)
+```
+
+## Configuration
+
+The package uses the following default configuration:
+
+- **MAX_REQUEST_BODY_SIZE**: 10,000 characters (configurable in `ldc_xac.config`)
+
+## Logging Format
+
+The package logs in structured JSON format with the following structure:
+
+### Request Log
+```json
+{
+    "descr": "External API Request",
+    "system": "MY_SYSTEM",
+    "api_code": "EXAMPLE_API",
+    "request_method": "GET",
+    "request_url": "https://api.example.com/data"
+}
+```
+
+### Response Log
+```json
+{
+    "descr": "External API Response",
+    "system": "MY_SYSTEM",
+    "api_code": "EXAMPLE_API",
+    "response_code": 200,
+    "response_for_request": "https://api.example.com/data",
+    "time_taken_ms": 150.25
+}
+```
+
+### Error Log
+```json
+{
+    "descr": "External API Error",
+    "system": "MY_SYSTEM",
+    "api_code": "EXAMPLE_API",
+    "response_code": null,
+    "response_for_request": "https://api.example.com/data",
+    "time_taken_ms": 5000.0,
+    "error_message": "Connection timeout",
+    "error_type": "ConnectTimeout"
+}
+```
+
+### Warning Log (4xx/5xx responses)
+```json
+{
+    "descr": "External API Response",
+    "system": "MY_SYSTEM",
+    "api_code": "EXAMPLE_API",
+    "response_code": 404,
+    "response_for_request": "https://api.example.com/data",
+    "time_taken_ms": 250.50,
+    "request_data": {
+        "params": {"id": "123"},
+        "json": {"name": "John Doe"}
+    }
+}
+```
+
+## API Reference
+
+### `make_external_api_request()`
+
+Make an external API request with automatic logging.
+
+**Parameters:**
+- `url` (str): The API endpoint URL
+- `method` (str): HTTP method (default: "GET")
+- `headers` (dict, optional): Request headers
+- `params` (dict, optional): Query parameters
+- `timeout` (int, optional): Request timeout in seconds (default: 300)
+- `api_code` (str, optional): Custom API code identifier
+- `system` (str, optional): System identifier
+- `verify` (bool, optional): SSL certificate verification (default: True)
+- `**kwargs`: Additional arguments passed to `requests.request()`
+
+**Returns:**
+- `requests.Response`: The response object
+
+**Raises:**
+- `Exception`: Any exception that occurs during the request
+
+### `ExternalAPICaller`
+
+Main class for logging external API calls.
+
+#### Methods:
+
+- `log_external_api_request()`: Log request details
+- `log_external_api_response()`: Log response details  
+- `log_external_api_error()`: Log error details
+- `_truncate_large_data()`: Truncate large data for logging
+
+## Development
+
+### Setup Development Environment
+
+```bash
+git clone https://github.com/ayushsonar-lendenclub/ldc-xac
+cd ldc-xac
+pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+### Code Formatting
+
+```bash
+black ldc_xac/
+```
+
+### Type Checking
+
+```bash
+mypy ldc_xac/
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Add tests for your changes
+5. Run the test suite (`pytest`)
+6. Commit your changes (`git commit -m 'Add amazing feature'`)
+7. Push to the branch (`git push origin feature/amazing-feature`)
+8. Open a Pull Request
+
+## Support
+
+For support and questions, please open an issue on [GitHub](https://github.com/ayushsonar-lendenclub/ldc-xac/issues).
+
+## Use Cases
+
+- **Microservices Communication**: Log API calls between services
+- **Third-party API Integration**: Track external API usage and performance
+- **API Monitoring**: Monitor API health and response times
+- **Debugging**: Detailed logs for troubleshooting API issues
+- **Compliance**: Structured logging for audit trails
