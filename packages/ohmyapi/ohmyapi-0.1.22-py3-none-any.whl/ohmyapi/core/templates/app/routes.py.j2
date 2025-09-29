@@ -1,0 +1,41 @@
+from ohmyapi.router import APIRouter, HTTPException, HTTPStatus
+
+from . import models
+
+from typing import List
+
+# Expose your app's routes via `router = fastapi.APIRouter`.
+# Use prefixes wisely to avoid cross-app namespace-collisions.
+# Tags improve the UX of the OpenAPI docs at /docs.
+router = APIRouter(prefix="/{{ app_name }}", tags=['{{ app_name }}'])
+
+
+
+@router.get("/")
+async def list():
+    """List all ..."""
+    return []
+
+
+@router.post("/")
+async def post():
+    """Create ..."""
+    return HTTPException(status_code=HTTPStatus.CREATED)
+
+
+@router.get("/{id}")
+async def get(id: str):
+    """Get single ..."""
+    return {}
+
+
+@router.put("/{id}")
+async def put(id: str):
+    """Update ..."""
+    return HTTPException(status_code=HTTPStatus.ACCEPTED)
+
+
+@router.delete("/{id}")
+async def delete(id: str):
+    return HTTPException(status_code=HTTPStatus.ACCEPTED)
+
