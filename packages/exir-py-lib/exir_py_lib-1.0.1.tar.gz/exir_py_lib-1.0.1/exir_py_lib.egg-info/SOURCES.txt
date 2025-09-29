@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+example/balance.py
+example/order.py
+example/public.py
+example/ws.py
+exir_py_lib.egg-info/PKG-INFO
+exir_py_lib.egg-info/SOURCES.txt
+exir_py_lib.egg-info/dependency_links.txt
+exir_py_lib.egg-info/requires.txt
+exir_py_lib.egg-info/top_level.txt

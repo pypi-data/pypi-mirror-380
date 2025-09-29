@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exir-py-lib"
+version = "1.0.1"
+description = "Python client library for EXIR cryptocurrency exchange API"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "EXIR Team", email = "support@exir.io"}
+]
+maintainers = [
+    {name = "EXIR Team", email = "support@exir.io"}
+]
+keywords = ["cryptocurrency", "trading", "exchange", "api", "websocket", "exir"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28,<3",
+    "websocket-client>=1.6,<2",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/exirorg/exir-py-lib"
+Documentation = "https://gitlab.com/exirorg/exir-py-lib#readme"
+Repository = "https://gitlab.com/exirorg/exir-py-lib.git"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["exir*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.py", "*.md", "*.txt"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
