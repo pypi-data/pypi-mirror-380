@@ -1,0 +1,14 @@
+identory/__init__.py,sha256=Cu0K_KUcAov3E0HsTFA-fncIeOhLIJf4Ek5P-szVXNc,408
+identory/client.py,sha256=2RCDthXfpHIkvlSzDBeQ9uaYy315aUUDuL23ZHXbsMk,7501
+identory/exceptions.py,sha256=2hRMXoEIHB4X3lFYDyXyBDtsj3UI7tUrt7mF6Y7rgNw,1154
+identory/groups.py,sha256=R2lW6zwsoHvf_CVNnJDF2Pi_65N2Ja7bW0sigUc4qVc,3758
+identory/presets.py,sha256=Jq2YyHU3fxZcipso8VBH1--RPdocHO2wJ1im5EqhGYw,3406
+identory/profiles.py,sha256=F-P_VgASbIiEXSLFi5TrZijpPZJx5BY5813IqIez-l0,13353
+identory/settings.py,sha256=FIfplpc-9PA7dKBDx9Wsae0IJFd8holg--_b8bHB_2w,1484
+identory/status.py,sha256=0A2fDsOj4rEYhlzbkVHAvj5o6M--evAXChVEAxfHIVw,3874
+identory/tools.py,sha256=HWEGMIKmM-go2tYCEB1wgeT6NBxdrOa2Gzt2_lwVPx0,2807
+identory-0.1.3.dist-info/licenses/LICENSE,sha256=oquwnPbcBGbsggVByH-nasKoHlkbeZP1pe4POIJko7I,1068
+identory-0.1.3.dist-info/METADATA,sha256=Ow1Iau06Sq6wdhRU1dj2OI0bSOTTh80lUSy7r2ameMI,11344
+identory-0.1.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+identory-0.1.3.dist-info/top_level.txt,sha256=GNsNtlDouKMT3mJGw4bgTnBgkDPeYD0kP3RiSMKDpMw,9
+identory-0.1.3.dist-info/RECORD,,
