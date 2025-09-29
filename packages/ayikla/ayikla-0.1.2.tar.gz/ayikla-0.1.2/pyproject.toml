@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ayikla"
+version = "0.1.2"
+authors = [
+    { name="Hasan Çağrı Güngör", email="iletisim@cagrigungor.com" }
+]
+description = "Türkçe metinlerden isim, telefon ve tarih/saat ayıklayan kütüphane."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "phonenumbers",
+    "python-dateutil",
+    "dateparser"
+]
+license = { text="MIT" }
+keywords = ["nlp", "turkish", "entity-extraction", "ayikla"]
+
+[project.urls]
+Homepage = "https://pypi.org/project/ayikla/"
+

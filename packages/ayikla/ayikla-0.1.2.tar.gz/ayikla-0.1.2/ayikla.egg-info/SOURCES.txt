@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+ayikla/__init__.py
+ayikla/extractor.py
+ayikla.egg-info/PKG-INFO
+ayikla.egg-info/SOURCES.txt
+ayikla.egg-info/dependency_links.txt
+ayikla.egg-info/requires.txt
+ayikla.egg-info/top_level.txt
