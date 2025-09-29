@@ -1,0 +1,2 @@
+[console_scripts]
+jpd = json_pretty_diff.cli:main
