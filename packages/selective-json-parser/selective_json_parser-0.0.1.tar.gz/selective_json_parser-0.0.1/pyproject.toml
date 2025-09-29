@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selective-json-parser"
+version = "0.0.1"
+authors = [
+  {name = "Niclas Kjäll-Ohlsson"},
+]
+description = "A JSON parser that only parses the parts you need."
+keywords = ["json", "parser", "selective", "data"]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest >= 7.0.0",
+    "pytest-cov >= 4.0.0",
+    "black >= 23.0.0",
+    "flake8 >= 6.0.0",
+    "mypy >= 1.0.0",
+    "pre-commit",
+]
+
+[project.urls]
+Homepage = "https://github.com/niclasko/SelectiveJSONParser"
+Repository = "https://github.com/niclasko/SelectiveJSONParser"
+Issues = "https://github.com/niclasko/SelectiveJSONParser/issues"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(name)s: %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
