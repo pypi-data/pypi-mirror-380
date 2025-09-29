@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: django-shortuuid
+Version: 0.1.0
+Summary: A modern, Django model field for generating short, unique, URL-safe UUIDs using the shortuuid lib.
+Author: stabldev
+Author-email: stabldev <thestabldev@gmail.com>
+Requires-Dist: django>=5.2.6
+Requires-Dist: shortuuid>=1.0.13
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# django-shortuuid
+A modern, Django model field for generating short, unique, URL-safe UUIDs using the shortuuid lib.
