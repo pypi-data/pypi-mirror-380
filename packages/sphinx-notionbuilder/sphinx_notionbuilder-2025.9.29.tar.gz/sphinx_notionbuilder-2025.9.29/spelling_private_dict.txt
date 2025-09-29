@@ -1,0 +1,16 @@
+backtick
+backticks
+callout
+hardcode
+hardcodes
+href
+pragma
+preprocess
+pyright
+reStructuredText
+recurse
+reportMissingTypeStubs
+reportUnknownArgumentType
+reportUnknownMemberType
+reportUnknownVariableType
+strikethrough
