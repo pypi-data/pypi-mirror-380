@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/spiegeltools.egg-info/PKG-INFO
+src/spiegeltools.egg-info/SOURCES.txt
+src/spiegeltools.egg-info/dependency_links.txt
+src/spiegeltools.egg-info/requires.txt
+src/spiegeltools.egg-info/top_level.txt
+src/spiegeltools/cleaning/__init__.py
+src/spiegeltools/cleaning/ukdata_cleaning.py
+src/spiegeltools/graphs/__init__.py
+src/spiegeltools/htmlgen/__init__.py
+src/spiegeltools/maps/__init__.py
