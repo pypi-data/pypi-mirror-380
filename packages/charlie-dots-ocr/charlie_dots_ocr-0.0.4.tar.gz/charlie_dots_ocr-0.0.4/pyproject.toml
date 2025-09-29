@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "charlie-dots-ocr"
+version = "0.0.4"
+description = "0.0.4 support aparser in async way. dots.ocr: Multilingual Document Layout Parsing in one Vision-Language Model"
+authors = []
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rednote-hilab/dots.ocr"
+repository = "https://github.com/rednote-hilab/dots.ocr"
+documentation = "https://github.com/rednote-hilab/dots.ocr"
+keywords = ["ocr", "document-parser", "vision-language-model", "layout-detection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: General",
+    "Topic :: Utilities"
+]
+
+
+packages = [
+    { include = "dots_ocr" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+PyMuPDF = "^1.24.0"
+openai = "^1.0.0"
+qwen-vl-utils = "*"
+transformers = "4.51.3"
+huggingface-hub = ">=0.30.0,<1.0"
+modelscope = "^1.18.0"
+flash-attn = {version = "2.8.0.post2", markers = "platform_system != \"Windows\""}
+accelerate = "*"
+pillow = "<12.0.0"
+requests = "^2.30.0"
+tqdm = "^4.65.0"
+aiohttp = "^3.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.0.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dots-ocr = "dots_ocr.cli:main"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/rednote-hilab/dots.ocr/issues"
