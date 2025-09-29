@@ -1,0 +1,19 @@
+MCC START,MCC END,DESCRIPTION,DESCRIPTION_UZ,DESCRIPTION_RU
+0,699,Reserved,Zahiralangan,Сдержанный
+700,999,Agricultural services,Qishloq xo'jaligi xizmatlari,Сельскохозяйственные услуги
+1000,1499,Reserved,Zahiralangan,Сдержанный
+1500,2999,Contracted services,Qoplangan xizmatlar,Контрактные услуги
+3000,3999,Reserved for private use,Xususiy foydalanish uchun ajratilgan,Зарезервировано для частного использования
+4000,4799,Transportation,Tashish,Транспорт
+4800,4999,Utilities,Kommunal xizmatlar,Коммунальные услуги
+5000,5599,Retail outlets,Chakana savdo do'konlari,Розничные торговые точки
+5600,5699,Clothing outlets,Kiyimlar,Одежда одежды
+5700,5999,Miscellaneous outlets,Turli xil savdolar,Разные розетки
+6000,7299,Service providers,Xizmat ko'rsatuvchi provayderlar,Поставщики услуг
+7300,7529,Business services,Biznes xizmatlari,Бизнес -услуги
+7530,7799,Repair services,Ta'mirlash xizmatlari,Ремонтные услуги
+7800,7999,Amusement and entertainment,O'yin-kulgi va o'yin-kulgi,Развлечение и развлечения
+8000,8999,Professional services and membership organizations,Kasbiy xizmatlar va a'zolik tashkilotlari,Профессиональные услуги и членские организации
+9000,9199,Reserved for ISO use,ISO dan foydalanish uchun ajratilgan,Зарезервировано для использования ISO
+9200,9402,Government services,Davlat xizmatlari,Государственные услуги
+9403,9999,Other,Boshqa,Другой
