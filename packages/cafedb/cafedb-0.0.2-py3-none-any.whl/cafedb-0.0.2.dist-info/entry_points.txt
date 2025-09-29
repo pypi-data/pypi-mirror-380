@@ -1,0 +1,2 @@
+[console_scripts]
+cafedb = cafedb.__main__:main
