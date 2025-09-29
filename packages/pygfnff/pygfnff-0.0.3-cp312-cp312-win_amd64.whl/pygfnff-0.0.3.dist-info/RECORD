@@ -1,0 +1,14 @@
+pygfnff/_pygfnff.py,sha256=rR7VR3NF5pP6v6ZGMK7ScoHRjx6IcP7bpQo_d4jh2jY,4468
+pygfnff/_pygfnfflib.cp312-win_amd64.pyd,sha256=1PbEtnN7wbFaAFvwdIkx7LTq82mnOko2CzaYnd24GQQ,1464320
+pygfnff/__init__.py,sha256=hdcJV_VP44QmkXTR6Kde58DXRaD4cxouanJDdzxYeU8,397
+pygfnff-0.0.3.dist-info/DELVEWHEEL,sha256=QleIQfn0rokq6bWOcfT-9yEEsQTB7zCSnzLbY4z2fb8,172
+pygfnff-0.0.3.dist-info/METADATA,sha256=VakIxW4-_C0lGzrrllDM3gbnFQUCzzlz1ATgUhYrmz0,43768
+pygfnff-0.0.3.dist-info/RECORD,,
+pygfnff-0.0.3.dist-info/WHEEL,sha256=chqeLhPBtPdrOoreR34YMcofSk3yWDQhkrsDJ2n48LU,106
+pygfnff-0.0.3.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pygfnff.libs/libgcc_s_seh-1-39bc3017c67b6d567fdeeeb9047daaea.dll,sha256=TDalaSoDHkYWzA7fNNq5t4KzKkZ0sDJ_SIgob3uRMfU,150196
+pygfnff.libs/libgfortran-5-f4b4d955cec4e83e8760de70ca76699d.dll,sha256=7FeEP_x1Z_HxK-L8uKTpDNgJHoKOJ35LfrMIcy6779c,3769079
+pygfnff.libs/libgomp-1-1f16a491d34c266781789a39bd98c98d.dll,sha256=XefsQtYz9soXZZBUOO_S_9ENDVkPDMo9qg-Qagjn3b0,311445
+pygfnff.libs/libopenblas-35b0b5094bf71654fce493e16e4da2b3.dll,sha256=3Si6JYHKpi1dXY5GXEIHMqcYd8ns9tQRivVaErPEM9E,43739819
+pygfnff.libs/libquadmath-0-4227161ec693a681f1bdd31904388550.dll,sha256=tTCQUEGFB3hLB06b9z84iaXO9okcgu3tD6OxpAQTq7M,398767
+pygfnff.libs/libwinpthread-1-3faf3b308b3ba9584572af64272a9a44.dll,sha256=8MSLzx8fCmW0-ZQG9W23NJ3tiGbNhlSGh6tqmOhZrzU,64403
