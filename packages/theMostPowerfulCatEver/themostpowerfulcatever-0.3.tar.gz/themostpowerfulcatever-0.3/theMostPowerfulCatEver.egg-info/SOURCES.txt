@@ -1,0 +1,8 @@
+setup.py
+Cat/__init__.py
+Cat/main.py
+theMostPowerfulCatEver.egg-info/PKG-INFO
+theMostPowerfulCatEver.egg-info/SOURCES.txt
+theMostPowerfulCatEver.egg-info/dependency_links.txt
+theMostPowerfulCatEver.egg-info/entry_points.txt
+theMostPowerfulCatEver.egg-info/top_level.txt
