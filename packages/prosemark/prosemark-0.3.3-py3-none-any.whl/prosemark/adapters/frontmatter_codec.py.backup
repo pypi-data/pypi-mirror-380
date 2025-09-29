@@ -1,0 +1,170 @@
+"""YAML frontmatter codec for parsing and generating frontmatter blocks."""
+
+import re
+from datetime import datetime
+from typing import Any
+
+import yaml
+
+from prosemark.exceptions import FrontmatterFormatError
+
+
+class FrontmatterCodec:
+    """YAML frontmatter codec for parsing and generating frontmatter blocks.
+
+    This adapter handles the encoding and decoding of YAML frontmatter in markdown files.
+    It provides safe parsing and generation of frontmatter blocks with proper error handling
+    and format validation.
+
+    Supported frontmatter format:
+    ```
+    ---
+    key: value
+    other_key: other_value
+    ---
+    (content)
+    ```
+
+    The codec ensures:
+    - Safe YAML parsing (no arbitrary code execution)
+    - Consistent frontmatter block formatting
+    - Proper error handling for malformed YAML
+    - Round-trip compatibility (parse -> generate -> parse)
+    """
+
+    # Regex pattern to match frontmatter block at start of content
+    FRONTMATTER_PATTERN = re.compile(r'^---\r?\n(.*?)\r?\n---(?:\r?\n(.*))?$', re.DOTALL)
+
+    def parse(self, content: str) -> tuple[dict[str, Any], str]:
+        """Parse frontmatter and content from markdown text.
+
+        Args:
+            content: Raw markdown content with optional frontmatter
+
+        Returns:
+            Tuple of (frontmatter_dict, remaining_content)
+            If no frontmatter is found, returns ({}, original_content)
+
+        Raises:
+            FrontmatterFormatError: If frontmatter YAML is malformed
+
+        """
+        # Check for malformed frontmatter patterns that should raise errors
+        if content.startswith('---') and not self.FRONTMATTER_PATTERN.match(content):
+            # Content starts with --- but doesn't match the full pattern - likely malformed
+            if '---' not in content[3:]:  # No closing delimiter
+                raise FrontmatterFormatError('Frontmatter block missing closing delimiter')
+            # Could be other malformed patterns, but for now just treat as no frontmatter
+        elif '---' in content and not content.startswith('---'):
+            # Contains --- delimiter but not at start - could be malformed
+            lines = content.split('\n')
+            for i, line in enumerate(lines):
+                if line.strip() == '---':
+                    # Found a --- delimiter, check if it looks like malformed frontmatter
+                    if i > 0 and any(
+                        'id:' in prev_line or 'title:' in prev_line or 'created:' in prev_line
+                        for prev_line in lines[:i]
+                    ):
+                        raise FrontmatterFormatError('Frontmatter block missing opening delimiter')
+                    # Check for pattern like \n---\n---\n (empty frontmatter with leading whitespace)
+                    if i < len(lines) - 1 and lines[i + 1].strip() == '---':
+                        raise FrontmatterFormatError('Frontmatter block not at document start')
+                    break
+
+        # Check if content starts with frontmatter
+        match = self.FRONTMATTER_PATTERN.match(content)
+        if not match:
+            return {}, content
+
+        yaml_content = match.group(1)
+        remaining_content = match.group(2) or ''
+
+        # Remove leading newline from content if present
+        if remaining_content:
+            remaining_content = remaining_content.removeprefix('\n')
+
+        try:
+            # Use safe_load to prevent code execution
+            frontmatter_data = yaml.safe_load(yaml_content)
+
+            # Handle empty frontmatter
+            if frontmatter_data is None:
+                frontmatter_data = {}
+
+            # Ensure we got a dict
+            if not isinstance(frontmatter_data, dict):
+                raise FrontmatterFormatError('Frontmatter must be a YAML mapping/dictionary')
+
+            # Convert datetime objects back to ISO strings to preserve original format
+            frontmatter_data = self._convert_datetimes_to_strings(frontmatter_data)
+
+        except yaml.YAMLError as exc:
+            raise FrontmatterFormatError('Invalid YAML in frontmatter block') from exc
+        else:
+            return frontmatter_data, remaining_content
+
+    def generate(self, frontmatter: dict[str, Any], content: str) -> str:
+        """Generate markdown content with frontmatter block.
+
+        Args:
+            frontmatter: Dictionary of frontmatter data
+            content: Markdown content to append after frontmatter
+
+        Returns:
+            Complete markdown content with frontmatter block
+
+        """
+        if not frontmatter:
+            return content
+
+        try:
+            # Generate YAML with consistent formatting
+            yaml_content = yaml.safe_dump(
+                frontmatter, default_flow_style=False, allow_unicode=True, sort_keys=True, default_style=''
+            ).strip()
+        except yaml.YAMLError as exc:
+            raise FrontmatterFormatError('Failed to serialize frontmatter to YAML') from exc
+        else:
+            return f'---\n{yaml_content}\n---\n{content}'
+
+    def update_frontmatter(self, content: str, updates: dict[str, Any]) -> str:
+        """Update frontmatter in existing content.
+
+        Args:
+            content: Existing markdown content with or without frontmatter
+            updates: Dictionary of frontmatter updates to apply
+
+        Returns:
+            Updated markdown content with modified frontmatter
+
+        """
+        # Parse existing frontmatter
+        existing_frontmatter, remaining_content = self.parse(content)
+
+        # Merge updates
+        updated_frontmatter = {**existing_frontmatter, **updates}
+
+        # Generate new content
+        return self.generate(updated_frontmatter, remaining_content)
+
+    def _convert_datetimes_to_strings(self, data: dict[str, Any]) -> dict[str, Any]:
+        """Convert datetime objects to ISO format strings to preserve original format.
+
+        YAML automatically parses ISO timestamp strings to datetime objects,
+        but we want to preserve them as strings in frontmatter for human readability.
+
+        Args:
+            data: Dictionary that may contain datetime objects
+
+        Returns:
+            Dictionary with datetime objects converted to ISO strings
+
+        """
+        result = {}
+        for key, value in data.items():
+            if isinstance(value, datetime):
+                # Convert datetime to ISO string with Z suffix (UTC)
+                result[key] = value.strftime('%Y-%m-%dT%H:%M:%SZ')
+            else:
+                result[key] = value
+        return result
