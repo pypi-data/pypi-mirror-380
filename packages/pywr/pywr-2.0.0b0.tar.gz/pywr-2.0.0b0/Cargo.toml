@@ -1,0 +1,71 @@
+[workspace]
+resolver = "2"
+members = ["coin-or-sys", "pywr-core", "pywr-schema", "pywr-python", "pywr-schema-macros"]
+
+# IPM packages are not default because they require nightly (portable_simd).
+default-members = [
+    "coin-or-sys",
+    "pywr-core",
+    "pywr-schema",
+    "pywr-cli",
+    # "pywr-python",
+]
+
+[profile.dev]
+# Disabling debug info speeds up builds a bunch,
+# and we don't rely on it for debugging that much.
+debug = 0
+
+[profile.release]
+opt-level = 3
+# lto = true
+# strip = true
+
+[profile.profiling]
+inherits = "release"
+debug = "line-tables-only"
+
+
+[workspace.package]
+readme = "README.md"
+description = "A generalised water resource allocation model."
+version = "2.0.0-beta"
+edition = "2024"
+rust-version = "1.85"
+authors = ["James Tomlinson <tomo.bbe@gmail.com>"]
+repository = "https://github.com/pywr/pywr-next/"
+license = "MIT OR Apache-2.0"
+keywords = ["water", "modelling"]
+categories = ["science", "simulation"]
+
+
+[workspace.dependencies]
+ahash = "0.8"
+serde = { version = "1", features = ["derive", ] }
+serde_json = "1.0"
+thiserror = "2.0"
+num = "0.4"
+float-cmp = "0.10"
+ndarray = "0.16"
+polars = { version = "0.51", default-features = false }
+pyo3-polars = { version = "0.24", default-features = false }
+pyo3 = { version = "0.25" }
+pyo3-log = "0.12"
+tracing = { version = "0.1", features = ["log"] }
+csv = "1.3"
+hdf5-metno = { version = "0.10.1", features = ["static", "zlib"] }
+pywr-v1-schema = "0.21"
+chrono = { version = "0.4", features = ["serde"] }
+schemars = { version = "1.0", features = ["chrono04"] }
+rand = "0.9"
+rand_chacha = "0.9"
+rand_distr = "0.5"
+wide = "0.7.33"
+microlp = "0.2.11"
+digest = "0.10"
+md-5 = "0.10"
+sha2 = "0.10"
+hex = "0.4.3"
+
+[workspace.metadata.docs.rs]
+rustdoc-args = ["--html-in-header", "katex-header.html"]
