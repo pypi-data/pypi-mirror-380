@@ -1,0 +1,4 @@
+dist
+dmos_search
+scripts
+tests
