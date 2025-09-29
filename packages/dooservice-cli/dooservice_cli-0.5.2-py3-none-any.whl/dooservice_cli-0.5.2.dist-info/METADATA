@@ -1,0 +1,437 @@
+Metadata-Version: 2.4
+Name: dooservice-cli
+Version: 0.5.2
+Summary: Professional CLI tool for managing Odoo instances with declarative configuration, automated backups, snapshots, and GitHub integration.
+Author-email: DooService Development Team <principal@apiservicesac.com>, API SERVICE SAC <principal@apiservicesac.com>
+Maintainer-email: DooService Development Team <principal@apiservicesac.com>
+License: MIT License
+        
+        Copyright (c) 2023 Your Name
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://apiservicesac.com
+Project-URL: Documentation, https://github.com/apiservicesac/dooservice-cli-py#readme
+Project-URL: Repository, https://github.com/apiservicesac/dooservice-cli-py
+Project-URL: Issues, https://github.com/apiservicesac/dooservice-cli-py/issues
+Project-URL: Changelog, https://github.com/apiservicesac/dooservice-cli-py/releases
+Keywords: odoo,docker,cli,management,deployment,backup,snapshot,devops,automation,orchestration,containerization,enterprise,erp,github-integration,webhook,configuration-management
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Environment :: Console
+Classifier: Framework :: Odoo
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: docker>=7.0.0
+Requires-Dist: GitPython>=3.1
+Requires-Dist: dacite>=1.6.0
+Requires-Dist: toml>=0.10.2
+Requires-Dist: requests>=2.25.0
+Requires-Dist: cryptography>=3.0.0
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: ruff>=0.11.13
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: coverage>=7.0; extra == "dev"
+Requires-Dist: ruff==0.11.13; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Dynamic: license-file
+
+# DooService CLI
+
+DooService CLI is a professional command-line tool for managing complex Odoo instances using a declarative approach. Define your entire infrastructure in a single `dooservice.yml` file and manage instances, repositories, and backups from the command line.
+
+## ✨ Features
+
+- **🔧 Declarative Configuration**: Define all Odoo instances and repositories in a single YAML file
+- **🚀 Full Instance Lifecycle**: Create, start, stop, sync, and delete instances with simple commands
+- **📁 Repository Management**: Automatically clone and update Odoo addon repositories from Git
+- **🐳 Docker Integration**: Native Docker support for deploying Odoo and PostgreSQL containers
+- **💾 Backup System**: Create, test, and manage instance backups with database support
+- **⚡ Clean Architecture**: Built with Clean Architecture principles for maintainability and extensibility
+- **🎯 Configuration-First**: No hardcoded values - all operations require explicit configuration
+- **📝 Type Safety**: Strong typing throughout the application with comprehensive error handling
+
+## 📦 Installation
+
+### Production Installation
+
+```bash
+# Using pipx (recommended)
+pipx install dooservice-cli
+
+# Using pip
+pip install dooservice-cli
+
+# Using uv (modern Python package manager)
+uv tool install dooservice-cli
+
+# Verify installation
+dooservice --help
+```
+
+### Development Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/apiservicesac/dooservice-cli-py.git
+cd dooservice-cli-py
+
+# Install uv (modern Python package manager)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Option 1: Install globally for development
+uv tool install --editable .
+
+# Option 2: Install dependencies only (requires uv run prefix)
+uv sync --all-extras
+
+# Verify installation
+# For global install:
+dooservice --help
+
+# For local development:
+uv run dooservice --help
+```
+
+## 🚀 Quick Start
+
+1. **Initialize Configuration**
+   ```bash
+   # Copy example configuration
+   cp dooservice.yml.example dooservice.yml
+
+   # Edit the configuration to match your needs
+   nano dooservice.yml
+   ```
+
+2. **Validate Configuration**
+   ```bash
+   dooservice config validate dooservice.yml
+   ```
+
+3. **Create Your First Instance**
+   ```bash
+   # Create instance
+   dooservice instance create my-instance
+
+   # Start instance
+   dooservice instance start my-instance
+   ```
+
+4. **Access Your Instance**
+   Your Odoo instance will be running at `http://localhost:8069` (or your configured port)
+
+5. **Manage Your Instance**
+   ```bash
+   # Check status
+   dooservice instance status my-instance
+
+   # View logs
+   dooservice instance logs my-instance --follow
+
+   # Create backup
+   dooservice backup create my-instance
+   ```
+
+## 📖 Command Reference
+
+### Configuration Management
+```bash
+# Load and validate configuration files
+dooservice config load <file_path> [--no-validate]
+dooservice config validate <file_path>
+dooservice config create <file_path> [--no-validate]
+dooservice config convert <input_file> [--output <file>]
+```
+
+### Instance Management
+```bash
+# Create and manage instances
+dooservice instance create <name> [--config <file>]
+dooservice instance delete <name> [--config <file>]
+dooservice instance start <name> [--config <file>]
+dooservice instance stop <name> [--config <file>]
+dooservice instance status <name> [--config <file>]
+dooservice instance logs <name> [--service <service>] [--follow] [--tail <lines>]
+dooservice instance exec <name> <command> [--user <user>] [--workdir <dir>]
+dooservice instance sync <name> [--no-restart] [--config <file>]
+```
+
+### Repository Management
+```bash
+# Manage instance repositories
+dooservice repository list <instance_name> [--repo <name>] [--config <file>]
+dooservice repository status <instance_name> <repo_name> [--config <file>]
+dooservice repository sync <instance_name> [--repo <name>] [--quiet] [--test]
+```
+
+### Backup Operations
+```bash
+# Create and manage backups
+dooservice backup create <instance_name> [--database <name>] [--format <zip|dump>] [--output <dir>]
+dooservice backup test <instance_name> [--database <name>]
+dooservice backup databases <instance_name>
+```
+
+## 📚 Configuration
+
+The `dooservice.yml` file is the heart of DooService CLI. It defines your entire Odoo infrastructure in a declarative way.
+
+### Basic Structure
+
+```yaml
+# Configuration version
+version: "1.0"
+
+# Global repositories that can be used by instances
+repositories:
+  my-addons:
+    url: "https://github.com/your-org/odoo-addons.git"
+    branch: "main"
+
+# Instance definitions
+instances:
+  production:
+    # Odoo configuration
+    odoo_version: "17.0"
+    data_dir: "/opt/odoo-data/production"
+
+    # Port configuration
+    ports:
+      web: 8069
+      db: 5432
+
+    # Environment variables
+    env_vars:
+      ADMIN_PASSWORD: "admin123"
+      DB_HOST: "db_production"
+      DB_USER: "odoo"
+      DB_PASSWORD: "odoo123"
+
+    # Repository configuration
+    repositories:
+      - name: "my-addons"
+        path: "/mnt/extra-addons"
+
+    # Backup configuration (required for backup operations)
+    backup:
+      database: "production_db"
+      output_path: "/opt/backups/production"
+      format: "zip"
+      container_name_pattern: "web_{instance_name}"
+      xmlrpc_url: "http://localhost:8069"
+
+  development:
+    odoo_version: "17.0"
+    data_dir: "/opt/odoo-data/dev"
+
+    ports:
+      web: 8070
+      db: 5433
+
+    env_vars:
+      ADMIN_PASSWORD: "dev123"
+      DB_HOST: "db_development"
+      DB_USER: "odoo"
+      DB_PASSWORD: "odoo123"
+
+    repositories:
+      - name: "my-addons"
+        path: "/mnt/extra-addons"
+
+    backup:
+      database: "dev_db"
+      output_path: "/opt/backups/dev"
+      format: "zip"
+```
+
+### Repository Configuration
+
+```yaml
+repositories:
+  # Public repository
+  odoo-community:
+    url: "https://github.com/OCA/server-tools.git"
+    branch: "17.0"
+
+  # Private repository (requires SSH key)
+  custom-addons:
+    url: "git@github.com:your-org/private-addons.git"
+    branch: "main"
+
+  # Specific commit/tag
+  stable-addons:
+    url: "https://github.com/your-org/addons.git"
+    commit: "abc123def456"
+```
+
+### Backup Configuration
+
+Backup operations require explicit configuration. No default values are assumed:
+
+```yaml
+instances:
+  my-instance:
+    # ... other configuration ...
+
+    backup:
+      # Required: Database name to backup
+      database: "my_instance_db"
+
+      # Required: Output path for backup files
+      output_path: "/opt/backups/my-instance"
+
+      # Optional: Backup format (default: zip)
+      format: "zip"  # or "dump"
+
+      # Optional: Container name pattern (default: web_{instance_name})
+      container_name_pattern: "web_{instance_name}"
+
+      # Optional: XML-RPC URL (default: http://localhost:8069)
+      xmlrpc_url: "http://localhost:8069"
+```
+
+## 🏗️ Architecture
+
+DooService CLI v0.5.0 implements **Clean Architecture** principles:
+
+### Module Structure
+```
+dooservice/
+├── core/                 # Configuration management
+│   ├── application/      # Configuration use cases
+│   ├── domain/          # Configuration entities and services
+│   └── infrastructure/  # YAML parsing, CLI adapters
+├── instance/            # Instance management
+│   ├── application/     # Instance use cases
+│   ├── domain/         # Instance entities and services
+│   └── infrastructure/ # Docker adapters, CLI
+├── backup/             # Backup operations
+│   ├── application/    # Backup use cases
+│   ├── domain/        # Backup entities and services
+│   └── infrastructure/ # XML-RPC adapters, CLI
+├── repository/         # Repository management
+│   ├── application/    # Repository use cases
+│   ├── domain/        # Repository entities and services
+│   └── infrastructure/ # Git adapters, CLI
+└── shared/            # Cross-cutting concerns
+    └── messaging/     # Unified messaging system
+```
+
+### Key Principles
+- **Domain-Driven Design**: Each module represents a bounded context
+- **Dependency Inversion**: All dependencies point inward to domain
+- **Configuration-First**: No hardcoded values, explicit configuration required
+- **Type Safety**: Comprehensive type hints and validation
+- **Clean Separation**: Clear boundaries between layers
+
+## 🛠️ Development
+
+### Architecture Guidelines
+
+- **Application Layer**: Use cases orchestrating business logic
+- **Domain Layer**: Pure business logic with no external dependencies
+- **Infrastructure Layer**: External adapters (CLI, Docker, Git, etc.)
+
+### Adding New Features
+
+1. Follow Clean Architecture patterns
+2. Add domain entities and services first
+3. Create use cases for business logic
+4. Implement infrastructure adapters
+5. Add CLI commands last
+
+### Running Tests
+
+```bash
+# Run all tests
+uv run pytest
+
+# Run with coverage
+uv run pytest --cov=dooservice
+
+# Run specific module tests
+uv run pytest tests/backup/
+```
+
+### Code Quality
+
+```bash
+# Format code
+uv run ruff format
+
+# Lint code
+uv run ruff check
+
+# Type checking
+uv run mypy dooservice/
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our contributing guidelines:
+
+1. Fork the repository
+2. Create a feature branch following Clean Architecture
+3. Add tests for new functionality
+4. Ensure all tests pass and code is properly formatted
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- **Documentation**: [GitHub Wiki](https://github.com/apiservicesac/dooservice-cli-py/wiki)
+- **Issues**: [GitHub Issues](https://github.com/apiservicesac/dooservice-cli-py/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/apiservicesac/dooservice-cli-py/discussions)
+
+---
+
+**Made with ❤️ by API SERVICE SAC**
