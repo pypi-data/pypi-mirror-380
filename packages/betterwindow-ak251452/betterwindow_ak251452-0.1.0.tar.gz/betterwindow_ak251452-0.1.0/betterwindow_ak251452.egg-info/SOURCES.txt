@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+betterwindow/__init__.py
+betterwindow/core.py
+betterwindow_ak251452.egg-info/PKG-INFO
+betterwindow_ak251452.egg-info/SOURCES.txt
+betterwindow_ak251452.egg-info/dependency_links.txt
+betterwindow_ak251452.egg-info/top_level.txt

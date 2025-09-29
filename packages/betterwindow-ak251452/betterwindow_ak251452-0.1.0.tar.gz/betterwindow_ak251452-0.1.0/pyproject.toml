@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "betterwindow-ak251452"
+version = "0.1.0"
+authors = [
+  { name="Andrzej Koprowski", email="andrzej.koprowski007@gmail.com" },
+]
+description = "Biblioteka do tworzenia niestandardowych okien tkinter z własnym paskiem tytułu i przyciskami."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8", 
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: User Interfaces",
+    "Operating System :: OS Independent",
+]
+keywords = ["tkinter", "gui", "window", "custom", "ui"]
+
+[project.urls]
+Homepage = "https://github.com/AndrzejKoprowski251452/BetterWindow"
+Repository = "https://github.com/AndrzejKoprowski251452/BetterWindow"
+Issues = "https://github.com/AndrzejKoprowski251452/BetterWindow/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["betterwindow*"]
