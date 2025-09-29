@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: stdpipe
+Version: 0.2.4
+Summary: Simple Transient Detection Pipeline
+Home-page: https://github.com/karpov-sv/stdpipe
+Author: Sergey Karpov
+Author-email: karpov.sv@gmail.com
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: astropy>=4.1
+Requires-Dist: matplotlib
+Requires-Dist: astroquery>0.4.1
+Requires-Dist: sep
+Requires-Dist: astroscrappy
+Requires-Dist: photutils
+Requires-Dist: statsmodels
+Requires-Dist: tqdm
+Requires-Dist: regions
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: sip_tpv
+Requires-Dist: pyfftw
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
