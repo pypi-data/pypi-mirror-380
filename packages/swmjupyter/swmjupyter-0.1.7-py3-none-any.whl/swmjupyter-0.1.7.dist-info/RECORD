@@ -1,0 +1,10 @@
+swmjupyter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swmjupyter/form.html.jinja,sha256=qcxWDzi8hFrNq9kafCFdXYKRFyjTvarEhy3UaRojCYo,10178
+swmjupyter/form.py,sha256=2Pu_Mcbqu9QFBBiekOrwusYypgLM6Sx5bS13V8S3YI0,3086
+swmjupyter/job.sh.jinja,sha256=JXiP4eYPZO35MoB-XdN1T6DB-oOpqxTqlti2X6Ci6Kk,1277
+swmjupyter/spawner.py,sha256=QG6UA5wSU-SoWlMdR_TW3Feq5rzOvDsmhxXLnZkZcIo,13316
+swmjupyter-0.1.7.dist-info/LICENSE,sha256=zOdrf_H-PojqjXqbKTE5C_awc2NA_dDM93nfC0tEffo,1516
+swmjupyter-0.1.7.dist-info/METADATA,sha256=9YV00GqKVojYgVH8lBFNFe4HuzIEdMhagLNTtBG5bIA,3596
+swmjupyter-0.1.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+swmjupyter-0.1.7.dist-info/top_level.txt,sha256=Da6oSPK-rRoT2Uloq7sp4InOeD_xRFY5b2kc39H3ea4,11
+swmjupyter-0.1.7.dist-info/RECORD,,

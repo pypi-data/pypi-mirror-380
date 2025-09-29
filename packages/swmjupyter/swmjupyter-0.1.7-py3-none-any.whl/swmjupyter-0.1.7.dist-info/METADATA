@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: swmjupyter
+Version: 0.1.7
+Summary: A spawner for JupyterHub to spawn notebooks over Sky Port
+Author-email: Taras Shapovalov <taras@iclouds.net>
+License: BSD 3-Clause License
+Project-URL: Homepage, https://openworkload.org
+Project-URL: Documentation, https://openworkload.org
+Project-URL: Repository, https://github.com/openworkload/swm-jupyter-term
+Project-URL: Tests, https://github.com/openworkload/swm-jupyter-term/tree/master/test
+Project-URL: Issues, https://github.com/openworkload/swm-jupyter-term/issues
+Project-URL: Distribution, https://pypi.org/project/swmjupyter
+Keywords: hpc,high performance computing,cloud,cloud computing,open workload,sky port,jupyter,jupyterhub,jupyterlab
+Classifier: Environment :: Console
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2
+Requires-Dist: jupyterhub==5.2.1
+Requires-Dist: jupyterlab>=3.5.3
+Requires-Dist: swmclient>=0.1.5
+Provides-Extra: build
+Requires-Dist: build==1.2.1; extra == "build"
+Provides-Extra: publish
+Requires-Dist: twine==5.1.1; extra == "publish"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+<p align="center">
+    <a href="https://github.com/openworkload/swm-jupyter-term/blob/master/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/openworkload/swm-jupyter-term" />
+    </a>
+    <a href="https://github.com/openworkload/swm-jupyter-term/actions/workflows/ci.yml" alt="Latest CI tests result">
+        <img src="https://github.com/openworkload/swm-jupyter-term/actions/workflows/ci.yml/badge.svg?event=push" />
+    </a>
+</p>
+
+
+Sky Port Juputer terminal
+=============================
+
+# Sky Port project
+
+Sky Port makes it easy to consume cloud resources by user software. It can also be considered as a transportation layer between workload producers and compute resource providers.
+
+# JupyterHub integration
+
+The project in this repository represents a custom spawner that allows running jupyterlab server via Sky Port.
+The spawner python package is distributed via PyPI: [swmjupyter](https://pypi.org/project/swmjupyter).
+
+## Run in development mode
+
+* Run skyport development container (`make cr` in swm-core directory) and go back to top sources directory of this repo.
+
+* Install dependencies:
+```bash
+make prepare-venv
+```
+
+* Start JupyterHub:
+```bash
+make start
+```
+
+## Run in release mode (in container)
+
+* Build release container:
+```bash
+make build-container
+```
+
+* Start JupyterHub container:
+```bash
+make start-container
+```
+
+# Usage:
+* Go to [http://localhost:8000](http://localhost:8000) in a web browser.
+* Select notebook and other files that will be uploaded (if needed).
+* Select flavor and image for VM machine (use filter if needed).
+* Press "Start" button.
+
+In 7-10 minutes JupyterLab will be started.
+
+
+# Contributing
+
+We appreciate all contributions. If you are planning to contribute back bug-fixes, please do so without any further discussion. If you plan to contribute new features, utility functions or extensions, please first open an issue and discuss the feature with us. 
+
+
+# License
+
+We use a shared copyright model that enables all contributors to maintain the copyright on their contributions.
+
+This software is licensed under the [BSD-3-Clause license](LICENSE).
