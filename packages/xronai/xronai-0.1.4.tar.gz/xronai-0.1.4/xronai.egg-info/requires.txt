@@ -1,0 +1,11 @@
+openai==1.66.3
+python-dotenv==1.0.1
+pytest==8.3.4
+PyYAML==6.0.2
+mcp[cli]==1.6.0
+
+[studio]
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+websockets==15.0.1
+typer[all]==0.17.4
