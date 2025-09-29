@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: sa_tenders
+Version: 0.0.3
+Summary: This library enables developers to download and process data from the South African etenders platform.
+Author: Ntuthuko Hlela
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: flatdict
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+This is a sa_tenders library that makes it easier to download and process information about the South African tenders. 
+
+Quickstart:
+
+Installing
+
+<code>
+pip install sa_tenders
+</code>
+
+An example:
+
+```
+from sa_tenders import sa_tenders
+
+#initiating the class
+source = sa_tenders(page_size=100, start_date="2024-01-01", end_date="2024-12-31")
+
+#calling some of the class attributes
+meta_data = source.meta_data
+raw_data = source.raw_data_dict
+clean_data = source.cleaned_dataframe
+
+#printing the results
+for i in [meta_data, raw_data, clean_data]:
+    print(i)
+
+#exporting the clean data to excel
+clean_data.to_excel("sa_tenders_data.xlsx")```
+
+
