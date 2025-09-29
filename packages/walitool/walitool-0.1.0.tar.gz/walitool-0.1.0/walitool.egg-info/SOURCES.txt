@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+walitool/__init__.py
+walitool/crossover.py
+walitool/de.py
+walitool/fitness.py
+walitool/generator.py
+walitool/mutate.py
+walitool/selection.py
+walitool.egg-info/PKG-INFO
+walitool.egg-info/SOURCES.txt
+walitool.egg-info/dependency_links.txt
+walitool.egg-info/requires.txt
+walitool.egg-info/top_level.txt
