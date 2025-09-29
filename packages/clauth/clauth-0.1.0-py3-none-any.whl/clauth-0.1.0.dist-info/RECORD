@@ -1,0 +1,16 @@
+clauth/__init__.py,sha256=V5xD3BIlQsti_KIPumS9iehDQVWMhgvtxrH7GWbYs5Y,587
+clauth/aws_utils.py,sha256=qNWGwofJBwLxmK_JAcru_dwHD9y7jug9V00D-mrmAUE,16834
+clauth/cli.py,sha256=ND3IO25jrdYl0OxOkO0HL3fC3tZdnPgNmMRqgfvjDUU,1592
+clauth/config.py,sha256=-q3q4qzzyz42QK16Ln8BRkhALo_k55_UGvSp8lEPNEw,10754
+clauth/helpers.py,sha256=oCDomSqxdEEbZkDhvSGSqOMVkZGFahIRvouOgv4ghyg,8233
+clauth/launcher.py,sha256=0IQyCstvskRFIivFCNfSppOHJQBDViDlxB1tRs6aH_I,2403
+clauth/commands/__init__.py,sha256=RxBH0sPIAMDt6FSn2XBv4CW0stHLCeealEy-1R71uIU,487
+clauth/commands/config.py,sha256=mNiSuVA7uXaYEjuIRaHNw3ZmhL83nIMRVWiTUC8JURc,1985
+clauth/commands/delete.py,sha256=_SGX6HjdWDcTBbG_eza6NrK77rbkdOx9l13EyGd7xlo,3384
+clauth/commands/init.py,sha256=4fNEd621gkr6wOZYFum0wjW9prIrfy48XnA86fp-r7E,10025
+clauth/commands/models.py,sha256=bHmYmkHjkLWTP9NEy8PZ0fwiIVLotTJNULYK3T4_gA8,6161
+clauth-0.1.0.dist-info/METADATA,sha256=4_Zb5TXaLfbm29abdBGb9ctCwGtICw26tRJCmxwQIUI,3083
+clauth-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+clauth-0.1.0.dist-info/entry_points.txt,sha256=_x1QT_gQ2yav_nu0w7lI5za3DLtGdY6vSimoNwnymZY,42
+clauth-0.1.0.dist-info/licenses/LICENSE,sha256=GXs9bArGb4x6cEfXQUG9Ils-Aj2BTHwaPy68OquQ9i4,1091
+clauth-0.1.0.dist-info/RECORD,,
