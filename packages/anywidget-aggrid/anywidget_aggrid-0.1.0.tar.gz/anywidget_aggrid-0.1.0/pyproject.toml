@@ -1,0 +1,31 @@
+[project]
+name = "anywidget-aggrid"
+version = "0.1.0"
+description = "An AnyWidget wrapper around AG Grid"
+authors = [
+    {name = "barnab",email = "bittnerbarni@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anywidget (>=0.9.18,<0.10.0)",
+]
+
+[tool.poetry]
+packages = [{include = "anywidget_aggrid", from = "src"}]
+include = [
+    { path = "src/anywidget_aggrid/dist/*", format = "sdist" },
+    { path = "src/anywidget_aggrid/dist/*", format = "wheel" }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "marimo (>=0.16.2,<0.17.0)",
+    "polars (>=1.33.1,<2.0.0)",
+    "pandas (>=2.3.2,<3.0.0)",
+    "datasets (>=4.1.1,<5.0.0)",
+]
