@@ -1,0 +1,17 @@
+osmose_presets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osmose_presets/aligned_data_table.py,sha256=VFPV6wfx9mhay1Rss6kgCMdQnKY-HbUsMJkBSO_VP1Y,3773
+osmose_presets/app.py,sha256=lxX0Nr4So8_epakjTVsU3IaovvYmtkypI5qrE--1FnI,5869
+osmose_presets/filter_selector.py,sha256=-axLrkPQYIX_RcqoojB_LD4kTpaVD5sSelMmvGyw6nM,5389
+osmose_presets/filters.py,sha256=s0YeavJ3NUh9sqgxceBSrNq7jQ5TQ3xz_uyGivTMwKo,81
+osmose_presets/header_panel.py,sha256=w1L4XKoHwuBSrzSbdD2TIJ4ALqprTcDFH-rjqpvAs4g,5889
+osmose_presets/helper_functions.py,sha256=bXUQ94dy9IKXo4fBA353JevNpfZZJpKu57EE0Zw5xUU,493
+osmose_presets/messages.py,sha256=RpfgyAhOwiz5wy2Mf2dOkOM1jU66Fxtau5r8NMafgr0,929
+osmose_presets/midi_controller.py,sha256=e_khX4mQol4jeRCCl1zCC9gKs739RNMn88sTOOe833w,633
+osmose_presets/preset_data.py,sha256=zvpb5S8TlhbXUWHtslFiCJoRJy8TLxSBMfcBwSyOD2k,6659
+osmose_presets/preset_grid.py,sha256=GWIWYlo1rS64J8__sB28jfPJx6AblYxeIFyYLQJRMgw,2518
+osmose_presets/search_test.py,sha256=xmG8nATjrSlRKHJA2mVhG9mBbMzZ_nYRTo92Wjq_GDk,1444
+osmose_presets-0.1.18.dist-info/METADATA,sha256=9bXpdnboCj_DkEa-MLOTK5Gjln3G6mSXKi2Mv-TBJgc,359
+osmose_presets-0.1.18.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+osmose_presets-0.1.18.dist-info/entry_points.txt,sha256=tKkKC9gY42ZejhQLby1V-2to1Xh6FNDgy1OWM58upd8,59
+osmose_presets-0.1.18.dist-info/top_level.txt,sha256=3lfFz6btKTn7jRxeH6gNVRwvBBZIG8cuk5RTCHpaUDU,15
+osmose_presets-0.1.18.dist-info/RECORD,,
