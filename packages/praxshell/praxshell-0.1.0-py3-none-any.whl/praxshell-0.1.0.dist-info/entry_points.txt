@@ -1,0 +1,2 @@
+[console_scripts]
+praxshell = praxshell.cli.cli:main
