@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+schibsted_search_mpc/__init__.py
+schibsted_search_mpc.egg-info/PKG-INFO
+schibsted_search_mpc.egg-info/SOURCES.txt
+schibsted_search_mpc.egg-info/dependency_links.txt
+schibsted_search_mpc.egg-info/top_level.txt
