@@ -1,0 +1,13 @@
+cmdargparse/__init__.py,sha256=weTQyPCVDyw9PWtStk9-nwvgO6qJinGC2dX2aXjlHUs,251
+cmdargparse/argument.py,sha256=vx658i7Qgb6m_JhMddNeIuH47xe8OyfGiyGxziWDn_0,2294
+cmdargparse/command.py,sha256=RhSla4WddgfGXhy50CfYVu_ic-rkji7cZOk2EaO800Y,5926
+cmdargparse/custom.py,sha256=3uJ5mdsJGhkmsOU1IYO69h4sEHgyhDh40lYm_EdqSus,3124
+cmdargparse/field.py,sha256=SMcPRYZ3XJeHCT-LPQF8P4G91fMPXldm2_Hb0irpkG8,21203
+cmdargparse/namespace.py,sha256=SLeaH-49fm3qv8MNZo0HzjFHnr1SsRzLk_00pPn5PXo,984
+cmdargparse/parser.py,sha256=UYFHXrQcOokuqxRnoP5iVvwbE6pMQQVIcGXRLInNrgg,1567
+cmdargparse/unset.py,sha256=QWNkd6t7c3-8K7EPnZJIt0QAPcVKg4rRqiNVPjVCdB8,1687
+cmdargparse-0.1.0.dist-info/licenses/LICENSE,sha256=ZbjvSbpbnaBM1xeQH0Ox4GsHxGMA7KhWUVsO3owGe94,1099
+cmdargparse-0.1.0.dist-info/METADATA,sha256=ebZ06w12jHGyyAWOsKm4yXH-IN_pPkQM0KGiLXXn_GY,7002
+cmdargparse-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cmdargparse-0.1.0.dist-info/top_level.txt,sha256=afbiyImfO4prsVte-5tYouF4u6dLVAfj7W-JfDtsz7E,12
+cmdargparse-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,209 @@
+Metadata-Version: 2.4
+Name: cmdargparse
+Version: 0.1.0
+Summary: A declarative way to define `cmd2` argument parsers.
+Home-page: https://github.com/krnd/cmdargparse
+Author: Kilian Kaiping (krnd)
+License: MIT
+Keywords: CLI,cmd,command,interactive,prompt,Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cmd2~=2.7
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# cmdargparse
+
+[![pypi](https://img.shields.io/pypi/v/cmdargparse?style=for-the-badge)](https://pypi.org/project/cmdargparse)
+[![license](https://img.shields.io/pypi/l/cmdargparse?style=for-the-badge)](https://github.com/krnd/cmdargparse/blob/main/LICENSE)
+
+The package provides a declarative way to define `cmd2` argument parsers.
+
+
+## Usage
+<!----------------------------------------------------------------------------->
+
+The core functionality is driven by three components:
+* `cmdargument` for defining an argument parser
+* `cmdfield` for declaring the arguments
+* `cmdcommand` for attatching an argument parser to a command
+
+```py
+
+class MyApplication(cmd2.Cmd):
+
+    @cmdargument
+    class _MyCommandArgs(cmdargument):
+        my_argument: str = cmdfield.argument(...)
+        my_option: str = cmdfield.option(...)
+        my_flag: str = cmdfield.flag(...)
+
+    @cmdcommand(_MyCommandArgs)
+    def do_mycommand(self, args: _MyCommandArgs) -> None:
+        args.pfields(self)
+
+```
+
+*[Example Application](./launch/__main__.py)*
+
+
+### Arguments (positional)
+
+* `choices` <br/>
+    The restricted set of values allowed for the argument.
+* `choicesmap` <br/>
+    Additional values allowed for the argument that each map to the
+    specified value in the restricted set of values.
+* `default` <br/>
+    The arguments default value if not specified.
+    <br/> (Providing a default value makes the argument optional.)
+* `type` <br/>
+    Explicitly specifies the `type` to be used by `argparse`.
+    <br/> https://docs.python.org/3/library/argparse.html#type
+* `help` <br/>
+    Brief description of the argument.
+* `helpvar` <br/>
+    Reference name of the argument value in the help message.
+
+#### Examples
+```py
+arg: str | None = cmdfield.argument(
+    ("alpha", "beta"),
+    {
+        "a": "alpha",
+        "b": "beta",
+    },
+    default=None,
+)
+```
+
+
+### Options (non-positional, value-bound)
+
+* `decl` <br/>
+    Specifies the primary option declaration.
+* `altdecl` <br/>
+    Specifies the alternative option declaration.
+* `choices` <br/>
+    The restricted set of values allowed for the option.
+* `choicesmap` <br/>
+    Additional values allowed for the option that each map to the
+    specified value in the restricted set of values.
+* `default` <br/>
+    The options default value if not specified.
+* `form` <br/>
+    Specifies the default form of the option declaration.
+* `decls` <br/>
+    Explicitly specifies all option declarations.
+* `more_decls` <br/>
+    Specifies additional option declarations.
+* `type` <br/>
+    Explicitly specifies the `type` to be used by `argparse`.
+    <br/> https://docs.python.org/3/library/argparse.html#type
+* `required` <br/>
+    Marks the option as required.
+* `help` <br/>
+    Brief description of the option.
+* `helpvar` <br/>
+    Reference name of the option value in the help message.
+
+#### Examples
+```py
+xx: str | None = cmdfield.option()
+yy: int | None = cmdfield.option([1, 2, 3])
+zz: str = cmdfield.option(required=True)
+```
+
+#### Declarations
+```py
+aa: str | None = cmdfield.option()                       # -aa  OR  --aa
+bb: str | None = cmdfield.option("--cc")                 # -bb, --cc  OR  --cc
+dd: str | None = cmdfield.option("-ee")                  # -ee  OR  --dd, -ee
+ff: str | None = cmdfield.option("--gg", "-ii")          # --gg, -ii
+jj: str | None = cmdfield.option(form="--")              # --jj
+kk: str | None = cmdfield.option(form="-")               # -kk
+mm: str | None = cmdfield.option(decls="--mm")           # --mm
+nn: str | None = cmdfield.option(decls="-oo")            # -oo
+pp: str | None = cmdfield.option(decls=("--rr", "-ss"))  # --rr, -ss
+tt: str | None = cmdfield.option(more_decls="-uu")       # -tt, -uu
+```
+
+
+### Flags (non-positional, non-value)
+
+* `decl` <br/>
+    Specifies the primary flag declaration.
+* `altdecl` <br/>
+    Specifies the alternative flag declaration.
+* `invert` <br/>
+    Sets the value `False` instead of `True` if the flag is specified.
+* `const` <br/>
+    The value to set if the flag is specified.
+* `form` <br/>
+    Specifies the default form of the flag declaration.
+* `decls` <br/>
+    Explicitly specifies all flag declarations.
+* `more_decls` <br/>
+    Specifies additional flag declarations.
+* `type` <br/>
+    Explicitly specifies the type to be used by argparse.
+    <br/> https://docs.python.org/3/library/argparse.html#type
+* `help` <br/>
+    Brief description of the flag.
+
+#### Examples
+```py
+vv: bool = cmdfield.flag()
+ww: bool = cmdfield.flag(invert=True)
+xx: float | None = cmdfield.flag(const=1.23)
+yy: str | None = cmdfield.flag(const="text")
+zz: Literal["ltr"] | None = cmdfield.flag(const="ltr")
+```
+
+#### Declarations
+```py
+aa: bool = cmdfield.flag()                       # -aa  OR  --aa
+bb: bool = cmdfield.flag("--cc")                 # -bb, --cc  OR  --cc
+dd: bool = cmdfield.flag("-ee")                  # -ee  OR  --dd, -ee
+ff: bool = cmdfield.flag("--gg", "-ii")          # --gg, -ii
+jj: bool = cmdfield.flag(form="--")              # --jj
+kk: bool = cmdfield.flag(form="-")               # -kk
+mm: bool = cmdfield.flag(decls="--mm")           # --mm
+nn: bool = cmdfield.flag(decls="-oo")            # -oo
+pp: bool = cmdfield.flag(decls=("--rr", "-ss"))  # --rr, -ss
+tt: bool = cmdfield.flag(more_decls="-uu")       # -tt, -uu
+```
+
+
+## Q&A
+<!----------------------------------------------------------------------------->
+
+
+#### Changing the default declaration form
+
+The `cmdargument` decorator accepts a `form` argument to select the default
+declaration form for an argument parser, which can be either *-name* (default)
+or *--name*.
+
+It is also possible to change the global default declaration form by using the
+`cmdargument.default_form` function.
