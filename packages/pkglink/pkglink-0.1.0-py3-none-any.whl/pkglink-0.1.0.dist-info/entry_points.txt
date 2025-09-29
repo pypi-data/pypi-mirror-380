@@ -1,0 +1,3 @@
+[console_scripts]
+pkglink = pkglink.cli.pkglink:main
+pkglinkx = pkglink.cli.pkglinkx:main
