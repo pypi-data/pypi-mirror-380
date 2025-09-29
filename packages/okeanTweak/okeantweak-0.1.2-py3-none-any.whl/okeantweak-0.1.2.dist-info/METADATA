@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: okeanTweak
+Version: 0.1.2
+Summary: Okean tweak tool
+Author: Ashish
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: psycopg2
+Dynamic: license-file
