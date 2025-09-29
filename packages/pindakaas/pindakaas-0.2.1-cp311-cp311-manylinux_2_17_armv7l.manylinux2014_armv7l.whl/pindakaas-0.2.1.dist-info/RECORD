@@ -1,0 +1,7 @@
+pindakaas-0.2.1.dist-info/METADATA,sha256=ZbMWip-ahqJAgGvzlUa-Twn4g2RNiOXzCld23MqnNvg,310
+pindakaas-0.2.1.dist-info/WHEEL,sha256=cqrtR0VbqwGKblgch4LRTL7L6-Yz_phO5xyXVVonwvo,129
+pindakaas/__init__.py,sha256=ho5TbsLUxxLhaQn-R8uGGL8NKPWPwKHK7MvU2mZDGZ0,351
+pindakaas/encoding.py,sha256=A4ToCbz6dPJ_6ExSOh4SQKaFsN48bl1ROpc0QbjRTBs,4587
+pindakaas/pindakaas.cpython-311-arm-linux-gnueabihf.so,sha256=7yGkUp0LWBeXw7cC42moVb-n3MsxALEP_kdptBnJqeA,2119020
+pindakaas/solver.py,sha256=QqtG7yY6LiwviMbM5ibpTvYYmH6h0k8V_eQecAPNB3E,5485
+pindakaas-0.2.1.dist-info/RECORD,,
