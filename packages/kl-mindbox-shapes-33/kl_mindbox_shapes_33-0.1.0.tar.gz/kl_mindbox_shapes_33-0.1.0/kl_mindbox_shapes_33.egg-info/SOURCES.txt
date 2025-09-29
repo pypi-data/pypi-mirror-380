@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+kl_mindbox_shapes_33/__init__.py
+kl_mindbox_shapes_33/core.py
+kl_mindbox_shapes_33.egg-info/PKG-INFO
+kl_mindbox_shapes_33.egg-info/SOURCES.txt
+kl_mindbox_shapes_33.egg-info/dependency_links.txt
+kl_mindbox_shapes_33.egg-info/top_level.txt
