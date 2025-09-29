@@ -1,0 +1,10 @@
+remip/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remip/_version.py,sha256=lemL_4Kl75FgrO6lVuFrrtw6-Dcf9wtXBalKkXuzkO4,704
+remip/main.py,sha256=sdMUicmJx28jIZKS75AIXc6E4TWvsJVbSmit6CMrRMY,3518
+remip/models.py,sha256=WJCFkRAsCrjLPif56RMAZXnb2uPkouFpS4-cKZGXsnU,2648
+remip/services.py,sha256=0xSQp-T1ekWAkCmUT5Aiv_bXYWog5bwjqkGqdlwuonU,1023
+remip/solvers/scip_wrapper.py,sha256=3qGUYcu3UYJHqeW6qZ-n9Wl5W-2cRRjTOFj_tqcx4P4,14602
+remip-0.3.3.dist-info/METADATA,sha256=ubMTURcffi9xyDVWr1Gj68YTxVcZM7h4TIQmzs1g7GE,2841
+remip-0.3.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+remip-0.3.3.dist-info/entry_points.txt,sha256=tvUcuk3DgWcONp8ev11yugfftHooBOt0PqrbRnQjUpg,42
+remip-0.3.3.dist-info/RECORD,,
