@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: py_me
+Version: 1.1.5
+Summary: Biblioteca Python com módulos para música e interface gráfica
+Author: Seu Nome
+Author-email: isaias da silva nobrega <isaiasdasilvanobrega@gmail.com>
+Keywords: pygame,pydub,audio,music,tkinter,sound,interface,Python,biblioteca
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pygame
+Requires-Dist: pydub
+Dynamic: author
+Dynamic: license-file
