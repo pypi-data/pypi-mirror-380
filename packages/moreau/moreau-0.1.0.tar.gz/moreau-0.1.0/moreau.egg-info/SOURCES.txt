@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+moreau.egg-info/PKG-INFO
+moreau.egg-info/SOURCES.txt
+moreau.egg-info/dependency_links.txt
+moreau.egg-info/top_level.txt
