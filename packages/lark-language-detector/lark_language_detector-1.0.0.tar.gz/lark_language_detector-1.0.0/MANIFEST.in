@@ -1,0 +1,4 @@
+# 包含包数据文件
+include lark/farshore/save_lark/lark_epoch1.pth
+include lark/farshore/all_dataset_labels.json
+recursive-include lark *.py
