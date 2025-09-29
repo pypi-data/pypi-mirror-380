@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: pymoises
+Version: 1.1.19
+Summary: Callings from old moises endpoints...
+Author: Activatalk
+Requires-Dist: requests
+Requires-Dist: marshmallow
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
