@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=80.9"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-freakyfunkyfonts"
+description = "Django middleware for when you want your fonts to get freaky."
+version = "1.0.1"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name="Naitsabot" }
+]
+keywords = ["django", "middleware", "fonts", "html"]
+classifiers = [
+  "Framework :: Django",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5.0",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "beautifulsoup4>=4.13.5",
+]
+
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["freakyfunkyfonts"]
+
+[project.urls]
+Homepage = "https://github.com/Naitsabot/django-freakyfunkyfonts"
+Source = "https://github.com/Naitsabot/django-freakyfunkyfonts"
+Issues = "https://github.com/Naitsabot/django-freakyfunkyfonts/issues"

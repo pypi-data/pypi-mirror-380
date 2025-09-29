@@ -1,0 +1,12 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+django_freakyfunkyfonts.egg-info/PKG-INFO
+django_freakyfunkyfonts.egg-info/SOURCES.txt
+django_freakyfunkyfonts.egg-info/dependency_links.txt
+django_freakyfunkyfonts.egg-info/requires.txt
+django_freakyfunkyfonts.egg-info/top_level.txt
+freakyfunkyfonts/__init__.py
+freakyfunkyfonts/middleware.py
+freakyfunkyfonts/settings.py
