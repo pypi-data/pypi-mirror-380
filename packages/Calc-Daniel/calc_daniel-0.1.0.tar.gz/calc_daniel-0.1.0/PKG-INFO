@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: Calc_Daniel
+Version: 0.1.0
+Summary: Calculadora hecha en clase
+Author-email: Daniel Felipe Ramirez Cabrera <dfrc5528@gmail.com>
+License: Universidad Distrital FJC
+Project-URL: Homepage, https://github.com/SanCriolloB/Desarrollo_Software.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Calculadora_Daniel
+
+Calculadora hecha en clase para pypi
+
+## Instalacion
+
+'''bash
+
+pip install Calc_Daniel

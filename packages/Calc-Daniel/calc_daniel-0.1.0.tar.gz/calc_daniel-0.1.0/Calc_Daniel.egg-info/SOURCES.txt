@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+Calc_Daniel.egg-info/PKG-INFO
+Calc_Daniel.egg-info/SOURCES.txt
+Calc_Daniel.egg-info/dependency_links.txt
+Calc_Daniel.egg-info/top_level.txt
+CalculadoraDaniel/__init__.py
+CalculadoraDaniel/calculadora.py
+test/test_calculadora.py

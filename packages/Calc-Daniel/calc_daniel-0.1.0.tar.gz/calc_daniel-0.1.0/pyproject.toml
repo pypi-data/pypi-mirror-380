@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["CalculadoraDaniel*"]
+exclude = ["test*"]
+
+[project]
+name = "Calc_Daniel"
+version = "0.1.0"
+description = "Calculadora hecha en clase"
+readme = "README.md"
+authors = [
+    { name = "Daniel Felipe Ramirez Cabrera", email = "dfrc5528@gmail.com" }
+]
+license = { text = "Universidad Distrital FJC" }
+dependencies = []
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/SanCriolloB/Desarrollo_Software.git"
