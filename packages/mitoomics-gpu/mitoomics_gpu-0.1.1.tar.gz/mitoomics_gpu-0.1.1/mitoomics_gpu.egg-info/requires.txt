@@ -1,0 +1,4 @@
+numpy
+pandas
+anndata>=0.10
+scanpy>=1.9
