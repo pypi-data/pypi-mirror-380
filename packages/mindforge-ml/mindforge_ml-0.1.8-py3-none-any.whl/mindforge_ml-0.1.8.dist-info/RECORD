@@ -1,0 +1,14 @@
+mindforge_ml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mindforge_ml/utils.py,sha256=nTswS8N1-GA7slXL6ZzsfoDAVzpTAYQdYtwLNT2pWeI,3979
+mindforge_ml/visualization.py,sha256=p0OZaIE2guRsZnKvEzpbdHfziER7MfjCtfpeLKAmfxA,2162
+mindforge_ml/supervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mindforge_ml/supervised/model.py,sha256=n8bAXipCuYZWbM2Z9AHznZ2AnWexnm2gnVRzT6otDes,6138
+mindforge_ml/supervised/classifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mindforge_ml/supervised/classifier/model.py,sha256=SoeJoFERJVw2meQlL_V6q10jbH3U9PAtDLqZCLnoIcA,4094
+mindforge_ml/unsupervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mindforge_ml/unsupervised/model.py,sha256=5tVZ6-UEN0cMfkL9g1PrwaYDCv6RbJSh-o9INuldkKk,3563
+mindforge_ml-0.1.8.dist-info/licenses/LICENSE,sha256=33vIBJJ7y1AhHtvgQvTlWVfKTZBuB3TfMDj3McFYps8,1093
+mindforge_ml-0.1.8.dist-info/METADATA,sha256=Qtx5xb588kdlryykbOEQD5Mu9XUibmYj09I3uu_j5Sk,15753
+mindforge_ml-0.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mindforge_ml-0.1.8.dist-info/top_level.txt,sha256=LDoxqGGA593i-LRhc-9WJGoiL9KzzViuIhJC-_1V2cI,13
+mindforge_ml-0.1.8.dist-info/RECORD,,
