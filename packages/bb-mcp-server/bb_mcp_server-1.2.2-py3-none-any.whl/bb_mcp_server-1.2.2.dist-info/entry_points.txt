@@ -1,0 +1,7 @@
+[console_scripts]
+bb-mcp-server = server:main
+chrome-dev-tools = chrome_dev_tools_server:main
+
+[mcp.servers]
+bitbucket = server:mcp
+chrome-dev-tools = chrome_dev_tools_server:mcp
