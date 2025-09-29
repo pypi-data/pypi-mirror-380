@@ -1,0 +1,8 @@
+README.md
+setup.py
+hieroglyphe/__init__.py
+hieroglyphe/hieroglyphe.py
+pyhieroglyphe.egg-info/PKG-INFO
+pyhieroglyphe.egg-info/SOURCES.txt
+pyhieroglyphe.egg-info/dependency_links.txt
+pyhieroglyphe.egg-info/top_level.txt
