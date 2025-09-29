@@ -1,0 +1,13 @@
+dln2_spi_wrapper/__init__.py,sha256=aJn5ocf1XIt4KBlpsGLy30bYmgmHsFtWIwuhWNCFxdc,703
+dln2_spi_wrapper/dln2_spi_client.py,sha256=dBFV6M47rNMHJAGrPN0NXIK9fj3nrv1585_oNLVYg3Q,7700
+dln2_spi_wrapper/dln2_spidev.py,sha256=e7kovFB_ee7tx6ANR8iAqCI3eztJVp9_XN1Fd14VJCQ,7368
+dln2_spi_wrapper/py.typed,sha256=ixa8YukDZ3kLo0WsFJRGohLMyHzbMur1ALmmASML2cs,64
+dln2_spi_wrapper/examples/__init__.py,sha256=ABbo8Uld_VplCtQ8OWLzAx1O0pp-8fQV0GHUO6f0ztk,92
+dln2_spi_wrapper/examples/bpw_tester.py,sha256=0T0ZGPxQqvXtsBKoRebsyQCEdG14E11v3sYbdB-GxYE,2954
+dln2_spi_wrapper/examples/spidev_test.py,sha256=gIGgpef7CGcrwilIoQ6GVwUxqvftDMX87Uq7_gDN9Lw,6337
+dln2_spi_wrapper-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dln2_spi_wrapper-0.1.0.dist-info/METADATA,sha256=9nT1woJGZdlO3aEakMUDX2YUfr1c-R5LhkuD28N4Z6E,10709
+dln2_spi_wrapper-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dln2_spi_wrapper-0.1.0.dist-info/entry_points.txt,sha256=CBW19xACK5cIBcMkPawmzU5HoUFaZ7vfrQ_BKEPGTnk,139
+dln2_spi_wrapper-0.1.0.dist-info/top_level.txt,sha256=1MF9xZxgwa8NzX5CTYQ7kPcojD9Oiiy5UwdocSrpfT8,17
+dln2_spi_wrapper-0.1.0.dist-info/RECORD,,
