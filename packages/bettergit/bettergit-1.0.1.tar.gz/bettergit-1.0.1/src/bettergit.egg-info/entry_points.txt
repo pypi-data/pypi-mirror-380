@@ -1,0 +1,2 @@
+[console_scripts]
+bg = bettergit.cli.main:run
