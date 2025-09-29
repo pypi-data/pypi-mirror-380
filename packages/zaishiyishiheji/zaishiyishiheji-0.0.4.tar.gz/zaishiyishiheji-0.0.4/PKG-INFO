@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: zaishiyishiheji
+Version: 0.0.4
+Summary: 王梓明写的故事
+Home-page: http://www.sidaxiake.cn/
+Author: 王梓明
+Author-email: 1272660211@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: summary
+
+这个包没有任何的功能，仅仅用于保存王梓明写的那名为《再试一试》的故事。
+
+0.0.4版本截至2025年9月28日

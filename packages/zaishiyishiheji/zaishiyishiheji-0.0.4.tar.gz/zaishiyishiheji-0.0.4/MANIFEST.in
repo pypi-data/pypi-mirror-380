@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+recursive-include 再试一试合集/data *
