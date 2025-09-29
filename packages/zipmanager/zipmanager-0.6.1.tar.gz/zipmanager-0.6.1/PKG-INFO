@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: zipmanager
+Version: 0.6.1
+Summary: Allows you to manage zip folders as data
+Author: SimplePythonCoder
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/SimplePythonCoder/zipmanager
+Project-URL: Source, https://github.com/SimplePythonCoder/zipmanager
+Project-URL: Changelog, https://github.com/SimplePythonCoder/zipmanager/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://github.com/SimplePythonCoder/zipmanager/wiki
+Project-URL: Issues, https://github.com/SimplePythonCoder/zipmanager/issues
+Keywords: zip,zipfile
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# zipmanager
+[![downloads](https://static.pepy.tech/badge/zipmanager)](https://www.pepy.tech/projects/zipmanager) [![changelog](https://raw.githubusercontent.com/SimplePythonCoder/zipmanager/main/images/Changelog.svg)](https://github.com/SimplePythonCoder/zipmanager/blob/main/CHANGELOG.md) [![wiki](https://raw.githubusercontent.com/SimplePythonCoder/zipmanager/main/images/Wiki.svg)](https://github.com/SimplePythonCoder/zipmanager/wiki)
+```
+pip install zipmanager
+```
+## What does this package do ?
+It allows you to create and handle zip folders as data without needing to save them.
+
+## Usage
+```python
+from zipmanager import ZipFolder
+
+file_data = b'some data'
+
+zip_folder = ZipFolder({'file_name.file_extension': file_data})
+# file extension not required
+# ZipFolder will hold all the files given in the dictionary
+
+file_data = zip_folder['file_name.file_extension']
+# will return the file data
+```
+
+## Main functions
+```python
+from zipmanager import ZipFolder
+
+file_data = b'some_data'
+zip_folder = ZipFolder({'file_name.file_extension': file_data})
+
+# list of functions:
+zip_folder.add_files({'new_file': 'new_data'}) # add files to zip. read more at docstring.
+zip_folder.delete_file('new_file') # removes file from zip
+
+zip_folder.get('file_name') # returns None if file was not found
+# or
+zip_folder['file_name']
+
+zip_folder.save() # saves zip in given location (empty is './temp.zip')
+```
+
+## Features
+info on more of the features is available on the [wiki](https://github.com/SimplePythonCoder/zipmanager/wiki)
