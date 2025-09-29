@@ -1,0 +1,379 @@
+server:
+  name: Google News & Yahoo News
+  description: "Get the latest real-time Financial news from Yahoo News and Google News with this API."
+  options:
+    requestTimeoutMillis: 15000
+
+tools:
+  - name: custom_search
+    description: "Custom search for Yahoo News."
+    args:
+      - name: "keyword"
+        description: "Keyword to search. Must be company stock symbol."
+        required: "True"
+        default: "TSLA"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/y/search?keyword={{args.keyword}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: search
+    description: "Search for news"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+      - name: "keyword"
+        description: "Keyword to search"
+        required: "False"
+        default: "tesla"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/search?lang_reg={{args.lang_reg}}&keyword={{args.keyword}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_world_latest
+    description: "Get the latest news from around the world"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/world/latest?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_business_latest
+    description: "Get the latest business news"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/business/latest?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_business_economy
+    description: "Get the latest news about the economy"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/business/economy?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_business_jobs
+    description: "Get the latest news about the job market"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/business/jobs?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_business_personal_finance
+    description: "Get the latest news on personal finance"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/business/personal_finance?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_latest
+    description: "Get the latest technology news"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/latest?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_mobile
+    description: "Get the latest news on mobile technology"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/mobile?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_gadgets
+    description: "Get the latest news about gadgets"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/gadgets?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_internet
+    description: "Get the latest news about the internet"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/internet?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_virtual_reality
+    description: "Get the latest news about virtual reality"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/virtual_reality?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_artificial_intelligence
+    description: "Get the latest news about artificial intelligence"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/artificial_intelligence?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_technology_computing
+    description: "Get the latest news about computing"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/technology/computing?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_latest
+    description: "Get the latest news from the world of entertainment"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/latest?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_movies
+    description: "Get the latest news about movies"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/movies?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_music
+    description: "Get the latest news about music"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/music?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_tv
+    description: "Get the latest news about TV shows and series"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/tv?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_books
+    description: "Get the latest news about books and literature"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/books?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_arts_and_design
+    description: "Get the latest news about arts and design"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/arts_and_design?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_entertainment_celebrities
+    description: "Get the latest news about celebrities"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/entertainment/celebrities?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_sports_latest
+    description: "Get the latest news from the world of sports"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/sports/latest?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
+  - name: get_sports_nfl
+    description: "Get the latest news from the NFL"
+    args:
+      - name: "lang_reg"
+        description: "Language and region. Check the list of supported formats. Endpoint: /get_language_regions"
+        required: "False"
+        default: "en-us"
+
+    requestTemplate:
+      url: https://google-news-yahoo-news.p.rapidapi.com/api/v1/news/g/sports/nfl?lang_reg={{args.lang_reg}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "google-news-yahoo-news.p.rapidapi.com"
