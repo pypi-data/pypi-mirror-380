@@ -1,0 +1,12 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rotas_brasil_python_sdk-1.0.0.dist-info/licenses/LICENSE,sha256=YZjQnFjzXGFa0D3iCQkNDwGBNuTGJREkRmItGX1B3YM,122
+rotasbrasil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rotasbrasil/api.py,sha256=NVT9MXQiTRyYgdQ1sZV1i94rB_0Xf1u8Q2cP9WNHrzs,317
+rotasbrasil/apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rotasbrasil/apis/rotas.py,sha256=Nz-zEYz3wafm_kqK-ErTO5UVi5aB4PQ_ksY8fxE6kNU,1194
+rotasbrasil/dtos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rotasbrasil/dtos/rota.py,sha256=tPv9SKwbmnOngaWcE8-LACCBtKpqBbx8p6US0Ks7aAc,252
+rotas_brasil_python_sdk-1.0.0.dist-info/METADATA,sha256=AEJMDvEgu_gZIWd-1EWoS20SLq9S2OzjKOwXrSyGO0w,774
+rotas_brasil_python_sdk-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+rotas_brasil_python_sdk-1.0.0.dist-info/top_level.txt,sha256=xgQZdjUJRZO6nmKr0DWuWfLrTKZ51WlYbcT1ZbzGufI,21
+rotas_brasil_python_sdk-1.0.0.dist-info/RECORD,,
