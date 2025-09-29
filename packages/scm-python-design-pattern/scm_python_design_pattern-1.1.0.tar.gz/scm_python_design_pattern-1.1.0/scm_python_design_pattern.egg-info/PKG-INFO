@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: scm-python-design-pattern
+Version: 1.1.0
+Summary: An design pattern Python project with pytest and src layout
+Author-email: "Shao,ShunZhong" <tempestwin@163.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+
+# scm-python-design-pattern

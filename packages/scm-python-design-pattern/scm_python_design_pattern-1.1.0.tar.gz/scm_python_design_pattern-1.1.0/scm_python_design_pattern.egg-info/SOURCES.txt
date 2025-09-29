@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+scm_python_design_pattern/__init__.py
+scm_python_design_pattern.egg-info/PKG-INFO
+scm_python_design_pattern.egg-info/SOURCES.txt
+scm_python_design_pattern.egg-info/dependency_links.txt
+scm_python_design_pattern.egg-info/requires.txt
+scm_python_design_pattern.egg-info/top_level.txt
+scm_python_design_pattern/lib/__init__.py
+scm_python_design_pattern/lib/design_pattern.py
+scm_python_design_pattern/lib/main.py
+scm_python_design_pattern/tapps/code/designPattern.py
+tests/test_main.py
