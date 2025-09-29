@@ -1,0 +1,1 @@
+{"layers": [{"id": "nir", "type": "single", "band": "nir"}, {"id": "red_green_blue", "type": "rgb", "red": "red", "green": "green", "blue": "blue"}]}

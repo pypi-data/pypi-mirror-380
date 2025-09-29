@@ -1,0 +1,77 @@
+{
+    "nodes": {
+        "nf9ea45_541206": {
+            "x": 760,
+            "y": 200,
+            "node_type": "eo-explorer:geojson_input",
+            "metadata": {
+                "name": "Boundary",
+                "description": "Define a boundary",
+                "rotation": 0
+            }
+        },
+        "nfa0c5f_06b3ff": {
+            "x": 1280,
+            "y": 300,
+            "node_type": "eo-explorer:create_timeseries",
+            "metadata": {
+                "name": "Create Timeseries",
+                "description": "Create a timeseries",
+                "rotation": 0
+            }
+        },
+        "n02a773_132786": {
+            "x": 1040,
+            "y": 460,
+            "node_type": "eo-explorer:calculate_ndvi",
+            "metadata": {
+                "name": "Calculate NDVI",
+                "description": "Calculate NDVI",
+                "rotation": 0
+            }
+        },
+        "n2ddf54_d81798": {
+            "x": 1580,
+            "y": 300,
+            "node_type": "eo-explorer:timeseries_display",
+            "metadata": {
+                "name": "Plot Timeseries",
+                "description": "Plot a timeseries",
+                "rotation": 0
+            }
+        },
+        "n728839_ac3172": {
+            "x": 760,
+            "y": 460,
+            "node_type": "eo-explorer:load_collection",
+            "metadata": {
+                "name": "Load Collection",
+                "description": "Load a collection from disk",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "lfa1336_f482bd": {
+            "from_port": "nf9ea45_541206:geojson_out",
+            "to_port": "nfa0c5f_06b3ff:geojson_in",
+            "link_type": "eo-explorer:geojson"
+        },
+        "l02df47_93deb2": {
+            "from_port": "n02a773_132786:datacube_out",
+            "to_port": "nfa0c5f_06b3ff:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "l2de905_b42e69": {
+            "from_port": "nfa0c5f_06b3ff:timeseries_out",
+            "to_port": "n2ddf54_d81798:timeseries_in",
+            "link_type": "eo-explorer:timeseries"
+        },
+        "l79c48c_99d512": {
+            "from_port": "n728839_ac3172:datacube_out",
+            "to_port": "n02a773_132786:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        }
+    },
+    "metadata": {}
+}

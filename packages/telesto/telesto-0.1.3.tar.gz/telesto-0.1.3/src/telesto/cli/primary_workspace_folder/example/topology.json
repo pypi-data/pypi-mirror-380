@@ -1,0 +1,102 @@
+{
+    "nodes": {
+        "n6ccd1b_0ccd73": {
+            "x": 180,
+            "y": 280,
+            "node_type": "textgraph:text_input_node",
+            "metadata": {
+                "name": "Pride and Prejudice",
+                "description": "{{text_input_description}}",
+                "rotation": 0
+            }
+        },
+        "n6cdf47_ef65e2": {
+            "x": 480,
+            "y": 280,
+            "node_type": "textgraph:word_frequency_node",
+            "metadata": {
+                "name": "{{word_frequency}}",
+                "description": "{{word_frequency_description}}",
+                "rotation": 0
+            }
+        },
+        "n6cff07_982e5a": {
+            "x": 960,
+            "y": 360,
+            "node_type": "textgraph:table_display_node",
+            "metadata": {
+                "name": "{{table_display}}",
+                "description": "{{table_display_description}}",
+                "rotation": 0
+            }
+        },
+        "n791030_fb191e": {
+            "x": 480,
+            "y": 420,
+            "node_type": "textgraph:word_frequency_node",
+            "metadata": {
+                "name": "{{word_frequency}}",
+                "description": "{{word_frequency_description}}",
+                "rotation": 0
+            }
+        },
+        "n793663_cc3dad": {
+            "x": 180,
+            "y": 420,
+            "node_type": "textgraph:text_input_node",
+            "metadata": {
+                "name": "Emma",
+                "description": "{{text_input_description}}",
+                "rotation": 0
+            }
+        },
+        "n797745_fd1065": {
+            "x": 720,
+            "y": 360,
+            "node_type": "textgraph:merge_frequencies_node",
+            "metadata": {
+                "name": "{{merge_frequencies}}",
+                "description": "{{merge_frequencies_description}}",
+                "rotation": 0
+            }
+        },
+        "n2c8a0b_231184": {
+            "x": 280,
+            "y": 160,
+            "node_type": "textgraph:text_input_node",
+            "metadata": {
+                "name": "Pride and Prejudice",
+                "description": "{{text_input_description}}",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "l79535e_a2437a": {
+            "from_port": "n793663_cc3dad:data_out",
+            "to_port": "n791030_fb191e:data_in",
+            "link_type": "textgraph:text"
+        },
+        "l79883e_a0022a": {
+            "from_port": "n6cdf47_ef65e2:data_out",
+            "to_port": "n797745_fd1065:data_in1",
+            "link_type": "textgraph:frequency_table"
+        },
+        "l799095_a55702": {
+            "from_port": "n791030_fb191e:data_out",
+            "to_port": "n797745_fd1065:data_in0",
+            "link_type": "textgraph:frequency_table"
+        },
+        "l79c765_09f4af": {
+            "from_port": "n797745_fd1065:data_out",
+            "to_port": "n6cff07_982e5a:data_in",
+            "link_type": "textgraph:frequency_table"
+        },
+        "l2cd33f_4e0b84": {
+            "from_port": "n2c8a0b_231184:data_out",
+            "to_port": "n6cdf47_ef65e2:data_in",
+            "link_type": "textgraph:text"
+        }
+    },
+    "metadata": {}
+}

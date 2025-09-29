@@ -1,0 +1,16 @@
+{
+    "nodes": {
+        "ncf9255_3eaeb3": {
+            "x": 640,
+            "y": 380,
+            "node_type": "eo-explorer:map_display",
+            "metadata": {
+                "name": "Map Display",
+                "description": "Display Imagery on a map",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {},
+    "metadata": {}
+}

@@ -1,0 +1,16 @@
+{
+    "bands": {
+        "red": {
+            "name": "Red"
+        },
+        "green": {
+            "name": "Green"
+        },
+        "blue": {
+            "name": "Blue"
+        },
+        "scl": {
+            "name": "Scene Class"
+        }
+    }
+}
