@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+scm_python_idea.egg-info/PKG-INFO
+scm_python_idea.egg-info/SOURCES.txt
+scm_python_idea.egg-info/dependency_links.txt
+scm_python_idea.egg-info/requires.txt
+scm_python_idea.egg-info/top_level.txt
+scm_python_idea/lib/idea.py
+scm_python_idea/tapps/idea/common.py
+scm_python_idea/tapps/idea/module.py
+scm_python_idea/tapps/idea/settings_color.py
+scm_python_idea/tapps/idea/settings_keymaps.py
+scm_python_idea/tapps/idea/workspace_maven.py
