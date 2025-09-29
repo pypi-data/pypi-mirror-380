@@ -1,0 +1,31 @@
+[project]
+name = "pyquickwebgui"
+version = "0.1.1"
+description = "Create desktop applications with Flask/Django/FastAPI/web.py!"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+
+    "psutil>=6.0",
+
+    #"pyrsistent==0.20.0",
+
+    #文档
+    "sphinx==7.1.2",
+
+    #web框架
+    #pywebview==5.3.2
+    # fastapi框架
+    #fastapi==0.109.0
+    # flask 框架
+    #"flask>=0.109.0",
+    # web.py 框架
+    #"web.py>=0.62",
+
+    #服务器
+    "uvicorn>=0.33.0",
+    "waitress>=3.0.0"
+
+    #系统托盘
+    #"pystray>=0.19.5"
+]
