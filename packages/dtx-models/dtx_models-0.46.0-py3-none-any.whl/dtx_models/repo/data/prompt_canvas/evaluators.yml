@@ -1,0 +1,190 @@
+# ===================================================================
+# Scorer Definitions Library
+#
+# This file contains a consolidated list of scorer configurations that 
+# can be loaded by the system. Each entry is a blueprint for a scorer.
+# ===================================================================
+
+# ---
+# A. Simple Static Scorers (No LLM Dependency)
+# ---
+
+- name: "substring-scorer"
+  display_name: "Substring Scorer"
+  description: "A scorer that checks if a given substring is present in the text. It's useful for detecting specific phrases, keywords, or patterns."
+  scorer_type: "true_false"
+  tags: ["string-matching", "utility", "classification"]
+  type: "static"
+  class_name: "SubStringScorer"
+  parameters:
+    - substring
+  parameters_schema:
+    - name: "substring"
+      description: "The substring to search for in the text."
+      type: "string"
+      required: true
+    - name: "category"
+      description: "An optional category for the substring match."
+      type: "string"
+      required: false
+      default: ""
+
+- name: "azure-content-filter-scorer"
+  display_name: "Azure Content Filter Scorer"
+  description: "A scorer that uses the Azure Content Safety API to detect harmful content in various categories."
+  scorer_type: "true_false"
+  tags: ["azure", "content-safety", "harm-detection", "api"]
+  type: "static"
+  class_name: "AzureContentFilterScorer"
+  parameters:
+    - harm_categories
+  parameters_schema:
+    - name: "api_key"
+      description: "The API key for the Azure Content Safety service. Can be omitted if the environment variable AZURE_CONTENT_SAFETY_KEY is set."
+      type: "string"
+      required: false
+    - name: "endpoint"
+      description: "The endpoint URL for the Azure Content Safety service. Can be omitted if the environment variable AZURE_CONTENT_SAFETY_ENDPOINT is set."
+      type: "url"
+      required: false
+    - name: "harm_categories"
+      description: "A list of harm categories (e.g., 'Hate', 'SelfHarm') to check for."
+      type: "array"
+      required: true
+
+- name: "bert-score-scorer"
+  display_name: "BERTScore Scorer"
+  description: "Calculates the BERTScore between a candidate text and a reference text, which measures semantic similarity."
+  scorer_type: "float_scale"
+  tags: ["nlp", "semantic-similarity", "bert"]
+  type: "static"
+  class_name: "BERTScoreScorer"
+  parameters: []
+  parameters_schema:
+    - name: "bertscore_model"
+      description: "The name of the BERT model to use for scoring."
+      type: "string"
+      required: false
+      default: "microsoft/deberta-xlarge-mnli"
+    - name: "language"
+      description: "The language of the text, used to select the appropriate model."
+      type: "string"
+      required: false
+      default: "en"
+
+# ---
+# B. LLM-Static Scorers (Require an LLM)
+# ---
+
+- name: "self-ask-scale-scorer"
+  display_name: "Self-Ask Scale Scorer"
+  description: "An LLM-based scorer that evaluates text against a customizable numeric scale (e.g., 1-5) and normalizes the result to a float between 0.0 and 1.0."
+  scorer_type: "float_scale"
+  tags: ["llm-based", "self-ask", "float_scale", "customizable"]
+  type: "llm-static"
+  class_name: "SelfAskScaleScorer"
+  chat_target: "openai/gpt-4o"
+  parameters: []
+  parameters_schema:
+    - name: "scale_arguments_path"
+      description: "URL to the YAML file that defines the scale. If not provided, the scorer defaults to the built-in 'Tree of Attacks' scale."
+      type: "url"
+      required: false
+    - name: "system_prompt_path"
+      description: "URL to the YAML file that contains the system prompt template. If not provided, the scorer defaults to the built-in 'General System Prompt'."
+      type: "url"
+      required: false
+
+- name: "self-ask-true-false-scorer"
+  display_name: "Self-Ask True/False Scorer"
+  description: "An LLM-based scorer that answers a specific true/false question about a piece of text."
+  scorer_type: "true_false"
+  tags: ["llm-based", "self-ask", "classification"]
+  type: "llm-static"
+  class_name: "SelfAskTrueFalseScorer"
+  chat_target: "openai/gpt-4o"
+  parameters: []
+  parameters_schema:
+    - name: "true_false_question_path"
+      description: "URL to a YAML file containing the question definition. Provide either this or `true_false_question`."
+      type: "url"
+      required: false
+    - name: "true_false_question"
+      description: "A TrueFalseQuestion object definition. Provide either this or `true_false_question_path`."
+      type: "dict"
+      required: false
+
+- name: "chat-message-violence-scorer"
+  display_name: "Chat Message Violence Scorer"
+  description: "An LLM-based scorer specifically trained to detect whether a chat message pertains to violence."
+  scorer_type: "true_false"
+  tags: ["llm-based", "content-safety", "violence"]
+  type: "llm-static"
+  class_name: "ChatMessageViolenceScorer"
+  chat_target: "openai/gpt-4o"
+  parameters: []
+  parameters_schema: []
+
+- name: "markdown-injection-scorer"
+  display_name: "Markdown Injection Scorer"
+  description: "An LLM-based scorer that checks if a model's response contains rendered markdown, indicating a potential injection vulnerability."
+  scorer_type: "true_false"
+  tags: ["llm-based", "security", "prompt_injection", "markdown"]
+  type: "llm-static"
+  class_name: "MarkdownInjectionScorer"
+  chat_target: "openai/gpt-4o"
+  parameters: []
+  parameters_schema: []
+
+- name: "self-ask-category-scorer"
+  display_name: "Self-Ask Category Scorer"
+  description: "An LLM-based scorer that categorizes a response into one of the provided categories."
+  scorer_type: "true_false"
+  tags: ["llm-based", "self-ask", "classification"]
+  type: "llm-static"
+  class_name: "SelfAskCategoryScorer"
+  chat_target: "openai/gpt-4o"
+  parameters:
+    - categories
+  parameters_schema:
+    - name: "categories"
+      description: "A list of strings representing the possible categories for classification."
+      type: "array"
+      required: true
+    - name: "category_type"
+      description: "A string describing the type of categories (e.g., 'harm categories')."
+      type: "string"
+      required: false
+      default: "categories"
+
+- name: "self-ask-gandalf-scorer"
+  display_name: "Self-Ask GANDALF Scorer"
+  description: "An LLM-based scorer that uses the GANDALF prompt injection heuristic to determine if a prompt was successfully injected."
+  scorer_type: "true_false"
+  tags: ["llm-based", "self-ask", "security", "prompt_injection"]
+  type: "llm-static"
+  class_name: "SelfAskGANDALFScorer"
+  chat_target: "openai/gpt-4o"
+  parameters: []
+  parameters_schema: []
+
+- name: "self-ask-likert-scorer"
+  display_name: "Self-Ask Likert Scale Scorer"
+  description: "An LLM-based scorer that evaluates text against a multi-point Likert scale (e.g., 1-5)."
+  scorer_type: "float_scale"
+  tags: ["llm-based", "self-ask", "likert-scale"]
+  type: "llm-static"
+  class_name: "SelfAskLikertScorer"
+  chat_target: "openai/gpt-4o"
+  parameters:
+    - likert_scale
+  parameters_schema:
+    - name: "likert_scale"
+      description: "The Likert scale definition to use for scoring."
+      type: "string"
+      required: true
+    - name: "max_review_cycles"
+      description: "The maximum number of times the LLM can review its own score for consistency."
+      type: "integer"
+      required: false
+      default: 1
