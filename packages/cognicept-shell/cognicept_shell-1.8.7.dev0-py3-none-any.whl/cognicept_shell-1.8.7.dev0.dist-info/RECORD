@@ -1,0 +1,16 @@
+cognicept_shell-1.8.7.dev0.dist-info/licenses/LICENSE.txt,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+cogniceptshell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cogniceptshell/agent_life_cycle.py,sha256=uoCzLzqHjotftsDGbuaPpelN_A0M--R5yvVQAY8nocs,64152
+cogniceptshell/common.py,sha256=Uw8jR0GBaZnAsCacM9Ssg1Dz_uD6p8aGsYsZ9f7J3j4,6786
+cogniceptshell/configuration.py,sha256=i5C1_KlOameIZjSQnr8jeN5KO9zW8dcsl9ym-JQNtMU,35442
+cogniceptshell/interface.py,sha256=SOJ9OTAF1pm7COnDyXWaEa5iS0A_2hDUgbZQQUkA4uI,9963
+cogniceptshell/ota_updater.py,sha256=FL7wxHf5QxJmVQwa9N4LIPjYttl4fd_xUuGyEuMLNfU,10774
+cogniceptshell/pusher.py,sha256=gIaNJZ-nU-Wac9VW3XzeLEwK1JPDRRKs6-9RPBVN9Q8,11525
+cogniceptshell/robot_actions.py,sha256=Iz7wyFBBAeZpLzOZKKTPw83dNUln18P2UKguVpsb7a0,22303
+cogniceptshell/robot_api_registrar.py,sha256=KKqMpAo_iYcbyOQejEnOmsF0SAXXQfdG_KIaTy8WEfc,16444
+cogniceptshell/rosbag_record.py,sha256=BOdsFI7TxHTVGObBv1yVKX1MN3xxHscPksdqjWVMtlY,19344
+cognicept_shell-1.8.7.dev0.dist-info/METADATA,sha256=wc9mF_b1rjMiOaotOt3SE8DIu6gsJCE07vvkfFt1O7A,34548
+cognicept_shell-1.8.7.dev0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cognicept_shell-1.8.7.dev0.dist-info/entry_points.txt,sha256=YoMYduI9X7KGauMPP2cdApd69r878NzPBpqx7jt_-l0,60
+cognicept_shell-1.8.7.dev0.dist-info/top_level.txt,sha256=19CNsvdPdJQc60yOGNkAQt2ZhKsBRn0iO5cwAoNeJ4M,15
+cognicept_shell-1.8.7.dev0.dist-info/RECORD,,
