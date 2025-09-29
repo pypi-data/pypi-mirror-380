@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "daffodil"
+version = "0.5.10"
+authors = [
+    {name = "Ray Lutz", email = "raylutz@cognisys.com"},
+]
+description = "Daffodil provides lightweight and fast 2-D dataframes"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.6"
+
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "xlsx2csv>=0.8.2",
+    "Markdown>=3.4.1",
+]
+
+[project.optional-dependencies]
+numpy = ['numpy']
+
+[project.urls]
+Homepage = "https://github.com/raylutz/daffodil"
+Repository = "https://github.com/raylutz/daffodil"
+Issues = "https://github.com/raylutz/daffodil/issues"
+Changelog = "https://github.com/raylutz/daffodil/blob/main/CHANGELOG.md"
+Roadmap = "https://github.com/raylutz/daffodil/blob/main/ROADMAP.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false 
+
+[tool.setuptools]
+license-files = []
