@@ -1,0 +1,8 @@
+scm_python_jira/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scm_python_jira/lib/jira_vilink.py,sha256=OCOTFmFE8QiWzRxD8DNG1ropQMgJKgr2EDTAZGT1z5M,3411
+scm_python_jira/tapps/vilink/check_git_commit.py,sha256=yb_sI2-7w2nSTVIQWpatZ79nWiGtydQwIkPO88RaMs4,30204
+scm_python_jira/tutils/tjira_server_api.py,sha256=laE-4ek5EFWNsOc8YvtZWeO2cRPOLw89tNRxFFgckhc,11578
+scm_python_design_pattern-0.1.0.dist-info/METADATA,sha256=YL7fSGEPRFjVRi8jVxR1mC9i_KvXRUfrQKqbK_VcFYM,496
+scm_python_design_pattern-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scm_python_design_pattern-0.1.0.dist-info/top_level.txt,sha256=rg5I2IlHx9Hfm7a-yvwNmwMEHsbiBHuCdgoBJhU1WOo,16
+scm_python_design_pattern-0.1.0.dist-info/RECORD,,
