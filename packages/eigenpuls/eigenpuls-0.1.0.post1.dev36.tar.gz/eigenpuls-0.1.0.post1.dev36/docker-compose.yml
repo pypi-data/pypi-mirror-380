@@ -1,0 +1,16 @@
+services:
+  eigenpuls:
+    build:
+      context: .
+    image: eigenpuls:dev
+    ports:
+      - "4343:4343"
+    volumes:
+      - ./:/app
+      - ./eigenpuls.yaml:/app/eigenpuls.yaml
+
+
+
+
+
+
