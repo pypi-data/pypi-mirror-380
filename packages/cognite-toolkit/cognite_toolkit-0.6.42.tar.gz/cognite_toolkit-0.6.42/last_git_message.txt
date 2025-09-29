@@ -1,0 +1,29 @@
+[CDF-25835] 🗄 Update Upload command (#2018)
+
+# Description
+
+Toolkit has a `StorageIO` interface for uploading and downloading data.
+This interface currently has two upload methods, `upload_items` and
+`upload_items_force`. This PR replaces the use of `upload_items` int the
+`Upload` command as well as implementing this for `AssetIO` and `RawIO`.
+This is the first of two steps to remove `upload_items` such that there
+will be only one upload method.
+
+The difference between `upload_items` and `upload_items_force` is that
+the force version uses the `HTTPClient` that is more robust against
+failing items and gives responses for each item.
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Improved
+
+- [alpha] The `cdf upload raw` is more robust against invalid rows.
+
+## templates
+
+No changes.
