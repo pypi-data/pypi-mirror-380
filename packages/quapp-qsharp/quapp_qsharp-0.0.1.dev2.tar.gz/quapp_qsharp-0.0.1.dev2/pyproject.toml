@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quapp-qsharp"
+version = "0.0.1.dev2"
+description = "Quapp qsharp library supporting Quapp Platform for Quantum Computing"
+readme = "README.md"
+authors = [{ name = "CITYNOW Co. Ltd. ", email = "corp@citynow.vn" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["quapp", "quapp-pennylane", "pennylane", "quantum"]
+dependencies = [
+    "quapp-common==0.0.11.dev8",
+    "qsharp==1.20.0",
+    "azure-quantum==3.3.0"
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://citynow.asia/"
