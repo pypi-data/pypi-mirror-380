@@ -1,0 +1,42 @@
+[project]
+name = "lxmfy-translate-bot"
+version = "1.2.1"
+description = "translate-bot for lxmf"
+authors = [
+    {name = "Ivan"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "lxmfy (>=1.0.1,<2.0.0)",
+    "argostranslate (>=1.9.6,<2.0.0)"
+]
+
+[project.scripts]
+translate-bot = "lxmfy_translate_bot.bot:main"
+
+[tool.poetry]
+packages = [
+    { include = "lxmfy_translate_bot" }
+]
+
+[build-system]
+requires = [
+    "poetry-core>=2.0.0,<3.0.0",
+    "setuptools>=42",
+    "wheel",
+    "cmake>=3.5",
+    "ninja"
+]
+build-backend = "poetry.core.masonry.api"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine"
+]
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.13.2,<0.14.0)"
+]
