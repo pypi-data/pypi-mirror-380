@@ -1,0 +1,2 @@
+[console_scripts]
+fastmcp-email-server = fastmcp_email_server:main
