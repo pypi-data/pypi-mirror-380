@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: hive-langchain
+Version: 0.1.0
+Summary: LangChain for Hive
+Author-email: Gary Benson <gary@gbenson.net>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/gbenson/hive/tree/main/libs/langchain
+Project-URL: Source, https://github.com/gbenson/hive
+Description-Content-Type: text/markdown
+Requires-Dist: hive-common>=0.3.6
+Requires-Dist: langchain
+Provides-Extra: ollama
+Requires-Dist: hive-common[ollama]; extra == "ollama"
+Requires-Dist: langchain-ollama; extra == "ollama"
+
+[![version badge]](https://pypi.org/project/hive-langchain/)
+
+[version badge]: https://img.shields.io/pypi/v/hive-langchain?color=limegreen
+
+# hive-langchain
+
+🦜🔗 LangChain for Hive.
+
+## Installation
+
+### With PIP
+
+```sh
+pip install hive-langchain
+```
+
+### From source
+
+```sh
+git clone https://github.com/gbenson/hive.git
+cd hive/libs/langchain
+make setup
+. .venv/bin/activate
+make check
+```

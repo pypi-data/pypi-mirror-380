@@ -1,0 +1,6 @@
+hive-common>=0.3.6
+langchain
+
+[ollama]
+hive-common[ollama]
+langchain-ollama
