@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: sphinx-lua-ls
+Version: 3.3.0
+Summary: Automatic documentation generation via EmmyLua/LuaLs
+Author-email: Tamika Nomara <taminomara@gmail.com>
+License-Expression: MIT
+Project-URL: Documentation, https://taminomara.github.io/sphinx-lua-ls/
+Project-URL: Issues, https://github.com/taminomara/sphinx-lua-ls/issues
+Project-URL: Source, https://github.com/taminomara/sphinx-lua-ls/
+Project-URL: Changelog, https://github.com/taminomara/sphinx-lua-ls/blob/main/CHANGELOG.md
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Domain
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sphinx<9.0,>=8.0
+Requires-Dist: PyGithub<3.0,>=1.59
+Requires-Dist: requests~=2.31
+Dynamic: license-file
+
+# Sphinx plugin for Lua and Lua Language Server
+
+Document Lua projects using Lua Language Server's output. This plugin features:
+
+- new domain for Lua language,
+- directives to automatically generate documentation based on source code.
+
+## Resources
+
+- [Documentation](https://taminomara.github.io/sphinx-lua-ls/)
+- [Installation](https://taminomara.github.io/sphinx-lua-ls/installation.html)
+- [Quickstart](https://taminomara.github.io/sphinx-lua-ls/quickstart.html)
+- [Example output](https://taminomara.github.io/sphinx-lua-ls/example.html)
+
+## Requirements
+
+- python >= 3.12
+- sphinx >= 8.0
+
+## Installation
+
+```sh
+pip install sphinx-lua-ls
+```
