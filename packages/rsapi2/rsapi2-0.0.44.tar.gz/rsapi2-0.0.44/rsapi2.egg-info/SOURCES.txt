@@ -1,0 +1,12 @@
+README.md
+setup.py
+rsapi/__init__.py
+rsapi/osrs.py
+rsapi/test_osrs.py
+rsapi/util.py
+rsapi/wiki.py
+rsapi2.egg-info/PKG-INFO
+rsapi2.egg-info/SOURCES.txt
+rsapi2.egg-info/dependency_links.txt
+rsapi2.egg-info/requires.txt
+rsapi2.egg-info/top_level.txt
