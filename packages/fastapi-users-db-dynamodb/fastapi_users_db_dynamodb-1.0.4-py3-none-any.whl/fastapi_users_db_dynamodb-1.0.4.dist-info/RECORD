@@ -1,0 +1,11 @@
+fastapi_users_db_dynamodb/__init__.py,sha256=do-AtUYIrNjDY2fhFOeZ3ptOK7N1fZZmCInshH16hWM,19783
+fastapi_users_db_dynamodb/_generics.py,sha256=wuyc-BYowO0KxgT8Zf9FXgKD0djXvyAdW9-jy84LNf4,2091
+fastapi_users_db_dynamodb/access_token.py,sha256=5WkmB_r8wmisgAO4EluLoPdwIR610SFV66mUc7x7dNo,8528
+fastapi_users_db_dynamodb/attributes.py,sha256=ZcrJOmzIQY403ID7D98z3bygV5rMTP3jvcNZDOEln9U,3459
+fastapi_users_db_dynamodb/config.py,sha256=9AypIsVWgGd-CSlVAiIjYwthmK_5r76w7UpPPdxpq4o,3162
+fastapi_users_db_dynamodb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_users_db_dynamodb/tables.py,sha256=vpoL7qsBN2_-prycXBxu8igNtwzP2GFsZYmt1_cOJmI,2174
+fastapi_users_db_dynamodb-1.0.4.dist-info/METADATA,sha256=4P_DY5dQIScAymv48Nf9C69US-CnSsQYreEAeMTe-eQ,2939
+fastapi_users_db_dynamodb-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_users_db_dynamodb-1.0.4.dist-info/licenses/LICENSE,sha256=7VlvkqeHQ5AHU6rMU-AJchSn1rJBiUB3tUI1PyXAFaE,10762
+fastapi_users_db_dynamodb-1.0.4.dist-info/RECORD,,
