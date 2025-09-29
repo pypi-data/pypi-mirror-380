@@ -1,0 +1,211 @@
+Metadata-Version: 2.4
+Name: walide
+Version: 0.1.0
+Summary: A differential evolution optimization toolbox
+Author-email: Wally Hao <1276672206@qq.com>
+Project-URL: Homepage, https://github.com/waliwuao/walide
+Project-URL: Repository, https://github.com/waliwuao/walide
+Project-URL: Issues, https://github.com/waliwuao/walide/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: numba>=0.55.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: mypy>=0.990; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+
+# Walide: 差分进化算法库
+
+Walide 是一个轻量级的差分进化（Differential Evolution, DE）算法实现库，用于解决连续优化问题。该库采用 Numba 加速计算，提供了清晰的模块化设计，方便使用和扩展。
+
+## 安装说明
+
+目前可通过源码安装：
+```bash
+# 克隆仓库
+git clone <仓库地址>
+cd walide
+
+# 安装依赖
+pip install numpy numba
+
+# 安装库
+pip install .
+```
+
+## 核心功能
+
+Walide 实现了标准差分进化算法的完整流程，包括：
+- 初始种群生成
+- 变异操作
+- 交叉操作
+- 选择操作
+- 适应度评估
+
+算法参数可灵活配置，支持自定义适应度函数，适用于各类连续空间优化问题。
+
+## 快速开始
+
+以下是一个使用 Walide 解决Sphere函数优化问题的示例：
+
+```python
+import numpy as np
+from walide.de import DE
+
+# 定义适应度函数（Sphere函数）
+def sphere(x):
+    return np.sum(x**2)
+
+# 配置并创建DE优化器
+de = DE(
+    func=sphere,          # 适应度函数
+    dim=30,               # 问题维度
+    popsize=50,           # 种群大小
+    lb=-100,              # 下界
+    up=100,               # 上界
+    f1=0.9,               # 变异因子1
+    f2=0.1,               # 变异因子2
+    cr=0.9,               # 交叉概率
+    maxiter=1000,         # 最大迭代次数
+    log=True              # 是否打印日志
+)
+
+# 执行优化
+best_position, best_fitness = de.optimize()
+
+# 输出结果
+print(f"最优位置: {best_position}")
+print(f"最优适应度: {best_fitness}")
+```
+
+## 详细使用说明
+
+### 1. 初始化优化器
+
+`DE` 类是使用的核心，初始化参数说明：
+
+| 参数 | 类型 | 描述 | 默认值 |
+|------|------|------|--------|
+| func | 函数 | 适应度函数，输入为个体向量，返回标量适应度值 | 必需 |
+| dim | 整数 | 问题维度 | 必需 |
+| popsize | 整数 | 种群大小 | 50 |
+| lb | 数值/数组 | 变量下界，单个值表示所有维度同一下界 | 0 |
+| up | 数值/数组 | 变量上界，单个值表示所有维度同一上界 | 1 |
+| f1 | 浮点数 | 变异因子1 | 0.9 |
+| f2 | 浮点数 | 变异因子2 | 0.1 |
+| cr | 浮点数 | 交叉概率 (0-1) | 0.9 |
+| maxiter | 整数 | 最大迭代次数 | 100 |
+| log | 布尔值 | 是否打印迭代日志 | False |
+| dtype | numpy类型 | 数值类型 | np.float64 |
+
+### 2. 执行优化
+
+调用 `optimize()` 方法启动优化过程：
+```python
+best_position, best_fitness = de.optimize()
+```
+
+- `best_position`: 找到的最优解向量
+- `best_fitness`: 最优解对应的适应度值
+
+### 3. 重置参数（可选）
+
+如果需要调整参数并重新优化，可以使用 `reset()` 方法：
+```python
+# 调整参数并重置
+de.reset(maxiter=2000, cr=0.8)
+# 再次优化
+new_best_pos, new_best_fit = de.optimize()
+```
+
+`reset()` 支持调整所有初始化时的参数，并且会智能处理种群的更新。
+
+## 算法原理
+
+差分进化算法是一种基于群体的随机优化方法，主要步骤包括：
+
+1. **初始化**：随机生成初始种群
+2. **变异**：通过差分策略生成变异向量
+   ```
+   变异向量 = r1 + f1*(r2 - r3) + f2*(best - r1)
+   其中r1, r2, r3是随机选择的不同个体，best是当前最优个体
+   ```
+3. **交叉**：将目标向量与变异向量进行交叉操作生成试验向量
+4. **选择**：比较试验向量和目标向量的适应度，保留较优者
+
+## 模块说明
+
+Walide 采用模块化设计，各组件功能清晰：
+
+- `generator.py`: 种群生成模块，负责创建初始种群
+- `mutate.py`: 变异模块，实现变异操作
+- `crossover.py`: 交叉模块，实现交叉操作并处理边界约束
+- `selection.py`: 选择模块，基于适应度选择下一代个体
+- `fitness.py`: 适应度评估模块，管理适应度函数
+- `de.py`: 算法主类，协调各模块完成优化过程
+
+所有计算密集型函数均使用 Numba 进行了即时编译（JIT），以提高运行效率。
+
+## 注意事项
+
+1. 适应度函数应返回标量值，且越小表示解越优（最小化问题）
+2. 对于最大化问题，可在适应度函数中返回负值
+3. 边界参数 `lb` 和 `up` 可以是单个值（所有维度相同）或与维度长度相同的数组（各维度不同）
+4. 算法性能受参数 `f1`, `f2` 和 `cr` 影响，可根据具体问题调整
+
+## 示例：多维度不同边界的优化
+
+```python
+import numpy as np
+from walide.de import DE
+
+# 定义适应度函数
+def ackley(x):
+    a = 20
+    b = 0.2
+    c = 2 * np.pi
+    sum1 = np.sum(x**2)
+    sum2 = np.sum(np.cos(c * x))
+    n = len(x)
+    term1 = -a * np.exp(-b * np.sqrt(sum1 / n))
+    term2 = -np.exp(sum2 / n)
+    return term1 + term2 + a + np.exp(1)
+
+# 定义各维度不同的边界
+lb = [-32.768] * 10  # 10维问题，所有维度下界都是-32.768
+up = [32.768] * 10   # 10维问题，所有维度上界都是32.768
+
+# 创建优化器
+de = DE(
+    func=ackley,
+    dim=10,
+    popsize=100,
+    lb=lb,
+    up=up,
+    f1=0.8,
+    f2=0.2,
+    cr=0.9,
+    maxiter=2000,
+    log=True
+)
+
+# 优化
+best_pos, best_fit = de.optimize()
+print(f"最优适应度: {best_fit:.6f}")
+```
+
+## 许可证
+
+[MIT](LICENSE)
