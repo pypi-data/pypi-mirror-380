@@ -1,0 +1,4 @@
+[console_scripts]
+json_to_mcap = kappe.utils.json_to_mcap:main
+kappe = kappe.cli:main
+mcap_to_json = kappe.utils.mcap_to_json:main
