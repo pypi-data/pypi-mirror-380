@@ -1,0 +1,56 @@
+[project]
+name = "llmhive"
+version = "0.1.0"
+description = "Python library for interacting with Large Language Models."
+readme = "README.md"
+authors = [
+    { name = "Lei", email = "caol64@gmail.com" }
+]
+requires-python = ">=3.13"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "pydantic>=2.11.9",
+    "requests>=2.32.5",
+]
+
+[project.optional-dependencies]
+ollama = [
+    "ollama>=0.4.8",
+]
+openai = [
+    "openai>=1.76.0",
+]
+gemini = [
+    "google-genai>=1.15.0",
+]
+cli = [
+    "click>=8.2.0",
+]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/caol64/llm"
+Repository = "https://github.com/caol64/llm"
+Issues = "https://github.com/caol64/llm/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = [
+    "src/llm",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src/llm",
+    "/README.md",
+    "/pyproject.toml",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

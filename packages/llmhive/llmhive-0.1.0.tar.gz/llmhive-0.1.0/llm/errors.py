@@ -1,0 +1,6 @@
+class MissingDependencyError(ImportError):
+    ...
+
+
+class MissingAPIKeyError(ValueError):
+    ...
