@@ -1,0 +1,15 @@
+[project]
+name = "hdd-mcp-time"
+version = "0.1.0"
+description = "its time"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.12.4",
+]
+
+[tool.uv.workspace]
+members = ["venv"]
+
+[project.scripts]
+hdd-mcp-time= "hdd_time_server:main"
