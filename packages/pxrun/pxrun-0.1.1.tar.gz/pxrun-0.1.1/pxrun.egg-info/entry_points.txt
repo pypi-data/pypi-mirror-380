@@ -1,0 +1,2 @@
+[console_scripts]
+pxrun = src.cli.__main__:main
