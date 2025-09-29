@@ -1,0 +1,3 @@
+[console_scripts]
+neuralcache = neuralcache.cli:app
+neuralcache-build-cr = neuralcache.cr.cli:build_cr_main
