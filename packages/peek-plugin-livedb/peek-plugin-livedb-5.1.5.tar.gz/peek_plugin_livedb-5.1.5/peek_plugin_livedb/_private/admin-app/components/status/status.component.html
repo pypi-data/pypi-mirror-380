@@ -1,0 +1,39 @@
+<nz-card class="status-card" *ngIf="statusData$ | async as item">
+    <h3>Raw Value Compiler</h3>
+    <nz-descriptions [nzColumn]="1" nzBordered>
+        <nz-descriptions-item nzTitle="Status">
+            <nz-tag [nzColor]="item?.rawValueQueueStatus ? 'success' : 'error'">
+                {{ item?.rawValueQueueStatus ? "Running" : "Stopped" }}
+            </nz-tag>
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Queue Size">
+            {{ item?.rawValueQueueSize }}
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Total Processed">
+            {{ item?.rawValueProcessedTotal }}
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Last Error">
+            <span class="error-text">{{
+                item?.rawValueLastError || "None"
+            }}</span>
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Last Update">
+            {{ item?.rawValueQueueLastUpdateDate | date: "medium" || "Never" }}
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Queue Table Total">
+            {{ item?.rawValueTableTotal || 0 }}
+        </nz-descriptions-item>
+
+        <nz-descriptions-item nzTitle="Last Table Total Update">
+            {{
+                item?.rawValueQueueLastTableTotalUpdate
+                    | date: "medium" || "Never"
+            }}
+        </nz-descriptions-item>
+    </nz-descriptions>
+</nz-card>
