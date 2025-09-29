@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+pixcompress/__init__.py
+pixcompress/cli.py
+pixcompress/core.py
+pixcompress.egg-info/PKG-INFO
+pixcompress.egg-info/SOURCES.txt
+pixcompress.egg-info/dependency_links.txt
+pixcompress.egg-info/entry_points.txt
+pixcompress.egg-info/requires.txt
+pixcompress.egg-info/top_level.txt
