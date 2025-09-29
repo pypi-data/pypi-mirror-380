@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asset-model-data-storage"
+version = "1.0.0"
+description = "Data storage library for asset model apps"
+authors = [
+    { name = "Manoel Silva" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "boto3",
+    "botocore"
+]
+
+[project.urls]
+Homepage = "https://github.com/ManoelSilva/asset-model-data-storage"
+
+[tool.setuptools.packages.find]
+where = ["asset_model_data_storage"]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
