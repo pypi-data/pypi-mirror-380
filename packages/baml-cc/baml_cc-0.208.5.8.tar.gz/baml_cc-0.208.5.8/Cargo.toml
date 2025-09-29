@@ -1,0 +1,45 @@
+[package]
+name = "baml-claude-code"
+version = "1.0.0"
+edition = "2021"
+description = "BAML Claude Code Provider - Advanced Claude Code integration for BAML"
+authors = ["ViperJuice <your-email@example.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/ViperJuice/baml-cc"
+homepage = "https://github.com/ViperJuice/baml-cc"
+documentation = "https://github.com/ViperJuice/baml-cc#readme"
+keywords = ["baml", "claude", "ai", "llm", "anthropic"]
+categories = ["development-tools", "api-bindings"]
+readme = "README.md"
+
+[features]
+napi = ["dep:napi", "dep:napi-derive"]
+
+[dependencies]
+# Minimal dependencies for Python bindings only
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# NAPI-RS dependencies for TypeScript bindings
+napi = { version = "2", features = ["napi4", "tokio_rt"], optional = true }
+napi-derive = { version = "2", optional = true }
+
+[dev-dependencies]
+tempfile = "3.0"
+tokio-test = "0.4"
+
+[[bin]]
+name = "baml-claude-code"
+path = "src/main.rs"
+
+[lib]
+name = "baml_claude_code"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.napi]
+name = "baml_claude_code"
+triples = ["x86_64-unknown-linux-gnu", "x86_64-apple-darwin", "aarch64-apple-darwin", "x86_64-pc-windows-msvc"]

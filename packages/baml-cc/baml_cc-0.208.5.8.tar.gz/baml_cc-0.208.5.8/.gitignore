@@ -1,0 +1,9 @@
+# Exclude engine directory from source distribution
+engine/
+target/
+.venv/
+venv/
+*.whl
+*.tar.gz
+node_modules/
+dist/

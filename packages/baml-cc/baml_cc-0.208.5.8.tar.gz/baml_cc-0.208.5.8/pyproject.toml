@@ -1,0 +1,72 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0", "cffi>=1.15.0"]
+build-backend = "maturin"
+
+[project]
+name = "baml-cc"
+version = "0.208.5.8"
+description = "BAML Claude Code Provider - Advanced Claude Code integration for BAML"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "ViperJuice", email = "your-email@example.com"},
+]
+keywords = ["baml", "claude", "ai", "llm", "anthropic"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "baml-cc-py>=0.208.5.4",
+    "anthropic>=0.7.0",
+    "pydantic>=2.0.0",
+    "cffi>=1.15.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ViperJuice/baml-cc"
+Repository = "https://github.com/ViperJuice/baml-cc"
+Documentation = "https://github.com/ViperJuice/baml-cc#readme"
+"Bug Tracker" = "https://github.com/ViperJuice/baml-cc/issues"
+
+[tool.maturin]
+python-source = "python"
+module-name = "baml_claude_code"
+metadata-version = "2.1"
+# Exclude large directories from source distribution
+exclude = [
+    "target/**/*",
+    ".venv/**/*",
+    "venv/**/*",
+    "node_modules/**/*",
+    "dist/**/*",
+    "typescript/**/*",
+    "baml_src/**/*",
+    "docs/**/*",
+    "examples/**/*",
+    "test_*.py",
+    "fix-wheel-metadata.py",
+    "uv.lock"
+]
+
+

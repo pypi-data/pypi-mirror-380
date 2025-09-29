@@ -1,0 +1,28 @@
+# Include only necessary files for the Python package
+include README.md
+include LICENSE
+include pyproject.toml
+include Cargo.toml
+include Cargo.lock
+
+# Include Python source code
+recursive-include python *.py
+
+# Include Rust source code
+recursive-include src *.rs
+
+# Exclude large directories and files
+exclude target/
+exclude .venv/
+exclude venv/
+exclude node_modules/
+exclude dist/
+exclude typescript/
+exclude baml_src/
+exclude docs/
+exclude examples/
+exclude *.whl
+exclude *.tar.gz
+exclude uv.lock
+exclude test_*.py
+exclude fix-wheel-metadata.py
