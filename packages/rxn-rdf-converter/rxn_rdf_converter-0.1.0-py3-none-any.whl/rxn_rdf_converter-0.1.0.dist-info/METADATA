@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: rxn_rdf_converter
+Version: 0.1.0
+Summary: Package for extracting chemical reaction serialized (Google Protocol Buffers mechanism) in Open Reaction Database (ORD) schema to Resource Descriptive Framework (RDF) triples in JSON-LD and/or Turtle format.
+Author-email: "Quynh D. Tran" <qdt@case.edu>, Holly Schreiber <hls92@case.edu>, Owen Schessler <ops10@case.edu>, "Laura S. Bruckman" <lsh41@case.edu>, "Roger H. French" <rxf131@case.edu>
+License: MIT
+Project-URL: Homepage, https://github.com/quynhdtran17/rxn-rdf-converter
+Project-URL: Repository, https://github.com/quynhdtran17/rxn-rdf-converter
+Project-URL: Bug Tracker, https://github.com/quynhdtran17/rxn-rdf-converter/issues
+Project-URL: Changelog, https://github.com/quynhdtran17/rxn-rdf-converter/blob/main/CHANGELOG.md
+Keywords: chemistry,ord,open-reaction-database,machine-learning,cheminformatics,reaction-data
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ord_schema
+Requires-Dist: protobuf
+Requires-Dist: rdflib
+Requires-Dist: owlready2
+Requires-Dist: rdkit
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: all
+Requires-Dist: rxn_rdf_converter[docs]; extra == "all"
+Requires-Dist: rxn_rdf_converter[dev]; extra == "all"
+Dynamic: license-file
+
+# rxn-rdf-converter
+This is a repository for the package Reaction RDF Converter that converts reaction data into RDF triples in JSON-LD.
