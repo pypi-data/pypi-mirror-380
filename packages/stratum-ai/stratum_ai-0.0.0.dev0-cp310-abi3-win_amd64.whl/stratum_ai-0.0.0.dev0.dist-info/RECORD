@@ -1,0 +1,12 @@
+stratum/__init__.py,sha256=etRrAf4Gs0WWf8rxNtjp_8cfb1PhmEj2E0bMwTcz-fs,1270
+stratum/_rust_backend.py,sha256=NxatNwj6JfKlc_zRT3YqV9OCHA1tWPcpY_hWu7DCA3E,2518
+stratum/_rust_backend_native.pyd,sha256=ksSFXynZmk8YtP4CgaJpjuB_2k4fQJpPIU4mQmXzC3A,51417600
+stratum/adapters/string_encoder.py,sha256=NNlXavd4AlCpIjGlig0w7FRC9U0bz-CYwWePuzndwv8,4511
+stratum/config.py,sha256=L6L99kpc7CfFVGn5pT1a4ragCbzsxIepf-flm6dR7-M,2747
+stratum/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stratum/tests/test_rust_hashing_tfidf.py,sha256=6cqHE2vxGOc-_jYVppzIM6lfayZMjZ9zc6eP21Uoog4,4359
+stratum/tests/test_string_encoder.py,sha256=RwgiZvERYQWYHDa2zjDM7JFA0Ha8ev8GogGBTGwdvcE,1041
+stratum_ai-0.0.0.dev0.dist-info/METADATA,sha256=TermK-G9-QdDRRcjpilKhsFthq6N_oscjWO2LVdoM9k,3750
+stratum_ai-0.0.0.dev0.dist-info/WHEEL,sha256=MF1HCxdpioEZC6lqltB_WBzy4tzMPetoB2hZW2ZWEzg,95
+stratum_ai-0.0.0.dev0.dist-info/licenses/LICENSE.txt,sha256=CmqEmaLrlEI7qQC5ZjBWe90Wie6XtwUjNOqcGJ_bXq0,1591
+stratum_ai-0.0.0.dev0.dist-info/RECORD,,
