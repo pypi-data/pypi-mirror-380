@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: errata
+Version: 0.1.0
+Summary: Introspecting python exceptions
+Keywords: exception,inspector,cli,developer-tools,introspection
+Requires-Dist: rich>=14.1.0
+Requires-Dist: typer>=0.19.2
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
