@@ -1,0 +1,15 @@
+fdtdcurrent/__init__.py,sha256=bmZCsxlbvIGQN398v4gq8nYJ0F8JDB2hLtSVW9GYzDc,1588
+fdtdcurrent/conductor.py,sha256=qM1QxN2WAeswXaSILpKzfnN8ZiQPgMnDm9o1LyQKOio,1262
+fdtdcurrent/constants.py,sha256=VlaqNLSqCjU712n8a74-CGuDXHUA9KidsrQrptw7SxY,102
+fdtdcurrent/detector.py,sha256=HRny_mHO0wTDu4wsAkgBf9tlfThKgaIEFoc26cQROMc,3041
+fdtdcurrent/grid.py,sha256=wdbFzvC-2iFfXXmDcNfyPpg4vsWNWnycUBL_YeLP8xg,29560
+fdtdcurrent/grid_object.py,sha256=5EFR9lJuZbiSffIahjexpr0HrADHavuhWTUPf_-VBWk,1092
+fdtdcurrent/mylogging.py,sha256=biql8DJVlhZnPD377tyseMFl501AxoXCXtGRt3-BQ_M,457
+fdtdcurrent/source.py,sha256=rVrqD2m0lLNmoR7lR27EpqG7WKk2-dVhg-FAd5H55xY,1059
+fdtdcurrent/typing_.py,sha256=K1RW1sdeUuMg6T8TK45DlsaVKNPaMHN5Pu3YxWJRzak,827
+fdtdcurrent/visualization/__init__.py,sha256=QOAyqbrIhfpKSNhan0dIQnju8uaDnkhVa26SbiX0Fgc,39
+fdtdcurrent/visualization/matplotlib_helpers.py,sha256=V-MxBmTJdT1mlZ1F-DYd5NoUweB-b7BHI3CLJwu4_No,5229
+fdtdcurrent-0.0.1.4.dist-info/METADATA,sha256=aHymK3Qz-7L4Pn3nPCkHx2mnIaj6jd628OACwWcEgZI,646
+fdtdcurrent-0.0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fdtdcurrent-0.0.1.4.dist-info/licenses/LICENSE,sha256=0LF_WmNc2HAlGqSLY0OKR5ODndLV0TMUO9ZzP_3e1is,1055
+fdtdcurrent-0.0.1.4.dist-info/RECORD,,

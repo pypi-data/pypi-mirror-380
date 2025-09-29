@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: fdtdcurrent
+Version: 0.0.1.4
+Summary: A 3D electromagnetic sim for small timescales or whatever
+Project-URL: Homepage, https://github.com/SeerBird/ChargeRedistribution
+Project-URL: Issues, https://github.com/SeerBird/ChargeRedistribution/issues
+Author-email: SeerBird <ilya.govorunov@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: fdtd
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12.3
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: scipy>=1.15.3
+Description-Content-Type: text/markdown
+
+# ChargeRedistribution
+ charges go whoooo!
