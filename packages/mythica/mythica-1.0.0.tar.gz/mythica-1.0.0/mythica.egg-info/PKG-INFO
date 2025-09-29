@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: mythica
+Version: 1.0.0
+Summary: Lib for Simulation of fantasy ecosystems
+Author-email: John Frederick Knight Berra / FrederickKnight <infisefir@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 John Frederick Knight Berra
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/FrederickKnight/Mythica
+Keywords: python,simulation,fantasy,creatures,abilities,ecosystems
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asteval>=1.0.6
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: pyyaml>=6.0.2
+Dynamic: license-file
+
+# Mythica
+
+**Mythica**: is a library to create and simulate fantasy-like ecosystems.
+Allows creatures to interact in turn-based seasons or battles.
+These creatures can mutate, breed or kill eachother.
+
+## Caracteristics
+
+- **Creatures**: Has Genes that decide its stats and abilities to use in an "act".
+- **Abilities**: Actions that can be a simple tackle or even summon a tsunami, it depends on effect and the context.
+- **Ecosystems**: A "world" where the creatures can coexist or not
+- **Logger**: Registry of the turns and actions of the creature in an ecosystem.
+
+- **Load of Abilities**: Can be created from a class or a yaml file.
+- **Catalog**: Predefined examples of "Abilities", "Effects" and "Creatures"
+
+## Example
+
+```python
+from mythica.core import BaseEcosystem
+
+from mythica.catalog import ABILITIES, CREATURES
+
+fire_ball = ABILITIES["fire_ball"]
+extreme_speed = ABILITIES["extreme_speed"]
+tsunami = ABILITIES["tsunami"]
+tackle = ABILITIES["tackle"]
+
+creature_1 = CREATURES["dinosaur"]
+creature_2 = CREATURES["bird"]
+creature_3 = CREATURES["alien"]
+
+ecosystem = BaseEcosystem(
+    name = "Example Eco",
+    seed = 2025,
+    creatures = [
+        creature_1,
+        creature_2,
+        creature_3
+    ]
+)
+
+ecosystem.simulate_season(
+    seasons = 10,
+    turns_for_season = 5
+)
+
+for message in ecosystem.logger.get_log():
+    print(message)
+```
