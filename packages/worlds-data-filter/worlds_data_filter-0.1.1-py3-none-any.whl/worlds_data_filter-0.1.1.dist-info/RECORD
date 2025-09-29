@@ -1,0 +1,16 @@
+worlddatafilter/__init__.py,sha256=ubF4zux1ojfhWX6nzLH13wRDBKzZxNMvLDxNLmXk4F4,121
+worlddatafilter/cli.py,sha256=9Sg57mYiyqaHuKP-XYefFf4PSjNEihZOfr5bm1wpVkY,5802
+worlddatafilter/core.py,sha256=iPvtFFdMSR1N6-YVry0Lh_DC9kA59GLS8G9KdjVkoMc,3652
+worlddatafilter/loaders.py,sha256=ouY94p7V41E7qWexdPqpG_UOZMCjPEHUeZ6auFRLanw,1499
+worlddatafilter/types.py,sha256=F_3Shwf2MU8IxyVihYZVhz7zBKWMY9XKEZIVK3B2fTY,566
+worlddatafilter/utils.py,sha256=lY6OdBXQcWc-BSCHqSwx4GmEmRFgjlUdKwCTLhKXMt0,1522
+worlddatafilter/extractors/base.py,sha256=Vil9ZfqqqfLg0iiJhG8DWKL9h7VCFyX-csBbcHc_7vQ,1300
+worlddatafilter/selectors/facility.py,sha256=Gh1Uxszr6YHxFZNvQ91Byz2QHHSw2UhRSLUR5-vT6-Y,1020
+worlddatafilter/selectors/novelty.py,sha256=2APr1ASHERKql5U14_JF7rzoIq-eRhY8IyERy-TXigo,442
+worlddatafilter/selectors/quality.py,sha256=9Wx3sUGW3Y2h2cmz8Zasf6qWu9dxnVADXUd5zyko5Nk,540
+worlds_data_filter-0.1.1.dist-info/licenses/LICENSE,sha256=AUVHhUN4Pc0w9KL6JdmxUs0SewZHWoT4jtV05BwtvIY,10253
+worlds_data_filter-0.1.1.dist-info/METADATA,sha256=5SeX41k-bRvLOfxXvTMbo6RGszVNC8VvtnPYddviosw,18543
+worlds_data_filter-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+worlds_data_filter-0.1.1.dist-info/entry_points.txt,sha256=vfs9bPNjy6CH2xH-lVlwEzreTKVKF3pwn4n4Et3JOs0,48
+worlds_data_filter-0.1.1.dist-info/top_level.txt,sha256=IsWB3STZsZ-elWI3079c1H7PnRRirj9-2c_Dd-1E5ng,16
+worlds_data_filter-0.1.1.dist-info/RECORD,,
