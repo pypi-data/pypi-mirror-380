@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+scrollart/__init__.py
+scrollart/__main__.py
+scrollart.egg-info/PKG-INFO
+scrollart.egg-info/SOURCES.txt
+scrollart.egg-info/dependency_links.txt
+scrollart.egg-info/entry_points.txt
+scrollart.egg-info/top_level.txt
