@@ -1,0 +1,19 @@
+1. Bulk Delete Operations
+bulk_delete() or queryset .delete() operations are not captured
+Only individual model .delete() calls trigger the post_delete signal
+
+2. Pre-Event Signals
+pre_save - fired before a model is saved
+pre_delete - fired before a model is deleted
+pre_m2m_changed - fired before M2M relationships change
+
+3. Other Bulk Operations
+bulk_upsert() (if using Django 4.2+)
+Raw SQL operations that bypass the ORM entirely
+
+4. Database-Level Operations
+Direct database operations using connection.cursor()
+Operations using Django's extra(), raw(), or extra_tables
+
+5. Transaction Rollbacks
+Changes made during transactions that are later rolled back
