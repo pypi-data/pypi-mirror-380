@@ -1,0 +1,2 @@
+[console_scripts]
+amvka = amvka.cli:main

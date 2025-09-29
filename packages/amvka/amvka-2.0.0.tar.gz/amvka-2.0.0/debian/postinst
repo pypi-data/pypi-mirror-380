@@ -1,0 +1,37 @@
+#!/bin/bash
+# postinst script for amvka
+
+set -e
+
+case "$1" in
+    configure)
+        # Create symlink to make amvka globally available
+        if [ ! -L /usr/bin/amvka ]; then
+            ln -sf /usr/local/bin/amvka /usr/bin/amvka 2>/dev/null || true
+        fi
+        
+        # Set appropriate permissions
+        if [ -f /usr/local/bin/amvka ]; then
+            chmod +x /usr/local/bin/amvka
+        fi
+        
+        # Print installation success message
+        echo "Amvka has been installed successfully!"
+        echo ""
+        echo "To get started:"
+        echo "1. Run 'amvka config' to set up your API key"
+        echo "2. Try 'amvka show files here' to test the tool"
+        echo ""
+        echo "For more information, visit: https://github.com/amvka/amvka"
+        ;;
+    
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+    
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,27 @@
+Source: amvka
+Section: utils
+Priority: optional
+Maintainer: Amvka Team <amvka@example.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-setuptools, python3-all
+Standards-Version: 4.6.0
+Homepage: https://github.com/amvka/amvka
+Vcs-Git: https://github.com/amvka/amvka.git
+Vcs-Browser: https://github.com/amvka/amvka
+
+Package: amvka
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-requests, python3-click, python3-colorama
+Suggests: python3-openai, python3-google-generativeai
+Description: Convert natural language to shell commands using AI
+ Amvka is a command-line tool that converts natural language queries
+ into shell commands using AI (Google Gemini or OpenAI).
+ .
+ Features:
+  - Natural language to shell command conversion
+  - Support for Google Gemini and OpenAI APIs
+  - Built-in safety checks and confirmation prompts
+  - Easy configuration and setup
+  - Secure command execution
+ .
+ After installation, users can type commands like:
+ "amvka show me the files in this folder" and get shell command suggestions.

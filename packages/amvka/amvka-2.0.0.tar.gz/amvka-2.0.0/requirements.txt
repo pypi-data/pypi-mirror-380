@@ -1,0 +1,28 @@
+# AMVKA 2.0 - Core Dependencies (Pure LangChain Architecture)
+langchain>=0.1.0
+langchain-community>=0.0.10
+requests>=2.31.0
+click>=8.0.0
+colorama>=0.4.0
+
+# Optional Provider Dependencies (Install as needed for your preferred AI providers)
+# 
+# Popular Providers:
+# pip install langchain-openai        # OpenAI GPT-4, GPT-3.5 models
+# pip install langchain-google-genai  # Google Gemini 2.0, 1.5 Pro/Flash
+# pip install langchain-anthropic     # Anthropic Claude 3.5 Sonnet, Haiku, Opus
+# pip install langchain-groq          # Groq ultra-fast inference (Llama, Mixtral, Gemma)
+# pip install langchain-cohere        # Cohere Command R+, Command R, Command Light
+#
+# Enterprise Providers:
+# pip install langchain-openai        # Azure OpenAI (same package as OpenAI)
+# pip install langchain-aws           # AWS Bedrock (Claude, Llama, Titan)
+#
+# Local & Open Source:
+# pip install langchain-community     # Ollama (local models - free & private)
+# pip install langchain-huggingface   # Hugging Face open source models
+#
+# Installation Examples:
+# pip install langchain-openai langchain-google-genai  # OpenAI + Gemini
+# pip install langchain-groq langchain-anthropic       # Groq + Claude (fastest + highest quality)
+# pip install langchain-community                      # Local Ollama only (completely free)

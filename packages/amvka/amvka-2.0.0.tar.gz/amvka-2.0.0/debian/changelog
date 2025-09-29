@@ -1,0 +1,9 @@
+amvka (1.0.0-1) unstable; urgency=medium
+
+  * Initial release of Amvka
+  * Natural language to shell command conversion
+  * Support for Google Gemini and OpenAI APIs
+  * Built-in safety checks and confirmation prompts
+  * Easy configuration and setup
+
+ -- Amvka Team <amvka@example.com>  Mon, 22 Sep 2025 10:00:00 +0000
