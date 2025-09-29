@@ -1,0 +1,2 @@
+[console_scripts]
+git-publish = git_publish:main
