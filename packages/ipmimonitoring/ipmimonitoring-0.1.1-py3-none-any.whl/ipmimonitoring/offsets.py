@@ -1,0 +1,454 @@
+"""
+Python version of enums from ipmi_monitoring_offsets.h
+"""
+
+from enum import Enum
+
+class IpmiMonitoringEventOffsetType(Enum):
+    """IPMI Monitoring Event Offset Type"""
+    THRESHOLD = 0x00
+    TRANSITION_STATE = 0x01
+    STATE = 0x02
+    PREDICTIVE_FAILURE = 0x03
+    LIMIT = 0x04
+    PERFORMANCE = 0x05
+    TRANSITION_SEVERITY = 0x06
+    DEVICE_PRESENT = 0x07
+    DEVICE_ENABLED = 0x08
+    TRANSITION_AVAILABILITY = 0x09
+    REDUNDANCY = 0x0A
+    ACPI_POWER_STATE = 0x0B
+    PHYSICAL_SECURITY = 0x0C
+    PLATFORM_SECURITY_VIOLATION_ATTEMPT = 0x0D
+    PROCESSOR = 0x0E
+    POWER_SUPPLY = 0x0F
+    POWER_UNIT = 0x10
+    COOLING_DEVICE = 0x11
+    OTHER_UNITS_BASED_SENSOR = 0x12
+    MEMORY = 0x13
+    DRIVE_SLOT = 0x14
+    POST_MEMORY_RESIZE = 0x15
+    SYSTEM_FIRMWARE_PROGRESS = 0x16
+    EVENT_LOGGING_DISABLED = 0x17
+    WATCHDOG1 = 0x18
+    SYSTEM_EVENT = 0x19
+    CRITICAL_INTERRUPT = 0x1A
+    BUTTON_SWITCH = 0x1B
+    MODULE_BOARD = 0x1C
+    MICROCONTROLLER_COPROCESSOR = 0x1D
+    ADD_IN_CARD = 0x1E
+    CHASSIS = 0x1F
+    CHIP_SET = 0x20
+    OTHER_FRU = 0x21
+    CABLE_INTERCONNECT = 0x22
+    TERMINATOR = 0x23
+    SYSTEM_BOOT_INITIATED = 0x24
+    BOOT_ERROR = 0x25
+    OS_BOOT = 0x26
+    OS_CRITICAL_STOP = 0x27
+    SLOT_CONNECTOR = 0x28
+    SYSTEM_ACPI_POWER_STATE = 0x29
+    WATCHDOG2 = 0x2A
+    PLATFORM_ALERT = 0x2B
+    ENTITY_PRESENCE = 0x2C
+    MONITOR_ASIC_IC = 0x2D
+    LAN = 0x2E
+    MANAGEMENT_SUBSYSTEM_HEALTH = 0x2F
+    BATTERY = 0x30
+    SESSION_AUDIT = 0x31
+    VERSION_CHANGE = 0x32
+    FRU_STATE = 0x33
+    OEM = 0xFE
+    UNKNOWN = 0xFF
+
+class IpmiMonitoringEventOffsetThreshold(Enum):
+    """IPMI Monitoring Event Offset Threshold"""
+    LOWER_NON_CRITICAL_GOING_LOW = 0x00
+    LOWER_NON_CRITICAL_GOING_HIGH = 0x01
+    LOWER_CRITICAL_GOING_LOW = 0x02
+    LOWER_CRITICAL_GOING_HIGH = 0x03
+    LOWER_NON_RECOVERABLE_GOING_LOW = 0x04
+    LOWER_NON_RECOVERABLE_GOING_HIGH = 0x05
+    UPPER_NON_CRITICAL_GOING_LOW = 0x06
+    UPPER_NON_CRITICAL_GOING_HIGH = 0x07
+    UPPER_CRITICAL_GOING_LOW = 0x08
+    UPPER_CRITICAL_GOING_HIGH = 0x09
+    UPPER_NON_RECOVERABLE_GOING_LOW = 0x0A
+    UPPER_NON_RECOVERABLE_GOING_HIGH = 0x0B
+
+class IpmiMonitoringEventOffsetTransition(Enum):
+    """IPMI Monitoring Event Offset Transition"""
+    TO_IDLE = 0x00
+    TO_ACTIVE = 0x01
+    TO_BUSY = 0x02
+
+class IpmiMonitoringEventOffsetState(Enum):
+    """IPMI Monitoring Event Offset State"""
+    DEASSERTED = 0x00
+    ASSERTED = 0x01
+
+class IpmiMonitoringEventOffsetPredictiveFailure(Enum):
+    """IPMI Monitoring Event Offset Predictive Failure"""
+    DEASSERTED = 0x00
+    ASSERTED = 0x01
+
+class IpmiMonitoringEventOffsetLimit(Enum):
+    """IPMI Monitoring Event Offset Limit"""
+    NOT_EXCEEDED = 0x00
+    EXCEEDED = 0x01
+
+class IpmiMonitoringEventOffsetPerformance(Enum):
+    """IPMI Monitoring Event Offset Performance"""
+    MET = 0x00
+    LAGS = 0x01
+
+class IpmiMonitoringEventOffsetTransitionSeverity(Enum):
+    """IPMI Monitoring Event Offset Transition Severity"""
+    TO_OK = 0x00
+    TO_NON_CRITICAL_FROM_OK = 0x01
+    TO_CRITICAL_FROM_LESS_SEVERE = 0x02
+    TO_NON_RECOVERABLE_FROM_LESS_SEVERE = 0x03
+    TO_NON_CRITICAL_FROM_MORE_SEVERE = 0x04
+    TO_CRITICAL_FROM_NON_RECOVERABLE = 0x05
+    TO_NON_RECOVERABLE = 0x06
+    MONITOR = 0x07
+    INFORMATIONAL = 0x08
+
+class IpmiMonitoringEventOffsetDevicePresent(Enum):
+    """IPMI Monitoring Event Offset Device Present"""
+    REMOVED_DEVICE_ABSENT = 0x00
+    INSERTED_DEVICE_PRESENT = 0x01
+
+class IpmiMonitoringEventOffsetDeviceEnabled(Enum):
+    """IPMI Monitoring Event Offset Device Enabled"""
+    DISABLED = 0x00
+    ENABLED = 0x01
+
+class IpmiMonitoringEventOffsetTransitionAvailability(Enum):
+    """IPMI Monitoring Event Offset Transition Availability"""
+    TO_RUNNING = 0x00
+    TO_IN_TEST = 0x01
+    TO_POWER_OFF = 0x02
+    TO_ON_LINE = 0x03
+    TO_OFF_LINE = 0x04
+    TO_OFF_DUTY = 0x05
+    TO_DEGRADED = 0x06
+    TO_POWER_SAVE = 0x07
+    INSTALL_ERROR = 0x08
+
+class IpmiMonitoringEventOffsetRedundancy(Enum):
+    """IPMI Monitoring Event Offset Redundancy"""
+    FULLY_REDUNDANT = 0x00
+    REDUNDANCY_LOST = 0x01
+    REDUNDANCY_DEGRADED = 0x02
+    NON_REDUNDANT_SUFFICIENT_RESOURCES_FROM_REDUNDANT = 0x03
+    NON_REDUNDANT_SUFFICIENT_RESOURCES_FROM_INSUFFICIENT_RESOURCES = 0x04
+    NON_REDUNDANT_INSUFFICIENT_RESOURCES = 0x05
+    REDUNDANCY_DEGRADED_FROM_FULLY_REDUNDANT = 0x06
+    REDUNDANCY_DEGRADED_FROM_NON_REDUNDANT = 0x07
+
+class IpmiMonitoringEventOffsetAcpiPowerState(Enum):
+    """IPMI Monitoring Event Offset ACPI Power State"""
+    D0_POWER_STATE = 0x00
+    D1_POWER_STATE = 0x01
+    D2_POWER_STATE = 0x02
+    D3_POWER_STATE = 0x03
+
+class IpmiMonitoringEventOffsetPhysicalSecurity(Enum):
+    """IPMI Monitoring Event Offset Physical Security"""
+    GENERAL_CHASSIS_INTRUSION = 0x00
+    DRIVE_BAY_INTRUSION = 0x01
+    IO_CARD_INTRUSION = 0x02
+    PROCESSOR_AREA_INTRUSION = 0x03
+    LAN_LEASH_LOST = 0x04
+    UNAUTHORIZED_DOCK_UNDOCK = 0x05
+    FAN_AREA_INTRUSION = 0x06
+
+class IpmiMonitoringEventOffsetPlatformSecurityViolationAttempt(Enum):
+    """IPMI Monitoring Event Offset Platform Security Violation Attempt"""
+    SECURE_MODE_VIOLATION_ATTEMPT = 0x00
+    PRE_BOOT_PASSWORD_VIOLATION_USER_PASSWORD = 0x01
+    PRE_BOOT_PASSWORD_VIOLATION_ATTEMPT_SETUP_PASSWORD = 0x02
+    PRE_BOOT_PASSWORD_VIOLATION_NETWORK_BOOT_PASSWORD = 0x03
+    OTHER_PRE_BOOT_PASSWORD_VIOLATION = 0x04
+    OUT_OF_BAND_ACCESS_PASSWORD_VIOLATION = 0x05
+
+class IpmiMonitoringEventOffsetProcessor(Enum):
+    """IPMI Monitoring Event Offset Processor"""
+    IERR = 0x00
+    THERMAL_TRIP = 0x01
+    FRB1_BIST_FAILURE = 0x02
+    FRB2_HANG_IN_POST_FAILURE = 0x03
+    FRB3_PROCESSOR_STARTUP_INITIALIZATION_FAILURE = 0x04
+    CONFIGURATION_ERROR = 0x05
+    SMBIOS_UNCORRECTABLE_CPU_COMPLEX_ERROR = 0x06
+    PROCESSOR_PRESENCE_DETECTED = 0x07
+    PROCESSOR_DISABLED = 0x08
+    TERMINATOR_PRESENCE_DETECTED = 0x09
+    PROCESSOR_AUTOMATICALLY_THROTTLED = 0x0A
+    MACHINE_CHECK_EXCEPTION = 0x0B
+    CORRECTABLE_MACHINE_CHECK_ERROR = 0x0C
+
+class IpmiMonitoringEventOffsetPowerSupply(Enum):
+    """IPMI Monitoring Event Offset Power Supply"""
+    PRESENCE_DETECTED = 0x00
+    POWER_SUPPLY_FAILURE_DETECTED = 0x01
+    PREDICTIVE_FAILURE = 0x02
+    POWER_SUPPLY_INPUT_LOST_AC_DC = 0x03
+    POWER_SUPPLY_INPUT_LOST_OR_OUT_OF_RANGE = 0x04
+    POWER_SUPPLY_INPUT_OUT_OF_RANGE_BUT_PRESENT = 0x05
+    CONFIGURATION_ERROR = 0x06
+    POWER_SUPPLY_INACTIVE = 0x07
+
+class IpmiMonitoringEventOffsetPowerUnit(Enum):
+    """IPMI Monitoring Event Offset Power Unit"""
+    POWER_OFF_POWER_DOWN = 0x00
+    POWER_CYCLE = 0x01
+    _240VA_POWER_DOWN = 0x02
+    INTERLOCK_POWER_DOWN = 0x03
+    AC_LOST = 0x04
+    SOFT_POWER_CONTROL_FAILURE = 0x05
+    POWER_UNIT_FAILURE_DETECTED = 0x06
+    PREDICTIVE_FAILURE = 0x07
+
+class IpmiMonitoringEventOffsetMemory(Enum):
+    """IPMI Monitoring Event Offset Memory"""
+    CORRECTABLE_MEMORY_ERROR = 0x00
+    UNCORRECTABLE_MEMORY_ERROR = 0x01
+    PARITY = 0x02
+    MEMORY_SCRUB_FAILED = 0x03
+    MEMORY_DEVICE_DISABLED = 0x04
+    CORRECTABLE_MEMORY_ERROR_LOGGING_LIMIT_REACHED = 0x05
+    PRESENCE_DETECTED = 0x06
+    CONFIGURATION_ERROR = 0x07
+    SPARE = 0x08
+    MEMORY_AUTOMATICALLY_THROTTLED = 0x09
+    CRITICAL_OVERTEMPERATURE = 0x0A
+
+class IpmiMonitoringEventOffsetDriveSlot(Enum):
+    """IPMI Monitoring Event Offset Drive Slot"""
+    DRIVE_PRESENCE = 0x00
+    DRIVE_FAULT = 0x01
+    PREDICTIVE_FAILURE = 0x02
+    HOT_SPARE = 0x03
+    CONSISTENCY_CHECK_PARITY_CHECK_IN_PROGRESS = 0x04
+    IN_CRITICAL_ARRAY = 0x05
+    IN_FAILED_ARRAY = 0x06
+    REBUILD_REMAP_IN_PROGRESS = 0x07
+    REBUILD_REMAP_ABORTED = 0x08
+
+class IpmiMonitoringEventOffsetSystemFirmwareProgress(Enum):
+    """IPMI Monitoring Event Offset System Firmware Progress"""
+    SYSTEM_FIRMWARE_ERROR = 0x00
+    SYSTEM_FIRMWARE_HANG = 0x01
+    SYSTEM_FIRMWARE_PROGRESS = 0x02
+
+class IpmiMonitoringEventOffsetEventLoggingDisabled(Enum):
+    """IPMI Monitoring Event Offset Event Logging Disabled"""
+    CORRECTABLE_MEMORY_ERROR_LOGGING_DISABLED = 0x00
+    EVENT_TYPE_LOGGING_DISABLED = 0x01
+    LOG_AREA_RESET_CLEARED = 0x02
+    ALL_EVENT_LOGGING_DISABLED = 0x03
+    SEL_FULL = 0x04
+    SEL_ALMOST_FULL = 0x05
+    CORRECTABLE_MACHINE_CHECK_ERROR_LOGGING_DISABLED = 0x06
+
+class IpmiMonitoringEventOffsetWatchdog1(Enum):
+    """IPMI Monitoring Event Offset Watchdog1"""
+    BIOS_WATCHDOG_RESET = 0x00
+    OS_WATCHDOG_RESET = 0x01
+    OS_WATCHDOG_SHUT_DOWN = 0x02
+    OS_WATCHDOG_POWER_DOWN = 0x03
+    OS_WATCHDOG_POWER_CYCLE = 0x04
+    OS_WATCHDOG_NMI_DIAGNOSTIC_INTERRUPT = 0x05
+    OS_WATCHDOG_EXPIRED_STATUS_ONLY = 0x06
+    OS_WATCHDOG_PRE_TIMEOUT_INTERRUPT_NON_NMI = 0x07
+
+class IpmiMonitoringEventOffsetSystemEvent(Enum):
+    """IPMI Monitoring Event Offset System Event"""
+    SYSTEM_RECONFIGURED = 0x00
+    OEM_SYSTEM_BOOT_EVENT = 0x01
+    UNDETERMINED_SYSTEM_HARDWARE_FAILURE = 0x02
+    ENTRY_ADDED_TO_AUXILIARY_LOG = 0x03
+    PEF_ACTION = 0x04
+    TIMESTAMP_CLOCK_SYNC = 0x05
+
+class IpmiMonitoringEventOffsetCriticalInterrupt(Enum):
+    """IPMI Monitoring Event Offset Critical Interrupt"""
+    FRONT_PANEL_NMI_DIAGNOSTIC_INTERRUPT = 0x00
+    BUS_TIMEOUT = 0x01
+    IO_CHANNEL_CHECK_NMI = 0x02
+    SOFTWARE_NMI = 0x03
+    PCI_PERR = 0x04
+    PCI_SERR = 0x05
+    EISA_FAIL_SAFE_TIMEOUT = 0x06
+    BUS_CORRECTABLE_ERROR = 0x07
+    BUS_UNCORRECTABLE_ERROR = 0x08
+    FATAL_NMI = 0x09
+    BUS_FATAL_ERROR = 0x0A
+    BUS_DEGRADED = 0x0B
+
+class IpmiMonitoringEventOffsetButtonSwitch(Enum):
+    """IPMI Monitoring Event Offset Button Switch"""
+    POWER_BUTTON_PRESSED = 0x00
+    SLEEP_BUTTON_PRESSED = 0x01
+    RESET_BUTTON_PRESSED = 0x02
+    FRU_LATCH_OPEN = 0x03
+    FRU_SERVICE_REQUEST_BUTTON = 0x04
+
+class IpmiMonitoringEventOffsetChipSet(Enum):
+    """IPMI Monitoring Event Offset Chip Set"""
+    SOFT_POWER_CONTROL_FAILURE = 0x00
+    THERMAL_TRIP = 0x01
+
+class IpmiMonitoringEventOffsetCableInterconnect(Enum):
+    """IPMI Monitoring Event Offset Cable Interconnect"""
+    IS_CONNECTED = 0x00
+    CONFIGURATION_ERROR = 0x01
+
+class IpmiMonitoringEventOffsetSystemBootInitiated(Enum):
+    """IPMI Monitoring Event Offset System Boot Initiated"""
+    INITIATED_BY_POWER_UP = 0x00
+    INITIATED_BY_HARD_RESET = 0x01
+    INITIATED_BY_WARM_RESET = 0x02
+    USER_REQUESTED_PXE_BOOT = 0x03
+    AUTOMATIC_BOOT_TO_DIAGNOSTIC = 0x04
+    OS_RUN_TIME_SOFTWARE_INITIATED_HARD_RESET = 0x05
+    OS_RUN_TIME_SOFTWARE_INITIATED_WARM_RESET = 0x06
+    SYSTEM_RESTART = 0x07
+
+class IpmiMonitoringEventOffsetBootError(Enum):
+    """IPMI Monitoring Event Offset Boot Error"""
+    NO_BOOTABLE_MEDIA = 0x00
+    NON_BOOTABLE_DISKETTE_LEFT_IN_DRIVE = 0x01
+    PXE_SERVER_NOT_FOUND = 0x02
+    INVALID_BOOT_SECTOR = 0x03
+    TIMEOUT_WAITING_FOR_USER_SELECTION_OF_BOOT_SOURCE = 0x04
+
+class IpmiMonitoringEventOffsetOsBoot(Enum):
+    """IPMI Monitoring Event Offset OS Boot"""
+    A_BOOT_COMPLETED = 0x00
+    C_BOOT_COMPLETED = 0x01
+    PXE_BOOT_COMPLETED = 0x02
+    DIAGNOSTIC_BOOT_COMPLETED = 0x03
+    CD_ROM_BOOT_COMPLETED = 0x04
+    ROM_BOOT_COMPLETED = 0x05
+    BOOT_COMPLETED_BOOT_DEVICE_NOT_SPECIFIED = 0x06
+    BASE_OS_HYPERVISOR_INSTALLATION_STARTED = 0x07
+    BASE_OS_HYPERVISOR_INSTALLATION_COMPLETED = 0x08
+    BASE_OS_HYPERVISOR_INSTALLATION_ABORTED = 0x09
+    BASE_OS_HYPERVISOR_INSTALLATION_FAILED = 0x0A
+
+class IpmiMonitoringEventOffsetOsCriticalStop(Enum):
+    """IPMI Monitoring Event Offset OS Critical Stop"""
+    CRITICAL_STOP_DURING_OS_LOAD = 0x00
+    RUN_TIME_CRITICAL_STOP = 0x01
+    OS_GRACEFUL_STOP = 0x02
+    OS_GRACEFUL_SHUTDOWN = 0x03
+    SOFT_SHUTDOWN_INITIATED_BY_PEF = 0x04
+    AGENT_NOT_RESPONDING = 0x05
+
+class IpmiMonitoringEventOffsetSlotConnector(Enum):
+    """IPMI Monitoring Event Offset Slot Connector"""
+    FAULT_STATUS_ASSERTED = 0x00
+    IDENTIFY_STATUS_ASSERTED = 0x01
+    SLOT_CONNECTOR_DEVICE_INSTALLED_ATTACHED = 0x02
+    SLOT_CONNECTOR_READY_FOR_DEVICE_INSTALLATION = 0x03
+    SLOT_CONNECTOR_READY_FOR_DEVICE_REMOVAL = 0x04
+    SLOT_POWER_IS_OFF = 0x05
+    SLOT_CONNECTOR_DEVICE_REMOVAL_REQUEST = 0x06
+    INTERLOCK_ASSERTED = 0x07
+    SLOT_IS_DISABLED = 0x08
+    SLOT_HOLDS_SPARE_DEVICE = 0x09
+
+class IpmiMonitoringEventOffsetSystemAcpiPowerState(Enum):
+    """IPMI Monitoring Event Offset System ACPI Power State"""
+    S0_G0 = 0x00
+    S1 = 0x01
+    S2 = 0x02
+    S3 = 0x03
+    S4 = 0x04
+    S5_G2 = 0x05
+    S4_S5_SOFT_OFF = 0x06
+    G3_MECHANICAL_OFF = 0x07
+    SLEEPING_IN_AN_S1_S2_OR_S3_STATES = 0x08
+    G1_SLEEPING = 0x09
+    S5_ENTERED_BY_OVERRIDE = 0x0A
+    LEGACY_ON_STATE = 0x0B
+    LEGACY_OFF_STATE = 0x0C
+    UNSPECIFIED = 0x0D
+    UNKNOWN = 0x0E
+
+class IpmiMonitoringEventOffsetWatchdog2(Enum):
+    """IPMI Monitoring Event Offset Watchdog2"""
+    TIMER_EXPIRED = 0x00
+    HARD_RESET = 0x01
+    POWER_DOWN = 0x02
+    POWER_CYCLE = 0x03
+    RESERVED1 = 0x04
+    RESERVED2 = 0x05
+    RESERVED3 = 0x06
+    RESERVED4 = 0x07
+    TIMER_INTERRUPT = 0x08
+
+class IpmiMonitoringEventOffsetPlatformAlert(Enum):
+    """IPMI Monitoring Event Offset Platform Alert"""
+    PLATFORM_GENERATED_PAGE = 0x00
+    PLATFORM_GENERATED_LAN_ALERT = 0x01
+    PLATFORM_EVENT_TRAP_GENERATED = 0x02
+    PLATFORM_GENERATED_SNMP_TRAP = 0x03
+
+class IpmiMonitoringEventOffsetEntityPresence(Enum):
+    """IPMI Monitoring Event Offset Entity Presence"""
+    ENTITY_PRESENT = 0x00
+    ENTITY_ABSENT = 0x01
+    ENTITY_DISABLED = 0x02
+
+class IpmiMonitoringEventOffsetLan(Enum):
+    """IPMI Monitoring Event Offset LAN"""
+    HEARTBEAT_LOST = 0x00
+    HEARTBEAT = 0x01
+
+class IpmiMonitoringEventOffsetManagementSubsystemHealth(Enum):
+    """IPMI Monitoring Event Offset Management Subsystem Health"""
+    SENSOR_ACCESS_DEGRADED_OR_UNAVAILABLE = 0x00
+    CONTROLLER_ACCESS_DEGRADED_OR_UNAVAILABLE = 0x01
+    MANAGEMENT_CONTROLLER_OFF_LINE = 0x02
+    MANAGEMENT_CONTROLLER_UNAVAILABLE = 0x03
+    SENSOR_FAILURE = 0x04
+    FRU_FAILURE = 0x05
+
+class IpmiMonitoringEventOffsetBattery(Enum):
+    """IPMI Monitoring Event Offset Battery"""
+    BATTERY_LOW = 0x00
+    BATTERY_FAILED = 0x01
+    BATTERY_PRESENCE_DETECTED = 0x02
+
+class IpmiMonitoringEventOffsetSessionAudit(Enum):
+    """IPMI Monitoring Event Offset Session Audit"""
+    SESSION_ACTIVATED = 0x00
+    SESSION_DEACTIVATED = 0x01
+    INVALID_USERNAME_OR_PASSWORD = 0x02
+    INVALID_PASSWORD_DISABLE = 0x03
+
+class IpmiMonitoringEventOffsetVersionChange(Enum):
+    """IPMI Monitoring Event Offset Version Change"""
+    HARDWARE_CHANGE_DETECTED_WITH_ASSOCIATED_ENTITY = 0x00
+    FIRMWARE_OR_SOFTWARE_CHANGE_DETECTED_WITH_ASSOCIATED_ENTITY = 0x01
+    HARDWARE_INCOMPATABILITY_DETECTED_WITH_ASSOCIATED_ENTITY = 0x02
+    FIRMWARE_OR_SOFTWARE_INCOMPATABILITY_DETECTED_WITH_ASSOCIATED_ENTITY = 0x03
+    ENTITY_IS_OF_AN_INVALID_OR_UNSUPPORTED_HARDWARE_VERSION = 0x04
+    ENTITY_CONTAINS_AN_INVALID_OR_UNSUPPORTED_FIRMWARE_OR_SOFTWARE_VERSION = 0x05
+    HARDWARE_CHANGE_DETECTED_WITH_ASSOCIATED_ENTITY_WAS_SUCCESSFUL = 0x06
+    SOFTWARE_OR_FW_CHANGE_DETECTED_WITH_ASSOCIATED_ENTITY_WAS_SUCCESSFUL = 0x07
+
+class IpmiMonitoringEventOffsetFruState(Enum):
+    """IPMI Monitoring Event Offset FRU State"""
+    FRU_NOT_INSTALLED = 0x00
+    FRU_INACTIVE = 0x01
+    FRU_ACTIVATION_REQUESTED = 0x02
+    FRU_ACTIVATION_IN_PROGRESS = 0x03
+    FRU_ACTIVE = 0x04
+    FRU_DEACTIVATION_REQUESTED = 0x05
+    FRU_DEACTIVATION_IN_PROGRESS = 0x06
+    FRU_COMMUNICATION_LOST = 0x07
