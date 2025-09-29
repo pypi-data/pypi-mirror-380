@@ -1,0 +1,2 @@
+[console_scripts]
+shisis = shisis.__main__:cli

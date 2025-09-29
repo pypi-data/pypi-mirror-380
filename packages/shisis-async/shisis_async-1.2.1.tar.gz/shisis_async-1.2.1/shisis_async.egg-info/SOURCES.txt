@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+shisis/__init__.py
+shisis/__main__.py
+shisis_async.egg-info/PKG-INFO
+shisis_async.egg-info/SOURCES.txt
+shisis_async.egg-info/dependency_links.txt
+shisis_async.egg-info/entry_points.txt
+shisis_async.egg-info/requires.txt
+shisis_async.egg-info/top_level.txt
