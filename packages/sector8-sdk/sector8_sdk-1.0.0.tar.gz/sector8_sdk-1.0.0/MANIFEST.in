@@ -1,0 +1,43 @@
+# Include package metadata
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include TESTING_PUBLIC.md
+include requirements.txt
+
+# Exclude sensitive files from distribution
+exclude TESTING.md
+exclude PRODUCTION_READINESS_CHECKLIST.md
+exclude TESTING_SETUP_COMPLETE.md
+exclude CREATE_DIST_MANUAL.md
+exclude .env.example
+exclude setup_clean_env.sh
+exclude run_full_test_suite.sh
+exclude build_package.sh
+exclude validate_sdk_structure.py
+
+# Include all Python files
+recursive-include src/sector8 *.py
+recursive-include src/sector8 *.pyi
+
+# Include configuration files
+include src/sector8/py.typed
+
+# Exclude development and test files
+exclude test_*.py
+exclude *_test.py
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .git*
+recursive-exclude * .DS_Store
+recursive-exclude * *.egg-info
+
+# Include auto-instrumentation files
+recursive-include src/sector8/instrumentation *.py
+
+# Include all module data
+recursive-include src/sector8 *.json
+recursive-include src/sector8 *.yaml
+recursive-include src/sector8 *.yml
+recursive-include src/sector8 *.toml
