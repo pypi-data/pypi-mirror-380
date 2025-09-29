@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include ТЗ.md
+recursive-include docs *.md
+recursive-include examples *.pyl
+recursive-include tests *.py
