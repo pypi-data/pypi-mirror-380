@@ -1,0 +1,29 @@
+<nav id="nav" class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#" class="text-3xl font-['Dancing Script'] text-primary">{{ sections.footer.brand.name }}</a>
+    <nav class="hidden md:flex items-center space-x-8">
+      {% for item in navigation.items %}
+        <a href="{{ item.url }}" class="text-gray-700 hover:text-primary font-medium">{{ item.label }}</a>
+      {% endfor %}
+      <div class="ml-4">
+        <a href="#" class="bg-primary text-white px-5 py-2 !rounded-button font-medium whitespace-nowrap" id="navGetStarted">{{ sections.hero.ctaButtons[0].label }}</a>
+      </div>
+    </nav>
+    <button type="button" class="md:hidden hamburger flex flex-col items-center justify-center" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+      <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+      <span class="block w-6 h-0.5 bg-gray-800"></span>
+    </button>
+  </div>
+  <div class="mobile-menu hidden fixed top-0 right-0 w-full h-full bg-white z-40 flex flex-col pt-20 px-6">
+    <nav class="flex flex-col space-y-6">
+        {% for item in navigation.items %}
+        <a href="{{ item.url }}" class="text-xl text-gray-800 font-medium py-2 border-b border-gray-100" onclick="closeMobileMenu()">{{ item.label }}</a>
+        {% endfor %}
+      <div class="flex flex-col space-y-4 mt-6">
+        <a href="#" class="w-full py-3 text-center font-medium text-white bg-primary !rounded-button get-started-btn">{{ sections.hero.ctaButtons[0].label }}</a>
+      </div>
+    </nav>
+  </div>
+
+</nav>
