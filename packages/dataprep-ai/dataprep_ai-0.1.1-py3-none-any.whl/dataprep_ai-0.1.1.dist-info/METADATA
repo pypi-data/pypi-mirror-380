@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: dataprep-ai
+Version: 0.1.1
+Summary: One-line data cleaning for pandas/Polars with reports and a reversible patch.
+Project-URL: Homepage, https://github.com/RohitRajdev/dataprep-ai
+Project-URL: Documentation, https://github.com/RohitRajdev/dataprep-ai#readme
+Project-URL: Issues, https://github.com/RohitRajdev/dataprep-ai/issues
+Author-email: Rohit Rajdev <rohit@sandscript.ai>
+License: Apache-2.0
+License-File: LICENSE
+Keywords: data cleaning,data wrangling,pandas,polars,preprocessing
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+Requires-Dist: polars>=1.0.0; platform_system != 'Windows' or python_version >= '3.10'
+Requires-Dist: pyarrow>=10
+Requires-Dist: pydantic>=2.6
+Requires-Dist: rich>=13.7.0
+Requires-Dist: scikit-learn>=1.2
+Provides-Extra: app
+Requires-Dist: matplotlib>=3.7; extra == 'app'
+Requires-Dist: streamlit>=1.35.0; extra == 'app'
+Provides-Extra: full
+Requires-Dist: matplotlib>=3.7; extra == 'full'
+Requires-Dist: streamlit>=1.35.0; extra == 'full'
+Requires-Dist: ydata-profiling>=4.6; (python_version >= '3.9') and extra == 'full'
+Description-Content-Type: text/markdown
+
+![CI](https://github.com/RohitRajdev/dataprep-ai/actions/workflows/ci.yml/badge.svg)
+
+dataprep-ai
+
+One-line, opinionated data cleaning for pandas/Polars.
+
+Fix missing values, inconsistent categories, outliers, and duplicates with transparent logs and a reproducible report.
+
+pip install dataprep-ai
+
+Quickstart
+
+import pandas as pd
+from dataprep_ai import clean, CleaningConfig
+
+df = pd.DataFrame({
+  "age":[23, None, 25, 1000],
+  "income":[52000, 58000, None, 1200000],
+  "city":["NY","New York","nyc", None],
+  "id":[1,2,2,4]
+})
+
+result = clean(df, CleaningConfig(
+  id_columns=["id"],
+  outlier_strategy="iqr_cap",
+  categorical_normalization=True
+))
+
+print(result.summary_markdown)
+df_clean = result.df
+result.to_json("clean_report.json")
+
+Streamlit explorer
+pip install "dataprep-ai[app]"
+streamlit run -m dataprep_ai.explore -- --csv your.csv
+
+License
+
+Apache-2.0
