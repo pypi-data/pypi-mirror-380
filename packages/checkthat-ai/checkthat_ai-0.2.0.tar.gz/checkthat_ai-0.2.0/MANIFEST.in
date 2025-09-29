@@ -1,0 +1,11 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+recursive-include checkthat_ai *.py
+recursive-exclude checkthat_ai *.pyc
+recursive-exclude checkthat_ai __pycache__
+recursive-exclude checkthat_ai .DS_Store
+recursive-exclude checkthat_ai build
+recursive-exclude checkthat_ai *.egg-info
+prune checkthat_ai/build
+prune checkthat_ai/tests

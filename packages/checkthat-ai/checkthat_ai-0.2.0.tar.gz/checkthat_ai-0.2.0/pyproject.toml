@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "checkthat-ai"
+version = "0.2.0"
+authors = [
+    { name="CheckThat AI", email="kadapalanikhil@gmail.com" },
+]
+maintainers = [
+    { name="Nikhil Kadapala", email="kadapalanikhil@gmail.com" },
+]
+description = "A Python SDK for the CheckThat AI platform's unified LLM API with claim refinement and normalization capabilities."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["ai", "llm", "fact-checking", "claim-normalization", "claim-refinement", "structured-output", "openai", "anthropic", "gemini", "xai", "together", "api", "sdk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "openai>=1.0.0,<2.0.0",
+    "httpx>=0.23.0,<1.0.0",
+    "pydantic>=2.0.0,<3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://checkthat-ai.com"
+"Repository" = "https://github.com/nikhil-kadapala/checkthat-ai"
+"Bug Tracker" = "https://github.com/nikhil-kadapala/checkthat-ai/issues"
+"Documentation" = "https://docs.checkthat-ai.com"
+"Changelog" = "https://github.com/nikhil-kadapala/checkthat-ai/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["checkthat_ai*"]
+exclude = ["tests*", "docs*", "examples*", "checkthat_ai.tests*", "checkthat_ai.build*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=checkthat_ai --cov-report=term-missing --cov-report=html"
