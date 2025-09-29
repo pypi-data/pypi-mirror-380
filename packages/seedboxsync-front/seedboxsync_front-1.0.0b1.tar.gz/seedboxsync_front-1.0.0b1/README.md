@@ -1,0 +1,61 @@
+# SeedboxSync frontend
+
+[![Author][ico-bluesky]][link-bluesky]
+[![Software License][ico-license]](LICENSE)
+[![Build Status][ico-ghactions]][link-ghactions]
+[![Latest Version][ico-pypi-version]][link-pypi]
+[![Docker Pull][ico-docker]][link-docker]
+[![Latest Version][ico-version]][link-docker]
+
+[![Quality Gate Status][ico-sonarcloud-gate]][link-sonarcloud-gate]
+[![Coverage][ico-sonarcloud-coverage]][link-sonarcloud-coverage]
+[![Maintainability Rating][ico-sonarcloud-maintainability]][link-sonarcloud-maintainability]
+[![Reliability Rating][ico-sonarcloud-reliability]][link-sonarcloud-reliability]
+[![Security Rating][ico-sonarcloud-security]][link-sonarcloud-security]
+
+<p align="center">
+  <img alt="SeedboxSync logo" src="screenshots/logo.png" />
+</p>
+
+SeedboxSyncFront is the frontend of **SeedboxSync**, which provides powerful synchronization features between your NAS and your seedbox, making torrent management seamless and automated.
+
+Key Features:
+
+* **Local to Seedbox Sync**: Synchronize a local blackhole folder (e.g., on your NAS) with the blackhole directory on your seedbox.
+* **Seedbox to NAS Downloads**: Automatically download files from your seedbox to your NAS, keeping track of downloaded files in a SQLite database to prevent duplicates.
+* **Query & Reporting**: Retrieve information such as recent torrents, latest downloads, and other useful statistics.
+
+<p align="center">
+  <a href="screenshots/homepage.png">
+    <img alt="SeedboxSyncFront Homegage screenshot" src="screenshots/homepage.png" width="400px"/>
+  </a>
+</p>
+
+## Full documentation
+
+Full documentation, see: [https://llaumgui.github.io/seedboxsync/frontend/](https://llaumgui.github.io/seedboxsync/frontend/)
+
+## License
+
+Released under the [GPL v2](http://opensource.org/licenses/GPL-2.0).
+
+[ico-bluesky]: https://img.shields.io/static/v1?label=Author&message=llaumgui&color=208bfe&logo=bluesky&style=flat-square
+[link-bluesky]: https://bsky.app/profile/llaumgui.kulakowski.fr
+[ico-ghactions]: https://img.shields.io/github/actions/workflow/status/llaumgui/seedboxsync-front/devops.yml?branch=main&style=flat-square&logo=github&label=DevOps
+[link-ghactions]: https://github.com/llaumgui/seedboxsync-front/actions
+[ico-pypi-version]: https://img.shields.io/pypi/v/seedboxsync-front?include_prereleases&label=Package%20version&style=flat-square&logo=python
+[link-pypi]:https://pypi.org/project/seedboxsync-front/
+[ico-license]: https://img.shields.io/github/license/llaumgui/seedboxsync-front?style=flat-square
+[ico-docker]: https://img.shields.io/docker/pulls/llaumgui/seedboxsync-front?color=%2496ed&logo=docker&style=flat-square
+[link-docker]: https://hub.docker.com/r/llaumgui/seedboxsync-front
+[ico-version]: https://img.shields.io/docker/v/llaumgui/seedboxsync-front?sort=semver&color=%2496ed&logo=docker&style=flat-square
+[ico-sonarcloud-gate]: https://sonarcloud.io/api/project_badges/measure?branch=main&project=llaumgui_seedboxsync-front&metric=alert_status
+[link-sonarcloud-gate]: https://sonarcloud.io/dashboard?id=llaumgui_seedboxsync-front&branch=main
+[ico-sonarcloud-coverage]: https://sonarcloud.io/api/project_badges/measure?project=llaumgui_seedboxsync-front&metric=coverage
+[link-sonarcloud-coverage]: https://sonarcloud.io/dashboard?id=llaumgui_seedboxsync-front
+[ico-sonarcloud-maintainability]: https://sonarcloud.io/api/project_badges/measure?project=llaumgui_seedboxsync-front&metric=sqale_rating
+[link-sonarcloud-maintainability]: https://sonarcloud.io/dashboard?id=llaumgui_seedboxsync-front
+[ico-sonarcloud-reliability]: https://sonarcloud.io/api/project_badges/measure?project=llaumgui_seedboxsync-front&metric=reliability_rating
+[link-sonarcloud-reliability]: https://sonarcloud.io/dashboard?id=llaumgui_seedboxsync-front
+[ico-sonarcloud-security]: https://sonarcloud.io/api/project_badges/measure?project=llaumgui_seedboxsync-front&metric=security_rating
+[link-sonarcloud-security]: https://sonarcloud.io/dashboard?id=llaumgui_seedboxsync-front
