@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "apppy-generic"
+version = "0.1.0"
+description = "Generic Python definitions for server development"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{ name = "Tim Kral" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "cryptography==43.0.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/spals/apppy"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/apppy"]
