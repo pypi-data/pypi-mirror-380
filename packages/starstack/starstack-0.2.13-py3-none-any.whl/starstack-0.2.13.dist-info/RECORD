@@ -1,0 +1,11 @@
+starstack/__init__.py,sha256=xubJHiNQxVkAH2qfaKqFGBbcDjfhuq43kb02nTu-bTQ,77
+starstack/constants.py,sha256=86NMTzHMvtbo2nBw6f58EAlhE2ltyqHg6L3ZWq4RNo8,891
+starstack/mrcFileStack.py,sha256=C9ix80WoEVTCh8tW1GaWaty2LbbDQIuCZuYcmWIj5sk,7934
+starstack/particlesStar.py,sha256=1yChp_OvZtuRk15S0nEWPPUo3JhRAVpZ8vFv8ACxE0k,29861
+starstack-0.2.13.dist-info/licenses/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_particlesStar.py,sha256=UajvvxTPk0T7hu7DEP0nQjSpu9IbqG5UOjYZ5kaRNfs,11271
+starstack-0.2.13.dist-info/METADATA,sha256=rvNyLGoUe-kJaj4JUyLVFt0p6Ca3tn4M42MYvjfpyus,1524
+starstack-0.2.13.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+starstack-0.2.13.dist-info/top_level.txt,sha256=F-Z7ddfjmAmQ_nj3uQjdHTxUJhowiAZIsvUahjSf1Cw,16
+starstack-0.2.13.dist-info/RECORD,,
