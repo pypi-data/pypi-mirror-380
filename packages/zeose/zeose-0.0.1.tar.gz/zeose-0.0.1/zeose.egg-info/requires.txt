@@ -1,0 +1,12 @@
+numpy
+ase
+networkx
+jupyter>=1.1.1
+ipython>=8.37.0
+
+[dev]
+pytest
+pytest-cov
+ruff
+mypy
+pre-commit
