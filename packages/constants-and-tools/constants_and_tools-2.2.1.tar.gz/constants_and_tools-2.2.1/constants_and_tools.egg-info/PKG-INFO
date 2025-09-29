@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: constants_and_tools
+Version: 2.2.1
+Summary: Librería para desarrollo rápido y debug
+Home-page: https://github.com/aletheIA-Corp/constants_and_tools
+Author: Aletheia_corp
+Author-email: dsarabiatorres@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: colorama==0.4.6
+Requires-Dist: openpyxl==3.1.5
+Requires-Dist: pandas==2.3.2
+Requires-Dist: pyarrow==21.0.0
+Requires-Dist: polars==1.33.1
+Requires-Dist: tabulate==0.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# constants_and_tools
+
+## v2.2.1 modificaciones:
+ 
+### Versiones de dependencias
+
+- "openpyxl==3.1.5" --->   "openpyxl==3.1.5",
+- "pandas==2.2.3"   --->   "pandas==2.3.2",
+- "pyarrow==19.0.1" --->   "pyarrow==21.0.0",
+- "polars==1.30.0"  --->   "polars==1.33.1",
+
+### Modificaciones de metodos y funciones
+
+#### os_tools
+
+- execute_process_pool          --->  Adaptado para metodos con y sin args
+- execute_thread_pool           --->  Adaptado para metodos con y sin args
+- get_path_files_by_extension   --->  Agregada lógica para paraametrizar mayor cantidad de casos (ver method doc)
+
+#### pandas_tools, polars_tools
+
+- save_json_from_dict  --->  Codificado para utf8
+- load_json_in_dict    --->  Codificado para utf8
+- df_to_parquet        --->  Agregado parametro replace_if_exists
