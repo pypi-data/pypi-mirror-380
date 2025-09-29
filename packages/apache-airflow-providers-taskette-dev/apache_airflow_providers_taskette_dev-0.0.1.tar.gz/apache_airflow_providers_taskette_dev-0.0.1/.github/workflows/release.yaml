@@ -1,0 +1,46 @@
+name: release
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update pip
+        run: |
+          pip install --upgrade pip
+      - name: Run pre-commit
+        run: |
+          pip install pre-commit
+          pre-commit run --all
+
+  publish:
+    name: Build and Publish
+    needs: lint
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Update pip
+        run: pip install --upgrade pip
+      - name: Build and Publish distribution
+        env:
+          FLIT_USERNAME: ${{ vars.FLIT_USERNAME }}
+          FLIT_PASSWORD: ${{ secrets.FLIT_PASSWORD }}
+        run: |
+          pip install flit
+          python -m flit build
+          python -m flit publish
