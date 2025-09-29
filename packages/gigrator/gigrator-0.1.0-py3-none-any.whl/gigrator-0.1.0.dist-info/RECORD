@@ -1,0 +1,17 @@
+gigrator/__init__.py,sha256=tHDrLEDXhfV3CpIAUwEqbI2z3nihU-vzAt0_gLkzDGU,87
+gigrator/config.py,sha256=0J-9bjoNdmQ94iOK_lqe7fBPKE_0nh8j7RQKbmwZU_4,2185
+gigrator/gigrator.py,sha256=wpS6osfW-oQ8L326jPSX605uvZJY1RTWBiwwKVU9QsA,1507
+gigrator/util.py,sha256=NtkzS_QAdkc4Oy5Hz9q_QVtWmlhXHfpMMt6eGXymCZw,456
+gigrator/git/__init__.py,sha256=tHDrLEDXhfV3CpIAUwEqbI2z3nihU-vzAt0_gLkzDGU,87
+gigrator/git/coding.py,sha256=9nQAAfK6avI08rKb-Zaj4hcQRmNTyRQcFtoJBkF1DFk,6331
+gigrator/git/git.py,sha256=LkCOBBoT2A8-GtTdhpIgI_kiAuiBjQuinfKH9p8sbkU,4374
+gigrator/git/gitea.py,sha256=HQv7tD0XTY2xLbXrAPWFl-TWgMYKBK7gve9ZEaXn7wo,2026
+gigrator/git/gitee.py,sha256=g8HDiddTe6gZ91LQ9UD9vTUiT7YLll-dutPPAeM414U,2225
+gigrator/git/github.py,sha256=_vbUJRGFNIR84CKd-SFfZWjR2ez5wWjbhKnlVxD4U50,4293
+gigrator/git/gitlab.py,sha256=SUC-EbAq0dPcPt3DLUq8GGG-padGPPgFKbZBb-PH_0M,2063
+gigrator/git/gongfeng.py,sha256=-012CUkIphqF2p-bal637Kq8MrizKYihrhntzUNJ5sI,2710
+gigrator-0.1.0.dist-info/licenses/LICENSE,sha256=p6Utz0Pg3cC_EuyW3oZk2YPmOvXYMqCwH49XT0bm3JQ,1082
+gigrator-0.1.0.dist-info/METADATA,sha256=ErGjBO9q0_ZWK1tSFL7bMs7mSXOow-7U8-hsrJGaKcE,2903
+gigrator-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gigrator-0.1.0.dist-info/top_level.txt,sha256=v0jxAYhNnEa0X74VJO8vK5EH5Wcs302O6J8GAButTxg,9
+gigrator-0.1.0.dist-info/RECORD,,
