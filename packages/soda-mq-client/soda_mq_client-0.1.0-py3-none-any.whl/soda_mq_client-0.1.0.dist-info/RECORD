@@ -1,0 +1,10 @@
+core/__init__.py,sha256=i-3QiQ3dNbxMhQa1Z_oVSPzh3D9tPzOB6s0G3emC_Gg,179
+core/connection_factory.py,sha256=n8qB7YX8zgsXbCSn-oyDrPpeTssv2HI--BoDIIVPLtU,739
+core/soda_client.py,sha256=vMv58NMLd7cJlhmzDFjT-cEFDF3a4yBfdeZpn4ZHidI,1672
+core/soda_consumer.py,sha256=S7CSDBoHMSQ_vqZKz9OOphXLQoLNCVzt1cJjbP-MtUo,1083
+core/soda_producer.py,sha256=zC7j9GRJk5ntQuLKa4fe7p9bfQUMq6TFMQ7Q4t_teeI,470
+soda_mq_client-0.1.0.dist-info/licenses/LICENSE,sha256=oEY8-0SAqfZ6ZNHJOGNxq6ziHkgkUvEEJmpmCPHz1r4,1083
+soda_mq_client-0.1.0.dist-info/METADATA,sha256=P5mbxa3nHCotGEAD1LM-QqW_Y90epfFKX7Cx-J2tWug,1517
+soda_mq_client-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+soda_mq_client-0.1.0.dist-info/top_level.txt,sha256=0ebp8k35dOTHVwbY3UcokRsjC7cWLN_iaJ70tIcmODU,5
+soda_mq_client-0.1.0.dist-info/RECORD,,
