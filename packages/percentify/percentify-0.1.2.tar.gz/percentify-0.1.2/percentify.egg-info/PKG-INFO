@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: percentify
+Version: 0.1.2
+Summary: A micro-library to easily calculate percentage between two numbers.
+Author-email: Daniel Emakkporuena <danielemakporuena1@gmail.com>
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# 📊 Percentify  
+
+**Percentify** — because fractions are overrated 😎  
+A ridiculously tiny Python library for turning *"part of a whole"* into neat percentages without the brain math.  
+
+---
+
+## ✨ Features
+- ✅ Calculate the percentage of any two numbers  
+- ✅ Safe divide (returns `0.0` if the denominator is zero — no more crashes 🎉)  
+- ✅ Control the number of decimal places  
+- ✅ Zero dependencies, ultra-lightweight  
+
+---
+
+## 📦 Installation
+
+```bash
+pip install percentify
