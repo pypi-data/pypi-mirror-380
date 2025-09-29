@@ -1,0 +1,15 @@
+ufload3/__init__.py,sha256=16n86JUYHX5cNBCvgQOlMVFP6HYI2r7B9z4puqX8ncM,182
+ufload3/cloud.py,sha256=9qJ_TahgAPe_EPyjbLUdlReur-h4DF9jgT-EgbGi9fU,7892
+ufload3/db.py,sha256=atjm_nIDlZJzYNq2DJ_7im5cKYcf01914UcOOBgt2SQ,38830
+ufload3/test_cloud.py,sha256=RabnAc3k7cIO5b5QmhnYy8UYjSISCGTtjw24mA5N3D4,238
+ufload3/test_db.py,sha256=rg_roAQ0mMDgDnMC_6RUeRl5BdGzjtq4kBugndt39Uc,704
+ufload3/webdav.py,sha256=79fN9bpsUyUt5t_AexyLXrLyuY9AYpRnMWQpZbshkXo,8687
+ufload3/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ufload3/cli/main.py,sha256=_hE09iM4jTmBT3V-Vnpd8rbcqXDJVXxX1sR2_YENdDo,39658
+ufload3/cli/test_main.py,sha256=ikqMgBMPTyIsdcU3Xg62WQYHmCcdeGT4vjA9i_AiJhU,358
+ufload3-2.2.dist-info/licenses/LICENSE,sha256=5tMtuKzFzdao-ha37L-YONoxes3SLOI4BWQY8aWtVTY,1089
+ufload3-2.2.dist-info/METADATA,sha256=31Pbhj3pO0gqXXjn2RmrJA34wUiy8E32Z7WhG8YLXko,4766
+ufload3-2.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ufload3-2.2.dist-info/entry_points.txt,sha256=dovDAXU556p7p5ttmNzsHhU9k4BFT4QpgYN_nL8mcEE,50
+ufload3-2.2.dist-info/top_level.txt,sha256=KIoYpUApn_bhA1aETfKFhmxN4Sk0HNGslBol4D4dnmo,8
+ufload3-2.2.dist-info/RECORD,,
