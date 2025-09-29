@@ -1,0 +1,79 @@
+# vim:ft=toml
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "esub-epipe"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Dominik Zürcher", email = "dominikz@phys.ethz.ch" },
+  { name = "Silvan Fischbacher", email = "silvanf@phys.ethz.ch" },
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "pylint",
+  "coverage",
+  "numpy",
+  "pyyaml",
+  "portalocker",
+  "argparse",
+  "ekit",
+  "setuptools",
+]
+
+[project.urls]
+Source = "https://cosmo-gitlab.phys.ethz.ch/cosmo_public/esub-epipe"
+Documentation = "https://cosmo-docs.phys.ethz.ch/esub-epipe"
+
+[tool.hatch.version]
+path = "src/esub/__init__.py"
+pattern = "__version__ = \"(?P<version>[^']+)\""
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/esub"]
+
+[project.optional-dependencies]
+dev = [
+    "twine",
+    "pytest",
+    "pytest-cov",
+    "pytest-regtest",
+    "tox",
+    "flake8",
+    "black",
+    "isort",
+    "ruff",
+    "sphinx",
+    "sphinx-pynpoint-theme",
+    "myst-parser"
+]
+
+docs = [
+    "sphinx<7",
+    "sphinx-pynpoint-theme",
+    "myst-parser",
+    "nbsphinx",
+    "sphinx-copybutton",
+    "recommonmark"
+]
+
+
+[tool.coverage.run]
+branch = true
+
+[project.scripts]
+esub = "esub.esub:main"
+epipe = "esub.epipe:main"
