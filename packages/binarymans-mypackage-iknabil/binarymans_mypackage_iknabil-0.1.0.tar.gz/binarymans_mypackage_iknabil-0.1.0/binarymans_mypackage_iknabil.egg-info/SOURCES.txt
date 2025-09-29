@@ -1,0 +1,7 @@
+README.md
+add.py
+pyproject.toml
+binarymans_mypackage_iknabil.egg-info/PKG-INFO
+binarymans_mypackage_iknabil.egg-info/SOURCES.txt
+binarymans_mypackage_iknabil.egg-info/dependency_links.txt
+binarymans_mypackage_iknabil.egg-info/top_level.txt
