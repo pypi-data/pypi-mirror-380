@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+redis_namespace_client/__init__.py
+redis_namespace_client/redis_utils.py
+redis_namespace_client.egg-info/PKG-INFO
+redis_namespace_client.egg-info/SOURCES.txt
+redis_namespace_client.egg-info/dependency_links.txt
+redis_namespace_client.egg-info/requires.txt
+redis_namespace_client.egg-info/top_level.txt
