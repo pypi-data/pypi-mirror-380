@@ -1,0 +1,16 @@
+amvka/__init__.py,sha256=w4ru6eGX1txtZBbf2O-c99qFWpG1VtyxbmdFKZFevg8,182
+amvka/__main__.py,sha256=_nMzaUkf-S5fkV76boKvclcP4qbk-vlAFBV9YC0vA3k,117
+amvka/cli.py,sha256=t5HHIBO4gzWilOvEssQzOyfLKC2bV5HNlB6HfS30tt4,4665
+amvka/config.py,sha256=dioGhj3nuBEW3zQyJoPmsL7hllWQM0SgyCrwaCBQ7xs,44891
+amvka/conversation.py,sha256=x4j2FvUmz5C8Bzfy8KLrXx3OQJ10iGx4siV9oPnKdts,17646
+amvka/environment.py,sha256=hlkJkeoAlKH1BcZcTQjXqhVGO2sZmfCTnlQ2gMTaT2g,20889
+amvka/executor.py,sha256=OFbH1nzAmcN1R71dDKcMGGZiICT8WHuH9ikIsQS1cF8,8233
+amvka/langchain_llm.py,sha256=nynPsUDtMjFu_cUjRZH8eeVYDxtt33Zmebzz6Ai-1Ls,16849
+amvka/llm.py,sha256=alMbTL6JEYqZSKFkhMQaAsaSBF2VcBTNk09VnkL6ZNE,9569
+amvka/utils.py,sha256=7QRuRAc66VDX7xwcGXwpx7NPse3Tu6P_fUip3PPPMEE,1322
+amvka-2.0.0.dist-info/licenses/LICENSE,sha256=t4XrlKzmfL8XJbBhWAEuHomHGbaJtcwya8qu09wyQRo,1066
+amvka-2.0.0.dist-info/METADATA,sha256=1l-hWik7BaYruEV6Yg826tzqGa9ob0Cye_OG4CbagKo,25413
+amvka-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+amvka-2.0.0.dist-info/entry_points.txt,sha256=rfH7tr30WDdyrqtrvjHxgIqjEej8CrKppRDpnqbz4mw,41
+amvka-2.0.0.dist-info/top_level.txt,sha256=m2e7E5eDGGxBi7F2E4IyzVlEU9rgRjWLtdOXh9vW49A,6
+amvka-2.0.0.dist-info/RECORD,,
