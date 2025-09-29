@@ -1,0 +1,19 @@
+[project]
+name = "jaywei-calculate-bmi-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jay", email = "854326781@qq.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.15.0",
+]
+
+[project.scripts]
+jaywei-calculate-bmi-mcp = "jaywei_calculate_bmi_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.8.0,<0.9"]
+build-backend = "uv_build"

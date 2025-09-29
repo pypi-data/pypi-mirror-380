@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: jaywei-calculate-bmi-mcp
+Version: 0.1.0
+Summary: Add your description here
+Author: Jay
+Author-email: Jay <854326781@qq.com>
+Requires-Dist: mcp[cli]>=1.15.0
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
