@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cmdargparse/__init__.py
+cmdargparse/argument.py
+cmdargparse/command.py
+cmdargparse/custom.py
+cmdargparse/field.py
+cmdargparse/namespace.py
+cmdargparse/parser.py
+cmdargparse/unset.py
+cmdargparse.egg-info/PKG-INFO
+cmdargparse.egg-info/SOURCES.txt
+cmdargparse.egg-info/dependency_links.txt
+cmdargparse.egg-info/requires.txt
+cmdargparse.egg-info/top_level.txt

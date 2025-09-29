@@ -1,0 +1,10 @@
+[tool.pyright]
+reportMissingTypeStubs = false
+extraPaths = ["launch"]
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
+lines_after_imports = 2
