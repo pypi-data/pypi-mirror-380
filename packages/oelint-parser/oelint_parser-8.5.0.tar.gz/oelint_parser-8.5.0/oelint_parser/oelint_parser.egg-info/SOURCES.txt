@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements-dev.txt
+oelint_parser/oelint_parser.egg-info/PKG-INFO
+oelint_parser/oelint_parser.egg-info/SOURCES.txt
+oelint_parser/oelint_parser.egg-info/dependency_links.txt
+oelint_parser/oelint_parser.egg-info/requires.txt
+oelint_parser/oelint_parser.egg-info/top_level.txt
