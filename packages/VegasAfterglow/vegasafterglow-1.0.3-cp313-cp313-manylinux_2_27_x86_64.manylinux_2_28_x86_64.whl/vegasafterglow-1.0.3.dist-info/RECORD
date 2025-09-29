@@ -1,0 +1,10 @@
+VegasAfterglow/VegasAfterglowC.cpython-313-x86_64-linux-gnu.so,sha256=25onnE4laJcFdsZQrS7qIXpOK1kyMETB_rSQ47oUeG8,684336
+VegasAfterglow/__init__.py,sha256=3cZd5kZihsbX1WcpBTRVegImOGW684LV7pCtIa4mI3Y,723
+VegasAfterglow/_version.py,sha256=BRv6HzNm452qA9Zpg2QSehISsxDkHjF9FyyHj1sYhAc,712
+VegasAfterglow/runner.py,sha256=vuvoBrY24z34b4NQ_eJSjfL0Pzl-GZt5YreB0yZ7uCI,13827
+VegasAfterglow/sampler.py,sha256=zUDKsLLpHJFiBqtUy0zuhcIvJfcTXEjJyDXgGrq3GN0,6169
+VegasAfterglow/types.py,sha256=C5pAf0HE1c9GsGVjmkRNbKUWiK-ilPen-5ygLcII094,1004
+vegasafterglow-1.0.3.dist-info/METADATA,sha256=BFYakxwAUuL_zoah6PEt_X0wqVm8f7Lkj-cMuQ7QSww,38055
+vegasafterglow-1.0.3.dist-info/WHEEL,sha256=ccSgh8O0K9LcM8I3mMdS9Lo8IIvPXe3ZhduPDCV2uAE,157
+vegasafterglow-1.0.3.dist-info/RECORD,,
+vegasafterglow-1.0.3.dist-info/licenses/LICENSE,sha256=nF7mY27ARyrokLb9VgnVQ2QpEeU_IijMwgKwI5QJDJw,1544
