@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+scm_python_edu.egg-info/PKG-INFO
+scm_python_edu.egg-info/SOURCES.txt
+scm_python_edu.egg-info/dependency_links.txt
+scm_python_edu.egg-info/requires.txt
+scm_python_edu.egg-info/top_level.txt
+scm_python_edu/lib/edu.py
+scm_python_edu/tapps/edu/common.py
+scm_python_edu/tapps/edu/disjunction.py
+scm_python_edu/tapps/edu/fraction.py
+scm_python_edu/tapps/edu/latex.py
+scm_python_edu/tapps/edu/math.py
+scm_python_edu/tapps/edu/withFraction.py
