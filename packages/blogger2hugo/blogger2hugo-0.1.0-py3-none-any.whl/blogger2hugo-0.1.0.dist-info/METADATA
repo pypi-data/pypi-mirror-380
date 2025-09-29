@@ -1,0 +1,217 @@
+Metadata-Version: 2.4
+Name: blogger2hugo
+Version: 0.1.0
+Summary: Convert a Blogger Atom export to Hugo Markdown with configurable slugs and link sanitization.
+Project-URL: Homepage, https://github.com/yourname/blogger2hugo
+Project-URL: Issues, https://github.com/yourname/blogger2hugo/issues
+Author-email: Hamed Faramarzi <hamed.faramarzi@gmail.com>
+License: 
+        ---
+        
+        ## `LICENSE` (MIT)
+        
+        ```text
+        MIT License
+        
+        Copyright (c) 2025 Hamed
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+License-File: LICENSE
+Keywords: blogger,converter,hugo,markdown,static-site
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: html2text>=2020.1.16
+Requires-Dist: python-slugify>=8.0.0
+Description-Content-Type: text/markdown
+
+# Blogger → Hugo Markdown Converter
+
+Convert a Blogger Atom export (`blogger.xml`) into [Hugo](https://gohugo.io/) Markdown files.  
+Supports configurable slugs, link sanitization, and choice between flat files (`slug.md`) or nested (`slug/index.md`).
+
+---
+
+## Features
+
+- **Slug control**:
+  - `--slug-mode link | title | id | date-title | id-title`
+  - `--slugify ascii | unicode | none`
+- **Link sanitization**:
+  - Strip tracking params (`utm_*`, `gclid`, etc.)
+  - Drop hash-only links
+  - Optionally unwrap image lightbox links
+  - Or strip all links to plain text
+- **Flat file option**:  
+  Use `--flat` to write `post.md` instead of `post/index.md`.
+- **Draft handling**:  
+  Drafts skipped by default; include with `--drafts`.
+- **Pages vs posts**:  
+  Blogger "pages" exported separately (`--pages-out`).
+
+---
+
+## Installation
+
+Requires Python 3.8+.
+
+```bash
+pip install html2text python-slugify beautifulsoup4
+````
+
+Save the script as `blogger2hugo`.
+
+---
+
+## Usage
+
+Export your blog from Blogger:
+**Settings → Back up content → Download** → `blogger.xml`.
+
+Convert:
+
+```bash
+python blogger2hugo blogger.xml --out content/blog
+```
+
+### Common options
+
+* **Slug mode**
+
+  ```bash
+  --slug-mode date-title   # YYYYMMDD-my-title
+  --slug-mode link         # from Blogger’s canonical link
+  --slug-mode id           # numeric post ID
+  --slug-mode title        # slugified title
+  --slug-mode id-title     # <id>-<title>
+  ```
+
+* **Slugify style**
+
+  ```bash
+  --slugify ascii     # transliterate to ASCII (default)
+  --slugify unicode   # keep original script (e.g. فارسی titles)
+  --slugify none      # minimal cleanup only
+  ```
+
+* **Flat files**
+
+  ```bash
+  --flat
+  # results in content/blog/2023/01/my-post.md
+  # instead of content/blog/2023/01/my-post/index.md
+  ```
+
+* **Link sanitization**
+
+  ```bash
+  --links keep
+  --links text
+  --links notracking,nohash,unwrap-images   # default
+  ```
+
+* **Pages output**
+
+  ```bash
+  --pages-out content/page
+  ```
+
+---
+
+## Examples
+
+Keep Unicode slugs, clean links, and flat files:
+
+```bash
+python blogger2hugo blogger.xml \
+  --out content/blog \
+  --slug-mode date-title \
+  --slugify unicode \
+  --links notracking,nohash,unwrap-images \
+  --flat
+```
+
+Use Blogger IDs as slugs, keep original link structure:
+
+```bash
+python blogger2hugo blogger.xml \
+  --out content/blog \
+  --slug-mode id
+```
+
+Include drafts:
+
+```bash
+python blogger2hugo blogger.xml --out content/blog --drafts
+```
+
+---
+
+## Output structure
+
+Example with `--flat --slug-mode date-title --slugify unicode`:
+
+```
+content/
+└── blog/
+    └── 2023/
+        └── 01/
+            ├── 20230120-hello-world.md
+            └── ...
+```
+
+Each Markdown file contains YAML front matter:
+
+```yaml
+---
+title: "hello-wrold
+date: "2023-01-10T08:30:00Z"
+lastmod: "2023-01-10T08:45:00Z"
+draft: false
+tags:
+  - "Example"
+slug: "20230110-hello-wrold"
+---
+```
+
+Followed by the body in Markdown.
+
+---
+
+## Notes
+
+* Images are left as-is; for local copies, run a separate fetcher.
+* Blogger “read more” markers are removed.
+* Pages and posts are separated (`--out`, `--pages-out`).
+* Compatible with Hugo extended.
+
+---

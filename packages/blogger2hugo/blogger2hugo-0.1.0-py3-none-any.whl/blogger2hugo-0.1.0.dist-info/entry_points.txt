@@ -1,0 +1,2 @@
+[console_scripts]
+blogger2hugo = blogger2hugo.cli:main
