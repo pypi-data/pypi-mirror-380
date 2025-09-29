@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: inhpc_dm
+Version: 0.7.0
+Summary: Data Management for InHPC-DE
+Home-page: https://github.com/BerndSchuller/inhpc_dm
+Author: Jochen Buchholz
+Author-email: buchholz@hlrs.de
+License: BSD-3-Clause
+Keywords: Jupyter,JupyterLab,JupyterLab3
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fs>=2.4.11
+Requires-Dist: fs-s3fs>=1.1.1
+Requires-Dist: fs.smbfs>=0.6.3
+Requires-Dist: jupyterlab>=4.2
+Requires-Dist: fusepy~=3.0.1
+Requires-Dist: pyunicore[crypto]>=1.3.5
+Requires-Dist: bcrypt>=4.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# inhpc_dm
+
+JupyterLab extension for InHPC-DE data management
+
+WORK IN PROGRESS!
+
+## Requirements
+
+* JupyterLab >= 4.0
+
+## Overview
+
+This extension consists of a front-end part (basically an enhanced filebrowser) and a back-end (server) part,
+that has the job of mounting remote file systems and invoking transfer commands.
+
+
+## Contributing
+
+### Development install
+
+Note: You will need JupyterLab and NodeJS to build the extension package.
+
+To install NodeJS, you can use the package manager on your system, e.g.
+on a Debian system:
+
+```
+apt install nodejs npm
+```
+
+
+```bash
+# Clone the repo to your local environment
+# Change directory to the inhpc_dm directory
+
+# Install packages required for development
+pip install -r requirements-dev.txt
+
+# Install package
+pip install .
+
+# Link your development version of the extension with JupyterLab
+jupyter-labextension build .
+
+# Enable server extension
+jupyter server extension enable --user inhpc_dm
+
+# Rebuild extension Typescript source after making changes
+jlpm run build
+
+# Run Jupyter lab
+jupyter-lab
+```
+
+### Uninstall
+
+```bash
+pip uninstall inhpc_dm
+```
