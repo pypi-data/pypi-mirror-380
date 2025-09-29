@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: sphinxext-rediraffe
+Version: 0.3.0
+Summary: Sphinx Extension that redirects non-existent pages to working pages
+Author-email: Vasista Vovveti <vasistavovveti@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-Expression: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+License-File: LICENCE.rst
+Requires-Dist: Sphinx>=6.0
+Project-URL: Code, https://github.com/sphinx-doc/sphinxext-rediraffe/
+Project-URL: Documentation, https://sphinxext-rediraffe.readthedocs.io/
+Project-URL: Download, https://pypi.org/project/sphinxext-rediraffe/
+Project-URL: Homepage, https://github.com/sphinx-doc/sphinxext-rediraffe/
+Project-URL: Issue tracker, https://github.com/sphinx-doc/sphinxext-rediraffe/issues
+
+===================
+sphinxext-rediraffe
+===================
+
+.. image:: https://img.shields.io/pypi/v/sphinxext-rediraffe.svg
+   :target: https://pypi.org/project/sphinxext-rediraffe/
+   :alt: Package on PyPI
+
+.. image:: https://github.com/sphinx-doc/sphinxext-rediraffe/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/sphinx-doc/sphinxext-rediraffe/actions
+   :alt: Build Status
+
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+   :target: https://opensource.org/licenses/MIT
+   :alt: MIT
+
+Sphinx extension to redirect files
+
+.. image:: ./assets/rediraffe_logo.svg
+   :align: center
+
+This Sphinx extension redirects non-existent pages to working pages.
+Rediraffe can also check that deleted or renamed files in your git repo
+are redirected.
+
+Rediraffe creates a graph of all specified redirects and traverses it
+to point all internal urls to leaf urls.
+This means that chained redirects will be resolved.
+For example, if a config has 6 chained redirects, all 6 links will redirect
+directly to the final link.
+The end user will never experience more than 1 redirection.
+
+Note: Rediraffe supports the html and dirhtml builders.
+
+Installation
+============
+
+.. code-block:: sh
+
+   python -m pip install sphinxext-rediraffe
+
+Usage
+=====
+
+See the `documentation`_.
+
+.. _documentation: https://sphinxext-rediraffe.readthedocs.io/en/latest/
+
