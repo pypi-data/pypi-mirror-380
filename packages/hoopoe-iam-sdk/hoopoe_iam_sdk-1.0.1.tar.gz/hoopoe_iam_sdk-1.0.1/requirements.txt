@@ -1,0 +1,5 @@
+# Core dependencies for Hoopoe IAM SDK
+httpx          # HTTP client for async requests
+pydantic        # Data validation and serialization
+python-dotenv    # Environment variable loading
+typing-extensions
