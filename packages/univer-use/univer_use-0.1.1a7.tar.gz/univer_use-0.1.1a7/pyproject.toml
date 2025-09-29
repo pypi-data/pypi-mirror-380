@@ -1,0 +1,59 @@
+[project]
+name = "univer-use"
+dynamic = ["version"]
+description = "Univer Use: LangGraph-powered agent utilities and tools for Univer spreadsheets"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+authors = [{ name = "Univer Team" }]
+keywords = ["univer", "langgraph", "langchain", "agents", "mcp", "spreadsheets"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "langchain==0.3.27",
+    "langchain-core>=0.3.76",
+    "langgraph==0.6.6",
+    "jinja2>=3.1.6",
+    "langchain-mcp-adapters>=0.1.10",
+    "langchain-openai>=0.3.33,<0.4.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dream-num/univer-use"
+Repository = "https://github.com/dream-num/univer-use"
+Issues = "https://github.com/dream-num/univer-use/issues"
+
+[dependency-groups]
+dev = [
+    "build>=1.3.0",
+    "debugpy>=1.8.17",
+    "hatch-vcs>=0.5.0",
+    "hatchling>=1.27.0",
+    "langgraph-cli[inmem]>=0.4.2",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=0.23.0",
+    "twine>=6.2.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.25", "hatch-vcs>=0.4"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["univer_use"]
+include = [
+  "univer_use/prompts/*.md",
+  "univer_use/py.typed",
+  "LICENSE",
+]
+
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.1.0"
