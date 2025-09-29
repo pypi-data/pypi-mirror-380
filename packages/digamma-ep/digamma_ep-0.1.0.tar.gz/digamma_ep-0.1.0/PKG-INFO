@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: digamma-ep
+Version: 0.1.0
+Summary: Symbolic audit metrics for model divergence and integrity
+Home-page: https://github.com/Cerene-Salt/Digamma-Prime-Framework
+Author: Cerene Rúbio
+Author-email: Cerene Rúbio <your-email@example.com>
+Project-URL: Homepage, https://github.com/Cerene-Salt/Digamma-Prime-Framework
+Project-URL: Repository, https://github.com/Cerene-Salt/Digamma-Prime-Framework
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: sympy
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Lady Epe
+
+Sistema simbólico para auditoria de modelos com métricas de divergência temporal.
+
+## Instalação
+
+```bash
+pip install .

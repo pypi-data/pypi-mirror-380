@@ -1,0 +1,19 @@
+[project]
+name = "digamma-ep"
+version = "0.1.0"
+description = "Symbolic audit metrics for model divergence and integrity"
+authors = [
+    { name="Cerene Rúbio", email="your-email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "sympy"
+]
+
+[project.urls]
+Homepage = "https://github.com/Cerene-Salt/Digamma-Prime-Framework"
+Repository = "https://github.com/Cerene-Salt/Digamma-Prime-Framework"
