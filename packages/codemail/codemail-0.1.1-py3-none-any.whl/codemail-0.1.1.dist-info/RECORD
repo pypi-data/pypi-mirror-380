@@ -1,0 +1,16 @@
+codemail/__init__.py,sha256=O1rMEGcFqDo-4R8WbH1gbBOlgunmNlu0NvV8WlJSl2g,67
+codemail/codex_client.py,sha256=3HkwNzlNWesypk_wXM8ZxoTdmfydzOBgV4wXXqmOoAY,3550
+codemail/config.py,sha256=rRZfv7PqPUK6DpiYmT_k-ycuFojRyDuD91i7M1_UTfE,1813
+codemail/email_utils.py,sha256=Yi_J-uhr-tLVEGlZNRuSdVpH0UraSv1b-Muym86Uq5g,2187
+codemail/log.py,sha256=g2bSUeHBpWPmlfyQ6kxkPKX9Lw0Ch8y-5I_EcYNH7Jg,450
+codemail/mailer.py,sha256=GXLlAlxWdT4iPNO7wicSBXkiORP3lj0hxgdgo3pOBYM,2058
+codemail/markdown_render.py,sha256=IU1Zqu12t0nDNk6UNbSPdnvMq-Ust7lvJO7SeNevQ4w,1276
+codemail/prompt.py,sha256=58SH04_OgdPsiFsRftxMxMFPrEQ7zixAwcHuvGb0yAE,926
+codemail/runner.py,sha256=LUV0vWxe5PcO97oIak57jdWAUhYpFdXaj5ihOMAEVag,5464
+codemail/state.py,sha256=HWfw7HUhhiKjyTG29ak3clsCOAUtgYuWCaluWX2UkiU,822
+codemail-0.1.1.dist-info/licenses/LICENSE,sha256=6X40-JuZxjBbPIkrMf__GLcDjrTBaEdc6OQ7rFjFpzQ,1071
+codemail-0.1.1.dist-info/METADATA,sha256=FnKLgsyY0d1IZiuGNxWU8EvvwoxxDfzD29ubLBx8D_I,8987
+codemail-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+codemail-0.1.1.dist-info/entry_points.txt,sha256=HsrNxSNDOIA08GmI2xQvM4nhRNjzgWXfm1WMSQSL83E,57
+codemail-0.1.1.dist-info/top_level.txt,sha256=xRQ0nNbex7VerTG8uoG3J1bp2vKcquBJHe6dWsjpfYY,9
+codemail-0.1.1.dist-info/RECORD,,
