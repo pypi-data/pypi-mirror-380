@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ironBars
+Version: 0.1.0
+Summary: Small but useful Python utilities
+Author-email: Sevrus <b25bs1304@iitj.ac.in>
+License: MIT
+Project-URL: homepage, https://github.com/sevruscorporations/ironbars
+Project-URL: repository, https://github.com/sevruscorporations/ironbars
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: requests>=2.32.5
