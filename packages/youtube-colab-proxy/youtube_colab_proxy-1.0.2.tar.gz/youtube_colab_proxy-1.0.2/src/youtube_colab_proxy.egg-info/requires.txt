@@ -1,0 +1,5 @@
+yt-dlp==2025.9.23
+youtube-search-python
+flask
+portpicker
+streamlink
