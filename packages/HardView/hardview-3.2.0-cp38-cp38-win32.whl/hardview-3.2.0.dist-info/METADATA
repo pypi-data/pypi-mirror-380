@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: HardView
+Version: 3.2.0
+Summary: A comprehensive Python library for collecting hardware information and real-time performance monitoring.
+Home-page: https://github.com/gafoo173/HardView
+Author: gafoo
+Author-email: omarwaled3374@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/gafoo173/HardView/issues
+Project-URL: Source, https://github.com/gafoo173/HardView
+Keywords: hardware system monitoring performance cpu ram disk network gpu bios windows linux wmi real-time live
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: System :: Hardware
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.GPL3
+Requires-Dist: pybind11>=2.6
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+
+
+# HardView 3.2.0
+
+A comprehensive Python library for querying low-level hardware information and monitoring system performance in real-time on Windows and Linux systems.
+
+---
+
+### Additions in 3.2.0
+
+1-Added the smbios module, which retrieves hardware information on Windows by analyzing SMBIOS tables.
+
+2-Updated the __init__.py file: in previous versions, it used to copy the required DLLs to the Python directory so programs could access them. Now, it temporarily adds them to the PATH environment variable instead of copying.
+
+3-Added MSVC Runtime DLLs: the library can now use temperature functions on Windows without needing a separate MSVC Runtime installation, as the required libraries are included with the package.
+
+(All changes apply only to Windows; there are no changes for Linux.)
+
+---
+
+    
