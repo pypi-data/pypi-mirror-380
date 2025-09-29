@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: mypyc
+Version: 0.1.0
+Author-email: Jukka Lehtosalo <jukka.lehtosalo@iki.fi>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Description-Content-Type: text/x-rst
+
+Placeholder for the mypyc package
+=================================
+
+This package is holding the name `mypyc` so that no one maliciously claims it.
+
+Mypyc compiler is distributed as part of `mypy`. To install mypyc compiler use
+`pip install mypy`. To install mypyc runtime library use `pip install librt`.

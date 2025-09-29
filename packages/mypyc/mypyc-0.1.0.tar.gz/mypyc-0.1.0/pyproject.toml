@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypyc"
+description = ""
+readme = {text = """
+Placeholder for the mypyc package
+=================================
+
+This package is holding the name `mypyc` so that no one maliciously claims it.
+
+Mypyc compiler is distributed as part of `mypy`. To install mypyc compiler use
+`pip install mypy`. To install mypyc runtime library use `pip install librt`.
+""", content-type = "text/x-rst"}
+authors = [
+    {name = "Jukka Lehtosalo", email = "jukka.lehtosalo@iki.fi"},
+]
+version = "0.1.0"
+license = {text = "MIT"}
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development",
+  "Typing :: Typed",
+]

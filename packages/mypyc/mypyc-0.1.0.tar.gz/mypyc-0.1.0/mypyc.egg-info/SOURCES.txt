@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+mypyc.egg-info/PKG-INFO
+mypyc.egg-info/SOURCES.txt
+mypyc.egg-info/dependency_links.txt
+mypyc.egg-info/top_level.txt
