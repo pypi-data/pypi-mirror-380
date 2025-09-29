@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: openai_stt
+Version: 0.1.7.2
+Summary: Speech-to-Text tool using Whisper, PyAudio, and VAD.
+Author-email: Advik Mathur <pranit.advik@gmail.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: pyaudio
+Requires-Dist: webrtcvad
+Requires-Dist: keyboard
+Requires-Dist: syntaxmod
+Requires-Dist: faster-whisper>=1.2.0
+Requires-Dist: torch>=2.8.0
+Requires-Dist: openai-whisper>=20250625
+
+# STT Project
+
+Speech-to-Text tool using [Whisper](https://github.com/openai/whisper), PyAudio, and VAD for real-time transcription.
+
+## Features
+- Record for a fixed duration
+- Voice activity detection (VAD)
+- Keyboard-controlled recording
+- Temporary file handling for audio
+- Whisper-based transcription
+
+## Installation
+```bash
+pip install .
