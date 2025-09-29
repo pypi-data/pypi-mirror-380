@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE.md
+README.md
+RELEASE_NOTES.md
+pyproject.toml
+setup.py
+.github/workflows/publish-pypi.yml
+.github/workflows/release.yml
+.github/workflows/archive/publish-testpypi.yml
+textlinebreaker/__init__.py
+textlinebreaker/textlinebreaker.py
+textlinebreaker.egg-info/PKG-INFO
+textlinebreaker.egg-info/SOURCES.txt
+textlinebreaker.egg-info/dependency_links.txt
+textlinebreaker.egg-info/top_level.txt
