@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ArvoresDecisaoGPRL4"
+version = "0.1.0"
+description = "Algoritmos de árvore de decisão: CART, C4.5, ID3"
+authors = [
+    { name="Gustavo" }
+]
+dependencies = [
+    "numpy",
+    "pandas"
+]

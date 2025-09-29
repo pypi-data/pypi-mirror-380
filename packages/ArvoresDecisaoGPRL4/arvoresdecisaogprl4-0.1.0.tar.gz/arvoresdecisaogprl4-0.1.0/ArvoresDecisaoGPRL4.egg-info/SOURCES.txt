@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+ArvoresDecisaoGPRL4/__init__.py
+ArvoresDecisaoGPRL4/arvores.py
+ArvoresDecisaoGPRL4/c45.py
+ArvoresDecisaoGPRL4/cart.py
+ArvoresDecisaoGPRL4/id3.py
+ArvoresDecisaoGPRL4.egg-info/PKG-INFO
+ArvoresDecisaoGPRL4.egg-info/SOURCES.txt
+ArvoresDecisaoGPRL4.egg-info/dependency_links.txt
+ArvoresDecisaoGPRL4.egg-info/requires.txt
+ArvoresDecisaoGPRL4.egg-info/top_level.txt
