@@ -1,0 +1,8 @@
+datahub_custom_transformers/__init__.py,sha256=TmXNI5vmSMNtxvp2kVfytZFGUe6P8WowNATILHMFNCk,743
+datahub_custom_transformers/domain_structured_properties/__init__.py,sha256=xThqhGZeh2BBmdOFMdulQ2Qj65X2LbKKRlYGMYVzP8M,397
+datahub_custom_transformers/domain_structured_properties/transformer.py,sha256=gkPDzB5NA0zrwaL9aTOc4czvSXjzBjspM-WU06Dje0k,3528
+datahub_custom_transformers-0.2.1.dist-info/METADATA,sha256=0-V_93QXAqA72pu_toAikgs_523Hwpp-aErPfn1EgKY,4600
+datahub_custom_transformers-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+datahub_custom_transformers-0.2.1.dist-info/entry_points.txt,sha256=c9B3NBSckReCKgcWAaYgdNvY20hkWupzmbvWlXR9CRQ,213
+datahub_custom_transformers-0.2.1.dist-info/licenses/LICENSE,sha256=EJZLHPvbzWDvYqxyOZRx_7vCSnJ46WbQWOWhTXvFsug,1073
+datahub_custom_transformers-0.2.1.dist-info/RECORD,,
