@@ -1,0 +1,10 @@
+bibfixer/__init__.py,sha256=LH6uDE8g-cIjFTHNNRf3AAwYKDdRSwjeL16U05wKwLE,59
+bibfixer/agent.py,sha256=QPS9TKrnTIVZ8TmbJ03z55nJ6hqERcp35gcRAvZJIh8,6663
+bibfixer/cli.py,sha256=nFTcXHKV4DEXwHIyFx4wDASNHKEeds1k3AoyaVkZVNo,3974
+bibfixer/prompts/default.md,sha256=E-7HixWekIzUyjCo4hTWegUt678urbkRrVX2hRNg1k4,3152
+bibfixer-0.1.0.dist-info/licenses/LICENSE,sha256=np8L3--VyxwVJa_8D_mfK4RYrtnRMM_eeYN3rM4PMHo,1071
+bibfixer-0.1.0.dist-info/METADATA,sha256=rco1DW_v_o6sCn-rWaBDevEbbSi3LznnJS-UtA3WcJ4,6404
+bibfixer-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bibfixer-0.1.0.dist-info/entry_points.txt,sha256=g-9t2lEZVwh1cV2e0bPRAD71zVWmx9PlXcua59K5E0g,47
+bibfixer-0.1.0.dist-info/top_level.txt,sha256=GqSdw8Cr_Z-z8ibGQHrXIt-0Qh47h4pRsgWdWA2FmG4,9
+bibfixer-0.1.0.dist-info/RECORD,,
