@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython.min.js">
+    </script>
+    <!--
+        script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython_stdlib.js">
+        </script
+    -->
+    <script type="text/python" src="https://raw.githubusercontent.com/manatlan/htag/main/brython/htag.txt" id="htag"></script>
+    <style>
+    html,body {
+        width:100%;
+        height:100%;
+        padding:0px;
+        margin:0px;
+    }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body id="app">
+<script type="text/python">
+#############################################################################
+#############################################################################
+from browser import document,window
+from htag import Tag
+
+
+class Ed(Tag.div):
+    """ A class which embed the ace editor (python syntax) """
+    statics = [
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/mode-python.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/theme-cobalt.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ext-searchbox.js"),
+        Tag.script(_src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ext-language_tools.js"),
+    ]
+        
+    def init(self,value,mode="python",onsave=None,**a):
+        self.value = value
+        self["style"] = "width:100%;height:100%;"
+        self += value
+        self.onsave=onsave
+
+        self.ed=window.ace.edit(self)
+        self.ed.setTheme("ace/theme/cobalt");
+        self.ed.session.setMode( f"ace/mode/{mode}" );
+        self.ed.session.setUseWrapMode(False);
+        self.ed.setOptions({"fontSize": "12pt"});
+        self.ed.setBehavioursEnabled(False);
+        self.ed.session.setUseWorker(False);
+        self.ed.getSession().setUseSoftTabs(True);
+
+        def setShortcut(key, cb):
+            self.ed.commands.addCommand({
+                "name": key,
+                "bindKey": {"win": key,  "mac": key.replace("Ctrl","Command")},
+                "readOnly": "True", # false if this command should not apply in readOnly mode
+                "exec": cb
+            })
+    
+        setShortcut("Ctrl-S", self._save)
+        setShortcut("Ctrl-Enter",self._save)
+        
+    def _save(self,*a,**k):
+        value = self.ed.getValue()
+        self.value = value
+        if self.onsave: self.onsave(self)
+        
+############################################################################
+## example of use :
+############################################################################
+@Tag.onload    
+def main():   # will start when eveything is loaded (thanks @Tag.start)
+    def onsave(obj):
+        window.alert(obj.value)
+    
+    document["app"] <= Ed("#press CTRL-S\nprint('hello')\n", "python", onsave=onsave)
+
+############################################################################
+</script>
+
+</body>
+</html>
