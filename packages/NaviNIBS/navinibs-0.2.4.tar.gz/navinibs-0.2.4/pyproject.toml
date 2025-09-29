@@ -1,0 +1,78 @@
+[project]
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)"
+]
+name = "NaviNIBS"
+version = "0.2.4"
+description = "Software for neuronavigated non-invasive brain stimulation"
+readme = "README.md"
+authors = [
+    {name= "Christopher C. Cline", email="chriscline@users.noreply.github.com"},
+]
+license = "LGPL-3.0-only"
+
+[project.urls]
+repository = "https://github.com/PrecisionNeuroLab/NaviNIBS"
+documentation = "https://precisionneurolab.github.io/navinibs-docs"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pyzmq = "^27.0.1"
+attrs = "^25.1.0"
+numpy = "^2.3.2"
+PySide6 = "^6.9.1"
+pyqtgraph = "==0.13.3"
+pyvista = "^0.46.1"
+vtk = "^9.5.0"
+QtPy = "^2.4.3"
+matplotlib = "^3.10.5"
+QtAwesome = "^1.4.0"
+nibabel = "^5.3.2"
+pytransform3d = "^3.14.2"
+pandas = "^2.3.1"
+pyvistaqt = "^0.11.3"
+pyigtl = "^0.3.1"
+jsbeautifier = "^1.14.6"
+pylsl = "^1.16.2"
+scikit-spatial = "^9.0.1"
+simpleicp = "^2.0.14"
+#simpleicp = {git = "https://github.com/chriscline/simpleicp.git", subdirectory = "python"}
+nitransforms = "^25.0.0"
+keyboard = "^0.13.5"
+darkdetect = "^0.8.0"
+rmsd = "^1.5.1"
+xmltodict = "^0.14.2"
+platformdirs = "^4.2.2"
+concurrent-log-handler = "^0.9.28"
+pyshortcuts = "^1.9.5"
+#pyshortcuts = {git = "https://github.com/chriscline/pyshortcuts.git"}  # with spaces fix
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.4.1"
+pytest-asyncio = "^1.1.0"
+pytest-pycharm = "^0.7.0"
+pytest-qt = "^4.4.0"
+pytest-order = "^1.2.0"
+pytest-lazy-fixtures = "^1.0.5"
+pyperclip = "^1.8.2"
+aioconsole = "^0.8.1"
+pywinauto = "^0.6.8"  # TODO: maybe delete if unused
+pillow = "^11.3.0"  # for screenshots
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^80.9.0"
+ipykernel = "^6.29.5"
+
+[project.scripts]
+navinibs = "NaviNIBS.Navigator.GUI.NavigatorGUI:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
