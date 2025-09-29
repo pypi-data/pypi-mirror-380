@@ -1,0 +1,7 @@
+[project]
+name = "newsflash"
+version = "0.1.0"
+description = "A new library for Python dashboards and data apps"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

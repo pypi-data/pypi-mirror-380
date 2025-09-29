@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+newsflash.egg-info/PKG-INFO
+newsflash.egg-info/SOURCES.txt
+newsflash.egg-info/dependency_links.txt
+newsflash.egg-info/top_level.txt
