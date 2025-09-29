@@ -1,0 +1,25 @@
+[project]
+name = "py_me"
+version = "1.1.5"
+description = "Biblioteca Python com módulos para música e interface gráfica"
+authors = [{ name = "isaias da silva nobrega", email = "isaiasdasilvanobrega@gmail.com" }]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+dependencies = [
+    "pygame",
+    "pydub"
+]
+keywords = ["pygame", "pydub", "audio", "music", "tkinter", "sound", "interface", "Python", "biblioteca"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Software Development :: Libraries",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent"
+]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
