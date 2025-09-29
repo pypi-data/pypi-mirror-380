@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-datetime-library-manus"
+version = "0.1.0"
+authors = [
+  { name="Manus AI", email="support@manus.im" },
+]
+description = "A highly accurate custom datetime library built from scratch, supporting TAI, UTC, leap seconds, and timezones."
+readme = "my_datetime_library/README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Utilities",
+]
+keywords = ["datetime", "time", "TAI", "UTC", "leap seconds", "timezone", "precision"]
+
+[project.urls]
+"Homepage" = "https://github.com/manus-ai/my-datetime-library"
+"Bug Tracker" = "https://github.com/manus-ai/my-datetime-library/issues"
+
+[tool.setuptools.packages.find]
+where = ["my_datetime_library"]
+

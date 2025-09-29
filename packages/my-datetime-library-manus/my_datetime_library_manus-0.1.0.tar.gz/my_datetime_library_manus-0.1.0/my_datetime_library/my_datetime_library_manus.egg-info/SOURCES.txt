@@ -1,0 +1,8 @@
+LICENSE
+README
+pyproject.toml
+my_datetime_library/README.md
+my_datetime_library/my_datetime_library_manus.egg-info/PKG-INFO
+my_datetime_library/my_datetime_library_manus.egg-info/SOURCES.txt
+my_datetime_library/my_datetime_library_manus.egg-info/dependency_links.txt
+my_datetime_library/my_datetime_library_manus.egg-info/top_level.txt
