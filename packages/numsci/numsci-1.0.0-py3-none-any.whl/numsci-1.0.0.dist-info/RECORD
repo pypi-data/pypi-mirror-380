@@ -1,0 +1,8 @@
+numsci-1.0.0.dist-info/METADATA,sha256=09rT6Kgfc4ha6DjrrDp8XVnVNofPtLsBrw9vXv7xBAk,3037
+numsci-1.0.0.dist-info/WHEEL,sha256=5J4neoE7k6LMgx4Fz1FHgBiO3YevhJGtNQ3muDrdLQM,75
+numsci-1.0.0.dist-info/LICENSE,sha256=BQh23KIX2C_sS7JrPbz01YI8vTLbd0-pTmLLJ-n2_XE,1501
+numsci/optimize/libminpack.so,sha256=2Mov_bBKitreTs4HYfFX4iNFPtmT3r6buks6kt7_tKM,69480
+numsci/__init__.py,sha256=1TsizlKi4fAc0U0y8OROGROiHTELO8wahEEapL0ng3Y,46
+numsci/optimize/__init__.py,sha256=qWeXUL3c0eaN7Hv3hRUGKqmn4GHatLEe6tcJIfy3d4U,83
+numsci/optimize/minpackcore.py,sha256=y5S5TKBgE7oiBlUuLPw54FJEZDHJALdimBRXrgENyvk,5211
+numsci-1.0.0.dist-info/RECORD,,
