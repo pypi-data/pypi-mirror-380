@@ -1,0 +1,7 @@
+compute_mcp_service/__init__.py,sha256=jIB_A21BGC5AzbHLPMvWIWXNiwGf0NZP3t0w2gmtitA,27
+compute_mcp_service/__main__.py,sha256=t66bg4u_3FkhcRnfATr5HsUWGa6wxoGN5_W2h2cnU1M,150
+compute_mcp_service/server.py,sha256=c-7mqOvpOlOLvqM1Z11-gMaNvAOoA6TMQiJNC5T5PyY,573
+handy_compute_mcp-0.1.5.dist-info/METADATA,sha256=A_9EvqlmtQW96qsRvSGrCAmp6nkRWAmyd_PRygc3_q8,213
+handy_compute_mcp-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+handy_compute_mcp-0.1.5.dist-info/entry_points.txt,sha256=8J_rSIH4t93Hhk3SstGRAqTgBiflPVnJXNE9TeGxqiU,65
+handy_compute_mcp-0.1.5.dist-info/RECORD,,
