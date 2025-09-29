@@ -1,0 +1,16 @@
+evonet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evonet/activation.py,sha256=GMR1fL_E5z1BXHGeSPoU0aYe25Mcva-qHIFXjtrBsWc,4943
+evonet/connection.py,sha256=_UpkPKijDPU7UIMjnJr5unahvtJAI2P1FiDoIymFoJw,1920
+evonet/core.py,sha256=vn9qjXNI2h-uxstGZ805CPjQp8Fg-aTO7WxlSND56Nk,19418
+evonet/enums.py,sha256=s4EPqbHLgynPkR9ct6lLEa1c0DTNDWEeGKig4KvfKL4,1245
+evonet/io.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evonet/layer.py,sha256=5OCydkaDtUrW__mKkzvNKxjlvJbuaJDWaF9PWhRa2tU,729
+evonet/mutation.py,sha256=iHo7YgaBwk2Ui9D66Adt8wFNUabXgXJfDwPkQrM0ubg,11083
+evonet/neuron.py,sha256=8WIxzUryl21Pwna8vwz8G7CUc8JJEWEX8M9kY24t-00,3473
+evonet/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evonet/visualize.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evonet-0.1.0.dev9.dist-info/licenses/LICENSE,sha256=VVYAoiu5yropK5sjMbrwPQgkfR--1fT53CnnP2SdrlI,1063
+evonet-0.1.0.dev9.dist-info/METADATA,sha256=VzoTw8iBe32g4JrKewLb9JrS4Jycz9iz6D990EOyJCU,4218
+evonet-0.1.0.dev9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+evonet-0.1.0.dev9.dist-info/top_level.txt,sha256=3mPKZ-gikrQnfrX1k5cXDQEkQCplzAJ6vfgpMuZVXts,7
+evonet-0.1.0.dev9.dist-info/RECORD,,
