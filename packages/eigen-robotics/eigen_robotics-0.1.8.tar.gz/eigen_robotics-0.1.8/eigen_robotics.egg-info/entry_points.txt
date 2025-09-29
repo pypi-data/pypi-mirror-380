@@ -1,0 +1,2 @@
+[console_scripts]
+eigen = eigen_robotics.cli:main_wrapper
