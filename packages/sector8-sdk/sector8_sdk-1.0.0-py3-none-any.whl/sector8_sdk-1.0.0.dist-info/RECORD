@@ -1,0 +1,11 @@
+sector8/__init__.py,sha256=FO88ac_Yqg1D6JN9KzcL0X0UU601k1d4ESNyav3TgPI,13105
+sector8/config_wizard.py,sha256=Zs01Yez2NhQ2cetUcItNVQCnxrvg7CpNTletqUtKIaU,15660
+sector8/errors.py,sha256=Gx_GpYf0LliIj0JwvyuZhhh-2Fbkb1eBbyfSYynxaE4,16860
+sector8/py.typed,sha256=fDUY3AqEcQHC01aGMGdCqP2qwZXb9ILFNzjSSBBwh1U,61
+sector8/simple_client.py,sha256=TKeWe0M7Y_GdbHevHudUO_Z47M3NYqio0XP0GcM0Ikc,17105
+sector8_sdk-1.0.0.dist-info/licenses/LICENSE,sha256=--S_I3c61DU-_9ws0Ud3HQNgf0J2V5MRlfCRiJaUeEw,1084
+sector8_sdk-1.0.0.dist-info/METADATA,sha256=dvxJgIHvg7zRS5HCqfE1tbOmyx445TFJWdloogMR3X0,16089
+sector8_sdk-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sector8_sdk-1.0.0.dist-info/entry_points.txt,sha256=b5EafCp8kCWmV9Q3GypIe3M_0j4RsYjMXyinMIIEC8c,427
+sector8_sdk-1.0.0.dist-info/top_level.txt,sha256=VWb187G2d5Sa5bku6zEOVIhxKpL7-cvEe8obyYSaki8,8
+sector8_sdk-1.0.0.dist-info/RECORD,,

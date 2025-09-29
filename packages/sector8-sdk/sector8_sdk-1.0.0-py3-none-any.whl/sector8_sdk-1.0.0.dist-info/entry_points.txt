@@ -1,0 +1,13 @@
+[console_scripts]
+sector8 = sector8.cli:main
+
+[sector8.guards]
+anthropic = sector8.guard.providers:AnthropicGuard
+google = sector8.guard.providers:GoogleGuard
+openai = sector8.guard.providers:OpenAIGuard
+
+[sector8.providers]
+anthropic = sector8.providers.anthropic:AnthropicProvider
+azure = sector8.providers.azure:AzureProvider
+google = sector8.providers.google:GoogleProvider
+openai = sector8.providers.openai:OpenAIProvider
