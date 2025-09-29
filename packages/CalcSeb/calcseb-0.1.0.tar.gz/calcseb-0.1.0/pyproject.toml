@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CalcSeb"
+version = "0.1.0"
+description = "La colaboración más loca y chévere que jamás se ha hecho"
+readme = "README.md"
+authors = [
+    { name = "Sebastian Rodriguez Garcia", email = "sebrodriguezg@udistrital.edu.co" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "plotly"
+]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["CalcSeb*"]
+
+[project.urls]
+Homepage = "https://github.com/configurarpc/calculadora"
