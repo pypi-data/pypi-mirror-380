@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "blogger2hugo"
+version = "0.1.0"
+description = "Convert a Blogger Atom export to Hugo Markdown with configurable slugs and link sanitization."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Hamed Faramarzi", email = "hamed.faramarzi@gmail.com" }
+]
+keywords = ["blogger", "hugo", "markdown", "converter", "static-site"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Text Processing :: Markup :: Markdown",
+  "Topic :: Utilities",
+]
+
+dependencies = [
+  "html2text>=2020.1.16",
+  "python-slugify>=8.0.0",
+  "beautifulsoup4>=4.12.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/blogger2hugo"
+Issues = "https://github.com/yourname/blogger2hugo/issues"
+
+[project.scripts]
+blogger2hugo = "blogger2hugo.cli:main"
