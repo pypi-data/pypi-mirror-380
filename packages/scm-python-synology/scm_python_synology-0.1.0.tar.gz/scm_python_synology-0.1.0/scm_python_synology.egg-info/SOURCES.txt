@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+scm_python_synology.egg-info/PKG-INFO
+scm_python_synology.egg-info/SOURCES.txt
+scm_python_synology.egg-info/dependency_links.txt
+scm_python_synology.egg-info/requires.txt
+scm_python_synology.egg-info/top_level.txt
+scm_python_synology/lib/synology_deploy.py
+scm_python_synology/tapps/deploy/synology.py
