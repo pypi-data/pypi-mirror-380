@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: MedImageInsights
+Version: 0.1.0
+Summary: Pip library for MedImageInsights medical model
+Home-page: https://github.com/joortif/MedImageInsights
+Author: Joaquin Ortiz de Murua Ferrero
+Author-email: joortif@unirioja.es
+Maintainer: Joaquin Ortiz de Murua Ferrero
+Maintainer-email: joortif@unirioja.es
+Requires-Python: >=3.8.19
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: einops>=0.8.1
+Requires-Dist: fvcore>=0.1.5.post20221221
+Requires-Dist: mpi4py>=4.1.0
+Requires-Dist: mup>=1.0.0
+Requires-Dist: numpy>=1.24.4
+Requires-Dist: Pillow>=11.3.0
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: Requests>=2.32.5
+Requires-Dist: safetensors>=0.6.2
+Requires-Dist: tenacity>=9.1.2
+Requires-Dist: timm>=0.6.12
+Requires-Dist: tornado>=6.4.1
+Requires-Dist: torch>=2.8.0
+Requires-Dist: torchvision>=0.23.0
+Requires-Dist: transformers>=4.56.1
+Requires-Dist: yacs>=0.1.8
+Requires-Dist: hf_xet>=1.1.10
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-python
+
+## PROJECT IN PROCESS
