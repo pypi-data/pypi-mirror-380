@@ -1,0 +1,9 @@
+biotime/__init__.py,sha256=WwJ9fGruc-OTNBeaxojL8IC5P_gJ9CidSTnQtpQX06Q,170
+biotime/core.py,sha256=s3TRYj5cD3dpcfOklbAHPgeSNLLPSO1RK4VxjtbNnrc,11036
+biotime/exceptions.py,sha256=_B-4iPcLPyITQa0FVc07ko4c8gsandduyki1zygMBYI,201
+biotime/utils.py,sha256=Ls6qZcKTD9OndhJ9xGjkFmPuIn-bExDMl5po3JE9S-M,287
+biotime-1.1.dist-info/licenses/LICENSE,sha256=AiwvvJ3dNkCnLFuamsamAzT-ImdZxf2Yp6Bat1WtJMY,1073
+biotime-1.1.dist-info/METADATA,sha256=6iRHAZwUCKxTDAkh5WGBNZLcH11JZ4cGrmza0N9dtOs,1960
+biotime-1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+biotime-1.1.dist-info/top_level.txt,sha256=Fvy02MWb0Bu053Gx_1DPleW3ICHUalIzLLlwq3Al6C4,8
+biotime-1.1.dist-info/RECORD,,
