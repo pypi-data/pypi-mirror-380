@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+SantiagoCalc/__init__.py
+SantiagoCalc/calculadora.py
+SantiagoCalc.egg-info/PKG-INFO
+SantiagoCalc.egg-info/SOURCES.txt
+SantiagoCalc.egg-info/dependency_links.txt
+SantiagoCalc.egg-info/top_level.txt
+test/test_calculadora.py
