@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: sheet_sqa
+Version: 0.2.5
+Summary: Speech Human Evaluation Estimation Toolkit (SHEET)
+Home-page: https://github.com/unilight/sheet
+Author: Wen-Chin Huang
+Author-email: wen.chinhuang@g.sp.m.is.nagoya-u.ac.jp
+License: MIT
+Project-URL: Source, https://github.com/unilight/sheet
+Project-URL: Tracker, https://github.com/unilight/sheet/issues
+Keywords: speech quality assessment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: librosa>=0.8.0
+Requires-Dist: soundfile>=0.10.2
+Requires-Dist: pyyaml
+Requires-Dist: h5py>=2.9.0
+Requires-Dist: filelock
+Requires-Dist: protobuf<=3.20.1
+Requires-Dist: scipy
+Requires-Dist: s3prl
+Requires-Dist: faiss-cpu
+Provides-Extra: train
+Requires-Dist: matplotlib>=3.1.0; extra == "train"
+Requires-Dist: tqdm>=4.26.1; extra == "train"
+Requires-Dist: gdown; extra == "train"
+Requires-Dist: tensorboardX; extra == "train"
+Requires-Dist: kaldiio>=2.14.1; extra == "train"
+Requires-Dist: humanfriendly; extra == "train"
+Requires-Dist: prettytable; extra == "train"
+Dynamic: license-file
+
+README.md
