@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: shopiuu_api
+Version: 0.0.2
+Summary: Shopiuu API Library for Python
+Project-URL: Homepage, https://gitee.com/shopiuu/shopiuu-api-python
+Project-URL: Issues, https://gitee.com/shopiuu/shopiuu-api-python/issues
+Author-email: wic <shopiuu@outlook.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Shopiuu API Python
+
+#### Description
+Shopiuu API Library for Python
+
+#### Installation
+
+pip install shopiuu-api
+
+#### Instructions
+
+Please browse the files in the example folder for usage examples.
