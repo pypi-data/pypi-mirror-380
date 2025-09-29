@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: neurozip
+Version: 0.1.1
+Summary: Dimensionality Reduction for Brain Imaging Data
+Author-email: Daniel Ramandi <ramandi18@gmail.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.3,>=1.26.0
+Requires-Dist: pillow==11.3.0
+Requires-Dist: scipy==1.14.1
+Requires-Dist: aspis==0.2.0
+Requires-Dist: pandas==2.3.2
+Requires-Dist: matplotlib==3.10.0
+Provides-Extra: dev
+Requires-Dist: black==24.10.0; extra == "dev"
+Requires-Dist: flake8==7.1.1; extra == "dev"
+Requires-Dist: flake8-import-order==0.18.2; extra == "dev"
+Requires-Dist: twine==5.1.1; extra == "dev"
+Provides-Extra: test
+Requires-Dist: black==24.10.0; extra == "test"
+Requires-Dist: flake8==7.1.1; extra == "test"
+Requires-Dist: flake8-import-order==0.18.2; extra == "test"
+Dynamic: license-file
+
+# neurozip
