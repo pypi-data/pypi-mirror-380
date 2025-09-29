@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+midiviz/__init__.py
+midiviz/themes.py
+midiviz/visualizer.py
+midiviz.egg-info/PKG-INFO
+midiviz.egg-info/SOURCES.txt
+midiviz.egg-info/dependency_links.txt
+midiviz.egg-info/requires.txt
+midiviz.egg-info/top_level.txt
+midiviz/static/main.js
