@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: superpdf_vl_utils
+Version: 0.1.13
+Summary: Utilities for SuperPdf Vision-Language models
+Home-page: https://github.com/xxx/superai
+Author: Owen
+Author-email: Jin Zhen Jiang <jinzhenjiang@pjlab.org.cn>
+License-Expression: AGPL-3.0
+Project-URL: Homepage, https://github.com/XXXXX/superpdf-vl-utils
+Project-URL: Issues, https://github.com/XXXXX/superpdf-vl-utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: httpx
+Requires-Dist: aiofiles
+Requires-Dist: pillow
+Requires-Dist: pydantic
+Provides-Extra: transformers
+Requires-Dist: torch<3,>=2.6.0; extra == "transformers"
+Requires-Dist: transformers<5.0.0,>=4.51.1; extra == "transformers"
+Requires-Dist: accelerate>=1.5.1; extra == "transformers"
+Requires-Dist: torchvision; extra == "transformers"
+Provides-Extra: vllm
+Requires-Dist: vllm<0.11,>=0.10.1.1; extra == "vllm"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
