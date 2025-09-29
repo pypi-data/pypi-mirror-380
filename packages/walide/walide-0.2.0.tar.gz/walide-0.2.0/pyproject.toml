@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walide"
+version = "0.2.0"
+authors = [
+  { name = "Wally Hao", email = "1276672206@qq.com" }
+]
+description = "A differential evolution optimization toolbox"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Software Development :: Libraries"
+]
+
+dependencies = [
+  "numpy>=1.21.0",
+  "numba>=0.55.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "flake8>=4.0",
+  "black>=22.0",
+  "mypy>=0.990"
+]
+docs = [
+  "sphinx>=5.0",
+  "sphinx-rtd-theme>=1.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/waliwuao/walide"
+Repository = "https://github.com/waliwuao/walide"
+Issues = "https://github.com/waliwuao/walide/issues"
