@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/agushuju/__init__.py
+src/agushuju/client.py
+src/agushuju.egg-info/PKG-INFO
+src/agushuju.egg-info/SOURCES.txt
+src/agushuju.egg-info/dependency_links.txt
+src/agushuju.egg-info/not-zip-safe
+src/agushuju.egg-info/requires.txt
+src/agushuju.egg-info/top_level.txt
+src/aigushuju/__init__.py
