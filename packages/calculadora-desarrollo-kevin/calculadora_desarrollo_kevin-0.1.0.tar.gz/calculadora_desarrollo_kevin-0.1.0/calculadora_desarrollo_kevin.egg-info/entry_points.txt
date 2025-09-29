@@ -1,0 +1,2 @@
+[console_scripts]
+calculadora = calculadoradesarrollo.Calculadoradesarrollo:main

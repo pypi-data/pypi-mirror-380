@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculadora-desarrollo-kevin"
+version = "0.1.0"
+description = "Calculadora básica en Python con estados"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name="Kevin Cruz", email="kacruzv@udistrital.edu.co" }
+]
+license = {text = "MIT"}
+
+[project.scripts]
+calculadora = "calculadoradesarrollo.Calculadoradesarrollo:main"

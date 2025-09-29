@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+calculadora_desarrollo_kevin.egg-info/PKG-INFO
+calculadora_desarrollo_kevin.egg-info/SOURCES.txt
+calculadora_desarrollo_kevin.egg-info/dependency_links.txt
+calculadora_desarrollo_kevin.egg-info/entry_points.txt
+calculadora_desarrollo_kevin.egg-info/top_level.txt
+calculadoradesarrollo/Calculadoradesarrollo.py
+calculadoradesarrollo/__init__.py
