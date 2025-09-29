@@ -1,0 +1,9 @@
+kmsauth/__init__.py,sha256=oZNV2s9ZVRc_TxPpBrkVMjOZf7l7WLyHZTwPBDRF8nw,26500
+kmsauth/services.py,sha256=X9MjAAYC3gGTgH6YhLa3yVJTHCQ0GZpmdyAm4VG3GyA,2729
+kmsauth/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kmsauth/utils/lru.py,sha256=ciubwljHoBSDIj3Y3cE1OsOW44f9J9SXsT5G5Z5RUmk,651
+kmsauth-0.6.4.dev7.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+kmsauth-0.6.4.dev7.dist-info/METADATA,sha256=TIkeqyYGC-RlgD_ETi2GEV2OhtT6xmI-KJqUDiCOUP0,317
+kmsauth-0.6.4.dev7.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+kmsauth-0.6.4.dev7.dist-info/top_level.txt,sha256=88M50pcwBGET1mvu5Kv8RaxR64z18lmJ-I9NtrJPU8g,8
+kmsauth-0.6.4.dev7.dist-info/RECORD,,
