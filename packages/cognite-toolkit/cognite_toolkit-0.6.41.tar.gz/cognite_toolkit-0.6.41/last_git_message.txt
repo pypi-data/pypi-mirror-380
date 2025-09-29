@@ -1,0 +1,32 @@
+[CDF-25741] 🚀 Migration files v2 (#1962)
+
+# Description
+
+Stacked on<del> #1952 #1923 #1953, #1954, #1965</del>
+
+**Context**: This is part of the `alpha` migration tooling in Toolkit,
+for overview [see
+here](https://cognitedata.atlassian.net/wiki/spaces/~170890702/pages/5455773697/Migration+Tooling+in+Toolkit).
+This is step 3 of that process.
+
+This PR introduces support for file migration v2. This is built upon the
+newly introduced generic migration command, which have logging, support
+migrating to an arbitrary view, and an idempotent behavior.
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Added
+
+- [alpha] Version 2 of files migration
+
+## templates
+
+No changes.
+
+
