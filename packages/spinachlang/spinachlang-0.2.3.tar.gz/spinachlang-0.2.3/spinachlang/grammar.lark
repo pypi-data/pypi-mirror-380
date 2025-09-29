@@ -1,0 +1,39 @@
+start: (_NL* statement _NL*)+
+
+%import common.WS_INLINE
+%import common.NEWLINE -> _NL
+%ignore WS_INLINE
+%ignore /#[^\n]*/
+
+statement: declaration
+         | action
+
+// Declarations
+declaration: qubit_declaration
+           | list_declaration
+           | instruction_declaration
+
+qubit_declaration: NAME ":" "q"? NUMBER
+bit_declaration: NAME ":" "b" NUMBER 
+list_declaration: NAME ":" list
+instruction_declaration: NAME ":" gate_pip
+
+// Gate pipelines like A | B | my_instruction
+gate_pip: (gate_pipe_by_name | gate) ("|" (gate | gate_pipe_by_name ))*
+gate_pipe_by_name: NAME [REVERSE_ARROW]
+// Allow: GATE, GATE(), GATE(arg, ...) 
+gate: UPPER_NAME ["(" [args] ")"] -> gate_call
+args: (NAME | NUMBER) ("," (NAME | NUMBER))*
+
+// Actions: q1 -> gate or q1 -> my_instruction
+action: ( NAME | NUMBER | list | ALL) "->" [NUMBER] (gate_pip)
+
+// List of names
+list: "[" (NAME | NUMBER) ("," (NAME | NUMBER))* "]"
+
+// Identifiers
+NAME: /[a-z][a-zA-Z0-9_]*/
+UPPER_NAME: /[A-Z]+/
+NUMBER: /\d+/
+REVERSE_ARROW: "<-"
+ALL: "*"
