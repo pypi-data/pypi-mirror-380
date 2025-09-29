@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: subdivision_smoothing
+Version: 0.1.0
+Summary: A Python package for subdivision and smoothing of 3D meshes.
+License-File: LICENSE
+Requires-Dist: numba>=0.61.2
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: scipy>=1.16.2
+Requires-Dist: trimesh>=4.7.1
+Provides-Extra: dev
+Requires-Dist: coloraide>=5.1; extra == 'dev'
+Requires-Dist: networkx>=3.5; extra == 'dev'
+Requires-Dist: numpy>=2.3.3; extra == 'dev'
+Requires-Dist: pyvista>=0.46.1; extra == 'dev'
