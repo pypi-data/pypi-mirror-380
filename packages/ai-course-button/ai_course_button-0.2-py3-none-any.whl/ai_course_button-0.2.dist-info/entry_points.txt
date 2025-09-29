@@ -1,0 +1,5 @@
+[cms.djangoapp]
+ai_course_button = ai_course_button.apps:AICourseButtonConfig
+
+[lms.djangoapp]
+ai_course_button = ai_course_button.apps:AICourseButtonConfig
