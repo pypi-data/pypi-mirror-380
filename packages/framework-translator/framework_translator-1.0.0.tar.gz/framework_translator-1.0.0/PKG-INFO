@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: framework_translator
+Version: 1.0.0
+Summary: CLI to translate code across frameworks using an OpenAI fine-tuned model.
+Author-email: Eitan Tuchin <eitantuchin@gmail.com>, Vennela Reddy Singireddy <vennela5@iastate.edu>, Prashanth Kambalapally <kambala@iastate.edu>, Liban Ahmed <lahmed@iastate.edu>, Tirmidi Mohamed <tmohamed@iastate.edu>
+License: MIT
+Keywords: CLI,LLM,code-translation,frameworks
+Requires-Dist: cryptography>=42.0.4
+Requires-Dist: openai>=1.109.1
+Requires-Dist: platformdirs>=4.4.0
+Requires-Dist: termcolor>=3.1.0
+Description-Content-Type: text/markdown
+
+# framework_translator
+
+CLI to translate code across frameworks using an OpenAI fine-tuned model.

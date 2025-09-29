@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.pipenv/
+.poetry/
+
+# Machine Learning artifacts
+*.h5
+*.ckpt
+*.pth
+*.pt
+*.joblib
+*.pkl
+*.csv
+*.tsv
+*.npy
+*.npz
+*.log
+*.mlmodel
+
+# Data files
+data/
+datasets/
+*.sqlite3
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test and coverage reports
+htmlcov/
+.coverage
+.tox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+scripts/local_run_script.sh
+Dockerfile
+terraform
+gcs-key.json

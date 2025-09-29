@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "framework_translator"
+version = "1.0.0"
+description = "CLI to translate code across frameworks using an OpenAI fine-tuned model."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Eitan Tuchin", email = "eitantuchin@gmail.com" },
+  { name = "Vennela Reddy Singireddy", email = "vennela5@iastate.edu" },
+  { name = "Prashanth Kambalapally", email = "kambala@iastate.edu" },
+  { name = "Liban Ahmed", email = "lahmed@iastate.edu" },
+  { name = "Tirmidi Mohamed", email = "tmohamed@iastate.edu" }
+]
+keywords = ["LLM", "code-translation", "frameworks", "CLI"]
+dependencies = [
+  "openai>=1.109.1",
+  "termcolor>=3.1.0",
+  "platformdirs>=4.4.0",
+  "cryptography>=42.0.4",
+]
+
+[project.scripts]
+# Note: module path must match your package module. Keep aligned with your src/ tree.
+ft = "framework_translator.cli:main"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/framework_translator", "README.md", "LICENSE*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/framework_translator"]
