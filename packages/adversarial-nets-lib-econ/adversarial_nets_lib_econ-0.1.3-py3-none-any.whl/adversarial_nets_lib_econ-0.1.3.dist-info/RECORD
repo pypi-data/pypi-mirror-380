@@ -1,0 +1,14 @@
+adversarial_nets/__init__.py,sha256=fBoRz1roZ721BGOlosKfxpEjsY8dYNeFfd4Ps_KxUR0,818
+adversarial_nets/data/__init__.py,sha256=V1_hgwlbydiiv7ZJl6Pw4S_nH7oluUIqJyEF4VhJNrY,59
+adversarial_nets/data/data.py,sha256=WpQfSshBnN1eVao8WSEaAGLPAVlqC62VK28hbC4wXUY,373
+adversarial_nets/estimator/__init__.py,sha256=SqExqLjfaN8cUG6yMX1hJXXRZGXbh1lRqdXqOJMXDm8,79
+adversarial_nets/estimator/estimator.py,sha256=SQpOO4vtpZazEpuc9FXFdBz-rYzuJH6OBaFKdvdyl9Q,15793
+adversarial_nets/generator/__init__.py,sha256=RNvIdtSD6eKHEXPHfeNTEwIsgbrFonYrnwUhQm475hw,183
+adversarial_nets/generator/generator.py,sha256=yjxucmTDbRPJWDazNPPePjGtOElZbCWbpRrY1EsYI7E,6179
+adversarial_nets/utils/__init__.py,sha256=sKD7lYjdSPkP33M7_r6PDsDmNoTHJLCF7aI-wEuz8eM,185
+adversarial_nets/utils/utils.py,sha256=o2kBpIQtOUeeFSZGPZug3zdNbkG1pmpescCTHbjOHDA,9036
+adversarial_nets_lib_econ-0.1.3.dist-info/licenses/LICENSE,sha256=ZQva3t2qvxIFLAG1sQIfdOqETXl-H6J2cu76elMBhdA,1064
+adversarial_nets_lib_econ-0.1.3.dist-info/METADATA,sha256=OWZNO8L2QBchZs2ri8myypEWEJSVTefkMI2xE4fRZ2U,7151
+adversarial_nets_lib_econ-0.1.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+adversarial_nets_lib_econ-0.1.3.dist-info/top_level.txt,sha256=JxjNi3lXWjblfRIpNhWKQQ4VwzZRcmcrGWbRh2Jnmdw,17
+adversarial_nets_lib_econ-0.1.3.dist-info/RECORD,,
