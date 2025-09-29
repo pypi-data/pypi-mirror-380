@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/simple_calculator_almakdye.egg-info/PKG-INFO
+src/simple_calculator_almakdye.egg-info/SOURCES.txt
+src/simple_calculator_almakdye.egg-info/dependency_links.txt
+src/simple_calculator_almakdye.egg-info/entry_points.txt
+src/simple_calculator_almakdye.egg-info/top_level.txt
+tests/test_calculator.py
