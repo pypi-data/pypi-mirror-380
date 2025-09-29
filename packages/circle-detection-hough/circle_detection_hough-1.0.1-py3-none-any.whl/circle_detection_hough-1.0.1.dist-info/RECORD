@@ -1,0 +1,8 @@
+circle_detection_sdk/__init__.py,sha256=XSdX-FT6vz8gZGHzYFUBZYfB8pmZRML3PlA0-dRo648,521
+circle_detection_sdk/main.py,sha256=gZYvE98dkzhcIBGGEpF81OAxRi8h0HhVlYQhWvmreZI,58054
+circle_detection_sdk/models/best1.pt,sha256=Fcm3nvEXcreo_OVMDDGe7kWh1ibU5ykHA6oEY5LsdlI,19158099
+circle_detection_hough-1.0.1.dist-info/METADATA,sha256=pVYsFPPF6oG2pghFUDIhDvnzk69QgNRgaYNyUvOIGdw,9588
+circle_detection_hough-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+circle_detection_hough-1.0.1.dist-info/entry_points.txt,sha256=iTjinrAlrtiuOj2ymfM5yKaMV5fX_2-_-9iHPTbceaY,64
+circle_detection_hough-1.0.1.dist-info/top_level.txt,sha256=KCO9EOoNutL08ud-Era7Au-cGkBaUw7lVMevg8VKens,21
+circle_detection_hough-1.0.1.dist-info/RECORD,,

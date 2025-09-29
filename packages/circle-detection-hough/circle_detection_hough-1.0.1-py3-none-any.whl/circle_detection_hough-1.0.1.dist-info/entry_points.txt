@@ -1,0 +1,2 @@
+[console_scripts]
+circle-detect = circle_detection_sdk.cli:main
