@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "henosis-cli"
+version = "0.3.0"
+description = "Henosis CLI — the BEST terminal agent designed for uncompromising performance"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+authors = [{ name = "henosis", email = "henosis@henosis.us" }]
+license = "LicenseRef-Proprietary"
+dependencies = [
+  "httpx>=0.28.1",
+  # Make the nicer UI the default experience
+  "rich>=13.7.0",
+  "prompt_toolkit>=3.0.38",
+]
+
+# Optional but recommended metadata for PyPI
+keywords = [
+  "henosis",
+  "cli",
+  "terminal",
+  "agent",
+  "automation",
+  "tools",
+  "filesystem",
+  "sandbox",
+  "patch",
+  "subprocess",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Utilities",
+  "Intended Audience :: Developers",
+]
+
+[project.urls]
+Homepage = "https://henosis.us"
+Contact = "https://henosis.us/contact"
+
+[project.scripts]
+# Installable console command for the chat client
+henosis-cli = "cli:main"
+
+# Optional extras for a nicer UI and Agent Mode (not required for basic use)
+[project.optional-dependencies]
+cli-ui = [
+  "rich>=13.0.0",
+  "prompt_toolkit>=3.0.38",
+]
+ws = [
+  "websockets>=11",
+]
+
+[tool.setuptools]
+packages = ["henosis_cli_tools"]
+# Ship only the chat client (cli.py) and the local tools library
+py-modules = ["cli"]
