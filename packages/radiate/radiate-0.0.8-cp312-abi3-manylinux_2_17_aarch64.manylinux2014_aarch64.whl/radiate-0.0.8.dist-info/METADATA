@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: radiate
+Version: 0.0.8
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: matplotlib>=3.10.6 ; extra == 'dev'
+Requires-Dist: maturin>=1.9.4 ; extra == 'dev'
+Requires-Dist: numpy>=2.3.3 ; extra == 'dev'
+Requires-Dist: pillow>=11.3.0 ; extra == 'dev'
+Requires-Dist: numba>=0.62.0 ; extra == 'test'
+Requires-Dist: numpy>=2.3.3 ; extra == 'test'
+Requires-Dist: pytest>=8.4.2 ; extra == 'test'
+Requires-Dist: pytest-xdist>=3.8.0 ; extra == 'test'
+Provides-Extra: dev
+Provides-Extra: test
+Summary: A fast and flexible evolution engine for implementing artificial evolution and genetic programming techniques.
+Home-Page: https://pkalivas.github.io/radiate/
+Requires-Python: >=3.12
