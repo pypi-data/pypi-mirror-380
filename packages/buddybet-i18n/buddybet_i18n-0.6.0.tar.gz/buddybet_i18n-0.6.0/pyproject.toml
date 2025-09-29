@@ -1,0 +1,25 @@
+[project]
+name = "buddybet-i18n"
+version = "0.6.0"
+description = "Language internationalization library"
+authors = [
+    {name = "ricardomarzochi07",email = "ricardomarzochi@gmail.com"}
+]
+readme = "README.md"
+keywords = ["i18n", "idioma"]
+homepage = "https://github.com/tuusuario/jwt-validator"
+repository = "https://github.com/tuusuario/jwt-validator"
+documentation = "https://github.com/tuusuario/jwt-validator"
+requires-python = ">=3.12"
+dependencies = [
+    "i18n (>=0.2,<0.3)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+
