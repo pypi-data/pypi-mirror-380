@@ -1,0 +1,11 @@
+[project]
+name = "okeanTweak"
+version = "0.1.0"
+description = "Okean tweak tool"
+authors = [{name="Ashish"}]
+dependencies = ["psycopg2"]
+requires-python = ">=3.8"
+
+[project.scripts]
+okeanTweak = "okeanTweak.main:cli"
+

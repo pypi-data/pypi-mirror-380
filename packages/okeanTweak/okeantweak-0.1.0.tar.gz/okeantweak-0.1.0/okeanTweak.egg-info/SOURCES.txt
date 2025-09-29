@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+okeanTweak/__init__.py
+okeanTweak/main.py
+okeanTweak.egg-info/PKG-INFO
+okeanTweak.egg-info/SOURCES.txt
+okeanTweak.egg-info/dependency_links.txt
+okeanTweak.egg-info/entry_points.txt
+okeanTweak.egg-info/requires.txt
+okeanTweak.egg-info/top_level.txt
