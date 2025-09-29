@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: simple-calculator-almakdye
+Version: 0.1.0
+Summary: Simple calculator CLI by Ahmed Almakhdhi
+Author: Ahmed Almakhdhi
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# simple-calculator-almakdye
+
+Simple calculator CLI (Arabic).
+
+Author: Ahmed Almakhdhi
+
+Usage (development):
+- Create and activate venv
+- Run: `python -m simple_calculator_almakdye.cli`
+
+After installation:
+- Run: `simple-calculator-almakdye`

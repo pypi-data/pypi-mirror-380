@@ -1,0 +1,2 @@
+[console_scripts]
+simple-calculator-almakdye = simple_calculator_almakdye.cli:main
