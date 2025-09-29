@@ -1,0 +1,212 @@
+############################################################
+# -*- coding: utf-8 -*-
+#
+#       #   #  #   #   #    #
+#      ##  ##  #  ##  #    #
+#     # # # #  # # # #    #  #
+#    #  ##  #  ##  ##    ######
+#   #   #   #  #   #       #
+#
+# Python-based Tool for interaction with the 10micron mounts
+# GUI with PySide6 for python3
+#
+# written in python3, (c) 2019-2025 by mworion
+# Licence APL2.0
+#
+###########################################################
+
+name: unit_win
+
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+
+env:
+  cov: '--cov=mw4/ --cov-append'
+
+on:
+  push:
+    # Run this action on the trigger event when specific files are touched
+    paths:
+      - 'mw4/**'
+      - 'tests/unit_tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/unit_win.yml'
+      - '.github/actions/build_package/action.yml'
+      - '.github/actions/setup_test/action.yml'
+jobs:
+  build_package:
+    #
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: build package
+        uses: ./.github/actions/build_package
+
+  run_tests_windows_0:
+    #
+    needs: build_package
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: install package
+        uses: ./.github/actions/setup_test_cov
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/loader ${{env.cov}}
+          pytest tests/unit_tests/update ${{env.cov}}
+          
+      - name: rename_coveragefile
+        run: mv .coverage c0.dat
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c0
+          path: c0.dat
+
+  run_tests_windows_1:
+    #
+    needs: build_package
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: install package
+        uses: ./.github/actions/setup_test_cov
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/gui/mainWindow ${{env.cov}}
+          
+      - name: rename_coveragefile
+        run: mv .coverage c1.dat
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c1
+          path: c1.dat
+
+  run_tests_windows_2:
+    #
+    needs: build_package
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: install package
+        uses: ./.github/actions/setup_test_cov
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/mainApp ${{env.cov}}
+          
+      - name: rename_coveragefile
+        run: mv .coverage c2.dat
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c2
+          path: c2.dat
+
+  run_tests_windows_3:
+    #
+    needs: build_package
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      - name: install package
+        uses: ./.github/actions/setup_test_cov
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/base ${{env.cov}}
+          pytest tests/unit_tests/logic ${{env.cov}}
+          pytest tests/unit_tests/mountcontrol ${{env.cov}}
+          pytest tests/unit_tests/indibase ${{env.cov}}
+          
+      - name: rename_coveragefile
+        run: mv .coverage c3.dat
+        
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c3
+          path: c3.dat
+
+  run_tests_windows_4:
+    #
+    needs: build_package
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+  
+      - name: install package
+        uses: ./.github/actions/setup_test_cov
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/gui/extWindows ${{env.cov}}
+          pytest tests/unit_tests/gui/extWindows/video ${{env.cov}}
+          pytest tests/unit_tests/gui/extWindows/image ${{env.cov}}
+          pytest tests/unit_tests/gui/extWindows/hemisphere ${{env.cov}}
+          pytest tests/unit_tests/gui/extWindows/simulator ${{env.cov}}
+          pytest tests/unit_tests/gui/utilities ${{env.cov}}
+          pytest tests/unit_tests/gui/styles ${{env.cov}}
+          pytest tests/unit_tests/gui/mainWaddon ${{env.cov}}
+         
+      - name: rename_coveragefile
+        run: mv .coverage c4.dat
+        
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c4
+          path: c4.dat
+
+  coverage:
+    #
+    needs: [ run_tests_windows_0, run_tests_windows_1,
+             run_tests_windows_2, run_tests_windows_3,
+             run_tests_windows_4]
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/download-artifact@v4
+        with:
+          name: c0
+      - uses: actions/download-artifact@v4
+        with:
+          name: c1
+      - uses: actions/download-artifact@v4
+        with:
+          name: c2
+      - uses: actions/download-artifact@v4
+        with:
+          name: c3
+      - uses: actions/download-artifact@v4
+        with:
+          name: c4
+          
+      - name: combining_data
+        run: |
+          dir
+          python -m pip install coverage
+          python -m coverage combine c0.dat c1.dat c2.dat c3.dat c4.dat
+          python -m coverage xml
+  
+      - name: upload
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          env_vars: OS,PYTHON

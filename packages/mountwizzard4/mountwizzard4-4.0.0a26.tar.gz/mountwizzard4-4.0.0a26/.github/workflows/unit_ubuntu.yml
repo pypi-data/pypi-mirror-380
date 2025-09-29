@@ -1,0 +1,93 @@
+############################################################
+# -*- coding: utf-8 -*-
+#
+#       #   #  #   #   #    #
+#      ##  ##  #  ##  #    #
+#     # # # #  # # # #    #  #
+#    #  ##  #  ##  ##    ######
+#   #   #   #  #   #       #
+#
+# Python-based Tool for interaction with the 10micron mounts
+# GUI with PySide6 for python3
+#
+# written in python3, (c) 2019-2025 by mworion
+# Licence APL2.0
+#
+###########################################################
+
+name: unit_ubuntu
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+
+on:
+  push:
+    # Run this action on the trigger event when specific files are touched
+    paths:
+      - 'mw4/**'
+      - 'tests/unit_tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/unit_ubuntu.yml'
+      - '.github/actions/install_ubuntu_head/action.yml'
+      - '.github/actions/build_package/action.yml'
+      - '.github/actions/setup_test/action.yml'
+
+jobs:
+  build_package:
+    #
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: build package
+        uses: ./.github/actions/build_package
+        
+  run_tests_ubuntu_1:
+    #
+    needs: build_package
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - uses: actions/checkout@v4
+     
+      - name: install head
+        uses: ./.github/actions/install_ubuntu_head
+    
+      - name: install package
+        uses: ./.github/actions/setup_test
+
+      - name: running_unit_tests
+        run: |
+          xvfb-run pytest tests/unit_tests/base
+          xvfb-run pytest tests/unit_tests/logic/*
+          xvfb-run pytest tests/unit_tests/mountcontrol
+          xvfb-run pytest tests/unit_tests/indibase
+          xvfb-run pytest tests/unit_tests/gui/utilities
+          xvfb-run pytest tests/unit_tests/gui/styles
+        
+  run_tests_ubuntu_2:
+    #
+    needs: build_package
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - uses: actions/checkout@v4
+    
+      - name: install package
+        uses: ./.github/actions/setup_test
+    
+      - name: install head
+        uses: ./.github/actions/install_ubuntu_head
+  
+      - name: running_unit_tests
+        run: |
+          xvfb-run pytest tests/unit_tests/loader
+          xvfb-run pytest tests/unit_tests/update
+          xvfb-run pytest tests/unit_tests/mainApp
+          xvfb-run pytest tests/unit_tests/gui/mainWindow
+          xvfb-run pytest tests/unit_tests/gui/mainWaddon
+          xvfb-run pytest tests/unit_tests/gui/extWindows
+          xvfb-run pytest tests/unit_tests/gui/extWindows/video
+          xvfb-run pytest tests/unit_tests/gui/extWindows/image
+          xvfb-run pytest tests/unit_tests/gui/extWindows/hemisphere
+          xvfb-run pytest tests/unit_tests/gui/extWindows/simulator

@@ -1,0 +1,139 @@
+############################################################
+# -*- coding: utf-8 -*-
+#
+#       #   #  #   #   #    #
+#      ##  ##  #  ##  #    #
+#     # # # #  # # # #    #  #
+#    #  ##  #  ##  ##    ######
+#   #   #   #  #   #       #
+#
+# Python-based Tool for interaction with the 10micron mounts
+# GUI with PySide6 for python3
+#
+# written in python3, (c) 2019-2025 by mworion
+# Licence APL2.0
+#
+###########################################################
+
+name: test_scripts_pypi
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  gh: 'https://raw.githubusercontent.com/mworion/InstallerMW4/main/support/'
+  version: '-v 4.0.0a26'
+
+on:
+  push:
+    # Run this action on the trigger event when specific files are touched
+    paths:
+      - '.github/workflows/test_scripts_pypi.yml'
+      - 'support/**'
+      - 'setup.py'
+
+jobs:
+  
+  install_windows:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ windows-2022, windows-2025 ]
+        python-version: [ '3.10', '3.13' ]
+
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: Install Script Run
+        uses: suisei-cn/actions-download-file@v1.6.0
+        with:
+          url: ${{ env.gh }}startup.pyz
+          target: .
+      
+      - name: MountWizzard4 Install
+        shell: cmd
+        run: |
+          python startup.pyz --no-start ${{ env.version }}
+          dir
+      
+      - name: Run MountWizzard4
+        shell: cmd
+        run: |
+          touch test.run
+          python startup.pyz ${{ env.version }}
+          dir
+  
+  install_ubuntu:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-22.04 ]
+        python-version: [ '3.10', '3.13' ]
+    
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Install Head
+        run: |
+          sudo apt-get update
+          sudo apt-get -y upgrade
+          sudo apt-get install -y xvfb libxkbcommon-x11-0 x11-utils libxcb-icccm4
+          sudo apt-get install -y libxcb-image0 libxcb-keysyms1 libxcb-randr0
+          sudo apt-get install -y libxcb-render-util0 libpulse-mainloop-glib0
+          sudo apt-get install -y libx11-xcb1 libxcb-xinerama0 libxcb-xkb1
+          sudo apt-get install -y libxcb-keysyms1 ffmpeg libsm6 libxext6
+          sudo apt-get install -y libxcb-cursor0 libegl1-mesa
+        
+      - name: Install Script Install
+        uses: suisei-cn/actions-download-file@v1.6.0
+        with:
+          url: ${{ env.gh }}startup.pyz
+          target: .
+          
+      - name: MountWizzard4 Install
+        run: |
+          python startup.pyz --no-start ${{ env.version }}
+          ls -la
+  
+      - name: Run MountWizzard4
+        run: |
+          touch test.run
+          xvfb-run python3 startup.pyz ${{ env.version }}
+          ls -la
+          
+  install_macOS:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ macos-13, macos-14 ]
+        python-version: [ '3.10', '3.13' ]
+    
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Script Install
+        uses: suisei-cn/actions-download-file@v1.6.0
+        with:
+          url: ${{ env.gh }}startup.pyz
+          target: .
+          
+      - name: MountWizzard4 Install
+        run: |
+          touch test.run
+          python startup.pyz --no-start ${{ env.version }}
+          ls -la
+          
+      - name: MountWizzard4 Run
+        continue-on-error: True
+        run: |
+          touch test.run
+          python startup.pyz ${{ env.version }}
+          ls -la
+          

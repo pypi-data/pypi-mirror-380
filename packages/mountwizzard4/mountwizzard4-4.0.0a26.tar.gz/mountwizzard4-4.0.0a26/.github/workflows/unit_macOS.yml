@@ -1,0 +1,85 @@
+############################################################
+# -*- coding: utf-8 -*-
+#
+#       #   #  #   #   #    #
+#      ##  ##  #  ##  #    #
+#     # # # #  # # # #    #  #
+#    #  ##  #  ##  ##    ######
+#   #   #   #  #   #       #
+#
+# Python-based Tool for interaction with the 10micron mounts
+# GUI with PySide6 for python3
+#
+# written in python3, (c) 2019-2025 by mworion
+# Licence APL2.0
+#
+###########################################################
+
+name: unit_macOS
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+  
+on:
+  push:
+    # Run this action on the trigger event when specific files are touched
+    paths:
+      - 'mw4/**'
+      - 'tests/unit_tests/**'
+      - 'pyproject.toml'
+      - '.github/workflows/unit_macOS.yml'
+      - '.github/actions/build_package/action.yml'
+      - '.github/actions/setup_test/action.yml'
+jobs:
+  build_package:
+    #
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: build package
+        uses: ./.github/actions/build_package
+
+  run_tests_macos_1:
+    #
+    needs: build_package
+    runs-on: macos-13
+    
+    steps:
+      - uses: actions/checkout@v4
+  
+      - name: install package
+        uses: ./.github/actions/setup_test
+  
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/loader
+          pytest tests/unit_tests/update
+          pytest tests/unit_tests/mainApp
+          pytest tests/unit_tests/gui/mainWindow
+          pytest tests/unit_tests/gui/extWindows
+          pytest tests/unit_tests/gui/extWindows/video
+          pytest tests/unit_tests/gui/extWindows/image
+          pytest tests/unit_tests/gui/extWindows/hemisphere
+          pytest tests/unit_tests/gui/extWindows/simulator
+          pytest tests/unit_tests/gui/mainWaddon
+
+  run_tests_macos_2:
+    #
+    needs: build_package
+    runs-on: macos-13
+    
+    steps:
+      - uses: actions/checkout@v4
+  
+      - name: install package
+        uses: ./.github/actions/setup_test
+
+      - name: running_unit_tests
+        run: |
+          pytest tests/unit_tests/base
+          pytest tests/unit_tests/logic/*
+          pytest tests/unit_tests/mountcontrol
+          pytest tests/unit_tests/indibase
+          pytest tests/unit_tests/gui/utilities
+          pytest tests/unit_tests/gui/styles

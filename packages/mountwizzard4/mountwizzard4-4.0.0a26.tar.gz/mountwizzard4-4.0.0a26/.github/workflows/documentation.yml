@@ -1,0 +1,70 @@
+############################################################
+# -*- coding: utf-8 -*-
+#
+#       #   #  #   #   #    #
+#      ##  ##  #  ##  #    #
+#     # # # #  # # # #    #  #
+#    #  ##  #  ##  ##    ######
+#   #   #   #  #   #       #
+#
+# Python-based Tool for interaction with the 10micron mounts
+# GUI with PySide6 for python3
+#
+# written in python3, (c) 2019-2025 by mworion
+# Licence APL2.0
+#
+###########################################################
+
+name: documentation
+
+on:
+  push:
+    # Run this action on the trigger event when specific files are touched
+    paths:
+      - 'doc/**'
+      - '.github/workflows/documentation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  documentation:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      
+      - name: install drawio package
+        run: |
+          sudo apt update
+          sudo apt install snapd
+          sudo snap install drawio
+      
+      - name: Install python dependencies
+        run: |
+          pip install sphinx sphinx_rtd_theme alabaster sphinx-copybutton
+          pip install setuptools sphinxcontrib-drawio sphinx-simplepdf
+      
+      - name: Sphinx build
+        run: |
+          sphinx-build doc doc/html
+          sphinx-build -M simplepdf doc doc/pdf
+          cp doc/pdf/simplepdf/*.pdf doc/html
+          mv doc/pdf/simplepdf/*.pdf doc/html/mountwizzard4.pdf
+          
+      - name: check files
+        run: |
+          ls -la
+          ls -la doc/pdf
+          ls -la doc/html
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.event_name == 'push'}}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/html
+          force_orphan: true
