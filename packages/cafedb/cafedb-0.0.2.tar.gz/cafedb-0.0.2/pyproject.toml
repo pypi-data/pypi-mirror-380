@@ -1,0 +1,54 @@
+[project]
+name = "cafedb"
+version = "0.0.2"
+description = "CafeDB: A Python-native, lightweight, schema-flexible, JSONL database with set-indexed querying, Python-native type support, and safe append-only storage."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  {name = "Sivaprasad Murali", email = "sivaprasad.off@gmail.com"}
+]
+keywords = [
+  "database", "jsonl", "python", "dbms", "cli", "schema-less", "indexing", "hash", 
+  "set-indexed", "append-only", "lightweight", "portable", "python-native", 
+  "query", "insert", "update", "delete", "conflict-resolution", "storage", "data-integrity"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Database",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+  "jsonlines>=2.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Crystallinecore/cafedb"
+Documentation = "https://github.com/Crystallinecore/cafedb#readme"
+Source = "https://github.com/Crystallinecore/cafedb"
+Tracker = "https://github.com/Crystallinecore/cafedb/issues"
+Releases = "https://github.com/Crystallinecore/cafedb/releases"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cafedb*"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+cafedb = "cafedb.__main__:main"
+
