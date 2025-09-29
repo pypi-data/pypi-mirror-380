@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+core/__init__.py
+core/connection_factory.py
+core/soda_client.py
+core/soda_consumer.py
+core/soda_producer.py
+soda_mq_client.egg-info/PKG-INFO
+soda_mq_client.egg-info/SOURCES.txt
+soda_mq_client.egg-info/dependency_links.txt
+soda_mq_client.egg-info/requires.txt
+soda_mq_client.egg-info/top_level.txt
