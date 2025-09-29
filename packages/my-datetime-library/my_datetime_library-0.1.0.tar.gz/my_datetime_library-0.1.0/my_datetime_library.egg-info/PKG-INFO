@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: my-datetime-library
+Version: 0.1.0
+Summary: A highly accurate custom datetime library built from scratch, supporting TAI, UTC, leap seconds, and timezones.
+Author-email: JACK <gsksvsksksj@gmail.com>
+Project-URL: Homepage, https://github.com//my-datetime-library
+Project-URL: Bug Tracker, https://github.com//my-datetime-library/issues
+Keywords: datetime,time,TAI,UTC,leap seconds,timezone,precision
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
