@@ -1,0 +1,4 @@
+peek-plugin-base==5.1.5
+peek-platform==5.1.5
+peek-office-app==5.1.5
+peek-office-doc==5.1.5
