@@ -1,0 +1,96 @@
+Metadata-Version: 2.4
+Name: toptle
+Version: 0.1.1
+Summary: A process monitor in your terminal title
+Author-email: Yves Parès <yves.pares@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/YPares/toptle
+Project-URL: Issues, https://github.com/YPares/toptle/issues
+Project-URL: Repository, https://github.com/YPares/toptle
+Keywords: monitor,process,pty,terminal,title
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil>=5.8.0
+Dynamic: license-file
+
+# Toptle 🐢
+
+A transparent process monitor that displays real-time resource stats in your
+terminal title.
+
+Your terminal title shows: `ORIGINAL_TITLE 🐢5.2% CPU, 45.1MB RAM🐢`
+
+## Installation
+
+**Via Nix flake:**
+
+```bash
+nix profile install github:YPares/toptle
+# or run directly:
+nix run github:YPares/toptle -- <command>
+```
+
+**From source:**
+
+```bash
+git clone https://github.com/YPares/toptle.git && cd toptle
+pip install -e .
+```
+
+## Usage
+
+```bash
+toptle [OPTIONS] [--] COMMAND [ARGS...]
+```
+
+**Options:**
+
+- `--refresh`, `-r` - Update interval in seconds (default: 2.0)
+- `--metrics`, `-m` - Display: cpu,ram,disk,files,threads,procs,all (default:
+  cpu,ram)
+- `--pty`, `-p` - PTY mode for edge cases
+
+**Examples:**
+
+```bash
+toptle python -m http.server 8000  # Basic usage
+toptle -r 0.5 make -j4             # Faster updates  
+toptle -m all ./build-script.sh    # All metrics
+toptle --pty special-app           # PTY mode if needed
+```
+
+## Features
+
+- **Customizable metrics** - CPU, RAM, disk I/O, file descriptors, threads,
+  process count
+- **Process tree monitoring** - Tracks parent and all child processes
+- **Title interception** - Captures and combines with app titles (requires
+  `--pty`)
+
+## Modes
+
+- **Default**: Direct mode - zero overhead but will ignore title sequence(s) sent
+  by application
+- **`--pty`**: PTY mode - full title interception. Might also be needed by
+  certain apps to work properly
+
+## Limitations
+
+- Title display depends on terminal emulator support for ANSI escape sequences
+- Process tree detection may miss processes that detach from the parent
