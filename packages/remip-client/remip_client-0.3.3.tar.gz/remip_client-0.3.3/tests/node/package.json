@@ -1,0 +1,19 @@
+{
+  "name": "remip-client-pyodide-test",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test_solver_pyodide.js",
+    "build-and-test": "../../../scripts/test-pyodide.sh",
+    "build": "cd ../../ && uv build",
+    "test-only": "node test_solver_pyodide.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "node-fetch": "^3.3.2",
+    "pyodide": "^0.28.3"
+  }
+}
