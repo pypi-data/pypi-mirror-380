@@ -1,0 +1,245 @@
+[build-system]
+requires = [
+  "setuptools>=45",
+  "setuptools_scm[toml]>=6.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "Neil Shephard", email = "nshephard@gmail.com"},
+]
+classifiers = [
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Markup :: XML"
+]
+dependencies = [
+  "gpxpy",
+  "python_dateutil",
+  "python_tcxparser",
+  "tqdm",
+]
+description = "Convert Garmin TCX GPS tracks to GPX"
+dynamic = ["version"]
+license = {text = "GNU GPLv3 only"}
+name = "tcx2gpx"
+readme = "README.md"
+
+[project.urls]
+Bug_Tracker = "https://codeberg.org/slackline/tcx2gpx/issues/"
+Source = "https://codeberg.org/slackline/tcx2gpx"
+Documentation = "https://tcx2gpx.readthedocs.io/en/latest/"
+
+[project.optional-dependencies]
+dev =[
+    "black",
+    "codespell",
+    "ipdb",
+    "pre-commit",
+    "pydocstyle[toml]",
+    "pylint",
+    "pytest-testmon",
+    "ruff",
+    "tomli",
+]
+docs = [
+   "mkdocs",
+   "mkdocs-material",
+   "mkdocs-mermaid2-plugin",
+   "mkdocstrings[python]",
+   "numpydoc",
+ ]
+pypi = [
+     "build",
+     "pytest-runner",
+     "setuptools-lint",
+     "setuptools_scm",
+     "twine",
+     "wheel"
+]
+test = [
+     "pytest",
+     "pytest-cov"
+]
+
+
+[tool.setuptools]
+#packages = ["tcx2gpx"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tcx2gpx"]
+exclude = ["tests"]
+
+[tool.setuptools.package-data]
+#tcx2gps = ["*.yaml"]
+
+[tool.setuptools_scm]
+write_to = "tcx2gpx/_version.py"
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+git_describe_command = "git describe --tags"
+
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310"]
+include = "\\.pyi?$"
+
+[tool.coverage.run]
+source = ["tcx2gpx"]
+omit = ["tcx2gpx/_version.py"]
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.ruff]
+exclude = [
+  "*.ipynb",
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pycache__",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "docs/conf.py",
+  "node_modules",
+  "pygwytracing.py",
+  "tests/tracing/test_dnacurvature.py",
+  "tests/tracing/test_dnatracing.py",
+  "tests/tracing/test_tracing_dna.py",
+  "topostats/plotting.py",
+  "topostats/tracing/dnatracing.py",
+  "topostats/tracing/tracing_dna.py",
+  "topostats/tracing/tracingfuncs.py",
+  "venv",
+]
+# per-file-ignores = []
+line-length = 120
+target-version = "py310"
+lint.select = [
+  "A", # flake8-builtins
+  "B", # flake8-bugbear
+  "C", #
+  "D", # pydocstyle
+  "E", # pycodestyle error
+  "F",
+  "I", # isort
+  "NPY", # numpy
+  "PT", # flake8-pytest-style
+  "PTH", # flake8-use-pathlib
+  "R",
+  "S", #flake8-bandit
+  "W", # pycodestyle warning
+  "U",
+  "UP", # pyupgrade
+]
+lint.ignore = [
+  "B905",
+  "D203",
+  "D211",
+  "D212",
+  "D413",
+  "E501",
+  "S101",
+  "S403"
+]
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+lint.fixable = [
+  "A", # flake8-builtins
+  "B", # flake8-bugbear
+  "C", #
+  "D", # pydocstyle
+  "E", # pycodestyle error
+  "F",
+  "I", # isort
+  "NPY", # numpy
+  "PT", # flake8-pytest-style
+  "PTH", # flake8-use-pathlib
+  "R",
+  "S", #flake8-bandit
+  "W", # pycodestyle warning
+  "U",
+  "UP", # pyupgrade
+]
+lint.unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D104"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = true
+
+[tool.pydocstyle]
+convention = "numpy"
+match-dir = "tcx2gpx"
+
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = ["--cov", "-ra",  "--showlocals", "--strict-config", "--strict-markers"]
+xfail_strict = true
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+    "ignore::UserWarning"
+]
+testpaths = [
+    "tests",
+]
+log_cli_level = "info"
+
+[tool.ipdb]
+context = 5
+
+[tool.codespell]
+skip = '*.po,*.ts,./src/3rdParty,./src/Test'
+count = ''
+quiet-level = 3
+
+
+[tool.numpydoc_validation]
+checks = [
+  "all", # Perform all check except those listed below
+  "ES01",
+  "EX01",
+  "PR10", # Conflicts with black formatting
+  "SA01",
+]
+exclude = [  # don't report on objects that match any of these regex
+    "\\.undocumented_method$",
+    "\\.__repr__$",
+    "^test_",
+    "^conftest",
+    "^conf$",
+]
+override_SS05 = [  # override SS05 to allow docstrings starting with these words
+    "^Process ",
+    "^Assess ",
+    "^Access ",
+]
+
+[project.scripts]
+tcx2gpx = "tcx2gpx.batch:tcx2gpx"
