@@ -1,0 +1,6 @@
+cms
+dist
+docs
+menus
+scripts
+test_requirements

@@ -1,0 +1,20 @@
+-e .
+argparse
+coverage
+dj-database-url
+django-app-helper  # required to run the server for integration tests
+django-classy-tags>=0.7.2
+django-formtools
+django-sekizai>=0.7
+django-treebeard>=4.3
+djangocms-admin-style>=1.5
+djangocms-text
+iptools
+mock>=2.0.0
+Pillow
+pyenchant
+pyflakes>=2.1
+python-coveralls>2.5.0
+unittest-xml-reporting
+ruff
+setuptools  # Since python 3.12
