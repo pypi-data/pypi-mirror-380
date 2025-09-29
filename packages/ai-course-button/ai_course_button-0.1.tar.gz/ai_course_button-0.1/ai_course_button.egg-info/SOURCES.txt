@@ -1,0 +1,9 @@
+setup.py
+ai_course_button/__init__.py
+ai_course_button/apps.py
+ai_course_button/plugin.py
+ai_course_button.egg-info/PKG-INFO
+ai_course_button.egg-info/SOURCES.txt
+ai_course_button.egg-info/dependency_links.txt
+ai_course_button.egg-info/entry_points.txt
+ai_course_button.egg-info/top_level.txt
