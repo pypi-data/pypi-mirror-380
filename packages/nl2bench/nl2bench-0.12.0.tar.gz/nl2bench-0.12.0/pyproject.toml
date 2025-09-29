@@ -1,0 +1,47 @@
+[project]
+name = "nl2bench"
+version = "0.12.0"
+description = "Converts from combinational netlists to the BENCH format for DFT"
+authors = [
+    {name = "Mohamed Gaber", email = "me@donn.website"}
+]
+license = "Apache-2.0"
+readme = "Readme.md"
+requires-python = ">=3.10"
+
+[project.urls]
+repository = "https://github.com/donn/nl2bench"
+"Bug Tracker" = "https://github.com/donn/nl2bench/issues"
+
+[project.scripts]
+nl2bench = "nl2bench.__main__:cli"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+include = [
+    {path = "nl2bench/_nl2bench_antlr4_liblogic/*.py", format = ["sdist", "wheel"]},
+    {path = "nl2bench/_nl2bench_antlr4_liblogic/*.interp", format = ["sdist", "wheel"]},
+    {path = "nl2bench/_nl2bench_antlr4_liblogic/*.tokens", format = ["sdist", "wheel"]}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4"
+click = ">=8,<9"
+antlr4-python3-runtime = "==4.9.*"
+lln_libparse = "==0.56.*"
+immutabledict = "*"
+pyosys = "==0.56.*"
+
+[tool.poetry.group.dev.dependencies]
+wheel = "*"
+black = ">=24.4.0,<25"
+
+flake8 = ">=4"
+flake8-pytest-style = "*"
+
+pytest = "*"
+pytest-xdist = "*"
+pytest-cov = "*"
