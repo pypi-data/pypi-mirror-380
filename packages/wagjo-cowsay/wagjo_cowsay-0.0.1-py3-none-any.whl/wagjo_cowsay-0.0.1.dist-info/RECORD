@@ -1,0 +1,9 @@
+cowsay/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cowsay/__main__.py,sha256=GCKcOrg0xFIgG9PSlos-7Wom71JNf32XRxW8ysoJmcI,892
+cowsay/impl.py,sha256=vJ1dJmphXRxdw9U_sNcQzF-7yPcxPK8wb2l08c1_2T8,1683
+wagjo_cowsay-0.0.1.dist-info/licenses/LICENSE,sha256=6f-jxvj0dAa7lK5z-GVU_jyE4Y1hR-ACIowBBTDD8AE,1062
+wagjo_cowsay-0.0.1.dist-info/METADATA,sha256=yEvKi46uMMOxDi9ao4tBHPyizAEICCGSH-J6RGuKsMQ,952
+wagjo_cowsay-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+wagjo_cowsay-0.0.1.dist-info/entry_points.txt,sha256=JZmiV9NaNpLewtIQK2b122oKbicoMCQc9MYWoVrhnIQ,48
+wagjo_cowsay-0.0.1.dist-info/top_level.txt,sha256=45zxJRiJFquDz8AIvNLxZWersc80tEFX0iKLKG868Ck,7
+wagjo_cowsay-0.0.1.dist-info/RECORD,,
