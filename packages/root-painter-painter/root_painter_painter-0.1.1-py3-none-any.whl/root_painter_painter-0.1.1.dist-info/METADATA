@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: root-painter-painter
+Version: 0.1.1
+Summary: Add your description here
+Author-email: Jakob Stender Guldberg <jakob1379@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: humanfriendly>=10.0
+Requires-Dist: imagecodecs>=2021.11.20
+Requires-Dist: matplotlib>=3.5.2
+Requires-Dist: natsort>=8.0.2
+Requires-Dist: numpy>=1.22.1
+Requires-Dist: pillow>=9.3.0
+Requires-Dist: pyqt5>=5.15.11
+Requires-Dist: pyqtgraph>=0.12.4
+Requires-Dist: pywavelets>=1.2.0
+Requires-Dist: qimage2ndarray>=1.9.0
+Requires-Dist: scikit-image>=0.19.1
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: setuptools>=65.5.1
