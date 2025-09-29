@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: fastapi-simple-redis-cache
+Version: 1.2.3
+Summary: Simple Cache Decorator for FastAPI
+License: MIT
+Author: Mitchell Karchemsky
+Author-email: mitch.karchemsky@gmail.com
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (>=0.116.2,<0.117.0)
+Requires-Dist: redis (>=6.4.0,<7.0.0)
+Description-Content-Type: text/markdown
+
+
