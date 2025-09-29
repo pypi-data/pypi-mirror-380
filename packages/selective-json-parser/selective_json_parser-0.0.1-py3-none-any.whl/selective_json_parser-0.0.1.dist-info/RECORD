@@ -1,0 +1,12 @@
+selective_json_parser-0.0.1.dist-info/licenses/LICENSE,sha256=iIBxtSUk2I_qHs3jx7mCogKY0WPufjXZo9ScBHy-6hc,1078
+selectivejsonparser/__init__.py,sha256=VM4LVozBn4zhbBGONQ7lgVeHipBB14Z_FrJ-3gMvZk4,657
+selectivejsonparser/parser/__init__.py,sha256=mkl1XfowAova9oNcbQ5koXR_gdxckn8LyDdGNXPqu3M,32
+selectivejsonparser/parser/parser.py,sha256=ItTjlQwjV9iBXFyJ3w0yCyrqEXz2FOHz9BfPKoEu61I,8560
+selectivejsonparser/pattern/__init__.py,sha256=w7DftLg2n76vkWXR-SIGmBD8nNlzPVui7qitgV3-S8w,71
+selectivejsonparser/pattern/element.py,sha256=6IBiicmKNnl-1OBFE4n5KxNhdUJRuBJJ73uwFxpcUlI,1326
+selectivejsonparser/pattern/pattern.py,sha256=MlgLwLUKCeBxqV8qrHYR2-7Wf9cHwGpBfySVQbwJOzE,921
+selectivejsonparser/pattern/pattern_parser.py,sha256=ed0NWtySIGMaYUzQhes8WM-s_O1X3GT9GRzKpvJk0lE,3277
+selective_json_parser-0.0.1.dist-info/METADATA,sha256=jznTKN6z_7NpTQNwaC1_FnVlFsNu3_Fye5P5wP70ASI,6061
+selective_json_parser-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+selective_json_parser-0.0.1.dist-info/top_level.txt,sha256=VmX_y61FhDMtnazcpLWHJRCG9k1LJrj-27UkMZTQLJo,20
+selective_json_parser-0.0.1.dist-info/RECORD,,
