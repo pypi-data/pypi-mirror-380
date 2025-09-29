@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/rxn_rdf_converter.egg-info/PKG-INFO
+src/rxn_rdf_converter.egg-info/SOURCES.txt
+src/rxn_rdf_converter.egg-info/dependency_links.txt
+src/rxn_rdf_converter.egg-info/entry_points.txt
+src/rxn_rdf_converter.egg-info/requires.txt
+src/rxn_rdf_converter.egg-info/top_level.txt
+test/test_rxn_rdf_converter.py
