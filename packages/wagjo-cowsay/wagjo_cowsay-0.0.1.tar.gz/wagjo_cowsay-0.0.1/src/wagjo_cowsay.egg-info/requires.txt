@@ -1,0 +1,6 @@
+colored
+ascii-announcers==0.0.2
+
+[deploy]
+twine
+build

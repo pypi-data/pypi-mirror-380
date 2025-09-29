@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/cowsay/__init__.py
+src/cowsay/__main__.py
+src/cowsay/impl.py
+src/wagjo_cowsay.egg-info/PKG-INFO
+src/wagjo_cowsay.egg-info/SOURCES.txt
+src/wagjo_cowsay.egg-info/dependency_links.txt
+src/wagjo_cowsay.egg-info/entry_points.txt
+src/wagjo_cowsay.egg-info/requires.txt
+src/wagjo_cowsay.egg-info/top_level.txt
