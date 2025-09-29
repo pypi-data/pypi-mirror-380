@@ -1,0 +1,2 @@
+[datahub.ingestion.transformer.plugins]
+simple_add_dataset_domain_structured_properties = datahub_custom_transformers.domain_structured_properties.transformer:SimpleAddDatasetDomainStructuredPropertiesTransformer
