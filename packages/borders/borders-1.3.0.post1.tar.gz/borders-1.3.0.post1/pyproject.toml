@@ -1,0 +1,63 @@
+########################################
+# BUILD SYSTEM - Required to build the package
+########################################
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+########################################
+# PROJECT METADATA - Everything here is part of [project]
+########################################
+[project]
+name = "borders"
+dynamic = ["version"]
+description = "A module to create a frame when printing a list of strings, with control on the alignment of the text and frame. Can also act like 'input()'."
+readme = "README.md"
+license = { text = "MIT License" }
+authors = [
+    { name = "scalvaruso", email = "calvaruso.simone@gmail.com" }
+]
+requires-python = ">=3.9"
+
+# Base install dependencies
+dependencies = [
+    "polychromy>=1.1.1",
+    "textlinebreaker>=1.0.0"
+]
+
+# Keywords for PyPI search
+keywords = [
+    "alignment", "break", "center", "centre", "color",
+    "format", "frame", "highlight", "input", "left",
+    "line", "output", "right", "split", "text"
+]
+
+# Classifiers for PyPI metadata
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+# URLs for your project
+[project.urls]
+Homepage = "https://pypi.org/project/borders/"
+Repository = "https://github.com/scalvaruso/borders"
+Issues = "https://github.com/scalvaruso/borders/issues"
+
+########################################
+# OPTIONAL DEPENDENCIES - Extras users can install
+########################################
+[project.optional-dependencies]
+windows = ["colorama>=0.4.6"]   # Windows-specific
+dev = ["pytest>=7.0", "black>=23.0", "twine>=4.0"]  # Development tools
+
+########################################
+# setuptools_scm configuration - versioning from Git tags
+########################################
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"

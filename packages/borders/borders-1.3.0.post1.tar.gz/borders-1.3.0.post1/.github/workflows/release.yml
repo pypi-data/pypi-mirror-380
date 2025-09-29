@@ -1,0 +1,67 @@
+name: Release Package
+
+on:
+  push:
+    tags:
+      - "v*"   # matches v1.0.0, v1.0.1-beta, etc.
+
+permissions:
+  contents: write       # needed to push assets / create release
+  packages: write       # for publishing packages
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # 3. Install build tools
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      # 4. Build the package
+      - name: Build package
+        run: python -m build
+
+      # 5. Conditional publish: TestPyPI for pre-releases
+      - name: Publish to TestPyPI
+        if: ${{ contains(github.ref_name, 'beta') || contains(github.ref_name, 'alpha') }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository-url: https://test.pypi.org/legacy/
+
+      # 6. Conditional publish: PyPI for main releases
+      - name: Publish to PyPI
+        if: ${{ !(contains(github.ref_name, 'beta') || contains(github.ref_name, 'alpha')) }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+      # 7. Create GitHub Release
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          prerelease: ${{ contains(github.ref_name, 'beta') || contains(github.ref_name, 'alpha') }}
+          allow_updates: true
+          body: |
+            🚀 Release ${{ github.ref_name }}
+
+            - Published automatically to TestPyPI/PyPI
+            - Artifacts are attached below
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # PAT if default token fails
