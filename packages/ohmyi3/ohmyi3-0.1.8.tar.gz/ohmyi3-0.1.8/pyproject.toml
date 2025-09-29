@@ -1,0 +1,53 @@
+[project]
+name = "ohmyi3"
+version = "0.1.8"
+description = "Dynamic i3 Configuration Manager"
+authors = [
+    {name = "Matthew Reschke",email = "mail@mreschke.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+     "Typing :: Typed",
+]
+
+
+[project.urls]
+# Project URLs
+homepage = "https://github.com/ohmyi3/ohmyi3"
+repository = "https://github.com/ohmyi3/ohmyi3"
+documentation = "https://github.com/ohmyi3/ohmyi3"
+
+
+[tool.poetry]
+# Include this package itself
+packages = [
+    { include = "ohmyi3" },
+]
+# Additional included/excluded files in the final package build
+include = ["LICENSE"]
+
+
+[tool.poetry.scripts]
+i3ctl = 'ohmyi3.commands.entrypoint:cli'
+
+
+[tool.poetry.dependencies]
+# Required dependencies
+python = ">=3.10,<4.0"
+
+# Uvicore Python Framework
+uvicore = {version = "0.3.17", extras = []}
+# uvicore = {path = "../framework", develop = true, extras = []}
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
