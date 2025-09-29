@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+requests
+torch
+torchvision
+torchaudio
+whisper-mps
+python-multipart
+pydantic-settings
+crawl4ai
+playwright
+playwright_stealth
+lightrag-hku
+feedparser

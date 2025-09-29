@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="max-w-2xl mx-auto py-8">
+        <div class="flex items-center justify-between mb-6">
+            <h1 class="text-3xl font-bold">Campaign Generator</h1>
+            <div id="cronBadge" class="ml-4 inline-flex items-center gap-2">
+                <!-- badge updated by JS -->
+                <span id="cronBadgeDot" class="h-3 w-3 rounded-full bg-gray-400"></span>
+                <span id="cronBadgeText" class="text-sm text-gray-600">Cron: unknown</span>
+            </div>
+        </div>
+        <div class="flex justify-end mb-4 items-center gap-2">
+            <label for="llmModelSelect" class="mr-2 text-sm font-medium text-gray-700">LLM Model:</label>
+            <select id="llmModelSelect" class="border rounded px-2 py-1 text-sm focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Loading...</option>
+            </select>
+            <button id="cronControlBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Cron
+                Control</button>
+            <button id="refreshTasksBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ml-2">Refresh
+                Tasks</button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-2">All ClickUp Tasks</h2>
+            <div id="clickupTasksLoader" class="flex items-center gap-2 text-purple-500">
+                <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                        fill="none"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                </svg>
+                Fetching tasks...
+            </div>
+            <table id="clickupTasksTable" class="min-w-full border rounded text-sm mt-4 hidden">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="px-2 py-1 border">Name</th>
+                        <th class="px-2 py-1 border">Text Content</th>
+                        <th class="px-2 py-1 border">Tags</th>
+                        <th class="px-2 py-1 border">Status</th>
+                        <th class="px-2 py-1 border">Assignee</th>
+                        <th class="px-2 py-1 border">Last Updated</th>
+                        <th class="px-2 py-1 border">Link</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="clickupTasksError" class="text-red-500 mt-2"></div>
+            <div id="interviewPrepIndicator" class="text-blue-500 mt-2 hidden flex items-center gap-2">
+                <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                        fill="none"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                </svg>
+                Querying interview prep questions...
+            </div>
+        </div>
+    </div>
+
+    <!-- Cron modal -->
+    <div id="cronModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white rounded-lg p-6 w-96">
+            <h3 class="text-lg font-semibold mb-2">Cron Control</h3>
+            <div class="mb-3">
+                <label class="block text-sm text-gray-700">Interval (seconds)</label>
+                <input id="cronInterval" type="number" min="1" value="60"
+                    class="mt-1 w-full border rounded px-2 py-1" />
+            </div>
+            <div id="cronStatus" class="text-sm text-gray-700 mb-3">Loading...</div>
+            <div class="flex justify-end gap-2">
+                <button id="cronStopBtn" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Stop</button>
+                <button id="cronStartBtn"
+                    class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Start</button>
+                <button id="cronRunOnceBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">Run
+                    Once</button>
+                <button id="cronCloseBtn" class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let clickupTaskName = '';
+
+    // Fetch all ClickUp tasks on page load
+    async function fetchClickupTasks() {
+        const loader = document.getElementById('clickupTasksLoader');
+        const table = document.getElementById('clickupTasksTable');
+        const errorDiv = document.getElementById('clickupTasksError');
+        const interviewPrepIndicator = document.getElementById('interviewPrepIndicator');
+        let researchTextContent = '';
+        // Helper: Query /rag/questions for interview prep tasks
+        async function queryInterviewPrepQuestions(taskId, description) {
+            try {
+                if (interviewPrepIndicator) interviewPrepIndicator.classList.remove('hidden');
+                const model = document.getElementById('llmModelSelect')?.value || '';
+                const res = await fetch('/rag/questions', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ task_id: taskId, text: description, model })
+                });
+                if (!res.ok) {
+                    console.warn('Interview prep query failed:', await res.text());
+                }
+            } catch (err) {
+                console.error('Error querying interview prep questions:', err);
+            } finally {
+                if (interviewPrepIndicator) interviewPrepIndicator.classList.add('hidden');
+            }
+        }
+        try {
+            const res = await fetch('/clickup/tasks?list_id=901212468122');
+            // If response isn't OK, show status and any textual body
+            if (!res.ok) {
+                const text = await res.text().catch(() => `HTTP ${res.status}`);
+                errorDiv.textContent = `Error fetching tasks: ${text}`;
+                loader.classList.add('hidden');
+                return;
+            }
+            // Try to parse JSON safely — backend may (mistakenly) return HTML/text
+            let data;
+            try {
+                data = await res.json();
+            } catch (parseErr) {
+                const text = await res.text().catch(() => 'Invalid JSON response');
+                errorDiv.textContent = `Error parsing tasks response: ${text}`;
+                loader.classList.add('hidden');
+                return;
+            }
+
+            if (data && data.tasks && data.tasks.length > 0) {
+                // Find most recently updated task with status 'research'
+                const researchTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 2. research'
+                );
+                // For any task with status 'phase 3. interview prep', query /rag/questions
+                const interviewPrepTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 3. interview prep'
+                );
+                for (const task of interviewPrepTasks) {
+                    // Use task.id and task.text_content (or task.description)
+                    const taskId = task.id || task.task_id || '';
+                    const description = task.text_content || task.description || '';
+                    if (taskId && description) {
+                        queryInterviewPrepQuestions(taskId, description);
+                    }
+                }
+                // For any task with status 'phase 5. transcript', call transcript cleanup
+                const transcriptTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 5. transcript'
+                );
+                for (const task of transcriptTasks) {
+                    const taskId = task.id || task.task_id || '';
+                    const description = task.text_content || task.description || '';
+                    if (taskId && description) {
+                        fetch('/text/transcript-cleanup', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ task_id: taskId, text: description, chat_model: document.getElementById('llmModelSelect')?.value || '' })
+                        }).then(async res => {
+                            const result = await res.json();
+                            if (res.ok && result.cleaned_text) {
+                                console.log('Transcript cleaned for task', taskId, result.cleaned_text);
+                            } else {
+                                console.warn('Transcript cleanup error for task', taskId, result);
+                            }
+                        }).catch(err => {
+                            console.error('Transcript cleanup fetch error for task', taskId, err);
+                        });
+                    }
+                }
+                // For any task with status 'phase 6. transcript clean', call challenge-ideas
+                const transcriptCleanTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 6. transcript clean'
+                );
+                for (const task of transcriptCleanTasks) {
+                    const taskId = task.id || task.task_id || '';
+                    const description = task.text_content || task.description || '';
+                    if (taskId && description) {
+                        fetch('/text/challenge-ideas', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ task_id: taskId, text: description, chat_model: document.getElementById('llmModelSelect')?.value || '' })
+                        }).then(async res => {
+                            const result = await res.json();
+                            if (res.ok) {
+                                console.log('Challenge generated for task', taskId, result);
+                            } else {
+                                console.warn('Challenge generation error for task', taskId, result);
+                            }
+                        }).catch(err => {
+                            console.error('Challenge generation fetch error for task', taskId, err);
+                        });
+                    }
+                }
+
+                // For any task with status 'phase 7. challenge', call generate-content
+                const challengeTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 7. challenge'
+                );
+                for (const task of challengeTasks) {
+                    const taskId = task.id || task.task_id || '';
+                    const description = task.text_content || task.description || '';
+                    if (taskId && description) {
+                        fetch('/text/generate-content', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ task_id: taskId, text: description, chat_model: document.getElementById('llmModelSelect')?.value || '' })
+                        }).then(async res => {
+                            const result = await res.json();
+                            if (res.ok) {
+                                console.log('Content generated for task', taskId, result);
+                            } else {
+                                console.warn('Content generation error for task', taskId, result);
+                            }
+                        }).catch(err => {
+                            console.error('Content generation fetch error for task', taskId, err);
+                        });
+                    }
+                }
+
+                // For any task with status 'phase 8. draft channel', call review
+                const reviewTasks = data.tasks.filter(task =>
+                    task.status && String(task.status.status || '').toLowerCase() === 'phase 8. draft channel'
+                );
+                for (const task of reviewTasks) {
+                    const taskId = task.id || task.task_id || '';
+                    const description = task.text_content || task.description || '';
+                    if (taskId && description) {
+                        fetch('/text/review', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ task_id: taskId, text: description, chat_model: document.getElementById('llmModelSelect')?.value || '' })
+                        }).then(async res => {
+                            const result = await res.json();
+                            if (res.ok) {
+                                console.log('Review generated for task', taskId, result);
+                            } else {
+                                console.warn('Review generation error for task', taskId, result);
+                            }
+                        }).catch(err => {
+                            console.error('Review generation fetch error for task', taskId, err);
+                        });
+                    }
+                }
+                if (researchTasks.length > 0) {
+                    researchTasks.sort((a, b) => Number(b.date_updated || 0) - Number(a.date_updated || 0));
+                    researchTextContent = researchTasks[0].text_content || '';
+                    // Prefer using the most recent research task's name and status for file naming and gating
+                    if (researchTasks[0].name) {
+                        clickupTaskName = researchTasks[0].name;
+                        clickupTaskStatus = (researchTasks[0].status && researchTasks[0].status.status) || '';
+                    }
+                    // Autopopulate the news text box
+                    const newsTopicInput = document.getElementById('newsTopic');
+                    if (newsTopicInput) newsTopicInput.value = researchTextContent;
+                    // Auto-run the news fetch if autofilled
+                    const newsForm = document.getElementById('newsForm');
+                    if (newsForm && researchTextContent) {
+                        newsForm.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+                    }
+                }
+                const tbody = table.querySelector('tbody');
+                // If clickupTaskName is not yet set, default to the first task's name and status
+                if (!clickupTaskName && data.tasks[0] && data.tasks[0].name) {
+                    clickupTaskName = data.tasks[0].name;
+                    clickupTaskStatus = (data.tasks[0].status && data.tasks[0].status.status) || '';
+                }
+                tbody.innerHTML = data.tasks
+                    .filter(task => !(task.status && String(task.status.status || '').toLowerCase() === 'complete'))
+                    .map(task => {
+                        let row = `<tr>
+                            <td class="border px-2 py-1">${task.name}</td>
+                            <td class="border px-2 py-1">${(task.text_content || '').length > 50 ? (task.text_content.slice(0, 50) + '...') : (task.text_content || '')}</td>
+                            <td class="border px-2 py-1">${task.tags && task.tags.length > 0 ? task.tags.map(tag => `<span class='inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1'>${tag.name}</span>`).join('') : ''}</td>
+                            <td class="border px-2 py-1">${task.status?.status || ''}</td>
+                            <td class="border px-2 py-1">${task.assignees && task.assignees.length > 0 ? task.assignees.map(a => a.username || a.email).join(', ') : ''}</td>
+                            <td class="border px-2 py-1">${task.date_updated ? new Date(Number(task.date_updated)).toLocaleString() : ''}</td>
+                            <td class="border px-2 py-1"><a href="${task.url}" target="_blank" class="text-blue-600 underline">Open</a></td>
+                        </tr>`;
+                        if (task.status && String(task.status.status || '').toLowerCase() === 'phase 4. interview') {
+                            row += `<tr class="bg-yellow-50">
+                                <td colspan="7" class="border px-2 py-4">
+                                    <div class="mb-2">
+                                        <strong>Interview Text:</strong>
+                                        <div class="text-gray-800 whitespace-pre-line">${task.text_content || ''}</div>
+                                    </div>
+                                    <div class="mt-2 audio-controls" data-taskname="${task.name}" data-taskid="${task.id}">
+                                        <button class="bg-green-500 text-white px-2 py-1 rounded mr-2 start-recording">Start Recording</button>
+                                        <button class="bg-red-500 text-white px-2 py-1 rounded mr-2 stop-recording" disabled>Stop Recording</button>
+                                        <button class="bg-blue-600 text-white px-2 py-1 rounded upload-response" disabled>Upload Response</button>
+                                        <button class="bg-purple-600 text-white px-2 py-1 rounded ml-2 transcribe-audio">Transcribe Audio</button>
+                                        <input type="file" accept="audio/mp3" class="hidden mp3-file-input" data-taskid="${task.id}" />
+                                    </div>
+                                    <span class="audio-status text-sm ml-2" data-taskid="${task.id}"></span>
+                                </td>
+                            </tr>`;
+                        }
+                        if (task.status && String(task.status.status || '').toLowerCase() === 'phase 5. transcript') {
+                            row += `<tr class="bg-green-50">
+                                <td colspan="7" class="border px-2 py-4">
+                                    <div class="mb-2">
+                                        <strong>Transcript Text:</strong>
+                                        <div class="text-gray-800 whitespace-pre-line">${task.text_content || ''}</div>
+                                    </div>
+                                </td>
+                            </tr>`;
+                        }
+                        return row;
+                    }).join('');
+                table.classList.remove('hidden');
+                afterTasksRender();
+            } else if (data && data.error) {
+                // Backend may return an error object with details
+                errorDiv.textContent = `Error fetching tasks: ${data.error}`;
+            } else {
+                errorDiv.textContent = 'No tasks found.';
+            }
+        } catch (err) {
+            // Network or unexpected error
+            errorDiv.textContent = `Error fetching tasks: ${err && err.message ? err.message : err}`;
+        }
+        loader.classList.add('hidden');
+        // update cron badge on load if available
+        if (window.updateCronBadge) window.updateCronBadge();
+    }
+
+    // Cron modal and control logic
+    (function () {
+        const cronControlBtn = document.getElementById('cronControlBtn');
+        const cronModal = document.getElementById('cronModal');
+        const cronCloseBtn = document.getElementById('cronCloseBtn');
+        const cronStartBtn = document.getElementById('cronStartBtn');
+        const cronStopBtn = document.getElementById('cronStopBtn');
+        const cronIntervalInput = document.getElementById('cronInterval');
+        const cronStatusDiv = document.getElementById('cronStatus');
+        const cronRunOnceBtn = document.getElementById('cronRunOnceBtn');
+
+        async function fetchCronStatus() {
+            try {
+                const res = await fetch('/cron/status');
+                if (!res.ok) {
+                    const txt = await res.text().catch(() => `HTTP ${res.status}`);
+                    cronStatusDiv.textContent = `Error fetching status: ${txt}`;
+                    return null;
+                }
+                const data = await res.json();
+                cronStatusDiv.textContent = `Running: ${data.running ? 'yes' : 'no'}; Interval: ${data.interval_seconds}s`;
+                return data;
+            } catch (e) {
+                cronStatusDiv.textContent = `Error fetching status: ${e && e.message ? e.message : e}`;
+                return null;
+            }
+        }
+
+        // expose a global badge updater so other parts of the page can refresh status
+        window.updateCronBadge = async function () {
+            const dot = document.getElementById('cronBadgeDot');
+            const text = document.getElementById('cronBadgeText');
+            if (!dot || !text) return;
+            try {
+                const res = await fetch('/cron/status');
+                if (!res.ok) {
+                    dot.className = 'h-3 w-3 rounded-full bg-gray-400';
+                    text.textContent = 'Cron: error';
+                    return;
+                }
+                const data = await res.json();
+                if (data.running) {
+                    dot.className = 'h-3 w-3 rounded-full bg-green-500';
+                    text.textContent = `Cron: running (${data.interval_seconds}s)`;
+                } else {
+                    dot.className = 'h-3 w-3 rounded-full bg-red-500';
+                    text.textContent = `Cron: stopped`;
+                }
+            } catch (e) {
+                dot.className = 'h-3 w-3 rounded-full bg-gray-400';
+                text.textContent = `Cron: error`;
+            }
+        };
+
+        async function startCron() {
+            const interval = Number(cronIntervalInput.value) || 60;
+            try {
+                // POST /cron/start with form data / query param
+                const res = await fetch(`/cron/start?interval_seconds=${encodeURIComponent(interval)}`, { method: 'POST' });
+                const txt = await res.text();
+                if (!res.ok) {
+                    cronStatusDiv.textContent = `Start failed: ${txt}`;
+                    return;
+                }
+                // try parse json
+                try {
+                    const data = JSON.parse(txt);
+                    cronStatusDiv.textContent = `Started: ${data.status || ''}; Interval: ${data.interval_seconds || interval}s`;
+                } catch (_) {
+                    cronStatusDiv.textContent = `Started (response): ${txt}`;
+                }
+            } catch (e) {
+                cronStatusDiv.textContent = `Start failed: ${e && e.message ? e.message : e}`;
+            }
+        }
+
+        async function stopCron() {
+            try {
+                const res = await fetch('/cron/stop', { method: 'POST' });
+                const txt = await res.text();
+                if (!res.ok) {
+                    cronStatusDiv.textContent = `Stop failed: ${txt}`;
+                    return;
+                }
+                try {
+                    const data = JSON.parse(txt);
+                    cronStatusDiv.textContent = `Stopped: ${data.status || ''}`;
+                } catch (_) {
+                    cronStatusDiv.textContent = `Stopped (response): ${txt}`;
+                }
+            } catch (e) {
+                cronStatusDiv.textContent = `Stop failed: ${e && e.message ? e.message : e}`;
+            }
+        }
+
+        cronControlBtn.addEventListener('click', async () => {
+            cronModal.classList.remove('hidden');
+            cronModal.classList.add('flex');
+            await fetchCronStatus();
+        });
+        cronCloseBtn.addEventListener('click', () => {
+            cronModal.classList.add('hidden');
+            cronModal.classList.remove('flex');
+        });
+        cronStartBtn.addEventListener('click', async () => {
+            cronStatusDiv.textContent = 'Starting...';
+            await startCron();
+            // refresh status after a moment
+            setTimeout(() => { fetchCronStatus(); if (window.updateCronBadge) window.updateCronBadge(); }, 500);
+        });
+        cronStopBtn.addEventListener('click', async () => {
+            cronStatusDiv.textContent = 'Stopping...';
+            await stopCron();
+            setTimeout(() => { fetchCronStatus(); if (window.updateCronBadge) window.updateCronBadge(); }, 500);
+        });
+        cronRunOnceBtn.addEventListener('click', async () => {
+            cronStatusDiv.textContent = 'Running once...';
+            try {
+                const res = await fetch('/cron/run_once');
+                const txt = await res.text();
+                if (!res.ok) {
+                    cronStatusDiv.textContent = `Run once failed: ${txt}`;
+                    return;
+                }
+                try {
+                    const data = JSON.parse(txt);
+                    cronStatusDiv.textContent = `Run once: ${data.status || ''}`;
+                } catch (_) {
+                    cronStatusDiv.textContent = `Run once (response): ${txt}`;
+                }
+            } catch (e) {
+                cronStatusDiv.textContent = `Run once failed: ${e && e.message ? e.message : e}`;
+            }
+            setTimeout(() => { fetchCronStatus(); if (window.updateCronBadge) window.updateCronBadge(); }, 500);
+        });
+    })();
+
+    // Audio recording logic for interview tasks
+    function setupAudioRecording() {
+        document.querySelectorAll('.audio-controls').forEach(controlsDiv => {
+            const taskId = controlsDiv.getAttribute('data-taskid');
+            const taskName = controlsDiv.getAttribute('data-taskname');
+            let mediaRecorder, audioChunks = [];
+            let isRecording = false;
+            let mp3FilePath = null;
+            const recordButton = controlsDiv.querySelector('.start-recording');
+            const stopButton = controlsDiv.querySelector('.stop-recording');
+            const uploadButton = controlsDiv.querySelector('.upload-response');
+            const transcribeButton = controlsDiv.querySelector('.transcribe-audio');
+            const mp3Input = controlsDiv.querySelector('.mp3-file-input');
+
+            recordButton.onclick = async function () {
+                if (isRecording) return;
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    alert('Audio recording not supported in this browser.');
+                    return;
+                }
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    mediaRecorder.ondataavailable = e => {
+                        if (e.data.size > 0) audioChunks.push(e.data);
+                    };
+                    mediaRecorder.onstop = () => {
+                        uploadButton.disabled = false;
+                    };
+                    mediaRecorder.start();
+                    isRecording = true;
+                    recordButton.disabled = true;
+                    stopButton.disabled = false;
+                } catch (err) {
+                    alert('Could not start recording: ' + err);
+                }
+            };
+            stopButton.onclick = function () {
+                if (!isRecording || !mediaRecorder) return;
+                mediaRecorder.stop();
+                isRecording = false;
+                recordButton.disabled = false;
+                stopButton.disabled = true;
+            };
+            uploadButton.onclick = async function () {
+                if (audioChunks.length === 0) return;
+                const blob = new Blob(audioChunks, { type: 'audio/webm' });
+                const formData = new FormData();
+                formData.append('file', blob, `${taskName || 'interview'}_${taskId}.webm`);
+                formData.append('save_dir', '~/Desktop');
+                const statusSpan = document.querySelector(`.audio-status[data-taskid='${taskId}']`);
+                statusSpan.textContent = 'Uploading...';
+                try {
+                    const res = await fetch('/audio/record', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const result = await res.json();
+                    if (res.ok) {
+                        statusSpan.textContent = 'Uploaded! Saved at: ' + (result.file_path || 'unknown');
+                        mp3FilePath = result.file_path || null;
+                        transcribeButton.disabled = !mp3FilePath;
+                    } else {
+                        statusSpan.textContent = 'Error: ' + (result.detail || 'Upload failed');
+                    }
+                } catch (err) {
+                    statusSpan.textContent = 'Error: ' + err;
+                }
+            };
+            transcribeButton.onclick = function () {
+                mp3Input.value = '';
+                mp3Input.click();
+            };
+            mp3Input.onchange = async function (e) {
+                const statusSpan = document.querySelector(`.audio-status[data-taskid='${taskId}']`);
+                if (!mp3Input.files || mp3Input.files.length === 0) return;
+                const file = mp3Input.files[0];
+                statusSpan.textContent = 'Transcribing...';
+                try {
+                    const formData = new FormData();
+                    formData.append('file', file, file.name);
+                    formData.append('save_dir', '~/Desktop');
+                    const res = await fetch('/audio/transcribe', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const result = await res.json();
+                    if (res.ok && result.content) {
+                        statusSpan.textContent = 'Transcription: ' + result.content;
+                    } else {
+                        statusSpan.textContent = 'Transcription error: ' + (result.detail || 'Failed');
+                    }
+                } catch (err) {
+                    statusSpan.textContent = 'Transcription error: ' + err;
+                }
+            };
+        });
+    }
+
+    // Call after tasks table is rendered
+    function afterTasksRender() {
+        setupAudioRecording();
+    }
+
+    // Populate LLM model dropdown from /text/models
+    async function populateModelDropdown() {
+        const select = document.getElementById('llmModelSelect');
+        try {
+            const res = await fetch('/text/models');
+            if (!res.ok) throw new Error('Failed to fetch models');
+            const data = await res.json();
+            if (data && Array.isArray(data.models)) {
+                select.innerHTML = '';
+                data.models.forEach(model => {
+                    const opt = document.createElement('option');
+                    opt.value = model;
+                    opt.textContent = model;
+                    select.appendChild(opt);
+                });
+            } else {
+                select.innerHTML = '<option value="">No models found</option>';
+            }
+        } catch (err) {
+            select.innerHTML = '<option value="">Error loading models</option>';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        populateModelDropdown();
+        fetchClickupTasks();
+        document.getElementById('refreshTasksBtn').addEventListener('click', function () {
+            fetchClickupTasks();
+        });
+    });
+</script>
+
+</html>

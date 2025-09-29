@@ -1,0 +1,2 @@
+[console_scripts]
+campaign-generator = main:run_api
