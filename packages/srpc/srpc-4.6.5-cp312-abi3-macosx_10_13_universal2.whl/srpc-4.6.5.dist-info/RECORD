@@ -1,0 +1,12 @@
+srpc/__init__.abi3.so,sha256=T4qVWKItVuKmCD3uz36ZwM5KHfJbsUOD5t1trOSZjaI,88864
+srpc/client.abi3.so,sha256=WhbwVXQ6xywn1bg6xt3i-tKL6oZ7tPu4tTQPdE0oMBc,275936
+srpc/idg.abi3.so,sha256=qR3Y_yl09wUcGkDw4qgMFAoptZUVyTV8QUtlm3FO1Jw,203536
+srpc/protocol.abi3.so,sha256=z538pG7EMuf46HZarHYd_Ig1a_b6HJfkRcako4r3Xi0,277376
+srpc/ring.abi3.so,sha256=Xfs5cAJ4z65BLrAYHnR79KhQsuhUEQ0n3OO5AiIZhnI,205840
+srpc/server.abi3.so,sha256=jGiPf7yYoxBNds6Et9dqqI54BN8_swGksG3nQfwxWzM,294272
+srpc/ulog.abi3.so,sha256=Lo2GpR23Cwi06-CSSF9qaFZ7ZdyuC0kY45cFcA_kheA,332304
+srpc-4.6.5.dist-info/licenses/project/LICENSE,sha256=kEkzZcZuF9IyQREr1Wzn50Bl4UmKMnXTEJrlWANur74,1084
+srpc-4.6.5.dist-info/METADATA,sha256=Rf27zgb1RuU4iB1vL41rZ_i_dw2RnepMz0UiBd_eULU,947
+srpc-4.6.5.dist-info/WHEEL,sha256=Fi2ATphwILkdQJZx3yBQF3xLuIxg6RZKAfj_jogQiCs,114
+srpc-4.6.5.dist-info/top_level.txt,sha256=C-qARuJY0GBGbGX4vzD9TUSK6qWr5Dq1a0Wpb9xxrbU,5
+srpc-4.6.5.dist-info/RECORD,,
