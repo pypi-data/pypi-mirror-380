@@ -1,0 +1,516 @@
+{
+  "augmentation_strategies": [
+    {
+      "name": "bit_depth_reduction",
+      "display_name": "Bit Depth Reduction",
+      "hyperparameters": {
+        "bit_depth": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 8,
+          "default": 4,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "blur",
+      "display_name": "Blur",
+      "hyperparameters": {
+        "blur_limit": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 15,
+          "default": 5,
+          "anyValue": true
+        }
+      }
+    },
+    {
+      "name": "brightness_contrast",
+      "display_name": "Brightness and Contrast",
+      "hyperparameters": {
+        "brightness_limit": {
+          "type": "List[float]",
+          "min_value": [-1.0, 1.0],
+          "max_value": [-1.0, 1.0],
+          "default": [-0.2, 0.2],
+          "anyValue": false
+        },
+        "contrast_limit": {
+          "type": "List[float]",
+          "min_value": [-1.0, 1.0],
+          "max_value": [-1.0, 1.0],
+          "default": [-0.2, 0.2],
+          "anyValue": false
+        },
+        "brightness_by_max": {
+          "type": "bool",
+          "default": true,
+          "anyValue": false
+        },
+        "ensure_safe_range": {
+          "type": "bool",
+          "default": false,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "color_jitter",
+      "display_name": "Color Jitter",
+      "hyperparameters": {
+        "brightness": {
+          "type": "List[float]",
+          "min_value": [0.0, 2.0],
+          "max_value": [0.0, 2.0],
+          "default": [0.8, 1.2],
+          "anyValue": false
+        },
+        "contrast": {
+          "type": "List[float]",
+          "min_value": [0.0, 100000000.0],
+          "max_value": [1.0, 100000000.0],
+          "default": [0.8, 1.2],
+          "anyValue": false
+        },
+        "saturation": {
+          "type": "List[float]",
+          "min_value": [0.0, 2.0],
+          "max_value": [0.0, 2.0],
+          "default": [0.8, 1.2],
+          "anyValue": false
+        },
+        "hue": {
+          "type": "List[float]",
+          "min_value": [-0.5, 0.5],
+          "max_value": [-0.5, 0.5],
+          "default": [-0.5, 0.5],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "compression_artifacts",
+      "display_name": "Compression Artifacts",
+      "hyperparameters": {
+        "quality_range": {
+          "type": "List[float]",
+          "min_value": [1, 100],
+          "max_value": [1, 100],
+          "default": [50,20],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "downscale_upscale",
+      "display_name": "Downscale and Upscale",
+      "hyperparameters": {
+        "scale_min": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default": 0.25,
+          "anyValue": false
+        },
+        "scale_max": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default": 0.5,
+          "anyValue": false
+        },
+        "upscale": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 6,
+          "default": 0,
+          "anyValue": false
+        },
+        "downscale": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 6,
+          "default": 0,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "film_grain",
+      "display_name": "Film Grain",
+      "hyperparameters": {
+        "std_range": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.1, 0.2],
+          "anyValue": false
+        },
+        "mean_range": {
+          "type": "List[float]",
+          "min_value": [-1.0, 1.0],
+          "max_value": [-1.0, 1.0],
+          "default": [0.0, 0.0],
+          "anyValue": false
+        },
+        "per_channel": {
+          "type": "bool",
+          "default": true,
+          "anyValue": false
+        },
+        "noise_scale_factor": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 10,
+          "default": 1,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "flip",
+      "display_name": "Horizontal Flip",
+      "hyperparameters": {}
+    },
+    {
+      "name": "fog",
+      "display_name": "Fog",
+      "hyperparameters": {
+        "alpha_coef": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default": 0.1,
+          "anyValue": false
+        },
+        "fog_coef_range": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.1, 0.5],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "hsv",
+      "display_name": "Hue Saturation Value",
+      "hyperparameters": {
+        "hue_shift_limit": {
+          "type": "List[int]",
+          "min_value": [-180, 180],
+          "max_value": [-180, 180],
+          "default": [-20, 20],
+          "anyValue": false
+        },
+        "sat_shift_limit": {
+          "type": "List[int]",
+          "min_value": [-255, 255],
+          "max_value": [-255, 255],
+          "default": [-30, 30],
+          "anyValue": false
+        },
+        "val_shift_limit": {
+          "type": "List[int]",
+          "min_value": [-255, 255],
+          "max_value": [-255, 255],
+          "default": [-20, 20],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "iso_noise",
+      "display_name": "ISO Noise",
+      "hyperparameters": {
+        "color_shift": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.01, 0.05],
+          "anyValue": false
+        },
+        "intensity": {
+          "type": "List[float]",
+          "min_value": [0.0, 1000.0],
+          "max_value": [0.0, 1000.0],
+          "default": [0.1, 0.5],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "low_light",
+      "display_name": "Low Light",
+      "hyperparameters": {
+        "brightness_factor": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default": 0.3,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "posterize",
+      "display_name": "Posterize",
+      "hyperparameters": {
+        "num_bits": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 7,
+          "default": 4,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "rain",
+      "display_name": "Rain",
+      "hyperparameters": {
+        "slant_range": {
+          "type": "List[int]",
+          "min_value": [-45, 45],
+          "max_value": [90, 90],
+          "default": [-15, 15],
+          "anyValue": false
+        },
+        "drop_length": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 1000,
+          "default": 50,
+          "anyValue": false
+        },
+        "drop_width": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 1000,
+          "default": 1,
+          "anyValue": false
+        },
+        "red_drop_color": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 255,
+          "default": 200,
+          "anyValue": false
+        },
+          "green_drop_color": {
+            "type": "int",
+            "min_value": 0,
+            "max_value": 255,
+            "default": 200,
+            "anyValue": false
+          },
+          "blue_drop_color": {
+            "type": "int",
+            "min_value": 0,
+            "max_value": 255,
+            "default": 200,
+            "anyValue": false
+        },
+        "blur_value": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 100,
+          "default": 7,
+          "anyValue": false
+        },
+        "brightness_coefficient": {
+          "type": "float",
+          "min_value": 1e-10,
+          "max_value": 1.0,
+          "default": 0.7,
+          "anyValue": false
+        },
+        "rain_type": {
+          "type": "str",
+          "default": "default",
+          "allowed_values": ["default", "heavy", "torrential", "drizzle"],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "random_affine",
+      "display_name": "Random Affine",
+      "hyperparameters": {
+        "shift_limit": {
+          "type": "List[float]",
+          "min_value": [-1.0, 1.0],
+          "max_value": [-1.0, 1.0],
+          "default": [-0.0625, 0.0625],
+          "anyValue": false
+        },
+        "scale_limit": {
+          "type": "List[float]",
+          "min_value": [-1.0, 1.0],
+          "max_value": [-1.0, 1.0],
+          "default": [-0.1, 0.1],
+          "anyValue": false
+        },
+        "rotate_limit": {
+          "type": "List[int]",
+          "min_value": [-360, 360],
+          "max_value": [-360, 360],
+          "default": [-45, 45],
+          "anyValue": false
+        },
+        "interpolation": {
+          "type": "str",
+          "min_value": 0,
+          "max_value": 5,
+          "default": "cv2.INTER_NEAREST",
+          "allowed_values": ["cv2.INTER_NEAREST", "cv2.INTER_LINEAR", "cv2.INTER_CUBIC", "cv2.INTER_LANCZOS4", "cv2.INTER_AREA"],
+          "anyValue": false
+        },
+        "border_mode": {
+          "type": "str",
+          "min_value": 0,
+          "max_value": 4,
+          "default": "cv2.BORDER_CONSTANT",
+          "allowed_values": ["cv2.BORDER_CONSTANT", "cv2.BORDER_REPLICATE", "cv2.BORDER_REFLECT", "cv2.BORDER_WRAP", "cv2.BORDER_REFLECT_101"],
+          "anyValue": false
+        },
+        "rotate_method": {
+          "type": "str",
+          "default": "ellipse",
+          "anyValue": false,
+          "allowed_values": ["ellipse", "largest_box"]
+        },
+        "mask_interpolation": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 5,
+          "default": 0,
+          "anyValue": false
+        },
+        "fill": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 255,
+          "default": 0,
+          "anyValue": false
+        },
+        "fill_mask": {
+          "type": "int",
+          "min_value": 0,
+          "max_value": 255,
+          "default": 0,
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "salt_pepper",
+      "display_name": "Salt and Pepper Noise",
+      "hyperparameters": {
+        "amount_range": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.01, 0.06],
+          "anyValue": false
+        },
+        "salt_vs_pepper_range": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.4, 0.6],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "shadows",
+      "display_name": "Shadows",
+      "hyperparameters": {
+        "shadow_roi_x": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.0, 1.0],
+          "anyValue": false
+        },
+        "shadow_roi_y": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.0, 1.0],
+          "anyValue": false
+        },
+        "num_shadows_limit": {
+          "type": "List[int]",
+          "min_value": [0, 100],
+          "max_value": [0, 100],
+          "default": [2, 3],
+          "anyValue": false
+        },
+        "shadow_dimension": {
+          "type": "int",
+          "min_value": 1,
+          "max_value": 200,
+          "default": 4,
+          "anyValue": false
+        },
+        "shadow_intensity_range": {
+          "type": "List[float]",
+          "min_value": [0.0, 1.0],
+          "max_value": [0.0, 1.0],
+          "default": [0.2, 0.7],
+          "anyValue": false
+        }
+      }
+    },
+    {
+      "name": "snow",
+      "display_name": "Snow",
+      "hyperparameters": {
+        "brightness_coeff": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1000.0,
+          "default": 2.5,
+          "anyValue": false
+        },
+        "snow_point_range": {
+          "type": "List[float]",
+          "min_value": [0.000001, 0.999999],
+          "max_value": [0.000001, 0.999999],
+          "default": [0.1, 0.3],
+          "anyValue": false
+        },
+        "method": {
+          "type": "str",
+          "default": "bleach",
+          "anyValue": false,
+          "allowed_values": ["bleach", "texture"]
+        }
+      }
+    },
+    {
+      "name": "speckle",
+      "display_name": "Speckle Noise",
+      "hyperparameters": {
+        "mean": {
+          "type": "float",
+          "min_value": -1.0,
+          "max_value": 1.0,
+          "default": 0.0,
+          "anyValue": false
+        },
+        "var": {
+          "type": "float",
+          "min_value": 0.0,
+          "max_value": 1.0,
+          "default": 0.01,
+          "anyValue": false
+        }
+      }
+    }
+  ]
+}
