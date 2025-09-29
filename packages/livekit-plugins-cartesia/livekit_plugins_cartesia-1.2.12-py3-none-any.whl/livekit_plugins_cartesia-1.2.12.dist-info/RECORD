@@ -1,0 +1,10 @@
+livekit/plugins/cartesia/__init__.py,sha256=n8BvjZSpYiYFxOg3Hyh-UuyG7XeQw9uP48_OPDSBWdE,1259
+livekit/plugins/cartesia/log.py,sha256=4Mnhjng_DU1dIWP9IWjIQGZ67EV3LnQhWMWCHVudJbo,71
+livekit/plugins/cartesia/models.py,sha256=iIvdQQoEe0WgcXq1B4hRg0ECGGOmFH-OKV4zxiYAxMY,1556
+livekit/plugins/cartesia/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/cartesia/stt.py,sha256=_OdUShlwvhj7DjCE-1zAagqeR77yVVK6bX3125pZWMM,14739
+livekit/plugins/cartesia/tts.py,sha256=DOWR6dSwen_PvgMAzVrkOV-qt1HWeeJaj4tUbf69954,17248
+livekit/plugins/cartesia/version.py,sha256=NhtcZ3HrHC6TVbG58IieJaw1vTkwefziFdDCa5-FYxs,601
+livekit_plugins_cartesia-1.2.12.dist-info/METADATA,sha256=zec8xXhm29d9VjTqS9-SIFT0XZ_lGosWEx1_7cDVeLQ,1462
+livekit_plugins_cartesia-1.2.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_cartesia-1.2.12.dist-info/RECORD,,
