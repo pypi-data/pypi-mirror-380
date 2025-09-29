@@ -1,0 +1,19 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redis-namespace-client"
+version = "0.1.0"
+description = "A simple Redis client for Python with support for: namespacing and JSON serialization/deserialization, designed for middleware applications."
+authors = [{ name="Onyekelu Chukwuebuka", email="conyekelu@yahoo.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "redis",
+    "urllib3"
+]
