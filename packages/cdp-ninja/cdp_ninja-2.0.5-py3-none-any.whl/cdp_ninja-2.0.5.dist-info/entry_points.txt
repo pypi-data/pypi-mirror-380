@@ -1,0 +1,4 @@
+[console_scripts]
+cdp-ninja = cdp_ninja.server:main
+cdp-ninja-docs = scripts.extract_docs:main
+cdp-ninja-setup = cdp_ninja.setup.install:main
