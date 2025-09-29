@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Test htag</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
+        <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+    </head>
+    <body>
+     loading...
+      <script type="py" config='{"packages":["htag","htbulma"]}'>
+from htag import Tag
+import htbulma as b         # a library of htag's components
+import html
+
+class App(Tag.body):
+    """Build and use your own UI components"""
+
+    imports = b.ALL  # IRL, you don't need this line
+
+    def init(self):
+        self["style"]="overflow-y:auto !important"
+        self.mbox = b.MBox(self) # declare the 'service' mbox
+        self.toast = b.Toaster(self) # declare the 'service' toaster
+        self.code = Tag.pre("select a file")
+
+        nav = b.Nav("MyApp")    # declare the nav bar
+        nav.addEntry("mbox",    lambda: self.mbox.show("hello"))  # declare an entry in the nav bar
+        nav.addEntry("confirm", lambda: self.mbox.confirm("Sure ?",ok=self.action))  # declare an entry in the nav bar
+        nav.addEntry("prompt",  lambda: self.mbox.prompt("What is your name ?","",ok=self.action))  # declare an entry in the nav bar
+
+        self.select=1
+        fields=b.Fields()
+        options=[1,2,3]
+        fields.addField("radio",      b.Radio(self.select, options, _onchange=self.showvalue))
+        fields.addField("sb",         b.SelectButtons(self.select, options, _onchange=self.showvalue) )
+        fields.addField("select",     b.Select(self.select, options, _onchange=self.showvalue) )
+        fields.addField("cb",         b.Checkbox( False, "Just do it", _onchange=self.showvalue))
+        fields.addField("input",      b.Input("hello", _onchange=self.showvalue))
+        fields.addField("input date", b.Input(None,_type="date", _onchange=self.showvalue) )
+        fields.addField("text area",  b.Textarea("world",_rows=2, _onchange=self.showvalue) )
+        fields.addField("range",      b.Range(42,_min=0,_max=100, _onchange=self.showvalue) )
+
+        filer = b.HSplit(
+            b.FileSelect("/", self.load, pattern="*.py"),
+            self.code ,
+            sizes=[30,70],
+          )
+
+        tab = b.Tabs()
+        tab.addTab("Tab one",fields)
+        tab.addTab("Tab two",filer)
+        tab.addTab("Tab Three","I'm working in background"+b.Progress())
+
+        main = b.Box()
+        main <= b.Button("Push",_onclick=lambda o: self.action("button!") )
+        main <= Tag.a("See htbulma",_href="https://github.com/manatlan/htbulma", _target="_blank", _style="float:right")
+        main <= tab
+
+        self <= nav + b.Section( main )
+
+    def action(self,o=None):
+        self.toast.show(o or ";-)")
+    def showvalue(self,object):
+        self.toast.show(object.value)
+    def load(self,filename):
+        self.action(filename)
+        self.code.clear( html.escape(open(filename).read()) )
+
+###############################################################################
+from htag.runners import PyScript
+
+PyScript( App  ).run(  )
+
+</script>
+</body>
+</html>
