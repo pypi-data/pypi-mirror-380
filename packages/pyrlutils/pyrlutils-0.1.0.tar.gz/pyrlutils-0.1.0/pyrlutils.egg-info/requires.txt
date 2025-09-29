@@ -1,0 +1,8 @@
+numpy
+typing-extensions
+
+[openaigym]
+gymnasium
+
+[test]
+unittest
