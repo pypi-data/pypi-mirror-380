@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: oralchess
+Version: 0.1.0
+Summary: OralChess: A simple chess engine with minimax and optional oral AI integration
+Author-email: Anonym <xyoubotz@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ALFARABIqs/oralchess
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-chess>=1.999
+Dynamic: license-file
+
+# OralChess ♟️
+
+OralChess adalah engine catur ringan berbasis Python yang menggunakan algoritma **minimax dengan alpha-beta pruning**.  
+Engine ini cocok untuk eksperimen, belajar AI catur, ataupun dipasang sebagai backend untuk GUI seperti DroidFish / Arena.
+
+---
+
+## ✨ Kelebihan OralChess
+
+- 🚀 **Ringan & Cepat** — ditulis murni Python dengan optimasi alpha-beta pruning.  
+- 🧠 **Algoritma Minimax** — dapat mencari langkah terbaik hingga kedalaman tertentu.  
+- 🔍 **Evaluasi Posisi** — menghitung nilai material dan mendeteksi checkmate / stalemate.  
+- 🎮 **Integrasi Mudah** — bisa dipakai langsung via modul `import oralchess`.  
+- 🔌 **Dukungan UCI Engine** — bisa dijalankan sebagai server UCI agar kompatibel dengan GUI populer.  
+- 📦 **Mudah Dipasang** — tersedia di PyPI (`pip install oralchess`).  
+- 🛠️ **Open Source & Bisa Dikembangkan** — bebas dikustomisasi untuk penelitian atau proyek pribadi.
+
+---
+
+## 📥 Instalasi
+
+```bash
+pip install oralchess
