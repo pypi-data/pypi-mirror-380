@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+scm_python_plan/__init__.py
+scm_python_plan.egg-info/PKG-INFO
+scm_python_plan.egg-info/SOURCES.txt
+scm_python_plan.egg-info/dependency_links.txt
+scm_python_plan.egg-info/requires.txt
+scm_python_plan.egg-info/top_level.txt
+scm_python_plan/lib/plan_deploy.py
+scm_python_plan/tapps/deploy/plan.py
