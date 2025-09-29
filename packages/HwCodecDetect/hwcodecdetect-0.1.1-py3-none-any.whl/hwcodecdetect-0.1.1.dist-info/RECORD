@@ -1,0 +1,11 @@
+HwCodecDetect/__init__.py,sha256=GYELkv_IpPYo1mcrAu5T474c6nDpaoQpAF-5sQecXjE,517
+HwCodecDetect/install_ffmpeg_if_needed.py,sha256=dotDsGCWAF-lZVUatDQgPtlgKXVe-sLYAhT6PfznWJY,8232
+HwCodecDetect/run_tests.py,sha256=w2qlI20Mqyx6e6TJhCvugEyNFNvNirrgsMVrmqctEb0,20582
+HwCodecDetect/version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+hwcodecdetect-0.1.1.dist-info/licenses/LICENSE,sha256=MbDIouN72hBze3wjpi9OjjvDtTpnF7HmRo3rJ3CQX0U,1496
+hwcodecdetect-0.1.1.dist-info/METADATA,sha256=kSxLIp6_Caj03IDFI5PbN0dzXOCg7ekIxmOmi-pylj0,6225
+hwcodecdetect-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hwcodecdetect-0.1.1.dist-info/entry_points.txt,sha256=zwd2dpdGkYF_SH-S9-IxF-UN0yv9-4nbIJnqUTL6QrY,63
+hwcodecdetect-0.1.1.dist-info/top_level.txt,sha256=Vm6bhU7wKyxnNL_3ndZ7bHlt-shBFhfEPIeeBDKz_Ag,14
+hwcodecdetect-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hwcodecdetect-0.1.1.dist-info/RECORD,,
