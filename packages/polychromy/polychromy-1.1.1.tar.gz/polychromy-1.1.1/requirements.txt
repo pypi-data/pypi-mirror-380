@@ -1,0 +1,2 @@
+requests
+textlinebreaker>=1.0.0

@@ -1,0 +1,3 @@
+include data/colors.json
+exclude images
+exclude dynamic_data
