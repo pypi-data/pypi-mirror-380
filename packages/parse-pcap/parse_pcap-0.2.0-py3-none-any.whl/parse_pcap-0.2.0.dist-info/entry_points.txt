@@ -1,0 +1,2 @@
+[console_scripts]
+parse_pcap = parse_pcap.cli:main
