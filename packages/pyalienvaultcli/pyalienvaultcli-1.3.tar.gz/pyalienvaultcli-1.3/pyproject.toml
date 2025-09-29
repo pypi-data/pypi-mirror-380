@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyalienvaultcli"
+authors = [{ email = "tdebize@mail.com" }]
+description = "A simple Python script to interact with Alienvault OTX APIs from CLI."
+readme = "README.md"
+requires-python = ">=3"
+keywords = ["alienvault", "otx", "cli", "malware", "phishing", "threat", "open", "threat", "exchange", "ioc", "api"]
+license = "LGPL-3.0-or-later"
+classifiers = [
+    'Topic :: Security',
+    'Programming Language :: Python :: 3'
+]
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["pyalienvaultcli/requirements.txt"]}
+version = {attr = "pyalienvaultcli.pyalienvaultcli.VERSION"}
+
+[project.urls]
+Homepage = "https://github.com/maaaaz/pyalienvaultcli"
+
+[project.scripts]
+pyalienvaultcli = "pyalienvaultcli.pyalienvaultcli:main"
