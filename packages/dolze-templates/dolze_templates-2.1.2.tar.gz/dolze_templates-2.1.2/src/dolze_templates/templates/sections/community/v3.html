@@ -1,0 +1,30 @@
+<section id="community" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl font-light text-gray-900 text-center mb-16" data-aos="fade-up">
+      {{ sections.community.title }}
+    </h2>
+    
+    {% if sections.community.stats %}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+      {% for stat in sections.community.stats %}
+      <div class="text-center" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+        <div class="text-3xl font-light text-gray-900 mb-2">{{ stat.value }}</div>
+        <div class="text-sm text-gray-600">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if sections.community.cta %}
+    <div class="text-center" data-aos="fade-up">
+      <a href="{{ sections.community.cta.url }}" 
+         class="group relative inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-center whitespace-nowrap transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-primary/20 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md hover:from-blue-700 hover:to-purple-700">
+        {{ sections.community.cta.label }}
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>

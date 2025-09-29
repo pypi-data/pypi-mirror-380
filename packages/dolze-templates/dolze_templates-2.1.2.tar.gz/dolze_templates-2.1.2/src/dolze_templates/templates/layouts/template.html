@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{{ settings.accessibility.lang | default('en') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ settings.seo.title }}</title>
+    <meta name="description" content="{{ settings.seo.description }}" />
+    <meta name="keywords" content="{{ settings.seo.keywords }}" />
+    <link rel="canonical" href="{{ settings.seo.canonicalUrl }}" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ settings.seo.openGraph.title }}" />
+    <meta
+      property="og:description"
+      content="{{ settings.seo.openGraph.description }}"
+    />
+    <meta property="og:image" content="{{ settings.seo.openGraph.image }}" />
+    <meta property="og:url" content="{{ settings.seo.openGraph.url }}" />
+    <meta property="og:type" content="{{ settings.seo.openGraph.type }}" />
+    <meta property="og:locale" content="{{ settings.seo.openGraph.locale }}" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="{{ settings.seo.twitterCard.card }}" />
+    <meta name="twitter:site" content="{{ settings.seo.twitterCard.site }}" />
+    <meta
+      name="twitter:creator"
+      content="{{ settings.seo.twitterCard.creator }}"
+    />
+    <meta name="twitter:image" content="{{ settings.seo.twitterCard.image }}" />
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <!-- CSS Libraries -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Dependencies CSS -->
+    {% if dependencies_css is defined and dependencies_css %} {{
+    dependencies_css | safe }} {% endif %}
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind Theme Configuration -->
+    {% if tailwind_config is defined and tailwind_config %} {{ tailwind_config |
+    safe }} {% endif %}
+    <!-- Critical CSS -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Accessibility improvements */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Focus styles for accessibility */
+    </style>
+    <!-- Injected CSS Assets -->
+    {% if injected_css_assets is defined and injected_css_assets %} {{
+    injected_css_assets | safe }} {% endif %}
+  </head>
+  <body class="bg-white font-sans text-gray-900 antialiased">
+    <!-- Main content -->
+    <main id="main-content">
+      {% for section_name in sections_order %} {% if sections[section_name] is
+      defined %} {{ sections[section_name] | safe }} {% endif %} {% endfor %}
+    </main>
+
+    <!-- JavaScript Libraries -->
+    <!-- Dependencies JavaScript -->
+    {% if dependencies_js is defined and dependencies_js %} {{ dependencies_js |
+    safe }} {% endif %}
+
+    <!-- Injected JavaScript Assets -->
+    {% if injected_js_assets is defined and injected_js_assets %} {{
+    injected_js_assets | safe }} {% endif %}
+  </body>
+</html>
