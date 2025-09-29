@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biotime"  # PyPI’dagi paket nomi (agar band bo‘lsa o‘zgartirish kerak)
+version = "1.1"
+description = "Python client for working with ZKBioTime API"
+authors = [
+  { name = "rozievich", email = "oybekrozievich@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+
+# Kerakli kutubxonalar
+dependencies = [
+    "requests>=2.28.0"
+]
+
+# PyPI sahifasida ko‘rinadigan linklar
+[project.urls]
+Homepage = "https://github.com/rozievich/biotime"
+Repository = "https://github.com/rozievich/biotime"
+Issues = "https://github.com/rozievich/biotime/issues"
+
+# Optional classifiers (qidirishda yordam beradi)
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[tool.setuptools.packages.find]
+where = ["."]
