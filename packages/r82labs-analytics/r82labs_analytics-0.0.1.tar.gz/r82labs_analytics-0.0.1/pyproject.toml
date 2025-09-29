@@ -1,0 +1,31 @@
+[project]
+name = "r82labs-analytics"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "r82labs-ronan",email = "ronan@r82labs.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "polars (>=1.33.1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "r82labs_analytics", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "ruff (>=0.13.2,<0.14.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+]
+docs = [
+    "sphinx (>=8.2.3,<9.0.0)",
+    "sphinx-rtd-theme (>=3.0.2,<4.0.0)",
+    "furo (>=2025.9.25,<2026.0.0)"
+]
