@@ -1,0 +1,2 @@
+[console_scripts]
+systemdlint = systemdlint.__main__:main
