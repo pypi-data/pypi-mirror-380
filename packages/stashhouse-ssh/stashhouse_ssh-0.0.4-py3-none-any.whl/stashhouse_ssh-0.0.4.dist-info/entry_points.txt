@@ -1,0 +1,8 @@
+[stashhouse.plugins.cli.parse]
+ssh = stashhouse_ssh:parse_arguments
+
+[stashhouse.plugins.cli.register]
+ssh = stashhouse_ssh:register_arguments
+
+[stashhouse.plugins.server]
+ssh = stashhouse_ssh.server:SSHServer
