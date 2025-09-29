@@ -1,0 +1,78 @@
+LICENSE
+README.md
+pyproject.toml
+src/sherpa_ml/__about__.py
+src/sherpa_ml/__init__.py
+src/sherpa_ml/cli.py
+src/sherpa_ml/context.py
+src/sherpa_ml/plugins.py
+src/sherpa_ml/render.py
+src/sherpa_ml/telemetry.py
+src/sherpa_ml/utils.py
+src/sherpa_ml.egg-info/PKG-INFO
+src/sherpa_ml.egg-info/SOURCES.txt
+src/sherpa_ml.egg-info/dependency_links.txt
+src/sherpa_ml.egg-info/entry_points.txt
+src/sherpa_ml.egg-info/requires.txt
+src/sherpa_ml.egg-info/top_level.txt
+src/sherpa_ml/templates/common/CODE_OF_CONDUCT.md.j2
+src/sherpa_ml/templates/common/CONTRIBUTING.md.j2
+src/sherpa_ml/templates/common/DATA_CARD.md.j2
+src/sherpa_ml/templates/common/LICENSE.j2
+src/sherpa_ml/templates/common/MODEL_CARD.md.j2
+src/sherpa_ml/templates/common/Makefile.j2
+src/sherpa_ml/templates/common/README.md.j2
+src/sherpa_ml/templates/common/SECURITY.md.j2
+src/sherpa_ml/templates/common/docker-compose.yml.j2
+src/sherpa_ml/templates/common/dvc.yaml.j2
+src/sherpa_ml/templates/common/pyproject.toml.j2
+src/sherpa_ml/templates/common/conf/config.yaml.j2
+src/sherpa_ml/templates/common/conf/eval/default.yaml.j2
+src/sherpa_ml/templates/common/conf/train/default.yaml.j2
+src/sherpa_ml/templates/common/docker/cuda.Dockerfile.j2
+src/sherpa_ml/templates/common/docker/slim.Dockerfile.j2
+src/sherpa_ml/templates/common/scripts/download_data.py.j2
+src/sherpa_ml/templates/common/scripts/prepare_data.py.j2
+src/sherpa_ml/templates/common/src/{{ pkg }}/serve/app.py.j2
+src/sherpa_ml/templates/common/src/{{ pkg }}/utils/config.py.j2
+src/sherpa_ml/templates/common/src/{{ pkg }}/utils/logging.py.j2
+src/sherpa_ml/templates/common/src/{{ pkg }}/utils/paths.py.j2
+src/sherpa_ml/templates/common/src/{{ pkg }}/utils/tracking.py.j2
+src/sherpa_ml/templates/presets/minimal/conf/config.yaml.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/__init__.py.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/eval.py.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/infer.py.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/train.py.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/utils/logging.py.j2
+src/sherpa_ml/templates/presets/minimal/src/{{ pkg }}/utils/paths.py.j2
+src/sherpa_ml/templates/presets/minimal/tests/test_smoke.py.j2
+src/sherpa_ml/templates/presets/nlp/conf/config.yaml.j2
+src/sherpa_ml/templates/presets/nlp/conf/eval/default.yaml.j2
+src/sherpa_ml/templates/presets/nlp/conf/train/default.yaml.j2
+src/sherpa_ml/templates/presets/nlp/src/{{ pkg }}/infer.py.j2
+src/sherpa_ml/templates/presets/nlp/src/{{ pkg }}/train.py.j2
+src/sherpa_ml/templates/presets/nlp/src/{{ pkg }}/data/nlp.py.j2
+src/sherpa_ml/templates/presets/nlp/tests/test_smoke.py.j2
+src/sherpa_ml/templates/presets/tabular/conf/config.yaml.j2
+src/sherpa_ml/templates/presets/tabular/conf/eval/default.yaml.j2
+src/sherpa_ml/templates/presets/tabular/conf/train/default.yaml.j2
+src/sherpa_ml/templates/presets/tabular/src/{{ pkg }}/eval.py.j2
+src/sherpa_ml/templates/presets/tabular/src/{{ pkg }}/infer.py.j2
+src/sherpa_ml/templates/presets/tabular/src/{{ pkg }}/train.py.j2
+src/sherpa_ml/templates/presets/tabular/src/{{ pkg }}/data/tabular.py.j2
+src/sherpa_ml/templates/presets/tabular/src/{{ pkg }}/models/factory.py.j2
+src/sherpa_ml/templates/presets/tabular/tests/test_smoke.py.j2
+src/sherpa_ml/templates/presets/vision/conf/config.yaml.j2
+src/sherpa_ml/templates/presets/vision/conf/dataset/cifar10.yaml.j2
+src/sherpa_ml/templates/presets/vision/conf/model/resnet18.yaml.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/bench_ort_cpu.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/eval.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/export_onnx.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/infer.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/train.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/data/vision.py.j2
+src/sherpa_ml/templates/presets/vision/src/{{ pkg }}/models/factory.py.j2
+src/sherpa_ml/templates/presets/vision/tests/test_smoke.py.j2
+tests/test_context.py
+tests/test_e2e_minimal.py
+tests/test_renderer.py
