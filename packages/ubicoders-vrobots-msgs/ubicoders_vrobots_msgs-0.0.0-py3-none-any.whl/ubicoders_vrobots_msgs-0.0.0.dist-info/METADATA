@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: ubicoders-vrobots-msgs
+Version: 0.0.0
+Summary: Message definitions for VROBOTS in Python
+Home-page: https://github.com/ubicoders0/vrobots_msgs
+Author: Elliot Lee
+Author-email: info@ubicoders.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>2.0.0
+Requires-Dist: flatbuffers==23.5.26
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# vrobots_msgs
+Virtual Robot Messages
+Version 2.0.0
+Flatbuffers Version: 23.5.26
+
+## Install
+```python
+pip install ubicoders-msgs
+```
