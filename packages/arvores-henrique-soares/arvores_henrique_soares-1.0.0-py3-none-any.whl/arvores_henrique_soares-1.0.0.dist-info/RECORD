@@ -1,0 +1,11 @@
+arvores_henrique_soares-1.0.0.dist-info/licenses/LICENSE,sha256=mRuSmmQEIzSjkS7MuUQscGpQ1tFUTxS5f02pfI0x120,1109
+minhas_arvores/__init__.py,sha256=AVvlsIoAkRxdDZOMXwPpc7KzziWO7-HsjiH51raPm_I,825
+minhas_arvores/arvore_base.py,sha256=BZlT5XkYhRqOSrNYCr6bNmBEGI9JUi0nMA09jWHMbR0,9417
+minhas_arvores/c45.py,sha256=jfEUOYf6229mJ2H2g-NiiSadEzoUdqyZ2PYBdUZ2_Mw,16033
+minhas_arvores/cart.py,sha256=mH3w5-SdIKBCJeSKVclumMi4yv4LtNYeHl97kP8L000,17409
+minhas_arvores/id3.py,sha256=orOQo0i7vW7l5heyK-o_Am2hZAuMJxGKTxcwCRRSNjY,9948
+minhas_arvores/utilidades.py,sha256=RabPcB0umj7JmJdeYUodMsp5bRJnb1gHm2U4qoQHwYc,5370
+arvores_henrique_soares-1.0.0.dist-info/METADATA,sha256=tRSkjkErzmFHSvxsFB3hLQGOozUpgOKOu1p5EGgF3qs,2805
+arvores_henrique_soares-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+arvores_henrique_soares-1.0.0.dist-info/top_level.txt,sha256=fq0jzZMkcuYLBq8cBs9s89RX2KsriW3LqF0mJZHRmME,15
+arvores_henrique_soares-1.0.0.dist-info/RECORD,,
