@@ -1,0 +1,35 @@
+"""
+URL configuration for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django.urls import path, include
+{% if features.api_views %}
+from django.urls import re_path
+{% endif %}
+from . import views
+
+app_name = '{{ app_name }}'
+
+urlpatterns = [
+    {% if features.function_based_views %}
+    path('', views.{{ app_name }}_index, name='index'),
+    path('<int:pk>/', views.{{ app_name }}_detail, name='detail'),
+    {% endif %}
+    
+    {% if features.class_based_views %}
+    path('list/', views.{{ app_name|pascal_case }}ListView.as_view(), name='list'),
+    path('detail/<int:pk>/', views.{{ app_name|pascal_case }}DetailView.as_view(), name='detail'),
+    
+    {% if features.crud_views %}
+    path('create/', views.{{ app_name|pascal_case }}CreateView.as_view(), name='create'),
+    path('update/<int:pk>/', views.{{ app_name|pascal_case }}UpdateView.as_view(), name='update'),
+    path('delete/<int:pk>/', views.{{ app_name|pascal_case }}DeleteView.as_view(), name='delete'),
+    {% endif %}
+    {% endif %}
+    
+    {% if features.api_views %}
+    path('api/', views.{{ app_name|pascal_case }}APIView.as_view(), name='api'),
+    {% endif %}
+]

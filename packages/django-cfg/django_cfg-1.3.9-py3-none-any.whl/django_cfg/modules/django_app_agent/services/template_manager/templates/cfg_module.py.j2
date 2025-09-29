@@ -1,0 +1,81 @@
+"""
+Django-CFG module for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django_cfg.modules import BaseCfgModule
+from django_cfg.decorators import cfg_module
+from .config import {{ app_name|pascal_case }}Config
+
+
+@cfg_module
+class {{ app_name|pascal_case }}Module(BaseCfgModule[{{ app_name|pascal_case }}Config]):
+    """Django-CFG module for {{ app_name }}."""
+    
+    config_class = {{ app_name|pascal_case }}Config
+    
+    def __init__(self):
+        """Initialize {{ app_name }} module."""
+        super().__init__()
+        self.name = "{{ app_name }}"
+        self.version = "1.0.0"
+        self.description = "{{ description }}"
+    
+    async def initialize(self):
+        """Initialize module resources."""
+        self.logger.info(f"Initializing {{ app_name }} module")
+        
+        {% if features.database_setup %}
+        # Setup database connections if needed
+        await self._setup_database()
+        {% endif %}
+        
+        {% if features.cache_setup %}
+        # Setup cache if needed
+        await self._setup_cache()
+        {% endif %}
+        
+        self.logger.info(f"{{ app_name|title_case }} module initialized successfully")
+    
+    async def cleanup(self):
+        """Cleanup module resources."""
+        self.logger.info(f"Cleaning up {{ app_name }} module")
+        
+        {% if features.cleanup_tasks %}
+        # Perform cleanup tasks
+        await self._cleanup_resources()
+        {% endif %}
+    
+    def get_health_status(self) -> dict:
+        """Get module health status."""
+        return {
+            "status": "healthy",
+            "module": self.name,
+            "version": self.version,
+            "config_loaded": self.config is not None,
+            {% if features.database_setup %}
+            "database_connected": self._check_database_connection(),
+            {% endif %}
+        }
+    
+    {% if features.database_setup %}
+    async def _setup_database(self):
+        """Setup database connections."""
+        # Implement database setup logic
+        pass
+    {% endif %}
+    
+    {% if features.cache_setup %}
+    async def _setup_cache(self):
+        """Setup cache connections."""
+        # Implement cache setup logic
+        pass
+    {% endif %}
+    
+    {% if features.cleanup_tasks %}
+    async def _cleanup_resources(self):
+        """Cleanup module resources."""
+        # Implement cleanup logic
+        pass
+    {% endif %}

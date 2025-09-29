@@ -1,0 +1,44 @@
+"""
+Django-CFG configuration for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django_cfg.config import BaseCfgConfig
+from pydantic import Field
+from typing import Optional, List
+
+
+class {{ app_name|pascal_case }}Config(BaseCfgConfig):
+    """Configuration for {{ app_name }} application."""
+    
+    # Basic settings
+    enabled: bool = Field(default=True, description="Enable {{ app_name }} functionality")
+    debug_mode: bool = Field(default=False, description="Enable debug mode for {{ app_name }}")
+    
+    # Feature toggles
+    {% if features.api %}
+    api_enabled: bool = Field(default=True, description="Enable API endpoints")
+    api_rate_limit: int = Field(default=100, description="API rate limit per hour")
+    {% endif %}
+    
+    {% if features.caching %}
+    cache_timeout: int = Field(default=300, description="Cache timeout in seconds")
+    cache_key_prefix: str = Field(default="{{ app_name }}", description="Cache key prefix")
+    {% endif %}
+    
+    {% if features.notifications %}
+    notifications_enabled: bool = Field(default=True, description="Enable notifications")
+    email_notifications: bool = Field(default=False, description="Send email notifications")
+    {% endif %}
+    
+    # Business logic settings
+    max_items_per_user: Optional[int] = Field(default=None, description="Maximum items per user")
+    allowed_file_types: List[str] = Field(
+        default=["jpg", "png", "pdf"], 
+        description="Allowed file upload types"
+    )
+    
+    class Meta:
+        app_name = "{{ app_name }}"
+        config_prefix = "{{ app_name|upper }}"

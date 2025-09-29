@@ -1,0 +1,211 @@
+"""
+Views for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse, JsonResponse, Http404
+from django.views.generic import (
+    ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+)
+from django.contrib import messages
+from django.urls import reverse_lazy
+{% if features.authentication %}
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+{% endif %}
+{% if features.permissions %}
+from django.contrib.auth.mixins import PermissionRequiredMixin
+{% endif %}
+{% if features.forms %}
+from .forms import {{ app_name|pascal_case }}Form
+{% endif %}
+from .models import {{ app_name|pascal_case }}Model
+
+
+{% if features.function_based_views %}
+{% if features.authentication %}
+@login_required
+{% endif %}
+def {{ app_name }}_index(request):
+    """Index view for {{ app_name }}."""
+    items = {{ app_name|pascal_case }}Model.objects.all()
+    {% if features.status_tracking %}
+    items = items.filter(status='published')
+    {% endif %}
+    
+    context = {
+        'items': items,
+        'app_name': '{{ app_name|title_case }}',
+        'description': '{{ description }}'
+    }
+    return render(request, '{{ app_name }}/index.html', context)
+
+
+{% if features.authentication %}
+@login_required
+{% endif %}
+def {{ app_name }}_detail(request, pk):
+    """Detail view for {{ app_name }}."""
+    item = get_object_or_404({{ app_name|pascal_case }}Model, pk=pk)
+    
+    {% if features.status_tracking and features.authentication %}
+    # Only show published items to non-owners
+    if item.status != 'published' and item.owner != request.user:
+        raise Http404("Item not found")
+    {% endif %}
+    
+    context = {
+        'item': item,
+        'app_name': '{{ app_name|title_case }}'
+    }
+    return render(request, '{{ app_name }}/detail.html', context)
+{% endif %}
+
+
+{% if features.class_based_views %}
+class {{ app_name|pascal_case }}ListView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    ListView
+):
+    """List view for {{ app_name }} items."""
+    
+    model = {{ app_name|pascal_case }}Model
+    template_name = '{{ app_name }}/list.html'
+    context_object_name = 'items'
+    paginate_by = 20
+    
+    {% if features.status_tracking %}
+    def get_queryset(self):
+        """Filter published items."""
+        queryset = super().get_queryset()
+        {% if features.authentication %}
+        if self.request.user.is_authenticated:
+            return queryset  # Show all to authenticated users
+        {% endif %}
+        return queryset.filter(status='published')
+    {% endif %}
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['app_name'] = '{{ app_name|title_case }}'
+        return context
+
+
+class {{ app_name|pascal_case }}DetailView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    DetailView
+):
+    """Detail view for {{ app_name }} items."""
+    
+    model = {{ app_name|pascal_case }}Model
+    template_name = '{{ app_name }}/detail.html'
+    context_object_name = 'item'
+
+
+{% if features.crud_views %}
+class {{ app_name|pascal_case }}CreateView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    {%- if features.permissions %}PermissionRequiredMixin, {% endif -%}
+    CreateView
+):
+    """Create view for {{ app_name }} items."""
+    
+    model = {{ app_name|pascal_case }}Model
+    {% if features.forms %}
+    form_class = {{ app_name|pascal_case }}Form
+    {% else %}
+    fields = ['name', 'description'{% if features.status_tracking %}, 'status'{% endif %}]
+    {% endif %}
+    template_name = '{{ app_name }}/form.html'
+    success_url = reverse_lazy('{{ app_name }}:list')
+    {% if features.permissions %}
+    permission_required = '{{ app_name }}.add_{{ app_name|snake_case }}model'
+    {% endif %}
+    
+    {% if features.user_relations %}
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        messages.success(self.request, f'{{ app_name|title_case }} created successfully!')
+        return super().form_valid(form)
+    {% endif %}
+
+
+class {{ app_name|pascal_case }}UpdateView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    {%- if features.permissions %}PermissionRequiredMixin, {% endif -%}
+    UpdateView
+):
+    """Update view for {{ app_name }} items."""
+    
+    model = {{ app_name|pascal_case }}Model
+    {% if features.forms %}
+    form_class = {{ app_name|pascal_case }}Form
+    {% else %}
+    fields = ['name', 'description'{% if features.status_tracking %}, 'status'{% endif %}]
+    {% endif %}
+    template_name = '{{ app_name }}/form.html'
+    {% if features.permissions %}
+    permission_required = '{{ app_name }}.change_{{ app_name|snake_case }}model'
+    {% endif %}
+    
+    def form_valid(self, form):
+        messages.success(self.request, f'{{ app_name|title_case }} updated successfully!')
+        return super().form_valid(form)
+
+
+class {{ app_name|pascal_case }}DeleteView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    {%- if features.permissions %}PermissionRequiredMixin, {% endif -%}
+    DeleteView
+):
+    """Delete view for {{ app_name }} items."""
+    
+    model = {{ app_name|pascal_case }}Model
+    template_name = '{{ app_name }}/confirm_delete.html'
+    success_url = reverse_lazy('{{ app_name }}:list')
+    {% if features.permissions %}
+    permission_required = '{{ app_name }}.delete_{{ app_name|snake_case }}model'
+    {% endif %}
+    
+    def delete(self, request, *args, **kwargs):
+        messages.success(request, f'{{ app_name|title_case }} deleted successfully!')
+        return super().delete(request, *args, **kwargs)
+{% endif %}
+{% endif %}
+
+
+{% if features.api_views %}
+class {{ app_name|pascal_case }}APIView(
+    {%- if features.authentication %}LoginRequiredMixin, {% endif -%}
+    TemplateView
+):
+    """API view for {{ app_name }}."""
+    
+    def get(self, request, *args, **kwargs):
+        """Get {{ app_name }} data as JSON."""
+        items = {{ app_name|pascal_case }}Model.objects.all()
+        {% if features.status_tracking %}
+        items = items.filter(status='published')
+        {% endif %}
+        
+        data = [
+            {
+                'id': item.pk,
+                'name': item.name,
+                'description': item.description,
+                {% if features.status_tracking %}
+                'status': item.status,
+                {% endif %}
+                'created_at': item.created_at.isoformat(),
+            }
+            for item in items[:50]  # Limit to 50 items
+        ]
+        
+        return JsonResponse({
+            'success': True,
+            'data': data,
+            'count': len(data)
+        })
+{% endif %}

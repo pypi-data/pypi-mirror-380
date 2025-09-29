@@ -1,0 +1,105 @@
+"""
+Admin configuration for {{ app_name }} application.
+
+{{ description }}
+"""
+
+from django.contrib import admin
+{% if features.advanced_admin %}
+from django.utils.html import format_html
+from django.urls import reverse
+from django.utils.safestring import mark_safe
+{% endif %}
+from .models import {{ app_name|pascal_case }}Model
+{% if features.related_models %}
+from .models import {{ app_name|pascal_case }}Category, {{ app_name|pascal_case }}Tag
+{% endif %}
+
+
+@admin.register({{ app_name|pascal_case }}Model)
+class {{ app_name|pascal_case }}Admin(admin.ModelAdmin):
+    """Admin interface for {{ app_name }} model."""
+    
+    list_display = [
+        'name', 
+        {% if features.status_tracking %}'status', {% endif %}
+        {% if features.user_relations %}'owner', {% endif %}
+        'created_at', 
+        'updated_at'
+    ]
+    
+    list_filter = [
+        {% if features.status_tracking %}'status', {% endif %}
+        'created_at',
+        {% if features.user_relations %}'owner', {% endif %}
+    ]
+    
+    search_fields = ['name', 'description']
+    
+    {% if features.status_tracking %}
+    list_editable = ['status']
+    {% endif %}
+    
+    readonly_fields = ['created_at', 'updated_at']
+    
+    {% if features.advanced_admin %}
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('name', 'description')
+        }),
+        {% if features.status_tracking %}
+        ('Status', {
+            'fields': ('status',)
+        }),
+        {% endif %}
+        {% if features.user_relations %}
+        ('Ownership', {
+            'fields': ('owner',)
+        }),
+        {% endif %}
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+    {% endif %}
+    
+    {% if features.user_relations %}
+    def save_model(self, request, obj, form, change):
+        if not change:  # Creating new object
+            obj.owner = request.user
+        super().save_model(request, obj, form, change)
+    
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(owner=request.user)
+    {% endif %}
+    
+    {% if features.advanced_admin %}
+    def get_readonly_fields(self, request, obj=None):
+        if obj:  # Editing existing object
+            return self.readonly_fields + ['name']
+        return self.readonly_fields
+    {% endif %}
+
+
+{% if features.related_models %}
+@admin.register({{ app_name|pascal_case }}Category)
+class {{ app_name|pascal_case }}CategoryAdmin(admin.ModelAdmin):
+    """Admin interface for {{ app_name }} categories."""
+    
+    list_display = ['name', 'slug', 'description']
+    search_fields = ['name', 'description']
+    prepopulated_fields = {'slug': ('name',)}
+
+
+@admin.register({{ app_name|pascal_case }}Tag)
+class {{ app_name|pascal_case }}TagAdmin(admin.ModelAdmin):
+    """Admin interface for {{ app_name }} tags."""
+    
+    list_display = ['name', 'color']
+    search_fields = ['name']
+    list_editable = ['color']
+{% endif %}
