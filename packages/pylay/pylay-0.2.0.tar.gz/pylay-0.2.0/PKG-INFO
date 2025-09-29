@@ -1,0 +1,239 @@
+Metadata-Version: 2.4
+Name: pylay
+Version: 0.2.0
+Summary: Python の type hint と docstrings を利用した types <-> docs 間の透過的なジェネレータ
+License: MIT License
+         
+         Copyright (c) 2025 Ryo HIGASIGAWA
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+License-File: LICENSE
+Keywords: python,type-hints,pydantic,yaml,documentation,generator
+Author: Ryo HIGASIGAWA
+Author-email: your.email@example.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Code Generators
+Provides-Extra: dev
+Provides-Extra: viz
+Requires-Dist: click (>=8.3.0)
+Requires-Dist: interrogate (>=1.7.0) ; extra == "dev"
+Requires-Dist: matplotlib (>=3.10.6)
+Requires-Dist: matplotlib (>=3.5.0) ; extra == "viz"
+Requires-Dist: mypy (>=1.18.2)
+Requires-Dist: mypy (>=1.18.2) ; extra == "dev"
+Requires-Dist: networkx (>=3.3)
+Requires-Dist: networkx (>=3.3) ; extra == "dev"
+Requires-Dist: networkx (>=3.3) ; extra == "viz"
+Requires-Dist: pre-commit (>=3.0.0) ; extra == "dev"
+Requires-Dist: pydantic (>=2.8.2)
+Requires-Dist: pydot (>=3.0.0) ; extra == "dev"
+Requires-Dist: pytest (>=8.3.3) ; extra == "dev"
+Requires-Dist: pytest-cov (>=4.0.0) ; extra == "dev"
+Requires-Dist: pytest-xdist (>=3.0.0) ; extra == "dev"
+Requires-Dist: pyyaml (>=6.0.2)
+Requires-Dist: radon (>=6.0.1) ; extra == "dev"
+Requires-Dist: rich (>=13.7.0)
+Requires-Dist: ruamel-yaml (>=0.18.6)
+Requires-Dist: ruff (>=0.6.0) ; extra == "dev"
+Requires-Dist: safety (>=3.2.3) ; extra == "dev"
+Project-URL: Homepage, https://github.com/biwakonbu/pylay
+Project-URL: Repository, https://github.com/biwakonbu/pylay.git
+Description-Content-Type: text/markdown
+
+# pylay
+Python の type hint と docstrings を利用した types <-> docs 間の透過的なジェネレータ
+
+[![PyPI version](https://img.shields.io/pypi/v/pylay.svg)](https://pypi.org/project/pylay/)
+[![Python version](https://img.shields.io/pypi/pyversions/pylay.svg)](https://pypi.org/project/pylay/)
+[![License](https://img.shields.io/pypi/l/pylay.svg)](https://github.com/biwakonbu/pylay/blob/main/LICENSE)
+
+## プロジェクト概要
+
+**pylay** は、Pythonの型ヒント（type hint）とdocstringsを活用して、型情報（types）とドキュメント（docs）間の自動変換を実現するツールです。主な目的は、Pythonの型をYAML形式の仕様に変換し、PydanticによるバリデーションやMarkdownドキュメントの生成を容易にすることです。
+
+### 主な機能
+- Pythonの型オブジェクトをYAML形式の型仕様に変換
+- YAML型仕様からPydantic BaseModelとしてパース・バリデーション
+- YAML型仕様からMarkdownドキュメントを自動生成
+- 型推論と依存関係抽出（mypy + ASTハイブリッド）
+- 型 <-> YAML <-> 型 <-> Markdownのラウンドトリップ変換
+- **プロジェクト全体解析**（pyproject.toml設定駆動）
+
+### 対象ユーザー
+- 型安全性を重視するPython開発者
+- ドキュメントの自動生成を求めるチーム
+- PydanticやYAMLを活用した型仕様管理が必要なアプリケーション開発者
+
+## インストール
+
+### pip 経由のインストール
+```bash
+pip install pylay
+```
+
+### オプション機能のインストール
+
+視覚化機能を使用する場合:
+```bash
+pip install pylay[viz]  # matplotlibとnetworkxを追加
+```
+
+## 設定ファイル（pyproject.toml）
+
+pylay は `pyproject.toml` の `[tool.pylay]` セクションで設定を管理できます：
+
+```toml
+[tool.pylay]
+# 解析対象ディレクトリ
+target_dirs = ["src/"]
+
+# 出力ディレクトリ
+output_dir = "docs/"
+
+# ドキュメント生成フラグ
+generate_markdown = true
+
+# 依存関係抽出フラグ
+extract_deps = true
+
+# 型推論レベル
+infer_level = "strict"
+
+# 除外パターン
+exclude_patterns = [
+    "**/tests/**",
+    "**/*_test.py",
+    "**/__pycache__/**",
+]
+
+# 最大解析深度
+max_depth = 10
+```
+
+## CLI ツール使用例
+
+pylay を CLI ツールとして使用できます：
+
+### 型ドキュメント生成
+```bash
+# Python ファイルからMarkdownドキュメントを生成
+pylay generate type-docs --input src/core/schemas/yaml_type_spec.py --output docs/types.md
+
+# YAML ファイルからMarkdownドキュメントを生成
+pylay generate yaml-docs --input examples/sample_types.yaml --output docs/pylay-types/documents/yaml_docs.md
+
+# テストカタログを生成
+pylay generate test-catalog --input tests/ --output docs/test_catalog.md
+
+# 依存関係グラフを生成（matplotlibが必要）
+pylay generate dependency-graph --input src/ --output docs/dependency_graph.png
+```
+
+### 型解析と変換
+```bash
+# モジュールから型を解析してYAML出力
+pylay analyze types --input src/core/schemas/yaml_type_spec.py --output-yaml types.yaml
+
+# mypyによる型推論を実行
+pylay analyze types --input src/core/schemas/yaml_type_spec.py --infer
+
+# Python型をYAMLに変換
+pylay convert to-yaml --input src/core/schemas/yaml_type_spec.py --output types.yaml
+
+# YAMLをPydantic BaseModelに変換
+pylay convert to-type --input types.yaml --output-py model.py
+```
+
+### プロジェクト全体解析
+```bash
+# pyproject.toml設定に基づいてプロジェクト全体を解析
+pylay project project-analyze
+
+# 設定ファイルを指定して解析
+pylay project project-analyze --config-path /path/to/pyproject.toml
+
+# 実際の処理を行わず、解析対象ファイルのみ表示（dry-run）
+pylay project project-analyze --dry-run
+
+# 詳細なログを出力
+pylay project project-analyze --verbose
+```
+
+### ヘルプの表示
+```bash
+# 全体のヘルプ
+pylay --help
+
+# サブコマンドのヘルプ
+pylay generate --help
+pylay analyze --help
+pylay convert --help
+```
+
+## pylay による自己解析結果
+
+pylayプロジェクトは自らのツールを使って自己解析を行っています：
+
+### 📊 プロジェクト構造
+- **解析済みファイル**: 44個
+- **抽出されたクラス**: 12個
+- **抽出された関数**: 89個
+- **抽出された変数**: 5個
+
+### 🏗️ 主要コンポーネント
+- **PylayCLI**: CLIツールのメインクラス
+- **NetworkXGraphAdapter**: 依存関係グラフ処理
+- **RefResolver**: 参照解決と循環参照検出
+- **型変換システム**: YAML ↔ Python型変換
+- **ProjectScanner**: プロジェクト全体解析
+
+### 📁 生成されたドキュメント
+pylayは自らのプロジェクトを解析し、`docs/pylay-types/`ディレクトリに以下のファイルを生成しています：
+
+- 各Pythonファイルの型情報（`*_types.yaml`）
+- 依存関係グラフ
+- テストカタログ
+- APIドキュメント
+
+```bash
+# pylayプロジェクトを解析
+pylay project project-analyze
+
+# 解析結果を確認
+find docs/pylay-types -name "*.yaml" | wc -l
+ls docs/pylay-types/src/
+```
+
+## 開発者向けドキュメント
+
+このプロジェクトを開発・貢献したい場合は、[AGENTS.md](AGENTS.md) と [PRD.md](PRD.md) を参照してください。
+
+## 参考資料
+
+- [Pydantic ドキュメント](https://docs.pydantic.dev/)
+- [Python 型付け](https://docs.python.org/3/library/typing.html)
+- [mypy ドキュメント](https://mypy.readthedocs.io/en/stable/)
+
