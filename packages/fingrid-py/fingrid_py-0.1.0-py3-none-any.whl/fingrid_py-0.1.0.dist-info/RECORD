@@ -1,0 +1,8 @@
+fingrid/__init__.py,sha256=rLrVLr1K1npYmApfEvv-CbDbNLNqb4jA2rFwV7nACAM,580
+fingrid/client.py,sha256=3V1PMDVMSR5114l9qT4fSs8tXzJ7WOOpR5byG7QHLcw,1789
+fingrid/config.yml,sha256=NC1w19lDG6Oxh6CZI4CDJaxoDAFUrmEWRNNBYKSGDPc,3876
+fingrid/endpoint.py,sha256=KF17l-6aJgbn97pTd0ZNrhJPX4VbI7fbLu17oyI-QhM,7642
+fingrid/utils.py,sha256=nVy5cuBQcE2VJ9sjHwzL8EebhWBLxf-7X6ft0hjPCjQ,4369
+fingrid_py-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+fingrid_py-0.1.0.dist-info/METADATA,sha256=iTidzkZCN1_fEm1So6Yjkkw9k3HSuIw59pSzkHBhGoc,3904
+fingrid_py-0.1.0.dist-info/RECORD,,
