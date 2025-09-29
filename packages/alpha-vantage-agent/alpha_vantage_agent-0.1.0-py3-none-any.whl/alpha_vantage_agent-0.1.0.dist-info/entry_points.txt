@@ -1,0 +1,2 @@
+[console_scripts]
+alphavantage-openai-agent = main:main_cli
