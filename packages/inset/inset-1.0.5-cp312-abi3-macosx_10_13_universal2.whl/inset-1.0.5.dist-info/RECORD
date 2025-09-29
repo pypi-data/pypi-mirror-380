@@ -1,0 +1,14 @@
+inset-1.0.5.dist-info/licenses/project/LICENSE,sha256=KT8zo-imuDv_4zUT873Ab9ReTlrmQmGAzqx_T_s2I9I,1064
+quark/driver/VirtualDevice.py,sha256=jJkzEEIEGDHoODkLXVNtZanpa5JevawQV98u1-DaK4g,7579
+quark/driver/__init__.py,sha256=2Xw8FPP5LBNyp9WYpdMObvavYI_yqJoRJlQ0hAP4iM8,6659
+quark/driver/common/__init__.py,sha256=DdaSbkD3tJAH9AAynrBuZsGAWcojgCukKliKn8JuUG4,1247
+quark/driver/common/basedriver.abi3.so,sha256=2rnNlZoqLZ0wtWzlkZvSVzxbW8glO2TVrgexU6-C8NU,241640
+quark/driver/common/basedriver.pyi,sha256=qTxvtzvteGWs-kSold3lKTf8pa3ugNXYfXL51CGvR_U,1265
+quark/driver/common/quantity.py,sha256=JveBv_3IDjhsTU8IeGxX-rtOTaYfU-fBFjac6FkOeoU,2028
+quark/remote/__init__.py,sha256=Or8BKBtcd0kZ7zdb7c4SA2Al1DY9WOrMx87x9eN9d1Q,1151
+quark/remote/idg.abi3.so,sha256=WvDI13BxCLQ2VAbM9zkDT_DtY0VZWueEYHmAjvHVcjI,185920
+quark/remote/ssh.abi3.so,sha256=mExhwhyPLFSOVhIYHGuHmWx-Zn-CaP-BEewsircadLA,187344
+inset-1.0.5.dist-info/METADATA,sha256=KL-w1h76yahAQJvSrIiJhgYKEGu_0zpSHAICPEBgqog,912
+inset-1.0.5.dist-info/WHEEL,sha256=Fi2ATphwILkdQJZx3yBQF3xLuIxg6RZKAfj_jogQiCs,114
+inset-1.0.5.dist-info/top_level.txt,sha256=7SspgYXMW_50_NVkPj0EbFg4jFlGVsaIDfpqNsA1IMY,6
+inset-1.0.5.dist-info/RECORD,,
