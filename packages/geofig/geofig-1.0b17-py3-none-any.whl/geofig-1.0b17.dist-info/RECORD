@@ -1,0 +1,8 @@
+geofig-1.0b17.dist-info/METADATA,sha256=X0cyqmSnOwFANVluT3NnPaqKaY3buv9qC_PlfiH2-64,2210
+geofig-1.0b17.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+geofig-1.0b17.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+geofig-1.0b17.dist-info/licenses/LICENSE,sha256=dLNEpDKIKDyniWs42Fm9a5EDURC7nGmFavvGCgH_ZeQ,611
+geofig/__init__.py,sha256=UuBjUHBL7OOuFbSFJ2Wa1d51xZKWgytIY64UHVEGpNY,454
+geofig/figure.py,sha256=scEixKxTtGaVn17g4g-D0cjJFFx68vwp83aDIpH2krQ,19971
+geofig/geometry.py,sha256=QpXa_zsKSBVT6x9DlITG3Zx1pCalmOV261jQN6YYcIM,9814
+geofig-1.0b17.dist-info/RECORD,,
