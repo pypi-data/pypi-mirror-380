@@ -1,0 +1,16 @@
+specsync/__init__.py,sha256=HbpekknKS0vGulEsa2DAA6ovQpgy2a3vyYb7QIWHXZE,78
+specsync/__main__.py,sha256=e22TrzjxcyVqu2y9ihgqLUcoLDaOkHsuj2hkyf5S_BA,100
+specsync/cli.py,sha256=xmHeFOMMPuo076QtVezBrUOhF7SiteG5AgbugXG4ncY,5836
+specsync/config.py,sha256=jRCRQ0By2KQqV92y5Fd3S-JqiQLRnwuOOGHUuYB7ISw,5162
+specsync/exceptions.py,sha256=orxOwPXyH3h2Kwr2_dlauL209bufmmy8wXbJLv3oApo,946
+specsync/frontmatter.py,sha256=3wcoZmtAWXWDma1hTKl6bAaAzF_06GdvlrXYuom0Axs,2035
+specsync/fs.py,sha256=rDx7u3H9IfgxjBDWBBX7-5_seW-q8X1VV0u4GBd0kyg,4001
+specsync/logging.py,sha256=Nec4_zbYVzf7u95PCfABR5keQ9MDrQxyWlzN6qEiG-o,647
+specsync/models.py,sha256=8cTXw9C_8sKLRG0TcZIAqkWZL0A-vMRm1CtteEnfCWo,1096
+specsync/prompt.py,sha256=PDFZImryh4ifziGi-lbM43Psi2NlJmx8LUxNddMaiaQ,3077
+specsync/selector.py,sha256=LOuDtycTiMsuvnZ7yt9ulCuJ1NnNKu5AXJscYScRaus,3654
+specsync/sync.py,sha256=kl-pwjPOHuCnHlqKgsYWe5Z7AR7O3N8sBkBqNROVKGc,6587
+specsync-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+specsync-0.1.0.dist-info/entry_points.txt,sha256=Cc22ru5YQrrKMVxLb5PD-W61gUvqBoGHeUO0disPPsw,48
+specsync-0.1.0.dist-info/METADATA,sha256=f8pe5OmjLCZzpV-Mixg-I8TWAjHBYZ0k0xyI4_jWyW0,3884
+specsync-0.1.0.dist-info/RECORD,,
