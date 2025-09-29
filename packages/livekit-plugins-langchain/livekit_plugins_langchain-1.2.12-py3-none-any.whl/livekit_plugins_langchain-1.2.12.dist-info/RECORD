@@ -1,0 +1,7 @@
+livekit/plugins/langchain/__init__.py,sha256=orJAv6qYRWJatEdyMlf9D93GXxeK-ELYa9XIqYF76hw,1140
+livekit/plugins/langchain/langgraph.py,sha256=2afaY3g4dQomwAK27UcT9dh6eF0drokshRTcNBP6Iyw,6589
+livekit/plugins/langchain/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/langchain/version.py,sha256=9uiNKcfCbc4QO73VwVsS2V9QYDJt5fPuz4ntZi5npjY,601
+livekit_plugins_langchain-1.2.12.dist-info/METADATA,sha256=zmYfZHx4L1wRNJ6g8Kn5ozpUbeNhN3I9xJyX5Ji_vZs,1737
+livekit_plugins_langchain-1.2.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_langchain-1.2.12.dist-info/RECORD,,
