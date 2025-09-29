@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: numworks_env
+Version: 0.1.1
+Summary: Port of the NumWorks python environment for PC
+Author: spxnso
+Author-email: 146754550+spxnso@users.noreply.github.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: keyboard (>=0.13.5,<0.14.0)
+Requires-Dist: matplotlib (>=3.10.6,<4.0.0)
+Requires-Dist: numpy (>=2.3.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# numworks_env
+
+`numworks_env` is a Python package that emulates the **NumWorks calculator environment** and its modules.  
+It allows you to experiment with NumWorks code on your PC, giving a decent simulation of the calculator’s behavior, while letting you know **what you can use or not** compared to the real device.
+
+---
+
+**Don't understand English?**  
+Check out the [README in French](README_fr.md) for full documentation.
+
+---
+
+## Installation
+
+You can install `numworks_env` using `pip`
+
+```
+pip install numworks_env
+```
+
+## Usage
+
+See [NumWorks python docs](https://www.numworks.com/manual/python)

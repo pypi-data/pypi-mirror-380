@@ -1,0 +1,14 @@
+numworks_env/__init__.py,sha256=pZTCJJSz1QCmVGi0U19fuzG_4IP2xz3_STzyCUoJeEU,81
+numworks_env/cmath.py,sha256=0IS3k1rxR41pCznxidwwxOj55QPnbn7rPzkLT8RDuMw,2165
+numworks_env/ion.py,sha256=ct8IoJ93NGTJ75hNEm-mRJtoogTNjCdx8BzwK37K5Iw,4173
+numworks_env/kandinsky.py,sha256=6y6zzSupnIfLEQS69BMtRy8CsT1qbpRI5G-ls-aKI8s,3496
+numworks_env/math.py,sha256=GM0VaPOd5jK8hv6H1fMtOk1C5iqextj7CtVt6dFkj1U,5573
+numworks_env/matplotlib/__init__.py,sha256=Vsg_S_KDBxN94wGQ4p4LgBXCQXx4iStfsBG9kxTlm0M,20
+numworks_env/matplotlib/pyplot.py,sha256=GTMusOh33rkeUDOy_c2oAChJJBPdZjf4UfNJozvRZkc,4008
+numworks_env/numpy.py,sha256=CwTBEBR7WUZnXxz0bIHEwdbr-Zp3Ske-FkBifHyyw0s,6735
+numworks_env/random.py,sha256=RQxfkK2FwS-NhfKc4DVwjPnF2f09urRDa_kySg8Ll5U,2302
+numworks_env/time.py,sha256=lebQrAcW-EI75skT1Q-5DzVhaEJ47599ZOiFKu0bzmw,400
+numworks_env/turtle.py,sha256=H3b5YyWaaiU0xIRp6-FLsTU-LW3MOaaGgc7tDYPUAgc,4396
+numworks_env-0.1.1.dist-info/METADATA,sha256=aCuAn12yKTDPcv2MaL1b4ZJNnoD_2OalHXd4T0VFlWI,1183
+numworks_env-0.1.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+numworks_env-0.1.1.dist-info/RECORD,,
