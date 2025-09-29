@@ -1,0 +1,3 @@
+recursive-include peerpyrtc *.py
+recursive-include peerpyrtc *.md
+recursive-include peerpyrtc *.txt

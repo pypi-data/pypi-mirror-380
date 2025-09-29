@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+peerpyrtc/__init__.py
+peerpyrtc/broadcaster.py
+peerpyrtc/peerpyrtc.py
+peerpyrtc/signaling.py
+peerpyrtc.egg-info/PKG-INFO
+peerpyrtc.egg-info/SOURCES.txt
+peerpyrtc.egg-info/dependency_links.txt
+peerpyrtc.egg-info/requires.txt
+peerpyrtc.egg-info/top_level.txt
