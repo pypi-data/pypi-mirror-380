@@ -1,0 +1,26 @@
+## Here's my code: 
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iflow-mcp-crypto_technical_analysis_indi"
+version = "0.1.3"
+description = "Cryptocurrency Technical Analysis Indicator for trading APIs in finance are mapped to binance's kline api empower's traders with comprehensive tools for cryptocurrency trading, delivering accurate values for key indicators such as Relative Strength Index (RSI), Bollinger Bands, Exponential Moving Average (EMA), Moving Average Convergence Divergence (MACD), Simple Moving Average (SMA), Money Flow Index (MFI), Stochastic Oscillator, Parabolic SAR, Average Directional Index (ADX), Volume Oscilla..."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.6.0",
+    "pyyaml>=6.0.2",
+    "jinja2>=3.0.0",
+]
+
+[project.scripts]
+mcp-gateway = "mcp_gateway.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mcp_gateway*"]
+
+[tool.setuptools.package-data]
+mcp_gateway = ["data/*.yaml", "data/*.yml"]

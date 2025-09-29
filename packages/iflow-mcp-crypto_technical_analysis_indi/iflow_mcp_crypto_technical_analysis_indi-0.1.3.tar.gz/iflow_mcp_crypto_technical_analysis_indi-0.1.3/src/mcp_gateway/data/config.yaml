@@ -1,0 +1,259 @@
+server:
+  name: Crypto Technical Analysis Indicator API'S For Trading
+  description: "Cryptocurrency Technical Analysis Indicator for trading APIs in finance are mapped to binance's kline api empower's traders with comprehensive tools for cryptocurrency trading, delivering accurate values for key indicators such as Relative Strength Index (RSI), Bollinger Bands, Exponential Moving Average (EMA), Moving Average Convergence Divergence (MACD), Simple Moving Average (SMA), Money Flow Index (MFI), Stochastic Oscillator, Parabolic SAR, Average Directional Index (ADX), Volume Oscilla..."
+  options:
+    requestTimeoutMillis: 15000
+
+tools:
+  - name: Commodity channel index(CCI)
+    description: "Get commodity channel index(CCI) using symbol, timeframe, length, smoothing and smoothingLength"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "smoothing"
+        description: "sma ema wma"
+        required: "True"
+        default: "sma"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "20"
+      - name: "smoothingLength"
+        description: "无"
+        required: "True"
+        default: "20"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/cci?symbol={{args.symbol}}&timeframe={{args.timeframe}}&smoothing={{args.smoothing}}&length={{args.length}}&smoothingLength={{args.smoothingLength}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Bollinger Bands
+    description: "Calculate Bollinger bands using symbol, timeframe, length and stdDev"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "stdDev"
+        description: "无"
+        required: "True"
+        default: "2.5"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "20"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/bollinger-bands?symbol={{args.symbol}}&timeframe={{args.timeframe}}&stdDev={{args.stdDev}}&length={{args.length}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Moving average convergence divergence(MACD)
+    description: "Calculate the moving average convergence divergence(MACD) using symbol, timeframe, long, short, signal"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "short"
+        description: "无"
+        required: "True"
+        default: "12"
+      - name: "long"
+        description: "无"
+        required: "True"
+        default: "26"
+      - name: "signal"
+        description: "无"
+        required: "True"
+        default: "9"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/macd?symbol={{args.symbol}}&timeframe={{args.timeframe}}&short={{args.short}}&long={{args.long}}&signal={{args.signal}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Stochastic Oscillator
+    description: "Calculate Stochastic Oscillator using symbol, timeframe, kLength, kSmoothing, dSmoothing"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "kLength"
+        description: "无"
+        required: "True"
+        default: "14"
+      - name: "kSmoothing"
+        description: "无"
+        required: "True"
+        default: "3"
+      - name: "dSmoothing"
+        description: "无"
+        required: "True"
+        default: "3"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/stochastic?symbol={{args.symbol}}&timeframe={{args.timeframe}}&kLength={{args.kLength}}&kSmoothing={{args.kSmoothing}}&dSmoothing={{args.dSmoothing}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Money Flow Index(MFI)
+    description: "Get Money flow index using symbol, timeframe and length"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "14"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/mfi?symbol={{args.symbol}}&timeframe={{args.timeframe}}&length={{args.length}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Rate of Change(ROC)
+    description: "Get rate of change values using symbol, length and timeframe"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "9"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/roc?symbol={{args.symbol}}&length={{args.length}}&timeframe={{args.timeframe}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Donchian Channels
+    description: "Get Donchian Channel values using symbol, timeframe and length"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "20"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/donchian?symbol={{args.symbol}}&timeframe={{args.timeframe}}&length={{args.length}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Ultimate Oscillator
+    description: "Get Ultimate Oscillator using symbol, timeframe, length7, length14 and length 28"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+      - name: "length7"
+        description: "无"
+        required: "True"
+        default: "7"
+      - name: "length14"
+        description: "无"
+        required: "True"
+        default: "14"
+      - name: "length28"
+        description: "无"
+        required: "True"
+        default: "28"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/uo?symbol={{args.symbol}}&timeframe={{args.timeframe}}&length7={{args.length7}}&length14={{args.length14}}&length28={{args.length28}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
+  - name: Aroon Indicator
+    description: "Calculate aroon values using symbol, timeframe and length"
+    args:
+      - name: "symbol"
+        description: "BTCUSDT ETHUSDT DOGEUSDT SOLUSDT and 300+ symbols available in binance futures. Check the symbols endpoint to get all available symbols"
+        required: "True"
+        default: "BTCUSDT"
+      - name: "length"
+        description: "无"
+        required: "True"
+        default: "14"
+      - name: "timeframe"
+        description: "1m 3m 5m 15m 30m 1h 2h 4h 8h 12h 1d 3d 1w 1M"
+        required: "True"
+        default: "1d"
+
+    requestTemplate:
+      url: https://crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com/aroon?symbol={{args.symbol}}&timeframe={{args.timeframe}}&length={{args.length}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "crypto-technical-analysis-indicator-apis-for-trading.p.rapidapi.com"
