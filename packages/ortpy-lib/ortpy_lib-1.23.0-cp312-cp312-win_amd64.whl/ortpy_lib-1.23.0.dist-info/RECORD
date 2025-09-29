@@ -1,0 +1,7 @@
+ortpy/ONNXRUNTIME_LICENSE,sha256=wlDWJ48LR6ZDn7dZKwi1ilXrn1NapJodtjIRw_mCtnQ,1094
+ortpy/onnxruntime.dll,sha256=tLf5rtPPawQAD1lb3cvfEuhyFLxAHRuBvq2uPb8o0r0,14107168
+ortpy/onnxruntime_providers_shared.dll,sha256=mdWvlQAsnJeB4raR89EGdGv7LYnjp_2TkvC6wt1LwbI,22056
+ortpy_lib-1.23.0.dist-info/METADATA,sha256=1JtwQeJ11EaWzBflUTceWy_NXMPD7P7jbN4Ex8QFgW4,618
+ortpy_lib-1.23.0.dist-info/WHEEL,sha256=t7CxYB0eI5HZRa2s0pB_kGfiV2XV_d8NAfEjOUgLmGE,72
+ortpy_lib-1.23.0.dist-info/top_level.txt,sha256=9Fc4-UWf9amQMNWpwXN2wYTyPXztrsCaTVS8R4BAg2k,7
+ortpy_lib-1.23.0.dist-info/RECORD,,
