@@ -1,0 +1,2 @@
+[console_scripts]
+sherpa-ml = sherpa_ml.cli:app
