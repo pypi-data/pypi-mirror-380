@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  remip:
+    build: .
+    platform: linux/amd64
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
