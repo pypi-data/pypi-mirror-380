@@ -1,0 +1,3 @@
+[console_scripts]
+megatts3-gradio = megatts3.cli:gradio
+megatts3-infer = megatts3.cli:infer
