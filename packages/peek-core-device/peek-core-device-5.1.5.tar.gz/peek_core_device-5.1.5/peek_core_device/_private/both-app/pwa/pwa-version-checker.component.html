@@ -1,0 +1,14 @@
+<nz-modal
+    *ngIf="hasUpdate$ | async"
+    [(nzVisible)]="isVisible"
+    nzTitle="App update"
+    (nzOnOk)="applyUpdate()"
+    nzOkText="Update"
+    [nzCancelText]="''"
+    [nzClosable]="false"
+>
+    <ng-container *nzModalContent>
+        <p>Update is available. Installing automatically in {{ countdown }} seconds...</p>
+        <p>Click "Update" to install now.</p>
+    </ng-container>
+</nz-modal>
