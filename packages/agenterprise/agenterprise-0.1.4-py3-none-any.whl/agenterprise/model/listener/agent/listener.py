@@ -1,0 +1,62 @@
+from agenterprise.agent_grammer.parser.ai_environmentListener import  ai_environmentListener
+from agenterprise.model.data.ai_environment import Agent
+from agenterprise.model.listener.AIURN import AIURN
+
+class BaseAIAgentListener(ai_environmentListener):
+    def __init__(self):
+        super().__init__()
+        self.agents = []
+        self.current_agent = None
+
+    def enterAgentDef(self, ctx):
+        super().enterAgentDef(ctx)
+        self.current_agent = {
+            "name": ctx.STRING().getText().strip('"'),
+            "uid": None,
+            "namespace": None,
+            "systemprompt": None,
+            "toolrefs": [],
+            "properties": {}
+        }
+    def enterAgentToolRefProperty(self, ctx):
+        self.current_agent["toolrefs"].append(ctx.TOOLID().getText())
+    def exitAgentDef(self, ctx):
+        super().exitAgentDef(ctx)
+        agent = Agent(
+            name=self.current_agent.get("name"),
+            uid=AIURN(self.current_agent.get("uid")),
+            namespace=AIURN(self.current_agent.get("namespace")),
+            systemprompt=self.current_agent.get("systemprompt"),
+            llmref=AIURN(self.current_agent.get("llmref")),
+            toolrefs=[ AIURN(x) for x in self.current_agent["toolrefs"]],
+            properties=self.current_agent.get("properties", {})
+        )
+        self.agents.append(agent)
+        self.current_agent = None
+
+    def enterAgentIdentity(self, ctx):
+        super().enterAgentIdentity(ctx)
+        if self.current_agent is not None and ctx.AGENTID():
+            self.current_agent["uid"] = ctx.AGENTID().getText()
+
+    def enterAgentNamespace(self, ctx):
+        super().enterAgentNamespace(ctx)
+        if self.current_agent is not None and ctx.AGENTNAMESPACE():
+            self.current_agent["namespace"] = ctx.AGENTNAMESPACE().getText()
+
+    def enterAgentLLMRefProperty(self, ctx):
+        super().enterAgentLLMRefProperty(ctx)
+        if self.current_agent is not None and ctx.LLMID():
+            self.current_agent["llmref"] = ctx.LLMID().getText()
+   
+    def enterAgentSystemPromptProperty(self, ctx):
+        super().enterAgentSystemPromptProperty(ctx)
+        if self.current_agent is not None:
+            self.current_agent["systemprompt"] = ctx.STRING().getText().strip('"')  
+
+    def enterAgentCustomProperty(self, ctx):
+        super().enterAgentCustomProperty(ctx)
+        if self.current_agent is not None and ctx.VAR():
+            key = AIURN(ctx.VAR().getText())
+            value = ctx.STRING().getText().strip('"')
+            self.current_agent["properties"][key] = value
