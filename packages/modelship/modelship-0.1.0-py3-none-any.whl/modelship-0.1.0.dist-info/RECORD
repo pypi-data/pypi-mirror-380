@@ -1,0 +1,10 @@
+modelship/__about__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+modelship/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modelship/__main__.py,sha256=e-PwgNaqa6XywJf1S5572nPstNdqL91lOonO16F_sQw,108
+modelship/cli.py,sha256=N_dHckw976HliF-Qx_LqhaTuCsBgYLHAJ2EswZyma5M,2900
+modelship/templates/onnx_runtime_web.html,sha256=jEpbf59Oj51J9Bm3wT4vix_S_gqmy8yWdEKp9BeFp0M,3789
+modelship-0.1.0.dist-info/METADATA,sha256=QxE83wkatxt6rDeHI9fZ-1edmwdKrUTY7zPZGVqa_Jg,4020
+modelship-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+modelship-0.1.0.dist-info/entry_points.txt,sha256=eRa_8Tzv1KAWTC_IruVJffLTu8tU_Lb_VwVKnlfk4B4,53
+modelship-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+modelship-0.1.0.dist-info/RECORD,,
