@@ -1,0 +1,13 @@
+[package]
+name = "python"
+version = "1.0.2"
+edition = "2024"
+readme = "README.md"
+
+[lib]
+name = "braillify"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.25.1"
+braillify = { path = "../../libs/braillify" }
