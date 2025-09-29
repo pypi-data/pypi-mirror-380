@@ -1,0 +1,7 @@
+flask_selfheal/__init__.py,sha256=sxIuFAaiJiss4ovMupmH_eLXRn396uwCz6k_wWnd3RA,333
+flask_selfheal/resolvers.py,sha256=JDS6SZUEVw1oE7O2Rm9A8OQnTs1y_k-QmOBHplS59NA,9212
+flask_selfheal/selfheal.py,sha256=pHpRzymWgy1jnNpBpudmVuOUrZLZzt2O36Fn0XaVc-Q,1588
+flask_selfheal-1.0.0.dist-info/METADATA,sha256=K6oAFv7EBN18JPk4eoc5Smd_at_9MWrNtOb3lfWREeo,7666
+flask_selfheal-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flask_selfheal-1.0.0.dist-info/licenses/LICENSE,sha256=u7GZwvJ3rns2eXb4QE7ie-5rBYJkFJVPkvU8TN1njG8,1067
+flask_selfheal-1.0.0.dist-info/RECORD,,
