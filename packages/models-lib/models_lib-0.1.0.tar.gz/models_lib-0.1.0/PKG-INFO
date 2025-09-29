@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: models_lib
+Version: 0.1.0
+Summary: Reusable SQLAlchemy models for Flask apps
+Author: dulguun
+Requires-Python: >=3.8
+Requires-Dist: Flask>=2.0
+Requires-Dist: Flask-SQLAlchemy>=3.0
+Requires-Dist: sqlalchemy_serializer
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

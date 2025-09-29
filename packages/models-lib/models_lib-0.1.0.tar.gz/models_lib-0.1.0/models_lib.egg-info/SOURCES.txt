@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+models/__init__.py
+models/models.py
+models_lib.egg-info/PKG-INFO
+models_lib.egg-info/SOURCES.txt
+models_lib.egg-info/dependency_links.txt
+models_lib.egg-info/requires.txt
+models_lib.egg-info/top_level.txt
