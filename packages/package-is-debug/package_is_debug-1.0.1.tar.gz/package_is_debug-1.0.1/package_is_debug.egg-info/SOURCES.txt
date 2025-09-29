@@ -1,0 +1,6 @@
+setup.py
+package_is_debug/__init__.py
+package_is_debug.egg-info/PKG-INFO
+package_is_debug.egg-info/SOURCES.txt
+package_is_debug.egg-info/dependency_links.txt
+package_is_debug.egg-info/top_level.txt
