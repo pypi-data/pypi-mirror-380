@@ -1,0 +1,2 @@
+[console_scripts]
+hyperSIS_sampling = hyperSIS.bin.hyperSIS_sampling:main_stub
