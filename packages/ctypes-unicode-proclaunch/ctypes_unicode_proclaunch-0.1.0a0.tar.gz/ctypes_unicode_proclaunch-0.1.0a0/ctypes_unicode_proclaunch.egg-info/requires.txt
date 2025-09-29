@@ -1,0 +1,8 @@
+escape-nt-command-line-argument
+find-unicode-executable
+posix-or-nt
+read-unicode-environment-variables-dictionary
+send-recv-json
+
+[:python_version < "3.5"]
+typing

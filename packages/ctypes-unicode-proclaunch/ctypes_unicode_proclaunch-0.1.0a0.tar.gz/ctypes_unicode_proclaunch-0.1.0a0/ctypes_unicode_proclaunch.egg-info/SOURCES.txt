@@ -1,0 +1,10 @@
+LICENSE
+README.md
+ctypes_unicode_proclaunch.py
+pyproject.toml
+setup.cfg
+ctypes_unicode_proclaunch.egg-info/PKG-INFO
+ctypes_unicode_proclaunch.egg-info/SOURCES.txt
+ctypes_unicode_proclaunch.egg-info/dependency_links.txt
+ctypes_unicode_proclaunch.egg-info/requires.txt
+ctypes_unicode_proclaunch.egg-info/top_level.txt
