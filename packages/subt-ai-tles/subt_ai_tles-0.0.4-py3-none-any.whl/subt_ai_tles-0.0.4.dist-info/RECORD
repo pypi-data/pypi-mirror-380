@@ -1,0 +1,17 @@
+subtaitles/__init__.py,sha256=osEIdFY3OY2kb_gUpESstJuEpqMKZ7hcQzuMFjxhGrU,286
+subtaitles/cli.py,sha256=SRkFyKIp2_CG-SW2wfDav5TptEakp795Go6QVpUdCOw,1826
+subtaitles/environment.py,sha256=DEUqNk7B6Gp5g7NOULciKeBHAe0ILIj3nKql-mO8CSk,806
+subtaitles/filesystem.py,sha256=4LFOxWhQ4adXbPFnNnqRaE4VLyXg3Haxts-mydybiAA,3012
+subtaitles/imports.py,sha256=8wcMfUTYXZFNfF_FcBnY4wQV99ZoDKL0E5G1jUJ0d88,490
+subtaitles/language.py,sha256=53MIxigpYKXSuih2o-Ny0OZSOFJn1HXPO25glUwes_M,1202
+subtaitles/providers/__init__.py,sha256=c8zBkbnr4IvlkyhELDFnhdB4KsL1uzpQ65ybytz7q5M,733
+subtaitles/providers/libretranslate.py,sha256=vrop_scmJqj5z_xLL6Q_q91nAc4LJ6CdQzoiDmndSWU,762
+subtaitles/providers/openai.py,sha256=Z-WsIh7tRBEFK68ESe4BU2e_vW45BqNsgoO7VbfOAA0,3783
+subtaitles/providers/protocol.py,sha256=Lo-kBmd05-NfMv_GPJYzKkc8rLKb-xIwWYTexy4V5qk,247
+subtaitles/providers/pyd_ai.py,sha256=J3A81iSbUINn7-j4WK8rRSpvf1-8J08HCPsH8bXLH_w,904
+subtaitles/srt.py,sha256=mO6y-2Bjw-E0ck_eEoZy1ZQvwfcZBfpVNgBAMueRSdg,347
+subtaitles/translate.py,sha256=6z7ENU21aTXpBPh5uxLt2bII2WSDrtoE0z2ofn_AvoQ,2179
+subt_ai_tles-0.0.4.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+subt_ai_tles-0.0.4.dist-info/entry_points.txt,sha256=ML-1V_4CVD4wME4iO93_dZ9RD0X7DF1li0aYSBMF-80,61
+subt_ai_tles-0.0.4.dist-info/METADATA,sha256=bJYZDUhK4dJ5neacD4cN9UHR7jE9m62kJ519GTs4qFg,2220
+subt_ai_tles-0.0.4.dist-info/RECORD,,
