@@ -1,0 +1,10 @@
+bcl-3.0.0rc13.data/purelib/bcl/__init__.py,sha256=JMdMFdGXkiil4JCubSJZusrpwqCyu4qnL_ywv0wpjaQ,155
+bcl-3.0.0rc13.data/purelib/bcl/_sodium.py,sha256=YTAjOp3xNoBwfDgpxhhS6ebzx2FsK7QiWJZCScg4guc,867625
+bcl-3.0.0rc13.data/purelib/bcl/_sodium.tmpl,sha256=JFYgpF8nurffKQIR2ybgv9frPsJ1vvG6XDj6ZLICqP8,1097
+bcl-3.0.0rc13.data/purelib/bcl/_sodium_build.py,sha256=-AeJ5eiAe1xajpziz3t8NUifoGOuDIkHCrG1Zm6Tb5E,9716
+bcl-3.0.0rc13.data/purelib/bcl/bcl.py,sha256=t0LQEbZFjrwm9VJmv-YrK9iNl-aPUrIFhshyT8sTxrI,26236
+bcl-3.0.0rc13.dist-info/licenses/LICENSE,sha256=r9DOjWiWV4JGZZgwTBX_40vXgMvz33DiU9IqwM95V84,2054
+bcl-3.0.0rc13.dist-info/METADATA,sha256=A7-tn1xDSp8GNuLqdTNuxXGu7FDo9IIrgS79IUHW12c,11922
+bcl-3.0.0rc13.dist-info/WHEEL,sha256=GX3B8olOANHMRAWByk7VLwYbod_Nnk3DCDh8sjpV3Wk,111
+bcl-3.0.0rc13.dist-info/top_level.txt,sha256=VdnsKBQqJ9BIeCoMqcyPPTRUUiVAtG9y6layLq88SNc,4
+bcl-3.0.0rc13.dist-info/RECORD,,
