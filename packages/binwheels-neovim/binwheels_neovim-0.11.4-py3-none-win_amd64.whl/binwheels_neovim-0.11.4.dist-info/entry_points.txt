@@ -1,0 +1,2 @@
+[console_scripts]
+nvim = binwheels_neovim.main:launch_neovim
