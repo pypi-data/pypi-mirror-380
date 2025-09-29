@@ -1,0 +1,14 @@
+multi_agent_generator/__init__.py,sha256=vFZl22U5hWdJjtrXwA8-LM6ebzgCatxo9B6vW0Lkok0,255
+multi_agent_generator/__main__.py,sha256=71SmYlK1RPymgHeTcWKu2Kd0wk-4hgZjkv6zwPTSjZk,3128
+multi_agent_generator/generator.py,sha256=UzZwryvlYy18NwSem11bT_lkwO65HJSKzYJBPVZbRVs,20204
+multi_agent_generator/model_inference.py,sha256=_sj10yaXjEHH5g-4E64fvMZWNMWR5r37Om64Zs144ho,1566
+multi_agent_generator/frameworks/__init__.py,sha256=x_t3C_MPDwQHJCJqRnSMRgwqSqxE6Y3UMSa6g06BAbg,335
+multi_agent_generator/frameworks/crewai_flow_generator.py,sha256=rbX9ArLRVeZJ1xLhRCnshu8-NIm-HiOriiQw5uR0fcw,5867
+multi_agent_generator/frameworks/crewai_generator.py,sha256=hZT8Ip7JjFn-AU9PZI6_FG9WSv5TXoD9S83VbEInyVQ,4967
+multi_agent_generator/frameworks/langgraph_generator.py,sha256=iESWhd4gvAs5Iho-Wa6Wi0qML9j3ijWc1698Oe49aXU,4055
+multi_agent_generator/frameworks/react_generator.py,sha256=dqcPQ2KYJcsLsG4GdvS_l2Kq3zM1oP_MassMC_9Yiis,5653
+multi_agent_generator-0.3.1.dist-info/METADATA,sha256=U1AIMaXI7heXDN_3g8QuTz4CHw90NyilVW1c2fnzjwQ,5588
+multi_agent_generator-0.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+multi_agent_generator-0.3.1.dist-info/entry_points.txt,sha256=bWsRjTBWFfCGFtFtSUcxXRACqWx1y-CZ5w_b0OtzUZk,78
+multi_agent_generator-0.3.1.dist-info/top_level.txt,sha256=nf4c0lNrN_O2WFjKsMXRHQPtXD60Fgx9UYiwUzAUF9k,22
+multi_agent_generator-0.3.1.dist-info/RECORD,,
