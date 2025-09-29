@@ -1,0 +1,4 @@
+grpcio>=1.60.0
+grpcio-tools>=1.60.0
+protobuf<7.0.0,>=6.30.0
+bitquery-pb2-kafka-package

@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: bitquery-corecast-proto
+Version: 1.0.3
+Summary: gRPC protobuf definitions and generated Python code for Bitquery CoreCast Solana gRPC
+Home-page: https://docs.bitquery.io/docs/category/grpc-streams/
+Author: Divyasshree
+Author-email: Divyasshree <divyasshree@bitquery.io>
+License: MIT
+Project-URL: Homepage, https://docs.bitquery.io/docs/category/grpc-streams/
+Project-URL: Repository, https://github.com/bitquery/grpc-code-samples/tree/main
+Project-URL: Issues, https://github.com/bitquery/grpc-code-samples/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: grpcio>=1.60.0
+Requires-Dist: grpcio-tools>=1.60.0
+Requires-Dist: protobuf<7.0.0,>=6.30.0
+Requires-Dist: bitquery-pb2-kafka-package
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# bitquery-corecast-proto
+
+A Python package containing gRPC protobuf definitions and generated Python code for Bitquery CoreCast Solana gRPC.
+
+## Installation
+
+```bash
+pip install bitquery-corecast-proto
+```
+
+## Quick Start
+
+```python
+import grpc
+from bitquery_corecast_proto import corecast_pb2, corecast_pb2_grpc
+from bitquery_corecast_proto import stream_message_pb2
+
+# Import Solana protobuf definitions
+from solana import token_block_message_pb2, dex_block_message_pb2
+
+# Create gRPC channel and stub
+channel = grpc.insecure_channel('localhost:50051')
+stub = corecast_pb2_grpc.CoreCastStub(channel)
+
+# Make gRPC calls
+request = corecast_pb2.StreamRequest()
+response = stub.StreamMessages(request)
+```
+
+## Available Modules
+
+- `bitquery_corecast_proto.corecast_pb2` - Core request/response messages
+- `bitquery_corecast_proto.corecast_pb2_grpc` - gRPC service stubs
+- `bitquery_corecast_proto.stream_message_pb2` - Stream message definitions
+- `bitquery_corecast_proto.request_pb2` - Request message definitions
+
+## Solana Dependencies
+
+This package automatically installs `bitquery-pb2-kafka-package` which provides:
+- `solana.token_block_message_pb2` - Token block messages
+- `solana.dex_block_message_pb2` - DEX block messages
+- `solana.parsed_idl_block_message_pb2` - Parsed IDL block messages
+- `solana.block_message_pb2` - Block messages
+
+## Requirements
+
+- Python 3.8+
+- grpcio>=1.60.0
+- grpcio-tools>=1.60.0
+- protobuf>=6.30.0,<7.0.0
+- bitquery-pb2-kafka-package
+
+## License
+
+MIT License - see LICENSE file for details.
