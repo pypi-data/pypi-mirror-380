@@ -1,0 +1,5 @@
+[console_scripts]
+demo = mjlab.scripts.demo:main
+play = mjlab.scripts.play:main
+train = mjlab.scripts.train:main
+
