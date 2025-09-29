@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "CalculadoraAlexei" 
+version = "0.0.1"
+authors = [
+  { name="Alexei Duran", email="nadurana@udistrital.edu.co" },
+]
+description = "Calculadora desarrollada con el patron de diseño State."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+keywords = ["calculadora", "matematicas", "pypi"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["CalculadoraAlexei"] 
