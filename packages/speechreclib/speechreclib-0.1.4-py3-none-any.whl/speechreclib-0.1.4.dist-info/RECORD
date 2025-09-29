@@ -1,0 +1,9 @@
+speechrec/__init__.py,sha256=Mn1Lx16XrnE30enwbaHHQgJ4uIdWRD5niNsx5ztsSTc,560
+speechrec/exceptions.py,sha256=6kmIB0CqmJc12bK3Pr7pJJJg_YWFdGnXe4BhYoX3Nx4,440
+speechrec/faster_whisper.py,sha256=jOXHbebBP3k9NkZY4NzV_UA5Qkv5-Pwk48zV_odClYo,6948
+speechrec/file_utils.py,sha256=ZNDjw737CpoN3UpNGj4pTZ21-OTRstj9GAZR_7fI4GY,2525
+speechrec/model_base.py,sha256=0-RnbJesLl-f23ct0wKQspITzWBreVKdJsF-Y4GcwGY,918
+speechrec/whisper.py,sha256=Tld97gYLPkWXkoMcvHzw4IeRO32Ij8g9NiZx8oPqUbI,6923
+speechreclib-0.1.4.dist-info/METADATA,sha256=1RkqHO-UGXfsmLmpdxUJRG1lCYN5ntxxsTm2jgszXWs,1380
+speechreclib-0.1.4.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+speechreclib-0.1.4.dist-info/RECORD,,
