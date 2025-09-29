@@ -1,0 +1,2 @@
+[console_scripts]
+okeanTweak = okeanTweak.main:cli
