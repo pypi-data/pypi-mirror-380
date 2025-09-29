@@ -1,0 +1,13 @@
+cgai_io/Copy.py,sha256=GnzU7MTewNjrdbGJFEIKPdcdG3nzTgl1Jw2cN3DFh2Q,3632
+cgai_io/Delete.py,sha256=MZewinKrJvmJJ06eqZKcAZ8nO8Ut3KJfOoV9-oILonM,2606
+cgai_io/Info.py,sha256=GLDm6sQynEjfkmGJU9qm8jjRbB5UbZYhN4tExCy5yqw,319
+cgai_io/Move.py,sha256=Hnv3OOwxab4NEgcUfd7MQ90m1QLbH2QzOP2rd42rQz4,1069
+cgai_io/Name.py,sha256=xxzJSPCu6AJdZs9IwD_01mw4_WcB2UUq2w9cFEm1Iww,910
+cgai_io/Pack.py,sha256=szEsKq3KhD-o3Rf95OdnF4DTUi9M3Pf_RNy_CrX_52w,777
+cgai_io/__init__.py,sha256=uE84PRSk8ngJHXEcH0g0bChK5l2-hgQ1pHzF-BUD18s,408
+cgai_io/_util.py,sha256=OD0XGivnaUAzxjIO6HVhae41-_lANS1jtiWC9mBxwYw,384
+cgai_io-1.2.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+cgai_io-1.2.0.dist-info/METADATA,sha256=DRGOsIkTkUL6sBXO76Tu4Mg6TMhmbq1nVj87MhQOho8,3987
+cgai_io-1.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+cgai_io-1.2.0.dist-info/top_level.txt,sha256=bGLUQt1NPcc7d_oqp1fmaACU447WoumYP9eRUf_d9No,8
+cgai_io-1.2.0.dist-info/RECORD,,
