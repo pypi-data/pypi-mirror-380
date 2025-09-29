@@ -1,0 +1,9 @@
+autoshopify.py
+pyproject.toml
+setup.cfg
+autoshopify.egg-info/PKG-INFO
+autoshopify.egg-info/SOURCES.txt
+autoshopify.egg-info/dependency_links.txt
+autoshopify.egg-info/entry_points.txt
+autoshopify.egg-info/requires.txt
+autoshopify.egg-info/top_level.txt
