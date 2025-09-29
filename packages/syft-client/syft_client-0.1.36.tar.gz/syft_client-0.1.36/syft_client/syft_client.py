@@ -1,0 +1,1575 @@
+"""
+SyftClient class - Main client object that manages platforms and transport layers
+"""
+
+from typing import Dict, List, Optional, Any
+from pathlib import Path
+from .platforms.base import BasePlatformClient
+from .platforms.detection import Platform, detect_primary_platform, get_secondary_platforms, PlatformDetector
+from .environment import Environment, detect_environment
+
+
+class SyftClient:
+    """
+    Main client object that manages multiple platforms for a single email
+    
+    A SyftClient represents an authenticated session for a single email account
+    that can have multiple platforms (e.g., Gmail + Dropbox with same email).
+    """
+    
+    def __init__(self, email: str):
+        """
+        Initialize a SyftClient for a specific email
+        
+        Args:
+            email: The email address for this client
+        """
+        self.email = email
+        self._platforms: Dict[str, BasePlatformClient] = {}
+        self.transport_instances: Dict[str, Any] = {}  # platform:transport -> instance
+        self.local_syftbox_dir: Optional[Path] = None
+        self._sync = None  # Lazy-loaded sync manager
+        self.verbose = True  # Default verbose mode
+        self._job_client = None # Cache for lazy-loaded job client
+        self.accept_requests = True  # Default to auto-accept peer requests
+        
+    @property
+    def platforms(self):
+        """Provide attribute-style access to platforms"""
+        class PlatformRegistry:
+            def __init__(self, platforms_dict):
+                self._platforms = platforms_dict
+                self._parent_client = self  # Reference to parent SyftClient
+            
+            def __getattr__(self, name):
+                if name in self._platforms:
+                    return self._platforms[name]
+                raise AttributeError(f"'platforms' object has no attribute '{name}'")
+            
+            def __getitem__(self, key):
+                return self._platforms[key]
+            
+            def __contains__(self, key):
+                return key in self._platforms
+            
+            def items(self):
+                return self._platforms.items()
+            
+            def keys(self):
+                return self._platforms.keys()
+            
+            def values(self):
+                return self._platforms.values()
+            
+            def get(self, key, default=None):
+                return self._platforms.get(key, default)
+            
+            def __dir__(self):
+                """Support tab completion for platform names"""
+                # Include dict methods and platform names
+                return list(self._platforms.keys()) + ['items', 'keys', 'values', 'get']
+            
+            def __repr__(self):
+                """String representation showing platforms and their transports"""
+                from rich.console import Console
+                from rich.table import Table
+                from rich.panel import Panel
+                from io import StringIO
+                
+                # Create a string buffer to capture the rich output
+                string_buffer = StringIO()
+                console = Console(file=string_buffer, force_terminal=True, width=100)
+                
+                # Create main table with single column for better formatting
+                main_table = Table(show_header=False, show_edge=False, box=None, padding=0)
+                main_table.add_column("", no_wrap=False)
+                
+                # Add each platform with its transports
+                for platform_name, platform in self._platforms.items():
+                    # Platform header with project info
+                    platform_header = f"[bold yellow].{platform_name}[/bold yellow]"
+                    
+                    # Try to get project ID from credentials or auth data
+                    project_info = ""
+                    if platform_name in ['google_personal', 'google_org']:
+                        # For Google Org, check if project_id is already loaded
+                        if platform_name == 'google_org' and hasattr(platform, 'project_id') and platform.project_id:
+                            project_info = f" [dim](project: {platform.project_id})[/dim]"
+                        else:
+                            # Try to get project ID from credentials file
+                            try:
+                                creds_path = None
+                                if hasattr(platform, 'find_oauth_credentials'):
+                                    creds_path = platform.find_oauth_credentials()
+                                elif hasattr(platform, 'credentials_path'):
+                                    creds_path = platform.credentials_path
+                                
+                                if creds_path and creds_path.exists():
+                                    import json
+                                    with open(creds_path, 'r') as f:
+                                        creds_data = json.load(f)
+                                        if 'installed' in creds_data:
+                                            project_id = creds_data['installed'].get('project_id')
+                                            if project_id:
+                                                project_info = f" [dim](project: {project_id})[/dim]"
+                            except:
+                                pass
+                    
+                    main_table.add_row(platform_header + project_info)
+                    
+                    # Get all available transport names (including uninitialized)
+                    transport_names = platform.get_transport_layers()
+                    
+                    for transport_name in transport_names:
+                        # Initialize status indicators
+                        api_status = "[red]✗[/red]"  # Default to not enabled
+                        auth_status = "[dim]✗[/dim]"  # Not authenticated by default
+                        transport_style = "dim"
+                        message = ""
+                        
+                        # Check if transport is actually initialized and setup
+                        transport_initialized = False
+                        if hasattr(platform, 'transports') and transport_name in platform.transports:
+                            transport = platform.transports[transport_name]
+                            # Check if this is an initialized transport (not a stub)
+                            if hasattr(transport, '_setup_called') and transport._setup_called:
+                                transport_initialized = True
+                                auth_status = "[green]✓[/green]"
+                            elif hasattr(transport, 'is_setup') and callable(transport.is_setup):
+                                # For fully initialized transports, check is_setup
+                                try:
+                                    if transport.is_setup():
+                                        transport_initialized = True
+                                        auth_status = "[green]✓[/green]"
+                                except:
+                                    pass
+                        
+                        # Use static method to check API status
+                        # This works regardless of whether transport is initialized
+                        transport_map = None
+                        if platform_name == 'google_personal':
+                            # Import the transport classes to use their static methods
+                            transport_map = {
+                                'gmail': 'syft_client.platforms.google_personal.gmail.GmailTransport',
+                                'gdrive_files': 'syft_client.platforms.google_personal.gdrive_files.GDriveFilesTransport',
+                                'gsheets': 'syft_client.platforms.google_personal.gsheets.GSheetsTransport',
+                                'gforms': 'syft_client.platforms.google_personal.gforms.GFormsTransport'
+                            }
+                        elif platform_name == 'google_org':
+                            # Import the transport classes to use their static methods
+                            transport_map = {
+                                'gmail': 'syft_client.platforms.google_org.gmail.GmailTransport',
+                                'gdrive_files': 'syft_client.platforms.google_org.gdrive_files.GDriveFilesTransport',
+                                'gsheets': 'syft_client.platforms.google_org.gsheets.GSheetsTransport',
+                                'gforms': 'syft_client.platforms.google_org.gforms.GFormsTransport'
+                            }
+                            
+                        if transport_map and transport_name in transport_map:
+                                try:
+                                    # Import the transport class
+                                    module_path, class_name = transport_map[transport_name].rsplit('.', 1)
+                                    module = __import__(module_path, fromlist=[class_name])
+                                    transport_class = getattr(module, class_name)
+                                    
+                                    # Call static method to check API
+                                    if transport_class.check_api_enabled(platform):
+                                        api_status = "[green]✓[/green]"
+                                        transport_style = "green"
+                                    else:
+                                        api_status = "[red]✗[/red]"
+                                        transport_style = "dim"
+                                        # If API is disabled, show enable message
+                                        message = f" [dim](call .{transport_name}.enable_api())[/dim]"
+                                except Exception as e:
+                                    # If check fails, see if it's an API disabled error
+                                    if "has not been used in project" in str(e) and "before or it is disabled" in str(e):
+                                        api_status = "[red]✗[/red]"
+                                        message = f" [dim](call .{transport_name}.enable_api())[/dim]"
+                        
+                        # Set message based on transport initialization status
+                        if not transport_initialized:
+                            # Transport is not initialized
+                            if api_status == "[green]✓[/green]":
+                                # API is enabled but transport not initialized
+                                message = " [dim](call .init() to initialize)[/dim]" if message == "" else message
+                            else:
+                                # API is disabled and transport not initialized
+                                if message == "":
+                                    message = " [dim](not initialized)[/dim]"
+                        
+                        # Show both statuses
+                        main_table.add_row(f"  {api_status} {auth_status} [{transport_style}].{transport_name}[/{transport_style}]{message}")
+                
+                # Create the panel
+                panel = Panel(
+                    main_table,
+                    title="Platforms",
+                    expand=False,
+                    width=100,
+                    padding=(1, 2)
+                )
+                
+                console.print(panel)
+                output = string_buffer.getvalue()
+                string_buffer.close()
+                
+                return output.strip()
+                
+        return PlatformRegistry(self._platforms)
+    
+    def _initialize_all_transports(self) -> None:
+        """Initialize transport instances for all possible platforms"""
+        from .platforms import get_platform_client
+        
+        # Initialize transports for secondary platforms
+        for platform in get_secondary_platforms():
+            try:
+                platform_client = get_platform_client(platform, self.email)
+                self._add_platform_transports(platform.value, platform_client)
+            except:
+                pass  # Skip if platform client can't be created
+    
+    def _add_platform_transports(self, platform_name: str, platform_client: BasePlatformClient) -> None:
+        """Add transport instances from a platform client to our registry"""
+        platform_transports = platform_client.get_transport_instances()
+        
+        for transport_name, transport_instance in platform_transports.items():
+            key = f"{platform_name}:{transport_name}"
+            self.transport_instances[key] = transport_instance
+    
+    def add_platform(self, platform_client: BasePlatformClient, auth_data: Dict[str, Any]) -> None:
+        """
+        Add an authenticated platform to this client
+        
+        Args:
+            platform_client: The authenticated platform client
+            auth_data: Authentication data from the platform
+        """
+        platform_name = platform_client.platform
+        self._platforms[platform_name] = platform_client
+        
+        # Store auth data in the platform client for now
+        platform_client._auth_data = auth_data
+        
+        # Add transports from this platform
+        self._add_platform_transports(platform_name, platform_client)
+    
+    def _create_local_syftbox_directory(self) -> None:
+        """Create the local SyftBox directory structure"""
+        if not self.email:
+            return
+            
+        # Create ~/SyftBox_{email} directory
+        home_dir = Path.home()
+        syftbox_dir = home_dir / f"SyftBox_{self.email}"
+        
+        if not syftbox_dir.exists():
+            try:
+                syftbox_dir.mkdir(exist_ok=True)
+                print(f"📁 Created local SyftBox directory: {syftbox_dir}")
+                
+                # Create subdirectories
+                subdirs = ["datasites", "apps"]
+                for subdir in subdirs:
+                    (syftbox_dir / subdir).mkdir(exist_ok=True)
+                    
+            except Exception as e:
+                print(f"⚠️  Could not create SyftBox directory: {e}")
+        else:
+            print(f"📁 Using existing SyftBox directory: {syftbox_dir}")
+                
+        # Store the path for later use
+        self.local_syftbox_dir = syftbox_dir
+    
+    def _setup_job_directories(self) -> None:
+        """
+        Setup job directory structure if syft-job is available.
+        Creates: SyftBox/datasites/<email>/app_data/job/{inbox,approved,done}
+        """
+        # Check if syft-job is available (silently skip if not)
+        try:
+            import syft_job
+        except ImportError:
+            return
+        
+        # Use the .folder property to get SyftBox directory
+        syftbox_dir = self.get_syftbox_directory()
+        if not syftbox_dir:
+            return
+        
+        try:
+            # Create the job base directory structure
+            job_base_dir = syftbox_dir / "datasites" / self.email / "app_data" / "job"
+            job_base_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Create subdirectories
+            subdirs = ["inbox", "approved", "done"]
+            for subdir in subdirs:
+                (job_base_dir / subdir).mkdir(parents=True, exist_ok=True)
+                
+        except Exception as e:
+            # Print error if directory creation fails
+            print(f"⚠️  Could not create job directories: {e}")
+    
+    def get_syftbox_directory(self) -> Optional[Path]:
+        """Get the local SyftBox directory path"""
+        if self.local_syftbox_dir:
+            return self.local_syftbox_dir
+        elif self.email:
+            # Calculate the path even if not created yet
+            return Path.home() / f"SyftBox_{self.email}"
+        return None
+    
+    @property
+    def folder(self) -> Optional[str]:
+        """Get the local SyftBox directory path as a string"""
+        syftbox_dir = self.get_syftbox_directory()
+        return str(syftbox_dir) if syftbox_dir else None
+    
+    def _get_job_client(self):
+        """
+        Get the syft-job client instance (lazy-loaded and cached)
+        
+        Returns:
+            Job client from syft_job.get_client(folder)
+            
+        Raises:
+            ImportError: If syft-job package is not installed
+        """
+        if self._job_client is None:
+            try:
+                import syft_job as sj
+                self._job_client = sj.get_client(self.folder)
+            except ImportError:
+                raise ImportError(
+                    "syft-job package is not installed. "
+                    "Install it with: pip install syft-client[job]"
+                )
+        return self._job_client
+
+    @property
+    def jobs(self):
+        """
+        Access to jobs interface from syft-job package
+        
+        Returns:
+            Jobs interface from job_client.jobs
+        """
+        return self._get_job_client().jobs
+
+    def submit_bash_job(self, *args, **kwargs):
+        """
+        Submit a bash job using the syft-job package
+        
+        This method delegates to job_client.submit_bash_job()
+        
+        Args:
+            *args: Positional arguments passed to submit_bash_job
+            **kwargs: Keyword arguments passed to submit_bash_job
+            
+        Returns:
+            Result from job_client.submit_bash_job()
+        """
+        return self._get_job_client().submit_bash_job(*args, **kwargs)
+    
+    @property
+    def sync(self):
+        """Lazy-loaded sync manager for messaging and peer management"""
+        if self._sync is None:
+            from .sync import SyncManager
+            self._sync = SyncManager(self)
+        return self._sync
+    
+    @property
+    def watcher(self):
+        """Access to file watcher functionality"""
+        from .sync.watcher import WatcherManager
+        if not hasattr(self, '_watcher'):
+            self._watcher = WatcherManager(self)
+        return self._watcher
+    
+    @property
+    def receiver(self):
+        """Access to inbox receiver functionality"""
+        from .sync.receiver import ReceiverManager
+        if not hasattr(self, '_receiver'):
+            self._receiver = ReceiverManager(self)
+        return self._receiver
+    
+    # High-level sync API methods
+    def send_to_peers(self, path: str) -> Dict[str, bool]:
+        """
+        Send file/folder to all peers
+        
+        Args:
+            path: Path to file/folder (supports syft:// URLs)
+            
+        Returns:
+            Dict mapping peer emails to success status
+        """
+        return self.sync.send_to_peers(path)
+    
+    def send_to(self, path: str, recipient: str, requested_latency_ms: Optional[int] = None, 
+                priority: str = "normal", transport: Optional[str] = None) -> bool:
+        """
+        Send file/folder to specific recipient
+        
+        Args:
+            path: Path to file/folder (supports syft:// URLs)
+            recipient: Email address of recipient
+            requested_latency_ms: Desired latency in milliseconds (optional)
+            priority: "urgent", "normal", or "background" (default: "normal")
+            transport: Specific transport to use (e.g., "gdrive_files", "gsheets", "gmail"). 
+                      If None, automatically selects best transport.
+            
+        Returns:
+            True if successful
+        """
+        return self.sync.send_to(path, recipient, requested_latency_ms, priority, transport)
+    
+    def add_peer(self, email: str) -> bool:
+        """
+        Add a peer for bidirectional communication
+        
+        Args:
+            email: Email address to add as peer
+            
+        Returns:
+            True if successful
+        """
+        return self.sync.add_peer(email)
+    
+    def check_peer_requests(self) -> Dict[str, List]:
+        """
+        Check all transports for incoming peer requests
+        
+        Returns:
+            Dictionary mapping platform.transport to list of PeerRequest objects
+        """
+        return self.sync.peers_manager.check_all_peer_requests(verbose=True)
+    
+    def start_watcher(self, **kwargs):
+        """
+        Start the file watcher for automatic synchronization
+        
+        Args:
+            paths: Optional list of paths to watch
+            exclude_patterns: Optional list of patterns to exclude
+            bidirectional: Whether to poll for incoming messages (default: True)
+            check_interval: Inbox polling interval in seconds (default: 30)
+            verbose: Whether to show status messages (default: True)
+            
+        Returns:
+            Status dictionary with watcher information
+        """
+        return self.watcher.start(**kwargs)
+    
+    def start_receiver(self, **kwargs):
+        """
+        Start the inbox receiver for automatic message processing
+        
+        Args:
+            check_interval: Seconds between inbox checks (default: 30)
+            process_immediately: Process existing messages on start (default: True)
+            transports: Specific transports to monitor (default: all)
+            auto_accept: Auto-accept peer requests (default: True)
+            verbose: Show status messages (default: True)
+            
+        Returns:
+            Status dictionary with receiver information
+        """
+        return self.receiver.start(**kwargs)
+    
+    @property
+    def peers(self):
+        """Access peers with list and dict-style indexing"""
+        class PeersProperty:
+            def __init__(self, sync_manager, client):
+                self._sync = sync_manager
+                self._client = client  # Store reference to the client
+            
+            def __getitem__(self, key):
+                if isinstance(key, int):
+                    # List-style access: peers[0]
+                    peer_list = self._sync.peers
+                    if 0 <= key < len(peer_list):
+                        email = peer_list[key]
+                        peer = self._sync.peers_manager.get_peer(email)
+                        if peer:
+                            # Inject client reference
+                            peer._client = self._client
+                        return peer
+                    else:
+                        raise IndexError(f"Peer index {key} out of range")
+                elif isinstance(key, str):
+                    # Dict-style access: peers['email@example.com']
+                    peer = self._sync.peers_manager.get_peer(key)
+                    if peer is None:
+                        raise KeyError(f"Peer '{key}' not found")
+                    # Inject client reference
+                    peer._client = self._client
+                    return peer
+                else:
+                    raise TypeError(f"Invalid key type: {type(key)}")
+            
+            def __len__(self):
+                return len(self._sync.peers)
+            
+            def __iter__(self):
+                # Allow iteration over peer emails
+                return iter(self._sync.peers)
+            
+            def list(self):
+                """Get list of peer emails"""
+                return self._sync.peers
+            
+            def all(self):
+                """Get all peer objects"""
+                return [self._sync.peers_manager.get_peer(email) 
+                        for email in self._sync.peers]
+            
+            def clear_caches(self):
+                """Clear all peer caches and force re-detection from online sources"""
+                return self._sync.peers_manager.clear_all_caches()
+            
+            def delete_all(self, verbose: bool = True) -> bool:
+                """
+                Delete all peers from all transports
+                
+                Args:
+                    verbose: Whether to print progress
+                    
+                Returns:
+                    True if at least one peer was deleted successfully
+                """
+                peer_emails = self._sync.peers.copy()  # Copy list to avoid modification during iteration
+                
+                if not peer_emails:
+                    if verbose:
+                        print("No peers to delete")
+                    return False
+                
+                if verbose:
+                    print(f"🗑️  Deleting {len(peer_emails)} peer(s)...")
+                
+                success_count = 0
+                for email in peer_emails:
+                    if verbose:
+                        print(f"\n🔄 Deleting {email}...")
+                    if self._sync.peers_manager.remove_peer(email):
+                        success_count += 1
+                
+                # Invalidate cache after deletion
+                if success_count > 0:
+                    self._sync.peers_manager._invalidate_peers_cache()
+                
+                if verbose:
+                    print(f"\n✅ Successfully deleted {success_count}/{len(peer_emails)} peer(s)")
+                
+                return success_count > 0
+            
+            @property
+            def requests(self):
+                """Access peer requests"""
+                class PeerRequestsProperty:
+                    def __init__(self, sync_manager):
+                        self._sync = sync_manager
+                        self._requests_cache = None
+                    
+                    def _get_all_requests(self):
+                        """Get all peer requests organized by email"""
+                        if self._requests_cache is None:
+                            try:
+                                requests_data = self._sync.peers_manager.check_all_peer_requests(verbose=False)
+                                # Group by email
+                                by_email = {}
+                                for transport_key, reqs in requests_data.items():
+                                    for req in reqs:
+                                        if req.email not in by_email:
+                                            by_email[req.email] = {
+                                                'email': req.email,
+                                                'transports': [],
+                                                'platforms': []
+                                            }
+                                        by_email[req.email]['transports'].append(req.transport)
+                                        by_email[req.email]['platforms'].append(req.platform)
+                                self._requests_cache = by_email
+                            except:
+                                self._requests_cache = {}
+                        return self._requests_cache
+                    
+                    def __getitem__(self, key):
+                        """Access requests by index or email"""
+                        all_requests = self._get_all_requests()
+                        
+                        if isinstance(key, int):
+                            # Index access: requests[0]
+                            emails = sorted(all_requests.keys())
+                            if 0 <= key < len(emails):
+                                email = emails[key]
+                                return all_requests[email]
+                            else:
+                                raise IndexError(f"Request index {key} out of range")
+                        elif isinstance(key, str):
+                            # Email access: requests['email@example.com']
+                            if key in all_requests:
+                                return all_requests[key]
+                            else:
+                                raise KeyError(f"No peer request from '{key}'")
+                        else:
+                            raise TypeError(f"Invalid key type: {type(key)}")
+                    
+                    def __repr__(self):
+                        # Get peer requests
+                        all_requests = self._get_all_requests()
+                        total = len(all_requests)
+                        
+                        if total == 0:
+                            return "No pending peer requests"
+                        
+                        # Build string representation
+                        lines = [f"Peer Requests ({total}):"]
+                        
+                        # Display each unique email
+                        for email in sorted(all_requests.keys()):
+                            data = all_requests[email]
+                            transports_str = ", ".join(sorted(set(data['transports'])))
+                            lines.append(f"  • {email} (via {transports_str})")
+                        
+                        lines.append("\nAccept with: client.add_peer('email')")
+                        return "\n".join(lines)
+                    
+                    def __len__(self):
+                        return len(self._get_all_requests())
+                    
+                    def __iter__(self):
+                        """Allow iteration over request emails"""
+                        return iter(sorted(self._get_all_requests().keys()))
+                    
+                    def list(self):
+                        """Get list of unique emails with pending requests"""
+                        return sorted(self._get_all_requests().keys())
+                    
+                    def check(self):
+                        """Manually check for new peer requests"""
+                        self._requests_cache = None  # Clear cache
+                        return self._sync.peers_manager.check_all_peer_requests(verbose=True)
+                
+                return PeerRequestsProperty(self._sync)
+            
+            def __repr__(self):
+                """Display peers and peer requests in a compact format"""
+                from rich.console import Console
+                from rich.panel import Panel
+                from rich.text import Text
+                from io import StringIO
+                
+                # Create string buffer for rich output
+                string_buffer = StringIO()
+                console = Console(file=string_buffer, force_terminal=True, width=75)
+                
+                # Get peers and peer requests
+                peers_list = self._sync.peers
+                
+                # Check for peer requests
+                try:
+                    peer_requests_data = self._sync.peers_manager.check_all_peer_requests(verbose=False)
+                    # Flatten to unique emails
+                    peer_requests = set()
+                    for transport_key, requests in peer_requests_data.items():
+                        for request in requests:
+                            peer_requests.add(request.email)
+                    peer_requests = sorted(list(peer_requests))
+                except:
+                    peer_requests = []
+                
+                # Build content lines
+                lines = []
+                
+                # Peers section
+                if peers_list:
+                    lines.append(Text("client.peers", style="bold green") + Text(f"  [0] or ['email']", style="dim"))
+                    for i, email in enumerate(peers_list):
+                        peer = self._sync.peers_manager.get_peer(email)
+                        if peer:
+                            verified_transports = peer.get_verified_transports()
+                            transports_str = ", ".join(verified_transports) if verified_transports else "none"
+                            lines.append(Text(f"  [{i}] {email:<28} ✓ {transports_str}", style=""))
+                else:
+                    lines.append(Text("client.peers", style="bold green") + Text("  None", style="dim"))
+                
+                # Separator
+                if peers_list and peer_requests:
+                    lines.append(Text(""))
+                
+                # Requests section
+                if peer_requests:
+                    lines.append(Text("client.peers.requests", style="bold yellow") + Text(f"  [0] or ['email']", style="dim"))
+                    for i, email in enumerate(peer_requests):
+                        # Find which transports the request came from
+                        request_transports = []
+                        for transport_key, requests in peer_requests_data.items():
+                            for request in requests:
+                                if request.email == email:
+                                    request_transports.append(request.transport)
+                        
+                        transports_str = ", ".join(set(request_transports)) if request_transports else "?"
+                        lines.append(Text(f"  [{i}] {email:<28} ⏳ via {transports_str}", style=""))
+                elif peers_list:
+                    if lines:
+                        lines.append(Text(""))
+                    lines.append(Text("client.peers.requests", style="bold yellow") + Text("  None", style="dim"))
+                
+                # Empty state
+                if not peers_list and not peer_requests:
+                    lines.append(Text("No peers yet. ", style="dim") + Text("Add with: client.add_peer('email')", style="dim italic"))
+                
+                # Create panel with all lines
+                content = Text("\n").join(lines)
+                title = Text("Peers & Requests", style="bold") + Text(f"  ({len(peers_list)} active, {len(peer_requests)} pending)", style="dim")
+                
+                panel = Panel(
+                    content,
+                    title=title,
+                    title_align="left",
+                    padding=(1, 2),
+                    expand=False
+                )
+                
+                console.print(panel)
+                return string_buffer.getvalue().strip()
+        
+        return PeersProperty(self.sync, self)
+    
+    @property
+    def watcher(self):
+        """Access watcher service"""
+        return self.sync.services.watcher
+    
+    @property
+    def receiver(self):
+        """Access receiver service"""
+        return self.sync.services.receiver
+    
+    def start_sync_services(self, verbose: bool = True):
+        """Start both watcher and receiver services"""
+        watcher_started = self.sync.services.ensure_watcher_running(verbose=verbose)
+        receiver_started = self.sync.services.ensure_receiver_running(verbose=verbose)
+        
+        if verbose:
+            if watcher_started and receiver_started:
+                print("✅ Both sync services started")
+            elif watcher_started:
+                print("📡 Watcher started (receiver may already be running)")
+            elif receiver_started:
+                print("📥 Receiver started (watcher may already be running)")
+            else:
+                print("ℹ️  Sync services may already be running")
+        
+        return watcher_started or receiver_started
+    
+    def stop_sync_services(self, verbose: bool = True):
+        """Stop both watcher and receiver services"""
+        watcher_stopped = self.sync.services.stop_watcher(verbose=verbose)
+        receiver_stopped = self.sync.services.stop_receiver(verbose=verbose)
+        
+        if verbose and not (watcher_stopped or receiver_stopped):
+            print("ℹ️  No sync services were running")
+        
+        return watcher_stopped or receiver_stopped
+    
+    def sync_status(self, verbose: bool = True):
+        """Get status of sync services"""
+        return self.sync.services.status(verbose=verbose)
+    
+    def get_peer(self, email: str):
+        """
+        Get a specific peer object
+        
+        Args:
+            email: Email address of the peer
+            
+        Returns:
+            Peer object with transport information
+        """
+        return self.sync.peers_manager.get_peer(email)
+    
+    @property
+    def platform_names(self) -> List[str]:
+        """Get list of authenticated platform names"""
+        return list(self._platforms.keys())
+    
+    def get_platform(self, platform_name: str) -> Optional[BasePlatformClient]:
+        """Get a specific platform client by name"""
+        return self._platforms.get(platform_name)
+    
+    def __getattr__(self, name: str):
+        """Allow attribute-style access to platforms"""
+        # First check if it's a platform
+        if name in self._platforms:
+            return self._platforms[name]
+        raise AttributeError(f"'{self.__class__.__name__}' object has no attribute '{name}'")
+    
+    def get_transports(self, platform_name: str) -> List[str]:
+        """Get transport layers for a specific platform"""
+        platform = self.get_platform(platform_name)
+        return platform.get_transport_layers() if platform else []
+    
+    @property
+    def all_transports(self) -> Dict[str, List[str]]:
+        """Get all transport layers grouped by platform"""
+        return {
+            platform_name: platform.get_transport_layers()
+            for platform_name, platform in self._platforms.items()
+        }
+    
+    @property
+    def one_step_transports(self) -> List[str]:
+        """Get list of transport layers that are one step from being logged in (login_complexity == 1)"""
+        one_step = []
+        
+        # Simply iterate through all instantiated transports
+        for key, transport_instance in self.transport_instances.items():
+            if hasattr(transport_instance, 'login_complexity') and transport_instance.login_complexity == 1:
+                one_step.append(key)
+        
+        return one_step
+    
+    def __repr__(self) -> str:
+        """String representation using rich for proper formatting"""
+        from rich.console import Console
+        from rich.table import Table
+        from rich.panel import Panel
+        from io import StringIO
+        import sys
+        
+        # Show progress while loading
+        total_steps = 3
+        current_step = 1
+        sys.stdout.write(f"\r[{current_step}/{total_steps}] Loading client info...")
+        sys.stdout.flush()
+        
+        # Create a string buffer to capture the rich output
+        string_buffer = StringIO()
+        console = Console(file=string_buffer, force_terminal=True, width=100)
+        
+        # Create main table with single column for better formatting
+        main_table = Table(show_header=False, show_edge=False, box=None, padding=0)
+        main_table.add_column("", no_wrap=False)
+        
+        # Add folder path
+        main_table.add_row(f"[dim].folder[/dim] = {self.folder}")
+        
+        # Add platforms section
+        main_table.add_row("")  # Empty row for spacing
+        main_table.add_row("[dim].platforms[/dim] [dim](for peer-to-peer communication)[/dim]")
+        
+        # Update progress
+        current_step += 1
+        sys.stdout.write(f"\r{' ' * 80}\r")  # Clear previous line
+        sys.stdout.write(f"[{current_step}/{total_steps}] Checking platforms and transports...")
+        sys.stdout.flush()
+        
+        # Get peer counts by platform and transport
+        platform_peer_counts = {}
+        transport_peer_counts = {}
+        try:
+            if hasattr(self, 'sync') and hasattr(self.sync, 'peers_manager'):
+                # Get all peers
+                peers_dict = self.sync.peers_manager.get_peers_dict()
+                for email, peer in peers_dict.items():
+                    if peer.platform:
+                        # Count by platform
+                        if peer.platform not in platform_peer_counts:
+                            platform_peer_counts[peer.platform] = 0
+                        platform_peer_counts[peer.platform] += 1
+                        
+                        # Count by transport
+                        for transport in peer.get_verified_transports():
+                            key = f"{peer.platform}.{transport}"
+                            if key not in transport_peer_counts:
+                                transport_peer_counts[key] = 0
+                            transport_peer_counts[key] += 1
+        except:
+            pass
+        
+        # Add each platform with its transports
+        for platform_name, platform in self._platforms.items():
+            # Platform header with peer count
+            platform_header = f"  [bold yellow].{platform_name}[/bold yellow]"
+            
+            # Add peer count for this platform
+            if platform_name in platform_peer_counts:
+                peer_count = platform_peer_counts[platform_name]
+                platform_header += f" [dim]({peer_count} peer{'s' if peer_count != 1 else ''})[/dim]"
+            
+            # Try to get project ID from credentials or auth data
+            project_info = ""
+            if platform_name in ['google_personal', 'google_org']:
+                # For Google Org, check if project_id is already loaded
+                if platform_name == 'google_org' and hasattr(platform, 'project_id') and platform.project_id:
+                    project_info = f" [dim](project: {platform.project_id})[/dim]"
+                else:
+                    # Try to get project ID from credentials file
+                    try:
+                        creds_path = None
+                        if hasattr(platform, 'find_oauth_credentials'):
+                            creds_path = platform.find_oauth_credentials()
+                        elif hasattr(platform, 'credentials_path'):
+                            creds_path = platform.credentials_path
+                        
+                        if creds_path and Path(creds_path).exists():
+                            import json
+                            with open(creds_path, 'r') as f:
+                                creds_data = json.load(f)
+                                if 'installed' in creds_data:
+                                    project_id = creds_data['installed'].get('project_id')
+                                    if project_id:
+                                        project_info = f" [dim](project: {project_id})[/dim]"
+                    except:
+                        pass
+            
+            main_table.add_row(platform_header + project_info)
+            
+            # Get all available transport names (including uninitialized)
+            transport_names = platform.get_transport_layers()
+            
+            for transport_name in transport_names:
+                # Initialize status indicators
+                api_status = "[red]✗[/red]"  # Default to not enabled
+                auth_status = "[dim]✗[/dim]"  # Not authenticated by default
+                transport_style = "dim"
+                message = ""
+                
+                # Check if transport is actually initialized and setup
+                transport_initialized = False
+                if hasattr(platform, 'transports') and transport_name in platform.transports:
+                    transport = platform.transports[transport_name]
+                    # Check if this is an initialized transport (not a stub)
+                    if hasattr(transport, '_setup_called') and transport._setup_called:
+                        transport_initialized = True
+                        auth_status = "[green]✓[/green]"
+                    elif hasattr(transport, 'is_setup') and callable(transport.is_setup):
+                        # For fully initialized transports, check is_setup
+                        try:
+                            if transport.is_setup():
+                                transport_initialized = True
+                                auth_status = "[green]✓[/green]"
+                        except:
+                            pass
+                
+                # Use static method to check API status
+                # This works regardless of whether transport is initialized
+                transport_map = None
+                if platform_name == 'google_personal':
+                    # Import the transport classes to use their static methods
+                    transport_map = {
+                        'gmail': 'syft_client.platforms.google_personal.gmail.GmailTransport',
+                        'gdrive_files': 'syft_client.platforms.google_personal.gdrive_files.GDriveFilesTransport',
+                        'gsheets': 'syft_client.platforms.google_personal.gsheets.GSheetsTransport',
+                        'gforms': 'syft_client.platforms.google_personal.gforms.GFormsTransport'
+                    }
+                elif platform_name == 'google_org':
+                    # Import the transport classes to use their static methods
+                    transport_map = {
+                        'gmail': 'syft_client.platforms.google_org.gmail.GmailTransport',
+                        'gdrive_files': 'syft_client.platforms.google_org.gdrive_files.GDriveFilesTransport',
+                        'gsheets': 'syft_client.platforms.google_org.gsheets.GSheetsTransport',
+                        'gforms': 'syft_client.platforms.google_org.gforms.GFormsTransport'
+                    }
+                    
+                if transport_map and transport_name in transport_map:
+                        try:
+                            # Import the transport class
+                            module_path, class_name = transport_map[transport_name].rsplit('.', 1)
+                            module = __import__(module_path, fromlist=[class_name])
+                            transport_class = getattr(module, class_name)
+                            
+                            # Call static method to check API
+                            if transport_class.check_api_enabled(platform):
+                                api_status = "[green]✓[/green]"
+                                transport_style = "green"
+                            else:
+                                api_status = "[red]✗[/red]"
+                                transport_style = "dim"
+                                # If API is disabled, show enable message
+                                message = f" [dim](call .{transport_name}.enable_api())[/dim]"
+                        except Exception as e:
+                            # If check fails, see if it's an API disabled error
+                            if "has not been used in project" in str(e) and "before or it is disabled" in str(e):
+                                api_status = "[red]✗[/red]"
+                                message = f" [dim](call .{transport_name}.enable_api())[/dim]"
+                
+                # Set message based on transport initialization status
+                if not transport_initialized:
+                    # Transport is not initialized
+                    if api_status == "[green]✓[/green]":
+                        # API is enabled but transport not initialized
+                        message = " [dim](call .init() to initialize)[/dim]" if message == "" else message
+                    else:
+                        # API is disabled and transport not initialized
+                        if message == "":
+                            message = " [dim](not initialized)[/dim]"
+                
+                # Add peer count for this transport
+                transport_peer_info = ""
+                transport_key = f"{platform_name}.{transport_name}"
+                if transport_key in transport_peer_counts:
+                    peer_count = transport_peer_counts[transport_key]
+                    transport_peer_info = f" [dim]({peer_count} peer{'s' if peer_count != 1 else ''})[/dim]"
+                
+                # Show both statuses
+                main_table.add_row(f"    {api_status} {auth_status} [{transport_style}].{transport_name}[/{transport_style}]{transport_peer_info}{message}")
+        
+        # Update progress
+        current_step += 1
+        sys.stdout.write(f"\r{' ' * 80}\r")  # Clear previous line
+        sys.stdout.write(f"[{current_step}/{total_steps}] Loading peer information...")
+        sys.stdout.flush()
+        
+        # Add peers section if sync is available
+        try:
+            if hasattr(self, "sync") and hasattr(self.sync, "peers"):
+                # Get peer counts
+                peers_list = self.sync.peers
+                peer_count = len(peers_list)
+                
+                # Check for requests
+                request_count = 0
+                try:
+                    requests_data = self.sync.peers_manager.check_all_peer_requests(verbose=False)
+                    # Count unique emails across all transports
+                    unique_emails = set()
+                    for transport_key, reqs in requests_data.items():
+                        for req in reqs:
+                            unique_emails.add(req.email)
+                    request_count = len(unique_emails)
+                except:
+                    pass
+                
+                # Add separator
+                main_table.add_row("")
+                main_table.add_row("[dim]━" * 50 + "[/dim]")
+                main_table.add_row("")
+                
+                # Add contacts section header
+                if peer_count > 0 or request_count > 0:
+                    main_table.add_row(f"[bold cyan].peers[/bold cyan]  [dim]({peer_count} active, {request_count} pending)[/dim]")
+                    
+                    # Show active contacts
+                    if peer_count > 0:
+                        main_table.add_row("")
+                        for i, email in enumerate(peers_list[:3]):  # Show first 3
+                            main_table.add_row(f"  [{i}] {email}")
+                        if peer_count > 3:
+                            main_table.add_row(f"  [dim]... and {peer_count - 3} more[/dim]")
+                    
+                    # Show pending requests
+                    if request_count > 0:
+                        main_table.add_row("")
+                        main_table.add_row(f"  [yellow]⏳ {request_count} pending request{'s' if request_count != 1 else ''}[/yellow]")
+                else:
+                    main_table.add_row("[bold cyan].peers[/bold cyan]  [dim](none)[/dim]")
+                    main_table.add_row("  [dim]Add peers with: client.add_peer('email')[/dim]")
+        except:
+            # If there's any error accessing contacts, just skip this section
+            pass
+        
+        # Clear the progress message before final rendering
+        sys.stdout.write(f"\r{' ' * 80}\r")
+        sys.stdout.flush()
+        
+        # Create the panel
+        panel = Panel(
+            main_table,
+            title=f"SyftClient.email = '{self.email}'",
+            expand=False,
+            width=100,
+            padding=(1, 2)
+        )
+        
+        # First capture the output to string
+        console.print(panel)
+        output = string_buffer.getvalue()
+        string_buffer.close()
+        
+        # Return the output
+        return output.strip()
+    
+    
+    def __str__(self) -> str:
+        """User-friendly string representation"""
+        lines = [f"SyftClient - {self.email}"]
+        
+        # Platform info
+        for platform_name, platform in self._platforms.items():
+            transports = platform.get_transport_layers()
+            lines.append(f"  • {platform_name}: {', '.join(transports)}")
+        
+        # Peers summary
+        try:
+            if hasattr(self, "sync") and hasattr(self.sync, "peers"):
+                peers_list = self.sync.peers
+                peer_count = len(peers_list)
+                
+                # Count requests
+                request_count = 0
+                try:
+                    requests_data = self.sync.peers_manager.check_all_peer_requests(verbose=False)
+                    unique_emails = set()
+                    for transport_key, reqs in requests_data.items():
+                        for req in reqs:
+                            unique_emails.add(req.email)
+                    request_count = len(unique_emails)
+                except:
+                    pass
+                
+                # Add peers line
+                if peer_count > 0 or request_count > 0:
+                    lines.append(f"  • peers: {peer_count} active, {request_count} pending")
+                else:
+                    lines.append("  • peers: none")
+        except:
+            pass
+            
+        return "\n".join(lines)
+    
+    def reset_wallet(self, confirm: bool = True) -> bool:
+        """
+        Reset the wallet by deleting all stored credentials and tokens.
+        
+        Args:
+            confirm: If True, ask for confirmation before deleting (default: True)
+            
+        Returns:
+            bool: True if wallet was reset, False if cancelled
+        """
+        from pathlib import Path
+        import shutil
+        
+        # Get wallet directory path
+        wallet_dir = Path.home() / ".syft"
+        
+        if not wallet_dir.exists():
+            print("No wallet directory found at ~/.syft")
+            return True
+        
+        if confirm:
+            # Show what will be deleted
+            print(f"\n⚠️  WARNING: This will delete all stored credentials!")
+            print(f"\nWallet directory: {wallet_dir}")
+            
+            # Count files that will be deleted
+            file_count = sum(1 for _ in wallet_dir.rglob('*') if _.is_file())
+            if file_count > 0:
+                print(f"Files to be deleted: {file_count}")
+                
+                # Show some example files
+                example_files = list(wallet_dir.rglob('*'))[:5]
+                for f in example_files:
+                    if f.is_file():
+                        print(f"  - {f.relative_to(wallet_dir)}")
+                if file_count > 5:
+                    print(f"  ... and {file_count - 5} more files")
+            
+            response = input("\nAre you sure you want to delete all wallet data? (yes/no): ")
+            if response.lower() != 'yes':
+                print("Wallet reset cancelled.")
+                return False
+        
+        try:
+            # Delete the entire wallet directory
+            shutil.rmtree(wallet_dir)
+            print(f"\n✓ Wallet directory deleted: {wallet_dir}")
+            print("All stored credentials have been removed.")
+            print("\nYou will need to authenticate again on your next login.")
+            return True
+        except Exception as e:
+            print(f"\n✗ Error deleting wallet: {e}")
+            return False
+    
+    def _login(self, provider: Optional[str] = None, verbose: bool = False, init_transport: bool = True, wizard: Optional[bool] = None, accept_requests: bool = True) -> None:
+        """
+        Instance method that handles the actual login process
+        
+        Args:
+            provider: Optional provider override
+            verbose: Whether to print progress
+            init_transport: Whether to initialize transport layers
+            wizard: Whether to run interactive setup wizard
+            
+        Raises:
+            Exception: If authentication fails
+        """
+        # Progress tracking
+        import sys
+        import time
+        total_steps = 10  # Added step for sync services
+        current_step = 0
+        
+        # Initialize sync service status
+        watcher_status = "unavailable"
+        receiver_status = "unavailable"
+        
+        def print_progress(step: int, message: str, is_final: bool = False):
+            """Print progress with carriage return"""
+            if verbose:
+                if is_final:
+                    # Clear the line first, then print final message
+                    sys.stdout.write(f"\r{' ' * 80}\r")
+                    sys.stdout.flush()
+                    print(f"✅ {message}")
+                else:
+                    # Progress message with carriage return
+                    sys.stdout.write(f"\r[{step}/{total_steps}] {message}...{' ' * 40}\r")
+                    sys.stdout.flush()
+                    # Small delay to make progress visible
+                    time.sleep(0.1)
+        
+        # Step 1: Starting login
+        current_step += 1
+        print_progress(current_step, f"Starting login for {self.email}")
+        
+        # Store the accept_requests setting
+        self.accept_requests = accept_requests
+        
+        # Step 2: Platform detection
+        current_step += 1
+        print_progress(current_step, "Detecting email platform")
+        platform = detect_primary_platform(self.email, provider)
+        
+        # Step 3: Environment detection
+        current_step += 1
+        print_progress(current_step, "Detecting environment")
+        environment = detect_environment()
+        
+        # Step 4: Create platform client
+        from .platforms import get_platform_client
+        
+        try:
+            current_step += 1
+            # Create user-friendly platform description for initialization
+            if platform.value == 'google_personal':
+                init_desc = "Google client"
+            elif platform.value == 'google_org':
+                init_desc = "Google Workspace client"
+            elif platform.value == 'microsoft':
+                init_desc = "Microsoft client"
+            else:
+                init_desc = f"{platform.value} client"
+            
+            print_progress(current_step, f"Initializing {init_desc}")
+            client = get_platform_client(platform, self.email, init_transport=init_transport, wizard=wizard)
+            
+            # Step 5: Authenticate
+            current_step += 1
+            # Create simple, non-scary platform description
+            if platform.value in ['google_personal', 'google_org']:
+                platform_desc = f"Google ({self.email})"
+            elif platform.value == 'microsoft':
+                platform_desc = f"Microsoft ({self.email})"
+            else:
+                platform_desc = f"{platform.value} ({self.email})"
+            
+            print_progress(current_step, f"Authenticating via {platform_desc}")
+            auth_result = client.authenticate()
+            
+            # Add the authenticated platform to this client
+            self.add_platform(client, auth_result)
+            
+            # Step 6: Setup local environment
+            current_step += 1
+            print_progress(current_step, "Setting up local SyftBox directory")
+            
+            # Temporarily suppress output from directory creation
+            import io, contextlib
+            if verbose:
+                f = io.StringIO()
+                with contextlib.redirect_stdout(f):
+                    self._create_local_syftbox_directory()
+                # Check if it was created or exists
+                output = f.getvalue()
+                if "Created" in output:
+                    pass  # Progress already shown
+                elif "Using existing" in output:
+                    pass  # Progress already shown
+            else:
+                self._create_local_syftbox_directory()
+            
+            # Clear peer caches
+            if verbose:
+                f = io.StringIO()
+                with contextlib.redirect_stdout(f):
+                    try:
+                        self.sync.peers_manager.clear_all_caches(verbose=True)
+                    except:
+                        pass
+            else:
+                try:
+                    self.sync.peers_manager.clear_all_caches(verbose=False)
+                except:
+                    pass
+
+            # Setup job directories if syft-job is available
+            self._setup_job_directories()
+            
+            # Step 7: Initialize transports
+            current_step += 1
+            print_progress(current_step, "Activating peer-to-peer channels")
+            if init_transport:
+                self._initialize_all_transports()
+            
+            # Check for secondary platforms (don't count as step)
+            secondary_platforms = get_secondary_platforms()
+            
+            # Step 8: Check for peer requests
+            current_step += 1
+            print_progress(current_step, "Checking for peer requests")
+            peer_request_output = None
+            accepted_peers = []
+            try:
+                # Check for peer requests
+                if hasattr(self, 'sync') and hasattr(self.sync, 'peers_manager'):
+                    # Get all peer requests
+                    peer_requests_data = self.sync.peers_manager.check_all_peer_requests(verbose=False)
+                    
+                    # Collect unique emails from all requests
+                    unique_peer_emails = set()
+                    for transport_key, requests in peer_requests_data.items():
+                        for request in requests:
+                            unique_peer_emails.add(request.email)
+                    
+                    # Accept requests if flag is True
+                    if accept_requests and unique_peer_emails:
+                        for peer_email in unique_peer_emails:
+                            try:
+                                # Silently accept each peer
+                                success = self.add_peer(peer_email)
+                                if success:
+                                    accepted_peers.append(peer_email)
+                            except:
+                                # Continue even if one fails
+                                pass
+                    
+                    # Generate output message
+                    if unique_peer_emails:
+                        if accept_requests and accepted_peers:
+                            peer_request_output = f"📬 Automatically accepted {len(accepted_peers)} peer request{'s' if len(accepted_peers) != 1 else ''}: {', '.join(accepted_peers)}"
+                        elif not accept_requests:
+                            import io, contextlib
+                            f = io.StringIO()
+                            with contextlib.redirect_stdout(f):
+                                self.sync.peers_manager.check_all_peer_requests(verbose=True)
+                            peer_request_output = f.getvalue().strip()
+            except Exception:
+                # If there's any error checking peer requests, just continue
+                pass
+            
+            # Step 9: Check and start sync services
+            current_step += 1
+            print_progress(current_step, "Checking sync services")
+            
+            # Check for watcher and receiver
+            try:
+                # Check if they're already running and link them
+                watcher_status = "existing" if self.sync.services.watcher else "not running"
+                receiver_status = "existing" if self.sync.services.receiver else "not running"
+                
+                # Try to start them if not running
+                if not self.sync.services.watcher:
+                    if self.sync.services.ensure_watcher_running(verbose=False):
+                        watcher_status = "started"
+                    else:
+                        watcher_status = "failed"
+                
+                if not self.sync.services.receiver:
+                    if self.sync.services.ensure_receiver_running(verbose=False):
+                        receiver_status = "started"
+                    else:
+                        receiver_status = "failed"
+            except Exception:
+                # If there's any error with sync services, just continue
+                watcher_status = "unavailable"
+                receiver_status = "unavailable"
+            
+            # Step 10: Warm the cache
+            current_step += 1
+            print_progress(current_step, "Getting list of active transports")
+            
+            
+            # Final success message with peer count
+            peer_count = 0
+            try:
+                if hasattr(self, 'sync') and hasattr(self.sync, 'peers'):
+                    peer_count = len(self.sync.peers)
+            except:
+                pass
+            
+            # Get list of active transports
+            active_transports = []
+            for platform_name, platform in self._platforms.items():
+                for transport in platform.get_transport_layers():
+                    if hasattr(platform, transport):
+                        transport_obj = getattr(platform, transport)
+                        if hasattr(transport_obj, 'is_setup') and transport_obj.is_setup():
+                            active_transports.append(transport.title())
+            
+            # Build final message with sync services status
+            if peer_count > 0:
+                final_msg = f"Connected peer-to-peer to {peer_count} peer{'s' if peer_count != 1 else ''} via: {', '.join(active_transports)}"
+            else:
+                final_msg = f"Peer-to-peer ready via: {', '.join(active_transports)}"
+            
+            # Add sync services status to final message
+            if watcher_status != "unavailable" or receiver_status != "unavailable":
+                sync_indicators = []
+                
+                # Add simple status indicators
+                if watcher_status in ["existing", "started"]:
+                    sync_indicators.append("📡")
+                elif watcher_status == "failed":
+                    sync_indicators.append("⚠️")
+                
+                if receiver_status in ["existing", "started"]:
+                    sync_indicators.append("📥")
+                elif receiver_status == "failed":
+                    sync_indicators.append("⚠️")
+                
+                if sync_indicators:
+                    final_msg += f" {' '.join(sync_indicators)}"
+            
+            print_progress(total_steps, final_msg, is_final=True)
+            
+            # Print peer request output if there were any
+            if verbose and peer_request_output:
+                print(f"\n{peer_request_output}")
+                
+        except NotImplementedError as e:
+            if verbose:
+                print(f"\n❌ Login failed: {e}")
+            raise e
+        except Exception as e:
+            if verbose:
+                print(f"\n❌ Authentication failed: {e}")
+            raise
+    
+    @staticmethod
+    def reset_wallet_static(confirm: bool = True) -> bool:
+        """
+        Static method to reset the wallet without needing a client instance.
+        
+        Args:
+            confirm: If True, ask for confirmation before deleting (default: True)
+            
+        Returns:
+            bool: True if wallet was reset, False if cancelled
+        """
+        # Create a dummy client just to use the instance method
+        dummy = SyftClient("dummy@example.com")
+        return dummy.reset_wallet(confirm)
+    
+    @staticmethod
+    def login(email: Optional[str] = None, provider: Optional[str] = None, 
+              quickstart: bool = True, verbose: bool = True, init_transport: bool = True, 
+              wizard: Optional[bool] = None, accept_requests: bool = True, **kwargs) -> 'SyftClient':
+        """
+        Simple login function for syft_client
+        
+        Args:
+            email: Email address to authenticate as
+            provider: Email provider name (e.g., 'google', 'microsoft'). Required if auto-detection fails.
+            quickstart: If True and in supported environment, use fastest available login
+            verbose: If True (default), show login progress. Set to False for silent login
+            init_transport: If True (default), initialize transport layers during login. If False, skip transport initialization.
+            wizard: If True, run interactive setup wizard for credentials. If None, auto-detect based on missing credentials.
+            accept_requests: If True (default), automatically accept all pending peer requests. Set to False to skip.
+            **kwargs: Additional arguments for authentication
+            
+        Returns:
+            SyftClient: Authenticated client object with platform and transport layers
+        """
+        # Step 0: Validate email input
+        if email is None:
+            environment = detect_environment()
+            if environment == Environment.COLAB:
+                # In Colab, try to get email from auth
+                try:
+                    from google.colab import auth as colab_auth
+                    # Authenticate the Colab user
+                    colab_auth.authenticate_user()
+                    
+                    # Use the Drive API to get the email address
+                    # This is more reliable than using google.auth.default()
+                    from googleapiclient.discovery import build
+                    service = build('drive', 'v3')
+                    about = service.about().get(fields="user(emailAddress)").execute()
+                    email = about['user']['emailAddress']
+                    
+                    if email and '@' in email:
+                        print(f"Auto-detected email from Colab: {email}")
+                    else:
+                        raise ValueError("Could not detect email from Colab auth. Please specify: login(email='your@gmail.com')")
+                except Exception as e:
+                    # If anything fails, show the actual error for debugging
+                    import traceback
+                    print(f"Debug: Colab auth error: {e}")
+                    traceback.print_exc()
+                    raise ValueError("Please specify an email: login(email='your@gmail.com')")
+            else:
+                # Look for existing emails in ~/.syft
+                from pathlib import Path
+                syft_dir = Path.home() / ".syft"
+                
+                if syft_dir.exists():
+                    # Find email-like directory names
+                    email_dirs = []
+                    for item in syft_dir.iterdir():
+                        if item.is_dir() and '_at_' in item.name:
+                            # Convert back from safe format to email
+                            # Format is: email_at_domain_com -> email@domain.com
+                            parts = item.name.split('_at_')
+                            if len(parts) == 2:
+                                local_part = parts[0]
+                                domain_parts = parts[1].split('_')
+                                if len(domain_parts) >= 2:
+                                    # Reconstruct domain with dots
+                                    domain = '.'.join(domain_parts)
+                                    email_candidate = f"{local_part}@{domain}"
+                                    # Basic email validation
+                                    if '.' in domain:
+                                        email_dirs.append((item, email_candidate))
+                    
+                    if len(email_dirs) == 1:
+                        # Only one email found, use it
+                        _, email = email_dirs[0]
+                        print(f"📧 Using email from ~/.syft: {email}")
+                    elif len(email_dirs) > 1:
+                        # Multiple emails found, ask user to choose
+                        print("\n📧 Multiple email accounts found in ~/.syft:")
+                        for i, (_, email_addr) in enumerate(email_dirs):
+                            print(f"  {i+1}. {email_addr}")
+                        print(f"  {len(email_dirs)+1}. Enter a different email")
+                        
+                        choice = input(f"\nSelect an option (1-{len(email_dirs)+1}): ").strip()
+                        
+                        try:
+                            choice_idx = int(choice) - 1
+                            if 0 <= choice_idx < len(email_dirs):
+                                _, email = email_dirs[choice_idx]
+                            elif choice_idx == len(email_dirs):
+                                email = input("Enter your email: ").strip()
+                                if not email:
+                                    raise ValueError("Email cannot be empty")
+                            else:
+                                raise ValueError("Invalid choice")
+                        except (ValueError, IndexError):
+                            raise ValueError("Invalid selection. Please run login() again.")
+                    else:
+                        raise ValueError("Please specify an email: login(email='your@email.com')")
+                else:
+                    raise ValueError("Please specify an email: login(email='your@email.com')")
+        
+        # Create SyftClient and login
+        client = SyftClient(email)
+        client._login(provider=provider, verbose=verbose, init_transport=init_transport, wizard=wizard, accept_requests=accept_requests)
+        return client
