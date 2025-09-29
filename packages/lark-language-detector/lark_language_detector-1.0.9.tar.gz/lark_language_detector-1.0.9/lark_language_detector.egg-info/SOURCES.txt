@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+lark/__init__.py
+lark/cli.py
+lark/detector.py
+lark/model.py
+lark/tokenizer.py
+lark_language_detector.egg-info/PKG-INFO
+lark_language_detector.egg-info/SOURCES.txt
+lark_language_detector.egg-info/dependency_links.txt
+lark_language_detector.egg-info/entry_points.txt
+lark_language_detector.egg-info/requires.txt
+lark_language_detector.egg-info/top_level.txt
