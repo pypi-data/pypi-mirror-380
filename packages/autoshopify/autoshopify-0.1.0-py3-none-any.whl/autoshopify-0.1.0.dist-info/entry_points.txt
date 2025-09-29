@@ -1,0 +1,2 @@
+[console_scripts]
+autoshopify = autoshopify:_cli_main
