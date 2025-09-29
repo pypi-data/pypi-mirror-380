@@ -1,0 +1,2 @@
+[console_scripts]
+nyle = nyle.__main__:main
