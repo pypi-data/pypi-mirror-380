@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+scm_python_design_pattern.egg-info/PKG-INFO
+scm_python_design_pattern.egg-info/SOURCES.txt
+scm_python_design_pattern.egg-info/dependency_links.txt
+scm_python_design_pattern.egg-info/requires.txt
+scm_python_design_pattern.egg-info/top_level.txt
+scm_python_jira/__init__.py
+scm_python_jira/lib/jira_vilink.py
+scm_python_jira/tapps/vilink/check_git_commit.py
+scm_python_jira/tutils/tjira_server_api.py
