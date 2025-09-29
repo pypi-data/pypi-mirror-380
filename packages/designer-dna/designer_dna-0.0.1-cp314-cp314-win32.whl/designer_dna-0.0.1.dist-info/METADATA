@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: designer_dna
+Version: 0.0.1
+Summary: Project description here.
+Author-email: Jason C Del Rio <spillthetea917@gmail.com>
+Maintainer-email: Jason C Del Rio <spillthetea917@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, Spill-Tea
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: homepage, https://github.com/Spill-Tea/DesignerDNA
+Project-URL: issues, https://github.com/Spill-Tea/DesignerDNA/issues
+Keywords: DNA,design,ligation,optimization
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: designer_dna[commit,doc,lint,test,type]; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Provides-Extra: commit
+Requires-Dist: pre-commit; extra == "commit"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: furo; extra == "doc"
+Requires-Dist: sphinx_multiversion; extra == "doc"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Provides-Extra: lint
+Requires-Dist: pylint; extra == "lint"
+Requires-Dist: ruff; extra == "lint"
+Provides-Extra: type
+Requires-Dist: mypy; extra == "type"
+Dynamic: license-file
+
+# DesignerDNA
+[![build status][buildstatus-image]][buildstatus-url]
+
+[buildstatus-image]: https://github.com/Spill-Tea/DesignerDNA/actions/workflows/python-app.yml/badge.svg?branch=main
+[buildstatus-url]: https://github.com/Spill-Tea/DesignerDNA/actions?query=branch%3Amain
+
+DesignerDNA - Design DNA sequences with intent.
+
+<!-- omit in toc -->
+## Table of Contents
+- [DesignerDNA](#designerdna)
+  - [Installation](#installation)
+  - [For Developers](#for-developers)
+  - [License](#license)
+
+
+## Installation
+Clone the repository and pip install.
+
+```bash
+git clone https://github.com/Spill-Tea/DesignerDNA.git
+cd DesignerDNA
+pip install .
+```
+
+Alternatively, you may install directly from github.
+```bash
+pip install git+https://github.com/Spill-Tea/DesignerDNA@main
+```
+
+
+## For Developers
+After cloning the repository, create a new virtual environment and run the following
+commands:
+
+```bash
+pip install -e ".[dev]"
+pre-commit install
+pre-commit run --all-files
+```
+
+Running unit tests locally is straightforward with tox. Make sure you have all python
+versions available required for your project. The `p` flag is not required, but it runs
+tox environments in parallel.
+```bash
+tox -p
+```
+Be sure to run tox before creating a pull request.
+
+## License
+[BSD-3](LICENSE)
