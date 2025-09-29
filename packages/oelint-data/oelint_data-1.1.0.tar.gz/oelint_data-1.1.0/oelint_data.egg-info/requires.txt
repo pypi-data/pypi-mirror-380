@@ -1,0 +1,9 @@
+oelint-parser~=8.4
+
+[dev]
+bump-my-version==1.2.3
+build~=1.3
+kas~=4.8
+oelint-adv~=8.2
+twine==6.2.0
+wheel~=0.45
