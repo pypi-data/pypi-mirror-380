@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+visionpluspython/__init__.py
+visionpluspython/auth.py
+visionpluspython/client.py
+visionpluspython/const.py
+visionpluspython/exceptions.py
+visionpluspython/models.py
+visionpluspython.egg-info/PKG-INFO
+visionpluspython.egg-info/SOURCES.txt
+visionpluspython.egg-info/dependency_links.txt
+visionpluspython.egg-info/requires.txt
+visionpluspython.egg-info/top_level.txt
