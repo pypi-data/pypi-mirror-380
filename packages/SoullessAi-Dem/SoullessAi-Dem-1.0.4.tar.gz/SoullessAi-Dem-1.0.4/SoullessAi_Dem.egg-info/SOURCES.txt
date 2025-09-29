@@ -1,0 +1,12 @@
+README.md
+setup.py
+SoullessAi_Dem.egg-info/PKG-INFO
+SoullessAi_Dem.egg-info/SOURCES.txt
+SoullessAi_Dem.egg-info/dependency_links.txt
+SoullessAi_Dem.egg-info/requires.txt
+SoullessAi_Dem.egg-info/top_level.txt
+soulless_ai_dem/__init__.py
+soulless_ai_dem/demotivator.py
+soulless_ai_dem/fonts/times.ttf
+soulless_ai_dem/templates/base.png
+soulless_ai_dem/templates/base_r.png
