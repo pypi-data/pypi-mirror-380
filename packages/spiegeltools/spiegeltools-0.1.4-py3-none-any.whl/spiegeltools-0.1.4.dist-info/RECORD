@@ -1,0 +1,9 @@
+spiegeltools/cleaning/__init__.py,sha256=1_GgszkXqjDpXRu8KDv2Dn1dUVcNvMz-MuRl4sJl49A,325
+spiegeltools/cleaning/ukdata_cleaning.py,sha256=KCN4sqdkLnVeVZdmN_581SBYthR2navPxljkiqMgm7c,6600
+spiegeltools/graphs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spiegeltools/htmlgen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spiegeltools/maps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spiegeltools-0.1.4.dist-info/METADATA,sha256=68tjPCim-DTVg6qIBOfk8lXmBoxeN0c7KujLnrbPzlY,2108
+spiegeltools-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+spiegeltools-0.1.4.dist-info/top_level.txt,sha256=vgnFugWJyGDc0XXBh99sMjyp_7n8hY3wHlmclR7nDVc,13
+spiegeltools-0.1.4.dist-info/RECORD,,
