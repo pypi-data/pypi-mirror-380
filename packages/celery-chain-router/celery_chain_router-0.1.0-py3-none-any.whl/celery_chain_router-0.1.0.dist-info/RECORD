@@ -1,0 +1,11 @@
+celery_chain_router/__init__.py,sha256=iDV3nDiGIThVEC1pWdqn3596M8l4Xm25_yZUk9jkfLk,301
+celery_chain_router/router.py,sha256=NOTZhjO19tXxR_zN_4_QvXFOsR7oJYVKU-j5jI9HsKM,8759
+celery_chain_router/utils.py,sha256=R-XA2UfTBu2lOs3lhGxlwJetmtxYgG41Cq32yZlog4I,1934
+celery_chain_router/examples/__init__.py,sha256=0R7Ke-fXC5TjqkPn9NBvqE5eQ12TF8ANLsentbAET6c,62
+celery_chain_router/examples/simple_example.py,sha256=SAkqa6ocsiYxi8WNOFjEKLOAnupkLkKA5DXKEXNqyBE,4532
+celery_chain_router/examples/tasks.py,sha256=t4F2Euy8jfon2Ew_1_wbg_HFTgDQtoEj8RDaTjfaGWU,1495
+celery_chain_router-0.1.0.dist-info/licenses/LICENSE,sha256=OFFGPsh-347P_ZkTDnSdr4LeD9QmEKWZhTflbaZxXok,1082
+celery_chain_router-0.1.0.dist-info/METADATA,sha256=cg_74CXctD0a0iC3EvvRKCZg4gxOkhOi_dJeRVR6IPo,5819
+celery_chain_router-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+celery_chain_router-0.1.0.dist-info/top_level.txt,sha256=RYiWwuylqfPwSH3we8LpCpzqZKKP7hcmarNQ5belUig,20
+celery_chain_router-0.1.0.dist-info/RECORD,,
