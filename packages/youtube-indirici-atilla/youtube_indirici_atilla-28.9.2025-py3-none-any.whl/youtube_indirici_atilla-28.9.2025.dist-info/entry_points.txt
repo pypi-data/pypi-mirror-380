@@ -1,0 +1,2 @@
+[console_scripts]
+youtube-indir = youtube_indirici.indir:indir_video_cli
