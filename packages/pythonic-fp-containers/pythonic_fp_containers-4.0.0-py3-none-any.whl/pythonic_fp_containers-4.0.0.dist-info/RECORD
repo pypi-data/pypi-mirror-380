@@ -1,0 +1,11 @@
+pythonic_fp/containers/__init__.py,sha256=48lsc3kU2Yf5IKjeExlOtO2ISwZv_1SWyL-e9OtP3VI,1346
+pythonic_fp/containers/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_fp/containers/functional_tuple.py,sha256=aSFAnuAinT6XgLsRwh2JX1J6a6fFOJYS5N3TAUH5u0s,6518
+pythonic_fp/containers/functional_tuple.pyi,sha256=g8IvlIhPxecEsetEexZ7WmN9Ifdh-vAeK0z9SwLiCGE,1182
+pythonic_fp/containers/immutable_list.py,sha256=SoPYqIRgXbhfVC5dP9x1xYOIZqUrcIPH317A5bIPPos,7065
+pythonic_fp/containers/immutable_list.pyi,sha256=HRm0Updbx9UJpl5RI0prOwimSHDUJtM-3t2hEmYz6kw,1372
+pythonic_fp/containers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonic_fp_containers-4.0.0.dist-info/licenses/LICENSE,sha256=IJMkVWQUVy-SonK6SMaMotDQ6Zb-lVi2bUTiGp1GUO8,10774
+pythonic_fp_containers-4.0.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+pythonic_fp_containers-4.0.0.dist-info/METADATA,sha256=sTGVrVvUqjf7KyG-FzkvpdcMrzuaWLomCDKoRjwbPDE,2438
+pythonic_fp_containers-4.0.0.dist-info/RECORD,,
