@@ -1,0 +1,2 @@
+[console_scripts]
+alphavantage-mcp-server = stdio_server:main
