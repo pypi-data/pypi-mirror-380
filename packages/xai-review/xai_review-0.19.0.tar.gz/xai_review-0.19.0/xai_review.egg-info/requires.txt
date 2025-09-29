@@ -1,0 +1,10 @@
+typer
+httpx
+pyyaml
+loguru
+aiofiles
+pydantic
+pydantic-settings
+
+[test]
+pytest
