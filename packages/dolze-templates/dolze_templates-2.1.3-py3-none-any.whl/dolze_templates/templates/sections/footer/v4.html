@@ -1,0 +1,37 @@
+<footer class="bg-gray-900 text-white py-16" id="footer">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a href="/" class="text-3xl font-cinzel text-white mb-6 block" aria-label="{{ sections.footer.brand.name }} Home">{{ sections.footer.brand.name }}</a>
+        <p class="text-gray-400 mb-6 font-cinzel">{{ sections.footer.brand.description.text }}</p>
+        <div class="flex space-x-4">
+          {% for social in sections.footer.brand.socialLinks.links %}
+          <a href="{{ social.url }}" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20" aria-label="{{ social.name }}">
+            <i class="{{ social.icon }}"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% for nav in sections.footer.navigation %}
+      <div>
+        <h3 class="text-lg font-bold mb-6 font-cinzel">{{ nav.title }}</h3>
+        <ul class="space-y-4">
+          {% for link in nav.links %}
+          <li><a href="{{ link.url }}" class="text-gray-400 hover:text-white font-cinzel" aria-label="{{ link.label }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-8">
+      <div class="flex flex-wrap justify-between items-center gap-4">
+        <p class="text-gray-400 font-cinzel">© 2025 {{ sections.footer.copyright }}. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <i class="ri-visa-line text-2xl"></i>
+          <i class="ri-mastercard-line text-2xl"></i>
+          <i class="ri-paypal-line text-2xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
