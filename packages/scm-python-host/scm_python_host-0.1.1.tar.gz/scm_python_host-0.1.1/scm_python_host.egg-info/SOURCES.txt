@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+scm_python_host.egg-info/PKG-INFO
+scm_python_host.egg-info/SOURCES.txt
+scm_python_host.egg-info/dependency_links.txt
+scm_python_host.egg-info/requires.txt
+scm_python_host.egg-info/top_level.txt
+scm_python_host/lib/hosts.py
