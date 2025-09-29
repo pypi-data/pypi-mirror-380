@@ -1,0 +1,2 @@
+[console_scripts]
+totalhelp = totalhelp.__main__:main
