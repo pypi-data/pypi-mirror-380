@@ -1,0 +1,11 @@
+llm/caller.py,sha256=5xpo16XuZkNF3I5XA_i1APYIpo0N2C5VjK4ESwenK4Q,2090
+llm/errors.py,sha256=mus0bi6dvpKdHGd8TtFMJqQu-sQnooVALE1_SL9_7zY,99
+llm/message.py,sha256=VB0Slw-8cR5Lm0xQB8SLFksgEnv3mNKGj0pQmZhSKdE,160
+llm/callers/dummy_caller.py,sha256=i995VnnZFQe3M_LMkdWlhUmcS6wahSNu8GO9kgi4RJ8,179
+llm/callers/gemini_caller.py,sha256=6MXUx_5QB1Ib-IKRDrwOEyLB9j7ErBfy-k3RY3zlji4,2542
+llm/callers/ollama_caller.py,sha256=9EfcIiasDcny4BPJir8kraSkvW0GAsc71zPgZ_hlAZA,2140
+llm/callers/openai_caller.py,sha256=PIz41yoCxYzpk-kGlF4ZnmXJhi-Stv_mM69jEYKL0zw,5418
+llmhive-0.1.0.dist-info/METADATA,sha256=F1xKcRaJ6bZN16Azr6jqhE1WCoN_SCtHp794JBz3Ed4,3825
+llmhive-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llmhive-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+llmhive-0.1.0.dist-info/RECORD,,
