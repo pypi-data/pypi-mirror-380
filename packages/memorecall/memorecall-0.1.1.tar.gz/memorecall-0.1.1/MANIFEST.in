@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include workflow.png
+recursive-include src/memorecall *.py
+recursive-include src/memorecall *.typed
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
