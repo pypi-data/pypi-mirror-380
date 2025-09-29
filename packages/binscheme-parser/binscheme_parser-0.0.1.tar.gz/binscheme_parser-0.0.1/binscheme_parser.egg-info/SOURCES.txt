@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+binscheme_parser/__init__.py
+binscheme_parser/data_structures.py
+binscheme_parser/parser.py
+binscheme_parser.egg-info/PKG-INFO
+binscheme_parser.egg-info/SOURCES.txt
+binscheme_parser.egg-info/dependency_links.txt
+binscheme_parser.egg-info/requires.txt
+binscheme_parser.egg-info/top_level.txt
+tests/test_complex.py
+tests/test_parser.py
