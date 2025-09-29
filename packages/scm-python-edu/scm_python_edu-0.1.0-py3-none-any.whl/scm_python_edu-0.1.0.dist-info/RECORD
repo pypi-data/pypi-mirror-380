@@ -1,0 +1,11 @@
+scm_python_edu/lib/edu.py,sha256=Aalz19IXZ7NlDWGv_6uVZfTf50zb35A7kaV_GRSuXGA,7529
+scm_python_edu/tapps/edu/common.py,sha256=jyvUoGFvNworq01x0NG3tdFeGzkpqN8QZm_5_lb_Aoc,1715
+scm_python_edu/tapps/edu/disjunction.py,sha256=u_eWjajDSY1Br4QSTRbCFGqPpjg3nYc0FLf06eHAJzY,673
+scm_python_edu/tapps/edu/fraction.py,sha256=FM4_OpDl9Lz06tweTnFjZcZ1P9dm1rDRYZMBAxNl4s0,2701
+scm_python_edu/tapps/edu/latex.py,sha256=_4y-GhlOh4q9J-TS7JG2r91jluEeS6i-upC5nz6P7Tc,295
+scm_python_edu/tapps/edu/math.py,sha256=SR3N6c9Ucft1tKcH80MGKHArKXLM7TOno-o8PqZArYA,762
+scm_python_edu/tapps/edu/withFraction.py,sha256=ZqZ5VhSzgmqHsstGUdsA-exYLPqszQHvOmZNo3C0Bo0,6418
+scm_python_edu-0.1.0.dist-info/METADATA,sha256=8CBNgolcJvah9A4Qjz-GwHvUpaOBNe04sN9xw-mDR80,478
+scm_python_edu-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scm_python_edu-0.1.0.dist-info/top_level.txt,sha256=lFE-FBwdm07pYUC-65rnLutv2oR5OtARHT8YsK-JR9w,15
+scm_python_edu-0.1.0.dist-info/RECORD,,
