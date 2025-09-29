@@ -1,0 +1,10 @@
+pygfn0-0.0.3.dist-info/RECORD,,
+pygfn0-0.0.3.dist-info/WHEEL,sha256=tD0eQtOb7VxpRfRxijLoH4fSOOJJQtqT7I2fSx0WLOs,142
+pygfn0-0.0.3.dist-info/METADATA,sha256=iQAFRARUUJlXzbaum3KJsNbAG29rcB5nkABPP5HEG3k,43781
+pygfn0-0.0.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pygfn0/_pygfn0lib.cpython-312-darwin.so,sha256=CdU8iYZWS-4RxZa6QyrT-1RwMLg8lgnyrS0rFnO5TI8,1533552
+pygfn0/__init__.py,sha256=Gc2fcsmKdACAgEBy8nJ6SNNA5rPvFep0w94DWAj-oVY,60
+pygfn0/_pygfn0.py,sha256=1tqUXHqwMotMJ1EoIIas5O8VaFJw3xKuzyH7go1i4sM,3997
+pygfn0/.dylibs/libgfortran.5.dylib,sha256=tgIH6mx-CQk1ENQZ95TkAo1jRBDMucOvMpoQC2AWAkE,3497360
+pygfn0/.dylibs/libquadmath.0.dylib,sha256=YwgkPRj0AVe4GJzpLPYmnGLNWXK6bZd0WVtO6vZ6VeY,381088
+pygfn0/.dylibs/libgcc_s.1.1.dylib,sha256=eZUiPyLJQKO2gmoVS1sGXGm3Z4BeXXU6c-kzi1CkMXs,244384
