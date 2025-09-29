@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: prevectorchunks
+Version: 0.1.1
+Summary: A Python module that allows to convert a document into chunks to be inserted into pinecone vector database
+Author-email: Zul Al-Kabir <zul.developer.2023@gmail.com>
+Project-URL: Homepage, https://github.com/yourusername/mydep
+Description-Content-Type: text/markdown
+Requires-Dist: Django==5.1
+Requires-Dist: packaging~=24.1
+Requires-Dist: requests~=2.32.3
+Requires-Dist: openai~=1.37.1
+Requires-Dist: httpx~=0.27.0
+Requires-Dist: python-dotenv~=1.0.1
+Requires-Dist: django-cors-headers~=4.4.0
+Requires-Dist: PyJWT~=2.7.0
+Requires-Dist: fastapi~=0.112.2
+Requires-Dist: datasets~=4.1.0
+Requires-Dist: pinecone~=7.3.0
+Requires-Dist: pytesseract~=0.3.13
+Requires-Dist: python-docx~=1.2.0
+Requires-Dist: PyPDF2~=3.0.1
+Requires-Dist: pillow~=11.3.0
+
+# 📚 PreVectorChunks
+
+> A lightweight utility for **document chunking** and **vector database upserts** — designed for developers building **RAG (Retrieval-Augmented Generation)** solutions.
+
+---
+
+## ✨ Who Needs This Module?
+Any developer working with:
+- **RAG pipelines**
+- **Vector Databases** (like Pinecone, Weaviate, etc.)
+- **AI applications** requiring **similar content retrieval**
+
+---
+
+
+## 🎯 What Does This Module Do?
+This module helps you:
+- **Chunk documents** into smaller fragments  
+- **Insert (upsert) fragments** into a vector database  
+- **Fetch & update** existing chunks from a vector database  
+
+---
+
+## 📦 Installation
+```bash
+pip install prevectorchunks
+````
+How to import in a file:  
+```python
+from PreVectorChunks.services import chunk_documents_crud_vdb
+
+#How to use Pinecone and OpenAI:
+#Use a .env file in your project root to configure API keys:
+
+PINECONE_API_KEY=YOUR_API_KEY
+OPENAI_API_KEY=YOUR_API_KEY
+
+#how to call relevant functions:
+#Four key functions that you can call are below: 
+#function that chunks any document 
+chunk_documents(instructions,file_path="content_playground/content.json"): 
+#function that chunks any document as well as inserts into vdb - you need an index name inside index_n
+chunk_and_upsert_to_vdb(index_n,instructions,file_path="content_playground/content.json"): 
+#function that loads existing chunks from vdb by document name - you need an index name inside index_n 
+fetch_vdb_chunks_grouped_by_document_name(index_n): 
+#function that updates existing chunks - you need an index name inside index_n 
+update_vdb_chunks_grouped_by_document_name(index_n,dataset):
+```
