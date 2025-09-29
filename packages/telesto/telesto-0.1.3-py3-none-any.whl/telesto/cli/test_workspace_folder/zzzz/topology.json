@@ -1,0 +1,47 @@
+{
+    "nodes": {
+        "n720156_6c5bbd": {
+            "x": 780,
+            "y": 320,
+            "node_type": "textgraph:text_input_node",
+            "metadata": {
+                "name": "Text Input",
+                "description": "Input a text document to be analysed",
+                "rotation": 0
+            }
+        },
+        "n72068e_d75a40": {
+            "x": 1100,
+            "y": 320,
+            "node_type": "textgraph:word_frequency_node",
+            "metadata": {
+                "name": "Word Frequency",
+                "description": "Calculate the frequencies of words in the input text",
+                "rotation": 0
+            }
+        },
+        "n72144f_58fbd9": {
+            "x": 1480,
+            "y": 340,
+            "node_type": "textgraph:table_display_node",
+            "metadata": {
+                "name": "Table Display",
+                "description": "Display tabular data containing the results of analysing text",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "l720d48_70fd9c": {
+            "from_port": "n720156_6c5bbd:data_out",
+            "to_port": "n72068e_d75a40:data_in",
+            "link_type": "textgraph:text"
+        },
+        "l721b5e_90a294": {
+            "from_port": "n72068e_d75a40:data_out",
+            "to_port": "n72144f_58fbd9:data_in",
+            "link_type": "textgraph:table"
+        }
+    },
+    "metadata": {}
+}

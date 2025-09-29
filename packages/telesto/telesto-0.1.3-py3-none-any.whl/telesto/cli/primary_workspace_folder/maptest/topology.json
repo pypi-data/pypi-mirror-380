@@ -1,0 +1,62 @@
+{
+    "nodes": {
+        "ndd1e56_9edcfb": {
+            "x": 460,
+            "y": 300,
+            "node_type": "eo-explorer:roi_extent",
+            "metadata": {
+                "name": "Extent",
+                "description": "Select an extent (area and time period) of interest",
+                "rotation": 0
+            }
+        },
+        "nddaa5c_d2c44e": {
+            "x": 760,
+            "y": 300,
+            "node_type": "eo-explorer:fetch_collection",
+            "metadata": {
+                "name": "Fetch Imagery Collection",
+                "description": "Fetch a collection of images containing selected bands for a particular satellite given a spatial and temporal extent",
+                "rotation": 0
+            }
+        },
+        "ne298d1_0bc177": {
+            "x": 1040,
+            "y": 300,
+            "node_type": "eo-explorer:save_collection",
+            "metadata": {
+                "name": "Save Collection",
+                "description": "Save a collection to disk",
+                "rotation": 0
+            }
+        },
+        "n90ac10_0768ca": {
+            "x": 1360,
+            "y": 300,
+            "node_type": "eo-explorer:map_display",
+            "metadata": {
+                "name": "Map Display",
+                "description": "Display Imagery on a map",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "lddb29b_8b3a63": {
+            "from_port": "ndd1e56_9edcfb:extent_out",
+            "to_port": "nddaa5c_d2c44e:extent_in",
+            "link_type": "eo-explorer:extent"
+        },
+        "le2a1f2_9a210e": {
+            "from_port": "nddaa5c_d2c44e:datacube_out",
+            "to_port": "ne298d1_0bc177:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "l90b3f1_26a287": {
+            "from_port": "ne298d1_0bc177:datacube_out",
+            "to_port": "n90ac10_0768ca:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        }
+    },
+    "metadata": {}
+}

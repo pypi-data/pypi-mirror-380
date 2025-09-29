@@ -1,0 +1,56 @@
+# configuration file to define a telesto workspace
+
+workspace_id = "primary_workspace"
+workspace_name="Primary Workspace"
+workspace_description="Primary Workspace Description"
+workspace_path="primary_workspace_folder"
+
+# this workspace will automatically include packages defined using the entrypoint telesto_packages
+
+# specify import paths for additional topology package to load
+include_packages = ["telesto.example_packages.textgraph"]
+
+# specify patterns to select topology packages to exclude
+exclude_packages = []
+
+# close topology runners if idle for more than 60 seconds
+idle_timeout = 60
+
+# autostart these topologies
+autostart=["example"]
+
+# declare any topology templates, located as python resources
+[template.example]
+import_path = "telesto.example_packages.textgraph.topologies.example.zip"
+
+# declare any applications
+[application.abc]
+name="Test Application"
+description="Test Application Description"
+topology_id="example"
+application_package="telesto.custom_apps.demo_auto_tile"
+
+# the remaining entries configure branding
+
+# the name displayed for the directory and designer tools
+directory_title = "Telesto Directory"
+designer_title = "Telesto Designer"
+
+# configure what is displayed in the directory splash screen
+
+[directory_splash]
+
+title = "Telesto Directory - Loading..."
+image_url = "static/icons/telesto.svg"
+
+# configure what is displayed in the designer splash screen
+
+[designer_splash]
+
+title = "Telesto Designer - Loading..."
+image_url = "static/icons/telesto.svg"
+
+
+
+
+

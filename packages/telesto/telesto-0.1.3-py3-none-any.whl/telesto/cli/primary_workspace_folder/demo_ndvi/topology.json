@@ -1,0 +1,152 @@
+{
+    "nodes": {
+        "n8abea8_da63ca": {
+            "x": 640,
+            "y": 220,
+            "node_type": "eo-explorer:roi_extent",
+            "metadata": {
+                "name": "Extent",
+                "description": "Select an extent (area and time period) of interest",
+                "rotation": 0
+            }
+        },
+        "n8c1b9c_4ebbb7": {
+            "x": 880,
+            "y": 220,
+            "node_type": "eo-explorer:fetch_collection",
+            "metadata": {
+                "name": "Fetch Imagery Collection",
+                "description": "Fetch a collection of images containing selected bands for a particular satellite given a spatial and temporal extent",
+                "rotation": 0
+            }
+        },
+        "n8c678b_9e3e2c": {
+            "x": 1080,
+            "y": 220,
+            "node_type": "eo-explorer:save_collection",
+            "metadata": {
+                "name": "Save Collection",
+                "description": "Save a collection to disk",
+                "rotation": 0
+            }
+        },
+        "na09b6b_604a02": {
+            "x": 1340,
+            "y": 100,
+            "node_type": "eo-explorer:map_display",
+            "metadata": {
+                "name": "Map Display",
+                "description": "Display Imagery on a map",
+                "rotation": 0
+            }
+        },
+        "nb370b3_0861a5": {
+            "x": 1340,
+            "y": 240,
+            "node_type": "eo-explorer:mask_collection",
+            "metadata": {
+                "name": "Mask Collection",
+                "description": "Apply a mask",
+                "rotation": 0
+            }
+        },
+        "nb3a15b_fc3653": {
+            "x": 1560,
+            "y": 240,
+            "node_type": "eo-explorer:calculate_ndvi",
+            "metadata": {
+                "name": "Calculate NDVI",
+                "description": "Calculate NDVI",
+                "rotation": 0
+            }
+        },
+        "nb3ef8a_53d51e": {
+            "x": 1720,
+            "y": 60,
+            "node_type": "eo-explorer:create_timeseries",
+            "metadata": {
+                "name": "Create Timeseries",
+                "description": "Create a timeseries",
+                "rotation": 0
+            }
+        },
+        "nb417de_5e874f": {
+            "x": 1480,
+            "y": -20,
+            "node_type": "eo-explorer:geojson_input",
+            "metadata": {
+                "name": "Boundary",
+                "description": "Define a boundary",
+                "rotation": 0
+            }
+        },
+        "nb48a7d_84ba7a": {
+            "x": 1960,
+            "y": 60,
+            "node_type": "eo-explorer:timeseries_display",
+            "metadata": {
+                "name": "Plot Timeseries",
+                "description": "Plot a timeseries",
+                "rotation": 0
+            }
+        },
+        "nb57765_e4fc01": {
+            "x": 1800,
+            "y": 320,
+            "node_type": "eo-explorer:map_display",
+            "metadata": {
+                "name": "NDVI",
+                "description": "Display Imagery on a map",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "l8c22a2_4ce270": {
+            "from_port": "n8abea8_da63ca:extent_out",
+            "to_port": "n8c1b9c_4ebbb7:extent_in",
+            "link_type": "eo-explorer:extent"
+        },
+        "l8c6ea7_1c6472": {
+            "from_port": "n8c1b9c_4ebbb7:datacube_out",
+            "to_port": "n8c678b_9e3e2c:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "la0a28e_457d7e": {
+            "from_port": "n8c678b_9e3e2c:datacube_out",
+            "to_port": "na09b6b_604a02:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "lb3a847_07ca39": {
+            "from_port": "nb370b3_0861a5:datacube_out",
+            "to_port": "nb3a15b_fc3653:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "lb3f5c3_23181b": {
+            "from_port": "nb3a15b_fc3653:datacube_out",
+            "to_port": "nb3ef8a_53d51e:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "lb47612_33bf66": {
+            "from_port": "nb417de_5e874f:geojson_out",
+            "to_port": "nb3ef8a_53d51e:geojson_in",
+            "link_type": "eo-explorer:geojson"
+        },
+        "lb4a8aa_fff55d": {
+            "from_port": "nb3ef8a_53d51e:timeseries_out",
+            "to_port": "nb48a7d_84ba7a:timeseries_in",
+            "link_type": "eo-explorer:timeseries"
+        },
+        "lb57eec_a3be75": {
+            "from_port": "nb3a15b_fc3653:datacube_out",
+            "to_port": "nb57765_e4fc01:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        },
+        "lfad56c_4423d9": {
+            "from_port": "n8c678b_9e3e2c:datacube_out",
+            "to_port": "nb370b3_0861a5:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        }
+    },
+    "metadata": {}
+}

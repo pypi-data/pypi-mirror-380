@@ -1,0 +1,32 @@
+{
+    "nodes": {
+        "n38e8a8_2ad3bb": {
+            "x": 900,
+            "y": 320,
+            "node_type": "eo-explorer:load_collection",
+            "metadata": {
+                "name": "Load Collection",
+                "description": "Load a collection from disk",
+                "rotation": 0
+            }
+        },
+        "n489bcc_a0288a": {
+            "x": 1200,
+            "y": 320,
+            "node_type": "eo-explorer:map_display",
+            "metadata": {
+                "name": "Map Display",
+                "description": "Display Imagery on a map",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "lbb27e9_1627df": {
+            "from_port": "n38e8a8_2ad3bb:datacube_out",
+            "to_port": "n489bcc_a0288a:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        }
+    },
+    "metadata": {}
+}

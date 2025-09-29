@@ -1,0 +1,47 @@
+{
+    "nodes": {
+        "naf69ec_011716": {
+            "x": 820,
+            "y": 260,
+            "node_type": "eo-explorer:roi_extent",
+            "metadata": {
+                "name": "Extent",
+                "description": "Select an extent (area and time period) of interest",
+                "rotation": 0
+            }
+        },
+        "nb0444a_84aa71": {
+            "x": 1060,
+            "y": 260,
+            "node_type": "eo-explorer:fetch_collection",
+            "metadata": {
+                "name": "Fetch Imagery Collection",
+                "description": "Fetch a collection of images containing selected bands for a particular satellite given a spatial and temporal extent",
+                "rotation": 0
+            }
+        },
+        "nb23d3c_11f3fe": {
+            "x": 1340,
+            "y": 260,
+            "node_type": "eo-explorer:save_collection",
+            "metadata": {
+                "name": "Save Collection",
+                "description": "Save a collection to disk",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "lb04a58_a49f2a": {
+            "from_port": "naf69ec_011716:extent_out",
+            "to_port": "nb0444a_84aa71:extent_in",
+            "link_type": "eo-explorer:extent"
+        },
+        "lb244bc_ed0928": {
+            "from_port": "nb0444a_84aa71:datacube_out",
+            "to_port": "nb23d3c_11f3fe:datacube_in",
+            "link_type": "eo-explorer:datacube"
+        }
+    },
+    "metadata": {}
+}

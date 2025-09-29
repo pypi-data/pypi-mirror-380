@@ -1,0 +1,57 @@
+{
+    "nodes": {
+        "n64cf58_126404": {
+            "x": 780,
+            "y": 300,
+            "node_type": "textgraph:text_input_node",
+            "metadata": {
+                "name": "{{text_input}}",
+                "description": "{{text_input_description}}",
+                "rotation": 0
+            }
+        },
+        "n64d6a1_c09bc4": {
+            "x": 1040,
+            "y": 300,
+            "node_type": "textgraph:word_frequency_node",
+            "metadata": {
+                "name": "{{word_frequency}}",
+                "description": "{{word_frequency_description}}",
+                "rotation": 0
+            }
+        },
+        "n64e6d8_c2993f": {
+            "x": 1300,
+            "y": 300,
+            "node_type": "textgraph:table_display_node",
+            "metadata": {
+                "name": "{{table_display}}",
+                "description": "{{table_display_description}}",
+                "rotation": 0
+            }
+        },
+        "nd7f640_d6005d": {
+            "x": 1080,
+            "y": 560,
+            "node_type": "eo-explorer:geojson_input",
+            "metadata": {
+                "name": "Boundary",
+                "description": "Define a boundary",
+                "rotation": 0
+            }
+        }
+    },
+    "links": {
+        "l64df31_31dca6": {
+            "from_port": "n64cf58_126404:data_out",
+            "to_port": "n64d6a1_c09bc4:data_in",
+            "link_type": "textgraph:text"
+        },
+        "l64ec54_e22edd": {
+            "from_port": "n64d6a1_c09bc4:data_out",
+            "to_port": "n64e6d8_c2993f:data_in",
+            "link_type": "textgraph:frequency_table"
+        }
+    },
+    "metadata": {}
+}

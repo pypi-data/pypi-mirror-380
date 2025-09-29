@@ -1,0 +1,1 @@
+{"layers": [{"id": "red", "type": "single", "band": "red"}, {"id": "red_green_blue", "type": "rgb", "red": "red", "green": "green", "blue": "blue"}]}
