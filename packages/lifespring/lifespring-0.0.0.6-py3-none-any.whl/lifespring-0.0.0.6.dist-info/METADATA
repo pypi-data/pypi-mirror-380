@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lifespring
+Version: 0.0.0.6
+Summary: A personal account keeper.
+Home-page: https://github.com/parkcai/lifespring
+Author: parkcai
+Author-email: sun_retailer@163.com
+Requires-Python: >=3.8
+Requires-Dist: numpy (>=1.21.0)
+Requires-Dist: pywheels (>=0.7.5.4)
+
