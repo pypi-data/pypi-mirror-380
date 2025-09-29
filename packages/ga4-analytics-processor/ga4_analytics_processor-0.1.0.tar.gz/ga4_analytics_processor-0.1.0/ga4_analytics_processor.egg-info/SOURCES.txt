@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ga4_analytics/__init__.py
+ga4_analytics/processor.py
+ga4_analytics_processor.egg-info/PKG-INFO
+ga4_analytics_processor.egg-info/SOURCES.txt
+ga4_analytics_processor.egg-info/dependency_links.txt
+ga4_analytics_processor.egg-info/requires.txt
+ga4_analytics_processor.egg-info/top_level.txt
