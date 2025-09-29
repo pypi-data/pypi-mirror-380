@@ -1,0 +1,14 @@
+core-mixins>=2.1.0
+core-tests>=2.0.1
+
+[:python_version >= "3.9"]
+aiohttp<4.0.0,>=3.12.0
+requests<3.0.0,>=2.32.3
+urllib3<3.0.0,>=2.2.3
+
+[:python_version >= "3.9" and python_version < "3.11"]
+typing-extensions>=4.8.0
+
+[dev]
+core-dev-tools>=1.0.1
+types-requests>=2.32.0.20250602
