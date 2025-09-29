@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-distributed-sampling"
+version = "1.0.0"
+description = "Extensible distributed graph sampling library for Spark GraphFrames"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Joze Rozanec", email = "jmrozanec@gmail.com"}
+]
+keywords = ["spark", "graphframes", "graph", "sampling", "distributed"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  # Spark/GraphFrames are provided at runtime in the Spark environment.
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "mypy>=1.7",
+  "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/graph-massivizer/distributed-sampling-library"
+Issues = "https://github.com/graph-massivizer/distributed-sampling-library/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[project.entry-points."distributed_sampling.samplers"]
+# Entry point name -> import path to a class implementing GraphSampler
+random_node = "distributed_sampling.samplers.random_node:RandomNodeSampler"
+random_edge = "distributed_sampling.samplers.random_edge:RandomEdgeSampler"
+snowball = "distributed_sampling.samplers.snowball:SnowballSampler"
+random_walk = "distributed_sampling.samplers.random_walk:RandomWalkSampler"
+forest_fire = "distributed_sampling.samplers.forest_fire:ForestFireSampler"
+topk = "distributed_sampling.samplers.topk:TopKSampler"
+bfs = "distributed_sampling.samplers.bfs:BFSSampler"
+uvsn = "distributed_sampling.samplers.uvsn:UVSNSampler"
+nuvsn = "distributed_sampling.samplers.nuvsn:NUVSNSampler"
+mhrw = "distributed_sampling.samplers.mhrw:MHRWSampler"
+rwe = "distributed_sampling.samplers.rwe:RWESampler"
+mirw = "distributed_sampling.samplers.mirw:MIRWSampler"
+mdrw = "distributed_sampling.samplers.mdrw:MDRWSampler"
+dfs = "distributed_sampling.samplers.dfs:DFSSampler"

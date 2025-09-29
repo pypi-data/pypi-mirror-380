@@ -1,0 +1,15 @@
+[distributed_sampling.samplers]
+bfs = distributed_sampling.samplers.bfs:BFSSampler
+dfs = distributed_sampling.samplers.dfs:DFSSampler
+forest_fire = distributed_sampling.samplers.forest_fire:ForestFireSampler
+mdrw = distributed_sampling.samplers.mdrw:MDRWSampler
+mhrw = distributed_sampling.samplers.mhrw:MHRWSampler
+mirw = distributed_sampling.samplers.mirw:MIRWSampler
+nuvsn = distributed_sampling.samplers.nuvsn:NUVSNSampler
+random_edge = distributed_sampling.samplers.random_edge:RandomEdgeSampler
+random_node = distributed_sampling.samplers.random_node:RandomNodeSampler
+random_walk = distributed_sampling.samplers.random_walk:RandomWalkSampler
+rwe = distributed_sampling.samplers.rwe:RWESampler
+snowball = distributed_sampling.samplers.snowball:SnowballSampler
+topk = distributed_sampling.samplers.topk:TopKSampler
+uvsn = distributed_sampling.samplers.uvsn:UVSNSampler
