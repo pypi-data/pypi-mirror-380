@@ -1,0 +1,2 @@
+[console_scripts]
+dmos-search = dmos_search.cli:main
