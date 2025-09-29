@@ -1,0 +1,3 @@
+[console_scripts]
+dln2-spi-bpw-test = dln2_spi_wrapper.examples.bpw_tester:main
+dln2-spi-test = dln2_spi_wrapper.examples.spidev_test:main
