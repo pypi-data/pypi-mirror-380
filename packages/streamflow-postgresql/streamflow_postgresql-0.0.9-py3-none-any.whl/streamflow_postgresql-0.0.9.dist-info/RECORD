@@ -1,0 +1,13 @@
+streamflow/plugins/unito/postgresql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamflow/plugins/unito/postgresql/database.py,sha256=lh9GoALd-pE5fnulJG4VsgeEmoQtcy8O3l5f3PRoViY,26870
+streamflow/plugins/unito/postgresql/plugin.py,sha256=jgyxjVNDAqvPC1Uv2rErPEWXvfR9yY4c-cDy6NfliwY,285
+streamflow/plugins/unito/postgresql/version.py,sha256=nJdWwpVclICRdH650zxIHQO4xrA4yyWyGJJs1mHlDvU,18
+streamflow/plugins/unito/postgresql/schemas/postgresql.json,sha256=gkF4CMpaN0pAmxmEVoQ9XngzVBXsmDY1J7jFsuskT3o,1076
+streamflow/plugins/unito/postgresql/schemas/postgresql.sql,sha256=MIYAFGJnhMv9NqvMtm6BkSktGuMerO4eMdNiqiTRbDU,2427
+streamflow_postgresql-0.0.9.dist-info/licenses/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+streamflow_postgresql-0.0.9.dist-info/METADATA,sha256=Q1usW94O7zYgxHkwoOxUIewy4_4fLrO0sOdGIc9x-Zg,2969
+streamflow_postgresql-0.0.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+streamflow_postgresql-0.0.9.dist-info/entry_points.txt,sha256=8VRPwbcVMtaEkeQm_ky5UcT1ktEZFPGZGbWyia2aL9U,115
+streamflow_postgresql-0.0.9.dist-info/top_level.txt,sha256=cJUjJEEaE5W_XIY66FE07tERTxJ4OWRtf9ITuY2ESdY,11
+streamflow_postgresql-0.0.9.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+streamflow_postgresql-0.0.9.dist-info/RECORD,,
