@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/selective_json_parser.egg-info/PKG-INFO
+src/selective_json_parser.egg-info/SOURCES.txt
+src/selective_json_parser.egg-info/dependency_links.txt
+src/selective_json_parser.egg-info/requires.txt
+src/selective_json_parser.egg-info/top_level.txt
+src/selectivejsonparser/__init__.py
+src/selectivejsonparser/parser/__init__.py
+src/selectivejsonparser/parser/parser.py
+src/selectivejsonparser/pattern/__init__.py
+src/selectivejsonparser/pattern/element.py
+src/selectivejsonparser/pattern/pattern.py
+src/selectivejsonparser/pattern/pattern_parser.py
