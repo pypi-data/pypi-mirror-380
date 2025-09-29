@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+weycop/__init__.py
+weycop/client.py
+weycop/exceptions.py
+weycop/models.py
+weycop.egg-info/PKG-INFO
+weycop.egg-info/SOURCES.txt
+weycop.egg-info/dependency_links.txt
+weycop.egg-info/not-zip-safe
+weycop.egg-info/requires.txt
+weycop.egg-info/top_level.txt
