@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: fastgraphFPMS
+Version: 0.1.9
+Summary: Fast Graph Algorithms Library implemented in C++
+Author: Flavio D.
+Author-email: "Flavio D." <drogoflavio16@gmail.com>
+Project-URL: Homepage, https://github.com/16Flavio/fastgraphFPMS
+Project-URL: Documentation, https://github.com/16Flavio/fastgraphFPMS#readme
+Project-URL: Repository, https://github.com/16Flavio/fastgraphFPMS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pybind11>=2.6.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# fastgraphFPMS
+
+Python library in C++ for graph and optimisation.
+
+## Installation
+
+Use this command to install fastgraphFPMS :
+
+```bash
+pip install fastgraphFPMS
+```
+
+Thanks for downloading.
