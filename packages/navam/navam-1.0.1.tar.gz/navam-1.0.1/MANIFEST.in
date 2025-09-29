@@ -1,0 +1,35 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include .mcp.json
+
+# Include all Python packages and modules
+recursive-include src *.py
+
+# Include MCP server implementations
+recursive-include src/stock_mcp *
+recursive-include src/company_mcp *
+recursive-include src/news_mcp *
+
+# Include Claude agents and commands
+recursive-include .claude *.md
+recursive-include .claude *.yaml
+recursive-include .claude *.yml
+recursive-include .claude *.json
+
+# Include artifacts and documentation
+recursive-include artifacts *.md
+recursive-include artifacts *.yaml
+recursive-include artifacts *.yml
+recursive-include artifacts *.json
+
+# Exclude development and cache files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *~
+global-exclude .DS_Store
+global-exclude *.egg-info
+global-exclude .git*
+global-exclude .venv
+global-exclude .env
+prune .venv

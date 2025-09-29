@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "stock-analyzer": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.stock_mcp.server", "stdio"],
+      "workingDir": "/Users/manavsehgal/Developer/stockai-e1"
+    },
+    "company-research": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.company_mcp.server", "stdio"],
+      "workingDir": "/Users/manavsehgal/Developer/stockai-e1"
+    },
+    "news-analyzer": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.news_mcp.server", "stdio"],
+      "workingDir": "/Users/manavsehgal/Developer/stockai-e1"
+    }
+  }
+}
