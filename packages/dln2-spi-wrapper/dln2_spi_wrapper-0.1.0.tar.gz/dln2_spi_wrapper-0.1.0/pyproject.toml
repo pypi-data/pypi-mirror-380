@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dln2-spi-wrapper"
+version = "0.1.0"
+authors = [
+    {name = "IPM Group", email = "contact@ipmgroup.dev"},
+]
+description = "A Python library for interfacing with DLN2 SPI adapters with spidev-compatible API"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+]
+keywords = ["dln2", "spi", "usb", "hardware", "driver", "spidev"]
+dependencies = [
+    "pyusb>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+    "build",
+    "twine",
+]
+
+[project.scripts]
+dln2-spi-test = "dln2_spi_wrapper.examples.spidev_test:main"
+dln2-spi-bpw-test = "dln2_spi_wrapper.examples.bpw_tester:main"
+
+[project.urls]
+Homepage = "https://github.com/ipmgroup/dln2_spi_wrapper"
+Documentation = "https://github.com/ipmgroup/dln2_spi_wrapper/blob/master/README.md"
+Repository = "https://github.com/ipmgroup/dln2_spi_wrapper.git"
+"Bug Tracker" = "https://github.com/ipmgroup/dln2_spi_wrapper/issues"
+
+[tool.setuptools]
+packages = ["dln2_spi_wrapper", "dln2_spi_wrapper.examples"]
+
+[tool.setuptools.package-data]
+dln2_spi_wrapper = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]

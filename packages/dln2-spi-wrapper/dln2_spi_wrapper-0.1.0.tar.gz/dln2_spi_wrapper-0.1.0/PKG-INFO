@@ -1,0 +1,420 @@
+Metadata-Version: 2.4
+Name: dln2-spi-wrapper
+Version: 0.1.0
+Summary: A Python library for interfacing with DLN2 SPI adapters with spidev-compatible API
+Home-page: https://github.com/ipmgroup/dln2_spi_wrapper
+Author: IPM Group
+Author-email: IPM Group <contact@ipmgroup.dev>
+Project-URL: Homepage, https://github.com/ipmgroup/dln2_spi_wrapper
+Project-URL: Documentation, https://github.com/ipmgroup/dln2_spi_wrapper/blob/master/README.md
+Project-URL: Repository, https://github.com/ipmgroup/dln2_spi_wrapper.git
+Project-URL: Bug Tracker, https://github.com/ipmgroup/dln2_spi_wrapper/issues
+Keywords: dln2,spi,usb,hardware,driver,spidev
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyusb>=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# DLN2 SPI Wrapper
+
+A Python library for interfacing with DLN2 USB-to-SPI adapters with a **spidev-compatible API**. This package allows existing Python code written for `py-spidev` to work with DLN2 devices with minimal modifications.
+
+## Features
+
+- **spidev-compatible API**: Drop-in replacement for most `py-spidev` usage
+- **Cross-platform support**: Works on Linux, Windows, and macOS
+- **Multiple transfer modes**: Single transfers, per-byte transfers with CS control
+- **Configurable parameters**: SPI mode, frequency, bits per word
+- **Built-in examples**: Ready-to-use test scripts and utilities
+- **Pure Python**: No compiled extensions, easy to install and distribute
+
+## Installation
+
+### From PyPI (recommended)
+
+```bash
+pip install dln2-spi-wrapper
+```
+
+### From source
+
+```bash
+git clone https://github.com/ipmgroup/dln2_spi_wrapper.git
+cd dln2_spi_wrapper
+pip install .
+```
+
+### Development installation
+
+```bash
+git clone https://github.com/ipmgroup/dln2_spi_wrapper.git
+cd dln2_spi_wrapper
+pip install -e ".[dev]"
+```
+
+## Prerequisites
+
+- **Python 3.7+**
+- **pyusb**: Automatically installed as a dependency
+- **DLN2 device**: A DLN2 USB-to-SPI adapter (VID: 0x1d50, PID: 0x6170)
+
+### USB permissions (Linux)
+
+On Linux, you may need to set up udev rules to access the DLN2 device without root privileges:
+
+```bash
+# Create udev rule for DLN2 device
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1d50", ATTR{idProduct}=="6170", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-dln2.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+Make sure your user is in the `plugdev` group:
+```bash
+sudo usermod -a -G plugdev $USER
+# Log out and log back in for the group change to take effect
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from dln2_spi_wrapper import SpiDev
+
+# Create SPI device instance
+spi = SpiDev()
+
+# Open the device (bus and device parameters are ignored for DLN2)
+spi.open(0, 0)
+
+# Configure SPI parameters
+spi.max_speed_hz = 1000000  # 1 MHz
+spi.mode = 0               # SPI mode 0 (CPOL=0, CPHA=0)
+spi.bits_per_word = 8      # 8 bits per word
+
+# Perform SPI transaction
+tx_data = [0x9F, 0x00, 0x00]  # Example: JEDEC ID command
+rx_data = spi.xfer2(tx_data)
+print(f"Received: {[hex(b) for b in rx_data]}")
+
+# Close the device
+spi.close()
+```
+
+### Context Manager Usage
+
+```python
+from dln2_spi_wrapper import SpiDev
+
+with SpiDev() as spi:
+    spi.open(0, 0)
+    spi.max_speed_hz = 1000000
+    spi.mode = 0
+    
+    # Send command and receive response
+    response = spi.xfer2([0x9F, 0x00, 0x00, 0x00])
+    print(f"Device ID: {' '.join(f'{b:02x}' for b in response)}")
+```
+
+### Advanced Usage
+
+```python
+from dln2_spi_wrapper import SpiDev
+
+spi = SpiDev()
+spi.open(0, 0)
+
+# Configure advanced options
+spi.max_speed_hz = 10000000  # 10 MHz
+spi.mode = 1                # SPI mode 1
+spi.bits_per_word = 16      # 16-bit words
+spi.host_hold_cs = True     # Keep CS asserted between transfers
+
+# Per-byte transfers with CS toggling
+data = [0x01, 0x02, 0x03]
+response = spi.xfer_per_byte(data, inter_byte_delay_ms=1.0)
+
+# Write-only operation
+spi.writebytes([0xAA, 0xBB, 0xCC])
+
+# Read-only operation  
+received = spi.readbytes(4)
+
+spi.close()
+```
+
+## API Reference
+
+### SpiDev Class
+
+The main class providing spidev-compatible interface.
+
+#### Methods
+
+- **`open(bus, device)`**: Open SPI device (bus/device ignored for DLN2)
+- **`close()`**: Close SPI device and release resources
+- **`xfer2(data)`**: Perform full-duplex SPI transfer
+- **`xfer(data)`**: Alias for `xfer2()` (spidev compatibility)
+- **`xfer_per_byte(data, delay_ms=5.0)`**: Transfer bytes individually with CS toggling
+- **`writebytes(data)`**: Write-only SPI transfer
+- **`readbytes(length)`**: Read-only SPI transfer (sends zeros)
+
+#### Properties
+
+- **`max_speed_hz`** (int): SPI clock frequency in Hz
+- **`mode`** (int): SPI mode (0-3, sets CPOL and CPHA)
+- **`bits_per_word`** (int): Word size in bits (1-16)
+- **`host_hold_cs`** (bool): Keep CS asserted between transfers
+- **`debug`** (bool): Enable debug output
+
+### Low-level API
+
+For advanced use cases, you can access the low-level DLN2 client:
+
+```python
+from dln2_spi_wrapper import Dln2Usb, find_device
+
+# Find and connect to DLN2 device
+device = find_device()
+client = Dln2Usb(device, debug=True)
+
+# Enable SPI
+client.spi_enable()
+
+# Configure SPI settings
+client.spi_set_frequency(1000000)
+client.spi_set_mode(0)
+
+# Perform raw SPI transfer
+tx_bytes = b'\x9f\x00\x00'
+rx_bytes = client.spi_read_write(tx_bytes, leave_ss_low=False)
+
+# Clean up
+client.spi_disable()
+client.close()
+```
+
+## Command Line Tools
+
+The package includes command-line utilities:
+
+### SPI Test Tool
+
+Test SPI communication with automatic backend detection:
+
+```bash
+dln2-spi-test --backend dln --verbose
+```
+
+Options:
+- `--backend {auto,dln,native}`: Choose SPI backend
+- `--host-cs`: Use host-controlled chip select
+- `--verbose`: Enable debug output
+- `--per-byte`: Send bytes individually
+- `--inter-byte-delay DELAY`: Delay between bytes in milliseconds
+
+### Bits-per-Word Tester
+
+Test different word sizes (4-16 bits):
+
+```bash
+dln2-spi-bpw-test
+```
+
+This utility cycles through different bits-per-word settings and sends test patterns.
+
+## Examples
+
+See the `examples/` directory for more usage examples:
+
+- **`spidev_test.py`**: Basic SPI communication test
+- **`bpw_tester.py`**: Bits-per-word functionality test
+
+## Compatibility
+
+### spidev API Coverage
+
+This library implements the most commonly used parts of the `py-spidev` API:
+
+| Feature | Status | Notes |
+|---------|---------|-------|
+| `open()` / `close()` | ✅ | Bus/device params ignored |
+| `xfer()` / `xfer2()` | ✅ | Full duplex transfers |
+| `writebytes()` / `readbytes()` | ✅ | Half duplex transfers |
+| `max_speed_hz` | ✅ | Frequency control |
+| `mode` | ✅ | SPI modes 0-3 |
+| `bits_per_word` | ✅ | 1-16 bit words |
+| Context manager | ✅ | `with SpiDev() as spi:` |
+| `cshigh` / `lsbfirst` | 📝 | Properties exist but limited DLN2 support |
+
+### Platform Support
+
+- **Linux**: Full support with udev rules for device access
+- **Windows**: Full support with libusb-win32/WinUSB drivers
+- **macOS**: Full support with libusb
+
+### Python Version Support
+
+- Python 3.7+
+- Tested on CPython and PyPy
+
+## Troubleshooting
+
+### Device Not Found
+
+```
+ValueError: DLN2 device not found (VID:PID 1d50:6170)
+```
+
+**Solutions:**
+- Check device is connected and powered
+- Verify USB cable and connection
+- On Linux, check udev rules and user permissions
+- Try running with `sudo` (not recommended for production)
+
+### Permission Denied (Linux)
+
+```
+usb.core.USBError: [Errno 13] Access denied (insufficient permissions)
+```
+
+**Solutions:**
+- Set up udev rules (see installation instructions)
+- Add user to `plugdev` group
+- Check that the device isn't claimed by kernel driver
+
+### Import Errors
+
+```
+ModuleNotFoundError: No module named 'usb'
+```
+
+**Solution:**
+```bash
+pip install pyusb
+```
+
+### Transfer Errors
+
+```
+RuntimeError: SPI transfer failed: result=X
+```
+
+**Check:**
+- SPI device is properly connected
+- Correct SPI mode and frequency settings
+- Adequate power supply for target device
+- Proper wiring (MOSI, MISO, SCK, CS)
+
+## Development
+
+### Setting up Development Environment
+
+```bash
+git clone https://github.com/ipmgroup/dln2_spi_wrapper.git
+cd dln2_spi_wrapper
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install in development mode with all dependencies
+pip install -e ".[dev]"
+```
+
+### Building and Publishing
+
+```bash
+# Build package
+make build
+
+# Check package integrity  
+make check
+
+# Upload to TestPyPI (requires API token)
+make upload-test
+
+# Upload to PyPI (requires API token)
+make upload
+
+# Or use the interactive script
+./publish.sh
+```
+
+For detailed publishing instructions, see [PUBLISHING.md](PUBLISHING.md) and [QUICKSTART.md](QUICKSTART.md).
+
+### Running Tests
+
+```bash
+pytest tests/
+```
+
+### Code Formatting
+
+```bash
+black dln2_spi_wrapper/
+```
+
+### Type Checking
+
+```bash
+mypy dln2_spi_wrapper/
+```
+
+## Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes and add tests
+4. Ensure code passes linting and tests
+5. Submit a pull request
+
+## License
+
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+
+- Based on DLN2 protocol implementation
+- Inspired by the `py-spidev` library API
+- Thanks to the USB and embedded development communities
+
+## Related Projects
+
+- [py-spidev](https://github.com/doceme/py-spidev): Original spidev Python bindings
+- [libusb](https://libusb.info/): USB library for cross-platform USB device access
+- [DLN2 Linux Driver](https://github.com/torvalds/linux/tree/master/drivers/mfd): Official Linux kernel driver
+
+---
+
+For more examples and detailed documentation, visit the [project repository](https://github.com/ipmgroup/dln2_spi_wrapper).

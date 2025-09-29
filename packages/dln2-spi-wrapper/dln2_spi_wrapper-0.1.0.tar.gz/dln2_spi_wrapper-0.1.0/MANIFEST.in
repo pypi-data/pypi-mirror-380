@@ -1,0 +1,29 @@
+# Include documentation and metadata files
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+include pyproject.toml
+
+# Include example configuration files
+include *.cfg
+include *.ini
+include *.toml
+
+# Exclude development and build files
+exclude setup.py
+exclude *.py[cod]
+exclude __pycache__/
+exclude .git*
+exclude .pytest_cache
+exclude .coverage
+exclude .mypy_cache
+exclude build/
+exclude dist/
+exclude *.egg-info/
+
+# Include package data
+recursive-include dln2_spi_wrapper *.py
+recursive-include dln2_spi_wrapper *.typed
+recursive-exclude dln2_spi_wrapper __pycache__
+recursive-exclude dln2_spi_wrapper *.py[cod]
