@@ -1,0 +1,320 @@
+# FleetFluid
+
+**AI Agent Functions for Data Processing with Dual-Mode Support**
+
+FleetFluid is a Python library that simplifies data transformation by letting you use AI-powered functions without writing them from scratch. Instead of building functions, you invoke ready-made, agent-based functions that handle tasks like text cleaning, information extraction, translation, labeling, anonymization, and more—just by specifying what you need in natural language.
+
+## 🚀 Dual-Mode Architecture
+
+FleetFluid supports two execution modes:
+
+- **🔓 Open Source Mode**: Uses PydanticAI agents directly on your machine
+- **☁️ Cloud Mode**: Uses cloud computation for enterprise-grade performance and reliability
+
+The same Python interface works in both modes - just change the initialization to switch between them!
+
+## Installation
+
+```bash
+pip install fleetfluid
+```
+
+## Quick Start
+
+### Open Source Mode
+
+```python
+from fleetfluid.core import FleetFluid
+
+# Initialize with PydanticAI (open source mode)
+ff = FleetFluid(
+    model="openai:gpt-4",
+    temperature=0.7,
+    max_tokens=1000
+)
+
+# AI Transformation
+result = ff.ai("Rewrite this in a more technical tone", "The data processing pipeline needs optimization.")
+print(result)
+
+# Multi-label Classification
+result = ff.label("Database query is slow", ["Performance Issue", "Feature Request", "Bug Report"], multiple=True)
+print(f"Labels: {result.labels}")
+print(f"Confidence: {result.confidence_scores}")
+```
+
+### Cloud Mode
+
+```python
+from fleetfluid.core import FleetFluid
+
+# Initialize with API key (cloud mode)
+ff = FleetFluid(
+    api_key="your_premium_api_key",
+    api_endpoint="https://api.fleetfluid.com"
+)
+
+# Same interface, different backend!
+result = ff.label("Database query is slow", ["Performance Issue", "Feature Request", "Bug Report"])
+print(f"Label: {result.label}")
+```
+
+### Environment-Based Configuration
+
+```bash
+# Set environment variables
+export FLEETFLUID-API-KEY="your_api_key"
+export FLEETFLUID_API_ENDPOINT="https://api.fleetfluid.io"
+```
+
+```python
+# Automatically detects cloud mode
+ff = FleetFluid()  # No parameters needed!
+```
+
+## 🔄 Mode Switching
+
+You can switch between modes at runtime:
+
+```python
+# Start in open source mode
+ff = FleetFluid(model="openai:gpt-4")
+
+# Switch to cloud mode
+ff.switch_to_api_mode("new_api_key", "https://some-tenant-api.fleetfluid.io")
+
+# Switch back to open source mode
+ff.switch_to_local_mode("anthropic:claude-3-sonnet", temperature=0.3)
+```
+
+## 📋 Complete Function Reference
+
+### Initialization
+
+#### Open Source Mode
+```python
+# Basic initialization
+ff = FleetFluid()
+
+# Custom model and parameters
+ff = FleetFluid(
+    model="anthropic:claude-3-sonnet",
+    temperature=0.7,
+    max_tokens=1000,
+    top_p=0.9
+)
+```
+
+#### Cloud Mode
+```python
+# Explicit configuration
+ff = FleetFluid(
+    api_key="your_api_key",
+    api_endpoint="https://api.fleetfluid.io"
+)
+
+# Environment-based
+ff = FleetFluid()  # Uses FLEETFLUID-API-KEY env var
+```
+
+### Core Methods
+
+All methods work identically in both modes:
+
+#### `ff.label(text, labels, multiple=False)`
+Label text using AI with structured output.
+
+```python
+# Single label
+result = ff.label("Hello world", ["greeting", "statement", "question"])
+print(f"Label: {result.label}")
+print(f"Confidence: {result.confidence}")
+
+# Multiple labels
+result = ff.label("Hello world", ["greeting", "statement", "question"], multiple=True)
+print(f"Labels: {result.labels}")
+print(f"Confidence Scores: {result.confidence_scores}")
+```
+
+#### `ff.ai(prompt, data)`
+Apply AI transformation to data.
+
+```python
+result = ff.ai("Make this more formal", "hey there, what's up?")
+print(result)  # "Hello, how are you doing?"
+```
+
+#### `ff.extract(extraction_type, text)`
+Extract specific information from text.
+
+```python
+skills = ff.extract("skills", "Python developer with ML experience")
+print(skills)  # ["Python", "machine learning"]
+```
+
+#### `ff.anonymize(text)`
+Anonymize personal information.
+
+```python
+anonymized = ff.anonymize("My name is John, email: john@example.com")
+print(anonymized)  # "My name is [NAME], email: [EMAIL]"
+```
+
+#### `ff.describe(features, style="natural")`
+Generate descriptions from features.
+
+```python
+description = ff.describe(
+    {"color": "blue", "size": "large"}, 
+    style="marketing"
+)
+print(description)  # "A stunning large blue item..."
+```
+
+### Async Versions
+
+All methods have async counterparts:
+
+```python
+# Async versions for use in async contexts
+result = await ff.label_async("Hello world", ["greeting", "statement"])
+result = await ff.ai_async("Make formal", "hey there")
+result = await ff.extract_async("skills", "Python developer")
+```
+
+## 🏗️ Architecture Details
+
+### Strategy Pattern Implementation
+
+FleetFluid uses the Strategy pattern to seamlessly switch between execution backends:
+
+- **Abstract Base Classes**: Define interfaces for all operations
+- **Open Source Implementations**: Use PydanticAI agents directly
+- **Cloud Implementations**: Wrap REST API calls
+- **Dynamic Resolution**: Methods delegate to appropriate implementation
+
+### Configuration Priority
+
+1. **Constructor Parameters** (highest priority)
+2. **Environment Variables**
+3. **Default Values** (lowest priority)
+
+```python
+# Constructor overrides environment
+ff = FleetFluid(model="openai:gpt-4")  # Always open source mode
+
+# Environment used when no constructor params
+ff = FleetFluid()  # Uses FLEETFLUID-API-KEY if set
+```
+
+
+## 🔧 Configuration
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `FLEETFLUID-API-KEY` | API key for cloud mode | None |
+| `FLEETFLUID_API_ENDPOINT` | API endpoint for cloud mode | `https://api.fleetfluid.io` |
+
+### Open Source Mode Parameters
+
+All PydanticAI parameters are supported:
+
+- `model`: Model identifier
+- `temperature`: Creativity level (0.0-1.0)
+- `max_tokens`: Maximum response length
+- `top_p`: Nucleus sampling parameter
+- `frequency_penalty`: Frequency penalty
+- `presence_penalty`: Presence penalty
+
+### Cloud Mode Parameters
+
+- `api_key`: Your premium API key
+- `api_endpoint`: Custom API endpoint (optional)
+
+## 🚨 Error Handling
+
+```python
+try:
+    result = ff.label("Hello world", ["greeting", "statement"])
+except RuntimeError as e:
+    if "API" in str(e):
+        print("Cloud mode error - check your key and endpoint")
+    elif "Open Source" in str(e):
+        print("Open source mode error - check your model configuration")
+    else:
+        print(f"General error: {e}")
+```
+
+
+
+## 🔒 Security
+
+- **Open Source Mode**: API keys stay on your machine
+- **Cloud Mode**: Uses Bearer token authentication
+- **HTTPS**: All API communications are encrypted
+- **No Data Logging**: Your data is not stored or logged
+
+## 📦 Requirements
+
+- Python 3.8+
+- PydanticAI (for open source mode)
+- httpx (for cloud mode)
+- API key for your chosen model provider (open source mode) or FleetFluid (cloud mode)
+
+
+
+See the `test.py` file for comprehensive testing and examples of the dual-mode functionality.
+
+## 🚀 Quick Reference
+
+### Initialization Cheat Sheet
+
+| Mode | Code | Use Case |
+|------|------|----------|
+| **Open Source** | `FleetFluid(model="gpt-4")` | Development, open source |
+| **Open Source** | `FleetFluid(model="claude-3", temperature=0.7)` | Custom AI parameters |
+| **Cloud** | `FleetFluid(api_key="key")` | Production, enterprise |
+| **Cloud** | `FleetFluid(api_key="key", api_endpoint="https://custom-tenant.fleetfluid.io")` | Custom API endpoint |
+| **Auto** | `FleetFluid()` | Uses environment variables |
+
+### Function Quick Reference
+
+| Function | Description | Example |
+|----------|-------------|---------|
+| `ff.label(text, labels)` | Single label classification | `ff.label("Hello", ["greeting", "statement"])` |
+| `ff.label(text, labels, multiple=True)` | Multiple label classification | `ff.label("Hello", ["greeting", "statement"], multiple=True)` |
+| `ff.ai(prompt, data)` | AI transformation | `ff.ai("Make formal", "hey there")` |
+| `ff.extract(type, text)` | Information extraction | `ff.extract("skills", "Python developer")` |
+| `ff.anonymize(text)` | Text anonymization | `ff.anonymize("My name is John")` |
+| `ff.describe(features, style)` | Feature description | `ff.describe({"color": "blue"}, "marketing")` |
+
+### Environment Variables
+
+```bash
+# For cloud mode
+export FLEETFLUID-API-KEY="your_key"
+export FLEETFLUID_API_ENDPOINT="https://api.fleetfluid.io"
+
+# For open source mode (standard AI provider keys)
+export OPENAI_API_KEY="your_openai_key"
+export ANTHROPIC_API_KEY="your_anthropic_key"
+```
+
+### Mode Detection Priority
+
+1. **Constructor Parameters** (highest)
+2. **Environment Variables** 
+3. **Default Values** (lowest)
+
+**Pro Tip**: `api_key` parameter always wins over `model` parameter!
+
+## 📄 License
+
+MIT License. See LICENSE file for details.
+
+## 🆘 Support
+
+- **Open Source Users**: GitHub Issues
+- **Premium Users**: Contact support@fleetfluid.com
