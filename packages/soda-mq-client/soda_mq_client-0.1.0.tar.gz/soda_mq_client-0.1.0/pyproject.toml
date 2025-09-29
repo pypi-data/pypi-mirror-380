@@ -1,0 +1,26 @@
+[project]
+name = "soda-mq-client"
+version = "0.1.0"
+description = "SodaMQ客户端库，用于消息队列通信"
+authors = [
+    {name = "fohhy", email = "fohhy@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "signalrcore==0.9.5"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/fohhy/soda-mq-client"
+"Bug Tracker" = "https://github.com/fohhy/soda-mq-client/issues"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
