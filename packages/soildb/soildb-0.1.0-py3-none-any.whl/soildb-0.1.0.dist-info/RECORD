@@ -1,0 +1,13 @@
+soildb/__init__.py,sha256=xCupDHvgn6IxY6w3luWmdewWJ7AptfhO__NEZJ5Bdxo,2393
+soildb/client.py,sha256=3BLRlAG0EeDADe9RU5z1_7hJ_Y8CQv58nDlkMzA-iF0,8681
+soildb/convenience.py,sha256=KNlj4rN-YFOMZxGwq85kXRhQVfLsAddF3UtQqsrZ_wo,7331
+soildb/exceptions.py,sha256=ZEIvhMzCiPZ4e0DBFem0pZuoP1f5pZaDI_-hL8SW1ic,2527
+soildb/fetch.py,sha256=eTKPm00DExng7x75mxnJv9TzXbJ4qgLssEBS8dtvBWY,15507
+soildb/metadata.py,sha256=BNL-7sbkPh2aX5J7mF0CnLSHk2QrVO7-k6fdkEG_f_4,15119
+soildb/query.py,sha256=zjzrTemCmcWkm14hywUyWpUdxA20HyGSPWPUalkxtas,15664
+soildb/response.py,sha256=fGHTjs0dTx-Z7nDUXPxwPTzSRUyNzyPHSd3MJnJPVEs,18116
+soildb/spatial.py,sha256=rGBbl2nAq0luT-x0dbOGB2qppJHepHzOmmNtUgmN-u0,17121
+soildb-0.1.0.dist-info/METADATA,sha256=HHZ-EgP_xw5tmU6wGtx_xBy8tTdatTmfUlOrz3bKpic,12253
+soildb-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+soildb-0.1.0.dist-info/licenses/LICENSE,sha256=DGlulgGk2PiAY48iUCFEHj-oV1D8PNQqPDMfUwTtnKA,1068
+soildb-0.1.0.dist-info/RECORD,,
