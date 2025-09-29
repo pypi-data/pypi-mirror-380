@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+walide/__init__.py
+walide/crossover.py
+walide/de.py
+walide/fitness.py
+walide/generator.py
+walide/mutate.py
+walide/selection.py
+walide.egg-info/PKG-INFO
+walide.egg-info/SOURCES.txt
+walide.egg-info/dependency_links.txt
+walide.egg-info/requires.txt
+walide.egg-info/top_level.txt
