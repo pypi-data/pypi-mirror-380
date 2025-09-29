@@ -1,0 +1,122 @@
+Metadata-Version: 2.4
+Name: unicex
+Version: 0.2.0
+Summary: Unified Crypto Exchange API 
+Author-email: LoveBloodAndDiamonds <ayazshakirzyanov27@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, LoveBloodAndDiamonds
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Github, https://github.com/LoveBloodAndDiamonds/uni-cex-api
+Project-URL: Author, https://t.me/LoveBloodAndDiamonds
+Project-URL: Readthedocs, https://unicex.readthedocs.io/ru/latest/
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.12.15
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: orjson>=3.11.3
+Requires-Dist: websockets>=15.0.1
+Dynamic: license-file
+
+# Unified Crypto Exchange API
+
+`unicex` — асинхронная библиотека для работы с криптовалютными биржами, реализующая унифицированный интерфейс поверх «сырых» REST и WebSocket API разных бирж.
+
+## ✅ Статус реализации
+
+| Exchange | Client | UniClient | Adapter | WebsocketManager | UniWebsocketManager | UserWebsocket |
+|----------|--------|-----------|---------|------------------|---------------------|---------------|
+| Binance  | [x]    | [x]       | [x]     | [x]              | [x]                 | [x]           |
+| Bybit    | [ ]    | [ ]       | [ ]     | [ ]              | [ ]                 | [ ]           |
+| Bitget   | [ ]    | [ ]       | [ ]     | [ ]              | [ ]                 | [ ]           |
+| Okx      | [ ]    | [ ]       | [ ]     | [ ]              | [ ]                 | [ ]           |
+| Mexc     | [ ]    | [ ]       | [ ]     | [ ]              | [ ]                 | [ ]           |
+| Gate     | [ ]    | [ ]       | [ ]     | [ ]              | [ ]                 | [ ]           |
+
+---
+
+## 🚀 Быстрый старт
+
+- Установка: `pip install unicex` или из исходников: `pip install -e .`
+- Библиотека полностью асинхронная. Примеры импорта:
+  - Сырые клиенты: `from unicex.binance import Client`
+  - Унифицированные клиенты: `from unicex.binance import UniClient`
+  - Менеджеры WS: `from unicex.binance import WebsocketManager, UniWebsocketManager`
+
+Пример: получить последние цены через унифицированный клиент Binance
+
+```
+import asyncio
+from unicex.binance import UniClient
+
+
+async def main():
+    client = await UniClient.create()
+    prices = await client.last_price()
+    print(prices["BTCUSDT"])
+    await client.close()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+Пример: подписаться на трейды через унифицированный WS‑менеджер Bitget
+
+```
+import asyncio
+from unicex.bitget import UniWebsocketManager
+from unicex import TradeDict
+
+
+async def on_trade(msg: TradeDict):
+    print(msg)
+
+
+async def main():
+    uwm = UniWebsocketManager()
+    socket = uwm.trades(callback=on_trade, symbol="BTCUSDT")
+    await socket.start()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+---
+
+## 🧑‍💻 Блок для разработчика
+
+### 📋 Todo
+- Добавить веса и рейт‑лимиты в документацию клиентов
+- Пересмотреть вопрос: должен ли быть адаптер интерфейсом?
+- Доделать BitgetClient и проверить типы
+- Добавить overload к методам с `None, None`
+- Определить порядок полей, возвращаемых адаптером
+- Написать 1–2 примера

@@ -1,0 +1,4 @@
+aiohttp>=3.12.15
+loguru>=0.7.3
+orjson>=3.11.3
+websockets>=15.0.1
