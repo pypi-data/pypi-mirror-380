@@ -1,0 +1,98 @@
+Metadata-Version: 2.4
+Name: RsCma
+Version: 4.0.22
+Summary: CMA180 Radio Tester Driver Remote-control module
+Author: Rohde & Schwarz GmbH & Co. KG
+Maintainer: Rohde & Schwarz GmbH & Co. KG
+License-Expression: MIT
+Project-URL: Documentation, https://RsCma.readthedocs.io/
+Project-URL: Examples, https://github.com/Rohde-Schwarz/Examples/
+Keywords: CMA,CMA180
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: pyvisa>=1.13.0
+Requires-Dist: typing-extensions>=4.0.0
+
+==================================
+ RsCma
+==================================
+
+.. image:: https://img.shields.io/pypi/v/RsCma.svg
+   :target: https://pypi.org/project/ RsCma/
+
+.. image:: https://readthedocs.org/projects/sphinx/badge/?version=master
+   :target: https://RsCma.readthedocs.io/
+
+.. image:: https://img.shields.io/pypi/l/RsCma.svg
+   :target: https://pypi.python.org/pypi/RsCma/
+
+.. image:: https://img.shields.io/pypi/pyversions/pybadges.svg
+   :target: https://img.shields.io/pypi/pyversions/pybadges.svg
+
+.. image:: https://img.shields.io/pypi/dm/RsCma.svg
+   :target: https://pypi.python.org/pypi/RsCma/
+
+Rohde & Schwarz CMA180 Radio Tester Driver RsCma instrument driver.
+
+Basic Hello-World code:
+
+.. code-block:: python
+
+    from RsCma import *
+
+    instr = RsCma('TCPIP::192.168.2.101::hislip0')
+    idn = instr.utilities.query('*IDN?')
+    print('Hello, I am: ' + idn)
+
+Supported instruments: CMA180
+
+The package is hosted here: https://pypi.org/project/RsCma/
+
+Documentation: https://RsCma.readthedocs.io/
+
+Examples: https://github.com/Rohde-Schwarz/Examples/tree/main/RadioTestSets/Python/RsCma_ScpiPackage
+
+
+Version history
+----------------
+
+	Latest release notes summary: Update for Firmware 4.0.22
+
+	Version 4.0.22
+		- Update for Firmware 4.0.22
+
+	Version 4.0.20
+		- Update for Firmware 4.0.20
+
+	Version 4.0.10
+		- Update for Firmware 4.0.10
+
+	Version 1.7.20
+		- Update for Firmware 1.7.20
+
+	Version 1.7.10
+		- Fixed bug in interfaces with the name 'base'
+
+	Version 1.7.10
+		- Update for Firmware 1.7.10
+		- Fixed several misspelled errors
+
+	Version 1.5.70
+		- Added documentation on ReadTheDocs
+
+	Version 1.5.70.21
+		- Added new data types for commands accepting numbers or ON/OFF:
+		- int or bool
+		- float or bool
+
+	Version 1.5.70.0018
+		- First released version
