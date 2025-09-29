@@ -1,0 +1,161 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - uv.lock
+      - pyproject.toml
+      - ".github/workflows/tests.yml"
+      - "!docs/**"
+  pull_request:
+    # types: opened
+    branches: [main]
+    paths:
+      - "**.py"
+      - uv.lock
+      - pyproject.toml
+      - ".github/workflows/tests.yml"
+      - "!docs/**"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['windows-latest', 'ubuntu-latest']
+        version: ['21', '20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9']
+    env:
+      MAX_PYTHON_VERSION: '3.13'
+      # only used when installing for a pre-released python version
+      # LIBGIT2_VERSION: '1.9.0'
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: 3.x
+
+      # - name: Checkout libgit2
+      #   uses: actions/checkout@v5
+      #   with:
+      #     repository: libgit2/libgit2
+      #     ref: v${{ env.LIBGIT2_VERSION }}
+      #     path: libgit2-${{ env.LIBGIT2_VERSION }}
+
+      # - name: Install libgit2
+      #   working-directory: libgit2-${{ env.LIBGIT2_VERSION }}
+      #   shell: bash
+      #   run: |-
+      #     cmake -B build -S . -DBUILD_TESTS=OFF
+      #     cmake --build build
+      #     sudo cmake --install build
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6 # v6.6.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      # https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages
+      - name: Install ninja (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get install ninja-build
+      - name: Install ninja (Windows)
+        if: runner.os == 'Windows'
+        run: choco install ninja
+
+      - name: Install Linux clang dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          sudo apt-get update
+          # First try installing from default Ubuntu repositories before trying LLVM script
+          if ! sudo apt-get install -y clang-format-${{ matrix.version }} clang-tidy-${{ matrix.version }}; then
+            # This LLVM script will add the relevant LLVM PPA: https://apt.llvm.org/
+            wget https://apt.llvm.org/llvm.sh -O ${{ runner.temp }}/llvm_install.sh
+            chmod +x ${{ runner.temp }}/llvm_install.sh
+            if sudo ${{ runner.temp }}/llvm_install.sh ${{ matrix.version }}; then
+              sudo apt-get install -y clang-format-${{ matrix.version }} clang-tidy-${{ matrix.version }}
+            fi
+          fi
+
+      - name: Install clang-tools
+        run: |
+          python -m pip install clang-tools
+          clang-tools --install ${{ matrix.version }}
+
+      - name: Is clang-only tests?
+        id: clang-dep
+        shell: python
+        run: |-
+          from os import environ
+          with open(environ["GITHUB_OUTPUT"], mode="a") as gh_out:
+            if "${{ matrix.version }}" == "21":
+                gh_out.write("args=\n")
+            else:
+                gh_out.write("args=not no_clang\n")
+
+      - name: Collect Coverage
+        shell: bash
+        env:
+          CLANG_VERSION: ${{ matrix.version }}
+          PYTEST_ARGS: ${{ steps.clang-dep.outputs.args }}
+        run: uvx nox -s test-all -- -m "${PYTEST_ARGS}"
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-data-${{ runner.os }}-${{ matrix.version }}
+          path: .coverage*
+          include-hidden-files: true
+
+  coverage-report:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          pattern: coverage-data-*
+          merge-multiple: true
+
+      - name: Setup python
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.x'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6 # v6.6.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Create coverage report
+        run: uvx nox -s coverage
+
+      - name: Upload comprehensive coverage HTML report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: coverage-report
+          path: htmlcov/
+
+      - uses: codecov/codecov-action@fdcc8476540edceab3de004e990f80d881c6cc00 # v5.5.0
+        env:
+          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
