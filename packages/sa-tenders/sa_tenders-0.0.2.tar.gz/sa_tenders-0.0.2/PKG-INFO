@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: sa_tenders
+Version: 0.0.2
+Summary: This library enables developers to download and process data from the South African etenders platform.
+Author: Ntuthuko Hlela
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: flatdict
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
