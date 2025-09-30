@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+pylitemongo.egg-info/PKG-INFO
+pylitemongo.egg-info/SOURCES.txt
+pylitemongo.egg-info/dependency_links.txt
+pylitemongo.egg-info/top_level.txt
