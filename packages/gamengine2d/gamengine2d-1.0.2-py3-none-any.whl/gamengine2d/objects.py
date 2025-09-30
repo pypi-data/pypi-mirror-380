@@ -1,0 +1,199 @@
+from .helper import vector2d, Script, Camera, Color, rotate
+import pygame
+import math
+
+# -----------------------------
+# GameObject
+# -----------------------------
+class GameObject:
+    def __init__(self, name="GameObject"):
+        self.scripts = []
+        self.name = name
+
+    def draw(self, screen, camera):
+        pass
+
+    def update(self, dt):
+        for script in self.scripts:
+            script.update(dt)
+
+    def attach(self, file_path, context):
+        script = Script(self, file_path, context)
+        script.init_instance()
+        self.scripts.append(script)
+
+    def init_scripts(self):
+        for script in self.scripts:
+            script.init_instance()
+
+# -----------------------------
+# Rectangle
+# -----------------------------
+class Rectangle(GameObject):
+    def __init__(self, pos=vector2d(0, 0), size=vector2d(40, 40), rotation=0, color=Color.white(), visible=True, name="rectangle"):
+        super().__init__(name)
+        self.pos = pos
+        self.size = size
+        self.color = color
+        self.visible = visible
+        self.rotation = rotation
+
+    def get_corners(self):
+        hw = self.size.x / 2
+        hh = self.size.y / 2
+        corners = [
+            vector2d(-hw, -hh),
+            vector2d(hw, -hh),
+            vector2d(hw, hh),
+            vector2d(-hw, hh),
+        ]
+        corners = [rotate(corner, self.rotation) for corner in corners]
+        corners = [corner + self.pos for corner in corners]
+        return corners
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+
+        corners = self.get_corners()
+        corners = [camera.world_to_screen(c).totuple() for c in corners]
+        pygame.draw.polygon(screen, self.color.to_rgb(), corners, 0)
+
+# -----------------------------
+# Circle
+# -----------------------------
+class Circle(GameObject):
+    def __init__(self, pos=vector2d(0, 0), radius=20, color=Color.white(), visible=True, name="circle"):
+        super().__init__(name)
+        self.pos = pos
+        self.radius = radius
+        self.color = color
+        self.visible = visible
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+        screen_pos = camera.world_to_screen(self.pos).totuple()
+        pygame.draw.circle(screen, self.color.to_rgb(), screen_pos, int(self.radius * camera.zoom))
+
+
+# -----------------------------
+# RectangleOutline
+# -----------------------------
+class RectangleOutline(GameObject):
+    def __init__(self, pos=vector2d(0, 0), size=vector2d(40, 40),
+                 color=Color.white(), rotation=0, line_width=2, visible=True,
+                 name="rectangle_outline"):
+        super().__init__(name)
+        self.pos = pos
+        self.size = size
+        self.color = color
+        self.visible = visible
+        self.line_width = line_width
+        self.rotation = rotation
+
+    def get_corners(self):
+        hw = self.size.x / 2
+        hh = self.size.y / 2
+        corners = [
+            vector2d(-hw, -hh),
+            vector2d(hw, -hh),
+            vector2d(hw, hh),
+            vector2d(-hw, hh),
+        ]
+        corners = [rotate(corner, self.rotation) for corner in corners]
+        corners = [corner + self.pos for corner in corners]
+        return corners
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+
+        corners = self.get_corners()
+        corners = [camera.world_to_screen(c).totuple() for c in corners]
+        pygame.draw.polygon(screen, self.color.to_rgb(), corners, self.line_width)
+
+class Line(GameObject):
+    def __init__(self, pos=vector2d(0, 0), length=100, color=Color.white(), visible=True, name="line", thickness=2, rotation=0):
+        super().__init__(name)
+        self.pos = pos
+        self.length = length
+        self.color = color
+        self.visible = visible
+        self.thickness = thickness
+        self.rotation = rotation
+
+    def get_corners(self):
+        hl = self.length / 2
+        corners = [
+            vector2d(0, hl),
+            vector2d(0, -hl)
+        ]
+        corners = [rotate(corner, self.rotation) for corner in corners]
+        corners = [corner + self.pos for corner in corners]
+        return corners
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+
+        corners = self.get_corners()
+        corners = [camera.world_to_screen(c).totuple() for c in corners]
+        pygame.draw.polygon(screen, self.color.to_rgb(), corners, self.thickness)
+
+class Polygon(GameObject):
+    def __init__(self, pos=vector2d(0, 0), vertices=None, color=Color.white(), visible=True, name="polygon", rotation=0):
+        if vertices is None:
+            vertices = [vector2d(0, 0), vector2d(0, 100), vector2d(100, 0)]
+
+        super().__init__(name)
+        self.pos = pos
+        self.vertices = vertices
+        self.color = color
+        self.visible = visible
+        self.rotation = 100
+
+    def get_corners(self):
+        corners = [rotate(vertex, self.rotation) + self.pos for vertex in self.vertices]
+        return corners
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+        corners = self.get_corners()
+        corners = [camera.world_to_screen(corner).totuple() for corner in corners]
+        pygame.draw.polygon(screen, self.color.to_rgb(), corners)
+
+class Ellipse(GameObject):
+    def __init__(self, center, width, height, color=Color.white(), visible=True, name="ellipse", rotation=0, num_points=36):
+        super().__init__(name)
+        self.center = center
+        self.width = width
+        self.height = height
+        self.color = color
+        self.visible = visible
+        self.rotation = rotation  # in degrees
+        self.num_points = num_points  # controls smoothness
+
+    def get_corners(self):
+        # return points approximating the rotated ellipse
+        cx, cy = self.center.x, self.center.y
+        angle_rad = math.radians(self.rotation)
+        points = []
+
+        for i in range(self.num_points):
+            t = (2 * math.pi / self.num_points) * i
+            x = cx + (self.width / 2) * math.cos(t)
+            y = cy + (self.height / 2) * math.sin(t)
+            xr = cx + (x - cx) * math.cos(angle_rad) - (y - cy) * math.sin(angle_rad)
+            yr = cy + (x - cx) * math.sin(angle_rad) + (y - cy) * math.cos(angle_rad)
+
+            points.append(vector2d(xr, yr))
+
+        return points
+
+    def draw(self, screen, camera: Camera):
+        if not self.visible:
+            return
+        corners = [camera.world_to_screen(corner).totuple() for corner in self.get_corners()]
+        pygame.draw.polygon(screen, self.color.to_rgb(), corners)
