@@ -1,0 +1,12 @@
+tedit/__init__.py,sha256=gIqz9Dedz8VcMH8P4qqPdN2_WTwjX63d10Pwt0cdmO4,50
+tedit/__main__.py,sha256=_ArRM8gFtzMaigmfsGlkcmd2FDdXQF1tcuuFUxslY8I,477
+tedit/_pip_only.py,sha256=nUGiCgG6XaFOUsRrcUSkukWBE5Hmw-sVGWw9wNtGJa0,620
+tedit/app.py,sha256=NMS-ys28hJGBnbfPYPEuu6NwhImE7t_G3ZEG5uW2kHU,71530
+tedit-0.9.1.dist-info/licenses/LICENSE.txt,sha256=5T_YLQHkAx957j3ncOxebi20Cv8ntyef_QYv3vTH1qI,3492
+tedit-0.9.1.dist-info/licenses/licenses/LICENSE_BSD.txt,sha256=RkjhMAqOCVpO3He_yYLiYnWHHb39yGCMf5KCBWt7mB8,1284
+tedit-0.9.1.dist-info/licenses/licenses/LICENSE_PSF.txt,sha256=spOd_Ugtn2n1GX85KuAJWyWf4LLN5bGmakSFQ2o00mg,2439
+tedit-0.9.1.dist-info/METADATA,sha256=57Nb_jf5wLqA5VW7o8klzWnMFgHgmr_3mplLWiOKQfg,835
+tedit-0.9.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tedit-0.9.1.dist-info/entry_points.txt,sha256=RlO0246QVRlcX4b28hP4Lqxv5GeM3AuT0ISAbwBXnhs,71
+tedit-0.9.1.dist-info/top_level.txt,sha256=dXV1pNgcbN0GSIxaCc37U6q0Tq_da041Gu5Op6WWzXA,6
+tedit-0.9.1.dist-info/RECORD,,
