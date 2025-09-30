@@ -1,0 +1,6 @@
+
+[dev]
+build
+virtualenv
+setuptools-scm
+twine

@@ -1,0 +1,49 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=63",
+  "wheel",
+  "setuptools-scm"
+]
+
+[project]
+authors = [
+  {name = "Raul Viera-Mercado", email = "vieramercado1@llnl.gov"}
+]
+license = "MIT"
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Environment :: Console"
+]
+
+dependencies = []
+
+name = "raul_python_test"
+description = "Raul's Python Test project"
+dynamic = ["version"]
+keywords = ["test", "alpha"]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/vieramercado/test-python"
+Repository = "https://github.com/vieramercado/test-python.git"
+
+[project.optional-dependencies]
+dev = ["build", "virtualenv", "setuptools-scm", "twine"]
+
+[project.scripts]
+raul-python-test = "test_python.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src" ]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml"]
+
+[tool.setuptools_scm]
+version_file = "src/test_python/_version.py"
+local_scheme = "no-local-version"

@@ -1,0 +1,17 @@
+.gitignore
+Dockerfile
+README.md
+build.sh
+pyproject.toml
+run.sh
+.github/workflows/docker-image.yml
+.github/workflows/python-publish.yml
+src/raul_python_test.egg-info/PKG-INFO
+src/raul_python_test.egg-info/SOURCES.txt
+src/raul_python_test.egg-info/dependency_links.txt
+src/raul_python_test.egg-info/entry_points.txt
+src/raul_python_test.egg-info/requires.txt
+src/raul_python_test.egg-info/top_level.txt
+src/test_python/__init__.py
+src/test_python/_version.py
+src/test_python/main.py
