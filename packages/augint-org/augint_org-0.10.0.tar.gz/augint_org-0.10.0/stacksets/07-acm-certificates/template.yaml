@@ -1,0 +1,160 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: ACM wildcard certificates with automatic DNS validation
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: The base domain name for the certificate (e.g., "org.aillc.link")
+    Default: placeholder  # Default for manual StackSet creation
+    AllowedPattern: '^[a-z0-9.-]+$'
+    ConstraintDescription: Must be a valid domain name without wildcard prefix
+
+  HostedZoneId:
+    Type: String
+    Description: Route53 Hosted Zone ID for DNS validation (optional - will auto-discover if blank)
+    Default: ''
+
+  Region:
+    Type: String
+    Default: us-east-1
+    Description: Region for the certificate (CloudFront requires us-east-1)
+    AllowedValues:
+      - us-east-1
+      - us-west-2
+
+Conditions:
+  AutoDiscoverZone: !Equals [!Ref HostedZoneId, '']
+
+Resources:
+  # Lambda role for zone discovery
+  ZoneDiscoveryRole:
+    Type: AWS::IAM::Role
+    Condition: AutoDiscoverZone
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: Route53Access
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - route53:ListHostedZones
+                  - route53:ListHostedZonesByName
+                  - route53:GetHostedZone
+                Resource: '*'
+
+  # Lambda function for zone discovery
+  ZoneDiscoveryFunction:
+    Type: AWS::Lambda::Function
+    Condition: AutoDiscoverZone
+    Properties:
+      FunctionName: !Sub 'ACMZoneDiscovery-${AWS::StackName}'
+      Handler: index.handler
+      Role: !GetAtt ZoneDiscoveryRole.Arn
+      Runtime: python3.11
+      Timeout: 30
+      Code:
+        ZipFile: |
+          import json
+          import boto3
+          import cfnresponse
+
+          def handler(event, context):
+              try:
+                  if event['RequestType'] == 'Delete':
+                      cfnresponse.send(event, context, cfnresponse.SUCCESS, {})
+                      return
+
+                  domain = event['ResourceProperties']['DomainName']
+                  route53 = boto3.client('route53')
+
+                  # Find the zone
+                  response = route53.list_hosted_zones_by_name(DNSName=domain)
+
+                  zone_id = None
+                  # Look for exact match first
+                  for zone in response['HostedZones']:
+                      zone_name = zone['Name'].rstrip('.')
+                      if zone_name == domain or domain.endswith('.' + zone_name):
+                          zone_id = zone['Id'].split('/')[-1]
+                          break
+
+                  if not zone_id:
+                      raise Exception(f"No hosted zone found for domain {domain}")
+
+                  cfnresponse.send(event, context, cfnresponse.SUCCESS, {'ZoneId': zone_id})
+
+              except Exception as e:
+                  print(f"Error: {e}")
+                  cfnresponse.send(event, context, cfnresponse.FAILED, {}, str(e))
+
+  # Custom resource to discover zone
+  ZoneDiscovery:
+    Type: Custom::ZoneDiscovery
+    Condition: AutoDiscoverZone
+    Properties:
+      ServiceToken: !GetAtt ZoneDiscoveryFunction.Arn
+      DomainName: !Ref DomainName
+
+  # The ACM Certificate (covers both apex and wildcard)
+  Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName  # e.g., org.aillc.link
+      SubjectAlternativeNames:
+        - !Sub '*.${DomainName}'  # e.g., *.org.aillc.link
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        # Only ONE entry needed - ACM uses the same validation record for both apex and wildcard
+        - DomainName: !Ref DomainName
+          HostedZoneId: !If
+            - AutoDiscoverZone
+            - !GetAtt ZoneDiscovery.ZoneId
+            - !Ref HostedZoneId
+      Tags:
+        - Key: ManagedBy
+          Value: ai-org
+        - Key: Purpose
+          Value: SSL/TLS Certificate
+        - Key: Domain
+          Value: !Ref DomainName
+
+Outputs:
+  CertificateArn:
+    Description: ARN of the ACM certificate
+    Value: !Ref Certificate
+    Export:
+      Name: AccountCertArn
+
+  DomainName:
+    Description: Base domain name for the certificate
+    Value: !Ref DomainName
+    Export:
+      Name: !Sub '${AWS::StackName}-domain'
+
+  WildcardDomain:
+    Description: Wildcard domain covered by the certificate
+    Value: !Sub '*.${DomainName}'
+    Export:
+      Name: !Sub '${AWS::StackName}-wildcard'
+
+  CertificateRegion:
+    Description: Region where the certificate was created
+    Value: !Ref AWS::Region
+    Export:
+      Name: AccountCertRegion
+
+  ValidationStatus:
+    Description: Certificate validation status
+    Value: DNS validation configured - check ACM console for status
+    Export:
+      Name: !Sub '${AWS::StackName}-validation-status'
