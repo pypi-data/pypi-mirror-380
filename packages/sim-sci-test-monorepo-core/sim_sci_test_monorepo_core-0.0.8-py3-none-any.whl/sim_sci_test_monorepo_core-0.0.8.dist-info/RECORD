@@ -1,0 +1,8 @@
+sim_sci_test_monorepo/__init__.py,sha256=L6gM7Bc3u7NJU5d2lx1nkcCtWdsTq_mHwPh5yqb34Q4,84
+sim_sci_test_monorepo/core/__init__.py,sha256=6DPbBxqT8-qxR2y6h-Z-vYN8dDUtmqcdF2BOQ_7AMjk,175
+sim_sci_test_monorepo/core/_version.py,sha256=j-ar4gJGiWIawqKXhvv9hGJWLfwu0tISl-0GV97B7a0,704
+sim_sci_test_monorepo/core/utils.py,sha256=PaVHSRsJfGUsMfsmLpqEjK5uvKC7DyYl6qBHEMnXtxQ,383
+sim_sci_test_monorepo_core-0.0.8.dist-info/METADATA,sha256=70yKAW6KS54HB1dNeKut16mpixtswpwOkwbjDOrhVH0,1156
+sim_sci_test_monorepo_core-0.0.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sim_sci_test_monorepo_core-0.0.8.dist-info/top_level.txt,sha256=Vtekmvie7XmdG-Eg655QkZtJul6TUn-5hjKM2alD3C4,22
+sim_sci_test_monorepo_core-0.0.8.dist-info/RECORD,,
