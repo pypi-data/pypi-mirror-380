@@ -1,0 +1,3 @@
+[console_scripts]
+donnes-des-sous-kyllian = donnes_des_sous_kyllian:main
+
