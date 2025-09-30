@@ -1,0 +1,13 @@
+veyra/__init__.py,sha256=S_6ajeS6ZYdXZqqCBsgiZ7QFCtwqFR0rcnj25kO4KN8,433
+veyra/cli.py,sha256=QrEKJNofsy8F1iUOhhknr-VbbOPWnamHfBCkm96oT_8,2753
+veyra/interpreter.py,sha256=fS5OPmOYRxG9S3or_8TerC8oaOL7uy3VKwav0-Ikr-o,21181
+veyra/lexer.py,sha256=a5LQTWd53gdDdemuSL9B_jy4-rVNEiUQqQvTfrBpO5w,7049
+veyra/parser.py,sha256=TfplikhCNVunl1ergSCJT1FcSqFHgH1qKBZb5z67xBE,21300
+veyra/pm.py,sha256=cYc1f79EO22YhJ590x9Wu-qjcvkumzsZhLLKbEiBDLE,2430
+veyra/lib/math.veyra,sha256=nFVOGQ5R19HEVXz5Lj_IBckyhJQHQJCUWR5js4eXe5w,459
+veyra-0.2.0.dist-info/LICENSE,sha256=qERuoFWPiYEpLUp1ON022rJuWRTczr4sXP02YVy4SNQ,1075
+veyra-0.2.0.dist-info/METADATA,sha256=cxpWlWgZHhnbehpa6j-R4S1RpgSntToZn-K462V63Mw,5466
+veyra-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+veyra-0.2.0.dist-info/entry_points.txt,sha256=78oIEksJ0J2Eb-99v10yGSu56MNmmkf0MGdytYIVQ0E,42
+veyra-0.2.0.dist-info/top_level.txt,sha256=oCLE48P4qcEIu84lKETRJK57qj88XVEJG9eaxqXsIFs,6
+veyra-0.2.0.dist-info/RECORD,,
