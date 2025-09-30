@@ -1,0 +1,23 @@
+[project]
+name = "FastIoC"
+version = "0.1.0"
+description = "IoC/DI container for FastAPI with automatic type-based dependency injection"
+authors = [
+    {name = "Amir R. Aliakbari (@OpenMindAmir)", email = "OpenMindAmir@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "typeguard>=4.4.4",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.20",
+    "mkdocstrings[python]>=0.30.1",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+]
