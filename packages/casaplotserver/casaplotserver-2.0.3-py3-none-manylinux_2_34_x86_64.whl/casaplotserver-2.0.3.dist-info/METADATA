@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: casaplotserver
+Version: 2.0.3
+Home-page: https://open-bitbucket.nrao.edu/projects/CASA/repos/casaplotserver/browse
+Download-URL: https://casa.nrao.edu/download/
+Author: CASA development team
+Author-email: casa-feedback@nrao.edu
+Maintainer: Darrell Schiebel
+Maintainer-email: drs@nrao.edu
+License: GNU Library or Lesser General Public License (LGPL)
+Requires-Dist: grpcio
+Requires-Dist: protobuf
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
