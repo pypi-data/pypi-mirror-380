@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: tianxiadatong_qq_robot
+Version: 0.1.9
+Summary: tianxiadatong_qq_robot SDK
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: sentry-sdk==0.10.2
+Requires-Dist: websockets==15.0.1
+Requires-Dist: aiohttp==3.12.15
+Requires-Dist: cryptography==46.0.1
+Requires-Dist: uvicorn==0.35.0
+Requires-Dist: requests==2.32.5
+Requires-Dist: psutil==7.1.0
+Requires-Dist: APScheduler==3.11.0
+Requires-Dist: pydantic==2.11.9
+Requires-Dist: esdk-obs-python==3.25.3
+Requires-Dist: fastapi==0.116.2
+Requires-Dist: aiofiles==24.1.0
+
+# QQ-Robot
+
+QQ 群机器人 SDK，支持 NapCat 协议、FastAPI 接口、OBS 云存储。
+
+## 安装
+```bash
+pip install tianxiadatong-qq-robot
+```
+
+## 快速开始
+```bash
+import tianxiadatong_qq_robot
+robot = tianxiadatong_qq_robot.qqApp()
+robot.init(host="0.0.0.0", port=8099)
+```
+
+## 配置
+运行目录下放置 config.json 即可。
+
+```bash
+{
+  "base_url": "localhost:8081",
+  "sentry_sdk_url": "http://af018d0bf71f4ab091aab4181d10a49d@10.7.115.88:9000/4",
+  "OBSConfig": {
+    "ENDPOINT": "xxxxxxxx",
+    "ACCESS_KEY": "xxxxxxxx",
+    "SECRET_KEY": "xxxxxxxx",
+    "BUCKET": "xxxxx"
+  }
+}
+```
