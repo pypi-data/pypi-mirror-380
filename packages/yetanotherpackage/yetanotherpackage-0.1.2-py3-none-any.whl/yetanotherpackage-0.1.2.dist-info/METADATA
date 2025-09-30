@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: yetanotherpackage
+Version: 0.1.2
+Summary: Add your description here
+Author: Namu
+Author-email: Namu <49788407+namuuu@users.noreply.github.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pytest>=8.4.2
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
