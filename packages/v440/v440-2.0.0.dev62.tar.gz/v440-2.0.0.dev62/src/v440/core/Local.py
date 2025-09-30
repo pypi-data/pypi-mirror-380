@@ -1,0 +1,45 @@
+from __future__ import annotations
+
+from typing import *
+
+import setdoc
+
+from v440._utils import utils
+from v440._utils.Digest import Digest
+from v440._utils.utils import guard
+from v440._utils.VList import VList
+
+__all__ = ["Local"]
+
+
+class Local(VList):
+    __slots__ = ()
+
+    data: tuple[int | str]
+    string: str
+
+    @classmethod
+    def _data_parse(cls: type, value: list) -> Iterable:
+        ans: tuple = tuple(map(utils.segment, value))
+        if None in ans:
+            raise ValueError
+        return ans
+
+    def _format(self: Self, format_spec: str) -> str:
+        if format_spec:
+            raise ValueError
+        return ".".join(map(str, self))
+
+    @classmethod
+    def _sort(cls: type, value: Any) -> tuple[bool, int | str]:
+        return type(value) is int, value
+
+    def _string_fset(self: Self, value: str) -> None:
+        if value == "":
+            return ()
+        v: str = value
+        if v.startswith("+"):
+            v = v[1:]
+        v = v.replace("_", ".")
+        v = v.replace("-", ".")
+        self.data = v.split(".")
