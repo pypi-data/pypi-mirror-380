@@ -1,0 +1,45 @@
+ipython --HistoryManager.hist_file=:memory:
+
+
+import asyncio
+import httpx
+from bs4 import BeautifulSoup
+
+headers = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+}
+---------------------------------------------------------------------
+Reset all git commits author name and email
+
+g config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+g config --local user.name "github-actions[bot]"
+git rebase -r --root --exec "git commit --amend --no-edit --reset-author"
+
+---------------------------------------------------------------------
+pgcli 'postgres://postgres:grabber_db@0.0.0.0:5432/grabber'
+
+
+---------------------------------------------------------------------
+Old repo
+github  git@gitlab.com:mazulol/grabber.git (fetch)
+github  git@gitlab.com:mazulol/grabber.git (push)
+
+
+---------------------------------------------------------------------
+Telegram
+
++1 520 645 4831
+desgraçamaldita
+
+Twitter
+usuallyvirtual0
+desgraçamaldita
+
+Instagram
+usuallygrabber
+@Caralhodesenha25041992
+
+TikTok
+usuallyvirtual0
+@Caralhodesenha25

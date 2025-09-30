@@ -1,0 +1,2 @@
+layout virtualenvwrapper <virtualenv_name>
+export UV_PROJECT_ENVIRONMENT=${VIRTUAL_ENV}

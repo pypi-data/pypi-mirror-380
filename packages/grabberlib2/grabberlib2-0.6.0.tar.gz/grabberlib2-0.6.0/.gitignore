@@ -1,0 +1,19 @@
+# Directories
+media/
+4khd
+__pycache__/
+.mypy_cache/
+dist/
+.venv
+storage/
+_local/
+files/
+.media/
+downloads
+
+# Files
+*.html
+.DS_Store
+.beta.app/
+.in
+.envrc
