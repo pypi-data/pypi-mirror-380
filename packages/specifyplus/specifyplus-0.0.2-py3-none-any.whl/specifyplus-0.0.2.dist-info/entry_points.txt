@@ -1,0 +1,3 @@
+[console_scripts]
+sp = specify_cli:main
+specifyplus = specify_cli:main
