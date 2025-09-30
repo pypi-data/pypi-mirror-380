@@ -1,0 +1,10 @@
+stravacz_mcp-1.0.0.dist-info/licenses/LICENSE,sha256=5yuNY6Xp7ni4mM9gBfHtFqXvS8AmNjdkG4vikoGrNIg,1065
+stravacz_mcp_server/__init__.py,sha256=o17eK8-e0vWipR3YBk-YJG1X2CQLwGckbZOXe5_84uI,229
+stravacz_mcp_server/server.py,sha256=AwufWKTtQPeMjyVnVkBBv0hJIs06jgXMHc5Y5eRLXf0,7504
+stravacz_mcp_server/server_http.py,sha256=b3xy0qBeuECssuWex4qzYa_hAY499-xnU5epZGqvEXk,8039
+stravacz_mcp_server/strava_client.py,sha256=ScPm8UaP76iQ6SPVkfHYSyeUi_A2s9tbVIfvfzF9KVc,7874
+stravacz_mcp-1.0.0.dist-info/METADATA,sha256=Fa9aX2IrDVPY5X8a8oVk0xOmR4OKHsCVFejEZ34rMK8,7093
+stravacz_mcp-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+stravacz_mcp-1.0.0.dist-info/entry_points.txt,sha256=PtKV4Q5Mb5QLWmAw5qEEZwffswmmeP2fuN-dWle-2Sw,129
+stravacz_mcp-1.0.0.dist-info/top_level.txt,sha256=hger0jfOMzPgn77yfELUJuuFqjQZKvxjJ8afS8LMZiM,20
+stravacz_mcp-1.0.0.dist-info/RECORD,,
