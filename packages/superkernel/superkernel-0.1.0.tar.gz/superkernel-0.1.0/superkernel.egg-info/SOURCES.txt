@@ -1,0 +1,7 @@
+setup.py
+superkernel/__init__.py
+superkernel/main.py
+superkernel.egg-info/PKG-INFO
+superkernel.egg-info/SOURCES.txt
+superkernel.egg-info/dependency_links.txt
+superkernel.egg-info/top_level.txt
