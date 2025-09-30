@@ -1,0 +1,2 @@
+[console_scripts]
+bids-mosaic = bidsmosaic.mosaic:main
