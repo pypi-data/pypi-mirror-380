@@ -1,0 +1,2 @@
+[console_scripts]
+astodojo = astodojo.cli:main
