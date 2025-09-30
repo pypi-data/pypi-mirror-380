@@ -1,0 +1,17 @@
+[project]
+name = "bullinv-api-client"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "websockets>=12.0",
+    "websocket-client>=1.7.0",
+]
+
+[project.scripts]
+bullinv-ws = "bullinv_api_client.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
