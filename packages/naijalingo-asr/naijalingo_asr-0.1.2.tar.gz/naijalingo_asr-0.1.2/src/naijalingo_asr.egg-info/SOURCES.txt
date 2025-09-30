@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/naijalingo_asr/__init__.py
+src/naijalingo_asr/audio.py
+src/naijalingo_asr/cli.py
+src/naijalingo_asr/engine.py
+src/naijalingo_asr/logging_utils.py
+src/naijalingo_asr/registry.py
+src/naijalingo_asr/transcriber.py
+src/naijalingo_asr.egg-info/PKG-INFO
+src/naijalingo_asr.egg-info/SOURCES.txt
+src/naijalingo_asr.egg-info/dependency_links.txt
+src/naijalingo_asr.egg-info/entry_points.txt
+src/naijalingo_asr.egg-info/requires.txt
+src/naijalingo_asr.egg-info/top_level.txt
+tests/test_transcribe.py
