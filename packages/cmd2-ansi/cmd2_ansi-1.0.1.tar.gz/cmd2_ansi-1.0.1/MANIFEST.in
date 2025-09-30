@@ -1,0 +1,7 @@
+include LICENSE README.md pyproject.toml ruff.toml
+recursive-include examples *
+recursive-include tests *
+prune .github
+prune build
+exclude .github .gitignore
+global-exclude htmlcov/** .coverage* __pycache__/** .gitignore
