@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mistql
+Version: 0.5.0b1
+Summary: Python implementation of MistQL query language
+Project-URL: Repository, https://github.com/evinism/mistql
+Project-URL: Issues, https://github.com/evinism/mistql/issues
+Author-email: Evin Sellin <evinism@gmail.com>
+Requires-Python: >=3.8.1
+Requires-Dist: json-lines<1.0.0,>=0.5.0
+Requires-Dist: lark<2.0.0,>=1.0.0
+Requires-Dist: typeguard<5.0.0,>=2.13.3
+Description-Content-Type: text/markdown
+
+# MistQL: Query language for JSON-like structures
+
+![mistql logo](https://www.mistql.com/assets/images/icon128-020f567a30894a6c26227dc6773d3406.png)
+
+MistQL is a miniature embeddable query language for JSON-like structures, built for embedding within applications. It supports logic for querying and manipulating JSON-like data in a simple, readable manner.
+
+For usage information, please visit [MistQL's doc site](https://www.mistql.com/)
