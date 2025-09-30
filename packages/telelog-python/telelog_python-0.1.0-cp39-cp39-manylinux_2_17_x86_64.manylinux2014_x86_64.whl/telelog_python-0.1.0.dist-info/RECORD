@@ -1,0 +1,5 @@
+telelog/__init__.py,sha256=XCpxFS28UpIzNW7h6wBe21WUHV5mERZgxF7g5oKTd30,269
+telelog/telelog.cpython-39-x86_64-linux-gnu.so,sha256=qVT1mDa94iVj4CKYjh3G6dPbLk18U10TIELLKIBjCD4,1162176
+telelog_python-0.1.0.dist-info/METADATA,sha256=6VFPMUODxI8iYCoT5A_mYzWDts-i87iBEiZ7szWEiDM,5125
+telelog_python-0.1.0.dist-info/WHEEL,sha256=6qFQrLWDCPaQU7OaQC_3iTmoUAMJ7VHgISF54rbNy98,127
+telelog_python-0.1.0.dist-info/RECORD,,
