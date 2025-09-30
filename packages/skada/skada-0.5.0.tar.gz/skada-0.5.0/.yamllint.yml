@@ -1,0 +1,8 @@
+extends: default
+
+ignore: |
+  .circleci/config.yml
+
+rules:
+  line-length: disable
+  document-start: disable
