@@ -1,0 +1,2 @@
+[console_scripts]
+weatherbot = weatherbot.cli:app
