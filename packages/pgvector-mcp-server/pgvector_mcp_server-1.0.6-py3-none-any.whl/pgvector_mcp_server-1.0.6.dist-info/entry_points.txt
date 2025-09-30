@@ -1,0 +1,2 @@
+[console_scripts]
+pgvector-mcp-server = pgvector_mcp_server.cli:main
