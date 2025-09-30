@@ -1,0 +1,7 @@
+fantasma
+habilidade
+labirinto
+pacman
+principal
+settings
+spritebase
