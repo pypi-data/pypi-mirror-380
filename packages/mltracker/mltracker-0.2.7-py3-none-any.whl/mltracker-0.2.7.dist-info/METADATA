@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: mltracker
+Version: 0.2.7
+Summary: A simple tool for tracking machine learning aggregates and storing their data.
+License: MIT
+License-File: LICENSE
+Author: entropy-flux
+Author-email: eric.hermosis@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Provides-Extra: tinydb
+Requires-Dist: attrs (>=25.3.0,<26.0.0)
+Requires-Dist: tinydb ; extra == "tinydb"
+Description-Content-Type: text/markdown
+
+# ml-tracker
+Machine learning model tracking. 
+
