@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: watermarker-tool
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.11
+Requires-Dist: pillow>=11.3.0
+Requires-Dist: pymupdf>=1.26.4
+Description-Content-Type: text/markdown
+
+Watermark
+=========
+
+Raster-flatten a PDF or image and overlay a repeated watermark.
+
+Usage
+-----
+
+- CLI once installed/in this repo:
+  - `python -m watermark --help`
+  - `watermark in.pdf out.pdf "Confidential"`
+  - `watermark --format jpeg --quality 85 --angle 40 in.pdf out.pdf "Sample"`
+
+- Programmatic API:
+  - `from watermark import raster_flatten_pdf_with_watermark, images_to_pdf_with_watermark`
+
+Notes
+-----
+
+- The legacy script `watermark_pdf.py` remains as a thin wrapper invoking the new package CLI for backward compatibility.
