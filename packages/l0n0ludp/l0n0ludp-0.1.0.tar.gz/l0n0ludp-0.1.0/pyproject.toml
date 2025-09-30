@@ -1,0 +1,11 @@
+[project]
+name = "l0n0ludp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pymonocypher>=4.0.2.5", "uvloop"]
+[project.scripts]
+l0n0ludptransserver = "l0n0ludp.远端UDP服务器:main"
+l0n0ludptransclient = "l0n0ludp.本地TCP服务器:main"
+l0n0ludpsocks5 = "l0n0ludp.SOCKS5服务器:main"
