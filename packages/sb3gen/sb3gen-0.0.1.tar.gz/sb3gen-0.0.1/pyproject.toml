@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling >= 1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sb3gen"
+version = "0.0.1"
+authors = [ { name= "thecoolcats", email="thecoolcats75@proton.me" }, ]
+description = "sb3 generation library"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "BSD-3-Clause"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://codeberg.org/thecoolcats/sb3gen"
+Issues = "https://codeberg.org/thecoolcats/sb3genissues"
