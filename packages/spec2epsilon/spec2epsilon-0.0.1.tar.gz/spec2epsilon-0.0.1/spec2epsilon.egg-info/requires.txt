@@ -1,0 +1,4 @@
+numpy<2.0,>=1.23
+pandas<2.0,>=1.5
+scipy
+streamlit[charts]

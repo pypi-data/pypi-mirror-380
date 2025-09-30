@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: spec2epsilon
+Version: 0.0.1
+Summary: Estimate dielectric constant from fluorescence spectra
+Author-email: Leonardo Evaristo de Sousa <ledso@dtu.dk>
+License: MIT
+Project-URL: Homepage, https://github.com/LeonardoESousa/spec2epsilon
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0,>=1.23
+Requires-Dist: pandas<2.0,>=1.5
+Requires-Dist: scipy
+Requires-Dist: streamlit[charts]
+Dynamic: license-file
+
+# spec2epsilon - Estimate dielectric constants from fluorescence spectra
+
+
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=plastic)](https://www.python.org/)
+[![maint](https://img.shields.io/maintenance/yes/2025?style=plastic)]()
+[![commit](https://img.shields.io/github/last-commit/LeonardoESousa/suscs?style=plastic)]()
+
+
+## How to install it?
+
+`pip install git+https://github.com/LeonardoESousa/spec2epsilon`
+
+## How to use it?
+
+Once installed, use the command:
+
+`spec2epsilon`
+
+The application will open in your browser.

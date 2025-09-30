@@ -1,0 +1,2 @@
+[console_scripts]
+spec2epsilon = spec2epsilon.__main__:main

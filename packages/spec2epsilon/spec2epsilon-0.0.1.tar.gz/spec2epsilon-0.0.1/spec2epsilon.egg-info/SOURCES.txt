@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+spec2epsilon/__init__.py
+spec2epsilon/__main__.py
+spec2epsilon/__version__.py
+spec2epsilon/api.py
+spec2epsilon/app.py
+spec2epsilon/load-mathjax.js
+spec2epsilon/visualization.py
+spec2epsilon.egg-info/PKG-INFO
+spec2epsilon.egg-info/SOURCES.txt
+spec2epsilon.egg-info/dependency_links.txt
+spec2epsilon.egg-info/entry_points.txt
+spec2epsilon.egg-info/requires.txt
+spec2epsilon.egg-info/top_level.txt
