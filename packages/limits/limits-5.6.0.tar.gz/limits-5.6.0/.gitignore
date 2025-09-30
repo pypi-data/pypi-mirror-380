@@ -1,0 +1,15 @@
+*.pyc
+*.log
+limits/_version.py
+cover/*
+.mypy_cache/*
+.coverage*
+.test_env
+.tool-versions
+.idea
+build/
+dist/
+htmlcov
+*egg-info*
+.python-version
+.*.swp
