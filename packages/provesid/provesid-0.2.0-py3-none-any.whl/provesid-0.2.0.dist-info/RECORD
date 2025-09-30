@@ -1,0 +1,17 @@
+provesid/__init__.py,sha256=MP4xAhujrB0cFXDLIWkELd92fZj8micuJ3h4kyawBvU,1076
+provesid/cache.py,sha256=Q9jlNCLs7lBqKmTtPZlyYapkzW0o01Wi0KmZ61dyMCw,13645
+provesid/cascommonchem.py,sha256=E7C9e68wqsJOeJAObyOICLoZ19yP6uMw-sCzpHbSmrQ,4444
+provesid/chebi.py,sha256=NLdkpgbrBDaYDt59Q81-c466R5L-cJYlgThReCWidEE,17716
+provesid/classyfire.py,sha256=HMFXXpd8Adgqd2590kr2akRi5UhUeoK1SVLCGhRZ_ac,4291
+provesid/opsin.py,sha256=iDxRzXOX5I7F2RmJlpqEEj7Sc6rALG9DnSSVepQ1020,2818
+provesid/pubchem.py,sha256=UyLG_6cXYG2KJ9etKCkfRWXp67bFLYbC7ftP5pcio7E,54603
+provesid/pubchemview.py,sha256=LUhAxW2Ak8visIe6aHT0g19PMYaRmnIlio7gW4S1kxE,51998
+provesid/resolver.py,sha256=3da45qDjXx17fZbOzxuYkiKzcJnOEsTeKcxbbm9AUXw,19600
+provesid/tools.py,sha256=EL1MXPrq_XkJ3cte-z6Olg5VPvwKF-ihqBDTJTf077g,7139
+provesid/utils.py,sha256=kbyyM1SCl9OqupddWHUDmmFa2_u31Fve8dttxVkKz-c,826
+provesid/data/commonchemistry-swagger.json,sha256=W_ugGWeJA4T5fZkHiPmCjU-HyK1sHka2jgfiRO25jug,8324
+provesid-0.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+provesid-0.2.0.dist-info/METADATA,sha256=HSrrbHvgG7AGNn7OZDtqw1T-Np6LvhSlaUAMBmJO-C4,9728
+provesid-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+provesid-0.2.0.dist-info/top_level.txt,sha256=q32_bSK_levxyG60IjtqoD_Snu-6Cbb06vNyAAeJY10,9
+provesid-0.2.0.dist-info/RECORD,,
