@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyghost"
+version = "1.0.1"
+authors = [
+    {name = "PyGhost Contributors", email = "pyghost@example.com"},
+]
+description = "A modern, comprehensive Python wrapper for Ghost Admin API with full CRUD support"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary",
+    "Topic :: Communications :: Email :: Mailing List Servers",
+    "Topic :: Text Processing :: Markup :: HTML",
+]
+keywords = ["ghost", "cms", "api", "blog", "publishing", "content-management", "webhooks", "themes", "members", "newsletters"]
+dependencies = [
+    "requests>=2.25.0",
+    "PyJWT>=2.4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/pyghost"
+Documentation = "https://github.com/your-username/pyghost#readme"
+Repository = "https://github.com/your-username/pyghost"
+"Bug Reports" = "https://github.com/your-username/pyghost/issues"
+Changelog = "https://github.com/your-username/pyghost/releases"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "flake8>=3.8.0",
+    "black>=21.0.0",
+    "mypy>=0.800",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyghost*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+pyghost = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

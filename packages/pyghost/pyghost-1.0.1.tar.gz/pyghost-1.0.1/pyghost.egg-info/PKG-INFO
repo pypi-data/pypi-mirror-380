@@ -1,0 +1,1108 @@
+Metadata-Version: 2.4
+Name: pyghost
+Version: 1.0.1
+Summary: A modern, comprehensive Python wrapper for Ghost Admin API with full CRUD support
+Home-page: https://github.com/your-username/pyghost
+Author: PyGhost Contributors
+Author-email: PyGhost Contributors <pyghost@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/your-username/pyghost
+Project-URL: Documentation, https://github.com/your-username/pyghost#readme
+Project-URL: Repository, https://github.com/your-username/pyghost
+Project-URL: Bug Reports, https://github.com/your-username/pyghost/issues
+Project-URL: Changelog, https://github.com/your-username/pyghost/releases
+Keywords: ghost,cms,api,blog,publishing,content-management,webhooks,themes,members,newsletters
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary
+Classifier: Topic :: Communications :: Email :: Mailing List Servers
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: PyJWT>=2.4.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: flake8>=3.8.0; extra == "dev"
+Requires-Dist: black>=21.0.0; extra == "dev"
+Requires-Dist: mypy>=0.800; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# PyGhost 🚀
+
+A modern, modular Python wrapper for the Ghost Admin API. PyGhost makes it incredibly easy to interact with your Ghost CMS programmatically.
+
+## Features ✨
+
+- **Simple & Intuitive**: Easy-to-use API with clear method names
+- **Modular Design**: Feature-based modules for better organization
+- **Complete API Coverage**: Posts, Pages, Tiers, Newsletters, Offers, Members, Users, Images, Themes, and Webhooks
+- **Full CRUD Operations**: Create, read, update, delete for all content types
+- **Flexible Content**: Support for both Lexical JSON and HTML content
+- **Subscription Management**: Complete tier and pricing management
+- **Newsletter Configuration**: Email styling and sender management
+- **Discount Offers**: Promotional codes and discount management
+- **Member Management**: Subscriber CRUD operations and subscription tracking
+- **User Administration**: Site staff and author management with roles
+- **Image Upload**: Multipart file uploads and media management
+- **Theme Management**: Theme upload, activation, and validation
+- **Webhook Integration**: Event-driven webhook management and monitoring
+- **Tag & Author Management**: Easy handling of tags and authors
+- **Robust Error Handling**: Comprehensive exception handling
+- **JWT Authentication**: Secure token-based authentication
+- **Type Hints**: Full typing support for better development experience
+- **Type Safety**: Comprehensive enums for all fixed options with IDE autocompletion
+- **Sphinx Documentation**: Auto-generated API documentation support
+
+## Installation 📦
+
+```bash
+pip install -r requirements.txt
+```
+
+## Quick Start 🚀
+
+```python
+from pyghost import GhostClient
+
+# Initialize the client
+client = GhostClient(
+    site_url="https://your-site.ghost.io",
+    admin_api_key="your_admin_key:your_secret"
+)
+
+# Create a new post with type-safe enums
+from pyghost.enums import PostStatus, ContentType
+
+post = client.posts.create(
+    title="My First Post",
+    html="<p>Hello, World!</p>",
+    status=PostStatus.PUBLISHED,
+    content_type=ContentType.HTML,
+    tags=["python", "ghost", "api"]
+)
+
+# Create a page
+page = client.pages.create(
+    title="About Us",
+    html="<h1>About Our Company</h1><p>We are...</p>",
+    slug="about"
+)
+
+# Create a subscription tier with type-safe enums
+from pyghost.enums import Currency, TierVisibility
+
+tier = client.tiers.create(
+    name="Premium Plan",
+    monthly_price=999,  # $9.99 in cents
+    yearly_price=9999,  # $99.99 in cents
+    currency=Currency.USD,
+    visibility=TierVisibility.PUBLIC,
+    benefits=["Access to all content", "Priority support"]
+)
+
+# Create a member (subscriber)
+member = client.members.create(
+    email="subscriber@example.com",
+    name="John Subscriber",
+    labels=["VIP", "Newsletter"]
+)
+
+# Upload an image
+image_result = client.images.upload("path/to/image.jpg")
+
+print(f"Created post: {post['title']}, member: {member['name']}, image: {image_result['url']}")
+```
+
+## Type-Safe Enums 🔒
+
+PyGhost provides comprehensive enums for all fixed options, ensuring type safety and preventing typos:
+
+```python
+from pyghost.enums import (
+    PostStatus, PageStatus, ContentType,
+    OfferType, OfferDuration, OfferStatus,
+    NewsletterStatus, NewsletterVisibility,
+    TierVisibility, Currency,
+    WebhookEvent, WebhookStatus,
+    MemberStatus, UserRole, UserStatus
+)
+
+# Create content with type-safe enums
+post = client.posts.create(
+    title="My Blog Post",
+    html="<p>Content here</p>",
+    status=PostStatus.PUBLISHED,
+    content_type=ContentType.HTML
+)
+
+# Create offers with enums
+offer = client.offers.create(
+    name="Black Friday Sale",
+    code="BLACKFRIDAY50",
+    type=OfferType.PERCENT,
+    amount=50,
+    duration=OfferDuration.ONCE,
+    tier="premium-tier-id"
+)
+
+# Create newsletters with enums
+newsletter = client.newsletters.create(
+    name="Weekly Updates",
+    status=NewsletterStatus.ACTIVE,
+    visibility=NewsletterVisibility.MEMBERS
+)
+
+# Create tiers with currency enums
+tier = client.tiers.create(
+    name="Pro Plan",
+    monthly_price=1999,  # $19.99
+    currency=Currency.USD,
+    visibility=TierVisibility.PUBLIC
+)
+
+# Create webhooks with event enums
+webhook = client.webhooks.create(
+    event=WebhookEvent.POST_PUBLISHED,
+    target_url="https://example.com/webhook"
+)
+
+# Filter users by role
+editors = client.users.get_editors()
+authors = client.users.get_authors()
+
+# Filter members by status
+paid_members = client.members.get_paid_members()
+free_members = client.members.get_free_members()
+```
+
+### Available Enums
+
+- **PostStatus**: `DRAFT`, `PUBLISHED`, `SCHEDULED`, `SENT`
+- **PageStatus**: `DRAFT`, `PUBLISHED`, `SCHEDULED`
+- **ContentType**: `LEXICAL`, `HTML`
+- **OfferType**: `PERCENT`, `FIXED`
+- **OfferDuration**: `ONCE`, `FOREVER`, `REPEATING`
+- **NewsletterStatus**: `ACTIVE`, `ARCHIVED`
+- **TierVisibility**: `PUBLIC`, `NONE`
+- **WebhookEvent**: `POST_ADDED`, `POST_DELETED`, `POST_PUBLISHED`, etc.
+- **MemberStatus**: `FREE`, `PAID`, `COMPED`
+- **UserRole**: `OWNER`, `ADMINISTRATOR`, `EDITOR`, `AUTHOR`, `CONTRIBUTOR`
+- **Currency**: `USD`, `EUR`, `GBP`, `CAD`, `AUD`, etc.
+
+## Authentication 🔐
+
+To use PyGhost, you need a Ghost Admin API key:
+
+1. Go to your Ghost Admin panel
+2. Navigate to **Settings** → **Integrations**
+3. Create a new **Custom Integration**
+4. Copy the **Admin API Key**
+
+The API key format is: `key_id:secret_hex_string`
+
+```python
+client = GhostClient(
+    site_url="https://your-ghost-site.com",
+    admin_api_key="507f1f77bcf86cd799439011:3c5416c8b27c4e71ba2e1a2ac9c8f4d7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3"
+)
+```
+
+## API Reference 📚
+
+### Posts Module
+
+The Posts module handles blog post management with full CRUD operations, publishing, and scheduling.
+
+#### Creating Posts
+
+**Basic Post Creation:**
+```python
+# Create a draft post with Lexical content
+post = client.posts.create(
+    title="My New Post",
+    content='{"root":{"children":[...]}}',  # Lexical JSON
+    content_type="lexical"
+)
+
+# Create a post with HTML content
+post = client.posts.create(
+    title="HTML Post",
+    content="<p>Hello, <strong>World!</strong></p>",
+    content_type="html",
+    status="published"
+)
+```
+
+**Advanced Post Creation:**
+```python
+post = client.posts.create(
+    title="Advanced Post",
+    content="Post content here...",
+    content_type="lexical",
+    status="published",
+    tags=["tutorial", "python"],
+    authors=["author@example.com"],
+    excerpt="This is a great post about PyGhost",
+    featured=True,
+    feature_image="https://example.com/image.jpg",
+    meta_title="SEO Title",
+    meta_description="SEO description"
+)
+```
+
+#### Reading Posts
+
+```python
+# Get a specific post by ID
+post = client.posts.get("post_id_here")
+
+# Get a post by slug
+post = client.posts.get_by_slug("my-post-slug")
+
+# List all posts
+posts = client.posts.list()
+
+# List with filtering and pagination
+posts = client.posts.list(
+    limit=10,
+    page=1,
+    filter_="status:published",
+    include="tags,authors",
+    order="published_at desc"
+)
+```
+
+#### Updating Posts
+
+```python
+# Get the current post to get updated_at timestamp
+current_post = client.posts.get("post_id")
+
+# Update the post
+updated_post = client.posts.update(
+    post_id="post_id",
+    updated_at=current_post["updated_at"],
+    title="New Title",
+    content="Updated content...",
+    tags=["updated", "post"]
+)
+```
+
+#### Publishing & Scheduling
+
+```python
+# Publish a post immediately
+client.posts.publish("post_id", updated_at)
+
+# Schedule a post for later
+from datetime import datetime, timedelta
+future_date = datetime.now() + timedelta(days=1)
+client.posts.schedule("post_id", updated_at, future_date)
+
+# Unpublish a post (revert to draft)
+client.posts.unpublish("post_id", updated_at)
+```
+
+#### Deleting Posts
+
+```python
+# Delete a post permanently
+client.posts.delete("post_id")
+```
+
+### Pages Module
+
+The Pages module manages static pages with similar functionality to posts.
+
+#### Creating Pages
+
+```python
+# Create a basic page
+page = client.pages.create(
+    title="About Us",
+    html="<h1>About Our Company</h1><p>We are a leading...</p>",
+    slug="about",
+    meta_title="About Us - Company Information",
+    meta_description="Learn more about our company"
+)
+
+# Create a page with custom settings
+page = client.pages.create(
+    title="Privacy Policy",
+    html="<h1>Privacy Policy</h1><p>Your privacy is important...</p>",
+    slug="privacy",
+    featured=True,
+    visibility="public"
+)
+```
+
+#### Managing Pages
+
+```python
+# List all pages
+pages = client.pages.list()
+
+# Get a specific page
+page = client.pages.get("page_id")
+page = client.pages.get_by_slug("about")
+
+# Update a page
+updated_page = client.pages.update(
+    page_id="page_id",
+    title="Updated About Us",
+    updated_at=page["updated_at"]
+)
+
+# Publish/unpublish pages
+client.pages.publish("page_id")
+client.pages.unpublish("page_id")
+```
+
+### Tiers Module
+
+The Tiers module manages subscription tiers and pricing.
+
+#### Creating Tiers
+
+```python
+# Create a basic paid tier
+tier = client.tiers.create(
+    name="Premium Plan",
+    description="Perfect for professionals",
+    monthly_price=1999,  # $19.99 in cents
+    yearly_price=19999,  # $199.99 in cents
+    currency="usd",
+    benefits=[
+        "Access to all premium content",
+        "Priority support",
+        "Monthly video calls"
+    ]
+)
+
+# Create a free tier
+free_tier = client.tiers.create(
+    name="Free Membership",
+    description="Get started for free",
+    monthly_price=0,
+    yearly_price=0,
+    currency="usd",
+    benefits=["Access to free posts"],
+    type="free"
+)
+```
+
+#### Managing Tiers
+
+```python
+# List all tiers
+tiers = client.tiers.list()
+
+# Get active tiers only
+active_tiers = client.tiers.get_active_tiers()
+
+# Update tier pricing
+updated_tier = client.tiers.update(
+    tier_id="tier_id",
+    monthly_price=2499,  # Increase to $24.99
+    benefits=[
+        "Everything in previous version",
+        "New premium feature"
+    ]
+)
+
+# Archive/activate tiers
+client.tiers.archive("tier_id")
+client.tiers.activate("tier_id")
+```
+
+### Newsletters Module
+
+The Newsletters module manages email newsletter configuration and styling.
+
+#### Creating Newsletters
+
+```python
+# Create a newsletter with custom styling
+newsletter = client.newsletters.create(
+    name="Weekly Digest",
+    description="Our weekly roundup of content",
+    sender_name="Editorial Team",
+    sender_reply_to="newsletter",
+    title_font_category="serif",
+    title_alignment="center",
+    show_badge=False,
+    subscribe_on_signup=True
+)
+
+# Create a minimal newsletter
+minimal_newsletter = client.newsletters.create(
+    name="Product Updates",
+    description="Important product announcements",
+    sender_name="Product Team",
+    show_header_icon=False,
+    show_feature_image=False,
+    subscribe_on_signup=False
+)
+```
+
+#### Managing Newsletters
+
+```python
+# List newsletters
+newsletters = client.newsletters.list()
+active_newsletters = client.newsletters.get_active_newsletters()
+
+# Update newsletter styling
+updated_newsletter = client.newsletters.update(
+    newsletter_id="newsletter_id",
+    title_alignment="left",
+    body_font_category="sans_serif",
+    footer_content="<p>Thanks for reading!</p>"
+)
+
+# Archive/activate newsletters
+client.newsletters.archive("newsletter_id")
+client.newsletters.activate("newsletter_id")
+```
+
+### Offers Module
+
+The Offers module manages discount offers and promotional codes.
+
+#### Creating Offers
+
+```python
+# Create a percentage discount
+percent_offer = client.offers.create(
+    name="Black Friday Sale",
+    code="BLACKFRIDAY2024",
+    display_title="50% Off Annual Plans",
+    display_description="Limited time - 50% off all annual subscriptions",
+    type="percent",
+    amount=50,  # 50% discount
+    duration="once",  # Apply to first payment only
+    tier_id="tier_id",
+    cadence="year"
+)
+
+# Create a fixed amount discount
+fixed_offer = client.offers.create(
+    name="Welcome Bonus",
+    code="WELCOME10",
+    display_title="$10 Off Your First Month",
+    display_description="New customer special offer",
+    type="fixed",
+    amount=1000,  # $10.00 in cents
+    duration="once",
+    tier_id="tier_id",
+    cadence="month",
+    currency="usd"
+)
+```
+
+#### Managing Offers
+
+```python
+# List offers
+offers = client.offers.list(include="tier")
+active_offers = client.offers.get_active_offers()
+
+# Get offer by code
+offer = client.offers.get_by_code("BLACKFRIDAY2024")
+
+# Update offer
+updated_offer = client.offers.update(
+    offer_id="offer_id",
+    display_title="Extended: 50% Off!",
+    amount=60  # Increase discount to 60%
+)
+
+# Calculate discount
+calculation = client.offers.calculate_discount(offer, 2999)  # $29.99
+print(f"Final price: ${calculation['final_price']/100:.2f}")
+
+# Generate offer URL
+offer_url = client.offers.generate_offer_url("BLACKFRIDAY2024", "https://mysite.com")
+```
+
+### Members Module
+
+The Members module manages subscribers and their relationships with newsletters, tiers, and labels.
+
+#### Creating Members
+
+```python
+# Create a basic member
+member = client.members.create(
+    email="subscriber@example.com",
+    name="John Subscriber"
+)
+
+# Create a member with labels and newsletter subscriptions
+advanced_member = client.members.create(
+    email="premium@example.com",
+    name="Premium Subscriber",
+    note="VIP customer from email campaign",
+    labels=["VIP", "Premium", "Newsletter"],
+    newsletters=["newsletter_id_1", "newsletter_id_2"],
+    tiers=["tier_id_1"]
+)
+```
+
+#### Managing Members
+
+```python
+# List all members
+members = client.members.list()
+
+# Get members with filtering
+paid_members = client.members.list(
+    filter_="status:paid",
+    include="newsletters,tiers",
+    order="created_at desc"
+)
+
+# Get a specific member
+member = client.members.get("member_id", include="labels,newsletters")
+member = client.members.get_by_email("subscriber@example.com")
+
+# Update member information
+updated_member = client.members.update(
+    member_id="member_id",
+    name="Updated Name",
+    note="Updated customer status",
+    labels=["Premium", "Updated"]
+)
+```
+
+#### Label Management
+
+```python
+# Add labels to a member (preserves existing labels)
+client.members.add_labels("member_id", ["New Label", "Another Label"])
+
+# Remove specific labels
+client.members.remove_labels("member_id", ["Old Label", "Expired"])
+
+# Get members by label
+vip_members = client.members.get_members_by_label("VIP")
+```
+
+#### Newsletter Subscriptions
+
+```python
+# Subscribe to additional newsletters
+client.members.subscribe_to_newsletters(
+    "member_id", 
+    ["newsletter_id_1", "newsletter_id_2"]
+)
+
+# Unsubscribe from newsletters
+client.members.unsubscribe_from_newsletters(
+    "member_id", 
+    ["newsletter_id_1"]
+)
+```
+
+#### Member Analytics
+
+```python
+# Get member statistics
+stats = client.members.get_member_statistics()
+print(f"Total: {stats['total']}, Paid: {stats['paid']}, Free: {stats['free']}")
+
+# Get different member types
+paid_members = client.members.get_paid_members(include="tiers")
+free_members = client.members.get_free_members()
+```
+
+### Users Module
+
+The Users module manages site staff and authors (different from members/subscribers).
+
+#### Managing User Profiles
+
+```python
+# List all users
+users = client.users.list(include="count.posts,roles")
+
+# Get a specific user
+user = client.users.get("user_id", include="count.posts,roles")
+user = client.users.get_by_email("author@example.com")
+user = client.users.get_by_slug("author-slug")
+
+# Update user profile
+updated_user = client.users.update(
+    user_id="user_id",
+    name="John Author",
+    bio="Senior content writer with 5 years experience",
+    website="https://johnauthor.com",
+    location="San Francisco, CA",
+    twitter="@johnauthor",
+    meta_title="John Author - Technical Writer",
+    meta_description="Experienced technical writer and content creator"
+)
+```
+
+#### Role-Based User Management
+
+```python
+# Get users by role
+owners = client.users.get_owners()
+administrators = client.users.get_administrators()
+editors = client.users.get_editors()
+authors = client.users.get_authors(include="count.posts")
+contributors = client.users.get_contributors()
+
+# Get available roles
+roles = client.users.get_user_roles()
+for role in roles:
+    print(f"Role: {role['name']} - {role['description']}")
+
+# Get user permissions
+permissions = client.users.get_user_permissions("user_id")
+```
+
+#### Notification Settings
+
+```python
+# Update notification preferences
+client.users.update_notification_settings(
+    "user_id",
+    comment_notifications=True,
+    mention_notifications=True,
+    milestone_notifications=False,
+    free_member_signup_notification=True,
+    paid_subscription_started_notification=True
+)
+```
+
+#### User Analytics
+
+```python
+# Get user statistics
+stats = client.users.get_user_statistics()
+print(f"Total Users: {stats['total']}, Authors: {stats['authors']}")
+
+# Get active users
+active_users = client.users.get_active_users()
+```
+
+### Images Module
+
+The Images module handles file uploads and media management.
+
+#### Basic Image Upload
+
+```python
+# Upload from file path
+result = client.images.upload("/path/to/image.jpg")
+print(f"Image URL: {result['url']}")
+print(f"Reference: {result['ref']}")
+
+# Upload from file object
+with open("image.png", "rb") as f:
+    result = client.images.upload(f, "image.png")
+```
+
+#### Advanced Upload Features
+
+```python
+# Upload multiple images
+image_paths = ["/path/to/image1.jpg", "/path/to/image2.png"]
+results = client.images.upload_multiple(image_paths)
+
+# Upload from URL
+result = client.images.upload_from_url(
+    "https://example.com/image.jpg",
+    "my-image.jpg"
+)
+
+# Upload without validation (use with caution)
+result = client.images.upload("image.jpg", validate=False)
+```
+
+#### Image Validation
+
+```python
+# Validate a single image
+is_valid = client.images.validate_image_path("/path/to/image.jpg")
+
+# Get detailed image information
+info = client.images.get_image_info("/path/to/image.jpg")
+print(f"Size: {info['size_mb']} MB, Format: {info['format']}")
+print(f"Dimensions: {info['width']}x{info['height']}")
+print(f"Supported: {info['is_supported']}")
+
+# Batch validation
+files = ["/path/to/image1.jpg", "/path/to/image2.png"]
+results = client.images.batch_validate(files)
+print(f"Valid: {results['valid_count']}, Invalid: {results['invalid_count']}")
+```
+
+#### Supported Formats
+
+```python
+# Supported image formats
+supported_formats = client.images.SUPPORTED_FORMATS
+print(f"Supported formats: {', '.join(sorted(supported_formats))}")
+
+# Maximum file size
+max_size_mb = client.images.MAX_FILE_SIZE / (1024 * 1024)
+print(f"Maximum file size: {max_size_mb} MB")
+```
+
+### Themes Module
+
+The Themes module handles Ghost theme upload, activation, and management.
+
+#### Theme Upload and Activation
+
+```python
+# Upload a theme from file path
+uploaded_theme = client.themes.upload_from_file(
+    "/path/to/my-theme.zip",
+    activate=True  # Activate immediately after upload
+)
+
+# Upload from file object
+with open("theme.zip", "rb") as theme_file:
+    theme = client.themes.upload_from_file_object(theme_file)
+
+# Activate an uploaded theme
+activated_theme = client.themes.activate("theme-name")
+```
+
+#### Theme Validation
+
+```python
+# Validate theme structure before upload
+validation = client.themes.validate_theme_structure("/path/to/theme.zip")
+print(f"Valid: {validation['valid']}")
+print(f"Templates: {len(validation['templates'])}")
+
+# Get theme information
+info = client.themes.get_theme_info("/path/to/theme.zip")
+print(f"Name: {info['name']}")
+print(f"Version: {info['version']}")
+print(f"Description: {info['description']}")
+
+# Check supported formats
+formats = client.themes.get_supported_formats()
+is_valid = client.themes.validate_theme_format("theme.zip")
+```
+
+### Webhooks Module
+
+The Webhooks module manages event-driven webhooks for real-time integrations.
+
+#### Creating Webhooks
+
+```python
+# Create a basic webhook
+webhook = client.webhooks.create(
+    event="post.published",
+    target_url="https://example.com/webhook",
+    name="Post Publication Hook"
+)
+
+# Create webhook with security
+secure_webhook = client.webhooks.create(
+    event="member.added",
+    target_url="https://example.com/new-member",
+    name="New Member Webhook",
+    secret="your-secret-key",
+    api_version="v5.0"
+)
+
+# Use convenience methods
+post_hook = client.webhooks.create_post_webhook(
+    "https://example.com/post-hook",
+    event="post.edited"
+)
+
+member_hook = client.webhooks.create_member_webhook(
+    "https://example.com/member-hook"
+)
+```
+
+#### Managing Webhooks
+
+```python
+# List all webhooks
+webhooks = client.webhooks.list()
+
+# Get specific webhook
+webhook = client.webhooks.get("webhook_id")
+
+# Update webhook
+updated = client.webhooks.update(
+    webhook_id="webhook_id",
+    target_url="https://new-endpoint.com/webhook",
+    name="Updated Webhook Name"
+)
+
+# Delete webhook
+success = client.webhooks.delete("webhook_id")
+
+# Bulk delete webhooks
+results = client.webhooks.bulk_delete_webhooks([
+    "webhook_id_1", "webhook_id_2"
+])
+```
+
+#### Webhook Events and Monitoring
+
+```python
+# Get available events
+events = client.webhooks.get_webhook_events()
+print(f"Available events: {', '.join(events)}")
+
+# Validate event types
+is_valid = client.webhooks.validate_webhook_event("post.published")
+
+# Get webhooks by event
+post_webhooks = client.webhooks.get_webhooks_by_event("post.published")
+
+# Get webhook statistics
+stats = client.webhooks.get_webhook_statistics()
+print(f"Total: {stats['total']}, Active: {stats['active']}")
+
+# Get active webhooks only
+active = client.webhooks.get_active_webhooks()
+```
+
+## Working with Tags and Authors 🏷️
+
+### Tags
+```python
+# Using tag names (will create tags if they don't exist)
+post = client.posts.create(
+    title="Tagged Post",
+    tags=["python", "tutorial", "beginner"]
+)
+
+# Using tag objects for more control
+post = client.posts.create(
+    title="Tagged Post",
+    tags=[
+        {"name": "python", "description": "Python programming"},
+        {"name": "#internal"}  # Hidden tag
+    ]
+)
+```
+
+### Authors
+```python
+# Using author emails
+post = client.posts.create(
+    title="Multi-Author Post",
+    authors=["author1@example.com", "author2@example.com"]
+)
+
+# Using author IDs
+post = client.posts.create(
+    title="Post by ID",
+    authors=[
+        {"id": "author_id_1"},
+        {"id": "author_id_2"}
+    ]
+)
+```
+
+## Error Handling 🛡️
+
+PyGhost provides specific exception types for different error scenarios:
+
+```python
+from pyghost import GhostClient
+from pyghost.exceptions import (
+    GhostAPIError,
+    AuthenticationError,
+    ValidationError,
+    NotFoundError,
+    RateLimitError
+)
+
+try:
+    client = GhostClient(site_url="...", admin_api_key="...")
+    post = client.posts.create(title="Test Post")
+    
+except AuthenticationError as e:
+    print(f"Authentication failed: {e}")
+    
+except ValidationError as e:
+    print(f"Validation error: {e}")
+    
+except NotFoundError as e:
+    print(f"Resource not found: {e}")
+    
+except RateLimitError as e:
+    print(f"Rate limit exceeded: {e}")
+    
+except GhostAPIError as e:
+    print(f"API error: {e}")
+```
+
+## Content Formats 📝
+
+### Lexical JSON Format
+Ghost's modern content format. You can create Lexical content programmatically:
+
+```python
+lexical_content = {
+    "root": {
+        "children": [
+            {
+                "children": [
+                    {
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Hello, World!",
+                        "type": "extended-text",
+                        "version": 1
+                    }
+                ],
+                "direction": "ltr",
+                "format": "",
+                "indent": 0,
+                "type": "paragraph",
+                "version": 1
+            }
+        ],
+        "direction": "ltr",
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+    }
+}
+
+post = client.posts.create(
+    title="Lexical Post",
+    content=json.dumps(lexical_content),
+    content_type="lexical"
+)
+```
+
+### HTML Format
+For traditional HTML content:
+
+```python
+post = client.posts.create(
+    title="HTML Post",
+    content="<p>Hello, <strong>World!</strong></p>",
+    content_type="html"
+)
+```
+
+## Examples 💡
+
+Check out the `examples/` directory for comprehensive examples:
+
+- **basic_usage.py**: Simple post creation and management
+- **bulk_operations.py**: Working with multiple posts efficiently
+- **pages_usage.py**: Complete pages management examples
+- **tiers_usage.py**: Subscription tier and pricing examples
+- **newsletters_usage.py**: Newsletter configuration and styling
+- **offers_usage.py**: Discount offers and promotional codes
+- **members_usage.py**: Member management and subscription tracking
+- **users_usage.py**: User profile and role management examples
+- **images_usage.py**: Image upload and media management examples
+- **themes_usage.py**: Theme upload, validation, and management examples
+- **webhooks_usage.py**: Webhook creation, monitoring, and event handling
+
+Each example file includes:
+- Basic CRUD operations
+- Advanced features and utilities
+- Error handling best practices
+- Cleanup procedures
+- Production usage tips
+
+## API Limitations ⚠️
+
+- JWT tokens expire after 5 minutes (handled automatically)
+- Rate limiting applies (usually 500 requests per hour)
+- Some operations require specific permissions
+- `updated_at` timestamp is required for updates to prevent conflicts
+
+## Development 🔧
+
+### Setting Up Development Environment
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd pyghost
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install in development mode
+pip install -e .
+```
+
+### Running Tests
+
+```bash
+# Run tests (when available)
+python -m pytest tests/
+
+# Run with coverage
+python -m pytest tests/ --cov=pyghost
+```
+
+## Contributing 🤝
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support 💬
+
+- **Documentation**: [Ghost Admin API Docs](https://docs.ghost.org/admin-api/)
+- **Issues**: [GitHub Issues](https://github.com/your-username/pyghost/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/your-username/pyghost/discussions)
+
+## Roadmap 🗺️
+
+- [x] Posts API support ✅
+- [x] Pages API support ✅
+- [x] Tiers API support ✅
+- [x] Newsletters API support ✅
+- [x] Offers API support ✅
+- [x] Members API support ✅
+- [x] Users and roles API ✅
+- [x] Image upload support ✅
+- [x] Themes API support ✅
+- [x] Webhooks API support ✅
+- [ ] Site settings API
+- [ ] Tags API support
+- [ ] Bulk operations optimization
+- [ ] Async/await support
+- [ ] CLI tool
+- [ ] Enhanced testing suite
+
+---
+
+Made with ❤️ for the Ghost community
