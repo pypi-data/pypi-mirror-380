@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: webscrapehelper
+Version: 0.1.0
+Summary: Playwright helper to capture manual browsing sessions and save page HTML snapshots.
+License-Expression: MIT
+Keywords: playwright,web-scraping,automation,browser,session-recording
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: playwright>=1.45.0
+Provides-Extra: dev
+Requires-Dist: build>=1.2.1; extra == "dev"
+Requires-Dist: twine>=5.0.0; extra == "dev"
+Dynamic: license-file
+
+# Webscrapehelper
+
+A lightweight Playwright helper that opens a headed browser and records the HTML source (plus metadata) for each page you visit until the browser window is closed.
+
+## Features
+- Launches Chromium (or another Playwright browser) in headed mode so you can browse manually.
+- Collects page HTML, title, URL, HTTP status, and file size whenever the main frame navigates.
+- Saves snapshots to disk (`session_log.jsonl` + individual `.html` files) and keeps an in-memory list for immediate post-run use.
+- Returns a `SessionResult` with helpers such as `.html_list` and `.html_snapshots`.
+- Optional callback hook so your code can react to each captured event in real time.
+- Lets you write HTML files to a custom directory via `html_output_dir`.
+
+## Requirements
+- Python 3.9+
+- Playwright (`pip install playwright` and run `playwright install` once to fetch browser binaries).
+
+## Local installation
+```bash
+pip install -e .
+playwright install
+```
+
+## Quick start
+```python
+import asyncio
+from webscrapehelper import SessionRecorder
+
+async def main():
+    recorder = SessionRecorder(output_dir="session_data", headless=False)
+    result = await recorder.run()
+    print(f"Captured {len(result.html_list)} snapshots")
+    if result.html_list:
+        first_html = result.html_list[0]
+        print(first_html[:200])  # preview
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+Browse as usual; the script exits after you close the Playwright browser. Captured snapshots live in `session_data/`, and the returned `SessionResult` keeps the HTML in memory. To persist the HTML elsewhere, pass `html_output_dir="C:/some/folder"` when creating the recorder.
+
+See `examples/record_session.py` for a slightly richer example that logs each event.
