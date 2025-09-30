@@ -1,0 +1,30 @@
+[project]
+name = "etrip"
+authors = [
+  { name="Matthijs Brouwer", email="matthijs.brouwer@wur.nl" },
+]
+description = "Easy Tracking of Rhythms in Plants"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+dynamic = ["dependencies","version"]
+classifiers = [
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+
+[build-system]
+requires = [
+    "read_version[toml] ~= 0.3.0",
+    "setuptools >= 42.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.read_version]
+version = "src.etrip._version:__version__"
+
