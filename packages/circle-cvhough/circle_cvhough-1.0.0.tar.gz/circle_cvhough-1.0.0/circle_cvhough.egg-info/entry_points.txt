@@ -1,0 +1,2 @@
+[console_scripts]
+cvhough-detect = cvhough_sdk:main
