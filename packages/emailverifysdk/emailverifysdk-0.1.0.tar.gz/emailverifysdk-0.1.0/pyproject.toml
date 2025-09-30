@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emailverifysdk"
+version = "0.1.0"
+description = "EmailVerify.io Python SDK"
+readme = "README.md"
+authors = [{ name = "EmailVerify.io", email = "support@emailverify.io" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["email verification", "batch verification", "emailverify", "emailverify.io", "email finder"]
+dependencies = ["requests >= 2.22.0"]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://app.emailverify.io"
+Repository = "https://github.com/Clustox/emailverify-python"
+Documentation = "https://www.emailverify.io/api/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+emailverify = ["py.typed"]

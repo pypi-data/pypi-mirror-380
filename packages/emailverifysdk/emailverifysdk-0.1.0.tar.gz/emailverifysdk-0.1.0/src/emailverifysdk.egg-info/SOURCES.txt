@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/emailverifysdk/__init__.py
+src/emailverifysdk/emailverifysdk.py
+src/emailverifysdk/exceptions.py
+src/emailverifysdk/responses.py
+src/emailverifysdk.egg-info/PKG-INFO
+src/emailverifysdk.egg-info/SOURCES.txt
+src/emailverifysdk.egg-info/dependency_links.txt
+src/emailverifysdk.egg-info/requires.txt
+src/emailverifysdk.egg-info/top_level.txt
+tests/test_emailverify.py
