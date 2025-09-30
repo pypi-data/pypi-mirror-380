@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beatstrike"
+version = "0.1.2"
+description = "Um jogo de ritmo inspirado em Guitar Hero e StepMania"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Francisco Wedson", email = "wedson.business@gmail.com" }
+]
+dependencies = [
+    "pygame>=2.6.1"
+]
+
+[project.scripts]
+beatstrike = "beatstrike.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+beatstrike = ["assets/*", "assets/**/*"]

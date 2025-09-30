@@ -1,0 +1,802 @@
+README.md
+pyproject.toml
+src/beatstrike/__init__.py
+src/beatstrike/animation.py
+src/beatstrike/bg_select.py
+src/beatstrike/button.py
+src/beatstrike/char_select.py
+src/beatstrike/fade_out.py
+src/beatstrike/game.py
+src/beatstrike/main.py
+src/beatstrike/menu.py
+src/beatstrike/music_select.py
+src/beatstrike/options.py
+src/beatstrike/player_select.py
+src/beatstrike/renderer.py
+src/beatstrike/score_screen.py
+src/beatstrike.egg-info/PKG-INFO
+src/beatstrike.egg-info/SOURCES.txt
+src/beatstrike.egg-info/dependency_links.txt
+src/beatstrike.egg-info/entry_points.txt
+src/beatstrike.egg-info/requires.txt
+src/beatstrike.egg-info/top_level.txt
+src/beatstrike/assets/__init__.py
+src/beatstrike/assets/backgrounds/blue city/frame_00_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_01_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_02_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_03_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_04_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_05_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_06_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_07_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_08_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_09_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_10_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_11_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_12_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_13_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_14_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_15_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_16_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_17_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_18_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_19_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_20_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_21_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_22_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_23_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_24_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_25_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_26_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_27_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_28_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_29_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_30_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_31_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_32_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_33_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_34_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_35_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_36_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_37_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_38_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_39_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_40_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_41_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_42_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_43_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_44_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_45_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_46_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_47_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_48_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_49_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_50_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_51_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_52_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_53_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_54_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_55_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_56_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_57_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_58_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_59_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_60_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_61_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_62_delay-0.13s.png
+src/beatstrike/assets/backgrounds/blue city/frame_63_delay-0.13s.png
+src/beatstrike/assets/backgrounds/girl/frame_00_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_01_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_02_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_03_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_04_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_05_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_06_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_07_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_08_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_09_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_10_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_11_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_12_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_13_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_14_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_15_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_16_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_17_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_18_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_19_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_20_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_21_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_22_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_23_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_24_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_25_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_26_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_27_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_28_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_29_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_30_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_31_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_32_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_33_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_34_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_35_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_36_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_37_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_38_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_39_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_40_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_41_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_42_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_43_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_44_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_45_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_46_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_47_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_48_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_49_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_50_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_51_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_52_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_53_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_54_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_55_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_56_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_57_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_58_delay-0.08s.png
+src/beatstrike/assets/backgrounds/girl/frame_59_delay-0.08s.png
+src/beatstrike/assets/backgrounds/hell/frame_0_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_1_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_2_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_3_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_4_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_5_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_6_delay-0.1s.png
+src/beatstrike/assets/backgrounds/hell/frame_7_delay-0.1s.png
+src/beatstrike/assets/backgrounds/ranni/frame_00_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_01_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_02_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_03_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_04_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_05_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_06_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_07_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_08_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_09_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_10_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_11_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_12_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_13_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_14_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_15_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_16_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_17_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_18_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_19_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_20_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_21_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_22_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_23_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_24_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_25_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_26_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_27_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_28_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_29_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_30_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_31_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_32_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_33_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_34_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_35_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_36_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_37_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_38_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_39_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_40_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_41_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_42_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_43_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_44_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_45_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_46_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_47_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_48_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_49_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_50_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_51_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_52_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_53_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_54_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_55_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_56_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_57_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_58_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_59_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_60_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_61_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_62_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_63_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_64_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_65_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_66_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_67_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_68_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_69_delay-0.08s.png
+src/beatstrike/assets/backgrounds/ranni/frame_70_delay-0.09s.png
+src/beatstrike/assets/backgrounds/ranni/frame_71_delay-0.09s.png
+src/beatstrike/assets/backgrounds/rpg/frame_00_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_01_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_02_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_03_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_04_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_05_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_06_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_07_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_08_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_09_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_10_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_11_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_12_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_13_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_14_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_15_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_16_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_17_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_18_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_19_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_20_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_21_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_22_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_23_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_24_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_25_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_26_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_27_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_28_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_29_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_30_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_31_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_32_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_33_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_34_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_35_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_36_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_37_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_38_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_39_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_40_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_41_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_42_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_43_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_44_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_45_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_46_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_47_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_48_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_49_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_50_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_51_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_52_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_53_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_54_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_55_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_56_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_57_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_58_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_59_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_60_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_61_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_62_delay-0.1s.png
+src/beatstrike/assets/backgrounds/rpg/frame_63_delay-0.02s.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_000.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_001.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_002.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_003.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_004.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_005.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_006.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_007.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_008.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_009.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_010.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_011.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_012.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_013.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_014.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_015.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_016.png
+src/beatstrike/assets/characters_animation/beat/down/Beat_Casting Spells_017.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_000.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_001.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_002.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_003.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_004.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_005.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_006.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_007.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_008.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_009.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_010.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_011.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_012.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_013.png
+src/beatstrike/assets/characters_animation/beat/dying/Beat_Dying_014.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_000.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_001.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_002.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_003.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_004.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_005.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_006.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_007.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_008.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_009.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_010.png
+src/beatstrike/assets/characters_animation/beat/idle/Beat_Idle_011.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_000.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_001.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_002.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_003.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_004.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_005.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_006.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_007.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_008.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_009.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_010.png
+src/beatstrike/assets/characters_animation/beat/idle_blink/Beat_Idle Blinking_011.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_000.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_001.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_002.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_003.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_004.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_005.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_006.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_007.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_008.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_009.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_010.png
+src/beatstrike/assets/characters_animation/beat/left/Beat_Attack_011.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_000.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_001.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_002.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_003.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_004.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_005.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_006.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_007.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_008.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_009.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_010.png
+src/beatstrike/assets/characters_animation/beat/miss/Beat_Hurt_011.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_000.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_001.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_002.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_003.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_004.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_005.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_006.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_007.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_008.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_009.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_010.png
+src/beatstrike/assets/characters_animation/beat/right/Beat_Moving Forward_011.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_000.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_001.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_002.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_003.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_004.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_005.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_006.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_007.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_008.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_009.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_010.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_011.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_012.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_013.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_014.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_015.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_016.png
+src/beatstrike/assets/characters_animation/beat/up/Beat_Taunt_017.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_000.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_001.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_002.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_003.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_004.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_005.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_006.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_007.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_008.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_009.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_010.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_011.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_012.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_013.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_014.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_015.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_016.png
+src/beatstrike/assets/characters_animation/echo/down/Echo_Casting Spells_017.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_000.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_001.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_002.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_003.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_004.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_005.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_006.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_007.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_008.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_009.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_010.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_011.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_012.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_013.png
+src/beatstrike/assets/characters_animation/echo/dying/Echo_Dying_014.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_000.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_001.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_002.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_003.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_004.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_005.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_006.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_007.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_008.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_009.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_010.png
+src/beatstrike/assets/characters_animation/echo/idle/Echo_Idle_011.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_000.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_001.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_002.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_003.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_004.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_005.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_006.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_007.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_008.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_009.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_010.png
+src/beatstrike/assets/characters_animation/echo/idle_blink/Echo_Idle Blinking_011.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_000.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_001.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_002.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_003.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_004.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_005.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_006.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_007.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_008.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_009.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_010.png
+src/beatstrike/assets/characters_animation/echo/left/Echo_Attack_011.png
+src/beatstrike/assets/characters_animation/echo/locked/Echo_Locked.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_000.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_001.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_002.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_003.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_004.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_005.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_006.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_007.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_008.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_009.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_010.png
+src/beatstrike/assets/characters_animation/echo/miss/Echo_Hurt_011.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_000.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_001.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_002.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_003.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_004.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_005.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_006.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_007.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_008.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_009.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_010.png
+src/beatstrike/assets/characters_animation/echo/right/Echo_Moving Forward_011.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_000.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_001.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_002.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_003.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_004.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_005.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_006.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_007.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_008.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_009.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_010.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_011.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_012.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_013.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_014.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_015.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_016.png
+src/beatstrike/assets/characters_animation/echo/up/Echo_Taunt_017.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_000.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_001.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_002.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_003.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_004.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_005.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_006.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_007.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_008.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_009.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_010.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_011.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_012.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_013.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_014.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_015.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_016.png
+src/beatstrike/assets/characters_animation/pulse/down/Pulse_Casting Spells_017.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_000.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_001.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_002.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_003.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_004.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_005.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_006.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_007.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_008.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_009.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_010.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_011.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_012.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_013.png
+src/beatstrike/assets/characters_animation/pulse/dying/Pulse_Dying_014.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_000.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_001.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_002.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_003.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_004.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_005.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_006.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_007.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_008.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_009.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_010.png
+src/beatstrike/assets/characters_animation/pulse/idle/Pulse_Idle_011.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_000.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_001.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_002.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_003.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_004.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_005.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_006.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_007.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_008.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_009.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_010.png
+src/beatstrike/assets/characters_animation/pulse/idle_blink/Pulse_Idle Blinking_011.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_000.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_001.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_002.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_003.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_004.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_005.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_006.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_007.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_008.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_009.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_010.png
+src/beatstrike/assets/characters_animation/pulse/left/Pulse_Attack_011.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_000.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_001.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_002.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_003.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_004.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_005.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_006.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_007.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_008.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_009.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_010.png
+src/beatstrike/assets/characters_animation/pulse/miss/Pulse_Hurt_011.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_000.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_001.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_002.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_003.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_004.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_005.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_006.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_007.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_008.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_009.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_010.png
+src/beatstrike/assets/characters_animation/pulse/right/Pulse_Moving Forward_011.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_000.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_001.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_002.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_003.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_004.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_005.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_006.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_007.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_008.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_009.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_010.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_011.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_012.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_013.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_014.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_015.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_016.png
+src/beatstrike/assets/characters_animation/pulse/up/Pulse_Taunt_017.png
+src/beatstrike/assets/config/config.json
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_1.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_10.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_2.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_3.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_4.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_5.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_6.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_7.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_8.png
+src/beatstrike/assets/effects_animation/Explosion_5/Explosion_9.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_1.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_10.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_2.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_3.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_4.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_5.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_6.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_7.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_8.png
+src/beatstrike/assets/effects_animation/explosion/Explosion_9.png
+src/beatstrike/assets/effects_animation/lightning_holding/Lightning_1.png
+src/beatstrike/assets/effects_animation/lightning_holding/Lightning_2.png
+src/beatstrike/assets/effects_animation/lightning_holding/Lightning_3.png
+src/beatstrike/assets/effects_animation/lightning_holding/Lightning_4.png
+src/beatstrike/assets/fonts/Autumn Crush.ttf
+src/beatstrike/assets/fonts/BebasNeue-Regular.ttf
+src/beatstrike/assets/fonts/Bigbesty.ttf
+src/beatstrike/assets/fonts/Bing Bam Boum.ttf
+src/beatstrike/assets/fonts/Determination.ttf
+src/beatstrike/assets/fonts/HauntedHillRough-Rough.ttf
+src/beatstrike/assets/fonts/PressStart2P-Regular.ttf
+src/beatstrike/assets/fonts/Stencilia-A.ttf
+src/beatstrike/assets/fonts/Super Trend.ttf
+src/beatstrike/assets/fonts/The Melody.otf
+src/beatstrike/assets/fonts/m23.TTF
+src/beatstrike/assets/game/arrow_down.png
+src/beatstrike/assets/game/arrow_left.png
+src/beatstrike/assets/game/arrow_right.png
+src/beatstrike/assets/game/arrow_up.png
+src/beatstrike/assets/game/template.png
+src/beatstrike/assets/game/template_light.png
+src/beatstrike/assets/menu/background_menu/frame_00_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_01_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_02_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_03_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_04_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_05_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_06_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_07_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_08_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_09_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_10_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_11_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_12_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_13_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_14_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_15_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_16_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_17_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_18_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_19_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_20_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_21_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_22_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_23_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_24_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_25_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_26_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_27_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_28_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_29_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_30_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_31_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_32_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_33_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_34_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_35_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_36_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_37_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_38_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_39_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_40_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_41_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_42_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_43_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_44_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_45_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_46_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_47_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_48_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_49_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_50_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_51_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_52_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_53_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_54_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_55_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_56_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_57_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_58_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_59_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_60_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_61_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_62_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_63_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_64_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_65_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_66_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_67_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_68_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_69_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_70_delay-0.1s.png
+src/beatstrike/assets/menu/background_menu/frame_71_delay-0.05s.png
+src/beatstrike/assets/menu/bg_select/jogar_button_light.png
+src/beatstrike/assets/menu/bg_select/jogar_button_no_light.png
+src/beatstrike/assets/menu/bg_select/side_arrow.png
+src/beatstrike/assets/menu/bg_select/side_arrow_light.png
+src/beatstrike/assets/menu/buttons/jogar_button_light.png
+src/beatstrike/assets/menu/buttons/jogar_button_no_light.png
+src/beatstrike/assets/menu/buttons/loja_button_light.png
+src/beatstrike/assets/menu/buttons/loja_button_no_light.png
+src/beatstrike/assets/menu/buttons/opcoes_button_light.png
+src/beatstrike/assets/menu/buttons/opcoes_button_no_light.png
+src/beatstrike/assets/menu/buttons/sair_button_light.png
+src/beatstrike/assets/menu/buttons/sair_button_no_light.png
+src/beatstrike/assets/menu/buttons/voltar_off.png
+src/beatstrike/assets/menu/buttons/voltar_on.png
+src/beatstrike/assets/menu/char_select/selection_arrow_not.png
+src/beatstrike/assets/menu/char_select/selection_arrow_not_light.png
+src/beatstrike/assets/menu/char_select/selection_arrow_p1.png
+src/beatstrike/assets/menu/char_select/selection_arrow_p1_light.png
+src/beatstrike/assets/menu/char_select/selection_arrow_p2.png
+src/beatstrike/assets/menu/char_select/selection_arrow_p2_light.png
+src/beatstrike/assets/menu/char_select/side_arrow.png
+src/beatstrike/assets/menu/char_select/side_arrow_light.png
+src/beatstrike/assets/menu/logos/Beat_Strike - Copia.png:Zone.Identifier
+src/beatstrike/assets/menu/logos/Beat_Strike.png
+src/beatstrike/assets/menu/logos/Smash_Lemon.png
+src/beatstrike/assets/menu/music_select/music_info.json
+src/beatstrike/assets/menu/music_select/star.png
+src/beatstrike/assets/menu/music_select/star_empty.png
+src/beatstrike/assets/menu/music_select/All The Things She Said/All The Things She Said.jpg
+src/beatstrike/assets/menu/music_select/Amiga da Minha Mulher/Amiga da Minha Mulher.jpg
+src/beatstrike/assets/menu/music_select/Beat It/Beat It.png
+src/beatstrike/assets/menu/music_select/Enemy/Enemy.png
+src/beatstrike/assets/menu/music_select/Hohoemi no Bakudan/Hohoemi no Bakudan.png
+src/beatstrike/assets/menu/music_select/Ichirin no Hana/Ichirin no Hana.jpg
+src/beatstrike/assets/menu/music_select/Pompeii/Pompeii.png
+src/beatstrike/assets/menu/music_select/Rebel Yell/Rebel Yell.jpg
+src/beatstrike/assets/menu/music_select/Runaway (U & I)/Runaway (U & I).png
+src/beatstrike/assets/menu/player_select/Beat_player_select.png
+src/beatstrike/assets/menu/player_select/Echo_player_select.png
+src/beatstrike/assets/menu/player_select/Pulse_player_select.png
+src/beatstrike/assets/menu/player_select/vs_img_light.png
+src/beatstrike/assets/menu/player_select/vs_img_no_light.png
+src/beatstrike/assets/menu/score_screen/restart_button.png
+src/beatstrike/assets/menu/score_screen/return_button.png
+src/beatstrike/assets/music/game/All The Things She Said/All The Things She Said.json
+src/beatstrike/assets/music/game/All The Things She Said/All The Things She Said.ogg
+src/beatstrike/assets/music/game/Amiga da Minha Mulher/Amiga da Minha Mulher.json
+src/beatstrike/assets/music/game/Amiga da Minha Mulher/Amiga da Minha Mulher.ogg
+src/beatstrike/assets/music/game/Beat It/Beat It.json
+src/beatstrike/assets/music/game/Beat It/Beat It.ogg
+src/beatstrike/assets/music/game/Enemy/Enemy.json
+src/beatstrike/assets/music/game/Enemy/Enemy.ogg
+src/beatstrike/assets/music/game/Hohoemi no Bakudan/Hohoemi no Bakudan.json
+src/beatstrike/assets/music/game/Hohoemi no Bakudan/Hohoemi no Bakudan.ogg
+src/beatstrike/assets/music/game/Ichirin no Hana/Ichirin no Hana.json
+src/beatstrike/assets/music/game/Ichirin no Hana/Ichirin no Hana.ogg
+src/beatstrike/assets/music/game/Pompeii/Pompeii.json
+src/beatstrike/assets/music/game/Pompeii/Pompeii.ogg
+src/beatstrike/assets/music/game/Rebel Yell/Rebel Yell.json
+src/beatstrike/assets/music/game/Rebel Yell/Rebel Yell.ogg
+src/beatstrike/assets/music/game/Runaway (U & I)/Runaway (U & I).json
+src/beatstrike/assets/music/game/Runaway (U & I)/Runaway (U & I).ogg
+src/beatstrike/assets/music/menu/LupusNocte-Arcadewave.ogg
