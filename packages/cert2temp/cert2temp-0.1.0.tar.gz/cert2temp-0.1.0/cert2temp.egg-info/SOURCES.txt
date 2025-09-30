@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+cert2temp/__init__.py
+cert2temp/__version__.py
+cert2temp/ssl_utils.py
+cert2temp.egg-info/PKG-INFO
+cert2temp.egg-info/SOURCES.txt
+cert2temp.egg-info/dependency_links.txt
+cert2temp.egg-info/not-zip-safe
+cert2temp.egg-info/requires.txt
+cert2temp.egg-info/top_level.txt
+tests/test_ssl_utils.py

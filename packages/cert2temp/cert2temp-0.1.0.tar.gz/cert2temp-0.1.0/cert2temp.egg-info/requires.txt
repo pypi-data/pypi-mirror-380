@@ -1,0 +1,16 @@
+requests>=2.25.0
+certifi>=2020.12.5
+
+[curl]
+curl-cffi>=0.6.0
+
+[dev]
+pytest>=7.0
+pytest-cov
+black
+flake8
+mypy
+
+[test]
+pytest>=7.0
+pytest-cov
