@@ -1,0 +1,12 @@
+plastro/__init__.py,sha256=rtTlyOW8oRkl8F1gBMppm4KQiTWdvfEpJHajTNZH0Zo,2646
+plastro/lineage_simulation.py,sha256=qLLIPazFyQC2dwwqhj7Be3mJYOqDXOxhyBrvf_kAB_4,7506
+plastro/overlap.py,sha256=RkRXSLV31s9u7pmb79qiQ4u-pw-8B44S6jULL3RJuTI,22534
+plastro/overlap_archive.py,sha256=8FMe8wQwCame5WprUmujJm0JPCY7uVUomzCk44imIwQ,21924
+plastro/phenotype_simulation.py,sha256=FTGhyKNQbnfp3x3ulR6eBSetzoGhDCwf4Ffj02JmmJA,17944
+plastro/phylo.py,sha256=Dw0hCfQoqYC6cGhAdDjFfdhha_PDpYE1zXlUe3tO6jw,5483
+plastro/plasticity.py,sha256=AVC-lKPwqG_P1ybxMz0kuCpW7aarG5VYOo_CDH7Hqvc,28326
+plastro-0.1.2.dist-info/licenses/LICENSE,sha256=jILUyZnCBziWgMlPnkordJrxA-eacdmrHhHIhVflbYo,1069
+plastro-0.1.2.dist-info/METADATA,sha256=89wo0-o0zoIBu7IpXYgkizHW5uyl6A-f2LWnMplFtNQ,11035
+plastro-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+plastro-0.1.2.dist-info/top_level.txt,sha256=bJmWYVzaJvHRPNadJhbUvWxGJuPlT9xwZ1NpBst2HWI,8
+plastro-0.1.2.dist-info/RECORD,,
