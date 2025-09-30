@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "programasweights"
+version = "0.1.0"
+description = "ProgramAsWeights. [PLACEHOLDER - NOT YET FUNCTIONAL]"
+readme = "PYPI_README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "ProgramAsWeights", email = "support@programasweights.com" }
+]
+license = { text = "MIT" }
+keywords = ["nlp", "transformers", "runtime", "prefix-tuning", "neural-programs"]
+dependencies = [
+  "torch",
+  "transformers",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["programasweights"]
+exclude = ["programasweights/runtime", "programasweights/compiler", "programasweights/artifacts.py"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/programasweights/__init__.py", 
+  "/README.md",
+  "/MANIFEST.in",
+  "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = [
+  ".",
+] 
