@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+sct2df/__init__.py
+sct2df/parse.py
+sct2df.egg-info/PKG-INFO
+sct2df.egg-info/SOURCES.txt
+sct2df.egg-info/dependency_links.txt
+sct2df.egg-info/requires.txt
+sct2df.egg-info/top_level.txt
+tests/test_pyvisa.py
