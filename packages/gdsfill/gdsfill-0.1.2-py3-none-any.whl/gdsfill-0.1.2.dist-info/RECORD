@@ -1,0 +1,17 @@
+gdsfill/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdsfill/gdsfill.py,sha256=FSH_d7QCyG3mVGsryGxkMvnaB0VThCyBgYTwOJJ9ZQs,9041
+gdsfill/library/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdsfill/library/common.py,sha256=Gn04GBSdRf0LQqMIKruhyQip6HPiXOZjhxoLbp05D3g,6680
+gdsfill/library/fill.py,sha256=TaUuYH1A6JZvuYUiAgvKPaxxWeOrFC5b9y8FBjRj6_U,2563
+gdsfill/library/klayout.py,sha256=odOPB6xKCGbYdzsTDj38_b95YVpVzPc7qaIFrYqIvmQ,5362
+gdsfill/library/filler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdsfill/library/filler/helper.py,sha256=bKscK6QuEYs8zf_DQz8UaTwFJF-2dLQNZkgQ8t4WTwM,12929
+gdsfill/library/filler/overlap.py,sha256=6_P5Rhrr-HiEKx2FklZT0oajyIX6GcAKALCy-0zRgHo,8050
+gdsfill/library/filler/square.py,sha256=IqcNI-nIx3p6VSzBaaUyJBMDrL-0K-7aG5eBY-4xuZg,8838
+gdsfill/library/filler/track.py,sha256=TRGSpnKg2Kb8GZunQSfwoFNp_Wajmd4pLsJ4kVSCdVI,7912
+gdsfill-0.1.2.dist-info/licenses/LICENSE,sha256=kg_d0_lxICtFLwIBUhjvZOzwT3znSAvZXDKITtlLNuk,777
+gdsfill-0.1.2.dist-info/METADATA,sha256=29hQaNVwBmrUyp6GgkOuwyyz-Ef6UVVC7EOAhWhwHBc,3790
+gdsfill-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gdsfill-0.1.2.dist-info/entry_points.txt,sha256=Wla5GaaBcrWDWAbDIipvOhQa0h8_DuYQ4f-si2Xx75M,49
+gdsfill-0.1.2.dist-info/top_level.txt,sha256=d-Z6DGSv77MzHan0Kg0pmLABc_eLabas2q4AGnAsQtM,8
+gdsfill-0.1.2.dist-info/RECORD,,
