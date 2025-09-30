@@ -1,0 +1,44 @@
+[project]
+name = "timeplus-sqlglot"
+dynamic = ["version", "optional-dependencies"]
+description = "An easily customizable SQL parser and transpiler with Timeplus streaming SQL dialect support"
+readme = "README.md"
+authors = [{ name = "timeplus-yokofly", email = "haohang.shi@timeplus.io" }]
+maintainers = [{ name = "Timeplus Inc.", email = "eng@timeplus.com" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">= 3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: SQL",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://github.com/timeplus-io/sqlglot"
+Documentation = "https://github.com/timeplus-io/sqlglot/tree/main"
+Repository = "https://github.com/timeplus-io/sqlglot"
+Issues = "https://github.com/timeplus-io/sqlglot/issues"
+Organization = "https://pypi.org/user/timeplus/"
+
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools_scm]
+version_file = "sqlglot/_version.py"
+fallback_version = "0.1.0"
+local_scheme = "no-local-version"
+tag_regex = "^(?P<prefix>v)?(?P<version>[^\\+]+)(?P<suffix>.*)?$"
+
+[tool.setuptools.packages.find]
+include = ["sqlglot", "sqlglot.*"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
