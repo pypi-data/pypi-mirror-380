@@ -1,0 +1,146 @@
+Metadata-Version: 2.4
+Name: mango
+Version: 1.0.1
+Summary: Library with a collection of useful classes and methods to DRY
+Author-email: baobab soluciones <mango@baobabsoluciones.es>
+License: Apache Software License
+Project-URL: repository, https://github.com/baobabsoluciones/mango
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: certifi<2024.0.0,>=2023.7.22
+Requires-Dist: charset-normalizer<4.0.0,>=3.3.0
+Requires-Dist: et-xmlfile<2.0.0,>=1.1.0
+Requires-Dist: fastjsonschema<3.0.0,>=2.18.1
+Requires-Dist: idna<4.0.0,>=3.4
+Requires-Dist: numpy<2.0.0,>=1.24.4
+Requires-Dist: openpyxl<4.0.0,>=3.1.2
+Requires-Dist: pydantic<3.0.0,>=2.4.2
+Requires-Dist: python-dateutil<3.0.0,>=2.8.2
+Requires-Dist: pytups<1.0.0,>=0.86.2
+Requires-Dist: pytz<2024.0.0,>=2023.3.post1
+Requires-Dist: requests<3.0.0,>=2.31.0
+Requires-Dist: six<2.0.0,>=1.16.0
+Requires-Dist: tqdm<5.0.0,>=4.66.1
+Requires-Dist: urllib3<3.0.0,>=2.0.7
+Requires-Dist: XlsxWriter<4.0.0,>=3.1.9
+Requires-Dist: pandas<3.0.0,>=2.0.3
+Requires-Dist: polars<2.0.0,>=1.0.0
+Requires-Dist: scikit-learn<2.0.0,>=1.3.2
+Requires-Dist: pyomo<7.0.0,>=6.6.2
+Requires-Dist: tomli<3.0.0,>=2.0.1; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: coverage[toml]>=7.0; extra == "dev"
+Dynamic: license-file
+
+Mango
+------
+
+A comprehensive Python library providing essential tools for data processing, analysis, and machine learning workflows.
+
+Overview
+--------
+
+Mango is the core library that provides fundamental functionality for data manipulation, processing, and analysis. It serves as the foundation for the broader mango ecosystem of specialized libraries, offering a robust and flexible platform for data science and machine learning applications.
+
+Main Features
+-------------
+
+**Data Processing**
+- File handling for multiple formats (CSV, Excel, JSON)
+- Data imputation and cleaning utilities
+- Date and time manipulation functions
+- Object processing and validation tools
+
+**Data Management**
+- Table operations with pytups integration
+- Efficient data structures and tools
+- Data validation and quality checks
+- Flexible data transformation capabilities
+
+**External Integrations**
+- AEMET weather data client
+- ArcGIS geospatial services
+- REST API client utilities
+- Cloud storage integration (Google Cloud)
+
+**Machine Learning**
+- Neural network implementations
+- Model evaluation and benchmarking
+- Optimization algorithms and benchmarks
+
+**Utilities**
+- Comprehensive logging system
+- Configuration management
+- Exception handling and validation
+- Spatial and mathematical utilities
+
+Quick Start
+-----------
+
+.. code-block:: python
+
+   import mango
+   from mango.processing import DataProcessor
+   from mango.clients import AEMETClient
+   from mango.table import Table
+
+   # Initialize data processor
+   processor = DataProcessor()
+   
+   # Load and process data
+   data = processor.load_csv('data.csv')
+   cleaned_data = processor.clean_data(data)
+   
+   # Use external services
+   weather_client = AEMETClient()
+   weather_data = weather_client.get_weather_data()
+
+Installation
+------------
+
+**Using uv:**
+
+.. code-block:: bash
+
+   uv add mango
+
+**Using pip:**
+
+.. code-block:: bash
+
+   pip install mango
+
+Dependencies
+------------
+
+Core dependencies include numpy, pandas, and other essential data science libraries. Optional dependencies are available for specific functionality:
+
+- **models**: Pyomo for optimization
+- **dev**: Development and testing tools
+
+Documentation
+-------------
+
+Full documentation is available at: https://baobabsoluciones.github.io/mango/
+
+License
+-------
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Support
+-------
+
+For questions, issues, or contributions, please contact:
+
+- Email: mango@baobabsoluciones.es
+- Create an issue on the repository
+
+---
+
+Made with ❤️ by `baobab soluciones <https://baobabsoluciones.es/>`_
