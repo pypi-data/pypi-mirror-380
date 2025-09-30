@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: sgx.py
+Version: 0.11.dev0
+Summary: SGX
+Home-page: http://github.com/skalenetwork/sgx.py
+Author: SKALE Labs
+Author-email: support@skalelabs.com
+Requires-Python: >=3.11,<4
+License-File: LICENSE
+Requires-Dist: web3<8.0.0,>=6.20.2
+Requires-Dist: pyzmq==27.1.0
+Requires-Dist: pem==23.1.0
+Requires-Dist: cryptography<47.0.0,>=46.0.1
+Provides-Extra: linter
+Requires-Dist: ruff==0.13.2; extra == "linter"
+Provides-Extra: dev
+Requires-Dist: ruff==0.13.2; extra == "dev"
+Requires-Dist: coincurve==13.0.0; extra == "dev"
+Requires-Dist: python-dotenv==0.13.0; extra == "dev"
+Requires-Dist: twine==6.2.0; extra == "dev"
+Requires-Dist: pytest==8.4.2; extra == "dev"
+Requires-Dist: mock==5.2.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
