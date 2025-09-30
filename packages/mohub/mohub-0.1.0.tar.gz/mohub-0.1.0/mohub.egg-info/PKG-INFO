@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: mohub
+Version: 0.1.0
+Summary: A Python library named mohub
+Home-page: https://github.com/datamarkin/mohub
+Author: Emrah NAZIF
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/datamarkin/mohub
+Project-URL: Bug Tracker, https://github.com/datamarkin/mohub/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# mohub
+
+A dummy Python library named mohub.
+
+## Installation
+
+```bash
+pip install mohub
+```
+
+## Usage
+
+```python
+import mohub
+
+# Print version
+print(mohub.__version__)
+
+# Call the hello function
+print(mohub.hello())
+```
+
+## Features
+
+- Simple hello function
+- Lightweight and easy to use
+
+## License
+
+MIT License
