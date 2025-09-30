@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: xamppfixer
+Version: 1.0.1
+Summary: Automatic XAMPP fixer tool for Windows
+Home-page: https://github.com/sumitpoudelxyz/xamppfixer
+Author: Sumit Poudel
+Author-email: sumitpoudel79@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
