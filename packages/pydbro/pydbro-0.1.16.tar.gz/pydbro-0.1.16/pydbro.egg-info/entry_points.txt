@@ -1,0 +1,3 @@
+[console_scripts]
+coned = pydbro.coned:cli
+dbro = pydbro.dbro:cli
