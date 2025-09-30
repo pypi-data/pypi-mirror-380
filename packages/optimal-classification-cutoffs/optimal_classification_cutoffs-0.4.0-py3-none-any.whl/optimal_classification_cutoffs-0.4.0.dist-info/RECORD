@@ -1,0 +1,17 @@
+optimal_classification_cutoffs-0.4.0.dist-info/licenses/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+optimal_cutoffs/__init__.py,sha256=dN4XPlFKL4v2x9vJCcuDzyUbjoixXzSrEGdA0t03YqU,2636
+optimal_cutoffs/bayes.py,sha256=dxGeep_CoDzQQa-48fcTxFeKZ-g5EbxXHTEYVwJiwwc,7834
+optimal_cutoffs/cv.py,sha256=em1pvlpbdRGjfI5QaPwcWfgZKzwctX_cxL0b4rqosHs,5142
+optimal_cutoffs/expected.py,sha256=xHoEUb5GBg7mXAjgnEJia6llBDMrYWXrQNrcC1NWAKY,8938
+optimal_cutoffs/metrics.py,sha256=zufaNoi8JS9UNQikuaIP3AXEzYqOnvz4gjv-e5yXdUk,28034
+optimal_cutoffs/multiclass_coord.py,sha256=Tzy4Gz2WcSigwrRGA7wWKpgZuFhOzYhfxRv_4_XrsS4,10528
+optimal_cutoffs/optimizers.py,sha256=9PUfq6ec8lobsAzO6WmQ3tgMcIaC6lwbKBpboJqXDlc,41010
+optimal_cutoffs/piecewise.py,sha256=PIuoE8_xJbNsK2hIjW8BPiIOI4ycFNTRaYenwZA8AJ0,19467
+optimal_cutoffs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimal_cutoffs/types.py,sha256=-B-a4cpJKKenzFcH87Hv3aCUx8rARlLKY7PwziLTNQg,3442
+optimal_cutoffs/validation.py,sha256=58oDenHBg0eR4KOvRkwEWqDn56B4_OkBcjFdf0t9CGQ,9812
+optimal_cutoffs/wrapper.py,sha256=t75pAH6TZlelRs6VZh4YkGvJdJoOzc7HAVA1ZdaLkrA,9168
+optimal_classification_cutoffs-0.4.0.dist-info/METADATA,sha256=vul_kuCJv0Qz21shVRb3npNuvxuzzbAH_VlQHXpv3rM,9564
+optimal_classification_cutoffs-0.4.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+optimal_classification_cutoffs-0.4.0.dist-info/top_level.txt,sha256=Vjgzvn80t_BEJJZ1ERgMsXbrg_AYLIyPDoLwx9yFdpQ,16
+optimal_classification_cutoffs-0.4.0.dist-info/RECORD,,
