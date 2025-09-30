@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include word_tower/static *
+recursive-include word_tower/assets *
+recursive-include word_tower/app/assets *
