@@ -1,0 +1,17 @@
+API_KEY = {}
+CHAT_ID = {}
+
+# DO NOT USE THE CENTRAL CREDENTIALS UNLESS INSTRUCTED
+# CONFIGURE CHAT CREDENTIALS USING CONFIGURE APP THIS SUPPORTS MULTIPLE CHANNELS CONFIGURED BY THE DATABASE
+CENTRAL_API_KEY = '8481109877:AAETN0FpY3VCasrcyR1L1DAXBMujPTngpTM'
+CENTRAL_CHAT_ID = '-1002942849489'
+
+# CONFIGURE THE APIS HERE
+def configure_app(crm_id, key, chat_id, *args, **kw):
+    global API_KEY, CHAT_ID
+    API_KEY[crm_id] = key
+    CHAT_ID[crm_id] = chat_id
+
+
+def is_configured(crm_id):
+    return crm_id in API_KEY and crm_id in CHAT_ID
