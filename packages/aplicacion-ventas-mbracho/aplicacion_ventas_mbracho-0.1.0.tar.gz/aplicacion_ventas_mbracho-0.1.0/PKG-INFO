@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: aplicacion_ventas_mbracho
+Version: 0.1.0
+Summary: Paquete para ventas, precios, impuestos y descuentos
+Home-page: https://github.com/curso_python_camara/aplicacionventas
+Author: Miguel Angel Bracho Faria
+Author-email: bracho881@gmail.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Aplicacion de Ventas
+
+Este Paquete proporciona funcionalidades para gestionar
+ventas, incluyendo calculos de precios, impuestos y descuentos.
+
+## Instalacion
+
+Puedes Instalar el Paquete usando:
+
+```bash
+pip install.
+"
