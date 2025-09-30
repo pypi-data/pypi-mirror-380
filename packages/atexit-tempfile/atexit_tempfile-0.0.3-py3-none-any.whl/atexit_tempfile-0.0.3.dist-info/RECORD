@@ -1,0 +1,7 @@
+atexit_tempfile/__init__.py,sha256=oCwCAgRPDOfuVd59Dz22NMiu-Cmo6aPfIgax1JJZyd4,195
+atexit_tempfile/atexit_cleanup.py,sha256=VMqINqucBXfGB8BPmnVOh4ORFOclTRVKQq-ywJ87khM,2114
+atexit_tempfile/atexit_mkstemp.py,sha256=CYaa0hglbmMc-_yCU0dVWJBbwrWKTl8DcyAOHmIFMVs,1927
+atexit_tempfile-0.0.3.dist-info/METADATA,sha256=_qha9cXnV3Sm6qV1-5zczTDPCpbjsbujRbiOIry_mn8,2271
+atexit_tempfile-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+atexit_tempfile-0.0.3.dist-info/licenses/LICENSE,sha256=eevSsEfFifN4iRJiBdUQtxs0rfJ5-vM-jUuiQpGM790,1090
+atexit_tempfile-0.0.3.dist-info/RECORD,,
