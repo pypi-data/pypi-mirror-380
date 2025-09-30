@@ -1,0 +1,9 @@
+aiohttp
+asyncio_throttle
+tenacity
+rich
+pydantic
+pydantic-settings
+python-dotenv
+tiktoken
+click
