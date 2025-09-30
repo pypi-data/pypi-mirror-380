@@ -1,0 +1,13 @@
+wowool/native/core/wowool_sdk.cpp,sha256=8B-jM6wwlxA0ESibMrWUCoHlHWwW8K_XbmIJzm3BKgA,23468
+wowool/package/lib/_wowool_plugin.cpython-311-x86_64-linux-gnu.so,sha256=QAneVVnQSPU5mCwMM8AAGv4rgGXZ5p1M9tJq4GhzI8Q,12980153
+wowool/package/lib/_wowool_sdk.cpython-311-x86_64-linux-gnu.so,sha256=dCa3hJaa9oPSJgJC6cOYGadkeVL-dauLv9DRzMKTP-A,9280785
+wowool/plugin/wowool_plugin.cpp,sha256=P9_l7K0d_jHft7iZtlOpxduSiJOMF8bzlJf_UZOGukY,43488
+wowool/plugin/wowool_plugin.hpp,sha256=U8rEsazjbhUGvAfVD6-wpYskuBP9JijAa2LIjQHHZqA,4388
+wowool_sdk_cpp.libs/libicudata-06bda813.so,sha256=UvZ81gm6958D3qg3ZtgZ4GlH8iZ83FvacxlK6rbET5g,31924577
+wowool_sdk_cpp.libs/libicuuc-653d3654.so,sha256=7fKF5-FFbaS6yuQYIqzGzigmRY5-BKGf6LpcGXHoj7s,3863969
+wowool_sdk_cpp.libs/libwowool-5a360b1e.so.3.1.2,sha256=jo0kLmCt7rnwBlUcduyN98JT0z0cDeqBVy5Fs-p-NdY,16737641
+wowool_sdk_cpp-3.5.0.dist-info/METADATA,sha256=cuxXWe9Bc5juplBgJjW6h0IS_M0tz5nnWST0dMTojLs,1268
+wowool_sdk_cpp-3.5.0.dist-info/WHEEL,sha256=_CFvICYDmZlAYHt8L7Zn3n-BGLj8dkZLQPp22Piy5JE,151
+wowool_sdk_cpp-3.5.0.dist-info/entry_points.txt,sha256=JFkoHHhhaReXCAsUZCv4CCar_D_GgdjxCQBOKXkCVME,323
+wowool_sdk_cpp-3.5.0.dist-info/top_level.txt,sha256=zerqoDN-iHSHwsS1SN2h0q4H6RI1FOVeHW8fNQC9YdU,7
+wowool_sdk_cpp-3.5.0.dist-info/RECORD,,
