@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include examples *.veyra
+recursive-include docs *.md
+recursive-include src/veyra/lib *.veyra
+global-exclude *.pyc
+global-exclude __pycache__

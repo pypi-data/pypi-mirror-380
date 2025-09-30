@@ -1,0 +1,31 @@
+// Veyra Math Library
+// Provides mathematical functions
+
+fn factorial(n) {
+    if n <= 1 {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+fn fibonacci(n) {
+    if n <= 1 {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+fn gcd(a, b) {
+    while b != 0 {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+fn lcm(a, b) {
+    return (a * b) / gcd(a, b);
+}
