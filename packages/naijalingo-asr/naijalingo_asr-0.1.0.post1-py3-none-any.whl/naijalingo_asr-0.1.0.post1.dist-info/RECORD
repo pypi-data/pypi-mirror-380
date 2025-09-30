@@ -1,0 +1,12 @@
+naijalingo_asr/__init__.py,sha256=8Y6IFF35NdpoUbcb0FU7ekxbxT7_u0eJTYrbANX3fd4,96
+naijalingo_asr/audio.py,sha256=3HWKYKux56UHj-_FLJyl5uLkacInixRqS5pJn1BZxZA,1121
+naijalingo_asr/cli.py,sha256=mDDTTJQ6wbrDXU6xYqRq3Cx9rF6ji3v_MnDnXI-1zR4,1357
+naijalingo_asr/engine.py,sha256=KCWeXvHP3SvjyVbHyFcqk3cO6DUac77uXum5wD0mXlg,2051
+naijalingo_asr/logging_utils.py,sha256=iwsFEBbQuL01bm3jKMbou_iQbcIYNV2sJMT0Dhy7Sl0,1880
+naijalingo_asr/registry.py,sha256=u1i7bO2tSKyzogk8QnmuM9_n5oUB6gkBqISOpBjn15w,868
+naijalingo_asr/transcriber.py,sha256=2Ttf3a1nqNWcVSxGTE32VPPGuvX4cGgvayIHSYwZ5_M,3178
+naijalingo_asr-0.1.0.post1.dist-info/METADATA,sha256=8tMPyYwBY6cv2JhSm5nQywzJbYbokApOPj3G2d4acLc,3196
+naijalingo_asr-0.1.0.post1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+naijalingo_asr-0.1.0.post1.dist-info/entry_points.txt,sha256=FfLxfieIJKaQURImmCAxBE30jLVERGz80GYqG4SQrCU,59
+naijalingo_asr-0.1.0.post1.dist-info/top_level.txt,sha256=cELrE6BpmCrsdlTqtq8qx_d28PdwCt8DHxNFJMEvux8,15
+naijalingo_asr-0.1.0.post1.dist-info/RECORD,,

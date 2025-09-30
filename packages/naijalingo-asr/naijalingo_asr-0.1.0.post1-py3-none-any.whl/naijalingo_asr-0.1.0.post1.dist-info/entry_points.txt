@@ -1,0 +1,2 @@
+[console_scripts]
+naijalingo-asr = naijalingo_asr.cli:main
