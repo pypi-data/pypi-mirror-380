@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pacman_JonatasNP.egg-info/PKG-INFO
+pacman_JonatasNP.egg-info/SOURCES.txt
+pacman_JonatasNP.egg-info/dependency_links.txt
+pacman_JonatasNP.egg-info/entry_points.txt
+pacman_JonatasNP.egg-info/requires.txt
+pacman_JonatasNP.egg-info/top_level.txt
