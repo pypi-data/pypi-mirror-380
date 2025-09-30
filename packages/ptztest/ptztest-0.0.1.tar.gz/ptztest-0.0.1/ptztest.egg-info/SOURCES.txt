@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+ptztest/__init__.py
+ptztest.egg-info/PKG-INFO
+ptztest.egg-info/SOURCES.txt
+ptztest.egg-info/dependency_links.txt
+ptztest.egg-info/top_level.txt
