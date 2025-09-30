@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: llm-helper-tools
+Version: 0.5.0
+Summary: LLM utilities and tools
+Author-email: Tobias Kirsch <tobki4242@gmail.com>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.17
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: parse_llm_code==0.1.31
+Requires-Dist: langchain_core==0.3.76
+Requires-Dist: langchain_community==0.3.27
+Requires-Dist: langchain_openai==0.3.27
+Requires-Dist: langchain_anthropic==0.3.17
+Requires-Dist: langchain_google_genai==2.1.6
+Requires-Dist: langchain_mistralai==0.2.10
+Requires-Dist: langchain_ollama==0.3.8
+Requires-Dist: torch==2.8.0
+Requires-Dist: sentence_transformers==5.1.0
+Requires-Dist: pypdf==6.0.0
+Requires-Dist: beautifulsoup4==4.13.5
+Requires-Dist: google-api-core==2.25.1
