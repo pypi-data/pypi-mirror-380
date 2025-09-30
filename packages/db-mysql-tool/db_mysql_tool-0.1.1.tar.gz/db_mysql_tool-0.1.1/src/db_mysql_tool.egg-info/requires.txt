@@ -1,0 +1,8 @@
+pymysql>=1.1.2
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
+flake8
+mypy
