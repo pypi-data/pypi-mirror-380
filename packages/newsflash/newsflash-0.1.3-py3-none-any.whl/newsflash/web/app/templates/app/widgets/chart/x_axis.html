@@ -1,0 +1,72 @@
+
+
+{% for tick, value in major_ticks %}
+    {% if draw_major_ticks %}
+        <line
+        x1="{{ tick.x }}"
+        y1="{{ tick.y|add:'7' }}"
+        x2="{{ tick.x }}"
+        y2="{{ tick.y }}"
+        stroke="transparent"
+        stroke-width="2"
+        stroke-linecap="round"
+        />
+    {% endif %}
+    <text
+    text-anchor="middle"
+    x="{{ tick.x }}"
+    y="{{ tick.y|add:'20' }}"
+    fill="rgb(0, 0, 0)" 
+    stroke="transparent" 
+    stroke-width="0"
+    >{{ value }}</text>
+
+    {% if major_grid_lines %}
+        <line
+        class="grid-line"
+        x1="{{ tick.x }}"
+        y1="{{ tick.y }}"
+        x2="{{ tick.x }}"
+        y2="{{ padding.pt }}"
+        stroke-linecap="round"
+        />
+    {% endif %}
+{% endfor %}
+
+{% if minor_ticks %}
+    {% for tick, value in minor_ticks %}
+        <line
+        x1="{{ tick.x }}"
+        y1="{{ tick.y|add:'5' }}"
+        x2="{{ tick.x }}"
+        y2="{{ tick.y }}"
+        stroke="transparent"
+        stroke-width="1"
+        stroke-linecap="round"
+        />
+
+        {% if minor_grid_lines %}
+            <line
+            x1="{{ tick.x }}"
+            y1="{{ tick.y }}"
+            x2="{{ tick.x }}"
+            y2="{{ padding.pt }}"
+            stroke="rgba(0, 0, 100, 0.1)"
+            stroke-width="2"
+            stroke-linecap="round"
+            />
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{{ minor_ticks }}
+
+<line 
+x1="{{ padding.ps }}" 
+y1="{{ graph_height_px|add:padding.pt }}" 
+x2="{{ graph_width_px|add:padding.ps }}" 
+y2="{{ graph_height_px|add:padding.pt }}" 
+stroke="transparent" 
+stroke-width="4"
+stroke-linecap="round" 
+/>

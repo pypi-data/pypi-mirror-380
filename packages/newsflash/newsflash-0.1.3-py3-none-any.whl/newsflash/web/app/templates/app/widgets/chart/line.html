@@ -1,0 +1,58 @@
+<svg 
+    id="{{ id }}"
+    class="absolute chart"
+    x-data="{ resizing: false }"
+    x-init="
+    window.addEventListener('resize', () => {
+        resizing = true;
+    })
+    "
+    x-show="!resizing"
+    x-cloak
+    {% if swap_oob %}hx-swap-oob="true"{% endif %}
+    viewBox="0 0 {{ width }} {{ height }}" 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="{{ width }}" 
+    height="{{ height }}"
+    >
+
+    {% if title %}
+    <text 
+    class="title"
+    x="{{ width_half }}" 
+    y="27" 
+    text-anchor="middle"
+    >
+        {{ title }}
+    </text>
+    {% endif %}
+
+    {{ x_axis|safe }}
+    {{ y_axis|safe }}
+
+    <path
+    id="line-path"
+    class="line-path"
+    d="
+    {% for point in points %}
+        {% if forloop.first %}
+            M {{ point.x|floatformat:2 }} {{ point.y|floatformat:2 }}
+        {% else %}
+            L {{ point.x|floatformat:2 }} {{ point.y|floatformat:2 }}
+        {% endif %}
+    {% endfor %}
+    "
+    fill="transparent"
+    stroke-width="6"
+    stroke-linecap="round"
+    pathLength="100"
+    >
+    </path>
+
+</svg>
+
+<div class="flex flex-col items-center spinner-container">
+    <svg class="h-full absolute" viewBox="0 0 100 100">
+        <circle class="spinner" cx="50" cy="50" r="30" stroke-width="2" stroke-linecap="round" pathLength="100" stroke="hsl(0, 49%, 41%)" fill="transparent" />
+    </svg>
+</div>

@@ -1,0 +1,83 @@
+{% load humanize %}
+
+
+
+{% if not multiplier == 1 %}
+<text
+    x="0"
+    y="{{ padding.pt|add:'-25' }}"
+    font-size="12"
+    text-anchor="left"
+    fill="rgba(0, 0, 0, 0.6)" 
+    stroke="transparent" 
+    stroke-width="0"
+    >x {{ multiplier|intcomma }}</text>
+{% endif %}
+
+{% for tick, value in major_ticks %}
+    <line
+    x1="{{ tick.x|add:'-7' }}"
+    y1="{{ tick.y }}"
+    x2="{{ tick.x }}"
+    y2="{{ tick.y }}"
+    stroke="transparent"
+    stroke-width="2"
+    stroke-linecap="round"
+    />
+    <text
+    text-anchor="left"
+    x="0"
+    y="{{ tick.y|add:'4' }}"
+    fill="rgba(0, 0, 0)" 
+    stroke="transparent"
+    stroke-width="0" 
+    >{{ value }}</text>
+
+    {% if major_grid_lines %}
+        <line
+        class="grid-line"
+        x1="{{ tick.x }}"
+        y1="{{ tick.y }}"
+        x2="{{ tick.x|add:graph_width_px }}"
+        y2="{{ tick.y }}"
+        stroke-linecap="round"
+        />
+    {% endif %}
+{% endfor %}
+
+{% if minor_ticks %}
+    {% for tick, value in minor_ticks %}
+        <line
+        x1="{{ tick.x|add:'-5' }}"
+        y1="{{ tick.y }}"
+        x2="{{ tick.x }}"
+        y2="{{ tick.y }}"
+        stroke="transparent"
+        stroke-width="1"
+        stroke-linecap="round"
+        />
+
+        {% if minor_grid_lines %}
+            <line
+            x1="{{ tick.x }}"
+            y1="{{ tick.y }}"
+            x2="{{ tick.x|add:graph_width_px }}"
+            y2="{{ tick.y }}"
+            stroke="rgba(0, 0, 100, 0.1)"
+            stroke-width="1"
+            stroke-linecap="round"
+            />
+        {% endif %}
+        
+    {% endfor %}
+{% endif %}
+
+<line 
+x1="{{ padding.ps }}" 
+y1="{{ padding.pt }}" 
+x2="{{ padding.ps }}" 
+y2="{{ graph_height_px|add:padding.pt }}" 
+stroke="transparent" 
+stroke-width="4"
+stroke-linecap="round"
+/>
