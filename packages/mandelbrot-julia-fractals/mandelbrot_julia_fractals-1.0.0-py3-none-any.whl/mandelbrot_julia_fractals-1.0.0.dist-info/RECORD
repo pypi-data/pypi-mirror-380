@@ -1,0 +1,10 @@
+mandelbrot_julia_fractals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mandelbrot_julia_fractals/fractals.py,sha256=THQzkHtkv1I9PcF_WwWpq4tpKzUine2B-o9Xx6hcLyo,7223
+mandelbrot_julia_fractals/mandelbrot-3d-opengl.py,sha256=1Qka-i-zLZyq1fvhDZGQKNog6VwmBLPXMTyC0BVGlH4,5758
+mandelbrot_julia_fractals/mandelbrot_3d_opengl.py,sha256=WiGI27BoTpx4l95Wo89vEdQc_g0IAXbTL541_yteaM4,5925
+mandelbrot_julia_fractals/widgets.py,sha256=eaKJDe8krOZtSXr3c6LXqCk-lf0LyEukyD8w9s5aLDI,4003
+mandelbrot_julia_fractals-1.0.0.dist-info/LICENSE,sha256=8_OiiUudNZIUeil8FkESerYKFo-TdYPkrdKil2qNXcs,1092
+mandelbrot_julia_fractals-1.0.0.dist-info/METADATA,sha256=9zZrmcyNzzrmHwqSlKExIFSfIeRyVFdGOmdos_lQM7U,1005
+mandelbrot_julia_fractals-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mandelbrot_julia_fractals-1.0.0.dist-info/top_level.txt,sha256=jXdB6WCMhFEMKkF5ZmsQngz6SPXOIWRue6MRZavtUAc,26
+mandelbrot_julia_fractals-1.0.0.dist-info/RECORD,,
