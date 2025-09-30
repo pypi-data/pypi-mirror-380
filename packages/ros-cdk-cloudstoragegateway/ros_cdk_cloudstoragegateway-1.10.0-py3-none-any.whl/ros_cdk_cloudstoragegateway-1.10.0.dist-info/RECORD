@@ -1,0 +1,11 @@
+ros_cdk_cloudstoragegateway/__init__.py,sha256=X1Tv4yjyZkEPktp3YKBZJkVmgb0MJeJJQgpo-I6WxnE,25631
+ros_cdk_cloudstoragegateway/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ros_cdk_cloudstoragegateway/_jsii/__init__.py,sha256=k7TY_EUds_KXIaPaBbHfNTEUn4gj8yMTkEJAIDRNYB4,451
+ros_cdk_cloudstoragegateway/_jsii/ros-cdk-cloudstoragegateway@1.10.0.jsii.tgz,sha256=A2vNOEIneDcrAXplfZSDTEfzFwIiodlT7VRtAYw3FSA,39017
+ros_cdk_cloudstoragegateway/datasource/__init__.py,sha256=jtdYgLLbbesiChWaGCWLXhnlz69Zj2PdrVg9cW_TOjY,45565
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/METADATA,sha256=SzuuyXSCQ0aTXDWEGqdxuIyLp-4IeQdGbRty8AiGtEU,1512
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/NOTICE,sha256=2QphLC5EbcXMxwWTewMxg9-WTM-FRkvUc5DpqpFapkA,121
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/top_level.txt,sha256=BlSDNq-J8aYxpIDvjAWzsWy0WpSUkVBXwcToOoa8Pyo,28
+ros_cdk_cloudstoragegateway-1.10.0.dist-info/RECORD,,
