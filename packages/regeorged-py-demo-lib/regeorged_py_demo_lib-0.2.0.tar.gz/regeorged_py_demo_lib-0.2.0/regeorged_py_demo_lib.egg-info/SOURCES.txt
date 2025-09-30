@@ -1,0 +1,7 @@
+setup.py
+my_packages/__init__.py
+my_packages/base_class.py
+regeorged_py_demo_lib.egg-info/PKG-INFO
+regeorged_py_demo_lib.egg-info/SOURCES.txt
+regeorged_py_demo_lib.egg-info/dependency_links.txt
+regeorged_py_demo_lib.egg-info/top_level.txt
