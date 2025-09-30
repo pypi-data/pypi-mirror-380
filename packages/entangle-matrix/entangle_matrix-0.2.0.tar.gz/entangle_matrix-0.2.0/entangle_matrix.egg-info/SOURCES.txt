@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+entangle_matrix/__init__.py
+entangle_matrix/client.py
+entangle_matrix/exceptions.py
+entangle_matrix/models.py
+entangle_matrix/utils.py
+entangle_matrix.egg-info/PKG-INFO
+entangle_matrix.egg-info/SOURCES.txt
+entangle_matrix.egg-info/dependency_links.txt
+entangle_matrix.egg-info/not-zip-safe
+entangle_matrix.egg-info/requires.txt
+entangle_matrix.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
