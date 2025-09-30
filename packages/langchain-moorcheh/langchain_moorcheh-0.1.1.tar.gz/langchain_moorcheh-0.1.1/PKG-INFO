@@ -1,0 +1,82 @@
+Metadata-Version: 2.3
+Name: langchain-moorcheh
+Version: 0.1.1
+Summary: An integration package connecting Moorcheh and LangChain
+License: MIT
+Keywords: langchain,moorcheh,vectorstore,ai,embeddings
+Author: Moorcheh AI
+Author-email: support@moorcheh.ai
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: langchain (>=0.3.27,<0.4.0)
+Requires-Dist: langchain-core (>=0.3.15,<0.4.0)
+Requires-Dist: langchain-openai (>=0.3.28,<0.4.0)
+Requires-Dist: moorcheh-sdk (>=1.2.0,<2.0.0)
+Project-URL: Repository, https://github.com/moorcheh-ai/langchain-moorcheh
+Project-URL: Release Notes, https://github.com/moorcheh-ai/langchain-moorcheh/releases
+Project-URL: Source Code, https://github.com/moorcheh-ai/langchain-moorcheh
+Description-Content-Type: text/markdown
+
+# 🦜️🔗 LangChain Moorcheh
+
+This repository contains the LangChain integration with Moorcheh, a powerful vector database for AI applications.
+
+## Installation
+
+```bash
+pip install -U langchain-moorcheh
+```
+
+## Configuration
+
+Set your Moorcheh API key as an environment variable:
+
+```bash
+export MOORCHEH_API_KEY="your-api-key"
+```
+
+## Vector Stores
+
+The `MoorchehVectorStore` class allows you to use Moorcheh VectorDB alongside LangChain:
+
+```python
+from langchain_moorcheh import MoorchehVectorStore
+
+vector_store = MoorchehVectorStore.from_texts(
+    texts=texts,
+    embedding=embedding_model,
+    api_key=MOORCHEH_API_KEY,
+    namespace=NAMESPACE_NAME,
+    namespace_type=NAMESPACE_TYPE,
+)
+```
+
+## Features
+
+- **Vector Storage**: Store and retrieve embeddings with high performance
+- **Namespace Management**: Organize your data with flexible namespace structures
+- **LangChain Integration**: Seamlessly integrate with the LangChain ecosystem
+- **Async Support**: Full asynchronous operation support
+- **Metadata Filtering**: Advanced querying with metadata support
+
+## Documentation
+
+For more detailed information, visit:
+- [PyPI Package](https://pypi.org/project/langchain-moorcheh/)
+- [Source Code](https://github.com/langchain-ai/langchain-moorcheh)
+- [LangChain Documentation](https://python.langchain.com/)
+
+## Contributing
+
+We welcome contributions! Please see our [contributing guidelines](https://github.com/langchain-ai/langchain-moorcheh/blob/main/CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
