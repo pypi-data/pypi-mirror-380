@@ -1,0 +1,20 @@
+[project]
+name = "fount-eda"
+version = "0.1.4.2"
+authors = [
+  { name = "Bibek Sahu", email = "bibek@datapoem.com" }
+  ]
+license = "MIT"
+description = "EDA tool for Fount"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.3.2",
+    "scikit-learn>=1.7.2",
+    "statsmodels>=0.14.5",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
