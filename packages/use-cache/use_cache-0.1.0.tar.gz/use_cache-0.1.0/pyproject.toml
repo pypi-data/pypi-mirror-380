@@ -1,0 +1,25 @@
+
+[project]
+name = "use-cache"
+version = "0.1.0"
+description = "Caching library with multiple backend support"
+readme = "README.md"
+authors = [
+    { name = "miclon", email = "jcnd@163.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "typing-extensions>=4.1.0",
+]
+
+[project.optional-dependencies]
+redis = ["redis>=5.0.0"]
+memcached = ["aiomcache>=0.8.2"]
+dynamodb = ["aiobotocore>=2.13.1"]
+fastapi = ["fastapi", "starlette"]
+test = ["pytest>=7.0.0", "pytest-asyncio>=0.21.0"]
+all = ["redis>=5.0.0", "aiomcache>=0.8.2", "aiobotocore>=2.13.1", "fastapi", "starlette"]
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
