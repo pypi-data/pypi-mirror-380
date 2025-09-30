@@ -1,0 +1,9 @@
+cvhough_sdk/__init__.py,sha256=IliQ-mRoIKbMF0Vb4cCI2RLPQSbteuk0E1A6x1cjbmM,25444
+cvhough_sdk/detector.py,sha256=nj_0FORzDOTmXXs3xZAcqPSWgtVLNLXBHaClLrENCUU,1101
+cvhough_sdk/main.py,sha256=LLx_KkmAsfpu-k0VA1t0JmYggpu1-9GRJOP46ex1cCo,31558
+cvhough_sdk/models/best.pt,sha256=Lrp0pLsYodAiOiUiZXfkm0O1Et77SJDN_t3bGBrM8_M,19163411
+cvhough_hui-1.0.2.dist-info/METADATA,sha256=bKT2YNdhxYXu6mdTHUn3KNeXQY2GEAkvu-GIwRu8YXI,8052
+cvhough_hui-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cvhough_hui-1.0.2.dist-info/entry_points.txt,sha256=PGgmnSvHeC-O4MGMGdvo8Fh_QRg-il1LJhKjkE4OhJc,57
+cvhough_hui-1.0.2.dist-info/top_level.txt,sha256=sSAv0FFrD4x_yXvynVUtbrhe5uIqgywJfQFxlExWlns,12
+cvhough_hui-1.0.2.dist-info/RECORD,,
