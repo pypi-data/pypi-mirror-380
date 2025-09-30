@@ -1,0 +1,11 @@
+core_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_auth/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_auth/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_auth/auth/jwt_token/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_auth/auth/jwt_token/algorithm.py,sha256=Zr6whsgsNOJGFn_PGcaqRbPxqW830p-jacjmEUjBOM8,1686
+core_auth/auth/jwt_token/jwt_auth.py,sha256=-xMHIHGZXAZzqhkxfKS4TT7Esy4_XPcCoCCxQxPNaWE,6961
+core_auth-1.0.0.dist-info/licenses/LICENSE,sha256=dj8Wz7OWOIOTyLJzaYLn8RFz_W5uYWSGR2xS5lHNAl4,1082
+core_auth-1.0.0.dist-info/METADATA,sha256=QQQ73_AtnWCEGLqqyNWkNWHBz7Vg15blAkVKA1J2DCs,2703
+core_auth-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+core_auth-1.0.0.dist-info/top_level.txt,sha256=1dbJyAMJMJZg1SaEvr5Jp4toyS45sjTjhzvMFB4CQRI,10
+core_auth-1.0.0.dist-info/RECORD,,
