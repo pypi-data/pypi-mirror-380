@@ -1,0 +1,11 @@
+sa_tenders/__init__.py,sha256=eQycMVXQpQW4KWdSOylgyHvkHuyedfMYMcqa0E2CKWA,182
+sa_tenders/adding_variables.py,sha256=rraxo45udn-uYEPT_sXHq3eaRBvPTLzEVcQFl1dbEJs,1676
+sa_tenders/data_cleaning.py,sha256=4NI3hRIi_jLpe_orJkbnn2buBu1cd2JNIxYwX74qgv4,870
+sa_tenders/dict_to_dataframe.py,sha256=wWoFTO8v_c6XdyjNM291NT2OcWsEmpjRmFJgPFozudU,2610
+sa_tenders/main.py,sha256=ZpI7TlITjqKDta3bTkCHZVkT3VIfnKm0Elf7VKAFVOo,1257
+sa_tenders/old.py,sha256=4XoKSsrz0Yyvhq3I7ev6Dwgb5TNzV0bgjJ_RHlsTrpU,10451
+sa_tenders/test_ideas.py,sha256=FPzimiJwvgJM5KC0bvIZO3hEpr-PFGwB2ZJnDWs18aQ,2815
+sa_tenders-0.1.0.dist-info/METADATA,sha256=3bco8R_rMkY3scPFHT3KbUQG_yRFP2aZ7TMSTGy7ldo,2577
+sa_tenders-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sa_tenders-0.1.0.dist-info/top_level.txt,sha256=YWR6R5MZjIxh_B2p9jU-qF0C5i4maebIPIPPgcLvjns,11
+sa_tenders-0.1.0.dist-info/RECORD,,
