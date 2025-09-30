@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acronym-expander"
+version = "0.1.1"
+description = "Lightweight utility to expand common acronyms and abbreviations into full forms."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Maanasvee Khetan", email = "maanasveekhetan66@gmail.com"}]
+license = {text = "MIT"}
+keywords = ["acronym", "expand", "nlp", "text"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+"acronym-expander" = "acronym_expander.__main__:main"

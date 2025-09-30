@@ -1,0 +1,2 @@
+[console_scripts]
+acronym-expander = acronym_expander.__main__:main

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+acronym_expander/__init__.py
+acronym_expander/__main__.py
+acronym_expander.egg-info/PKG-INFO
+acronym_expander.egg-info/SOURCES.txt
+acronym_expander.egg-info/dependency_links.txt
+acronym_expander.egg-info/entry_points.txt
+acronym_expander.egg-info/top_level.txt
+tests/test_basic.py
