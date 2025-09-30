@@ -1,0 +1,3 @@
+[console_scripts]
+kmy-mcp-v1-2509 = kmy_mcp_v1_2509:main
+
