@@ -1,0 +1,2 @@
+[console_scripts]
+enhanced-mcp-tools = enhanced_mcp.mcp_server:main
