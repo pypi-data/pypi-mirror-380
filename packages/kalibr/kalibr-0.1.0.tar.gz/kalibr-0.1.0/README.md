@@ -1,0 +1,109 @@
+
+# Kalibr SDK Docs
+
+Kalibr makes your SaaS agent-ready.  
+Define your API once and Kalibr compiles connectors for ChatGPT, Claude, and more.  
+Our MVP works today with GPT and Claude. The universal proxy makes your API callable in minutes.
+
+---
+
+## Quickstart (MVP)
+
+### Install
+```bash
+pip install kalibr-sdk
+
+Your First Integration
+
+from kalibr_sdk import Kalibr
+
+# Connect your backend
+k = Kalibr()
+k.connect("https://api.airtable.com", api_key="key123")
+
+# Register actions
+k.register_tool("create_record", "/v0/base123/Table", "POST")
+k.register_tool("search_records", "/v0/base123/Table", "GET")
+
+# Deploy
+k.deploy()
+
+What Happens
+	•	Kalibr spins up the universal proxy
+	•	Exposes your API at public URLs via ngrok
+	•	Generates platform configs (OpenAPI for GPT, MCP for Claude)
+	•	You copy the configs into ChatGPT or Claude → your API works
+
+⸻
+
+Demo Experience
+
+With 5–7 lines of code:
+	•	Your API works with ChatGPT and Claude
+	•	No platform-specific code
+	•	Real requests hit your production backend
+
+Example:
+	•	ChatGPT → “Add a contact to my CRM”
+	•	Claude → “Search for customers from Microsoft”
+
+Both hit your Airtable API through Kalibr.
+
+⸻
+
+Current Status (MVP)
+
+GPT Actions (OpenAPI) working
+Claude MCP working
+Universal proxy live (local + ngrok)
+Register actions once, run on multiple models
+
+⸻
+
+What’s Next
+
+With funding + partners, we’ll expand:
+	•	Hosted proxy (multi-tenant, secure, SOC2)
+	•	More platforms (Gemini, Azure Copilot, Assistants)
+	•	Normalization layer (auth, error codes, schema drift)
+	•	Drift detection (auto-patch when providers change)
+	•	Auto-registration (where platforms support it)
+
+⸻
+
+Roadmap
+
+MVP (today)
+	•	Local proxy + SDK
+	•	GPT + Claude connectors
+	•	Design partner pilots
+
+Phase 2 (3–6 months)
+	•	Hosted proxy (AWS/GCP/Azure)
+	•	Multi-tenant infra
+	•	OAuth + advanced auth handling
+	•	Gemini + Azure Copilot support
+
+Phase 3 (12–18 months)
+	•	Auto-registration
+	•	Normalization at scale
+	•	Drift detection + monitoring
+	•	Compliance, reliability, uptime SLAs
+
+⸻
+
+Design Partner Program
+
+We’re onboarding a small group of SaaS design partners to shape Kalibr.
+
+Design partners get:
+	•	Early SDK access
+	•	Forward-deployed engineering support
+	•	Roadmap influence
+	•	Preferred pricing
+
+📩 Contact: hello@kalibr.systems
+
+This is clean, Markdown-friendly, and looks normal to a developer.  
+
+Want me to also scaffold an **`examples/` folder with one Airtable example** so it looks even more real on GitHub, or do you want to keep it super minimal for now?
