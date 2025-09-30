@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bohr_solver"
+version = "0.1.0"
+description = "A Python library for simulating Bohr atoms"
+readme = "README.md"
+authors = [
+    { name = "Sebastian Rodriguez Garcia", email = "sebrodriguezg@udistrital.edu.co" },
+    { name = "Julian Leonardo Avila Martinez", email = "jlavilam@udistrital.edu.co" },
+    { name = "Camilo Andres Huertas Archila", email = "cahuertasa@udistrital.edu.co" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "plotly"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/Sebrodriguezg/BohrSolver"
