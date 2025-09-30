@@ -1,0 +1,10 @@
+gantt_tasks/__init__.py,sha256=mEDDRzCUYVKkCj7eujAr9jVmfsWe1Vhc2vKPiGruzGY,162
+gantt_tasks/gantt.py,sha256=1uCcyqgURCfk06FEayRIJXqxm3p6ngszW47_tkK2Ffk,2699
+gantt_tasks/manager.py,sha256=3VtCKzmVz02B2VbJZC8qgRraXTmDdJfTAVMs6ld8Uqs,3391
+gantt_tasks/models.py,sha256=M7ZLoV_QJM_MudLN4bKYCw3N6qWAQnFUGmQisYMQQzc,856
+gantt_tasks/utils.py,sha256=0eFlJC20CU-4kVZY6p4bzeOALEYNfQvoc317WKwHYDc,465
+gantt_tasks-0.1.0.dist-info/licenses/license,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+gantt_tasks-0.1.0.dist-info/METADATA,sha256=ZRlxrK9iLywCb3xTQ7JGiZp9MNlmi9p5-ULa-GY0s_Q,723
+gantt_tasks-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gantt_tasks-0.1.0.dist-info/top_level.txt,sha256=MxmhWrgrqpKFXlSyFesuKTAHhttTrmCvZn6kwRIyU7Y,12
+gantt_tasks-0.1.0.dist-info/RECORD,,
