@@ -1,0 +1,9 @@
+README.md
+setup.py
+guardian_sdk/__init__.py
+guardian_sdk/client.py
+guardian_securitysdk.egg-info/PKG-INFO
+guardian_securitysdk.egg-info/SOURCES.txt
+guardian_securitysdk.egg-info/dependency_links.txt
+guardian_securitysdk.egg-info/requires.txt
+guardian_securitysdk.egg-info/top_level.txt
