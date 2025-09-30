@@ -1,0 +1,9 @@
+mad_proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mad_proxy/analyzer.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mad_proxy/policy_engine.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mad_proxy/proxy_server.py,sha256=XM1Ufs3tsgPHNuLEMJJ44MrKG0w-UnbAnvrgRUKGekQ,935
+mad_proxy/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mad_proxy-0.2.dist-info/METADATA,sha256=AlUJgnArIozqb4pF29x5PF__pF9L1U90m2M_0dZ7ch8,486
+mad_proxy-0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mad_proxy-0.2.dist-info/top_level.txt,sha256=SYPmutb4ANaeySj2sLxzj1947GaVb3m51G2g0NTV2Ic,10
+mad_proxy-0.2.dist-info/RECORD,,
