@@ -1,0 +1,10 @@
+{
+  "application": "app",
+  "database": "db",
+  "information": "info",
+  "technology": "tech",
+  "administrator": "admin",
+  "university": "uni",
+  "professor": "prof",
+  "doctor": "dr"
+}

@@ -1,0 +1,10 @@
+word_abbr/__init__.py,sha256=cGkQNjX6slx3n-VCLkRV2hxoAp88g38CimKDyEi8aWA,180
+word_abbr/abbreviator.py,sha256=Px3PkwdWrPx-ok_BErLTei3fWwrbP2E3vHrHu6Nv4KQ,2841
+word_abbr/cli.py,sha256=MmZqfKeA7BUZDPNN8ypvAl99IXPjAaXRCHHdXWEekuE,690
+word_abbr/data.py,sha256=pxgYzkEFkdJh4s78Pr9eEv572kJS-DshIeaRYn99egw,589
+word_abbr/data/abbreviations.json,sha256=n4vNxZXDqNtUDZh01YmusQVg98crEg1XvPh8VQy279Y,187
+word_abbr-0.1.1.dist-info/METADATA,sha256=CzZM4tLRTy6vpRnBU27SFBfj7Gqcclk8IDHnldX4TAo,1489
+word_abbr-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+word_abbr-0.1.1.dist-info/entry_points.txt,sha256=Py8tDbLaVyScQzlWwnKNdtO9EAHxIuP6-2nbChlzBbs,49
+word_abbr-0.1.1.dist-info/licenses/LICENSE,sha256=cyY01uMZZTuJvWdH-69Zzeo5jpHFojQ8-mBDpPKYXQU,1067
+word_abbr-0.1.1.dist-info/RECORD,,

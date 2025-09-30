@@ -1,0 +1,2 @@
+[console_scripts]
+word-abbr = word_abbr.cli:main
