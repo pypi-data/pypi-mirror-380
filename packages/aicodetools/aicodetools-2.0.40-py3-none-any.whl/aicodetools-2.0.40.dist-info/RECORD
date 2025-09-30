@@ -1,0 +1,13 @@
+aicodetools/__init__.py,sha256=CReMBBYqwtfa_5WkGBO_O5bKqp4YFh-ZczP1o-1wvTA,1039
+aicodetools/client.py,sha256=91joGPJfEMZ6E_bcOj1q2L7xAMZTl_pQVj1gctF9PnE,21978
+aicodetools/client_manager.py,sha256=_8Wgo35Nl8Kb1rcnnt_EhU64AE2mezAAWV4JbHnhPX8,8146
+aicodetools/server.py,sha256=QsAYInDWtj4SCP9swnGCQ4kFqs8pH6ZdFSkwk5a9Ucc,12313
+aicodetools/tools/__init__.py,sha256=z777tbkYYWrPo6r3GZhYb4oGD0yvR5A0Tr5ogn0OO0g,500
+aicodetools/tools/edit.py,sha256=CHJj3FJfZQ3Gen-qI6xxFNwRBQlGC-wnxnfjdc4kORg,7649
+aicodetools/tools/read.py,sha256=KYy1YLd4MK_eMEKOtBU_Rx2HNX7jbeUjiKxJpjL_3-U,18812
+aicodetools/tools/run.py,sha256=ORyBRtWBxfNHl4na5GiKBa8sim9LzgMRsfe8pQjz5Xk,33300
+aicodetools/tools/write.py,sha256=ED710XELExImSVI8gIj_bwF3otp12tYuRPa0YDFvfDo,6131
+aicodetools-2.0.40.dist-info/LICENSE,sha256=8r2Is9Gt3EXHxj-lTuHlqi6vQ2KeQAEiPWGTwxQ0o00,1095
+aicodetools-2.0.40.dist-info/METADATA,sha256=jnvorEVbtszZReVs3yxaIGIovY8YQ4_85_nsLIQJh_s,13386
+aicodetools-2.0.40.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+aicodetools-2.0.40.dist-info/RECORD,,
