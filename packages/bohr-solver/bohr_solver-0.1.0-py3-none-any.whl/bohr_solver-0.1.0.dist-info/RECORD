@@ -1,0 +1,9 @@
+bohr_solver/__init__.py,sha256=0eCPXD45neJnI-5NNII0ZrVGEArFJZsCxOZ3KgRscVI,27
+bohr_solver/atom.py,sha256=a6y1vvVVMuilJOunfUqg8pFrIiQ6n5WBDCVFVXcngDc,3147
+bohr_solver/calculations.py,sha256=TDCiHq0cN15NK_cFHgQdpKwLnHV0P6Kk4OkpkKhkJj8,2966
+bohr_solver/visualization.py,sha256=5U05wme0fSQtgyHiaV7fMBlwojSxBkPy8P2nTP4QwMA,3915
+bohr_solver-0.1.0.dist-info/licenses/LICENSE,sha256=-oick2TRODTaTk9b4gsr3tpmfzE_1YH8Q25KjuRWWEA,1070
+bohr_solver-0.1.0.dist-info/METADATA,sha256=95fkTGFqUrULlMwZcx4FXp5Holo_gJ-y7VqDBijyORQ,4684
+bohr_solver-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bohr_solver-0.1.0.dist-info/top_level.txt,sha256=RJcA9d_jpZBfRE5nCLJ10nSU6WR7K6VBeClszn_VeKA,12
+bohr_solver-0.1.0.dist-info/RECORD,,
