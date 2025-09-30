@@ -1,0 +1,11 @@
+gwax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gwax/flows.py,sha256=LyFWUrv2JMbxvgkaMjXfYAoSmsYu2JdztO6vzUF1sc4,2245
+gwax/likelihood.py,sha256=cSXlRZUtWumJK9ATGH-qWd684dLZ_J_S9eKoWbQObYc,5745
+gwax/parametric.py,sha256=e96d245g-r03DBRma-CaMkXSI6Dv0c3xiQm4k84OtXk,5445
+gwax/remnant.py,sha256=Ao9aw-0j7BsMy-F6caJTIhkPDm8riwkFpbWEf2n-wH8,5011
+gwax/variational.py,sha256=W345ejSD3Wa6Z8glnTZBtbKnEQfO83SFxVzE8wghvFA,7131
+gwax-0.1.0.dist-info/licenses/LICENSE,sha256=AZLlj3JLP-hJFJJrTlF2LpSusnbCud7E0d2Xjo-6WJM,1070
+gwax-0.1.0.dist-info/METADATA,sha256=ss6FXAAuu_LFnqbuYE_-yfPwdxUfq7EINtxFcTpptrs,1481
+gwax-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gwax-0.1.0.dist-info/top_level.txt,sha256=hgTVuBKreS9cDMJQkeamoBbcqRC5uviYvlkk_W-lUiA,5
+gwax-0.1.0.dist-info/RECORD,,
