@@ -1,0 +1,136 @@
+## 🚀 Full Guide: Publish a Python Package to PyPI
+### 1. Setup Your Project Structure
+```bash
+mlopspypi/
+├── mlopspypi/                # Main package code
+│   ├── __init__.py
+│   └── main.py
+├── tests/                  # (Optional) tests
+│   └── test_main.py
+├── pyproject.toml          # Build configuration (like package.json)
+├── README.md               # Long description
+├── LICENSE                 # License (MIT recommended for open source)
+└── .gitignore
+```
+---
+### 2. Write Your Code
+Inside mlopspypi/main.py:
+```bash
+
+def hello(name: str) -> str:
+    return f"Hello, {name}!"
+
+```
+Inside mlopspypi/__init__.py:
+```bash
+
+from .main import hello
+
+```
+Now anyone installing can use:
+```bash
+from mlopspypi import hello
+print(hello("World"))
+
+```
+---
+
+### 3. Add pyproject.toml
+This tells PyPI how to build your package. Use Hatchling (modern tool).
+
+```bash
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mlopspypi"                      # must be unique on PyPI
+version = "0.1.0"
+description = "A small reusable Python utilities package"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+{ name="Your Name", email="you@example.com" }
+]
+keywords = ["utility", "example", "reusable"]
+classifiers = [
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+]
+
+dependencies = [
+# "requests>=2.0.0",  # example dependency
+]
+
+[project.urls]
+"Homepage" = "https://github.com/kimhabkhun/mlopspypi"
+"Bug Tracker" = "https://github.com/kimhabkhun/mlopspypi/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mlopspypi"]
+
+```
+⚠️ Important: The folder name (mlopspypi/) must match the packages = [...].
+
+### 4. Build Your Package
+
+First install build tools:
+
+```bash
+pip install build twine
+```
+
+```bash
+python -m build
+```
+You’ll get:
+```bash
+dist/
+  mlopspypi-0.1.0.tar.gz
+  mlopspypi-0.1.0-py3-none-any.whl
+
+```
+
+### 5. Upload to PyPI
+Create an account: https://pypi.org/account/register/
+Config in .pypirc
+```bash
+username: __token__
+password: pypi-AgEIcHlwaS5vcmcCJDJXXXXXXXXXXXXXXXXXXXXXXXX
+
+```
+Run this to upload and fill the API Token if require (passsword= API Token)
+
+```bash
+python -m twine upload dist/*
+
+```
+
+or if not use .pypirc run command:
+```bash
+python -m twine upload -u __token__ -p pypi-AgEIcHlwaS5vcmcCJDJXXXXXXXXXXXXXXXXXXXXXXXX dist/*
+```
+*** remember every publish must change version ***
+### 6. Installation & Usage
+A simple Python utilities package.
+
+#### Installation
+```bash
+pip install mlopspypi
+```
+#### Usage
+```bash
+from mlopspypi import hello
+print(hello("World"))
+
+```
+
+### 7. 🛠  Development
+```bash
+git clone https://github.com/kimhabkhun/mlopspypi.git
+cd mlopspypi
+pip install -e .
+
+```
