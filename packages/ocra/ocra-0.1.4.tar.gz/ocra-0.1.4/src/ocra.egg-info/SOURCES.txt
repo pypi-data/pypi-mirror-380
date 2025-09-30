@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/ocra.egg-info/PKG-INFO
+src/ocra.egg-info/SOURCES.txt
+src/ocra.egg-info/dependency_links.txt
+src/ocra.egg-info/requires.txt
+src/ocra.egg-info/top_level.txt
+src/ocra/orientation/__init__.py
+src/ocra/orientation/best_acc_weights.pth
+src/ocra/orientation/config.json
+src/ocra/orientation/dataset.py
+src/ocra/orientation/generate_rotations_csv.py
+src/ocra/orientation/model.py
+src/ocra/orientation/train.py
+src/ocra/orientation/utils.py

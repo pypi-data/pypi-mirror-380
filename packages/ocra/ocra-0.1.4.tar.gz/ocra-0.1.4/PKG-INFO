@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: ocra
+Version: 0.1.4
+Summary: ocra: toolbox for analyzing text fragments (OrientationPredictor).
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch<3,>=2.0
+Requires-Dist: torchvision<0.20,>=0.15
+Requires-Dist: timm>=0.9
+Requires-Dist: Pillow>=8.0.0
+Requires-Dist: tqdm>=4.65
+Requires-Dist: numpy<3,>=1.21
+
+# ocra
+
+**ocra** — Python-библиотека с инструментами анализа фрагментов печатного текста (сканы, вырезки и т.п.).
+Первый инструмент — **`OrientationPredictor`**: 
+
+## Установка
+
+```bash
+pip install ocra
+```
+
+---
+
+## OrientationPredictor 
+Определяет ориентацию фрагмента как `HORZ` (горизонт) или `VERT` (вертикаль).
+![Объяснение OrientationPredictor](./explaing_orient.py.png)
+Пример:
+```python
+from ocra import OrientationPredictor
+
+IMAGE_PATH = r"examples\hrk_463.png"
+
+def main():
+    model = OrientationPredictor()
+
+    result = model.predict_path(IMAGE_PATH)
+    label = "VERT" if result["pred"] == 1 else "HORZ"
+
+    print("Path:", result["path"])
+    print("Pred:", label, f"(class={result['pred']})")
+    print(f"Prob VERT: {result['prob_vert']:.4f}")
+    print(f"Prob HORZ: {result['prob_horz']:.4f}")
+    print(f"Aspect (w/h): {result['aspect']:.4f}")
+
+if __name__ == "__main__":
+    main()
+```
+
+Пример вывода:
+
+```
+Path: examples\hrk_463.png
+Pred: HORZ (class=0)
+Prob VERT: 0.0001
+Prob HORZ: 0.9999
+Aspect (w/h): 6.5926
+```
