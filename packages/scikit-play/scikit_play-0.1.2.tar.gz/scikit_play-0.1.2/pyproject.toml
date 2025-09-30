@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scikit-play"
+version = "0.1.2"
+description="Rethinking machine learning pipelines a bit."
+
+license = {file = "LICENSE"}
+readme = "readme.md"
+authors = [
+    {name = "Vincent D. Warmerdam"},
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "scikit-learn>=1.0",
+    "narwhals>=0.8.14",
+    "skrub",
+    "polars",
+    "importlib-metadata >= 1.0; python_version < '3.8'",
+    "importlib-resources; python_version < '3.9'",
+]
+
+[project.optional-dependencies]
+lint = ["pre-commit"]
+test = ["pytest", "pandas"]
+dev = ["marimo", "pre-commit", "pytest", "pandas"]
+
+[project.urls]
+repository = "https://github.com/koaning/scikit-play"
+issue-tracker = "https://github.com/koaning/scikit-play/issues"
+documentation = "https://koaning.github.io/scikit-play/"
+
+[tool.setuptools.packages.find]
+include = ["skplay*"]
+exclude = [
+    "docs",
+    "images",
+    "notebooks",
+    "tests",
+]

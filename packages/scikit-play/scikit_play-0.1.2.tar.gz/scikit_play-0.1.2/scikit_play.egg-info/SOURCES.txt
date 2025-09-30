@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+readme.md
+scikit_play.egg-info/PKG-INFO
+scikit_play.egg-info/SOURCES.txt
+scikit_play.egg-info/dependency_links.txt
+scikit_play.egg-info/requires.txt
+scikit_play.egg-info/top_level.txt
+skplay/__init__.py
+skplay/estimators.py
+skplay/formula.py
+skplay/transformer_functions.py
+tests/test_estimators.py
+tests/test_titanic.py
