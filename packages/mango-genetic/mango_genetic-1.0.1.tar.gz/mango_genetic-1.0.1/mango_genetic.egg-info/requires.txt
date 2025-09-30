@@ -1,0 +1,5 @@
+numpy<2.0.0,>=1.24.4
+mango<2.0.0,>=1.0.0
+
+[dev]
+coverage[toml]>=7.0
