@@ -1,0 +1,87 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     blockUCoupledIMFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+// data
+stopAt          endTime;
+
+endTime         2.08;
+
+deltaT          1e-8;
+
+writeControl    adjustableRunTime;
+writeInterval   0.05; //time_to_pack/number_of_writes
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           500;//
+maxAlphaCo      5;
+
+maxDeltaT       1e-3;
+
+InfoSwitches
+{
+    allowSystemOperations 1;
+}
+
+thickness
+{
+    name walls0.stl;
+}
+
+qualityPrediction
+{
+    patches                 (inlet);
+    PMaxInj                 2e+8;   // Maximum injection pressure (Pa)
+    TMinPolymer             563.15; // Minimum polymer temperature (K)
+    TMaxPolymer             573.15; // Maximum polymer temperature (K)
+    TMaxPolymerAbs          573.15; // Absolute maximum melt temperature (K)
+    shearRateMaxPolymer     60000.0;  // Maximum shear rate (s^-1)
+    TauMaxPolymer           500000.0; // Maximum shear stress (Pa)
+}
+
+libs
+(
+    "liblduSolvers.so"
+    "libnewBoundaryConditions.so"
+);
+
+functions
+{
+    #include "functionObjects"
+}
+// ************************************************************************* //

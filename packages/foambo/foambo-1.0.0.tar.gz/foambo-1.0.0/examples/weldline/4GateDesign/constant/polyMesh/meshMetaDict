@@ -1,0 +1,63 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/polyMesh";
+    object      meshMetaDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile     "./constant/triSurface/combined.fms";
+
+surfaceMeta
+{
+    nPoints         10078;
+    nFacets         20156;
+    nPatches        5;
+    nFeatureEdges   3030;
+    patches
+    {
+        inlet_1
+        {
+            type            patch;
+            nFacets         72;
+        }
+        inlet_2
+        {
+            type            patch;
+            nFacets         72;
+        }
+        inlet_3
+        {
+            type            patch;
+            nFacets         72;
+        }
+        inlet_4
+        {
+            type            patch;
+            nFacets         72;
+        }
+        walls
+        {
+            type            patch;
+            nFacets         19868;
+        }
+    }
+    pointSubsets
+    {
+    }
+    facetSubsets
+    {
+    }
+    featureEdgeSubsets
+    {
+    }
+}

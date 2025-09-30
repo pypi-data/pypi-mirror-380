@@ -1,0 +1,141 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                |
+| \\      /  F ield         | cfMesh: A library for mesh generation          |
+|  \\    /   O peration     |                                                |
+|   \\  /    A nd           | Author: Franjo Juretic                         |
+|    \\/     M anipulation  | E-mail: franjo.juretic@c-fields.com            |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version   2.0;
+    format    ascii;
+    class     dictionary;
+    location  "system";
+    object    meshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile "./constant/triSurface/combined.fms";
+maxCellSize 0.008;
+//minCellSize 1.2;
+//boundaryCellSize 0.0004; //specifies the size of all boundary cells (global)
+keepCellsIntersectingBoundary 1;
+//enforceGeometryConstraints 1;
+
+//It specifies refinement zones inside the volume
+//(lines, spheres, boxes, and truncated cones).
+//No support for STL so far.
+objectRefinements
+{
+	/*waterInlet
+	{
+		type	box;
+		cellSize	0.2;
+		centre	(0 0 –0.009);
+		lengthX	3.0;
+		lengthY	1.0;
+		lengthZ	1.0;
+		//additionalRefinementLevels 2;
+	    //refinementThickness 0.1;
+	}*/
+	/*box
+	{
+		type	box;
+		//cellSize	0.5;
+		centre	(0 0 -0.009);
+		lengthX	0.015;
+		lengthY	0.015;
+		lengthZ	0.03;
+		additionalRefinementLevels 2;
+	    //refinementThickness 0.001;
+	}*/
+}
+
+//It overwrites the boundaryCellSize option for a particular
+//patch (named as in the input surface). Can be specified
+//thought the cellSize or the additionalRefinementLevels keywords
+
+localRefinement
+{
+   "inlet_1.*"
+    {
+        //cellSize 0.005;//
+        additionalRefinementLevels 2;
+    }
+   "inlet_2.*"
+    {
+        //cellSize 0.0008;//
+        additionalRefinementLevels 2;
+    }
+   "walls.*"
+    {
+        //cellSize 0.0008;//
+        additionalRefinementLevels 2;
+    }
+}
+
+edgeMeshRefinement
+{
+	/*edges1
+	{
+		edgeFile "./constant/triSurface/edges.vtk";
+		additionalRefinementLevels 3;
+		//cellSize	0.0002;
+	}*/
+}
+
+/*surfaceMeshRefinements
+{
+    factory
+    {
+        surfaceFile "./constant/triSurface/rotor.stl";
+        cellSize 0.1;
+        //additionalRefinementLevels 4;
+    }
+}*/
+
+boundaryLayers
+{
+	//nLayers 4;
+	//thicknessRatio 1.2;
+	//maxFirstLayerThickness 0.0005;
+	
+	//optimiseLayer 1;
+	/*patchBoundaryLayers
+	{
+		"walls.*"
+		{
+			nLayers 4;
+			//thicknessRatio 1.2;
+			//maxFirstLayerThickness 0.0005;
+			//allowDiscontinuity 1;
+		}
+	}*/
+}
+
+renameBoundary
+{
+    //defaultType     patch;
+    newPatchNames
+    {
+        "inlet_1.*"
+        {
+        	newName inlet_1;
+			type  	patch;
+		}
+        "inlet_2.*"
+        {
+        	newName inlet_2;
+			type  	wall;
+		}
+        "walls.*"
+        {
+        	newName walls;
+			type  	wall;
+		}
+    }
+}
+
+// ************************************************************************* //

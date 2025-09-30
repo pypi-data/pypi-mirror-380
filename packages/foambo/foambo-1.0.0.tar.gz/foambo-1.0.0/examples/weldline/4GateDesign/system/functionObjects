@@ -1,0 +1,160 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+solidificationTimeCalc
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    solidificationTime;
+    alphaName   alpha1; //default is alpha1
+    TFreezing   493.15; //[K] freezing temperature
+}
+airTrapDetection
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    airTrap;
+    alphaName   alpha1; //default is alpha1
+}
+weldLineDetection
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    weldLine;
+    alphaName   alpha1;
+    optimization {
+        noEarsBBox (-0.2457 -0.022715 -0.0015) (0.2457 0.02715 0.0015);
+        Tthreshold 284;
+        Pthreshold 2e7;
+        RHSBbox    (0 -0.022715 -0.0015) (0.252765 0.02715 0.0015);
+    }
+}
+pInlet
+{
+    type            faceSource;
+    functionObjectLibs ("libfieldFunctionObjects.so");
+    enabled         true;
+    outputControl   timeStep;
+    outputInterval      1;
+    log             true;
+    valueOutput     true;
+    source          patch;
+    sourceName      inlet_1;
+    operation       areaAverage;
+    surfaceFormat   off;
+    fields
+    (
+        p_rgh
+    );
+}
+clampingForce
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    clampForce;
+    clampDir     (0 0 1); 
+    patches   (walls contact); //list of patches
+    rhoName		rho;
+    pName		p_rgh;
+    log 		true;  //show in terminal
+}
+totalWeight
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    totalWeight;
+    alphaName   alpha1;
+    rhoName     rho;
+}
+/*TAverage_filling
+{
+    type            fieldAverage;
+    functionObjectLibs ( "libfieldFunctionObjects.so" );
+    enabled         true;
+    outputControl   outputTime;
+    fields
+    (
+        T
+        {
+            mean        on;
+            prime2Mean  off;
+            base        time;
+        }
+    );
+}*/
+minMaxP
+{
+    type minMaxField;
+    functionObjectLibs ("libfieldFunctionObjects.so");
+    name p;
+}
+minMaxU
+{
+    type minMaxField;
+    functionObjectLibs ("libfieldFunctionObjects.so");
+    name U;
+}
+minMaxT
+{
+    type minMaxField;
+    functionObjectLibs ("libfieldFunctionObjects.so");
+    name T;
+}
+TfrontDetection
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type                Tfront;
+    alphaName   alpha1; //default is alpha1
+    TMelt		568.15;
+}
+TMaxCalc
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    TMax;
+    alphaName   alpha1;
+}
+shrRateMaxCalc
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    shrRateMax;
+    alphaName   alpha1;
+}
+magShearStressMaxCalc
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    magShearStressMax;
+    alphaName   alpha1; //default is alpha1
+}
+
+// This should always be the last function object among those with outputControl set to timeStep,
+// as it handles solution termination.
+fillStand
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    fillStand;
+    alphaName   alpha1;
+    fillStandMax   0.995;
+    alphaMin	   0.5;
+    dump true;
+}
+
+// Function objects with outputControl set to outputTime should be placed after fillStand
+// when fillStand has dump = true, to ensure correct data consistency.
+
+fillTime
+{
+    functionObjectLibs ("libnewUtilityFunctionObjects.so");
+    type    fillTime;
+    alphaName   alpha1;
+    outputControl outputTime;
+}
+writeMu
+{
+    type                writeRegisteredObject;
+    functionObjectLibs  ("libIOFunctionObjects.so");
+    exclusiveWriting    true;
+    objectNames         (mu);
+    outputControl       outputTime;
+}

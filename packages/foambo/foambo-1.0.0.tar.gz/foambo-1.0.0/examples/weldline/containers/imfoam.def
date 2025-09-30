@@ -1,0 +1,50 @@
+Bootstrap: localimage
+From: {{ CONTAINERS_DIR }}/basic/{{ BASE_CONTAINER }}.sif
+
+%arguments
+    BASE_CONTAINER=foam-extend
+    OS_DISTRO=ubuntu
+    OS_VERSION=24.04
+    MPI_IMPLEMENTATION=openmpi
+    MPI_VERSION=4.1.5
+    FRAMEWORK_VERSION=5.0
+    FRAMEWORK_GIT_REF=master
+
+%files
+    /home/fadeli/repos/pucoupledinterdymfoam /opt/pucoupledinterdymfoam
+    /home/fadeli/repos/OpenFOAM-Multi-Objective-Optimization/examples/weldline/tools/injectionData /opt/injectionData
+
+%post -c /bin/bash
+    set -e
+    rm -rf /opt/pucoupledinterdymfoam/feature-esi || exit 1
+    cd /opt/pucoupledinterdymfoam/{{ BRANCH }} || exit 1
+    source $(jq -r '.openfoam.source_script' /apps.json)
+    source etc/bashrc
+    export FOAM_USER_LIBBIN=$FOAM_LIBBIN
+    export FOAM_USER_APPBIN=$FOAM_APPBIN
+    ./Allwmake
+    wmake /opt/injectionData
+    export LD_LIBRARY_PATH=/opt/{{ MPI_IMPLEMENTATION }}/lib:$LD_LIBRARY_PATH
+    jq --arg app test --arg branch {{ BRANCH }} \
+        '.[$app] |= if . == null then
+        {
+            path: "/opt/pucoupledinterdymfoam",
+            branch: $branch
+        }
+        else . +
+        {
+            path: "/opt/pucoupledinterdymfoam",
+            branch: $branch
+        } end' /apps.json > /tmp/apps.json
+    mv /tmp/apps.json /apps.json
+
+%runscript
+    #!/bin/bash
+    if [ $# -eq 0 ]; then
+        /bin/bash
+    else
+        /bin/bash -c "$@"
+    fi
+
+%labels
+    Description IMFoam for BMOO

@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions    [0 1 -1 0 0 0 0];
+
+internalField uniform (0 0 0);
+
+boundaryField
+{
+    inlet_1
+    {
+        type            timeVaryingFlowRateInletVelocity;
+        value           uniform (0 0 0);  // placeholder
+        flowRate        3.830205e-06;
+        fileName        "$FOAM_CASE/constant/gateInjection1.dat";
+        file            "$FOAM_CASE/constant/gateInjection1.dat";
+        outOfBounds     clamp;           // (error|warn|clamp|repeat)
+    }
+    inlet_2
+    {
+        type            timeVaryingFlowRateInletVelocity;
+        flowRate        3.830205e-06;
+        fileName        "$FOAM_CASE/constant/gateInjection2.dat";
+        file            "$FOAM_CASE/constant/gateInjection2.dat";
+        value           uniform (0 0 0); // Placeholder; overwritten
+        phi             phi;
+        outOfBounds     clamp;
+    }
+    inlet_3
+    {
+        type            timeVaryingFlowRateInletVelocity;
+        flowRate        3.830205e-06;
+        fileName        "$FOAM_CASE/constant/gateInjection3.dat";;
+        file            "$FOAM_CASE/constant/gateInjection3.dat";
+        value           uniform (0 0 0);
+        phi             phi;
+        outOfBounds     clamp;
+    }
+    inlet_4
+    {
+        type            timeVaryingFlowRateInletVelocity;
+        flowRate        3.830205e-06;
+        fileName        "$FOAM_CASE/constant/gateInjection4.dat";;
+        file            "$FOAM_CASE/constant/gateInjection4.dat";
+        value           uniform (0 0 0);
+        phi             phi;
+        outOfBounds     clamp;
+    }
+    
+    "(walls|features|contact)"
+    {
+        type            degassing; //permeableU;//
+        #include        "$FOAM_CASE/constant/permeableSetting"
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+}
+
+// ************************************************************************* //

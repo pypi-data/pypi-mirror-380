@@ -1,0 +1,151 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    alpha1
+    {
+        nAlphaCorr      1; // Keep it 1, >1 unstable time steps
+        nAlphaSubCycles 10;//polynomial ((2 0)(1 1));
+    }
+
+    "alpha.|rho"
+    {
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        tolerance       1e-06;
+        relTol          0;
+        nSweeps         1;
+    }
+
+    pcorr
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-10;
+        relTol          0;
+    }
+
+    "pd|p_rgh"
+    {
+        solver          PCG;
+        preconditioner
+        {
+
+            preconditioner  GAMG;
+            nVcycles        2;
+            tolerance       1e-07;
+            relTol          0;
+            smoother        DICGaussSeidel;
+            nSmoothingSteps 4;
+            nPreSweeps      2;
+            nPostSweeps     1;
+            nFinestSweeps   1;
+            cacheAgglomeration false;
+            nCellsInCoarsestLevel 100;
+            agglomerator    algebraicPair;
+            mergeLevels     1;
+        }
+        tolerance        1e-7;
+        relTol           1e-2;
+        minIter          1;
+        maxIter          10;
+    }
+
+    "pdFinal|p_rghFinal"
+    {
+        solver          PCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            nVcycles        2;
+            tolerance       1e-06;
+            relTol          0;
+            smoother        DICGaussSeidel;
+            nSmoothingSteps 4;
+            nPreSweeps      2;
+            nPostSweeps     1;
+            nFinestSweeps   1;
+            cacheAgglomeration false;
+            nCellsInCoarsestLevel 100;
+            agglomerator    algebraicPair;
+            mergeLevels     1;
+        }
+        tolerance        1e-8;
+        relTol           0;
+        minIter          2;
+        maxIter          50;
+    }
+
+    T
+    {
+        solver          BiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-09;
+        relTol          0.0;
+    }
+
+    blockU
+    {
+        solver            BiCGStab;
+        preconditioner    myCholesky;
+        tolerance         1e-4;
+        relTol            0;
+        minIter           0;
+        maxIter           10;
+    }
+}
+
+PISO
+{
+    cAlpha          1;
+}
+
+
+PIMPLE
+{
+    momentumPredictor no;//yes;
+    nOuterCorrectors 5; // 1 = PISO mode
+    nCorrectors     2;
+    nNonOrthogonalCorrectors 1;
+    correctPhi      yes;
+    cAlpha          1;
+    geometricVOF      false; // false (MULES) or true (isoAdvector)
+    SIMPLEC           false; // default is false
+    cleanInterface    true;  // default is false
+    nViscositySmoother 6;
+}
+
+relaxationFactors
+{
+    fields
+    {
+        ".*"        1;
+    }
+
+    equations
+    {
+        //U           0.99999;
+        //UFinal      1.0;
+    }
+}
+
+
+// ************************************************************************* //

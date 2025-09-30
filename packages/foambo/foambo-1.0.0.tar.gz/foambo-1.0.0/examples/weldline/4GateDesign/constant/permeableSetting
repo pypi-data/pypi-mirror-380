@@ -1,0 +1,23 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      permeableSettings;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+alphaName       alpha1;
+phiName         rhoPhi;
+switchLevel     0.5; //   0<switchLevel<1 default value for interface is 0.5
+k               50; //   k > 20, higher k leads to sharper transition region at boundaries
+cutOffPressure  200e5;
+isUniformOpen   true; // false;
+
+// ************************************************************************* //

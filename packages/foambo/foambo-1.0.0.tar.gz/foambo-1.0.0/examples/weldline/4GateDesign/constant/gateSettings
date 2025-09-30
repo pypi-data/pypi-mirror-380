@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      gateSettings;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// How fast can the injection machine change its flowrate
+machineRampFactor 10;
+
+// Here for better numbers in optimization parameters
+flowRateScale 1e-6;
+
+// Gate injection profile
+gate1 {
+    // When to toggle between on/off state
+    injectionToggleTime 1.0;
+    // Max reachable injection rate
+    injectionRate 1.9;
+    // Start in on/off injection state
+    injectionInitialState on;
+}
+
+gate2 {
+    injectionToggleTime 1.0;
+    injectionRate 1.9;
+    injectionInitialState off;
+}
+
+gate3 {
+    injectionToggleTime 1.0;
+    injectionRate 1.9;
+    injectionInitialState on;
+}
+
+gate4 {
+    injectionToggleTime 1.0;
+    injectionRate 1.9;
+    injectionInitialState off;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

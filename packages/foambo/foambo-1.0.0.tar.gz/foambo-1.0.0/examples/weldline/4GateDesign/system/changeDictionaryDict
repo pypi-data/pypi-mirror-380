@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dictionaryReplacement
+{
+    U
+    {
+        boundaryField
+        {
+            inlet
+            {
+                type            pressureInletVelocity;
+                value            uniform (0 0 0);
+            }
+            "(walls|outlet|features)"
+            {
+				type            degassing; //permeableU;//
+				inletValue      uniform (0 0 0);
+				//value           uniform (0 0 0);
+				alphaName       alpha1;
+				phiName         rhoPhi;
+				switchLevel     0.75; //   0<switchLevel<1 default value for interface is 0.5
+				k               50; //   k > 20, higher k leads to sharper transition region at boundaries
+				cutOffPressure  200e5;
+				isUniformOpen   true; // false;
+
+            }
+        }
+    }
+
+    p_rgh
+    {
+        boundaryField
+        {
+            inlet
+            {
+                type            timeVaryingTotalPressure;//totalPressure;//
+                rho             rho;
+                psi             none;
+                gamma           1;
+                p0              1e+05;
+                fileName        "$FOAM_CASE/timeSeries/packingPressure";
+                file            "$FOAM_CASE/timeSeries/packingPressure";
+                outOfBounds     clamp;
+
+            }
+        }
+    }
+    T
+    {
+        boundaryField
+        {
+            "(walls|outlet|features)"
+            {
+				type            degassingWallHeatFlux;
+				Q               0;
+				ho              5000; //15 for natural convection //for force convection: 3000-7000
+				To              353.15;
+				kEff            kEff;
+				//value           uniform 353.15;
+				alphaName       alpha1;
+				phiName         rhoPhi;
+				switchLevel     0.75; //   0<switchLevel<1 default value for interface is 0.5
+				k               50; //   k > 20, higher k leads to sharper transition region at boundaries
+				cutOffPressure  200e5;
+				isUniformOpen   true; // false;
+            }
+        }
+
+    }
+
+}
+// ************************************************************************* //

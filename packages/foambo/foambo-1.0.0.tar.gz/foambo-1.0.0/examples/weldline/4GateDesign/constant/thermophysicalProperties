@@ -1,0 +1,42 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+energy on;
+
+viscousDissipation true;
+compressibleEnergySource true;
+
+
+sigma           sigma [1 0 -2 0 0 0 0] 0.001;
+
+
+pMin            pMin [1 -1 -2 0 0 0 0] 1e4;
+
+//limit the temperature range between around the mold temperature and the polymer's maximum temperature
+TMin            353.15;
+TMax            618.15;
+//rhoMin          1e-03;
+//rhoMax			10000;
+//relaxFactor     0.5;
+
+maxVolFraction   0.999;
+alphaMin         0.75;
+onlyCooling     false;
+//dpdt true;
+
+// ************************************************************************* //

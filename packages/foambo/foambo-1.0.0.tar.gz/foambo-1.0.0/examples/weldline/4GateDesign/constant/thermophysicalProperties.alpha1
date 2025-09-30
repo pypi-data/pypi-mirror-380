@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            newHRhoThermo;
+    mixture         newPureMixture;
+    transport       crossWLF3;
+    thermo          newHConstThermo;
+    //equationOfState modifiedTait2;
+    equationOfState newConstRho;
+    specie          newSpecieThermo;
+}
+
+updateT  false;
+
+mixture
+{
+    specie
+    {
+        molWeight   50000;
+    }
+
+    equationOfState
+    {
+        //Tait equation parameters
+        rho         1344;//1505.7;//
+
+        b1L         0.000723801;
+        b2L         3.13989e-007;
+        b3L         2.39e+008;
+        b4L         0.0026571;
+
+        b1S         0.00069623;
+        b2S         1.54102e-007;
+        b3S         3.68e+008;
+        b4S         0.00257881;
+
+        b5          503.15;
+        b6          3.14e-008;
+        b7          2.254e-005;
+        b8          0.0525;
+        b9          4.07e-009;
+
+        C           0.0894;
+    }
+
+    thermodynamics
+    {
+        Cp          1800;
+        Hf          0;
+    }
+    transport
+    {
+        kappa       0.28;
+        // CarreauWLF model data not provided
+        // Material: Ultramid A3X2G10 BASF
+        n               0.42;
+        Taus            42800;
+        D1              1.22e+027;
+        D2              373;
+        D3              0.0;
+        A1              70.2;
+        A2b             51.6;
+        noFlowLimit     true;
+        cNFT            -0.05;
+    }
+}
+
+// ************************************************************************* //

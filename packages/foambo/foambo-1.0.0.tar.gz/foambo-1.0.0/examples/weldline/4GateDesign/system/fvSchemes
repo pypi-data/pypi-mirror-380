@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         Euler;
+}
+
+gradSchemes
+{
+    default         cellLimited Gauss linear 1.0;
+
+}
+
+divSchemes
+{
+    default         Gauss linear;
+    div(rhoPhi,U)   Gauss limitedLinearV 1;//linearUpwind grad(U);
+    div(rho*phi,U)  Gauss limitedLinearV 1;
+    div(phi,alpha)  Gauss vanLeer;
+    div(phirb,alpha) Gauss interfaceCompression;
+    div((mu*dev2(T(grad(U))))) Gauss linear;
+
+    //Energy
+    div(phi,p)  Gauss linear;
+    div(rhoPhi,T)   Gauss limitedLinear 1;
+    div((mu_twoPhaseMixture*dev2(T(grad(U))))) Gauss linear;
+    div(rhoPhi,K) Gauss limitedLinear 1;
+
+}
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+    fvmBlockLaplacian(U) pointGaussLeastSquaresLaplacian;
+    fvmBlockLaplacianTranspose(U) pointGaussLeastSquaresLaplacianTranspose;
+}
+
+interpolationSchemes
+{
+    default         linear;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+// ************************************************************************* //

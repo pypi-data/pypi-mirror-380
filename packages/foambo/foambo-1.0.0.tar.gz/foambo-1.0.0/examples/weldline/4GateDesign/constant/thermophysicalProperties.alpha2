@@ -1,0 +1,56 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            newHRhoThermo;
+    mixture         newPureMixture;
+    transport       newConstTransport;
+    thermo          newHConstThermo;
+    equationOfState newConstRho;//newPerfectGas;//
+    specie          newSpecieThermo;
+}
+
+updateT  false;
+
+mixture
+{
+    specie
+    {
+        molWeight   28.97;
+    }
+
+    equationOfState
+    {
+        rho        0.73;
+    }
+
+    thermodynamics
+    {
+        Cp          1005;
+        Hf          0;
+    }
+    transport
+    {
+        mu          2.6e-02;//0.73*3.57e-05 = 2.49e-05
+        Pr          700; //Pr= cp*mu/k  if you change the mu then also change Pr so the k remains true with air thermal conductivity.
+    }
+}
+
+// ************************************************************************* //

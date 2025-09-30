@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Usage: ./Allrun.fe5 <path/to/fe5/etc/bashrc>
+set -e
+source ~/foam/foam-extend-5.0/etc/bashrc
+
+setOnlyCoolingFalse() {
+    file_path="./constant/thermophysicalProperties"
+    if [ -f "$file_path" ]; then
+        sed -i 's/^\([[:space:]]*onlyCooling[[:space:]]*\)true;/\1false;/' "$file_path"
+        echo "Updated 'onlyCooling' to false in $file_path"
+    else
+        echo "File not found: $file_path"
+    fi
+}
+# Cleaning
+rm -f ./*json
+foamCleanTutorials .
+# Meshing
+cartesianMesh
+renumberMesh -overwrite
+# Running
+cp -rT 0orig/ 0
+injectionData
+decomposePar -cellDist -force
+find processor* -type f -name U -exec sed -i '/fileName/afile  $fileName;' {} \;
+cp system/functionObjects.filling system/functionObjects
+cp system/controlDict.filling system/controlDict
+cp constant/thermophysicalProperties.alpha1.filling constant/thermophysicalProperties.alpha1
+setOnlyCoolingFalse
+mpicmd="mpirun "
+# existence of original case -> indication of local run
+if [[ -d "../../4GateDesign"  ]]; then
+    mpicmd="mpirun -np 4 "
+fi
+mpirun -np 4 blockUCoupledIMFoam -parallel 2>&1 | tee log.blockUCoupledIMFoam.filling

@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0  0 0 1 0 0 0];
+
+internalField uniform   358.15;
+
+boundaryField
+{
+    "(inlet_1|inlet_2|inlet_3|inlet_4)"
+    {
+        type            fixedValue;
+        value           uniform 568.15;
+    }
+    "(walls|features|contact)"
+    {
+        //type            zeroGradient;
+        type            degassingWallHeatFlux;
+        Q               0;
+        ho              2500; //15 for natural convection
+        To              358.15;
+        kName           kEff;
+        value           uniform 358.15;
+        #include        "$FOAM_CASE/constant/permeableSetting"
+    }
+}
+
+// ************************************************************************* //

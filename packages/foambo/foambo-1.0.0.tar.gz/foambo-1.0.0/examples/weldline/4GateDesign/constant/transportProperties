@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     5.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  | For copyright notice see file Copyright         |
+\*---------------------------------------------------------------------------*/
+
+// Created: 2025-08-12 15:31:50
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases (phase1 phase2);
+
+//the material properties in this file are not needed!
+phase1
+{
+    transportModel  Newtonian;
+    nu              nu [ 0 2 -1 0 0 0 0 ] 1;
+    rho             rho [ 1 -3 0 0 0 0 0 ] 1;
+    rho0            rho0 [ 1 -3 0 0 0 0 0 ] 1000;
+    psi             psi [0 -2 2 0 0] 0;//1e-5;
+
+}
+
+phase2
+{
+    transportModel  Newtonian;
+    nu              nu [ 0 2 -1 0 0 0 0 ] 0.001;
+    rho             rho [ 1 -3 0 0 0 0 0 ] 1;
+    rho0            rho0 [ 1 -3 0 0 0 0 0 ] 1;
+    psi             psi [0 -2 2 0 0] 0;//1e-5;
+
+
+}
+
+pMin            pMin [1 -1 -2 0 0 0 0] 0;
+sigma           sigma [ 1 0 -2 0 0 0 0 ] 0.05;
+
+//dummy to apply turbulence model.
+transportModel  Newtonian;
+nu              nu [ 0 2 -1 0 0 0 0 ] 0.001;
+
+// ************************************************************************* //

@@ -1,0 +1,18 @@
+#!/bin/bash
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+#surfaceTransformPoints -scale 0.001 
+nProcs=`cat system/decomposeParDict | grep "numberOfSubdomains" | tr -s ' ' | cut -d ' ' -f2 | tr -d ';' | head -n1`
+
+rm -rf constant/triSurface/combined.stl
+rm -rf constant/triSurface/combined.fms
+cp system/functionObjects.filling system/functionObjects
+cp system/controlDict.filling system/controlDict
+cat constant/triSurface/inlet_*.stl constant/triSurface/walls.stl > constant/triSurface/combined.stl
+surfaceFeatureEdges -angle 30 constant/triSurface/combined.stl constant/triSurface/combined.fms
+cartesianMesh
+#tetMesh
+#pMesh
+renumberMesh -overwrite
+checkMesh

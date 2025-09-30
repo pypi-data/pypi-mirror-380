@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Usage: ./Allrun /home/slurmuser/imfoam-dev.sif
+if [ -z "$1" ]; then
+    echo "Usage: ./Allrun <path-to-container.sif>"
+    exit 1
+fi
+set -e
+container="$1"
+setOnlyCoolingFalse() {
+    file_path="./constant/thermophysicalProperties"
+    if [ -f "$file_path" ]; then
+        sed -i 's/^\([[:space:]]*onlyCooling[[:space:]]*\)true;/\1false;/' "$file_path"
+        echo "Updated 'onlyCooling' to false in $file_path"
+    else
+        echo "File not found: $file_path"
+    fi
+}
+# Cleaning
+rm -f ./*json
+apptainer run $container 'foamCleanTutorials .'
+# Meshing
+apptainer run $container cartesianMesh
+apptainer run $container 'renumberMesh -overwrite'
+# Running
+cp -rT 0orig/ 0
+apptainer run $container injectionData
+apptainer run $container 'decomposePar -cellDist -force'
+find processor* -type f -name U -exec sed -i '/fileName/afile  $fileName;' {} \;
+cp system/functionObjects.filling system/functionObjects
+cp system/controlDict.filling system/controlDict
+cp constant/thermophysicalProperties.alpha1.filling constant/thermophysicalProperties.alpha1
+setOnlyCoolingFalse
+mpicmd="mpirun "
+# existence of original case -> indication of local run
+if [[ -d "../../4GateDesign"  ]]; then
+    mpicmd="mpirun -np 4 "
+fi
+$mpicmd apptainer run $container 'blockUCoupledIMFoam -parallel' 2>&1 | tee log.blockUCoupledIMFoam.filling
