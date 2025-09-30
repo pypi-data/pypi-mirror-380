@@ -1,0 +1,2 @@
+[console_scripts]
+dna-electrons = dna_electrons.cli:main
