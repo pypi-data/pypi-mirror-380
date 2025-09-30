@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyasterix"
+version = "0.1.3"
+description = "Python connector for AsterixDB"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { file = "LICENSE" }
+keywords = ["AsterixDB", "SQL++", "database", "connector", "driver"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Database",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "requests>=2.25.0"
+]
+
+[project.optional-dependencies]
+observability = [
+    "opentelemetry-api>=1.20.0",
+    "opentelemetry-sdk>=1.20.0",
+    "prometheus-client>=0.17.0",
+    "opentelemetry-exporter-otlp>=1.20.0",
+    "opentelemetry-exporter-jaeger>=1.20.0",
+    "opentelemetry-propagator-b3>=1.20.0",
+    "opentelemetry-instrumentation>=0.41b0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/pyasterix"
+Documentation = "https://github.com/your-org/pyasterix/tree/main/docs"
+Issues = "https://github.com/your-org/pyasterix/issues"
+
+# Optional: Configuration for development tools
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+
+pythonpath = [
+    "src"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
