@@ -1,0 +1,132 @@
+# 🌩️ CloudVault (built on [ContextVault](https://pypi.org/project/contextvault/0.2.0/))
+
+[![CI](https://github.com/<your-org>/cloudvault/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-org>/cloudvault/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/contextvault.svg)](https://pypi.org/project/contextvault/)
+[![License](https://img.shields.io/github/license/<your-org>/cloudvault.svg)](LICENSE)
+
+⚡ **CloudVault** is a SaaS + Desktop application built around the [ContextVault](https://pypi.org/project/contextvault/) core library.  
+It provides **secure data versioning, storage, and retrieval** with support for offline use, FastAPI backend,  
+React/Electron frontend, and seamless integration with PyPI.
+
+---
+
+## 📐 Architecture
+
+![Architecture Diagram](cloudvault_architecture.svg)
+
+### Key Components
+
+- **Core Library**: [ContextVault 0.2.0](https://pypi.org/project/contextvault/) (handles serialization, encoding, versioning).
+- **Backend**: FastAPI service (`cloud/app/main.py`) exposing REST routes (`/auth`, `/api/contexts`).
+- **Storage**: SQLite metadata DB + filesystem ZIP storage.
+- **Frontend**:
+  - `frontend/` — web UI (React + Vite).
+  - `frontend/desktop/` — Electron desktop UI.
+- **CI/CD**: GitHub Actions (`.github/workflows/ci.yml`).
+- **Tests**: Pytest integration & adapter tests.
+
+---
+
+## 🚀 Quick Start
+
+### Backend (FastAPI)
+
+```bash
+# Create venv
+python -m venv .venv
+source .venv/bin/activate   # PowerShell: .\.venv\Scripts\Activate.ps1
+
+# Install deps
+pip install -r cloud/requirements.txt
+pip install -r cloud/requirements-dev.txt
+
+# Run backend
+uvicorn cloud.app.main:app --reload --port 8000
+Open: http://127.0.0.1:8000/docs
+
+Frontend (Web)
+bash
+Copy code
+cd frontend
+npm install
+npm run dev
+Open: http://localhost:5173
+
+Desktop Client (Electron)
+bash
+Copy code
+cd frontend/desktop
+npm install
+npm run dev
+This launches:
+
+Vite dev server at http://localhost:5173
+
+Electron shell as a desktop app.
+
+🧪 Testing
+Run backend + adapter tests:
+
+bash
+Copy code
+# Activate venv
+.\.venv\Scripts\Activate.ps1
+
+# Run all tests
+pytest -q
+Run the local CI pipeline:
+
+bash
+Copy code
+powershell -ExecutionPolicy Bypass -File scripts/run_local_ci.ps1
+📊 Status Tracker
+Module	Status
+Core integration	✅ Done
+Backend routes	✅ Done
+End-to-end tests	✅ Passing
+GitHub Actions CI	✅ Passing
+Adapter extraction	✅ Done
+Frontend web UI	✅ Basic OK
+Desktop UI	⚠️ In progress
+README	✅ Complete
+
+Remaining:
+
+Fix PostCSS / npm config issue in frontend/desktop.
+
+Ensure UI buttons (upload, refresh) fully sync with backend.
+
+🛠️ Troubleshooting
+CI fails with dependency conflicts
+→ Ensure cloud/requirements.txt uses:
+
+txt
+Copy code
+fastapi==0.111.0
+uvicorn==0.30.0
+python-multipart==0.0.9
+cryptography==41.0.4
+httpx==0.27.0
+contextvault==0.2.0
+Flake8 lint noise in .venv
+→ We removed Flake8 from CI to prevent vendor noise.
+
+Desktop UI crashes (PostCSS / JSON parse)
+→ Ensure package.json in frontend/desktop/ is valid JSON and no leftover corrupted files.
+→ Run cleanup:
+
+bash
+Copy code
+rd /s /q node_modules
+del package-lock.json
+npm install
+📌 Next Milestones
+Finalize desktop client build.
+
+Harden CI with adapter regression tests.
+
+Prepare public demo release.
+
+📄 License
+MIT © 2025 SURYANARAYANA BOLLAPRAGADA
+```

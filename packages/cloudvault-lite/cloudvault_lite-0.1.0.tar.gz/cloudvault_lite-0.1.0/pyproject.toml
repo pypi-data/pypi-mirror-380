@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudvault-lite" # the package name on PyPI (change if already taken)
+version = "0.1.0" # bump for each release
+description = "CloudVault SaaS utilities and wrapper tooling"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Your Name or Org", email = "you@example.com" }]
+license = { text = "MIT" }
+keywords = ["contextvault", "cloudvault", "wrappers", "png", "qr"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# Runtime dependencies - include contextvault and common libs your code needs
+dependencies = [
+    "contextvault>=0.1.0",
+    "fastapi>=0.70.0",
+    "uvicorn[standard]>=0.17.0",
+    "pillow>=9.0.0",
+    "qrcode>=7.0",
+    "pyzbar>=0.1.8; platform_system=='Windows' or platform_system=='Linux' or platform_system=='Darwin'",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "frontend*", "scripts*"]

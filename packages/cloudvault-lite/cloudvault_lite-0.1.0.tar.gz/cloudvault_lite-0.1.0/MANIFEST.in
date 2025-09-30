@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include cloud *.py
+recursive-include wrappers *.py

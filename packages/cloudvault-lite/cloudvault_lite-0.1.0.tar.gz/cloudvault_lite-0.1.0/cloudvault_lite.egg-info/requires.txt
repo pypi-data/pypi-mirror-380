@@ -1,0 +1,8 @@
+contextvault>=0.1.0
+fastapi>=0.70.0
+uvicorn[standard]>=0.17.0
+pillow>=9.0.0
+qrcode>=7.0
+
+[:platform_system == "Windows" or platform_system == "Linux" or platform_system == "Darwin"]
+pyzbar>=0.1.8
