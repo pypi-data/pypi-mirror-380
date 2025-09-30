@@ -1,0 +1,6 @@
+dora_cli/__init__.py,sha256=qrutQA9DsBZNsl4q81736NjxpBLjLDJqES1mjjK7Uts,115
+dora_cli/dora_cli.abi3.so,sha256=FAGSNNERiINiLkSX5C6qnxbgMhBrEnuTwQjEpBa_vKA,26281120
+dora_rs_cli-0.3.9.post0.dist-info/METADATA,sha256=SeEZcjDd5geHgu-hroBurC_F6aP3D7tXlerCSEEEEfE,138
+dora_rs_cli-0.3.9.post0.dist-info/WHEEL,sha256=aCJZ1_TowweRDOS2CdoZm6TuOJJGZtCD10G-Asa9J1M,102
+dora_rs_cli-0.3.9.post0.dist-info/entry_points.txt,sha256=zbnh0GUaWctaHrIIc3stOrRmjzKbyisVZS8ShZDmcZU,40
+dora_rs_cli-0.3.9.post0.dist-info/RECORD,,
