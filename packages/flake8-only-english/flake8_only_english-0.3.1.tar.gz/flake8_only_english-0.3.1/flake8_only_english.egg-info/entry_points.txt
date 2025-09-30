@@ -1,0 +1,2 @@
+[flake8.extension]
+NLE = flake8_only_english.checker:NonEnglishChecker

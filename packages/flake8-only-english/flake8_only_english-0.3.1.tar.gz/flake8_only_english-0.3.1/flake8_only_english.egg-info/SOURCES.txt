@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+flake8_only_english/__init__.py
+flake8_only_english/checker.py
+flake8_only_english.egg-info/PKG-INFO
+flake8_only_english.egg-info/SOURCES.txt
+flake8_only_english.egg-info/dependency_links.txt
+flake8_only_english.egg-info/entry_points.txt
+flake8_only_english.egg-info/requires.txt
+flake8_only_english.egg-info/top_level.txt
+tests/test_checker.py
