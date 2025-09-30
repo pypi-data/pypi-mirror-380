@@ -1,0 +1,2 @@
+[console_scripts]
+chalos = chalos.cli:main

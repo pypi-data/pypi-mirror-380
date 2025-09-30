@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+chalos/__init__.py
+chalos/cli.py
+chalos.egg-info/PKG-INFO
+chalos.egg-info/SOURCES.txt
+chalos.egg-info/dependency_links.txt
+chalos.egg-info/entry_points.txt
+chalos.egg-info/top_level.txt

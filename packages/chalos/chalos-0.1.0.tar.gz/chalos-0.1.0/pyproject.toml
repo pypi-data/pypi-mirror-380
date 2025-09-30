@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chalos"
+version = "0.1.0"
+description = "Order Chalos empanadas, burritos, sandwiches, and coffee from the CLI. Real hackers order Chalos from the CLI."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "William"}]
+keywords = ["cli", "chalos", "empanadas", "San Francisco"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+chalos = "chalos.cli:main"
