@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: meow-package
+Version: 0.0.1
+Summary: Add your description here
+Author: Augustin MORICEAU
+Author-email: Augustin MORICEAU <augustin.moriceau@orange.fr>
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pytest>=8.4.2
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
