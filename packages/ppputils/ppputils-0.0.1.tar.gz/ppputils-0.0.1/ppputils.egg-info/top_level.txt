@@ -1,0 +1,4 @@
+frida
+ip
+main
+pi
