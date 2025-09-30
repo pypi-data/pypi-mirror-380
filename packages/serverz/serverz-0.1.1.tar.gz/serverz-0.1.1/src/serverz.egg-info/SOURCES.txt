@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/serverz/__init__.py
+src/serverz/core.py
+src/serverz/log.py
+src/serverz/server.py
+src/serverz.egg-info/PKG-INFO
+src/serverz.egg-info/SOURCES.txt
+src/serverz.egg-info/dependency_links.txt
+src/serverz.egg-info/requires.txt
+src/serverz.egg-info/top_level.txt
+tests/test_main.py
