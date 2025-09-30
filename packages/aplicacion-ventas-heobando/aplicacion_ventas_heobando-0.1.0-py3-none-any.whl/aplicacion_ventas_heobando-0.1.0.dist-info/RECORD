@@ -1,0 +1,13 @@
+aplicacion_ventas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aplicacion_ventas/descuentos.py,sha256=rMb20hP4xnT8mMoJHBw1bvChNHT_3mYk3aBR_ITr5EU,378
+aplicacion_ventas/exceptions.py,sha256=DH4p6ztZShfsDyKYB3IVk00veJcDleFBRwC7X3JhEc4,107
+aplicacion_ventas/gestor_ventas.py,sha256=u5iXSNFi1sTeRgWkJcQtun82Skpvz718nW8H3yV0PRA,706
+aplicacion_ventas/impuestos.py,sha256=aRIcCacwC_W4e5qBq6Xyoqhljeug8nZ9_sn7O2ARpCk,365
+aplicacion_ventas/precios.py,sha256=wmP7D5t4g6-v-5BYE-mSVJrwjDdbHAZSEMbvJBVERF8,150
+aplicacion_ventas_heobando-0.1.0.dist-info/licenses/LICENCE,sha256=Dl9W375uqK4nuAZGoeXisbMbI-bo1ywMBX4YPjH_LMU,1171
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aplicacion_ventas.py,sha256=sIGsFS0AN_aquUnKxsRBveY-fdIqx0p0ushEe2mhPik,707
+aplicacion_ventas_heobando-0.1.0.dist-info/METADATA,sha256=p_EAluZbDfgZSb_rCIcgiP-ELYWUh06yABDdN6tujzE,942
+aplicacion_ventas_heobando-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aplicacion_ventas_heobando-0.1.0.dist-info/top_level.txt,sha256=e68vDMUd0q6tO18ZL6CxZSvXsWFGh3xXNwO4KUgPHvI,24
+aplicacion_ventas_heobando-0.1.0.dist-info/RECORD,,
