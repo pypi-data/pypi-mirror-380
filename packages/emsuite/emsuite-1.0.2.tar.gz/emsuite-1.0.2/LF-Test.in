@@ -1,0 +1,12 @@
+input_type = 'xyz'
+input_data = 'LF.xyz'
+method = 'dft'    
+basis_set = 'cc-pvtz'      
+functional = 'b3lyp'   
+charge = 0   
+spin = 0
+surface_charge = 1.0
+solvent = None            
+properties = ['exe']
+state_of_interest = 1     
+triplet = False
