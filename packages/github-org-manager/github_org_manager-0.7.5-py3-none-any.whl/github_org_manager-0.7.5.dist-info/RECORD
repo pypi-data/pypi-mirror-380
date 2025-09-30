@@ -1,0 +1,17 @@
+gh_org_mgr/__init__.py,sha256=o9jJ3rEQvj1fZzB8vusI46f-JCWbEClfvIA3ItM7YcM,195
+gh_org_mgr/_config.py,sha256=kSzKGKU0WgrGZVoP4Akz5J743JesIOGZYFYQ_dHAbgE,7636
+gh_org_mgr/_gh_api.py,sha256=qQMSDas0_8dZcbzBpMdouNsb5mYoHsAFTZfZD-MjuzM,1557
+gh_org_mgr/_gh_org.py,sha256=9cvEWhaPbHRITFspIzdhhEKmYI0fozOI964UQfCw8VQ,64703
+gh_org_mgr/_helpers.py,sha256=YheOFYaxUEIHTvHPXxeW5_IMmewul846EHj-5ufYbVs,4794
+gh_org_mgr/_setup_team.py,sha256=ZLjffkKDFUOIiDgYmOm9RzpWrW4VHZR-EzuzYh3AvZ4,4071
+gh_org_mgr/_stats.py,sha256=UsHKyeW7G8EO6eCd8VqTI8tWFR8PqAuQiUITeKhcu60,11797
+gh_org_mgr/manage.py,sha256=RK-90_ic1hs3i1N_Uoi6e4z0sBR6lrFJqe3PyJROO-o,6508
+github_org_manager-0.7.5.dist-info/METADATA,sha256=hN8LkPaqZV4j0pgizsHzOfvfXQz9_aIchyQo4Z8WGdk,6768
+github_org_manager-0.7.5.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+github_org_manager-0.7.5.dist-info/entry_points.txt,sha256=UvIzawHGPjM3Fd50EelkOV7cFGCORLv1QcoUpnfh4-E,53
+github_org_manager-0.7.5.dist-info/licenses/LICENSE.txt,sha256=8pvxf52tN_nX90920or0I6vhOxZqUmZxoDk5Aut5VGU,11361
+github_org_manager-0.7.5.dist-info/licenses/LICENSES/Apache-2.0.txt,sha256=8pvxf52tN_nX90920or0I6vhOxZqUmZxoDk5Aut5VGU,11361
+github_org_manager-0.7.5.dist-info/licenses/LICENSES/CC-BY-4.0.txt,sha256=1VdTnfaOdxzB7tzJHRP3D8qTDlCNEe7cr6SxXbSeN0Q,17023
+github_org_manager-0.7.5.dist-info/licenses/LICENSES/CC0-1.0.txt,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+github_org_manager-0.7.5.dist-info/licenses/LICENSES/MIT.txt,sha256=uF3NPkU9BZglUsUrX8ngvdbSPG-OhEuYSoivMlcLDMA,1078
+github_org_manager-0.7.5.dist-info/RECORD,,
