@@ -1,0 +1,5 @@
+name: RuleSet - test failing probe
+probes:
+  - name: Probe - test failing
+    type: scriptlet
+    url: file://tests/resources/probes/python/failing.py

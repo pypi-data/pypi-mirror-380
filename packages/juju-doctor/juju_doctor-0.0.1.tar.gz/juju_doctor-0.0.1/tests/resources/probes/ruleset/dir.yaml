@@ -1,0 +1,5 @@
+name: RuleSet - test directory of probes
+probes:
+  - name: Probe - test directory
+    type: ruleset
+    url: file://tests/resources/probes/ruleset/small-dir
