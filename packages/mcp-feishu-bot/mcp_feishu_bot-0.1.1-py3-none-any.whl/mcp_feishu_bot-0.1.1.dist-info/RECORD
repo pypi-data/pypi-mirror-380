@@ -1,0 +1,11 @@
+mcp_feishu_bot/__init__.py,sha256=JvMj6DkD3U2lAgSh7husH_nfIutb4FvUseNwQ5Ry4nk,424
+mcp_feishu_bot/bitable.py,sha256=HX9nCMnF5SfybjW8cyoIrTuAJmHVXQxW6_Jrq8w5ScA,51035
+mcp_feishu_bot/client.py,sha256=-y2djjT5C9cRczEEaOYsUjFQU5HQj8STU3m9J6kUeso,7655
+mcp_feishu_bot/drive.py,sha256=u2_Q_NcEGVb9zs6wgWaBsFNPgFLCXF-3qLlAu4yAxGA,8851
+mcp_feishu_bot/main.py,sha256=XrIpcr9AWBL8OYuyvqijg08hT9mbJlEfBa8-luq0u2Q,12673
+mcp_feishu_bot/message.py,sha256=trqFBvZ4zdcvmSJIdo5RCJdyuqcuXa8Js9peCXQEO34,12586
+mcp_feishu_bot-0.1.1.dist-info/METADATA,sha256=4A_S6JvISt5ssDc8xNIr8e3QXeTdu_Bit6FpUdL3MzU,278
+mcp_feishu_bot-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcp_feishu_bot-0.1.1.dist-info/entry_points.txt,sha256=2ks1zKUzYbw11mhdjg3HFcy5Uz3_rwUaOfN5RbSuSls,60
+mcp_feishu_bot-0.1.1.dist-info/top_level.txt,sha256=J5gjiHpItazWFwcsMk4z3__vfgfR6yotchERs8u9aOE,15
+mcp_feishu_bot-0.1.1.dist-info/RECORD,,
