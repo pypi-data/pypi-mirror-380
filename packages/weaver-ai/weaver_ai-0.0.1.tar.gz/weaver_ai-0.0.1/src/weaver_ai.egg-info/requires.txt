@@ -1,0 +1,17 @@
+langchain
+langgraph
+langchain-openai
+pydantic
+python-dotenv
+langchain-community
+
+[dev]
+pytest
+ruff
+black
+ipykernel
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+mkdocs-gen-files
+mkdocs-literate-nav
