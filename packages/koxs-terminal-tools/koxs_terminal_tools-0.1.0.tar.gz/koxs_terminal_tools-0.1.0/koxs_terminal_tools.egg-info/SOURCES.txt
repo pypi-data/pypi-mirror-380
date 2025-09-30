@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+koxs_terminal_tools.egg-info/PKG-INFO
+koxs_terminal_tools.egg-info/SOURCES.txt
+koxs_terminal_tools.egg-info/dependency_links.txt
+koxs_terminal_tools.egg-info/top_level.txt
