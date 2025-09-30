@@ -1,0 +1,104 @@
+# this_file: .github/workflows/push.yml
+name: Build & Test
+
+on:
+  push:
+    branches: [main]
+    tags-ignore: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_SYSTEM_PYTHON: 1
+  PYTHONUNBUFFERED: 1
+
+jobs:
+  # Quick verification for main branch pushes
+  # Full testing happens in CI workflow for PRs
+  quick-verify:
+    name: Quick Verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            .venv
+          key: push-verify-${{ runner.os }}-${{ hashFiles('**/pyproject.toml', '**/uv.lock') }}
+          restore-keys: |
+            push-verify-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          uv sync --all-extras --frozen
+
+      - name: Run quick quality and test suite
+        run: |
+          # Run quality checks and core tests in parallel
+          python scripts/quality-check.py &
+          QUALITY_PID=$!
+
+          # Run core test suite
+          uv run pytest tests/test_package.py tests/test_init.py tests/test_uutel.py -v --tb=short &
+          TEST_PID=$!
+
+          # Wait for both to complete
+          wait $QUALITY_PID && wait $TEST_PID
+
+      - name: Verify examples work
+        run: |
+          cd examples
+          uv run python basic_usage.py
+
+  # Build verification
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Build and verify package
+        run: |
+          uv build
+          uv tool run --from twine twine check dist/*
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-main-${{ github.sha }}
+          path: dist/
+          retention-days: 3
