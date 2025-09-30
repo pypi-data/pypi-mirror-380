@@ -1,0 +1,10 @@
+ros_cdk_cloudsso/__init__.py,sha256=6ddT3k1O5VpUsdk6ZnqzmayYc_wYuB2oVYXaIAX2lhc,341372
+ros_cdk_cloudsso/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ros_cdk_cloudsso/_jsii/__init__.py,sha256=QIHF0S9p4lcgK0BcDHlzTSGbOGauoBCYNa58L9RWmPo,429
+ros_cdk_cloudsso/_jsii/ros-cdk-cloudsso@1.10.0.jsii.tgz,sha256=09m-iBrSOFjLGCczrU55RCAdGJNtMxJmD8iXV-3FI8g,89140
+ros_cdk_cloudsso-1.10.0.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+ros_cdk_cloudsso-1.10.0.dist-info/METADATA,sha256=P8Ux2pEEBe2bOe4YUxBaw_rFaafRfHxFDqOw6ZzZqME,1468
+ros_cdk_cloudsso-1.10.0.dist-info/NOTICE,sha256=2QphLC5EbcXMxwWTewMxg9-WTM-FRkvUc5DpqpFapkA,121
+ros_cdk_cloudsso-1.10.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ros_cdk_cloudsso-1.10.0.dist-info/top_level.txt,sha256=Nc00aP67b5Ux7Oq78M7ZInovLKWLz4S8dgbnN0fn64c,17
+ros_cdk_cloudsso-1.10.0.dist-info/RECORD,,
