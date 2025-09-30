@@ -1,0 +1,11 @@
+pydicom>=2.3
+PyYAML>=6.0
+jsonschema>=4.20
+numpy>=1.22
+
+[lint]
+ruff
+black
+
+[test]
+pytest>=8.4.2
