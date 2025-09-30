@@ -1,0 +1,8 @@
+blacksheep>=2.4.1
+rbfly>=0.10.0
+uvloop
+
+[tests]
+mypy==1.18.2
+ruff
+pytest
