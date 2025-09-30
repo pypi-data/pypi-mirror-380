@@ -1,0 +1,141 @@
+Metadata-Version: 2.4
+Name: him-lychee
+Version: 0.2.2
+Summary: Lychee Language Core: Optimized Slang Replacement and NLP Toolkit.
+Home-page: https://github.com/yourusername/him-lychee-repo-name
+Author: Himpadma "Him"
+Author-email: himpadma2004@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: regex
+Requires-Dist: nltk
+Requires-Dist: textblob
+Requires-Dist: emoji
+Requires-Dist: spacy
+Provides-Extra: spacy-model
+Requires-Dist: en_core_web_sm; extra == "spacy-model"
+Dynamic: license-file
+
+Lychee Language Core (him-lychee)
+Version 0.2.0 - Developed by Himpadma "Him"
+
+Lychee is a lightweight, highly optimized Python package designed to quickly process user-generated text. It provides robust, single-pass slang replacement and a powerful suite of text cleaning tools necessary for Natural Language Processing (NLP) tasks like Sentiment Analysis.
+
+Installation
+pip install him-lychee
+
+Post-Installation Setup (Required for Full NLP Features)
+To use the advanced features (Stopwords, Stemming, Lemmatization, SpaCy), you must download the required models once:
+
+python -m nltk.downloader stopwords punkt wordnet
+python -m textblob.download_corpora
+python -m spacy download en_core_web_sm
+
+Lychee Core Usage (SlangDictionary Class)
+The core SlangDictionary class provides robust, optimized slang replacement.
+
+Method
+
+Description
+
+Example Usage
+
+replace_slang_in_text(text)
+
+Crucial for Data Cleaning. Replaces all recognized slang terms in a single string with their full meanings. Highly optimized using a single regex pass.
+
+slang_core.replace_slang_in_text(text)
+
+get_meaning(slang_term)
+
+Finds the meaning of a given slang term (case-insensitive).
+
+slang_core.get_meaning('BRB')
+
+reverse_lookup(meaning)
+
+Finds all slang terms that map to a specific meaning.
+
+slang_core.reverse_lookup('Laugh out loud')
+
+Pandas Example (Recommended Usage)
+import pandas as pd
+import lychee
+
+slang_core = lychee.SlangDictionary()
+df = pd.DataFrame({'review': ['OMG, that pic is GOAT!', 'IDK why BRB took so long.']})
+
+# Apply the function across the entire DataFrame column for high speed
+df['cleaned_review'] = df['review'].apply(slang_core.replace_slang_in_text)
+
+NLP Cleaning Pipeline (TextCleaner Class)
+The TextCleaner class provides functions to prepare text for machine learning models.
+
+cleaner = lychee.TextCleaner()
+text = "The <br/> GOAT said: [https://example.com/](https://example.com/) LOL! 😃"
+
+Function
+
+Description
+
+Example Usage
+
+remove_html_tags(text)
+
+Strips HTML markup from the text.
+
+cleaner.remove_html_tags(text)
+
+remove_urls(text)
+
+Removes all web URLs (http, https, www).
+
+cleaner.remove_urls(text)
+
+remove_punctuation(text)
+
+Removes standard punctuation marks.
+
+cleaner.remove_punctuation(text)
+
+clean_emojis(text, mode='replace')
+
+Replaces emojis with text codes (e.g., 😃 -> :smiling_face:), or removes them if mode='remove'.
+
+cleaner.clean_emojis(text, 'replace')
+
+remove_stopwords(text)
+
+Removes common stop words (e.g., 'a', 'the', 'is').
+
+cleaner.remove_stopwords(text)
+
+spelling_correction(text)
+
+Corrects common misspellings (using TextBlob, can be slow).
+
+cleaner.spelling_correction(text)
+
+stem_words(text)
+
+Reduces words to their root form (e.g., 'running' -> 'run').
+
+cleaner.stem_words(text)
+
+lemmatize_text(text)
+
+Reduces words to their dictionary form (e.g., 'better' -> 'good').
+
+cleaner.lemmatize_text(text)
+
+tokenize(text, library='nltk')
+
+Splits text into word tokens using either NLTK or SpaCy.
+
+cleaner.tokenize(text, 'spacy')
