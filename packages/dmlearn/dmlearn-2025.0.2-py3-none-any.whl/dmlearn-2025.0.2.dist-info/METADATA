@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: dmlearn
+Version: 2025.0.2
+Summary: Fundamental machine learning utility package
+Author: Miroslav Dzhokanov
+Maintainer-email: Miroslav Dzhokanov <m@dzho.km>
+License-Expression: MIT
+Project-URL: source, https://github.com/dzhokn/dmlearn
+Project-URL: download, https://pypi.org/project/dmlearn/#files
+Project-URL: tracker, https://github.com/dzhokn/dmlearn/issues
+Keywords: machine learning,deep learning,neural network,utility
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# dmlearn
+dmlearn is a Python module for machine learning built on top of NumPy and is distributed under the MIT license.
