@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magic-admin"
+version = "2.1.2"
+description = "Magic Python Library"
+readme = "README.md"
+authors = [
+    {name = "Magic", email = "support@magic.link"}
+]
+keywords = ["magic", "python", "sdk"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
+
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "requests==2.32.5",
+    "web3==7.13.0",
+    "websockets==15.0.1",
+]
+
+[project.urls]
+Website = "https://magic.link"
+
+[tool.setuptools]
+packages = ["magic_admin"]
+
+[tool.setuptools.package-data]
+magic_admin = ["*.txt", "*.md"]
