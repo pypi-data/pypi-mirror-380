@@ -1,0 +1,3 @@
+[console_scripts]
+te = tedit.__main__:main
+tedit = tedit.__main__:main
