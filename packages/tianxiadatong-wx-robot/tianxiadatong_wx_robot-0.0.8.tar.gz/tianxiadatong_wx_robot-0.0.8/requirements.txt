@@ -1,0 +1,11 @@
+websockets==15.0.1
+aiohttp==3.12.15
+esdk-obs-python==3.25.3
+sentry-sdk==0.10.2
+
+comtypes==1.4.11
+colorama==0.4.6
+pywin32==310
+pyperclip==1.9.0
+psutil==7.1.0
+pillow==11.2.1
