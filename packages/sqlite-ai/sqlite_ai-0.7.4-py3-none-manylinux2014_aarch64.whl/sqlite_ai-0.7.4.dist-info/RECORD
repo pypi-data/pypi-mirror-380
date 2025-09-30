@@ -1,0 +1,9 @@
+sqlite_ai-0.7.4.data/purelib/sqliteai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlite_ai-0.7.4.data/purelib/sqliteai/_version.py,sha256=6zzTaqQSqZIah99N7EMsQh_S-AYnZgOVSjoqZ79J1_E,67
+sqlite_ai-0.7.4.data/purelib/sqliteai/binaries/cpu/ai.so,sha256=CaCYzLf_wlmSrf-ToTPahsqRohUfyMbGMJgCaLiIJe4,4184512
+sqlite_ai-0.7.4.data/purelib/sqliteai/binaries/gpu/ai.so,sha256=x0AhQXpV_udHj1wqRMnL0-qmF__MEOyrP3LSzOxIAQU,41554968
+sqlite_ai-0.7.4.dist-info/licenses/LICENSE.md,sha256=SB3cxwqwiNyHoEpSeR7OyErtoNbR5uWLlzD6xMO3xyg,1831
+sqlite_ai-0.7.4.dist-info/METADATA,sha256=pYFeho9MFSZQLfTw1T7THGs5B_KxsHQFvOYMfS0V1uc,3084
+sqlite_ai-0.7.4.dist-info/WHEEL,sha256=Vpa4Mt3qNG1Y_MW54KqnXyda9-oHshxwnGOaYhlQz5o,110
+sqlite_ai-0.7.4.dist-info/top_level.txt,sha256=_uPq8pm06R7zBj-QjzdqedSw48NANMoGxRDsgGMGl4M,9
+sqlite_ai-0.7.4.dist-info/RECORD,,
