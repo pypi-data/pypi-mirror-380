@@ -1,0 +1,11 @@
+scm_wrap-1.1.27.dist-info/licenses/LICENSE,sha256=qghB5mH0LsMrn1C_P41plXnKVt8VGzWu3LyA9Zb3Uak,18031
+scmwrap/__init__.py,sha256=1Ws6KRtynjOY63HHXOTUGebrbB4jcg3D_xo5lVx1_kU,100
+scmwrap/git.py,sha256=DUdb6nxvDXjZOIYiJWKu7fo1xpyAgAH9ufTb8iQ7D2E,18275
+scmwrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scmwrap/repo.py,sha256=KJ1ELR_jg4fi7tHIvSocUR608j97yNRk-CB_gakTOo8,9163
+scmwrap/scmwrap.py,sha256=81etMHOQGG7yLo04XSfmdEMeQBv_Q0SPlevEH_o3AxM,1988
+scmwrap/svn.py,sha256=88pwZg2zAoesvPGxwr77-wXh_t-Uvd9qT0U8z6YUdU4,12534
+scm_wrap-1.1.27.dist-info/METADATA,sha256=RfvWNwax0B3jpSiRXX22VrnK7kw5r04IamerlNo8s00,656
+scm_wrap-1.1.27.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scm_wrap-1.1.27.dist-info/top_level.txt,sha256=tx-4flX5CiQuCA0YvLG4WNJ731-ZOUsiT8NVA2dGCns,8
+scm_wrap-1.1.27.dist-info/RECORD,,
