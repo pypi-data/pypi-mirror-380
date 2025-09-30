@@ -1,0 +1,11 @@
+hallunox/__init__.py,sha256=I-eKAaYmGrxq5vkiXX026njbHsVBc8b7jbz4t-cfZjM,939
+hallunox/detector.py,sha256=ck4-cHgfAqtBLKZylsGkV_3P0vaqSOlgak9DJc2MlSs,17860
+hallunox/inference.py,sha256=-8lTXA4Sn9sDYqMYki4nSr4i9zKzc5WSW0fjX2qGuyM,13263
+hallunox/training.py,sha256=nd3QJYfOugk1W279CGv5pE0U8_1mg-hr5BLdaC2gtuc,34498
+hallunox/utils.py,sha256=DnfXG0DaCcDXVkfDw36ZoTnUFPJsZECzLw8ApzRcDFE,8818
+hallunox-0.1.7.dist-info/licenses/LICENSE,sha256=99_kbIidF5m5bdGuAOf8jhs4NbirlMjYF19jwSVUsFE,35163
+hallunox-0.1.7.dist-info/METADATA,sha256=6n-00oUT_4z6FsMKKqgmplN_wxt-xbpzy17hbPbz_VE,14974
+hallunox-0.1.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hallunox-0.1.7.dist-info/entry_points.txt,sha256=C57jf86a2k6Q-wkot8eVm8dsS07cl2mtaWvE5bhgATI,99
+hallunox-0.1.7.dist-info/top_level.txt,sha256=fLlJpsDiCYYcaBYFF5PJGKEm_hE0a8mWSzwMnE7sQZc,9
+hallunox-0.1.7.dist-info/RECORD,,
