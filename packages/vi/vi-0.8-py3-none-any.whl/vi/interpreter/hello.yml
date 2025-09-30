@@ -1,0 +1,8 @@
+- system_method:
+    - ms.compute.g03: {input_folder: "origin", output_folder: "pm3", method: "pm3"}
+#    - ms.compute.g03: {input_folder: "pm3",output_folder: "hf",method: "hf/3-21G*"}
+#    - ms.sample.uniq_energy_cut: {energy_cut: 20}
+#    - ms.compute.g03: {input_folder: "hf",output_folder: "hfopt",method: "hf/3-21G* opt"}
+#    - ms.sample.uniq_energy_cut: {energy_cut: 10}
+#    - ms.compute.g03: {input_folder: "hfopt",output_folder: "bh",method: "bhandhlyp/6-31G* opt"}
+#    - ms.sample.uniq_energy_cut: {energy_cut: 5}
