@@ -1,0 +1,25 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include requirements.txt
+include environment.yml
+include pyproject.toml
+
+recursive-include plastro *.py
+recursive-include docs *.rst *.py *.md
+recursive-include docs *.png *.jpg *.jpeg *.gif *.svg
+recursive-include tests *.py
+recursive-include conda-recipe *.yaml
+
+include plasticity_simulation_example.ipynb
+
+# Exclude development and build files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*
+exclude .gitignore
+exclude .pre-commit-config.yaml
