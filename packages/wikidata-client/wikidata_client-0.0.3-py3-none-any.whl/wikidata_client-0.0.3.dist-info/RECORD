@@ -1,0 +1,14 @@
+wikidata_client/.DS_Store,sha256=2EO2JC6ru86PivHPCK4hBTQKrOUEwOAxXuOytEoTEOk,6148
+wikidata_client/__init__.py,sha256=LvH4hCFdBi5yZoyenjc_9fN1-HLS5zTCW_c1mLP5CIs,689
+wikidata_client/__main__.py,sha256=_NSDdYNpDdlUeTiSPBbKtmuKV8TlQJdVGwbwIBvI760,132
+wikidata_client/api.py,sha256=T09YIIB07IJmXYBbHftDiX2bJcQ5Xn0Js2iITR5t9Ik,5258
+wikidata_client/cli.py,sha256=h4ZddErK4EzZbs_VPJCL2rOcc5g6MIpNqqRfGbJAAi4,345
+wikidata_client/constants.py,sha256=C7D1aVlSpLEEyzfz9Z-vgNZqTAn0IBNmzI4-3n0d_bo,717
+wikidata_client/properties.py,sha256=2l6oZvgz3sHrAiY1y-JshGvRhHm1bU0K1Z67g8l8CTw,4229
+wikidata_client/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+wikidata_client/version.py,sha256=UqUeYAr_M1J8BSUAMZDKiAm8knyA5VlUfVMStfS4brs,985
+wikidata_client-0.0.3.dist-info/licenses/LICENSE,sha256=S-DsND478R_VQyGmtXbVYW67fRiJj3QfY8UXIJ4zvLI,1076
+wikidata_client-0.0.3.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+wikidata_client-0.0.3.dist-info/entry_points.txt,sha256=BX2LXr4leXN2v7itvppYhI334Od0hzzf2BbMFfpWBVM,62
+wikidata_client-0.0.3.dist-info/METADATA,sha256=sUpMGn1fYzvPoDpl5AJTHqZTP6UUB1_acUuXPv27uC8,13064
+wikidata_client-0.0.3.dist-info/RECORD,,
