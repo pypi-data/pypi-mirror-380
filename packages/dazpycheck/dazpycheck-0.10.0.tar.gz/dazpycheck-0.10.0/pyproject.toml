@@ -1,0 +1,31 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dazpycheck"
+dynamic = ["version"]
+authors = [
+  { name="Darren Oakey", email="darren@oakey.net" },
+]
+description = "A tool to check and validate a Python code repository."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+dazpycheck = "dazpycheck.main:cli"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dazpycheck.__version__"}
