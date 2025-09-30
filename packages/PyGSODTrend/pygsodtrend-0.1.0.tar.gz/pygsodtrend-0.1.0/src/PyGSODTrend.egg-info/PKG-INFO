@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: PyGSODTrend
+Version: 0.1.0
+Summary: Analyze and map climate trends from GSOD data using the Mann-Kendall test.
+Author-email: Adithya Sridhar <adithya.sridh@gmail.com>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/adsrx222/PyGSODTrend
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Cartopy==0.25.0
+Requires-Dist: certifi==2025.8.3
+Requires-Dist: contourpy==1.3.3
+Requires-Dist: cycler==0.12.1
+Requires-Dist: fonttools==4.60.1
+Requires-Dist: kiwisolver==1.4.9
+Requires-Dist: matplotlib==3.10.6
+Requires-Dist: numpy==2.3.3
+Requires-Dist: packaging==25.0
+Requires-Dist: pandas==2.3.3
+Requires-Dist: pillow==11.3.0
+Requires-Dist: pymannkendall==1.4.3
+Requires-Dist: pyparsing==3.2.5
+Requires-Dist: pyproj==3.7.2
+Requires-Dist: pyshp==2.3.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.2
+Requires-Dist: scipy==1.16.2
+Requires-Dist: shapely==2.1.2
+Requires-Dist: six==1.17.0
+Requires-Dist: tzdata==2025.2
+Requires-Dist: rich>=14.0
+
+# PyGSODTrend
+
+PyGSODTrend is a command-line tool for analyzing **climate trends** from NOAA's GSOD (Global Summary of the Day) datasets.  
+It cleans raw GSOD CSV data, performs **Mann-Kendall trend analysis** on precipitation (PRCP), maximum temperature (MAX), and minimum temperature (MIN), and generates **geographic scatter plots** of detected trends.
+
+---
+
+## Features
+- ✅ Cleans GSOD input data by filtering invalid temperature and precipitation values.  
+- ✅ Performs **trend analysis** using the Mann-Kendall statistical test.  
+- ✅ Generates **geographic trend maps** for PRCP, MAX, and MIN.  
+- ✅ Provides real-time CLI feedback with progress spinners.  
+- ✅ Saves output plots as PNG images in the `results/` directory.  
+
+---
+
+## Installation
+
+```bash
+pip install pygsodtrend
+```
+
+---
+
+## Usage
+
+Run the tool on a GSOD CSV file:
+
+```bash
+pygsodtrend path/to/input.csv input_file --temp_min --temp_max --prcp_max --alpha
+```
+
+### Arguments
+
+| Argument        | Type   | Default | Description |
+|-----------------|--------|---------|-------------|
+| `input_file`    | str    | —       | Path to the input GSOD CSV file. |
+| `--temp_min`    | float  | -50.0   | Minimum valid temperature (°F). |
+| `--temp_max`    | float  | 130.0   | Maximum valid temperature (°F). |
+| `--prcp_max`    | float  | 500.0   | Maximum valid precipitation (mm). |
+| `--alpha`       | float  | 0.05    | Significance level for Mann-Kendall test. |
+
+---
+
+## Example CLI Output
+
+```bash
+Analyzing trend for PRCP...
+✔ Trend map for PRCP saved to: results/trendmapprcp.png
+Analyzing trend for MAX...
+✔ Trend map for MAX saved to: results/trendmapmax.png
+Analyzing trend for MIN...
+✔ Trend map for MIN saved to: results/trendmapmin.png
+All trend maps generated.
+```
+
+---
+
+## License
+This project is licensed under the MIT License.  
+Feel free to use, modify, and distribute.
