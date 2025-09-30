@@ -1,0 +1,154 @@
+Metadata-Version: 2.3
+Name: pg-runner
+Version: 0.1.1
+Summary: Standalone PostgreSQL database setup and SQL runner with phase and directory modes
+License: MIT
+Keywords: postgresql,sql,sqlalchemy,cli,devops,database
+Author: khodaparastan
+Author-email: mohammad@khodaparastan.com
+Requires-Python: >=3.13
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Database
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Dist: SQLAlchemy (>=2.0,<3.0)
+Requires-Dist: psycopg[binary] (>=3.1)
+Project-URL: Homepage, https://github.com/khodaparastan/pg-runner
+Project-URL: Repository, https://github.com/khodaparastan/pg-runner
+Description-Content-Type: text/markdown
+
+# PG Runner: A Robust PostgreSQL Script Runner
+
+[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/release/python-3130/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**PG Runner** is a standalone, production-ready Python CLI tool for reliably executing SQL scripts against a PostgreSQL database. It's designed to handle the complexities of real-world SQL files, making database setups and migrations safe, repeatable, and easy to debug.
+
+The core of this tool is a sophisticated SQL statement parser that correctly handles semicolons inside comments, string literals, and PostgreSQL-specific dollar-quoted strings, preventing common script-running failures.
+
+## Key Features
+
+- **🛡️ Robust SQL Parser:** Intelligently splits SQL files into individual statements, correctly handling:
+  - Single-quoted strings (`'...'`) with escapes (`''`).
+  - Double-quoted identifiers (`"..."`) with escapes (`""`).
+  - PostgreSQL dollar-quoted strings (`$$...$$` and `$tag$...$tag$`).
+  - Line (`--`) and block (`/* ... */`) comments.
+- **⚙️ Transactional Safety:** Executes each SQL file within a single transaction by default. If any statement fails, the entire batch is rolled back, ensuring your database remains in a consistent state.
+- **🚀 Two Execution Modes:**
+    1. **`phases` mode:** For structured projects, executes specific, named SQL files (`schema.sql`, `indexes.sql`, etc.) in a defined order.
+    2. **`dir` mode:** A general-purpose mode that finds and executes all `.sql` files in a directory alphabetically.
+- **⚡ Non-Transactional DDL:** Supports autocommit mode for operations that cannot run inside a transaction, such as `CREATE INDEX CONCURRENTLY`.
+- **🔌 Flexible Configuration:** Configure your database connection via a single `--db-url`, discrete CLI flags (`--host`, `--user`, etc.), or standard `POSTGRES_*` environment variables.
+
+## Installation
+
+Install it using `pip` or `pipx`. This will make the `pg-runner` command available in your shell.
+
+```bash
+pip install pg-runner
+# Or
+pipx install pg-runner
+````
+
+## Usage
+
+The tool is invoked via the `pg-runner` command, which has two main subcommands: `phases` and `dir`.
+
+```bash
+$ pg-runner --help
+usage: pg-runner [-h] [--log-level LOG_LEVEL] [--no-emoji] --db-url DB_URL | --host HOST | ... {phases,dir,...} ...
+
+Standalone PostgreSQL database setup and SQL runner
+
+options:
+  -h, --help            show this help message and exit
+  --log-level LOG_LEVEL
+                        Logging level (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL). Default: INFO
+  --no-emoji            Disable emoji output for CI environments
+
+database connection options:
+  --db-url DB_URL       SQLAlchemy DB URL (overrides other connection options). Can also be provided via DATABASE_URL or DB_URL
+  --host HOST           DB host (default: POSTGRES_HOST or localhost)
+  --port PORT           DB port (default: POSTGRES_PORT or 5432)
+  --database DATABASE   Database name (default: POSTGRES_DB/POSTGRES_DATABASE or postgres)
+  --user USER           DB user (default: POSTGRES_USER or postgres)
+  --password PASSWORD   DB password (default: POSTGRES_PASSWORD or empty)
+
+subcommands:
+  {phases,dir,schema,indexes,views,price_analysis_views}
+    phases              Run project-style phases (schema, indexes, views, price_analysis_views)
+    dir                 Run all .sql files in a directory in alphabetical order
+    schema              Run only the schema phase
+    indexes             Run only the indexes phase
+    views               Run only the views phase
+```
+
+### Example 1: `phases` mode
+
+This mode is ideal for projects with a defined structure.
+
+**Directory Structure:**
+
+```text
+my_project/
+└── database/
+    ├── schema.sql
+    ├── indexes.sql
+    └── views.sql
+```
+
+**Command:**
+
+```bash
+# Set environment variables for the connection
+export POSTGRES_USER=myuser
+export POSTGRES_PASSWORD=secret
+export POSTGRES_DB=mydb
+
+# Run all phases in the default order
+pg-runner phases --db-dir ./database
+
+# Run only the 'schema' phase using the convenience command
+pg-runner schema --db-dir ./database
+```
+
+### Example 2: `dir` mode
+
+This mode is for running a collection of SQL scripts in a generic directory.
+
+**Directory Structure:**
+
+```text
+migration_scripts/
+├── 01_create_users.sql
+├── 02_create_products.sql
+└── 03_populate_data.sql
+```
+
+**Command:**
+
+```bash
+# Run all .sql files in the directory using a DB URL
+pg-runner dir \
+  --sql-dir ./migration_scripts \
+  --db-url "postgresql://myuser:secret@localhost/mydb"
+```
+
+To run with non-transactional execution (e.g., for concurrent index creation), use `--autocommit`:
+
+```bash
+pg-runner dir --sql-dir ./indexes --autocommit
+```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
