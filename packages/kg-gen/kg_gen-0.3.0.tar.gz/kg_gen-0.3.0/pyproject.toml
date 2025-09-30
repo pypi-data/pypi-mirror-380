@@ -1,0 +1,46 @@
+[project]
+name = "kg-gen"
+version = "0.3.0"
+authors = [{ name = "Belinda Mo", email = "justanexperimentpark@gmail.com" }]
+description = "Extract a knowledge graph using LLMs from any text or messages array"
+readme = "README.md"
+requires-python = ">=3.10, <4.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+license = "MIT"
+dependencies = [
+    "nltk",
+    "pydantic>=2.0.0",
+    "pre-commit>=4.3.0",
+    "ty>=0.0.1a21",
+    "dspy>=2.6.27",
+    "openai>=1.108.1",
+    "pyvis>=0.3.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/stair-lab/kg-gen"
+Issues = "https://github.com/stair-lab/kg-gen/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"kg_gen.utils" = ["template.html"]
+
+[dependency-groups]
+dev = ["pytest>=8.4.2", "typer>=0.17.4", "wikipedia-api>=0.8.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv.workspace]
+members = [
+    "scratch",
+]
