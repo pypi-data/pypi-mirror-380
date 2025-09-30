@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: donnes-des-sous-kyllian
+Version: 0.0.1
+Summary: Add your description here
+Author: KyllianCamp
+Author-email: KyllianCamp <campagnekyllian@gmail.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
