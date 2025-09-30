@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: Figure_square
+Version: 0.0.3
+Summary: Решение задачи №2 в вакансии.
+Home-page: https://github.com/zteewt/MindBox/
+Author: zteewt
+Author-email: dzynyok@mail.ru
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary

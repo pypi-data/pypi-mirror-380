@@ -1,0 +1,7 @@
+Figure_square.py
+setup.cfg
+setup.py
+Figure_square.egg-info/PKG-INFO
+Figure_square.egg-info/SOURCES.txt
+Figure_square.egg-info/dependency_links.txt
+Figure_square.egg-info/top_level.txt
