@@ -1,0 +1,3 @@
+[console_scripts]
+parxy = parxy_cli.cli:main
+
