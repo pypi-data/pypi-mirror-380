@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: spinachlangapi
+Version: 0.1.0
+Summary: A quantum programming language and compiler API.
+Author-email: Cedrick Gauthier <spinachlang@proton.me>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: spinachlang==0.2.3
+Requires-Dist: fastapi==0.118.0
+Requires-Dist: strawberry-graphql[fastapi]==0.282.0
+Requires-Dist: python-dotenv==1.1.1
+Requires-Dist: uvicorn<0.35,>=0.16
+Provides-Extra: dev
+Requires-Dist: pylint>=3.2.0; extra == "dev"
+Requires-Dist: pytest>=8.3.0; extra == "dev"
+Dynamic: license-file
+
+# spinachlang-api
+An API to enable server side compilation.
+
+This is part of the spinachlang project. This uses the package spinachlang to create a graphql server that can compile multiple codes in multiple languages in a single querry.
+
+
+[documentation](https://spinachlang.github.io/spinachsite/)
+
+
+[source](https://github.com/spinachlang/spinachlang-api)

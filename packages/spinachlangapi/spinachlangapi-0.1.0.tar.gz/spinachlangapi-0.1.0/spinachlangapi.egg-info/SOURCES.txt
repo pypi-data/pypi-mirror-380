@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+spinachlangapi/__init__.py
+spinachlangapi/__main__.py
+spinachlangapi/cli.py
+spinachlangapi/main.py
+spinachlangapi.egg-info/PKG-INFO
+spinachlangapi.egg-info/SOURCES.txt
+spinachlangapi.egg-info/dependency_links.txt
+spinachlangapi.egg-info/entry_points.txt
+spinachlangapi.egg-info/requires.txt
+spinachlangapi.egg-info/top_level.txt
