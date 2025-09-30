@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: freemoneycow
+Version: 0.2.0
+Summary: Add your description here
+Author: Your Name
+Author-email: Your Name <you@example.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
