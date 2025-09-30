@@ -1,0 +1,289 @@
+# Arvasit Auth SDK - Python
+
+[![PyPI version](https://badge.fury.io/py/arvasit-auth-sdk.svg)](https://badge.fury.io/py/arvasit-auth-sdk)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The official Arvasit Authentication SDK for Python provides a comprehensive authentication solution with user management, two-factor authentication, password management, and login activity monitoring.
+
+## 🚀 Features
+
+- **Complete Authentication System** - Signup, login, logout with multiple methods
+- **Two-Factor Authentication (2FA)** - QR code generation, TOTP verification, device management
+- **Password Management** - Forgot password, reset, update with security
+- **User Management** - Profile management, username suggestions, credential validation
+- **Recovery Codes** - Generate and manage backup recovery codes
+- **Login Activity** - Track and monitor user login activities
+- **Type Safety** - Full Pydantic model validation
+- **Magic Link Authentication** - Passwordless login via email links
+
+## 📦 Installation
+
+```bash
+pip install arvasit-auth-sdk
+```
+
+## 🔧 Quick Start
+
+```python
+from auth_sdk import AuthService, AuthServiceConfig, SignupRequest, LoginRequest
+
+# Configure the SDK
+config = AuthServiceConfig(
+    url="https://your-auth-service.com",
+    public_key="your_public_key",
+    secret_key="your_secret_key"
+)
+
+# Initialize the service
+auth_service = AuthService(config)
+
+# Sign up a new user
+signup_data = SignupRequest(
+    firstName="John",
+    lastName="Doe",
+    email="john.doe@example.com",
+    username="johndoe",
+    password="SecurePassword123!",
+    phoneNumber="+1234567890"
+)
+
+user = auth_service.signup(signup_data)
+print(f"User created with ID: {user.authId}")
+
+# Login with password
+login_data = LoginRequest(
+    credential="john.doe@example.com",
+    password="SecurePassword123!"
+)
+
+login_result = auth_service.login_with_password(login_data)
+print(f"Access token: {login_result.accessToken}")
+```
+
+## 📚 API Reference
+
+### Authentication Methods
+
+#### Password Login
+```python
+from auth_sdk import LoginRequest
+
+login_data = LoginRequest(
+    credential="user@example.com",  # Email, phone, or username
+    password="user_password"
+)
+
+result = auth_service.login_with_password(login_data)
+```
+
+#### OTP Login
+```python
+from auth_sdk import OtpLoginRequest
+
+otp_data = OtpLoginRequest(
+    credential="user@example.com",
+    otp="123456"
+)
+
+result = auth_service.login_with_otp(otp_data)
+```
+
+#### Two-Factor Authentication Login
+```python
+from auth_sdk import TwoFALoginRequest
+
+twofa_data = TwoFALoginRequest(
+    credential="user@example.com",
+    totp="123456"  # TOTP code from authenticator app
+)
+
+result = auth_service.verify_two_factor_authentication(twofa_data)
+```
+
+#### Recovery Code Login
+```python
+from auth_sdk import RecoveryCodeLoginRequest
+
+recovery_data = RecoveryCodeLoginRequest(
+    credential="user@example.com",
+    recoveryCode="RECOVERY123"
+)
+
+result = auth_service.login_with_recovery_code(recovery_data)
+```
+
+### Two-Factor Authentication
+
+#### Generate 2FA Setup
+```python
+# Generate QR code and secret for 2FA setup
+twofa_data = auth_service.generate_qr_code_and_secret_for_2fa(access_token)
+print(f"Secret: {twofa_data.secret}")
+print(f"QR Code: {twofa_data.qrCode}")
+```
+
+#### Verify 2FA Setup
+```python
+from auth_sdk import VerifyQRCodeAndSecretFor2FARequest
+
+verify_data = VerifyQRCodeAndSecretFor2FARequest(
+    accessToken=access_token,
+    totp="123456",
+    secretKey="JBSWY3DPEHPK3PXP"
+)
+
+result = auth_service.verify_qr_code_and_secret_for_2fa(verify_data)
+```
+
+#### Manage 2FA Devices
+```python
+# List 2FA devices
+devices = auth_service.list_of_two_fa_secrets(access_token)
+
+# Remove a 2FA device
+auth_service.remove_two_fa_device(access_token, "device_key")
+
+# Disable 2FA
+auth_service.disable_two_fa(access_token)
+```
+
+### Password Management
+
+#### Forgot Password Flow
+```python
+# Step 1: Enter credential to get contact info
+contact_info = auth_service.enter_credential_for_forgot_password("user@example.com")
+
+# Step 2: Send OTP
+auth_service.forgot_password_send_otp("user@example.com", "email")
+
+# Step 3: Verify OTP
+reset_token = auth_service.verify_forgot_password_otp("user@example.com", "123456")
+
+# Step 4: Reset password
+auth_service.verify_token_setup_password(reset_token, "new_password")
+```
+
+#### Update Password
+```python
+auth_service.update_password(
+    credential="user@example.com",
+    old_password="old_password",
+    new_password="new_password"
+)
+```
+
+### User Management
+
+#### Username Management
+```python
+# Suggest usernames
+suggestions = auth_service.suggest_username("John", "Doe")
+
+# Check username availability
+is_available = auth_service.check_available_username("johndoe")
+```
+
+#### Credential Validation
+```python
+credential_info = auth_service.check_credential("user@example.com")
+print(f"Type: {credential_info.type}")
+print(f"Valid: {credential_info.isValid}")
+```
+
+### Token Management
+
+#### Refresh Access Token
+```python
+from auth_sdk import RefreshAccessTokenRequest
+
+refresh_data = RefreshAccessTokenRequest(token=refresh_token)
+new_tokens = auth_service.refresh_access_token(refresh_data)
+```
+
+#### Logout
+```python
+from auth_sdk import LogoutRequest
+
+logout_data = LogoutRequest(token=access_token)
+auth_service.logout(logout_data)
+```
+
+### Login Activity Monitoring
+
+#### Get Activity Counts
+```python
+activity_counts = auth_service.login_activity_counts(
+    access_token=access_token,
+    start_date="2024-01-01",
+    end_date="2024-01-31",
+    page=1,
+    limit=10
+)
+```
+
+#### Get Activity Details
+```python
+activity_details = auth_service.login_activity_details(
+    access_token=access_token,
+    start_date="2024-01-01",
+    end_date="2024-01-31",
+    page=1,
+    limit=10
+)
+```
+
+## 🔒 Security Features
+
+- **HMAC Authentication** - Secure API communication with timestamp-based signatures
+- **Type Validation** - Pydantic models ensure data integrity
+- **Error Handling** - Comprehensive error handling with detailed messages
+- **Token Management** - Secure access and refresh token handling
+
+## 🧪 Testing
+
+```python
+# Test imports
+from auth_sdk import AuthService, AuthServiceConfig, LoginRequest
+
+# Test service creation
+config = AuthServiceConfig(
+    url="https://test.com",
+    public_key="test_key",
+    secret_key="test_secret"
+)
+service = AuthService(config)
+print("✅ SDK initialized successfully")
+```
+
+## 📋 Requirements
+
+- Python 3.8+
+- requests>=2.31.0
+- pydantic>=2.0.0
+- python-dateutil>=2.8.2
+
+## 🔗 Related Projects
+
+- [Node.js SDK](../node/README.md) - TypeScript/JavaScript version
+- [FastAPI Demo](../fastapi_app/README.md) - Complete web application example
+- [API Documentation](https://github.com/arvasit/auth-sdk/blob/main/README.md)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+## 🆘 Support
+
+- 📚 [Documentation](https://github.com/arvasit/auth-sdk/blob/main/README.md)
+- 🐛 [Issue Tracker](https://github.com/arvasit/auth-sdk/issues)
+- 💬 [Discussions](https://github.com/arvasit/auth-sdk/discussions)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](https://github.com/arvasit/auth-sdk/blob/main/CONTRIBUTING.md) for details.
+
+---
+
+**Made with ❤️ by the Arvasit Team**
