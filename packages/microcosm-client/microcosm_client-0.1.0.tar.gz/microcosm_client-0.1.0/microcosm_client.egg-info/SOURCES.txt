@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+microcosmClient/__init__.py
+microcosmClient/microcosm.py
+microcosm_client.egg-info/PKG-INFO
+microcosm_client.egg-info/SOURCES.txt
+microcosm_client.egg-info/dependency_links.txt
+microcosm_client.egg-info/requires.txt
+microcosm_client.egg-info/top_level.txt
+tests/test_client.py

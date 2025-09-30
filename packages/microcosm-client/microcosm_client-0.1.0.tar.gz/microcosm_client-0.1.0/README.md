@@ -1,0 +1,19 @@
+# microcosm-client
+
+Async Microcosm API client wrapper
+
+## Quickstart
+
+```python
+import asyncio
+from microcosm import AsyncMicrocosmClient
+
+async def main():
+    async with AsyncMicrocosmClient() as micro:
+        data = await micro.links_distinct_dids("at://did:plc:oky5czdrnfjpqslsw2a5iclo/app.bsky.feed.post/3lzu6nguhwk2f", "app.bsky.feed.like", ".subject.uri")
+        print(data)
+
+asyncio.run(main())
+```
+
+See docstrings for more details on method return shapes.
