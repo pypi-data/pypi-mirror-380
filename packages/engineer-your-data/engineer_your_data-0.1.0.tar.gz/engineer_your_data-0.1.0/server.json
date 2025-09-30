@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.eghuzefa/engineer-your-data",
+  "description": "MCP server for data engineering and business intelligence operations. Provides tools for data validation, transformation, visualization, and API integration.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "identifier": "engineer-your-data",
+      "version": "0.1.0"
+    }
+  ]
+}
