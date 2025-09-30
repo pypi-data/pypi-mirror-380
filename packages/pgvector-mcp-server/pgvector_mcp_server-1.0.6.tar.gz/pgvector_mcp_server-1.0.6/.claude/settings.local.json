@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(export DASHSCOPE_API_KEY=sk-1dfaa0925d0e4320a0802a9f49ebe0a5)",
+      "Bash(uv build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
