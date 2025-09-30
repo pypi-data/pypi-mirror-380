@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: bfg-crawl
+Version: 0.1.0
+Summary: Add your description here
+Author: Lei Zhao
+Author-email: Lei Zhao <8961794+leizha@users.noreply.github.com>
+Requires-Dist: scikit-learn>=1.7.2
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# bfg-crawl
+
+A simple web crawler that fetches pages and stores them in SQLite.
+
+## Features
+
+- Multi-threaded crawling
+- Rate limiting support
+- SQLite database storage
+
+## Install
+
+```bash
+pip install bfg-crawl
+```
+
+## Usage
+
+```python
+from crawl import Crawler, RateLimitingLoader
+
+loader = ALoaderForThisWebsite()
+crawler = Crawler("pages.db", RateLimitingLoader(loader), concurrency=5)
+
+crawler.run()
+```
+
+The crawler reads URLs from a SQLite database and saves the page content back to the database.
