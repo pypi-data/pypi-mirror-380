@@ -1,0 +1,10 @@
+PyGSODTrend/__init__.py,sha256=R-qHd-yhDJxa9fRIdPptHQxxdThHmd8ku2fci9DxCFQ,263
+PyGSODTrend/__main__.py,sha256=oQ9aZLv6xiPxzp5jVcnNH9VDSe79i87hdENMALOs8eY,2484
+PyGSODTrend/data_cleaning.py,sha256=B-iSxTJ89gBhT9S37NLyamXyWdXgtHemm8_7wESbSi0,3243
+PyGSODTrend/trend_analysis.py,sha256=Sq_Gz4H9pGqCCRl1EsSLIMkJspFsxFk5R9bmAREkXsk,2120
+PyGSODTrend/visualization.py,sha256=W18xnzMk0OY_-bvmBosZFQlRzwUcG5OGOmYdccC8OBg,3769
+pygsodtrend-0.1.0.dist-info/METADATA,sha256=Yrr54tfC_TE31cJsz7OkEDQTDyYXNnQ3uncDLrH6sXg,2909
+pygsodtrend-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pygsodtrend-0.1.0.dist-info/entry_points.txt,sha256=7F5W9u2vknwT4gF_6t4u-0MRlZPFfMk_-33mjIS25s4,58
+pygsodtrend-0.1.0.dist-info/top_level.txt,sha256=pSA_wCujJVnpV_N6dXkjzW8n7Y2dVjguJcsEyiGNHFA,12
+pygsodtrend-0.1.0.dist-info/RECORD,,
