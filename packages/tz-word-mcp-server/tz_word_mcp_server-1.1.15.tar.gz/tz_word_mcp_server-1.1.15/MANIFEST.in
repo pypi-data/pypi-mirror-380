@@ -1,0 +1,14 @@
+include README.md
+include LICENSE
+include requirements.txt
+include mcp-config.json
+include smithery.yaml
+include setup_mcp.py
+recursive-include . *
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .venv*
+global-exclude *.egg-info*
+global-exclude dist/*
+global-exclude build/*
