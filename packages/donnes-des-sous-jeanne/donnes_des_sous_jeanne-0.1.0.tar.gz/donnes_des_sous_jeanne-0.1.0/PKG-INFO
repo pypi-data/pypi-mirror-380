@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: donnes-des-sous-jeanne
+Version: 0.1.0
+Summary: Add your description here
+Author: Jeanne
+Author-email: Jeanne <jdelcourtlonguepe@gmail.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
