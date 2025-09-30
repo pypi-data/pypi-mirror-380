@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: toolbox-store
+Version: 0.1.1
+Summary: Add your description here
+Author: eelcovdw
+Author-email: eelcovdw <eelcovdw@gmail.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: importlib>=1.0.4
+Requires-Dist: numpy>=2.3.2
+Requires-Dist: packaging>=25.0
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: pydantic-settings>=2.10.1
+Requires-Dist: rerankers[transformers]>=0.10.0
+Requires-Dist: semantic-text-splitter>=0.28.0
+Requires-Dist: sqlite-vec==0.1.7a2
+Requires-Dist: torch>=2.2.2
+Requires-Dist: transformers>=4.56
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
