@@ -1,0 +1,12 @@
+README.md
+setup.py
+cutword/__init__.py
+cutword/comparewithjieba.py
+cutword/cutword.py
+cutword/dict.txt
+cutword/unionwords.txt
+cutword_lite.egg-info/PKG-INFO
+cutword_lite.egg-info/SOURCES.txt
+cutword_lite.egg-info/dependency_links.txt
+cutword_lite.egg-info/requires.txt
+cutword_lite.egg-info/top_level.txt
