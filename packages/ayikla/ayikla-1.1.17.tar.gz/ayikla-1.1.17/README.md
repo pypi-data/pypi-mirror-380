@@ -1,0 +1,259 @@
+# Ayikla
+
+**Ayikla**, Türkçe metinlerden:
+
+- İsim / Ünvan
+- Telefon Numarası
+- Tarih & Saat (doğal dil dahil)
+- Tarih Aralıkları (relative + gün/ay aralıkları)
+- Lokasyon / Adres benzeri bloklar
+
+çıkaran hafif bir Python kütüphanesidir. Metindeki belirsiz veya doğal dil kalıplarını normalize ederek yapılandırılmış tek bir sözlük döndürür.
+
+##  Kurulum
+
+```bash
+pip install ayikla
+```
+
+##  Kullanım
+
+```python
+from ayikla import bul
+
+# Örnek 1: İsim + Telefon + Tarih
+metin = "Dr. Ahmet Yılmaz beni 0532 123 456x numarasından yarın saat 19'da ara."
+print(bul(metin))
+```
+
+Çıktı:
+```python
+{
+    "isimler": ["Dr Ahmet Yılmaz"],
+    "telefonlar": ["+90532123456x"],
+    "tarihler": [{"tarih": None, "saat": "19:00"}],
+    "tarih_aralik": [],
+    "lokasyonlar": []
+}
+```
+
+---
+
+```python
+from ayikla import bul
+
+# Örnek 2: Belirli bir tarih
+metin = "Çağrı Güngör 532 123 456x – 18 Ocak saat 19 'da görüşelim."
+print(bul(metin))
+```
+
+Çıktı:
+```python
+{
+    "isimler": ["Çağrı Güngör"],
+    "telefonlar": ["+905321234567"],
+    "tarihler": [{"tarih": "2025-01-18", "saat": "19:00"}],
+    "tarih_aralik": [],
+    "lokasyonlar": []
+}
+```
+
+---
+
+```python
+from ayikla import bul
+
+# Örnek 3: Sadece saat
+metin = "Sadece saat 19'da uygun olur."
+print(bul(metin))
+```
+
+Çıktı:
+```python
+{
+    "isimler": [],
+    "telefonlar": [],
+    "tarihler": [{"tarih": None, "saat": "19:00"}],
+    "tarih_aralik": [],
+    "lokasyonlar": []
+}
+```
+
+---
+
+```python
+from ayikla import bul
+
+# Örnek 4: Lokasyon / Adres
+metin = "Toplantı salı günü saat 14'te istanbul beşiktaş çarşı mah. no:5 kat 2 daire 4 ofiste olsun."
+print(bul(metin))
+```
+
+Örnek çıktı:
+```python
+{
+    "isimler": [],
+    "telefonlar": [],
+    "tarihler": [{"tarih": None, "saat": "14:00"}],
+    "tarih_aralik": [],
+    "lokasyonlar": ["Toplantı salı günü saat 14'te istanbul beşiktaş çarşı mah. no:5 kat 2 daire 4 ofiste olsun."]
+}
+```
+
+Notlar:
+- Lokasyon tespiti tamamen heuristik tabanlıdır; kesin adres ayrıştırması yapmaz.
+- Sık geçen genel kelimeler (örn. "ofis", "kat") tetikleyici pattern ile birlikte dizilim oluşturduğunda blok üretir.
+- Daha hassas çıktı istiyorsanız blokları kendiniz tekrar işleyebilirsiniz.
+```
+
+---
+
+##  Proje Yapısı
+
+```
+ayikla/
+ ├── __init__.py
+ ├── extractor.py
+ ├── isimler.txt
+ ├── soyisimler.txt
+pyproject.toml
+MANIFEST.in
+README.md
+```
+
+---
+
+##  Özellikler
+- Türkçe özel isim ve soyisim sözlükleri ile daha doğru isim yakalama
+- Farklı yazılmış telefon numaralarını normalize etme (`+905xx...`)
+- "yarın", "bugün", "dün", "akşam 8'de" gibi doğal dil ifadelerinden tarih/saat ayıklama
+- Relative ve açık tarih aralıkları: "önümüzdeki hafta", "geçen ay", "3-5 Ocak 2024", "25 Aralık - 3 Ocak", "Mart - Nisan 2025"
+- Basit kurallarla lokasyon / adres blokları yakalama (mahalle, cadde, sokak, no, kat, daire vs.)
+
+### Detaylar
+
+#### 1. İsim / Ünvan Algılama
+- Dahili `isimler.txt` ve `soyisimler.txt` sözlükleri kullanılır.
+- Büyük harfle başlayan ve sözlükte olmayan bazı kelimeler olası soyisim olarak etiketlenir.
+- Ünvanlar (Dr, Prof, Av vb.) başta yakalanır ve tam isimle birleştirilir.
+- Çoklu ad + soyad dizilimleri ("Ahmet Can Yılmaz") desteklenir.
+
+Sınırlamalar:
+- Noktalama ile biten kırpılmış parçalar ("Ahmet,") temizleme sonrası düşebilir.
+- Kısaltmalar ("ABD") yanlış pozitif oluşturabilir.
+
+#### 2. Telefon Numarası
+- `phonenumbers` kütüphanesiyle TR varsayılan bölgesi kullanılır.
+- Boşluk, tire varyantları normalize edilip E.164 formatı döner.
+- Tarih çıkarımı sırasında telefon benzeri kalıplar maskelenerek çakışma azaltılır.
+
+Sınırlamalar:
+- Harf içeren son ekler ("1234x") doğrulama dışında bırakılır ama hamda korunur.
+
+#### 3. Tarih & Saat
+- Doğal dil kalıpları: "yarın", "bugün", "gelecek pazartesi", "akşam 8" vb. normalize edilir.
+- Türkçe saat anlatımları HH:MM formuna çevrilir.
+- Tek ayrı saat + tek ayrı tarih bulunursa birleştirilir.
+
+Sınırlamalar:
+- Çok belirsiz ifadeler ("sonra bir ara") atlanır.
+- Çalışma zamanı sistem tarihi relative ifadeleri etkiler.
+
+#### 4. Tarih Aralıkları
+- Desteklenen kalıplar (örnek): "önümüzdeki hafta", "geçen ay", "bu yıl", "3-5 Ocak 2024", "25 Aralık - 3 Ocak", "Mart - Nisan 2025".
+- Çıktı formatı (1.1.17 itibarıyla): Yalnızca `{"baslangic": ISO, "bitis": ISO}` sözlükleri listesi.
+- Önceki sürümlerde bulunan `tür` ve `ifade` alanları KALDIRILDI (breaking change).
+
+Sınırlamalar:
+- "25 Aralık - 3 Ocak" gibi ifadelerde yıl verilmezse ay sırası küçülüyorsa yıl geçişi varsayılır.
+- Çok karmaşık doğal dil aralıkları ("yılın ikinci yarısı") dahil edilmemiştir.
+
+#### 5. Lokasyon / Adres Blokları
+- Tetikleyiciler: mahalle, cadde, sokak, bulvar, no, kat, daire vb. + `lokasyon.txt` içeriği.
+- Yakın (pencere ~10 kelime) indeksler bloklanarak geniş bağlam döndürülür.
+
+Sınırlamalar:
+- Yapısal ayrıştırma yapmaz; sadece blok metin döner.
+- Çok uzun metinlerde pencereyi değiştirmek için şimdilik kaynak kod düzenlenmeli (parametre opsiyonel yapılabilir).
+
+---
+
+## Gelişmiş Kullanım
+
+```python
+from ayikla.extractor import TextEntityExtractor
+
+# Özel sözlük dosyaları belirtme (aynı paket içinde varsayılanlar zaten gömülü)
+extr = TextEntityExtractor(
+        isimler_dosyasi="isimler.txt",
+        soyisimler_dosyasi="soyisimler.txt",
+        lokasyon_dosyasi="lokasyon.txt"
+)
+
+metin = "Dr Mehmet Kara 532 111 2233 yarın akşam 8'de ankara çankaya no:12 kat 3 bekliyorum"
+print(extr.extract_all(metin))
+```
+
+Örnek çıktı:
+```python
+{
+    "isimler": ["Dr Mehmet Kara"],
+    "telefonlar": ["+905321112233"],
+    "tarihler": [{"tarih": None, "saat": "20:00"}],
+    "tarih_aralik": [],
+    "lokasyonlar": ["Dr Mehmet Kara 532 111 2233 yarın akşam 8'de ankara çankaya no:12 kat 3 bekliyorum"]
+}
+```
+
+---
+
+## Sürüm Notları
+
+### 1.1.x
+- Lokasyon (adres blokları) çıkarımı eklendi (`lokasyonlar` anahtarı)
+- README güncellendi, örnekler genişletildi
+- Küçük iyileştirmeler: veri dosyaları paket içine gömülü okunuyor
+
+---
+
+## Yazar
+
+**Hasan Çağrı Güngör**
+
+İletişim: [iletisim@cagrigungor.com](mailto:iletisim@cagrigungor.com)
+
+---
+
+##  Lisans
+
+MIT License. Özgürce kullanabilir ve geliştirebilirsiniz.
+
+---
+
+## Tarih Aralığı Örnekleri
+
+```python
+from ayikla import bul
+
+metin = (
+        "Önümüzdeki hafta ve 3-5 Ocak 2024 ile 25 Aralık - 3 Ocak 2025 arası müsait değilim. "
+        "Mart - Nisan 2025 dönemini planlayalım, geçen ay yoğun geçti."
+)
+
+sonuc = bul(metin)
+for r in sonuc["tarih_aralik"]:
+        print(r)
+```
+
+Olası çıktı (yalnızca baslangic/bitis):
+```python
+[
+    {"baslangic": "2025-10-06", "bitis": "2025-10-12"},
+    {"baslangic": "2024-01-03", "bitis": "2024-01-05"},
+    {"baslangic": "2025-12-25", "bitis": "2025-01-03"},
+    {"baslangic": "2025-03-01", "bitis": "2025-04-30"},
+    {"baslangic": "2025-08-01", "bitis": "2025-08-31"}
+]
+```
+
+Not: Tarihler çalışma zamanına göre (şimdiki tarih) değişebilir.
