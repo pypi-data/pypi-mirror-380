@@ -1,0 +1,8 @@
+pynqmetadata
+pynqutils
+setuptools>=24.2.0
+cffi
+numpy<2.0
+nest_asyncio
+grpcio==1.64.0
+grpcio-tools==1.64.0

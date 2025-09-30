@@ -1,0 +1,6 @@
+[console_scripts]
+pynq = pynq._cli.cmd:main
+pynq-get-notebooks = pynq._cli.get_notebooks:main
+
+[distutils.commands]
+download_overlays = pynqutils.setup_utils:du_download_overlays
