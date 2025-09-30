@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dataset-merge"
+version = "0.1.0"
+description = "Merge datasets"
+authors = ["Ananya"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "dataset_merge", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
