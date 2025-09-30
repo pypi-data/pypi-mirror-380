@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: evasif
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/turbotice/evasif#readme
+Project-URL: Issues, https://github.com/turbotice/evasif/issues
+Project-URL: Source, https://github.com/turbotice/evasif
+Author-email: Nicolas Mokus <nmks@tuta.io>
+License-Expression: MIT
+License-File: LICENCE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Oceanography
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.12
+Requires-Dist: attrs
+Requires-Dist: cmocean
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# evasif
+
+[![PyPI - Version](https://img.shields.io/pypi/v/evasif.svg)](https://pypi.org/project/evasif)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/evasif.svg)](https://pypi.org/project/evasif)
+
+Exploratory video analysis---sea ice fracture
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+
+## Installation
+
+```console
+python -m pip install evasif
+```
+
+## Licence
+
+`evasif` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) licence.
+
+
+## Acknowledgments
+
+Thanks to Laetitia Drumare for naming this package.

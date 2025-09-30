@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "evasif"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [{ name = "Nicolas Mokus", email = "nmks@tuta.io" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Oceanography",
+    "Topic :: Scientific/Engineering :: Physics",
+
+]
+dependencies = ["attrs", "cmocean", "numpy", "matplotlib", "scipy"]
+
+[project.urls]
+Documentation = "https://github.com/turbotice/evasif#readme"
+Issues = "https://github.com/turbotice/evasif/issues"
+Source = "https://github.com/turbotice/evasif"
+
+[tool.hatch.version]
+path = "src/evasif/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = ["mypy>=1.0.0"]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/evasif tests}"
+
+[tool.coverage.run]
+source_pkgs = ["evasif", "tests"]
+branch = true
+parallel = true
+omit = ["src/evasif/__about__.py"]
+
+[tool.coverage.paths]
+evasif = ["src/evasif", "*/evasif/src/evasif"]
+tests = ["tests", "*/evasif/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
