@@ -1,0 +1,15 @@
+fjagepy/AgentID.py,sha256=CdoVgEZYcFqQkLFP2eEBMJsQnbN8FqQcgjUUztohuoE,10079
+fjagepy/Connector.py,sha256=_9t_5kRpSfozbKAkERt7Cptx-qwiEDRrHk4Tpric1kU,1069
+fjagepy/Gateway.py,sha256=2DbtETxfWVG0KYKMlIX7bmD68n4FG-DE2GjX7tKWb3E,21675
+fjagepy/JSONMessage.py,sha256=If465lj_EQhez2fiXoeV-pFp5AyFUVrN02k56v1Lr80,5819
+fjagepy/Message.py,sha256=4Bki43lsoOCHH_yUHMGddP_IYgwlr4OGhdFiBuaivwc,11832
+fjagepy/Performative.py,sha256=Yw4a6OPYl1ObehY0u3yQo-PH4svgEWo_Mv9UXCJjh2s,390
+fjagepy/Services.py,sha256=W1C66ySkjf6auqvnkUEmknkiSisR3cVoahD3VoitGyk,131
+fjagepy/TCPConnector.py,sha256=WqgFqBTISmuB--PsdE-rByAWnB5aKSZynqezWLTYv-s,6279
+fjagepy/Utils.py,sha256=wRQxSOfk0i6yM8bH-YiMV27xr3dvVAC2XfQFhBYv6cs,3002
+fjagepy/__init__.py,sha256=6QJNd8Qw28xTyZG_fqQkLmPFwqe8uzDIMEQRo7Lv9bI,721
+fjagepy-2.0.0.dist-info/licenses/LICENSE,sha256=rk20IsI5Gq0VofTJRaep4f-jaWZcz5g98UtnaH-23DE,1482
+fjagepy-2.0.0.dist-info/METADATA,sha256=e2El6hk79ml70V5zEzyO473vfvtoozpJLLDI8M0Qf8c,7018
+fjagepy-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fjagepy-2.0.0.dist-info/top_level.txt,sha256=n9Pq0mKkod0cLu-nVvBITP0FU8VzZlLgH7r90UabZHE,8
+fjagepy-2.0.0.dist-info/RECORD,,
