@@ -1,0 +1,8 @@
+peerpyrtc/__init__.py,sha256=OiGVmQAvx6LTIKQmcGDEeEDrQVivdlQPDUwzExYfIcI,111
+peerpyrtc/broadcaster.py,sha256=pXlVoLE3hsQealcmvWrHexgwQ_3QcgenEfNplCOBp1o,2347
+peerpyrtc/peerpyrtc.py,sha256=zuV2wU6jChy2UIgfF9nMhr4Sr61KjNj94yz3ryWZ7bg,13709
+peerpyrtc/signaling.py,sha256=omtA7DLOBR05GVJ2VvsR6WOrlrlT7xGP9M2rJ73XNCo,8237
+peerpyrtc-0.2.1.dist-info/METADATA,sha256=_9G7UzfB0PMU9Mlw4W2n_lX_n_ojZhHLxkMEkm4c_EQ,4213
+peerpyrtc-0.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+peerpyrtc-0.2.1.dist-info/top_level.txt,sha256=UT_jh4TrURBbHirhfCfGghYE1xo9JY6hr-Cfgv8nfRI,10
+peerpyrtc-0.2.1.dist-info/RECORD,,
