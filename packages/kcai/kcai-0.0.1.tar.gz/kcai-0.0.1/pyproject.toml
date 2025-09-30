@@ -1,0 +1,55 @@
+[project]
+name = "kcai"
+dynamic = ["version", "dependencies"]
+description = "Python library enabling installation of klarity craft for AI"
+authors = [
+  {name = "Safenai", email="support@safenai.io"},   
+]
+
+license ="Apache-2.0"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["ml", "metrics", "ai", "artefact"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+
+notebooks = [
+    "jupyter>=1.0.0",
+]
+
+all = [
+    "kcai[notebooks]"
+]
+
+[project.urls]
+Homepage = "https://www.safenai.io"
+Documentation = "https://Safenai.github.io/kcai"
+Repository = "https://github.com/Safenai/kcai"
+
+[project.scripts]
+kcai = "kcai.__main__:execute"
+
+[build-system]
+requires = ["setuptools>=80", "setuptools-scm[simple]>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools_scm]
+version_file = "src/kcai/_version_.py"
+root= "../.."
+

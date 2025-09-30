@@ -1,0 +1,2 @@
+[console_scripts]
+kcai = kcai.__main__:execute

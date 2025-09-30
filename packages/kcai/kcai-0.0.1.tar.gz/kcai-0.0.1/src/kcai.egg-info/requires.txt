@@ -1,0 +1,6 @@
+
+[all]
+kcai[notebooks]
+
+[notebooks]
+jupyter>=1.0.0

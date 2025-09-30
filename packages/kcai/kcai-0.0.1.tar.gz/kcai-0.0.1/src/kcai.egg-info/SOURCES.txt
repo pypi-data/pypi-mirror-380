@@ -1,0 +1,15 @@
+README.md
+TODO.md
+pyproject.toml
+requirements.txt
+src/kcai/__init__.py
+src/kcai/__main__.py
+src/kcai/_version_.py
+src/kcai/dependancy.py
+src/kcai.egg-info/PKG-INFO
+src/kcai.egg-info/SOURCES.txt
+src/kcai.egg-info/dependency_links.txt
+src/kcai.egg-info/entry_points.txt
+src/kcai.egg-info/requires.txt
+src/kcai.egg-info/top_level.txt
+tests/test_cli.py

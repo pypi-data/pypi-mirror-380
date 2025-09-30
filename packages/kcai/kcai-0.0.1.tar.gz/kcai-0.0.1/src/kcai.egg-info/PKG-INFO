@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: kcai
+Version: 0.0.1
+Summary: Python library enabling installation of klarity craft for AI
+Author-email: Safenai <support@safenai.io>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://www.safenai.io
+Project-URL: Documentation, https://Safenai.github.io/kcai
+Project-URL: Repository, https://github.com/Safenai/kcai
+Keywords: ml,metrics,ai,artefact
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: notebooks
+Requires-Dist: jupyter>=1.0.0; extra == "notebooks"
+Provides-Extra: all
+Requires-Dist: kcai[notebooks]; extra == "all"
