@@ -1,0 +1,872 @@
+MCC,DESCRIPTION,DESCRIPTION_UZ,DESCRIPTION_RU
+742,Veterinary Services,Veterinariya xizmatlari,Ветеринарные услуги
+743,Wine Producers,Sharob ishlab chiqaruvchilar,Производители вина
+744,Champagne Producers,Shampan ishlab chiqaruvchilari,Производители шампанского
+763,Agricultural Cooperatives,Qishloq xo'jaligi kooperativlari,Сельскохозяйственные кооперативы
+780,Landscaping and Horticultural Services,Aralash va bog'dorchilik xizmatlari,Ландшафтные и садоводческие услуги
+1520,General Contractors - Residential and Commercial,Umumiy pudratchilar - turar-joy va tijorat,Генеральные подрядчики - жилые и коммерческие
+1711,"Heating, Plumbing, and Air Conditioning Contractors","Isitish, sanitariya va konditsioner pudratchi","Подрядчики по отоплению, сантехнике и кондиционеру"
+1731,Electrical Contractors,Elektr pudratchilari,Электрические подрядчики
+1740,"Masonry, Stonework, Tile-Setting, Plastering, and Insulation Contractors","Mayonry, toshtash, stontarin, plitani sozlash, gipastslash va izolyatsiya pudratchilari","Подрядчики с каменной кладкой, набором плиток, штукатуркой и изоляцией"
+1750,Carpentry Contractors,Duradgorlik pudratchilari,Плотницы подрядчики
+1761,"Roofing, Siding, and Sheet Metal Work Contractors","Tom yopish, qarish va metall ishchilar pudratchilari","Кровяные, сайдинги и листовые рабочие подрядчики"
+1771,Concrete Work Contractors,Beton ish joylari pudratchilari,Конкретные рабочие подрядчики
+1799,Special Trade Contractors - Not Elsewhere Classified,Maxsus savdo pudratchilari - boshqa joyda tasniflangan emas,Специальные торговые подрядчики - не в других местах классифицируются
+2741,Miscellaneous Publishing and Printing Services,Turli nashriyot va matbaa xizmatlari,Разные услуги публикации и печати
+2791,"Typesetting, Plate Making, and Related Services","Yozish, plastinka qilish va tegishli xizmatlarni o'rnatish","Наборы, создание тарелок и связанные с ним услуги"
+2842,"Specialty Cleaning, Polishing, and Sanitation Preparations","Mutaxassisligi, pardali va sanitariya pekalashi","Специальная уборка, полировка и санитария"
+3000,UNITED AIRLINES,Yagona Airlines,United Airlines
+3001,AMERICAN AIRLINES,American Airlines,American Airlines
+3002,PAN AMERICAN,PAN amerikalik,Pan American
+3003,EUROFLY AIRLINES,Evroli aviakompaniyalar,Eurofly Airlines
+3004,DRAGON AIRLINES,Dragon aviakompaniyasi,Dragon Airlines
+3005,BRITISH AIRWAYS,Britaniya aviakompaniyasi,British Airways
+3006,JAPAN AIRLINES,Yaponiya aviakompaniyasi,Японские авиакомпании
+3007,AIR FRANCE,Havo France,Air France
+3008,LUFTHANSA,Lufthansa,Lufthansa
+3009,AIR CANADA,Havo Kanada,Air Canada
+3010,KLM (ROYAL DUTCH AIRLINES),KLM (Qirollik gollandiyalik aviakompaniyasi),KLM (Royal Dutch Airlines)
+3011,AEROFLOT,Aeroflot,Аэрофлот
+3012,QANTAS,Qantas,Qantas
+3013,ALITALIA,Alitaliya,Alitalia
+3014,SAUDI ARABIAN AIRLINES,Saudiya Arabistoni aviakompaniyalari,Саудовская арабская авиакомпания
+3015,SWISS INTERNATIONAL AIRLINES,Shveytsariya Xalqaro aviakompaniyalar,Швейцарские международные авиакомпании
+3016,SAS,Sas,Сас
+3017,SOUTH AFRICAN AIRWAYS,Janubiy Afrika aviakompaniyasi,Южноафриканские воздушные пути
+3018,VARIG (BRAZIL),Varig (Braziliya),Вариг (Бразилия)
+3020,AIR-INDIA,Havo-Hindiston,Воздушная индийская
+3021,AIR ALGERIE,Havo Jastere,Воздушный Алджир
+3022,PHILIPPINE AIRLINES,Filippin aviakompaniyasi,Филиппинские авиакомпании
+3023,MEXICANA,Meksika,Мексика
+3024,PAKISTAN INTERNATIONAL,Pokiston Xalqaro,Пакистанский международный
+3025,AIR NEW ZEALAND,Havo Yangi Zelandiya,Air New Zealand
+3026,EMIRATES AIRLINES,Amirliklar aviakompaniyasi,Эмиратс Авиакомпании
+3027,UTA/INTERAIR,Uta / aralashmasi,UTA/Interair
+3028,AIR MALTA,Havo malta,Воздух Мальта
+3029,SN BRUSSELS AIRLINES,SN Bryussel aviakompaniyasi,SN Brussel Airlines
+3030,AEROLINEAS ARGENTINAS,Aerolineas Argentinas,Aerolines Argentinas
+3031,OLYMPIC AIRWAYS,Olimpiya havo yo'llari,Олимпийские воздушные пути
+3032,EL AL,Ilon,Эль -Ал
+3033,ANSETT AIRLINES,Ansett aviakompaniyasi,Ansett Airlines
+3034,ETIHAD AIRWAYS,Etihad Airways,Etihad Airways
+3035,TAP (PORTUGAL),Teg (Portugaliya) ga teging,Нажмите (Португалия)
+3036,VASP (BRAZIL),Vasc (Braziliya),VASP (Бразилия)
+3037,EGYPTAIR,Misrlik,Египет
+3038,KUWAIT AIRWAYS,Kuvayt-havo yo'llari,Kuwait Airways
+3039,AVIANCA,Avianka,Avianca
+3040,GULF AIR (BAHRAIN),Fors ko'rfazi havo (Bahrayn),Gulf Air (Bahrain)
+3041,BALKAN-BULGARIAN AIRLINES,Balkan-Bolgariya aviakompaniyasi,Балкан-бульгарские авиакомпании
+3042,FINNAIR,Finnir,Финнайр
+3043,AER LINGUS,Aer Lingus,AER Lingus
+3044,AIR LANKA,Havo qirg'oqlari,Air Lanka
+3045,NIGERIA AIRWAYS,Nigeriya havo yo'llari,Нигерия Airways
+3046,CRUZEIRO DO SUL (BRAZIL),Kruzeiro Sul (Braziliya),Cruzeiro do Sul (Бразилия)
+3047,THY (TURKEY),Sening (Turkiya),Твой (Турция)
+3048,ROYAL AIR MAROC,Qirollik havo marok,Royal Air Maroc
+3049,TUNIS AIR,Tunis havo,Тунис воздух
+3050,ICELANDAIR,ICELANDAIR,Исланланд
+3051,AUSTRIAN AIRLINES,Avstriya aviakompaniyalari,Австрийские авиакомпании
+3052,LAN AIRLINES,LAN Airlines,LAN Airlines
+3053,AVIACO (SPAIN),Aviaco (Ispaniya),Авико (Испания)
+3054,LADECO (CHILE),Ladeco (Chili),Ladeco (чили)
+3055,LAB (BOLIVIA),Laboratoriya (Bolivia),Лаборатория (Боливия)
+3056,JET AIRWAYS,Jet-havo yo'llari,Jet Airways
+3057,VIRGIN AMERICA,Virjiniya Amerika,Virgin America
+3058,DELTA,Delta,Дельта
+3059,DBA AIRLINES,DBA Airlines,DBA Airlines
+3060,NORTHWEST,Shimoli-g'arb,Северо -запад
+3061,CONTINENTAL,Qit'a,КОНТИНЕНТАЛЬНЫЙ
+3062,HAPAG-LLOYD EXPRESS AIRLINES,Hapog-lloyd Express aviakompaniyasi,Hapag-Lloyd Express Airlines
+3063,US AIRWAYS,AQSh havo yo'llari,US Airways
+3064,ADRIA AIRWAYS,Adria Airways,Adria Airways
+3065,AIRINTER,Echim,Воздушная
+3066,SOUTHWEST,Janubi-g'arb,Юго -запад
+3067,VANGUARD AIRLINES,Avangard aviakompaniyalari,Авиакомпании Vanguard
+3068,AIR ASTANA,Air Astana,Air Astana
+3069,SUN COUNTRY AIRLINES,Quyoshli aviakompaniyalar,Sun Country Airlines
+3070,FLY DUBAI,Chivin dubay,Летать Дубай
+3071,AIR BRITISH COLUMBIA,Havo Britaniya Kolumbiya,Air British Columbia
+3072,CEBU PACIFIC AIRLINES,CEBU TIMKICE Airlines aviakompaniyasi,Cebu Pacific Airlines
+3075,SINGAPORE AIRLINES,Singapur aviakompaniyalari,Сингапурские авиакомпании
+3076,AEROMEXICO,Aeromiko,Aeromexico
+3077,THAI AIRWAYS,Tailand havo yo'llari,Тайские воздушные пути
+3078,CHINA AIRLINES,Xitoy aviakompaniyasi,Китай авиакомпании
+3079,JETSTAR AIRWAYS,Jetstar Airways,Jetstar Airways
+3080,SWOOP AIR,Havoni yoqish,Скаль воздух
+3082,KOREAN AIRLINES,Koreyalik aviakompaniyalar,Корейские авиакомпании
+3083,AIR AFRIQUE,Havo afrikasi,Воздух африка
+3084,EVA AIRWAYS,Eva Airways,Eva Airways
+3085,MIDWEST EXPRESS AIRLINES,O'rtaWest Express aviakompaniyasi,Авиакомпании Midwest Express
+3086,CARNIVAL AIRLINES,Karnaval aviakompaniyasi,Карнавальные авиакомпании
+3087,METRO AIRLINES,Metro Airlines,Metro Airlines
+3088,CROATIA AIRLINES,Xorvatiya aviakompaniyasi,Хорватия авиакомпании
+3089,TRANSAERO,Transaero,Трансэро
+3090,UNI AIRWAYS CORPORATION,Universitet Airways Corporation,Uni Airways Corporation
+3094,ZAMBIA AIRWAYS,Zambiya havo yo'llari,Zambia Airways
+3096,AIR ZIMBABWE,Havo zimbabve,Air Zimbabwe
+3097,SPANAIR,Spanir,Промайр
+3098,ASIANA AIRLINES,Osiyo aviakompaniyasi,Азиана авиакомпании
+3099,CATHAY PACIFIC,Catay Tinch okeani,Cathay Pacific
+3100,MALAYSIAN AIRLINE SYSTEM,Malayziya aviakompaniyasi tizimi,Малайзийская авиационная система
+3102,IBERIA,Ibubar,Иберия
+3103,GARUDA (INDONESIA),Garuda (Indoneziya),Гаруда (Индонезия)
+3106,BRAATHENS S.A.F.E. (NORWAY),Brainens S.A.F.e. (Norvegiya),Braathens S.A.F.E. (НОРВЕГИЯ)
+3110,WINGS AIRWAYS,Wings havo yo'llari,Крылья воздушные пути
+3111,BRITISH MIDLAND,Britaniya Midland,Британский Мидленд
+3112,WINDWARD ISLAND,Shamollash oroli,Остров Виндра
+3115,TOWER AIR,Tower havo,Башня воздуха
+3117,VIASA,Vias,Виаса
+3118,VALLEY AIRLINES,Vodiy aviakompaniyasi,Valley Airlines
+3125,TAN,Taniqli,Загар
+3126,TALAIR,Kir,Талэр
+3127,TACA INTERNATIONAL,Taca International,TACA International
+3129,SURINAM AIRWAYS,Surinam aviakompaniyasi,Surinam Airways
+3130,SUNWORLD INTERNATIONAL,Sunworld International,Sunworld International
+3131,VLM AIRLINES,Vlm aviakompaniyasi,VLM Airlines
+3132,FRONTIER AIRLINES,Chegara aviakompaniyasi,Frontier Airlines
+3133,SUNBELT AIRLINES,Sunbelt aviakompaniyalari,Sunbelt Airlines
+3135,SUDAN AIRWAYS,Sudan Airways,Sudan Airways
+3136,QATAR AIRWAYS,Qatar Airways,Катарские воздушные пути
+3137,SINGLETON,Ayyorona,Синглтон
+3138,SIMMONS AIRLINES,Simmons aviakompaniyalari,Симмонс авиакомпании
+3143,SCENIC AIRLINES,Sahna aviakompaniyalari,Живописные авиакомпании
+3144,VIRGIN ATLANTIC,Bokira Atlantika,Virgin Atlantic
+3146,LUXAIR,Luxair,Luxair
+3148,AIR LITTORAL SA,Air Littal SA,Воздушная литовая сторона Sa
+3151,AIR ZAIRE,Havo zair,Воздух Заир
+3154,PRINCEVILLE,Pinxevil,Принсвилль
+3156,GO FLY LTD,Pashsha ltd,Иди Флай Лтд
+3159,PBA,Pba,PBA
+3161,ALL NIPPON AIRWAYS,Nipponning barchasi,Все Nippon Airways
+3164,NORONTAIR,Noronat,Нороронт
+3165,NEW YORK HELICOPTER,Nyu-York vertolyot,Нью -Йорк вертолет
+3167,AEROCONTINENTE,Aerocontse,AeroContinente
+3170,MOUNT COOK,Tog'li pishiriq,Гору повара
+3171,CANADIAN AIRLINES INTERNATIONAL,Kanada Airlines International,Canadian Airlines International
+3172,NATIONAIR,Mamlakat,Национальный
+3174,JETBLUE AIRWAYS,JetBlue Airways,JetBlue Airways
+3175,MIDDLE EAST AIR,Yaqin Sharqdagi havo,Ближний Восток воздух
+3176,METROFLIGHT AIRLINES,Metrooflight aviakompaniyalari,Metroflight Airlines
+3177,AIRTRAN AIRWAYS,Airtraning havo yo'llari,Airtran Airways
+3178,MESA AIR,Mesa havo,Mesa Air
+3180,WESTJET AIRLINES,Westjet aviakompaniyalari,Westjet Airlines
+3181,MALEV,Malev,Малев
+3182,LOT (POLAND),Lut (Polsha),Лот (Польша)
+3183,OMAN AVIATION SERVICES,Ummon aviatsiya xizmatlari,Оманские авиационные услуги
+3184,LIAT,Liya,Лиат
+3185,LAV (VENEZUELA),LAV (Venesuela),Лав (Венесуэла)
+3186,LAP (PARAGUAY),Lap (paragvay),Колен (парагвай)
+3187,LACSA (COSTA RICA),Lacsa (Kosta-Rika),Лакса (Коста -Рика)
+3188,VIRGIN EXPRESS,Bokira ekspress,Virgin Express
+3190,JUGOSLAV AIR,Yugoslav havo,Югослав воздух
+3191,ISLAND AIRLINES,Isoning aviakompaniyasi,Авиакомпания Island Airlines
+3193,INDIAN AIRLINES,Hindiston aviakompaniyasi,Индийские авиакомпании
+3196,HAWAIIAN AIR,Gavayi havo,Гавайский воздух
+3197,HAVASU AIRLINES,Xasusu aviakompaniyasi,Havasu Airlines
+3200,GUYANA AIRWAYS,Gayanana aviakompaniyasi,Гайана воздушные пути
+3203,GOLDEN PACIFIC AIR,Oltin Tinch okeani havo,Золотая Тихоокеанская воздуха
+3204,FREEDOM AIR,Erkinlik havo,Свобода воздух
+3206,CHINA EASTERN AIRLINES,China Sharqiy aviakompaniyalar,Китай восточные авиакомпании
+3211,NORWEGIAN AIR SHUTTLE,Norvegiya havo qatnovi,Норвежский воздушный шаттл
+3212,DOMINICANA,Dominicana,Домикана
+3213,MALMO AVIATION,Malmo Aviatsiya,Малмо авиация
+3216,CUMBERLAND AIRLINES,Cumberland Airlines,Cumberland Airlines
+3217,CSA,Chala,CSA
+3218,CROWN AIR,Toj havosi,Коронный воздух
+3219,COPA,Kopa,Копа
+3220,COMPANIA FAUCETT,Masteriya Facett,Compania Faucett
+3221,TRANSPORTES AEROS MILITARES ECUATORIANOS,Eros Militares Ekuatorianosni tashiydi,Транспортирует эросовые милитары Ecuatorianos
+3222,COMMAND AIRWAYS,Buyruq aviakompaniyasi,Командные воздушные пути
+3223,COMAIR,Kaira,Комар
+3226,SKYWAYS AIR,Sky yo'llari havo,Skyways Air
+3228,CAYMAN AIRWAYS,Cayman Airways,Cayman Airways
+3229,SAETA - SOCIAEDAD ECUATORIANOS DE TRANSPORTES AEREOS,Saeta - Ijtimoiy Ijtimoiy Ikuatiyaos de Aereosni tashiydi,Saeta - Sociaedad Ecuatorianos de Transportes Aereos
+3231,SAHSA - SERVICIO AEREO DE HONDURAS,Sahsa - Servicio Aereo de gonduras,Sahsa - Servicio aereo de Honduras
+3233,CAPITOL AIR,Kapitol havo,Капитолий воздух
+3234,CARIBBEAN AIRLINES,Karib dengizi aviakompaniyalari,Карибские авиакомпании
+3235,BROCKWAY AIR,Brokway havo,Brockway Air
+3236,AIR ARABIA AIRLINE,Havo Arab Aviakompaniyasi,Воздушная авиакомпания
+3238,BEMIDJI AIRLINES,Bemidji aviakompaniyalari,Bemidji Airlines
+3239,BAR HARBOR AIRLINES,Bar harbor aviakompaniyalari,Авиакомпании Bar Harbour Airlines
+3240,BAHAMASAIR,Bahamlarair,Bahamasair
+3241,AVIATECA (GUATEMALA),Aviaca (Gvatemala),Авиатека (Гватемала)
+3242,AVENSA,Avensa,Авенса
+3243,AUSTRIAN AIR SERVICE,Avstriya havo xizmati,Австрийский авиационный служба
+3245,EASYJET AIRLINES,Easyjet aviakompaniyalari,EasyJet Airlines
+3246,RYANAIR,Ryanair,Ryanair
+3247,GOL AIRLINES,GOL Airlines,GOL Airlines
+3248,TAM AIRLINES,Tam aviakompaniyalari,TAM Airlines
+3251,ALOHA AIRLINES,Aloha Airlines,Aloha Airlines
+3252,ALM,Alm,Алм
+3254,US AIR SHUTTLE,AQSh havo qatnovi,США Air Thfttle
+3256,ALASKA AIRLINES,Alyaska aviakompaniyasi,Авиакомпании Аляски
+3259,AMERICAN TRANS AIR,Amerikalik tranz havo,American Trans Air
+3260,SPIRIT AIRLINES,Ruhiy aviakompaniyalar,Spirit Airlines
+3261,AIR CHINA,Havo Xitoy,Воздушный фарфор
+3262,"RENO AIR, INC.","Reno Air, Inc.","Reno Air, Inc."
+3263,AERO SERVICO CARABOBO,Aero xizmatico Karabobo,Aero Servico Carabobo
+3266,AIR SEYCHELLES,Havo Seysheles,Воздушные Сейшельские острова
+3267,AIR PANAMA,Havo panama,Воздушная панама
+3280,AIR JAMAICA,Havo Yamayka,Air Jamaica
+3282,AIR DJIBOUTI,Havo djonuti,Air Djibouti
+3284,AERO VIRGIN ISLANDS,Aero bokira orollari,Аэро Виргинские острова
+3285,AEROPERU,Aeroperu,Аэроперу
+3286,AEROLINEAS NICARAGUENSIS,Aeroline bilan bezaraguensen,Aerolineas Nicaraguensis
+3287,AERO COACH AVIATION,Aero murabbiy aviatsiyasi,Аэро -тренер авиация
+3292,CYPRUS AIRWAYS,Kipr-havo yo'llari,Кипр воздушные пути
+3293,ECUATORIANA,Ekuchatoriya,Ecuatoriana
+3294,ETHIOPIAN AIRLINES,Efiopiya aviakompaniyasi,Эфиопские авиакомпании
+3295,KENYA AIRWAYS,Kenya Airways,Кения воздушные пути
+3296,AIR BERLIN,Havo berlin,Воздушный Берлин
+3297,TAROM ROMANIAN AIR TRANSPORT,Tarom Ruminiya havo transporti,Romom Romanian Air Transport
+3298,AIR MAURITIUS,Havo mauritius,Воздух Маврикий
+3299,WIDEROE'S FLYVESELSKAP,Werioo ning uchib ketganlarKap,WIDEROE'S FLYVELSKAP
+3300,AZUL AIR,Azul havo,Азул воздух
+3301,WIZZ AIRLINES,Wizzli aviakompaniyalar,Wizz Airlines
+3303,TIGERAIR,Yo'linair,Тигро
+3308,CHINA SOUTHERN,Xitoy janubi,Китай Южный
+3351,AFFILIATED AUTO RENTAL,Affillangan avtoulov ijarasi,Аффилированная автоматическая аренда
+3352,AMERICAN INTL RENT-A-CAR,Amerikalik Inson tarafas-avtomobili,Американская Intl Rent-A-Car
+3353,BROOKS RENT-A-CAR,Bruks Ijara-A-avtomobil,Брукс Рент-А-Кара
+3354,ACTION AUTO RENTAL,Auto avtoulov ijarasi,Action Auto Rental
+3355,SIXT CAR RENTAL,Oltmish mashina ijarasi,Прокат автомобиля Sixt
+3357,HERTZ,Hertz,ГЕРЦ
+3359,PAYLESS CAR RENTAL,To'lovsiz avtoulov ijarasi,ПЛАТЕЛЬНАЯ ПЛОНА автомобиля
+3360,SNAPPY CAR RENTAL,Snappy Avtomobil ijarasi,Сканальный прокат автомобилей
+3361,AIRWAYS RENT-A-CAR,Havo yo'llari ijarasi,Airways Rent-A-Car
+3362,ALTRA AUTO RENTAL,ALTRA Auto Ijara,Altra Auto Rental
+3364,AGENCY RENT-A-CAR,Agentlik ijarasi,Агентство Rent-A-Car
+3366,BUDGET RENT-A-CAR,Byudjet ijarasi,Бюджетная аренда-а-автомобиль
+3368,HOLIDAY RENT-A-CAR,Ta'til ijarasi-mashina,Праздничная аренда-а-автомобиль
+3370,RENT-A-WRECK,Ijara-nosh,Rent-A-wreck
+3374,ACCENT RENT-A-CAR,Urg'u ijarasi,Accent Rent-A-Car
+3376,AJAX RENT-A-CAR,Ajax ijara-A-Cart,Ajax Rent-A-Car
+3381,EUROP CAR,Europcar,Европкар
+3385,TROPICAL RENT-A-CAR,Tropik Ijara-A-avtomobil,Тропическая аренда-а-автомобиль
+3386,SHOWCASE RENTAL CARS,Chop etish uchun xom ashyolar,Витрина проката автомобилей
+3387,ALAMO RENT-A-CAR,Alamo Ijara-A-avtomobil,Alamo Rent-A-Car
+3388,MERCHANTS RENT-A-CAR,Savdogarlar ijarasi,Торговцы арендуют-а-автомобиль
+3389,AVIS RENT-A-CAR,Avis Ijara-A-avtomobil,Avis Rent-A-Car
+3390,DOLLAR RENT-A-CAR,Dollar ijarasi-avtoulov,Доллар аренда-а-автомобиль
+3391,EUROPE BY CAR,Evropada Evropa,Европа на машине
+3393,NATIONAL CAR RENTAL,Milliy avtoulov ijarasi,Национальный прокат автомобилей
+3394,KEMWELL GROUP RENT-A-CAR,Kemwell Group ijarasi - A-CAR,Kemwell Group Rent-A-Car
+3395,THRIFTY CAR RENTAL,Xursand avtoulov ijarasi,Экологически чистый прокат автомобилей
+3396,TILDEN RENT-A-CAR,Tilendan ijaraga olish,Tilden Rent-A-Car
+3398,ECONO-CAR RENT-A-CAR,Econo-avtomobil ijarasi,Econo-Car Rent-A-Car
+3400,AUTO HOST CAR RENTALS,Avtomatik xost avtomobil ijarasi,Auto Host Host Car Rentals
+3405,ENTERPRISE RENT-A-CAR,Korxona ijarasi,Enterprise Rent-A-Car
+3409,GENERAL RENT-A-CAR,Umumiy ijara-A-avtomobil,Общая аренда-а-автомобиль
+3412,A-1 RENT-A-CAR,A-1 ijarasi-A-Cart,A-1 Rent-A-Car
+3414,GODFREY NATL RENT-A-CAR,Xudbrani Natl ijarasi,Godfrey Natl Rent-A-Car
+3420,ANSA INTL RENT-A-CAR,Ansa intl inf-avto-mashina,ANSA Intl Rent-A-Car
+3421,ALLSTATE RENT-A-CAR,Aldstate ijara-avtomashinasi,Allstate Rent-A-Car
+3423,AVCAR RENT-A-CAR,AVCAR Ijara-A-avtomobil,Avcar Rent-A-Car
+3425,AUTOMATE RENT-A-CAR,Avtomatni avtomatlashtirish,Автоматизируйте Rent-A-Car
+3427,AVON RENT-A-CAR,Avon ijara-A-avtomobil,Avon Rent-A-Car
+3428,CAREY RENT-A-CAR,Karey ijarasi A-CAR,Carey Rent-A-Car
+3429,INSURANCE RENT-A-CAR,Sug'urta ijarasi,Страховая аренда-а-автомобиль
+3430,MAJOR RENT-A-CAR,Katta ijara-avtoulov,Основная аренда-а-автомобиль
+3431,REPLACEMENT RENT-A-CAR,Almashtirishni ijaraga olish,Замена Rent-A-Car
+3432,RESERVE RENT-A-CAR,Zaxira ijaraga olish,Резервная аренда-а-автомобиль
+3433,UGLY DUCKLING RENT-A-CAR,Xunuk o'rdak Ijara-A-avtomobil,Ugly Duckling Rent-A-Car
+3434,USA RENT-A-CAR,AQSh Ijara-A-Cart,USA Rent-A-Car
+3435,VALUE RENT-A-CAR,Qiymat ijarasi,Стоимость Rent-A-Car
+3436,AUTOHANSA RENT-A-CAR,Alayhansa ijara-A-avtomobil,Autohansa Rent-A-Car
+3437,CITE RENT-A-CAR,Ijara-a-avtomobil,Цитировать Rent-A-Car
+3438,INTERENT RENT-A-CAR,Internetda ijaraga berish-avtoulov,Интернет-аренда-а-автомобиль
+3439,MILLEVILLE RENT-A-CAR,Millyevil ijara-A-Cart,Milleville Rent-A-Car
+3441,ADVANTAGE RENT-A-CAR,Afzalligi ijaraga berish,Преимущество Rent-A-Car
+3502,BEST WESTERN HOTELS,Eng yaxshi G'arb mehmonxonalari,Лучшие западные отели
+3503,SHERATON,Sheraton,Шератон
+3504,HILTON HOTELS,Xilton mehmonxonalari,Hilton Hotels
+3505,FORTE HOTELS,Fore mehmonxonalari,Форте отели
+3506,GOLDEN TULIP HOTELS,Oltin Tlowip mehmonxonalari,Золотые отели тюльпана
+3507,FRIENDSHIP INNS,Do'stlik mehmonxonasi,"Дружба, гостиница"
+3508,QUALITY INNS,Sifat Inns,Качественные гостиницы
+3509,MARRIOTT,Nikoh,Марриотт
+3510,DAYS INNS,Kunlar Inns,Days Inns
+3511,ARABELLA HOTELS,Arabella mehmonxonalari,Hostels Arabella
+3512,INTER-CONTINENTAL HOTELS,Qit'achilararo mehmonxonalar,Межконтинентальные отели
+3513,WESTIN,G'arbiy,Вестин
+3514,AMERISUITES,Amerikalik,Amerisuites
+3515,RODEWAY INNS,Rodeway Inns,Ехатовые гостиницы
+3516,LA QUINTA INN AND SUITES,L kvinta Inn va Suites,La Quinta Inn и Suites
+3517,AMERICANA HOTELS,Amerika mehmonxonalari,Американские отели
+3518,SOL HOTELS,Sol mehmonxonalari,Sol Hotels
+3519,PULLMAN INTERNATIONAL HOTELS,Pulman xalqaro mehmonxonalar,Pullman International Hotels
+3520,MERIDIEN HOTELS,Meridien mehmonxonalari,Meridien Hotels
+3521,ROYAL LAHAINA RESORTS,Qirol Lahaina kurortlari,Royal Lahaina Resorts
+3522,TOKYO HOTEL,Tokio mehmonxonasi,Токийский отель
+3523,PENINSULA HOTEL,Yarim orol,Полуостров. Отель
+3524,WELCOMGROUP HOTELS,Mehmonxonalarni kutib olish,Welcomgroup Hotels
+3525,DUNFEY HOTELS,Dunfey mehmonxonalari,Dunfey Hotels
+3526,PRINCE HOTELS,Shahzoda mehmonxonalari,Принц отели
+3527,DOWNTOWNER-PASSPORT HOTEL,Doog universitet-pasport mehmonxonasi,Downtowner-Passport Hotel
+3528,RED LION INNS,Qizil sherli Inns,Red Lion Inns
+3529,CP HOTELS,CP mehmonxonalari,CP Hotels
+3530,RENAISSANCE HOTELS,Uyg'onishnik mehmonxonalar,Ренессанс отели
+3531,KAUAI COCONUT BEACH RESORT,Kauai hindiston yong'og'i kurortida,Kauai Coconut Beach Resort
+3532,ROYAL KONA RESORT,Qirollik Kona kurorti,Royal Kona Resort
+3533,HOTEL IBIS,Ibis mehmonxonasi,Отель ibis
+3534,SOUTHERN PACIFIC HOTELS,Tinch okeani janubi-dagi janubi,Южная Тихоокеанская отели
+3535,HILTON INTERNATIONALS,Xilton International,Hilton Internationals
+3536,AMFAC HOTELS,Amfac mehmonxonalari,Amfac Hotels
+3537,ANA HOTEL,Ana mehmonxonasi,Ana Hotel
+3538,CONCORDE HOTELS,Concorde mehmonxonalari,Concorde Hotels
+3541,HOTEL OKURA,Okura mehmonxonasi,Отель Окура
+3542,ROYAL HOTELS,Royal mehmonxonalari,Королевские отели
+3543,FOUR SEASONS HOTELS,To'rt fasl mehmonxonasi,Четыре сезона отелей
+3544,CIGA HOTELS,Ciga mehmonxonalari,Сига -отели
+3545,SHANGRI-LA INTERNATIONAL,Shangri-La International,Shangri-La International
+3546,HOTEL SIERRA,Sierra mehmonxonasi,Отель Sierra
+3548,HOTELES MELIA,Mehmonxonalar Melia,Отель Melia
+3549,AUBERGE DES GOVERNEURS,Birmurere des boshqaruvchisi,Auberge des Guberneurs
+3550,REGAL 8 INNS,Real 8 Inns,Regal 8 Inns
+3551,MIRAGE HOTEL AND CASINO,Miragh mehmonxonasi va Casino,Мираж отель и казино
+3552,COAST HOTELS,Coast mehmonxonalari,Прибрежные отели
+3553,PARK INNS INTERNATIONAL,Park Inns International,Park Inns International
+3554,PINEHURST RESORT,Pinxursh kurort,Pinehurst Resort
+3555,TREASURE ISLAND HOTEL AND CASINO,Xazinaning orol mehmonxonasi va kazino,Отель и казино на остров сокровища
+3556,BARTON CREEK RESORT,Barton Krik kurorti,Barton Creek Resort
+3557,MANHATTAN EAST SUITE HOTELS,Manxetten Sharqiy Suite mehmonxonalari,Манхэттен -Ист -Сюита отели
+3558,JOLLY HOTELS,Jolli mehmonxonalar,Веселые отели
+3559,CANDLEWOOD SUITES,Shamdonlar uchun mos keladi,Сюэты свечи
+3560,ALADDIN RESORT AND CASINO,Aladdin kurorti va kazino,Aladdin Resort и Casino
+3561,GOLDEN NUGGET,Golden Nugget,Золотой самородок
+3562,COMFORT INNS,Tasalli berish,Comfort Inns
+3563,JOURNEY'S END MOTELS,Safarning oxirgi omillari,Конечные мотели путешествия
+3564,SAM'S TOWN HOTEL AND CASINO,Samning shaharher mehmonxonasi va Casino,Сэм -городский отель и казино
+3565,RELAX INNS,Inns dam oling,Расслабьтесь
+3566,GARDEN PLACE HOTEL,Bog 'mehmonxonasi,Отель Garden Place
+3567,SOHO GRAND HOTEL,Soho Grand mehmonxonasi,Soho Grand Hotel
+3568,LADBROKE HOTELS,Lodbrok mehmonxonalari,Ladbroke Hotels
+3569,TRIBECA GRAND HOTEL,Tribeka Grand mehmonxonasi,Tribeca Grand Hotel
+3570,FORUM HOTELS,Forum mehmonxonalari,Форум отели
+3571,GRAND WAILEA RESORT,Grand Vayrli kurort,Grand Wailea Resort
+3572,MIYAKO HOTELS,Miyako mehmonxonalari,Мияко отели
+3573,SANDMAN HOTELS,Sandman mehmonxonalari,Sandman Hotels
+3574,VENTURE INNS,Venture Inns Inns,Венчурные гостиницы
+3575,VAGABOND HOTELS,Vagibond mehmonxonalari,Бродячие отели
+3576,LA QUINTA RESORT,L kvinta kurorti,La Quinta Resort
+3577,MANDARIN ORIENTAL HOTEL,Mandarid Sharqiy mehmonxona,Mandarin Oriental Hotel
+3578,FRANKENMUTH BAVARIAN,Frankenmut Bavariya,Франкенмут Баварский
+3581,DELTA HOTEL,Delta mehmonxonasi,Delta Hotel
+3582,CALIFORNIA HOTEL AND CASINO,Kaliforniya mehmonxonasi va kazino,Калифорнийский отель и казино
+3583,RADISSON BLU,Radisson Blu,Radisson Blu
+3584,PRINCESS HOTELS INTERNATIONAL,Malika mehmonxonalari International,Princess Hotels International
+3585,HUNGAR HOTELS,Vengriya mehmonxonalari,Венгрия отелей
+3586,SOKOS HOTELS,Sokos mehmonxonalari,Sokos Hotels
+3587,DORAL HOTELS,Doral mehmonxonalar,Дорал отели
+3588,HELMSLEY HOTELS,Helmsli mehmonxonalar,Helmsley Hotels
+3589,DORAL GOLF RESORT,Doral golf kurorti,Doral Golf Resort
+3590,FAIRMONT HOTELS,Mehribon mehmonxonalar,Fairmont Hotels
+3591,SONESTA HOTELS,Sonesta mehmonxonalari,Sonesta Hotels
+3592,OMNI HOTELS,OMSI mehmonxonalari,Омни отели
+3593,CUNARD HOTELS,Vositachilar mehmonxonalari,Cunard Hotels
+3594,ARIZONA BILTMORE,Arizona Biltmore,Аризона Билтмор
+3595,HOSPITALITY INNS,Mehmondo'stlik mehmonxonasi,Гостеприимство
+3596,WYNN LAS VEGAS,Wyn Las Vegas,Винн Лас -Вегас
+3597,RIVERSIDE RESORT HOTEL AND CASINO,Riverside kurort mehmonxonasi va kazino,Riverside Resort Hotel и Casino
+3598,REGENT INTERNATIONAL HOTELS,Regent International mehmonxonalar,Regent International Hotels
+3599,PANNONIA HOTELS,Pannonia mehmonxonalari,Pannonia Hotels
+3600,SADDLEBROOK RESORT TAMPA,Emakbok kurort tampa,Saddlebrook Resort Tampa
+3601,TRADEWINDS RESORTS,Savdogarlar kurorti,TradeWinds Resorts
+3602,HUDSON HOTEL,Gudson mehmonxonasi,Hudson Hotel
+3603,NOAH'S HOTELS,Nuhning mehmonxonalari,Отели Ноя
+3604,HILTON GARDEN INN,Xilton bog'i,Hilton Garden Inn
+3607,FONTAINEBLEAU RESORTS,FontaayneBlouse kurortlar,Fontainebleau Resorts
+3608,GAYLORD OPRYLAND,Gaylord Opryland,Гейлорд Опраленд
+3609,GAYLORD PALMS,Gaylama kaftlari,Гейлорд Пальмы
+3612,MOEVENPICK HOTELS,Malevenpick mehmonxonalari,Moevenpick Hotels
+3613,MICROTEL INNS & SUITES,MicTel Inn va Suites,Microtel Inns & Suites
+3614,AMERICINN,Amerikalik,ИМЕРИНН
+3615,TRAVELODGE,Sayr qilmoq,Travelodge
+3617,AMERICA'S BEST VALUE INN,Amerikaning eng yaxshi qiymati Inn,Лучшая гостиница Америки
+3618,GREAT WOLF,Ajoyib bo'ri,Великий волк
+3619,ALOFT,Alomat,Вверх
+3620,BINION'S HORSESHOE CLUB,Shirinning rollari klubi,Binion's Horseshoe Club
+3621,EXTENDED STAY,Kengaytirilgan qolish,Расширенное пребывание
+3622,MERLIN HOTELS,Merlin mehmonxonalari,Merlin Hotels
+3625,HOTEL UNIVERSALE,Mehmonxona,Отель Universale
+3626,STUDIO PLUS,Studio Plus,Studio Plus
+3627,EXTENDED STAY AMERICA,Kengaytirilgan Amerikada qolish,Расширенное пребывание Америка
+3628,EXCALIBUR HOTEL AND CASINO,Exctalibur mehmonxonasi va Casino,Экскалибур отель и казино
+3629,DAN HOTELS,Dan mehmonxonalari,Дэн отели
+3630,EXTENDED STAY DELUXE,Kengaytirilgan bo'ling Deluxe,Расширенное пребывание Deluxe
+3631,SLEEP INN,Uxlash,Sleep Inn
+3632,THE PHOENICIAN,Finikika,Финикийский
+3633,RANK HOTELS,Mehmonxonalar,Ранжирование отелей
+3634,SWISSOTEL,Svissotel,Swissotel
+3635,RESO HOTELS,Reo mehmonxonalar,Reso Hotels
+3636,SAROVA HOTELS,Sarova mehmonxonalari,Сарова отелей
+3637,RAMADA INNS,Ramada Inns,Ramada Inns
+3638,HOWARD JOHNSON,Xovard Jonson,Говард Джонсон
+3639,MOUNT CHARLOTTE THISTLE,Charlott Thistle The,Гора Шарлотта Териф
+3640,HYATT HOTELS,Hyatt mehmonxonalari,Hyatt Hotels
+3641,SOFITEL HOTELS,Sofitel mehmonxonalari,Sofitel Hotels
+3642,NOVOTEL HOTELS,Novotel mehmonxonalari,Novotel Hotels
+3643,STEIGENBERGER HOTELS,StegiGenberger mehmonxonalari,Steigenberger Hotels
+3644,ECONO LODGES,Econo Lods,Econo Lodges
+3645,QUEENS MOAT HOUSES,Moat uylari,Квинс Рус Домы
+3646,SWALLOW HOTELS,Mehmonxonalarni yutib oling,Глотать отели
+3647,HUSA HOTELS,Xusa mehmonxonalari,Husa Hotels
+3648,DE VERE HOTELS,De Vere mehmonxonalari,Де Вере отели
+3649,RADISSON HOTELS,Radisson mehmonxonalari,Radisson Hotels
+3650,RED ROOF INNS,Qizil Rohi Inns,Red Roof Inns
+3651,IMPERIAL LONDON HOTEL,Imperator London mehmonxonasi,Imperial London Hotel
+3652,EMBASSY HOTELS,Elchixonaning mehmonxonalari,Отели посольства
+3653,PENTA HOTELS,Pentra mehmonxonalari,Пентальные отели
+3654,LOEWS HOTELS,Lows mehmonxonalari,Loews Hotels
+3655,SCANDIC HOTELS,Skandin mehmonxonalari,Скандичные отели
+3656,SARA AHOTELS,Sara Ahotels,Сара Ахотель
+3657,OBEROI HOTELS,Oberoni mehmonxonalari,Отель Oberoi Hotels
+3658,NEW OTANI HOTELS,Yangi Otani mehmonxonalari,Новые отели Отани
+3659,TAJ HOTELS INTERNATIONAL,TAJ Hotels International,Taj Hotels International
+3660,KNIGHTS INNS,Ritsarlar mehmonxonasi,Knights Inns
+3661,METROPOLE HOTELS,Metropol mehmonxonalari,Metropole Hotels
+3664,FLAG INN,Black mehmon,Flag Inn
+3665,HAMPTON INNS,Xempton Inns,Hampton Inns
+3666,STAKIS HOTELS,Stakis mehmonxonalari,Stakis Hotels
+3667,LUXOR HOTEL AND CASINO,Luxor mehmonxonasi va kazino,Luxor Hotel и казино
+3668,MARITIM HOTELS,Maritim mehmonxonalari,Марит -отели
+3669,ELDORADO HOTEL AND CASINO,Eldorado mehmonxonasi va Casino,Отель и казино Eldorado
+3670,ARCADE HOTELS,Arkada mehmonxonalar,Аркадные отели
+3671,ARCTIA HOTELS,Arktsiya mehmonxonalari,Arctia Hotels
+3672,CAMPANILE HOTELS,Kampiril mehmonxonalari,Campanile Hotels
+3673,IBUSZ HOTELS,Ibusz mehmonxonalari,Ibusz Hotels
+3674,RANTASIPI HOTELS,Rantasipi mehmonxonalari,Rantasipi Hotels
+3675,INTERHOTEL CEDOK,Interhotel cedok,Interhotel Cedok
+3676,MONTE CARLO HOTEL AND CASINO,Monte Carlo mehmonxonasi va Casino,Монте -Карло отель и казино
+3677,CLIMAT DE FRANCE HOTELS,Frantsiya mehmonxonalari,Климатные отели De France
+3678,CUMULUS HOTELS,Kullus mehmonxonalari,Кучевые отели
+3679,SILVER LEGACY HOTEL AND CASINO,Kumush Legasy mehmonxonasi va Casino,Silver Legacy Hotel и казино
+3680,HOTEIS OTHAN,Heomis Overan,Хотес Отан
+3681,ADAMS MARK HOTELS,Adams mehmonxonalar,Адамс Марк отели
+3682,SAHARA HOTEL AND CASINO,Sahara mehmonxonasi va Casino,Отель и казино Sahara
+3683,BRADBURY SUITES,Bredberi Suites,Bradbury Suites
+3684,BUDGET HOST INNS,Byudjet mezbonlar,Бюджетный хост гостиницы
+3685,BUDGETEL INNS,Byudjet mollari,Бюджетные гостиницы
+3686,SUSSE CHALET,Sasse chalet,Сасс Шале
+3687,CLARION HOTELS,Claron mehmonxonalari,Clarion Hotels
+3688,COMPRI HOTELS,Ixtisotxonalar,Compri Hotels
+3689,CONSORT HOTELS,Mehmonxonalar,Консортные отели
+3690,COURTYARD BY MARRIOTT,Marriott hovli,Двор от Marriott
+3691,DILLON INNS,Dillon Inns,Dillon Inns
+3692,DOUBLETREE HOTELS,Dowletree mehmonxonalari,DoubleTree Hotels
+3693,DRURY INNS,Drester Inns,Drury Inns
+3694,ECONOMY INNS OF AMERICA,Amerikaning iqtisodiyoti,Экономическая гостиница Америки
+3695,EMBASSY SUITES,Elchixona to'plamlari,Пособные люксы
+3696,EXEL INNS,Exel Inns,Exel Inns
+3697,FAIRFIELD HOTELS,Fairfield mehmonxonalari,Fairfield Hotels
+3698,HARLEY HOTELS,Xarley mehmonxonalari,Harley Hotels
+3699,MIDWAY MOTOR LODGE,Motorning dvigateli,Midway Motor Lodge
+3700,MOTEL 6,Motel 6,Мотель 6
+3703,RESIDENCE INNS,Yashash joylari,Residence Inns
+3704,ROYCE HOTELS,Royce mehmonxonalari,Royce Hotels
+3705,SANDMAN INNS,Sandman Inns,Sandman Inns
+3706,SHILO INNS,Shilo Inns,Shilo Inns
+3707,SHONEY'S INNS,Shoneyning mehmonxonasi,Shoney's Inns
+3708,VIRGIN RIVER HOTEL AND CASINO,Bokira daryosi mehmonxonasi va kazino,Отель и казино Virgin River
+3709,SUPER 8 MOTELS,Super 8 Motel,Super 8 Motels
+3710,THE RITZ-CARLTON,Ritz-Karlton,Ritz-Carlton
+3711,FLAG INNS (AUSTRALIA),Flagle Inns (Avstraliya),Flag Inns (Австралия)
+3712,BUFFALO BILL'S HOTEL AND CASINO,Buffalo Bill mehmonxonasi va Casino,Отель и казино Буффало Билла
+3713,QUALITY PACIFIC HOTEL,Tinch okeani mehmonxonasi,Качественный Pacific Hotel
+3714,FOUR SEASONS HOTEL (AUSTRALIA),To'rt fasl mehmonxonasi (Avstraliya),Отель Four Seasons (Австралия)
+3715,FAIRFIELD INN,Fairfield Inn,Fairfield Inn
+3716,CARLTON HOTELS,Karlton mehmonxonalari,Карлтон отели
+3717,CITY LODGE HOTELS,Shahar turkori mehmonxonalar,Городская ложа отелей
+3718,KAROS HOTELS,Karos mehmonxonalari,Карос отели
+3719,PROTEA HOTELS,Protea mehmonxonalari,Протеа отели
+3720,SOUTHERN SUN HOTELS,Janubiy Quyosh mehmonxonalari,Южные отели Солнца
+3721,HILTON CONRAD,Xilton Conrad,Хилтон Конрад
+3722,WYNDHAM,Xyndham,Уиндхэм
+3723,RICA HOTELS,Rika mehmonxonalari,Рика отели
+3724,INTER NOR HOTELS,"""Inter"" va mehmonxonalar",Интернет отелей
+3725,SEA PINES RESORT,Dengiz qarag'aylari kurort,Sea Pines Resort
+3726,RIO SUITES,Rio Suites,Rio Suites
+3727,BROADMOOR HOTEL,Broadmoor mehmonxonasi,Broadmoor Hotel
+3728,BALLY'S HOTEL AND CASINO,Ballyning mehmonxonasi va kazino,Bally's Hotel и Casino
+3729,JOHN ASCUAGA'S NUGGET,Jon Ass Assuaga Nug'get,Самородка Джона Аскуаги
+3730,MGM GRAND HOTEL,Mgm grand mehmonxonasi,MGM Grand Hotel
+3731,HARRAH'S HOTELS AND CASINOS,Xarrah mehmonxonalari va kazino,Отели и казино Harrah
+3732,OPRYLAND HOTEL,Oprylandning mehmonxonasi,Opryland Hotel
+3734,HARVEY/BRISTOL HOTELS,Xarvi / Bristol mehmonxonalari,Харви/Бристоль отели
+3735,MASTERS ECONOMY INNS,Masterlar Iqtisodiyot Inns,Мастерская экономика гостиницы
+3736,COLORADO BELLE/EDGEWATER RESORT,Kolorado belle / chekka suv kurort,Колорадо Belle/Edgewater Resort
+3737,RIVIERA HOTEL AND CASINO,Riviera mehmonxonasi va kazino,Riviera Hotel и Casino
+3738,TROPICANA RESORT & CASINO,Tropcana kurort va kazino,Tropicana Resort & Casino
+3739,WOODSIDE HOTELS & RESORTS,The Woodside mehmonxonalar va kurortlar,Woodside Hotels & Resorts
+3740,TOWNEPLACE SUITES,ShaharePlace Suites,Towneplace Suites
+3743,BILTMORE HOTEL & SUITES,Biltmore mehmonxonasi va da'volar,Biltmore Hotel & Suites
+3744,CAREFREE RESORTS,Carefri kurortlari,Беззаботные курорты
+3745,ST. REGIS HOTEL,XT. Regis mehmonxonasi,Ул. Регис отель
+3746,THE ELIOT HOTEL,Eliot mehmonxonasi,Отель Eliot
+3747,CLUBCORP/CLUBRESORTS,ClubCorp / Klublar,ClubCorp/ClubResorts
+3748,WELLESLEY INNS,Wellesley Inns,Wellesley Inns
+3749,THE BEVERLY HILLS HOTEL,Beverly Hills mehmonxonasi,Отель Беверли -Хиллз
+3750,CROWNE PLAZA HOTELS,Krene Plaza mehmonxonalari,Crowne Plaza Hotels
+3751,HOMEWOOD SUITES,Uy qurish uchun sovutish uchun,Homewood Suites
+3752,PEABODY HOTELS,Peabod mehmonxonalari,Отели Пибоди
+3753,GREENBRIAR RESORTS,Yashil Resortlar,Greenbriar Resorts
+3754,AMELIA ISLAND PLANTATION,Amelia orollari plantatsiyasi,Плантация острова Амелия
+3755,THE HOMESTEAD,Uy,Усадьба
+3757,CANYON RANCH,Kanyon ranchosi,Каньон Ранчо
+3758,KAHALA MANDARIN ORIENTAL HOTEL,KA'ala Manarin Sharq mehmonxonasi,Kahala Mandarin Oriental Hotel
+3759,THE ORCHID AT MAUNA LANI,Mauna Lani-da orkide,Орхидея в Мауна Лани
+3760,HALEKULANI HOTEL/WAIKIKI PARC,Halekulani mehmonxonasi / Waikiki Parc,Halekulani Hotel/Waikiki Parc
+3761,PRIMADONNA HOTEL AND CASINO,Priadonna mehmonxonasi va kazino,Primadonna Hotel и Casino
+3762,WHISKEY PETE'S HOTEL AND CASINO,Viski Pete mehmonxonasi va Casino,Виски отель Пита и казино
+3763,CHATEAU ELAN WINERY AND RESORT,Chatoue Elan Winerlik va kurort,Винодельня и курорт Chateau Elan
+3764,BEAU RIVAGE HOTEL AND CASINO,Beu Rive mehmonxonasi va Casino,Beau Rivage Hotel и казино
+3765,BELLAGIO,Beldasio,Белладжио
+3766,FREMONT HOTEL AND CASINO,Fremint Hotel va Casino,Fremont Hotel и Casino
+3767,MAIN STREET STATION HOTEL AND CASINO,Asosiy ko'cha stantsiyasi mehmonxonasi va kazino,Отель и казино Main Street Station
+3768,SILVER STAR HOTEL AND CASINO,Kumush yulduz mehmonxonasi va kazino,Отель и казино Silver Star
+3769,STRATOSPHERE HOTEL AND CASINO,Stratosfera mehmonxonasi va kazino,Стратосферная отель и казино
+3770,SPRINGHILL SUITES,SpringHill Subites,Springhill Suites
+3771,CAESAR'S HOTEL AND CASINO,Qaysarning mehmonxonasi va kazino,Цезарь отель и казино
+3772,NEMACOLIN WOODLANDS,Nemacoin o'rmonzorlari,Немаколиновые леса
+3773,THE VENETIAN RESORT HOTEL CASINO,Venetsiya kurort mehmonxonasi Casino,Венецианское курортное отель казино
+3774,NEW YORK-NEW YORK HOTEL AND CASINO,Nyu-York-Nyu-York mehmonxonasi va Casino,Нью-Йорк-Нью-Йорк отель и казино
+3775,SANDS RESORT,Qums kurort,Sands Resort
+3776,NEVELE GRAND RESORT AND COUNTRY CLUB,Nevele Grand Rort va mamlakat klubi,Nevele Grand Resort и Country Club
+3777,MANDALAY BAY RESORT,Manmalay Bay kurort,Mandalay Bay Resort
+3778,FOUR POINTS HOTELS,To'rt ochko mehmonxonasi,Четыре очка отелей
+3779,W HOTELS,Mehmonxonalar,W отели
+3780,DISNEY RESORTS,Disney kurortlari,Disney Resorts
+3783,TOWN AND COUNTRY RESORT & CONVENTION CENTER,Shahar va mamlakat kurort va anjuman markazi,Town и Country Resort & Convention Center
+3784,FIRST HOSPITALITY HOTELS,Birinchi mehmondo'stlik mehmonxonalari,Первые гостеприимные отели
+3785,OUTRIGGER HOTELS AND RESORTS,Qo'llash moslamalari va kurortlar,Отели и курорты Outgerg
+3786,OHANA HOTELS OF HAWAII,Ohana Gavayi mehmonxonalari,Отели Ohana of Hawaii
+3787,CARIBE ROYALE RESORTS,Kariban Royale Reorses,Caribe Royale Resorts
+3788,ALA MOANA HOTEL,Ala Mana mehmonxonasi,Ala Moana Hotel
+3789,SMUGGLER'S NOTCH RESORT,SMUGGER-ning notchi kurort,Страдчик Notch Resort
+3790,RAFFLES HOTELS,Raffler mehmonxonalari,Раффлс отели
+3791,STAYBRIDGE SUITES,Qolish Suites,Staybridge Suites
+3792,CLARIDGE CASINO HOTEL,Clarjidj Casino mehmonxonasi,Claridge Casino Hotel
+3793,FLAMINGO HOTELS,Flamingo mehmonxonalari,Отели фламинго
+3794,GRAND CASINO HOTELS,Grand Casino mehmonxonalari,Большой казино отели
+3795,PARIS LAS VEGAS HOTEL,Parij Las Vegas mehmonxonasi,Париж Лас -Вегас отель
+3796,PEPPERMILL HOTEL CASINO,Peppermill Hotel Casino,Peppermill Hotel Casino
+3797,ATLANTIC CITY HILTON RESORTS,Atlantika City Xilton kurortlari,Atlantic City Hilton Resorts
+3798,EMBASSY VACTAION RESORT,Elchixona ta'til kursi,Пособие каникулы
+3799,HALE KOA HOTEL,Hale Koa mehmonxonasi,Hale Koa Hotel
+3800,HOMESTEAD SUITES,Uy uchun sovutish uchun,Усадьба
+3801,WILDERNESS HOTEL AND RESORT,Sahroda mehmonxona va kurort,Отель и курорт дикой природы
+3802,THE PALACE HOTEL,Palace mehmonxonasi,Palace Hotel
+3807,ELEMENT,Element,ЭЛЕМЕНТ
+3808,LXR,Lok,LXR
+3811,PREMIER INN,Premer Inn,Premier Inn
+3812,HYATT PLACE,Hyattning joyi,Hyatt Place
+3813,HOTEL INDIGO,Indigo mehmonxonasi,Отель Indigo
+3814,THE ROOSEVELT HOTEL NY,Ruzvelt Hotel Ny,The Roosevelt Hotel NY
+3815,NICKELODEON FAMILY SUITES BY HOLIDAY INN,Nikelodeon oilasi dam olish uchun uy egalari,Nickelodeon Family Suites от Holiday Inn
+3816,HOME2SUITES,Uy222222,Home2suites
+3818,MAINSTAY SUITES,Suites Suites,Основные люксы
+3819,OXFORD SUITES,Oksford Suiti,Оксфордские апартаменты
+3820,JUMEIRAH ESSEX HOUSE,Jumeirah Essex uyi,Jumeirah Essex House
+3821,CARIBE ROYALE,Karibara Royale,Карибе Рояль
+3822,CROSSLAND,Kesish,Кроссленд
+3823,GRAND SIERRA RESORT,Grand Sierra kurorti,Grand Sierra Resort
+3824,ARIA,Aria,Ария
+3825,VDARA,Vdara,Vdara
+3826,AUTOGRAPH,Dastxat,АВТОГРАФ
+3827,GALT HOUSE,Galt uyi,Галт Хаус
+3828,COSMOPOLITAN OF LAS VEGAS,Las-Vegasning kosmopoliti,Космополит из Лас -Вегаса
+3829,COUNTRY INN BY CARLSON,Karlson tomonidan mamlakatxona,Country Inn от Carlson
+3830,PARK PLAZA HOTEL,Park plaza mehmonxonasi,Park Plaza Hotel
+3831,WALDORF,Shaytonf,Вальдорф
+3832,CURIO HOTELS,Kurio mehmonxonalari,Curio Hotels
+3833,CANOPY,Ziqna,Навес
+3834,BAYMONT INN & SUITES,Baymont Inn & Suites,Baymont Inn & Suites
+3835,DOLCE HOTELS AND RESORTS,Dolce mehmonxonalari va kurortlar,Dolce Hotels and Resorts
+3836,HAWTHORNE SUITES BY WYNDHAM,Wyndham tomonidan do'lana to'plamlari,Боярышник Suites от Wyndham
+3839,KYORITSU HOTELS,Kiritsitsu mehmonxonalari,Kyoritsu Hotels
+3998,China Railway,Xitoy temir yo'llari,Китайская железная дорога
+4011,Railroads,Temir yo'l,Железные дороги
+4111,"Local and Suburban Commuter Passenger Transportation, including Ferries","Mahalliy va shahar atrofi savdosi yo'lovchi tashish, shu jumladan parserlar","Местные и пригородные пассажирские пассажирские перевозки, включая паромы"
+4112,Passenger Railways,Yo'lovchi temir yo'llari,Пассажирские железные дороги
+4119,Ambulance Services,Tez yordam xizmati,Службы скорой помощи
+4121,Taxicabs and Limousines,Soliq va limuzinlar,Такси и лимузины
+4131,Bus Lines,Avtobus chiziqlari,Автобусные линии
+4214,"Motor Freight Carriers and Trucking - Local and Long Distance, Moving and Storage Companies, and Local Delivery","Avtotransport yuk tashuvchilar va yuk mashinasi - mahalliy va shaharlar, harakatlanuvchi va saqlash kompaniyalari va mahalliy etkazib berish","Автомобильные перевозчики и грузоперевозки - местные и большие расстояния, транспортные и хранения, а также местная доставка"
+4215,"Courier Services - Air and Ground, and Freight Forwarders",Kuryer xizmatlari - Havo va zamin va ekspeditorlar,"Курьерские услуги - воздух и земля, а также перенаправляющие"
+4225,"Public Warehousing and Storage - Farm Products, Refrigerated Goods, and Household Goods","Ommaviy omborxonalar va saqlash - ferma mahsulotlari, muzlatgichli tovarlar va maishiy mahsulotlar","Общественные склады и хранение - сельскохозяйственные товары, охлажденные товары и товары для дома."
+4411,Steamship and Cruise Lines,Bug 'dasturi va kruiz liniyalari,Пароход и круизные линии
+4457,Boat Rentals and Leasing,Qayiqni ijarasi va lizing,Прокат лодок и лизинг
+4468,"Marinas, Marine Service, and Supplies","Marinalar, dengiz xizmati va materiallar","Марина, морское обслуживание и припасы"
+4511,Airlines and Air Carriers,Aviakompaniyalar va aviatashuvchilar,Авиакомпании и авиаперевозчики
+4582,"Airports, Flying Fields, and Airport Terminals","Aeroportlar, uchadigan maydonlar va aeroport terminallari","Аэропорты, летающие поля и терминалы аэропортов"
+4722,Travel Agencies and Tour Operators,Sayyohlik agentliklari va turoperatorlari,Туристические агентства и туроператоры
+4733,Ticket Sales for Large Scenic Spots,Katta sahna dog'lar uchun chipta savdosi,Продажа билетов для больших живописных мест
+4784,Tolls and Bridge Fees,Tolls va ko'prix to'lovlari,Проезд и плата за мост
+4789,Transportation Services - Not Elsewhere Classified,Transport xizmatlari - boshqa joyda tasniflangan,Транспортные услуги - не в других местах классифицируются
+4812,Telecommunication Equipment and Telephone Sales,Telekommunikatsiya uskunalari va telefon sotish,Телекоммуникационное оборудование и продажи по телефону
+4814,"Telecommunications Services, including Local and Long Distance Calls, Credit Card Calls, Calls through use of Magnetic-Stripe-Reading Telephones, and Fax Services","Telekommunikatsiya xizmatlari, shu jumladan mahalliy va shaharlararo qo'ng'iroqlar, kredit kartalari Qo'ng'iroqlar, magnit-stripe-rese telefonlari va faks xizmatlaridan foydalanish orqali","Службы телекоммуникаций, включая локальные и на длинные дистанционные звонки, звонки по кредитным картам, звонки с использованием телефонов для чтения магнитных полос и услуг факса"
+4815,Monthly Summary Telephone Charges,Oylik qisqacha telefonda to'lovlar,Ежемесячная сводная телефонная плата
+4816,Comp Network/Information Services,Tarmoq / Axborot xizmatlari,Comp Network/Information Services
+4821,Telegraph Services,Telegraf xizmatlari,Телеграфские услуги
+4829,Wire Transfers and Money Orders,Sim transferlari va pul buyurtmalari,Проволочные переводы и денежные переводы
+4899,Cable and Other Pay Television Services,Kabel va boshqa to'lovlar televizion xizmatlari,Кабельные и другие платные телевизионные услуги
+4900,"Utilities - Electric, Gas, Water, and Sanitary","Kommunal xizmatlar - elektr, gaz, suv va sanitariya","Коммунальные услуги - электрический, газ, вода и санитария"
+5013,Motor Vehicle Supplies and New Parts,Avtotransport vositalari va yangi qismlar,Поставки автомобилей и новые детали
+5021,Office and Commercial Furniture,Ofis va tijorat mebellari,Офисная и коммерческая мебель
+5039,Construction Materials - Not Elsewhere Classified,Qurilish materiallari - boshqa joyda tasniflangan,Строительные материалы - не в других местах классифицируются
+5044,"Office, Photographic, Photocopy, and Microfilm Equipment","Ofis, fotosurat, fotokopiya va mikrofilm uskunalari","Офис, фотографическая, фотокопия и микрофильмное оборудование"
+5045,"Computers, Computer Peripheral Equipment, and Software","Kompyuterlar, kompyuter periferik uskunalari va dasturiy ta'minot","Компьютеры, компьютерное периферическое оборудование и программное обеспечение"
+5046,Commercial Equipment - Not Elsewhere Classified,Tijorat uskunalari - boshqa joyda tasniflangan,Коммерческое оборудование - не в других местах классифицировано
+5047,Dental/Laboratory/Medical/Ophthalmic Hospital Equipment and Supplies,Tish / laboratoriya / tibbiy / oftalmoyh kasalxonasi uskunalari va materiallari,Зубной/лабораторный/медицинский/офтальмологический больничный оборудование и расходные материалы
+5051,Metal Service Centers and Offices,Metall servis markazlari va ofislari,Металлические центры и офисы
+5065,Electrical Parts and Equipment,Elektr qismlari va uskunalari,Электрические детали и оборудование
+5072,Hardware Equipment and Supplies,Uskunalar va materiallar,Аппаратное оборудование и расходные материалы
+5074,Plumbing and Heating Equipment and Supplies,Santexnika va isitish uskunalari va materiallar,Сантехника и отопление оборудования и расходные материалы
+5085,Industrial Supplies - Not Elsewhere Classified,Sanoat ta'minoti - boshqa joyda tasniflangan emas,Промышленные принадлежности - не в других местах классифицируются
+5094,"Precious Stones and Metals, Watches, and Jewelry","Qimmatbaho toshlar va metallar, soatlar va zargarlik buyumlari","Драгоценные камни и металлы, часы и украшения"
+5099,Durable Goods - Not Elsewhere Classified,Bardoshli mahsulotlar - boshqa joyda tasniflangan,Прочный товары - не в других местах классифицируется
+5111,"Stationery, Office Supplies, Printing and Writing Paper","Kantselyariya tovarlari, ofis materiallari, bosib chiqarish va yozish qog'ozi","Канцелярские товары, офисные принадлежности, печатная и писательская бумага"
+5122,"Drugs, Drug Proprietors, and Druggists' Sundries","Giyohvand moddalar, giyohvandlik vositalari va giyohvandlar sunmistikasi","Лекарства, владельцы наркотиков и солнат -наркотики"
+5131,"Piece Goods, Notions, and Other Dry Goods","Buyumlar, tushunchalar va boshqa quruq mahsulotlar","Товары, представления и другие сухие товары"
+5137,"Men's, Women's, and Children's Uniforms and Commercial Clothing","Erkaklar, ayollar va bolalar kiyimlari va tijorat kiyimlari","Мужская, женская и детская форма и коммерческая одежда"
+5139,Commercial Footwear,Tijorat poyafzallari,Коммерческая обувь
+5169,Chemicals and Allied Products - Not Elsewhere Classified,Kimyoviy va ittifoq mahsulotlari - boshqa joyda tasniflangan,Химикаты и союзные продукты - не в других местах классифицируются
+5172,Petroleum and Petroleum Products,Neft va neft mahsulotlari,Нефтяная и нефтяная продукция
+5192,"Books, Periodicals, and Newspapers","Kitoblar, davriy nashrlar va gazetalar","Книги, периодические издания и газеты"
+5193,"Florists' Supplies, Nursery Stock, and Flowers","Floristlar materiallari, bolalar bog'chasi va gullar","Спасники флористов, питомник и цветы"
+5198,"Paints, Varnishes, and Supplies","Bo'yoqlar, laklar va materiallar","Краски, лаки и припасы"
+5199,Non-Durable Goods - Not Elsewhere Classified,Uzoq bo'lmagan tovarlar - boshqa joyda tasniflangan,Не продуманные товары - не классифицируются в других местах
+5200,Home Supply Warehouse Stores,Uy ta'minotining ombori do'konlari,Складские магазины на дому
+5211,Lumber and Building Materials Stores,Yog'och va qurilish materiallari do'konlari,Пиломатериалы и строительные материалы
+5231,"Glass, Paint, and Wallpaper Stores","Shisha, bo'yoq va devor qog'ozi do'konlari","Стеклянные, краски и обои магазины"
+5251,Hardware Stores,Apparat do'konlari,Аппаратные магазины
+5261,"Lawn and Garden Supply Stores, including Nurseries","Maysazor va bog 'ta'minoti do'konlari, shu jumladan hamshiralar","Магазины подачи газона и сада, в том числе питомники"
+5271,Mobile Home Dealers,Mobil uy dilerlari,Дилеры мобильных домов
+5300,Wholesale Clubs,Ulgurji klublar,Оптовые клубы
+5309,Duty Free Stores,Bojsiz do'konlar,Duty Free Stores
+5310,Discount Stores,Chegir do'konlari,Дисконтные магазины
+5311,Department Stores,Kafedra do'konlari,Универмаги
+5331,Variety Stores,Turli xil do'konlar,Разнообразные магазины
+5399,Miscellaneous General Merchandise,Umumiy umumiy mahsulot,Разное общее товары
+5411,Grocery Stores and Supermarkets,Oziq-ovqat do'konlari va supermarketlar,Продуктовые магазины и супермаркеты
+5422,Freezer and Locker Meat Provisioners,Muzlatgich va echinish go'shti,Заказера -морозильник и шкаф
+5441,"Candy, Nut, and Confectionery Stores","Konfet, yong'oq va qandolat mahsulotlari","Конфеты, ореховые и кондитерские магазины"
+5451,Dairy Products Stores,Sut mahsulotlari do'konlari,Молочные продукты магазины
+5462,Bakeries,Novvoyxonalar,Пекарни
+5499,Miscellaneous Food Stores - Convenience Stores and Specialty Markets,Oziq-ovqat do'konlari - qulayliklar va ixtisoslik bozorlari,Разное продовольственные магазины - магазины и специализированные рынки
+5511,"Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing","Avtomobil va yuk mashinalari sotuvchilari (yangi va ishlatilgan) savdo, xizmat, ta'mirlash, ehtiyot qismlar va lizing","Дилеры автомобилей и грузовиков (новые и подержанные) Продажи, обслуживание, ремонт, запчасти и лизинг"
+5521,"Car and Truck Dealers (Used Only) Sales, Service, Repairs, Parts, and Leasing","Avtomobil va yuk mashinalari sotuvchisi (faqat ishlatilgan) savdo, xizmat ko'rsatish, ta'mirlash, ehtiyot qismlar va lizing","Дилеры автомобилей и грузовиков (используются только) Продажи, обслуживание, ремонт, запчасти и лизинг"
+5531,Auto and Home Supply Stores,Avtomobil va uy ta'minoti do'konlari,Автоматические и домашние снабжения
+5532,Automotive Tire Stores,Avtomobil texnologiyasi,Автомобильные шинные магазины
+5533,Auto Parts and Accessories Stores,Avto ehtiyot qismlar va aksessuarlar do'konlari,Автовальные и аксессуальные магазины
+5541,Service Stations (with or without Ancillary Services),Xizmat stantsiyalari (yordami bilan yoki qo'shimcha xizmatlar bilan),Станции обслуживания (с или без вспомогательных услуг)
+5542,Automated Fuel Dispensers,Avtomatlashtirilgan yonilg'i quyish vositalari,Автоматизированный топливный дозаторы
+5551,Boat Dealers,Qayiq sotuvchilari,Лодочные торговцы
+5552,Electric Vehicle Charging,Elektr transport vositasi zaryadlash,Зарядка электромобилей
+5561,"Camper, Recreational, and Utility Trailer Dealers","Kamper, dam olish va kommunal soper dilerlar","Кэмпер, развлекательные и коммунальные трейлеры дилеры"
+5571,Motorcycle Shops and Dealers,Mototsikl do'konlari va dilerlar,Мотоциклетные магазины и дилеры
+5592,Motor Home Dealers,Motorom uy dilerlari,Домашние дилеры на мотоцикле
+5598,Snowmobile Dealers,Qor avtomobilining dilerlari,Дилеры снегоходов
+5599,"Miscellaneous Automotive, Aircraft, and Farm Equipment Dealers - Not Elsewhere Classified","Turli xil avtomobilsozlik, samolyotlar va ferma uskunalari - boshqa joyda tasniflangan","Разное автомобильное, самолетное и сельскохозяйственное оборудование - не в других местах классифицируется"
+5611,Men's and Boys Clothing and Accessory Stores,Erkaklar va o'g'il bolalar kiyim-kechak va qo'shimcha do'konlar,Мужская и мальчика одежда и аксессуальные магазины
+5621,Women's Ready To Wear Stores,Ayollar do'konlar kiyishga tayyor,Женщины готовы носить магазины
+5631,Women's Accessory and Specialty Stores,Ayollar uchun aksessuar va mutaxassislik do'konlari,Женские аксессуары и специализированные магазины
+5641,Children's and Infants' Wear Stores,Bolalar va go'daklar do'konlari do'konlari,Детские и младенческие магазины одежды
+5651,Family Clothing Stores,Oilaviy kiyim-kechak do'konlari,Семейная одежда магазинов
+5655,Sports and Riding Apparel Stores,Sport va minish yo'laklari do'konlari,Спортивные и верховые магазины одежды
+5661,Shoe Stores,Poyafzal do'konlari,Обувные магазины
+5681,Furriers and Fur Shops,Furries va mo'ynali do'konlar,Фурриеры и меховые магазины
+5691,Men's and Women's Clothing Stores,Erkaklar va ayollar kiyim-kechaklari do'konlari,Мужские и женские магазины одежды
+5697,"Tailors, Seamstresses, Mending, and Alterations","Tikuvchilar, tikuvchilar, tuzatish va o'zgartirishlar","Портные, швеи, починка и изменения"
+5698,Wig and Toupee Stores,Wig va Toupee do'konlari,Магазины париков и toupee
+5699,Miscellaneous Apparel and Accessory Stores,Turli xil kiyim va aksessuar do'konlar,Разное одежда и аксессуары
+5712,"Furniture, Home Furnishings and Equipment Stores, and Manufacturers, except Appliances","Mebel, uy jihozlari va jihozlar va ishlab chiqaruvchilar, jihozlardan tashqari","Мебель, домашняя мебель и магазины оборудования, а также производители, кроме приборов"
+5713,Floor Covering Stores,Zamin qoplamasi do'konlari,Полное покрытие магазинов
+5714,"Drapery, Window Covering, and Upholstery Stores","Draper, deraza qoplamalari va qoplamali do'konlar","Драпировка, окно -покрытие и обивки"
+5715,Alcoholic Beverage Wholesalers,Alkogol ichimliklar ulgurji savdosi,Алкогольные напитки Оптовики
+5718,"Fireplaces, Fireplace Screens, and Accessories Stores","Kaminlar, kamin ekranlari va aksessuarlar do'konlari","Камины, каминные экраны и магазины аксессуаров"
+5719,Miscellaneous Home Furnishings Specialty Stores,Turli xil uy jihozlari bo'yicha mutaxassislik do'konlari,Разное домашнее обстановка специализированных магазинов
+5722,Household Appliance Stores,Uy jihozlari do'konlari,Магазины бытовых приборов
+5732,Electronics Stores,Elektron do'konlar,Электронные магазины
+5733,"Music Stores - Musical Instruments, Pianos, and Sheet Music","Musiqa do'konlar - musiqa asboblari, pianino va varaq musiqasi","Музыкальные магазины - музыкальные инструменты, фортепиано и ноты"
+5734,Computer Software Stores,Kompyuter dasturiy do'konlari,Компьютерное программное обеспечение
+5735,Record Stores,Yozuv do'konlari,Записывающие магазины
+5811,Caterers,Tanturer,Поставщики
+5812,Eating Places and Restaurants,Ovqatlanish joylari va restoranlar,Места для еды и рестораны
+5813,"Drinking Places (Alcoholic Beverages) - Bars, Taverns, Nightclubs, Cocktail Lounges, and Discotheques","Ichimlik joylari (alkogolli ichimliklar) - bar, tavernlar, tungi pallalar, kokteyllar, diskotekalar","Питье места (алкогольные напитки) - бары, таверны, ночные клубы, коктейльные залы и дискотека"
+5814,Fast Food Restaurants,Tez ovqatlanish restoranlari,Рестораны быстрого питания
+5815,"Digital Goods - Media: Books, Movies, Music","Raqamli tovarlar - OAV: kitoblar, filmlar, musiqa","Цифровые товары - СМИ: книги, фильмы, музыка"
+5816,Digital Goods - Games,Raqamli tovarlar - o'yinlar,Цифровые товары - игры
+5817,Digital Goods - Apps (Excludes Games),Raqamli tovarlar - ilovalar (o'yinlar bundan mustasno),Цифровые товары - приложения (исключает игры)
+5818,Large Digital Goods Merchants,Katta raqamli tovarlar savdogarlari,Крупные торговцы цифровыми товарами
+5912,Drug Stores and Pharmacies,Dorixonalar va dorixonalar,Аптеки и аптеки
+5921,"Package Stores - Beer, Wine, and Liquor","Paketlar - pivo, sharob va likyor","Упаковочные магазины - пиво, вино и ликер"
+5931,Used Merchandise and Secondhand Stores,Ishlatilgan tovarlar va ikkinchi darajali do'konlar,Использовали товары и подержанные магазины
+5932,"Antique Shops - Sales, Repairs, and Restoration Services","Antik do'konlar - sotish, ta'mirlash va tiklash xizmatlari","Служба антикварных магазинов - услуги по продажам, ремонту и восстановлению"
+5933,Pawn Shops,Garov do'konlari,Ломбарды
+5935,Wrecking and Salvage Yards,Vayronagarchilik va qutqarish hovlilari,Разрушение и спасение ярдов
+5937,Antique Reproduction Stores,Antik takrorlash do'konlari,Античные магазины воспроизводства
+5940,Bicycle Shops - Sales and Service,Velosiped do'konlari - Savdo va xizmat ko'rsatish,Велосипедные магазины - продажи и обслуживание
+5941,Sporting Goods Stores,Sport buyumlari do'konlari,Спортивные товары магазинов
+5942,Book Stores,Kitob do'konlari,Книжные магазины
+5943,"Stationery, Office, and School Supply Stores","Kantselyariya tovarlari, ofis va maktab ta'minoti do'konlari","Канцелярские товары, офисные и школьные снабжения"
+5944,"Jewelry, Watch, Clock, and Silverware Stores","Zargarlik buyumlari, soatlar, soat va kumush buyumlar do'konlari","Ювелирные изделия, часы, часы и магазины серебра"
+5945,"Hobby, Toy, and Game Stores","Xobbi, o'yinchoq va o'yin do'konlari","Хобби, игрушка и игровые магазины"
+5946,Camera and Photographic Supply Stores,Kamera va fotosuratlar savdo do'konlari,Камера и фотопроводные магазины
+5947,"Gift, Card, Novelty, and Souvenir Stores","Sovg'a, karta, yangilik va yodgorli do'konlar","Подарки, карта, новинка и сувенирные магазины"
+5948,Luggage and Leather Goods Stores,Bagaj va charm buyumlari,Магазины багажа и кожи
+5949,"Sewing, Needlework, Fabric, and Piece Goods Stores","Tikuv, tikuv, mato va buyumlar do'konlari","Швейные, рукоделия, ткань и товары для товаров"
+5950,Glassware and Crystal Stores,Shisha va kristalli do'konlar,Стеклянные и хрустальные магазины
+5960,Direct Marketing - Insurance Services,To'g'ridan-to'g'ri marketing - sug'urta xizmatlari,Прямой маркетинг - страховые услуги
+5962,Telemarketing - Travel-Related Arrangement Services,Telemarketing - Sayohat bilan bog'liq tadbirlar xizmatlari,"Телемаркетинг - Служба договоренности, связанные с путешествиями"
+5963,Door-to-Door Sales,Eshikning uyma-uy savdosi,Продажи двери до двери
+5964,Direct Marketing Catalog Merchants,To'g'ridan-to'g'ri marketing katalogi materiallari savdogarlari,Торговцы каталогам прямого маркетинга
+5965,Direct Marketing - Combination Catalog and Retail Merchants,To'g'ridan-to'g'ri marketing - kombinatsiya katalog va chakana savdogarlar,Прямой маркетинг - комбинированный каталог и торговцы розничными торговцами
+5966,Direct Marketing - Outbound Telemarketing Merchants,To'g'ridan-to'g'ri marketing - Chiquvchi Telemarketing savdogarlari,Прямой маркетинг - Источные торговцы телемаркетингом
+5967,Direct Marketing - Inbound Telemarketing Merchants,To'g'ridan-to'g'ri marketing - Telemarketing savdogarlari,Прямой маркетинг - входящие торговцы телемаркетингом
+5968,Direct Marketing - Continuity/Subscription Merchants,To'g'ridan-to'g'ri marketing - uzluksizlik / obuna savdochilari,Прямой маркетинг - торговцы непрерывностью/подпиской
+5969,Direct Marketing/Direct Marketers - Not Elsewhere Classified,To'g'ridan-to'g'ri marketing / to'g'ridan-to'g'ri marketerlar - boshqa joyda tasniflangan emas,Прямой маркетинг/прямой маркетологи - не классифицируется в других местах
+5970,Artist Supply and Craft Stores,Rassom etkazib berish va hunarmandchilik do'konlari,Магазины поставки художников и ремесленников
+5971,Art Dealers and Galleries,Badiiy dilerlar va galereyalar,Художественные дилеры и галереи
+5972,Stamp and Coin Stores,Shtamp va tanga do'konlari,Магазины штампов и монет
+5973,Religious Goods Stores,Diniy buyumlar do'konlari,Религиозные товары магазины
+5975,"Hearing Aids Sales, Service, and Supplies","Eshitish OITSni sotish, xizmat ko'rsatish va materiallar","Продажи, обслуживание, обслуживание и расходные материалы для слуховых аппаратов"
+5976,Orthopedic Goods and Prosthetic Devices,Ortopedik buyumlar va protez qurilmalari,Ортопедические товары и протезные устройства
+5977,Cosmetic Stores,Kosmetik do'konlar,Косметические магазины
+5978,"Typewriter Stores - Sales, Service, and Rentals","Yozuv himoyachisi - sotish, xizmat va ijara haqi","Магазины пишущей машинки - продажи, обслуживание и аренда"
+5983,"Fuel Dealers - Fuel Oil, Wood, Coal, and Liquefied Petroleum","Yoqilg'i sotuvchilari - yoqilg'i moyi, yog'och, ko'mir va suyultirilgan neft","Дилеры топлива - мазут, древесина, уголь и нефть сжиженной нефти."
+5992,Florists,Floristlar,Флористы
+5993,Cigar Stores and Stands,Sigaret do'konlari va stendlar,Сигарные магазины и стенды
+5994,News Dealers and Newsstands,Yangiliklar va yangiliklar dasturlari,Новости и газетные киоски
+5995,"Pet Shops, Pet Food and Supplies","Uy hayvonlari do'konlari, uy hayvonlari oziq-ovqat va materiallar","Домашние магазины, корма для домашних животных и припасы"
+5996,"Swimming Pools - Sales, Supplies, and Services","Basseynlar - sotish, materiallar va xizmatlar","Бассейны - продажи, расходные материалы и услуги"
+5997,Electric Razor Stores - Sales and Service,Elektr storllar - Savdo va xizmat ko'rsatish,Электрические магазины бритвы - продажи и обслуживание
+5998,Tent and Awning Stores,Chodir va der do'konlar,Палатка и тверские магазины
+5999,Miscellaneous and Specialty Retail,Turli xil va mutaxassislik chakana savdosi,Разное и специальная розничная торговля
+6010,Financial Institutions - Manual Cash Disbursements,Moliyaviy institutlar - qo'llanma naqd pullar,Финансовые учреждения - ручные денежные выплаты
+6011,Financial Institutions - Automated Cash Disbursements,Moliyaviy institutlar - avtomatlashtirilgan naqd pullar,Финансовые учреждения - автоматические денежные выплаты
+6012,Financial Institutions - Merchandise and Services,Moliyaviy institutlar - Savdo va xizmatlar,Финансовые учреждения - товары и услуги
+6051,"Non Financial Institutions - Foreign Currency, Money Orders, (not Wire Transfer), Scrip, and Travelers Cheques","Moliyaviy bo'lmagan institutlar - xorijiy valyuta, pul o'tkazmalari, (simlar transferi), skript va sayohatchilar tekshiruvi","Не финансовые учреждения - иностранная валюта, денежные переводы, (не аккуратные переводы), скрип и путешественники."
+6211,Securities - Brokers and Dealers,Qimmatli qog'ozlar - brokerlar va dilerlar,Ценные бумаги - брокеры и дилеры
+6300,"Insurance Sales, Underwriting, and Premiums","Sug'urta savdosi, anderrayting va mukofotlar","Страховые продажи, андеррайтинг и премии"
+6381,Insurance,Sug'urta,Страхование
+6399,Insurance - Unclassified,Sug'urta - Tasniflangan,Страхование - неклассифицировано
+6513,Real Estate Agents and Managers - Rentals,Ko'chmas mulk agentlari va menejerlar - Ijaraga berish,Агенты и менеджеры по недвижимости - аренда
+6538,P2P Payments,P2P to'lovlari,P2P Платежи
+6540,Stored Value/Gift Card Purchase/Load,Saqlangan qiymat / Sovg'a kartasini sotib olish / yuk,Сохраненная стоимость/покупка подарочной карты/загрузка
+7011,"Lodging Hotels, Motels, and Resorts","Mehmonxonalar, motellar va kurortlar","Жилье, мотели и курорты"
+7012,Timeshares,Vaqtinchalik,Таймшеры
+7013,Real Estate Agent - Brokers,Ko'chmas mulk agenti - brokerlar,Агент по недвижимости - брокеры
+7032,Sporting and Recreational Camps,Sport va damlama lagerlari,Спортивные и развлекательные лагеря
+7033,Trailer Parks and Campgrounds,Treyler bog'lari va lagerlar,Трейлерные парки и кемпинги
+7210,"Laundry, Cleaning and Garment Services","Kir yuvish, tozalash va tikuv xizmatlari","Служба стирки, уборки и одежды"
+7211,Laundry Services - Family and Commercial,Kir yuvish xizmatlari - Oila va tijorat,Служба прачечной - семейная и коммерческая
+7216,Dry Cleaners,Quruq tozalagichlar,Сухой чистки
+7217,Carpet and Upholstery Cleaning,Gilam va qoplamali tozalash,Ковер и обивка
+7221,Photographic Studios,Fotosuratlar,Фото студий
+7230,Beauty and Barber Shops,Go'zallik va sartaroshxonalar,Красота и парикмахерские
+7251,"Shoe Repair Shops, Shoe Shine Parlors, and Hat Cleaning Shops","Poyafzal ta'mirlash do'konlari, poyafzal nurlagichlari va shlyapa tozalash do'konlari","Магазины ремонта обуви, салоны для обуви и магазины очистки шляп"
+7261,Funeral Services and Crematories,Janoza xizmatlari va krematiya,Похоронные услуги и крематории
+7273,Dating and Escort Services,Tanishuv va eskort xizmatlari,Услуги знакомств и сопровождения
+7276,Tax Preparation Services,Soliqlarni tayyorlash xizmatlari,Услуги подготовки налогов
+7277,"Counseling Services - Debt, Marriage, and Personal","Maslahat xizmati - Qarz, nikoh va shaxsiy","Консультационные услуги - долг, брак и личные"
+7278,Buying and Shopping Services and Clubs,Xarid qilish va xaridlar va klublar,Покупка и покупки и клубы
+7280,Private Hospital,Xususiy kasalxona,Частная больница
+7295,Babysitting and Housekeeping Services,Kichkintoylar va uy xo'jaligi xizmatlari,Служба няни и домашнего хозяйства
+7296,"Clothing Rental - Costumes, Uniforms, and Formal Wear","Kiyim ijarasi - kostyumlar, forma va rasmiy kiyim","Прокат одежды - костюмы, униформа и формальный износ"
+7297,Massage Parlors,Massaj xonalari,Массажные салоны
+7298,Health and Beauty Spas,Salomatlik va go'zallik spaas,Здоровье и красота
+7299,Miscellaneous Personal Services - Not Elsewhere Classified,Turli xil shaxsiy xizmatlar - boshqa joyda tasniflangan,Разное персональные услуги - не в других местах классифицируется
+7311,Advertising Services,Reklama xizmatlari,Рекламные услуги
+7321,Consumer Credit Reporting Agencies,Iste'mol krediti bo'yicha hisobot agentliklari,Агентства по отчетности по кредитным кредитам
+7322,Debt Collection Agencies,Qarzlarni to'plash agentliklari,Агентства по сбору долгов
+7333,"Commercial Photography, Art, and Graphics","Tijorat fotosuratlari, san'at va grafika","Коммерческая фотография, искусство и графика"
+7338,"Quick Copy, Reproduction, and Blueprinting Services","Tez nusxalash, ko'payish va chizish xizmatlari","Быстрая копия, воспроизводство и платежи"
+7339,Stenographic and Secretarial Support Services,Stenografik va kotibiyatni qo'llab-quvvatlash xizmatlari,Служба стенографической и секретарской поддержки
+7342,Exterminating and Disinfecting Services,Yo'q qilish va dezinfektsiyalash xizmatlari,Истребление и дезинфицирующие услуги
+7349,"Cleaning, Maintenance, and Janitorial Services","Tozalash, texnik xizmat ko'rsatish va naanohlar","Очистка, техническое обслуживание и уборочные услуги"
+7361,Employment Agencies and Temporary Help Services,Bandlik agentliklari va vaqtincha yordam xizmatlari,Агентства по трудоустройству и временная помощь
+7372,"Computer Programming, Data Processing, and Integrated Systems Design Services","Kompyuterni dasturlash, ma'lumotlarni qayta ishlash va integratsiyalashgan tizimlarni loyihalash xizmatlari","Компьютерное программирование, обработка данных и интегрированные системы проектирования систем"
+7375,Information Retrieval Services,Axborotni olish xizmatlari,Службы поиска информации
+7379,Computer Maintenance and Repair Services - Not Elsewhere Classified,Kompyuter texnikasi va ta'mirlash xizmatlari - boshqa joyda tasniflangan,Услуги по техническому обслуживанию и ремонту компьютера - не классифицируются в других местах
+7392,"Management, Consulting, and Public Relations Services","Boshqaruv, konsultatsiya va jamoatchilik bilan aloqalar","Услуги по управлению, консалтингу и связям с общественностью"
+7393,"Detective Agencies, Protective Agencies, and Security Services, including Armored Cars and Guard Dogs","Detektiv agentliklar, himoya agentliklari, xavfsizlik xizmatlari, shu jumladan zirhli avtomobillar va soqchilar itlari","Детективные агентства, защитные агентства и службы безопасности, включая бронированные автомобили и охраняемых собак"
+7394,"Equipment, Tool, Furniture, and Appliance Rental and Leasing","Uskunalar, asbob, mebel va jihozni ijaraga berish va lizing","Оборудование, инструмент, мебель, а также аренда устройств и лизинг"
+7395,Photofinishing Laboratories and Photo Developing,Fotofinlashtirish laboratoriyalari va fotosurat rivojlanmoqda,Фотофинансирующие лаборатории и разработка фото
+7399,Business Services - Not Elsewhere Classified,Biznes xizmatlari - boshqa joyda tasniflangan emas,Бизнес -услуги - не в других местах классифицируется
+7512,Automobile Rental Agency,Avtomobillarni ijaraga olish agentligi,Агентство по прокату автомобилей
+7513,Truck and Utility Trailer Rentals,Yuk mashinasi va kommunal retser ijarasi,Аренда грузовых и коммунальных прицепов
+7519,Motor Home and Recreational Vehicle Rentals,Avtomobil uyi va dam olish avtomobilsining ijarasi,Дом на автостоянках и развлекательную аренду транспортных средств
+7523,Parking Lots and Garages,Avtomobillar va garajlar,Парковки и гаражи
+7531,Automotive Body Repair Shops,Avtomobilni ta'mirlash bo'yicha mutaxassislar,Автомобильные мастерские ремонта кузова
+7534,Tire Retreading and Repair Shops,Shinani qayta ishlash va ta'mirlash do'konlari,Магазины ретресса и ремонта шин
+7535,Automotive Paint Shops,Avtomobillar uchun bo'yoq do'konlari,Автомобильные мастерские
+7538,Automotive Service Shops (Non-Dealer),Avtomobillarga xizmat ko'rsatish do'konlari (diler bo'lmagan),Автомобильные сервисные магазины (не дилер)
+7542,Car Washes,Avtomobil yuvish,Автомобильные стирки
+7549,Towing Services,Exish xizmatlari,Буксирные услуги
+7622,Electronics Repair Shops,Electronicik ta'mirlash do'konlari,Электронные ремонтные мастерские
+7623,Air Conditioning and Refrigeration Repair Shops,Konditsioner va sovutishni ta'mirlash sexlari,Кондиционирование и ремонтные магазины охлаждения
+7629,Electrical and Small Appliance Repairs,Elektr va kichik jihozlarni ta'mirlash,Ремонт электрических и небольших приборов
+7631,"Watch, Clock, and Jewelry Repair Shops","Watch, soat va zargarlik buyumlarini ta'mirlash do'konlari","Смотреть, часы и ювелирные ремонтные мастерские"
+7641,"Furniture - Reupholstery, Repair, and Refinishing","Mebel - qayta tiklash, ta'mirlash va qayta tiklash","Мебель - ревфолстера, ремонт и ремонт"
+7692,Welding Services,Payvandlash xizmatlari,Сварные услуги
+7699,Miscellaneous Repair Shops and Related Services,Turli xil ta'mirlash do'konlari va tegishli xizmatlar,Разное ремонтные мастерские и связанные с ними услуги
+7800,Government Owned Lotteries,Hukumat Loteriyalarga egalik qildi,Правительственные лотерей
+7801,Government - Licensed Casinos (Online Gambling),Hukumat - litsenziyalangan kazinolar (Onlayn qimor o'yinlari),Правительство - лицензированные казино (онлайн -азартные игры)
+7802,Government - Licensed Horse/Dog Racing,Hukumat - litsenziyalangan ot / it poygasi,Правительство - лицензированные гонки на лошадях/собаках
+7829,Motion Picture and Video Tape Production and Distribution,Motion Rasm va video lenta ishlab chiqarish va tarqatish,Производство и распространение кинофильмы и видеосвязан
+7832,Motion Picture Theaters,Motion Teatr teatrlari,Кинотеатры
+7841,Video Tape Rental Stores,Video lenta ijarasi do'konlari,С магазина аренды видеокассеры
+7911,"Dance Halls, Studios, and Schools","Raqs zallari, studiyalar va maktablar","Танцевальные залы, студии и школы"
+7922,Theatrical Producers (except Motion Pictures) and Ticket Agencies,Teatrlashtirilgan ishlab chiqaruvchilar (kinofilmlardan tashqari) va chiptalar agentliklari,Театральные продюсеры (кроме кинофильмов) и билетные агентства
+7929,"Bands, Orchestras, and Miscellaneous Entertainers - Not Elsewhere Classified","Bands, orkestrlar va boshqa ko'ngilochlar - boshqa joyda tasniflangan","Группы, оркестры и разные артисты - не в других местах классифицируются"
+7932,Billiard and Pool Establishments,Billord va basseyd muassasalari,Бильярд и пул заведения
+7933,Bowling Alleys,Bouling xiyobonlari,Боулинг -переулки
+7941,"Commercial Sports, Professional Sports Clubs, Athletic Fields, and Sports Promoters","Tijorat sporti, professional sport klublari, sport maydonlari va sport targ'ibotchilari","Коммерческие виды спорта, профессиональные спортивные клубы, спортивные площадки и спортивные промоутеры"
+7991,Tourist Attractions and Exhibits,Turistik diqqatga sazovor joylar va eksponatlar,Туристические достопримечательности и экспонаты
+7992,Public Golf Courses,Jamoat golf kurslari,Общественные поля для гольфа
+7993,Video Amusement Game Supplies,Video o'yin-kulgi o'yinlari,Видеоализация Game Supplies
+7994,Video Game Arcades and Establishments,Video o'yin arkadlari va muassasalari,Видеоигры аркады и заведения
+7995,"Betting, including Lottery Tickets, Casino Gaming Chips, Off-Track Betting, and Wagers at Race Tracks","Petting, shu jumladan lotereya chiptalari, kazino o'yin chiplari, poytaxtlik tikish va poygalardagi falak","Ставки, в том числе лотерейные билеты, игровые чипсы в казино, неверные ставки и ставки на гоночных трассах"
+7996,"Amusement Parks, Circuses, Carnivals, and Fortune Tellers","Istirohat bog'lari, turklar, karnivi va folbinlar","Парки развлечений, цирки, карнавалы и гадалки"
+7997,"Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses","A'zolik klublari (sport, dam olish, sport), mamlakat klublari va xususiy golf kurslari","Членские клубы (спорт, отдых, спортивные), загородные клубы и частные поля для гольфа"
+7998,"Aquariums, Seaquariums, and Dolphinariums","Akvarium, dengiz savarumlari va dolfinariylar","Аквариумы, морские вары и дельфинарии"
+7999,Recreation Services - Not Elsewhere Classified,Dam olish xizmatlari - boshqa joyda tasniflangan,Службы отдыха - не в других местах классифицируются
+8011,Doctors and Physicians - Not Elsewhere Classified,Shifokorlar va shifokorlar - boshqa joyda tasniflangan,Врачи и врачи - не в других местах классифицированы
+8021,Dentists and Orthodontists,Stomatologlar va ortodontchilar,Стоматологи и ортодонт
+8031,Osteopaths,Osteopatlar,Остеопаты
+8041,Chiropractors,Chiropraktors,Хиропрактики
+8042,Optometrists and Ophthalmologists,Optometrorchilar va oftalmologlar,Оптометристы и офтальмологи
+8043,"Opticians, Optical Goods, and Eyeglasses","Opitsitlar, optik buyumlar va ko'zoynaklar","Оптики, оптические товары и очки"
+8049,Podiatrists and Chiropodists,Podiatrlar va chiropodchilar,Подиатры и хироподисты
+8050,Nursing and Personal Care Facilities,Hamshiralik va shaxsiy parvarish qilish inshootlari,Устройства по уходу и личному уходу
+8062,Hospitals,Kasalxonalar,Больницы
+8071,Medical and Dental Laboratories,Tibbiy va stomatologik laboratoriyalar,Медицинские и стоматологические лаборатории
+8099,Medical Services and Health Practitioners - Not Elsewhere Classified,Tibbiy xizmatlar va sog'liqni saqlash amaliyotchilari - boshqa joyda tasniflangan,Медицинские услуги и практикующие здравоохранения - не в других местах классифицируются
+8111,Legal Services and Attorneys,Yuridik xizmatlar va advokatlar,Юридические услуги и адвокаты
+8211,Elementary and Secondary Schools,Boshlang'ich va o'rta maktablar,Начальные и средние школы
+8220,"Colleges, Universities, Professional Schools, and Junior Colleges","Kollejlar, universitetlar, kasb-hunar maktablari va kichik kollejlar","Колледжи, университеты, профессиональные школы и младшие колледжи"
+8241,Correspondence Schools,Masoratsizlik maktablari,Переписка школ
+8244,Business and Secretarial Schools,Biznes va kotibiyat maktablari,Бизнес и секретарские школы
+8249,Trade and Vocational Schools,Savdo va kasb-hunar maktablari,Торговые и профессиональные школы
+8299,Schools and Educational Services - Not Elsewhere Classified,Maktablar va ta'lim xizmatlari - boshqa joylarda tasniflangan,Школы и образовательные услуги - ни в других местах классифицируются
+8351,Child Care Services,Bolalar parvarishlari,Услуги по уходу за детьми
+8398,Charitable and Social Service Organizations,Xayriya va ijtimoiy xizmat tashkilotlari,Благотворительные и социальные услуги организации
+8641,"Civic, Social, and Fraternal Associations","Fuqarolik, ijtimoiy va qardosh birlashmalar","Гражданские, социальные и братские ассоциации"
+8651,Political Organizations,Siyosiy tashkilotlar,Политические организации
+8661,Religious Organizations,Diniy tashkilotlar,Религиозные организации
+8675,Automobile Associations,Avtomobillar uyushmalari,Автомобильные ассоциации
+8699,Membership Organizations - Not Elsewhere Classified,A'zolik tashkilotlari - boshqa joyda tasniflangan emas,Членские организации - не в других местах классифицируются
+8734,Testing Laboratories (Non-Medical),Sinov laboratoriyalari (tibbiy bo'lmagan),Тестирование лабораторий (немедицинские)
+8911,"Architectural, Engineering, and Surveying Services","Arxitektura, muhandislik va so'rov xizmatlari","Архитектурные, инженерные и съемки услуг"
+8912,"Fitments, Ornaments and Gardening","Fitmalar, bezaklar va bog'dorchilik","Приспособления, украшения и садоводство"
+8931,"Accounting, Auditing, and Bookkeeping Services","Buxgalteriya hisobi, audit va buxgalteriya xizmatlari","Услуги бухгалтерского учета, аудита и бухгалтерского учета"
+8999,Professional Services - Not Elsewhere Classified,Kasb xizmatlari - boshqa joyda tasniflangan emas,Профессиональные услуги - не в других местах классифицируются
+9211,"Court Costs, including Alimony and Child Support","Sud xarajatlari, jumladan aliment va bolalarni qo'llab-quvvatlash","Судебные издержки, включая алименты и алименты."
+9222,Fines,Jarimalar,Штраф
+9223,Bail and Bond Payments,Garov va obligatsiya to'lovlari,Платежи по залогу и облигациям
+9311,Tax Payments,Soliq to'lovlari,Налоговые платежи
+9399,Government Services - Not Elsewhere Classified,Davlat xizmatlari - boshqa joyda tasniflangan,Государственные услуги - не классифицированы в других местах
+9400,Embassy Fee Payments,Elchixona to'lovi to'lovlari,Плата за посольство
+9402,Postal Services Government Only,Pochta xizmatlari faqat,Только правительство почтовых служб
+9950,Internal Sales - Corporate,Ichki savdo - Korporativ,Внутренние продажи - корпоративные
