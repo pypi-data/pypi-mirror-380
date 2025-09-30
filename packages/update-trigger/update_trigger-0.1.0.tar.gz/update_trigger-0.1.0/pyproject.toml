@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "update-trigger"
+version = "0.1.0"
+description = "Pacote utilizado para publicar mensagens MQTT quando um arquivo é atualizado."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  { name = "Felipe Ribeiro", email = "feliperibeiromachado@edu.univali.br" }
+]
+dependencies = [
+  "paho-mqtt==2.1.0",
+  "python-dotenv==1.1.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
