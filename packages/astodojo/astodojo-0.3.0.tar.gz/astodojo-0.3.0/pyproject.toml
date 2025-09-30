@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astodojo"
+version = "0.3.0"
+description = "ASTODOJO: Intelligent TODO scanner for Python codebases"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0.0",
+    "colorama>=0.4.6",
+    "rich>=13.0.0",
+    "PyYAML>=6.0",
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/seanmcdonald/astodojo"
+Repository = "https://github.com/seanmcdonald/astodojo"
+Issues = "https://github.com/seanmcdonald/astodojo/issues"
+
+[project.scripts]
+astodojo = "astodojo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools]
+py-modules = ["pytest_astodojo"]
+
+[tool.setuptools.package-data]
+astodojo = ["*.yaml", "*.yml", "ASTODOJO-AGENT-HELPER.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

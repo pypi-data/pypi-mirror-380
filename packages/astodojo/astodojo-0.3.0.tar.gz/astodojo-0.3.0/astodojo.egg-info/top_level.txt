@@ -1,0 +1,6 @@
+astodojo
+dist
+pytest_astodojo
+test
+tests
+venv
