@@ -1,0 +1,237 @@
+# CVHough SDK
+
+CVHough SDK 是一个基于YOLO和Hough变换的灰色圆形检测SDK，提供了完整的解决方案用于在图像中检测灰色圆形物体。
+
+## 功能特性
+
+- **YOLO物体检测**: 使用预训练的YOLO模型识别图像中的物体
+- **多种圆形检测算法**: 
+  - Hough圆检测
+  - 轮廓检测
+  - Otsu阈值分割
+- **灰色像素分析**: 精确计算圆形区域内的灰色像素百分比
+- **自适应显示**: 根据图像尺寸自动调整显示参数
+- **可视化结果**: 提供直观的检测结果可视化
+
+## 安装
+
+### 从源码安装
+
+```bash
+# 克隆或下载项目
+cd cvHough
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 安装SDK
+pip install -e .
+```
+
+### 依赖项
+
+- Python >= 3.7
+- OpenCV >= 4.5.0
+- NumPy >= 1.19.0
+- PyTorch >= 1.9.0
+- Ultralytics >= 8.0.0
+
+## 快速开始
+
+### 基本使用（推荐）
+
+```python
+from cvhough_sdk import detect_gray_circles
+
+# 只需要提供图片路径，所有参数都使用默认值
+results = detect_gray_circles("path/to/your/image.jpg")
+
+# 打印检测结果
+if results:
+    print(f"\n=== 检测结果 ===")
+    total_circles = sum(len(circles) for circles in results.values())
+    print(f"总共检测到 {len(results)} 个物体框，{total_circles} 个圆:")
+    
+    circle_count = 1
+    for object_id, circles in results.items():
+        for circle in circles:
+            center_x, center_y, radius, circularity, gray_percentage = circle
+            print(f"圆 {circle_count}: 中心({center_x}, {center_y}), 半径{radius}")
+            circle_count += 1
+else:
+    print("未检测到任何物体或灰色圆")
+```
+
+### 高级使用（类接口）
+
+```python
+from cvhough_sdk import CVHoughDetector
+
+# 创建检测器实例（可自定义模型路径）
+detector = CVHoughDetector()
+
+# 检测圆形
+results = detector.detect_circles_in_object_boxes("path/to/your/image.jpg")
+```
+
+## API 参考
+
+### CVHoughDetector 类
+
+#### 初始化
+
+```python
+CVHoughDetector(model_path=None)
+```
+
+**参数:**
+- `model_path` (str, optional): YOLO模型文件路径。如果为None，将使用SDK内置的默认模型。
+
+#### 主要方法
+
+##### detect_circles_in_object_boxes()
+
+```python
+detect_circles_in_object_boxes(image_path, visualize=True, gray_threshold=0.5)
+```
+
+在图像中检测灰色圆形。
+
+**参数:**
+- `image_path` (str): 图像文件路径
+- `visualize` (bool): 是否显示检测结果，默认True
+- `gray_threshold` (float): 灰色像素百分比阈值，默认0.5（50%）
+
+**返回:**
+- `dict`: 检测结果字典，格式为 `{object_id: [(center_x, center_y, radius, circularity, gray_percentage), ...]}`
+
+##### detect_gray_color_percentage()
+
+```python
+detect_gray_color_percentage(image, center_x, center_y, radius, gray_threshold=0.5)
+```
+
+检测圆形区域内灰色像素的百分比。
+
+**参数:**
+- `image`: 输入图像
+- `center_x`, `center_y`: 圆心坐标
+- `radius`: 圆形半径
+- `gray_threshold`: 灰色判定阈值
+
+**返回:**
+- `tuple`: (is_gray_dominant, gray_percentage, total_pixels, gray_pixels)
+
+## 检测算法
+
+SDK使用三段阈值规则处理候选圆形：
+
+1. **高灰度比例 (≥80%)**: 直接保留外圆
+2. **中等灰度比例 (50%-80%)**: 在外圆内搜索更小的灰色圆，如果找到且灰度≥80%则保留内圆
+3. **低灰度比例 (<50%)**: 舍弃该圆形
+
+### 灰色检测标准
+
+SDK使用以下三种条件判定灰色像素：
+
+1. **低饱和度**: HSV色彩空间中饱和度 < 50
+2. **RGB接近**: RGB三通道值接近（最小值/最大值 > 0.7）
+3. **银色特征**: 低饱和度（< 30）且高亮度（> 150）
+
+## 示例
+
+### 完整示例
+
+```python
+import cv2
+from cvhough_sdk import CVHoughDetector
+
+def main():
+    # 创建检测器
+    detector = CVHoughDetector()
+    
+    # 检测图像
+    image_path = "test_image.jpg"
+    results = detector.detect_circles_in_object_boxes(
+        image_path=image_path,
+        visualize=True,
+        gray_threshold=0.5
+    )
+    
+    # 统计结果
+    total_objects = len(results)
+    total_circles = sum(len(circles) for circles in results.values())
+    retained_circles = sum(
+        len([c for c in circles if c[4] >= 0.8]) 
+        for circles in results.values()
+    )
+    
+    print(f"检测完成:")
+    print(f"- 物体数量: {total_objects}")
+    print(f"- 检测到的圆形: {total_circles}")
+    print(f"- 保留的灰色圆形: {retained_circles}")
+    
+    return results
+
+if __name__ == "__main__":
+    main()
+```
+
+## 性能优化
+
+SDK包含多项性能优化：
+
+- **OpenCV优化**: 启用OpenCV的优化功能和多线程
+- **PyTorch优化**: 禁用梯度计算，优化线程配置
+- **CLAHE复用**: 复用对比度增强实例，减少创建开销
+- **向量化计算**: 使用NumPy向量化操作提升灰色检测性能
+- **ROI处理**: 仅在感兴趣区域进行计算，减少处理量
+
+## 故障排除
+
+### 常见问题
+
+1. **模型加载失败**
+   - 检查模型文件路径是否正确
+   - 确保模型文件完整且未损坏
+   - 验证PyTorch和Ultralytics版本兼容性
+
+2. **图像读取失败**
+   - 检查图像文件路径是否正确
+   - 确保图像格式受OpenCV支持
+   - 验证文件权限
+
+3. **检测结果不理想**
+   - 调整`gray_threshold`参数
+   - 检查图像质量和光照条件
+   - 考虑使用自定义训练的YOLO模型
+
+### 调试模式
+
+```python
+import os
+
+# 启用检测结果缓存（用于调试）
+os.environ["REUSE_DETECTIONS"] = "1"
+
+# 运行检测
+detector = CVHoughDetector()
+results = detector.detect_circles_in_object_boxes("image.jpg")
+```
+
+## 许可证
+
+MIT License
+
+## 贡献
+
+欢迎提交Issue和Pull Request来改进这个项目。
+
+## 更新日志
+
+### v1.0.0
+- 初始版本发布
+- 支持YOLO物体检测
+- 支持多种圆形检测算法
+- 支持灰色像素分析
+- 支持可视化结果显示
