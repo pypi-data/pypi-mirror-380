@@ -1,0 +1,48 @@
+from paxy.commands.base import CommandMap
+from paxy.commands.core.compare import Compare
+from paxy.commands.core.dec import Dec
+from paxy.commands.core.ifjump import IfOp
+from paxy.commands.core.igl import Igloo
+from paxy.commands.core.inc import Inc
+from paxy.commands.core.inop import InCommand, NotInCommand
+from paxy.commands.core.isbop import IsNotCommand, IsCommand
+from paxy.commands.core.let import Let
+from paxy.commands.core.map import MapCommand
+from paxy.commands.core.mapadd import MapAdd
+from paxy.commands.core.par import Par
+from paxy.commands.core.print import Print
+from paxy.commands.core.input import Input
+from paxy.commands.core.importer import ImportSimple
+from paxy.commands.core.gosub import Gosub
+from paxy.commands.core.label import LabelCommand, GotoCommand
+from paxy.commands.core.returnstmt import ReturnCommand
+from paxy.commands.core.row import RowCommand
+from paxy.commands.core.vec import VecCommand
+from paxy.commands.core.mapdel import MapDel
+
+
+CORE_COMMANDS: CommandMap = {
+    "PRINT": Print,
+    "LET": Let,
+    "INPUT": Input,
+    "IMPORT": ImportSimple,
+    "GOSUB": Gosub,
+    "LABEL": LabelCommand,
+    "GOTO": GotoCommand,
+    "DEC": Dec,
+    "COMPARE": Compare,
+    "IS": IsCommand,
+    "ISNOT": IsNotCommand,
+    "IN": InCommand,
+    "NOTIN": NotInCommand,
+    "INC": Inc,
+    "IF": IfOp,
+    "ROW": RowCommand,
+    "IGL": Igloo,
+    "VEC": VecCommand,
+    "MAP": MapCommand,
+    "MAPADD": MapAdd,
+    "MAPDEL": MapDel,
+    "RETURN": ReturnCommand,
+    "PAR": Par,
+}

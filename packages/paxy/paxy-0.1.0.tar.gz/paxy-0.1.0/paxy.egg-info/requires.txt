@@ -1,0 +1,6 @@
+bytecode>=0.17.0
+
+[dev]
+pytest>=7.0
+sphinx
+myst-parser
