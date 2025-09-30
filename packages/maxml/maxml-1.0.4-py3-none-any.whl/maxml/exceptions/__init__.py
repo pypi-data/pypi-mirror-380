@@ -1,0 +1,2 @@
+class MaXMLError(Exception):
+    pass

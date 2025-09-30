@@ -1,0 +1,12 @@
+maxml/__init__.py,sha256=9wLSTIlZTXinpBr9ABp_PUWhfxubtNM89Iac2VCNet8,150
+maxml/version.txt,sha256=rqWtvvV0eFJzxPOcG3aHz4AZk-DLa_Z4GkFonk7bsgw,5
+maxml/element/__init__.py,sha256=TDHieGdGX6ypTWq885ilJgO-sRUt4AT8twa3w9MElOM,26396
+maxml/enumerations/__init__.py,sha256=N15XKtEZp2cFwqq_1GXyODqoOE--z9WukZGt_rFur2E,1153
+maxml/exceptions/__init__.py,sha256=qMI3bIXJe6zDXzRnxdW3v6wbxSYfd1oK-9lnxvZzzjQ,38
+maxml/logging/__init__.py,sha256=AMpvZEQH9GIBe8609sMwb2T64rovpkRRCc9rs2kHy8g,52
+maxml/namespace/__init__.py,sha256=1TT9vo6iWQyxEOLPzvHd_cf4i5_w3F-tdOm_k-VABQM,4067
+maxml-1.0.4.dist-info/METADATA,sha256=UTM15oNsmwGV5YFujZhMYBXKGIF8U8D_BQ34OVENOj4,16626
+maxml-1.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+maxml-1.0.4.dist-info/top_level.txt,sha256=ZFK3SmCc04Dzhl9QkO_hVBAEiHwCNrwn8X_PINWE9C4,6
+maxml-1.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+maxml-1.0.4.dist-info/RECORD,,
