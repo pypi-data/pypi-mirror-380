@@ -1,0 +1,34 @@
+[tool.bumpversion]
+current_version = "1.2.1"
+commit = true
+message = "Release v{new_version}"
+tag = true
+tag_name = "v{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "src/pishock/__init__.py"
+search = "__version__ = \"{current_version}\""
+replace = "__version__ = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
+
+[[tool.bumpversion.files]]
+filename = "uv.lock"
+search = """
+[[package]]
+name = "pishock"
+version = "{current_version}"
+"""
+replace = """
+[[package]]
+name = "pishock"
+version = "{new_version}"
+"""
+
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+search = "(unreleased)"
+replace = "({now:%Y-%m-%d})"
