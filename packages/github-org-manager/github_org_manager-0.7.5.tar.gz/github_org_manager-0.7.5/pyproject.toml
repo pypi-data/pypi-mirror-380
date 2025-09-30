@@ -1,0 +1,73 @@
+# SPDX-FileCopyrightText: 2024 DB Systel GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[tool.poetry]
+name = "github-org-manager"
+version = "0.7.5"
+description = "Manage a GitHub Organization, its teams, repository permissions, and more"
+authors = ["Max Mehl <max.mehl@deutschebahn.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+repository = "https://github.com/OpenRailAssociation/github-org-manager"
+keywords = ["github", "github-management", "permissions", "access-control"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Topic :: Software Development :: Version Control :: Git",
+  "Topic :: Utilities",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: Apache Software License",
+]
+packages = [{ include = "gh_org_mgr" }]
+
+[tool.poetry.scripts]
+gh-org-mgr = 'gh_org_mgr.manage:main'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pygithub = "^2.8.1"
+pyyaml = "^6.0.3"
+requests = "^2.32.5"
+python-slugify = "^8.0.4"
+jsonschema = "^4.25.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.9.0"
+isort = ">=5.13.2,<7.0.0"
+mypy = "^1.18.2"
+pylint = "^3.3.8"
+types-pyyaml = "^6.0.12.20250915"
+types-requests = "^2.32.4.20250913"
+bump-my-version = "^1.2.3"
+types-jsonschema = "^4.25.1.20250822"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+# FORMATTING settings
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
+
+# MYPY settings
+[tool.mypy]
+files = ["gh_org_mgr/*.py"]
+
+# Bump-My-Version
+[tool.bumpversion]
+commit = true
+tag = true
+allow_dirty = false
+tag_name = "v{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+regex = true
+search = "^version = \"{current_version}\""
+replace = "version = \"{new_version}\""
