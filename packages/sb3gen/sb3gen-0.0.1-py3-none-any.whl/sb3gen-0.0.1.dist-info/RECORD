@@ -1,0 +1,10 @@
+sb3gen/__init__.py,sha256=AyCR1l2k33FzRwDBd1G-vKqoIiVvBtwGtuLW3YCIvMI,93
+sb3gen/blocks.py,sha256=eTxFzuciAzhorWPGAq73NY9ADFLX18eDQgPVk1ipaJI,6623
+sb3gen/project.py,sha256=BwxH7FFaIdQd4lV3vy4OeFpozpWf-UgZ-NrnGN6NLHI,1140
+sb3gen/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sb3gen/scratchtypes.py,sha256=DwhrttQt1TS2kCE3Xl5UUpqA_lneKtkddZL2MabUVjo,2012
+sb3gen/targets.py,sha256=KEO6dkL1rnl3jVkhMBE_RiIUO8cvqgiRMMnIO5tMo-Y,2629
+sb3gen-0.0.1.dist-info/METADATA,sha256=gM9Y6xwixIncLoycmyGyPVen1_b1qf3-wRB3LEMdKEk,489
+sb3gen-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sb3gen-0.0.1.dist-info/licenses/LICENSE,sha256=dxGG8xyHRFmAQhfZ5cWBVhCEEujQrv4QaaOHYBMovDs,1462
+sb3gen-0.0.1.dist-info/RECORD,,
