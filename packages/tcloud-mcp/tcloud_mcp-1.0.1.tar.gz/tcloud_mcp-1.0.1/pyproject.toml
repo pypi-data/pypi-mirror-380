@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tcloud-mcp"
+version = "1.0.1"
+description = "Model Context Protocol server for Tencent Cloud services - interact with Tencent Cloud through natural language"
+authors = [
+    {name = "David", email = "guowei1461@gmail.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "tencentcloud-sdk-python>=3.0.1399",
+    "jmespath>=0.10.0",
+    "six>=1.16.0"
+]
+keywords = ["tencent-cloud", "mcp", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Communications :: Chat",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/tencent-cloud-mcp"
+Repository = "https://github.com/your-username/tencent-cloud-mcp"
+Documentation = "https://github.com/your-username/tencent-cloud-mcp/blob/main/README.md"
+Issues = "https://github.com/your-username/tencent-cloud-mcp/issues"
+Changelog = "https://github.com/your-username/tencent-cloud-mcp/blob/main/CHANGELOG.md"
+
+[project.scripts]
+tcloud-mcp = "main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0",
+    "isort>=5.12",
+    "mypy>=1.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src", "main.py", "config", "docs", "examples"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/main.py",
+    "/config",
+    "/docs",
+    "/examples",
+    "/tests",
+    "/README.md",
+    "/requirements.txt"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "tencent-cloud": {
+      "command": "python",
+      "args": ["/path/to/tccli-mcp/main.py"],
+      "env": {
+        "TENCENTCLOUD_SECRET_ID": "your-secret-id-here",
+        "TENCENTCLOUD_SECRET_KEY": "your-secret-key-here",
+        "TENCENTCLOUD_REGION": "ap-guangzhou"
+      }
+    }
+  }
+}
