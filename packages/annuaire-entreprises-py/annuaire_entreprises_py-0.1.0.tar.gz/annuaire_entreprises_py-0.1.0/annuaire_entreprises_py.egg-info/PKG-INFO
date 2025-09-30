@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: annuaire_entreprises_py
+Version: 0.1.0
+Summary: Client Python pour l'API Recherche d'Entreprises (https://www.data.gouv.fr/dataservices/api-recherche-dentreprises/)
+Author-email: Quentin DUTEIL <quentinduteil@xalystudio.fr>
+License: GPL-3.0-or-later
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Dynamic: license-file
+
+# Annuaire Entreprise Py
+
+Intégration Python de l'API publique de l'Annuaire des Entreprises
+
+## Logiciel Libre
+
+Ce code est sous license [GPLv3](/LICENSE) et fait partie du logiciel libre français

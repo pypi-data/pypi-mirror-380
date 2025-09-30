@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "annuaire_entreprises_py"
+version = "0.1.0"
+description = "Client Python pour l'API Recherche d'Entreprises (https://www.data.gouv.fr/dataservices/api-recherche-dentreprises/)"
+readme = "README.md"
+authors = [{name = "Quentin DUTEIL", email = "quentinduteil@xalystudio.fr"}]
+license = {text = "GPL-3.0-or-later"}
+dependencies = ["requests >= 2.25.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]

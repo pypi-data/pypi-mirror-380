@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+annuaire_entreprises_py/__init__.py
+annuaire_entreprises_py/client.py
+annuaire_entreprises_py.egg-info/PKG-INFO
+annuaire_entreprises_py.egg-info/SOURCES.txt
+annuaire_entreprises_py.egg-info/dependency_links.txt
+annuaire_entreprises_py.egg-info/requires.txt
+annuaire_entreprises_py.egg-info/top_level.txt
