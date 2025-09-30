@@ -1,0 +1,12 @@
+# SETTINGS----para possiveis proximas versoes
+
+QUANT_FANTASMAS = 4
+
+# HABILIDADE
+SKILL_NAME = "INVISIBILIDADE"
+SKILL_COOLDOWN = 15
+SKILL_DURACAO = 15
+SKILL_IMAGE = {
+    "INVISIBILIDADE": (),
+    "": (),
+}
