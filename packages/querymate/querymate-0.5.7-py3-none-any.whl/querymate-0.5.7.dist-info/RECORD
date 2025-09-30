@@ -1,0 +1,12 @@
+querymate/__init__.py,sha256=9Xpl1ZuDnCInoVuwFUT25w38oaVWWtLoIa48OmID5Zo,4114
+querymate/py.typed,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+querymate/types.py,sha256=Fpnu7Kyq-u5x4Kr1AAAELvyPsf9VA7f-HnXKIAO_w2s,859
+querymate/core/config.py,sha256=nDmRAxTfzz92kRSEUkl6lRNLuMjnU2nV6o4wc3KdTQU,5630
+querymate/core/filter.py,sha256=WIrr-fnt5Ey0Jzc5Wgs9Uk2m8i-L56NYK70utf2MZSk,21714
+querymate/core/query_builder.py,sha256=JAL0SN-Ye-eQBRHg_1MoBTnHVXlXoiIcgRteS3MhUic,28920
+querymate/core/querymate.py,sha256=53WpfemNOGHgfb1NcKWG57_oOjwpuyCwEJnIr4dBico,12009
+querymate-0.5.7.dist-info/licenses/LICENSE,sha256=N9ax7V7QE-E93ZcLXBz3DJA18Q761D4atxpUi5KTVdY,1066
+querymate-0.5.7.dist-info/METADATA,sha256=3RtcQ9nHSHcUw4Iwe6RxwsmB_0H7bAPTDFfJASgXrg8,13079
+querymate-0.5.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+querymate-0.5.7.dist-info/top_level.txt,sha256=3JL_7lL_cjuYSRtrj2K_0ISrNCEyH7cIYMIx4SnM3rc,10
+querymate-0.5.7.dist-info/RECORD,,
