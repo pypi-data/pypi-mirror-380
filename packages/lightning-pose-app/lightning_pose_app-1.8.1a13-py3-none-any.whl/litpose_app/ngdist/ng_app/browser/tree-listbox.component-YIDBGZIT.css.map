@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["tree-listbox.component.ts"],
+  "sourcesContent": [":host{display:block;outline:none;}\n     :host(.tlb-focused){outline: 2px solid var(--focus-color, #3b82f6); outline-offset: 2px;}\n    "],
+  "mappings": ";AAAA;AAAM,WAAA;AAAc,WAAA;AAAa;AAC5B,MAAA,CAAA;AAAoB,WAAA,IAAA,MAAA,IAAA,aAAA,EAAA;AAAgD,kBAAA;AAAoB;",
+  "names": []
+}
