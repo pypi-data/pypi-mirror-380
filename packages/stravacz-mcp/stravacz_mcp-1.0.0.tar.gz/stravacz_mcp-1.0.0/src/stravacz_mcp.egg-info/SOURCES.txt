@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/stravacz_mcp.egg-info/PKG-INFO
+src/stravacz_mcp.egg-info/SOURCES.txt
+src/stravacz_mcp.egg-info/dependency_links.txt
+src/stravacz_mcp.egg-info/entry_points.txt
+src/stravacz_mcp.egg-info/requires.txt
+src/stravacz_mcp.egg-info/top_level.txt
+src/stravacz_mcp_server/__init__.py
+src/stravacz_mcp_server/server.py
+src/stravacz_mcp_server/server_http.py
+src/stravacz_mcp_server/strava_client.py

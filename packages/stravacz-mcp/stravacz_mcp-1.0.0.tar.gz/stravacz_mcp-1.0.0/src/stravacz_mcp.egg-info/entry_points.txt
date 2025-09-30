@@ -1,0 +1,3 @@
+[console_scripts]
+stravacz-mcp-http = stravacz_mcp_server.server_http:main
+stravacz-mcp-server = stravacz_mcp_server.server:main
