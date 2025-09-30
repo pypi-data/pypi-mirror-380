@@ -1,0 +1,7 @@
+name,seconds
+cache-parameters-simu,36.8
+partition-new-simu,55.8
+subset-partition-new-simu,195.8
+seed-partition-new-simu,25.6
+get-selection-metrics-new-simu,17.5
+cache-parameters-data,54.0
