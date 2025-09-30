@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: SoullessAi-Dem
+Version: 1.1.4.4
+Summary: Библиотека для создания демотиваторов
+Home-page: UNKNOWN
+Author: ceylon1cy
+Author-email: ceylon1cy@xyecoc.com
+License: UNKNOWN
+Keywords: demotivator,image processing,meme
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow>=8.0.0
+
+Библиотека для создания демотиваторов. Совместима с aiogram, telebot и другими библиотеками для Telegram, также совместима с ВКонтакте.
+
