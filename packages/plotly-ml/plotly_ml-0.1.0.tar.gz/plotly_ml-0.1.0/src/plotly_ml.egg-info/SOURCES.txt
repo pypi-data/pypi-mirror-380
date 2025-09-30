@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/regression.py
+src/univariant.py
+src/plotly_ml.egg-info/PKG-INFO
+src/plotly_ml.egg-info/SOURCES.txt
+src/plotly_ml.egg-info/dependency_links.txt
+src/plotly_ml.egg-info/requires.txt
+src/plotly_ml.egg-info/top_level.txt
+src/utils/colors.py
+src/utils/metrics.py
