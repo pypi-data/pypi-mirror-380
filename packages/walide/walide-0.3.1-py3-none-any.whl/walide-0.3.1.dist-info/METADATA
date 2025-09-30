@@ -1,0 +1,465 @@
+Metadata-Version: 2.4
+Name: walide
+Version: 0.3.1
+Summary: A differential evolution optimization toolbox
+Author-email: Wally Hao <1276672206@qq.com>
+Project-URL: Homepage, https://github.com/waliwuao/walide
+Project-URL: Repository, https://github.com/waliwuao/walide
+Project-URL: Issues, https://github.com/waliwuao/walide/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: numba>=0.55.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: mypy>=0.990; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+Dynamic: license-file
+
+# Walide: 高效差分进化优化算法库
+
+![Python版本](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![许可证](https://img.shields.io/badge/license-MIT-green.svg)
+![依赖](https://img.shields.io/badge/dependencies-numpy%20%7C%20numba-yellow.svg)
+
+Walide是一个基于Python实现的高性能差分进化（Differential Evolution, DE）算法库，专为解决连续优化问题设计。通过Numba即时编译（JIT）技术加速核心计算，Walide在保持代码简洁易用的同时，提供了卓越的优化性能和灵活性。
+
+## 目录
+
+- [核心特性](#核心特性)
+- [安装指南](#安装指南)
+- [快速入门](#快速入门)
+- [算法原理](#算法原理)
+- [API参考](#api参考)
+- [参数调优指南](#参数调优指南)
+- [高级用法](#高级用法)
+- [性能优化](#性能优化)
+- [注意事项](#注意事项)
+- [示例集合](#示例集合)
+- [许可证](#许可证)
+
+## 核心特性
+
+- **高效优化**：基于差分进化算法，能有效求解高维连续优化问题
+- **性能加速**：使用Numba JIT编译关键计算函数，显著提升运行速度
+- **灵活配置**：支持自定义种群大小、交叉概率、变异因子等核心参数
+- **种群管理**：内置种群保存与加载功能，支持中断后继续优化过程
+- **自适应机制**：包含种群多样性检测与部分重置功能，避免过早收敛
+- **边界处理**：自动处理超出边界的解，确保解的可行性
+- **易用接口**：简洁直观的API设计，只需定义目标函数即可快速开始优化
+
+## 安装指南
+
+### 前置依赖
+
+Walide依赖以下Python库：
+- numpy >= 1.21.0
+- numba >= 0.55.0
+
+### 安装方法
+
+1. 首先安装依赖包：
+```bash
+pip install numpy numba
+```
+
+2. 克隆或下载Walide代码库到本地项目目录：
+```bash
+git clone https://github.com/waliwuao/walide.git
+```
+
+3. 在项目中直接导入使用：
+```python
+from walide import DE
+```
+
+## 快速入门
+
+以下示例展示如何使用Walide优化经典的Sphere函数（最小值为0）：
+
+```python
+import numpy as np
+from walide import DE
+
+# 定义目标函数（需要最小化的函数）
+def sphere(x):
+    """Sphere函数：f(x) = sum(x_i^2)，最优解在x=0处"""
+    return np.sum(x**2)
+
+# 创建差分进化优化器实例
+de = DE(
+    func=sphere,        # 目标函数
+    dim=10,             # 问题维度
+    size=50,         # 种群大小
+    lb=-100,            # 变量下界（所有维度相同）
+    ub=100,             # 变量上界（所有维度相同）
+    maxiter=1000,       # 最大迭代次数
+    log=True            # 开启日志输出
+)
+
+# 执行优化
+best_position, best_fitness = de.optimize()
+
+# 输出优化结果
+print(f"最优位置: {best_position}")
+print(f"最优适应度值: {best_fitness}")
+```
+
+运行上述代码，您将看到每100代的优化进度日志，并最终得到接近0的最优适应度值。
+
+## 算法原理
+
+差分进化算法是一种基于群体的随机优化方法，主要包含以下步骤：
+
+1.** 初始化 **：随机生成位于决策空间内的初始种群
+2.** 变异操作 **：通过差分策略生成变异向量
+   - 变异公式：`mutant = r1 + f1*(r2 - r3) + f2*(best - r1)`
+   - 其中r1, r2, r3是随机选择的不同个体，best是当前最优个体
+   - f1和f2是控制变异强度的缩放因子
+
+3.** 交叉操作 **：将变异向量与目标向量进行交叉，生成试验向量
+   - 对每个维度j，以概率cr选择变异向量的分量，否则保留原向量分量
+   - 确保至少有一个维度来自变异向量（强制维度）
+
+4.** 选择操作 **：比较试验向量和目标向量的适应度，保留较优个体
+   - 若试验向量适应度更优，则替换目标向量，否则保留原向量
+
+5.** 多样性维护 **：监测种群多样性，当多样性低于阈值时，重置部分较差个体
+   - 多样性通过各维度标准差与范围的比值计算
+
+6.** 迭代优化 **：重复步骤2-5，直到达到最大迭代次数
+
+## API参考
+
+### DE类
+
+`DE`类是Walide库的核心，封装了差分进化算法的所有功能。
+
+#### 初始化参数
+
+```python
+DE(func, dim, popsize=50, lb=None, ub=None, 
+   f1=0.9, f2=0.1, cr=0.9, maxiter=1000, log=True, 
+   diversity_threshold=0.1, reset_ratio=0.3, dtype=np.float64)
+```
+
+| 参数 | 类型 | 描述 | 默认值 |
+|------|------|------|--------|
+| `func` | 函数 | 需要最小化的目标函数，输入为一维数组，返回浮点值 | 必需 |
+| `dim` | 整数 | 优化问题的维度 | 必需 |
+| `popsize` | 整数 | 种群大小 | 50 |
+| `lb` | 标量/数组 | 变量下界，标量表示所有维度相同，数组表示各维度不同 | None（默认0） |
+| `ub` | 标量/数组 | 变量上界，标量表示所有维度相同，数组表示各维度不同 | None（默认1） |
+| `f1` | 浮点数 | 变异因子1，控制差分扰动强度 | 0.9 |
+| `f2` | 浮点数 | 变异因子2，控制最优个体影响强度 | 0.1 |
+| `cr` | 浮点数 | 交叉概率，[0,1]范围内 | 0.9 |
+| `maxiter` | 整数 | 最大迭代次数 | 1000 |
+| `log` | 布尔值 | 是否打印优化过程日志 | True |
+| `diversity_threshold` | 浮点数 | 种群多样性阈值，低于此值将触发重置 | 0.1 |
+| `reset_ratio` | 浮点数 | 触发重置时替换的个体比例 | 0.3 |
+| `dtype` | numpy类型 | 数值计算类型 | np.float64 |
+
+#### 主要方法
+
+##### optimize()
+
+执行优化过程，返回最优解和对应的适应度值。
+
+```python
+best_position, best_fitness = de.optimize()
+```
+
+**返回值**：
+- `best_position`: 最优解的位置（numpy数组）
+- `best_fitness`: 最优解对应的适应度值（浮点数）
+
+##### reset(**kwargs)
+
+重置优化器参数，可动态调整各种参数并保持当前优化状态。
+
+```python
+de.reset(dim=20, popsize=100, maxiter=2000)
+```
+
+**参数**：所有初始化参数均可通过关键字参数进行重置
+
+##### save(file_path=None)
+
+保存当前种群到CSV文件，便于后续继续优化。
+
+```python
+de.save("current_population.csv")  # 保存到指定路径
+de.save()  # 保存到默认路径population.csv
+```
+
+**参数**：
+- `file_path`: 保存路径，默认为"population.csv"
+
+##### load(file_path)
+
+从CSV文件加载种群，恢复之前的优化状态。
+
+```python
+de.load() #默认保存
+de.load("saved_population.csv")
+```
+
+**参数**：
+- `file_path`: 种群文件路径
+
+## 参数调优指南
+
+差分进化算法的性能很大程度上取决于参数设置，以下是参数选择的经验指南：
+
+### 种群大小 (popsize)
+- 较小的种群（30-50）：计算效率高，适合简单问题或低维问题
+- 较大的种群（100-200）：探索能力强，适合复杂问题或高维问题
+- 通常建议设置为问题维度的5-10倍
+
+### 变异因子 (f1, f2)
+- 控制变异向量的扰动程度，通常在[0, 2]范围内
+- f1: 主要控制差分向量(r2-r3)的影响，典型值0.5-0.9
+- f2: 控制当前最优个体的影响，典型值0.1-0.3
+- 总和(f1+f2)建议不超过1.0，避免过度扰动
+
+### 交叉概率 (cr)
+- 控制从变异向量继承分量的概率，[0,1]范围内
+- 较高的cr（0.8-0.9）：收敛速度快，但可能过早收敛
+- 较低的cr（0.5-0.7）：维持多样性好，适合复杂问题
+- 对于多峰问题，建议使用较低的cr值
+
+### 多样性参数
+- `diversity_threshold`: 典型值0.05-0.2，值越小允许种群越收敛
+- `reset_ratio`: 典型值0.2-0.4，控制每次重置的个体比例
+
+### 参数组合建议
+- 简单问题：popsize=30-50, f1=0.8-0.9, f2=0.1-0.2, cr=0.8-0.9
+- 复杂问题：popsize=100-200, f1=0.5-0.8, f2=0.2-0.3, cr=0.5-0.8
+- 高维问题：增大种群规模，适当降低交叉概率
+
+## 高级用法
+
+### 动态调整参数
+
+在优化过程中，可以通过`reset()`方法动态调整参数，实现自适应优化：
+
+```python
+# 初始优化
+de = DE(func=my_function, dim=10, maxiter=500, f1=0.9, cr=0.9)
+de.optimize()
+
+# 调整参数继续优化
+de.reset(maxiter=500, f1=0.7, cr=0.7)  # 降低变异因子和交叉概率
+de.optimize()
+```
+
+### 分阶段优化
+
+对于复杂问题，可以采用分阶段优化策略，先探索后收敛：
+
+```python
+# 第一阶段：大扰动探索
+de = DE(func=complex_func, dim=30, popsize=200, f1=0.9, f2=0.2, cr=0.6, maxiter=1000)
+de.optimize()
+
+# 第二阶段：小扰动收敛
+de.reset(popsize=100, f1=0.5, f2=0.1, cr=0.9, maxiter=1000)
+de.optimize()
+```
+
+### 处理维度变化
+
+当问题维度需要调整时，`reset()`方法会自动处理种群适配：
+
+```python
+# 先优化10维问题
+de = DE(func=my_func, dim=10, maxiter=500)
+de.optimize()
+
+# 调整到20维继续优化
+de.reset(dim=20, maxiter=500)
+de.optimize()
+```
+
+### 种群保存与恢复
+
+中断优化后，可以保存种群状态，后续继续优化：
+
+```python
+# 运行部分优化
+de = DE(func=my_func, dim=15, maxiter=500)
+de.optimize()
+print(f"部分优化结果: {de.best_fitness:.6f}")
+
+# 保存当前种群
+de.save("mid_optimization.csv")
+
+# 后续恢复并继续优化
+new_de = DE(func=my_func, dim=15)
+new_de.load("mid_optimization.csv")
+new_de.reset(maxiter=500)  # 增加迭代次数
+new_de.optimize()
+print(f"最终优化结果: {new_de.best_fitness:.6f}")
+```
+
+## 性能优化
+
+1. **目标函数优化**
+   - 目标函数是主要计算瓶颈，应尽量使用NumPy向量化操作
+   - 避免在目标函数中使用循环和Python原生数据结构
+   - 复杂计算可考虑使用Numba预先编译目标函数
+
+2. **计算精度调整**
+   - 对于不需要高精度的问题，可使用`dtype=np.float32`减少计算量
+   - 示例：`de = DE(func, dim=10, dtype=np.float32)`
+
+3. **种群大小适配**
+   - 根据问题复杂度动态调整种群大小，避免不必要的计算
+   - 优化后期可减小种群规模以加速收敛
+
+4. **利用Numba加速**
+   - 库中已使用Numba编译核心函数，首次运行会有编译延迟
+   - 对于多次运行，可通过预先编译减少延迟
+
+## 注意事项
+
+1. **目标函数要求**
+   - 目标函数必须接受NumPy数组作为输入
+   - 目标函数应返回单个数值（适应度值）
+   - 确保目标函数可正确处理边界值
+
+2. **边界设置**
+   - 若未指定`lb`和`ub`，默认使用[0,1]区间
+   - 对于不同维度有不同边界的问题，应传入数组形式的`lb`和`ub`
+
+3. **随机性**
+   - 算法包含随机过程，相同参数多次运行可能得到不同结果
+   - 可通过设置随机种子确保结果可复现：`np.random.seed(42)`
+
+4. **日志输出**
+   - 开启日志(`log=True`)会打印每100代的信息，格式为：`迭代次数 最优适应度 f1 f2 cr`
+   - 大规模优化可关闭日志以提高性能
+
+5. **初始种群**
+   - 若未加载种群，算法会自动生成符合边界条件的初始种群
+   - 初始种群质量对优化结果有一定影响，复杂问题可考虑自定义初始种群
+
+## 示例集合
+
+### 1. 优化Rosenbrock函数
+
+Rosenbrock函数是一个经典的非凸函数，常用于测试优化算法：
+
+```python
+import numpy as np
+from walide import DE
+
+def rosenbrock(x):
+    """Rosenbrock函数：f(x) = sum(100*(x[i+1]-x[i]^2)^2 + (1-x[i])^2)"""
+    return sum(100.0*(x[1:]-x[:-1]**2.0)**2.0 + (1-x[:-1])**2.0)
+
+# 创建优化器
+de = DE(
+    func=rosenbrock,
+    dim=30,           # 30维Rosenbrock函数
+    popsize=100,      # 较大种群处理复杂函数
+    lb=-5,
+    ub=10,
+    maxiter=2000,     # 增加迭代次数
+    f1=0.8,
+    f2=0.2,
+    cr=0.7,
+    log=True
+)
+
+# 运行优化
+best_pos, best_fit = de.optimize()
+print(f"Rosenbrock优化结果: 最优适应度 = {best_fit:.6f}")
+```
+
+### 2. 优化Ackley函数
+
+Ackley函数是一个多峰函数，具有广泛的局部最优解：
+
+```python
+import numpy as np
+from walide import DE
+
+def ackley(x):
+    """Ackley函数：多峰函数，全局最优在x=0处"""
+    n = len(x)
+    return -20 * np.exp(-0.2 * np.sqrt(np.sum(x**2) / n)) \
+           - np.exp(np.sum(np.cos(2 * np.pi * x)) / n) \
+           + 20 + np.e
+
+# 创建优化器
+de = DE(
+    func=ackley,
+    dim=10,
+    popsize=50,
+    lb=-32.768,      # Ackley函数常用边界
+    ub=32.768,
+    f1=0.6,          # 中等变异因子维持多样性
+    f2=0.3,
+    cr=0.5,          # 较低交叉概率适合多峰问题
+    maxiter=1000,
+    log=True
+)
+
+# 运行优化
+best_pos, best_fit = de.optimize()
+print(f"Ackley优化结果: 最优适应度 = {best_fit:.6f}")
+```
+
+### 3. 自定义边界条件
+
+处理各维度具有不同边界的优化问题：
+
+```python
+import numpy as np
+from walide import DE
+
+def custom_function(x):
+    """自定义函数，各维度具有不同物理意义"""
+    return np.sum(x**2 * np.arange(1, len(x)+1))  # 不同维度权重不同
+
+# 定义各维度不同的边界
+lb = [-10, -5, 0, -15, -20]  # 5个维度的下界
+ub = [10, 5, 10, 15, 20]     # 5个维度的上界
+
+# 创建优化器
+de = DE(
+    func=custom_function,
+    dim=5,
+    popsize=50,
+    lb=lb,          # 传入边界数组
+    ub=ub,
+    maxiter=500,
+    log=True
+)
+
+# 运行优化
+best_pos, best_fit = de.optimize()
+print(f"自定义函数优化结果: 最优适应度 = {best_fit:.6f}")
+print(f"最优位置: {best_pos}")
+```
+
+## 许可证
+
+Walide采用MIT许可证，详情参见LICENSE文件。
+
+---
+
+Walide提供了一个高效、灵活的差分进化算法实现，适用于解决各类连续优化问题。无论是学术研究、工程优化还是数据分析中的参数调优，Walide都能提供可靠的优化能力。通过合理调整算法参数，它可以适应不同复杂度的优化任务，帮助用户快速找到问题的近似最优解。
