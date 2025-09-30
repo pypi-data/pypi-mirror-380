@@ -1,0 +1,8 @@
+media_tagging_langchain/__init__.py,sha256=3JhQFeUcwtGwutCUnQlzSozNxyZ66AFASXw7KWNRbN4,668
+media_tagging_langchain/tagger.py,sha256=Z_fwV2IzBAWL76QW7c-e_l-HJOfRCbunKw6rfbsBpEw,3397
+media_tagging_langchain/tagging_strategies.py,sha256=t3CK_dUTwDbXfVykzgV8BO8sW643Tsbrx6_pmUR9Kks,6524
+media_tagging_langchain-0.1.0.dist-info/METADATA,sha256=0SjjOOJME8qaldIEMZ0PYrAdu7MldOJ2AknIjhblLBU,2568
+media_tagging_langchain-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+media_tagging_langchain-0.1.0.dist-info/entry_points.txt,sha256=YQa4Ph7M6TlLrFDVh0UhQOOHdAiLRX7Cp4nVA96n2ZU,58
+media_tagging_langchain-0.1.0.dist-info/top_level.txt,sha256=IE74Hphum5y6WeZVf7Vfj4QMWuJCOWUJK8eAfadv5_Y,24
+media_tagging_langchain-0.1.0.dist-info/RECORD,,
