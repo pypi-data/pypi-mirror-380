@@ -1,0 +1,6 @@
+core-tests>=2.0.2
+cryptography>=43.0.3
+pycryptodome>=3.21.0
+
+[dev]
+core-dev-tools>=1.0.1

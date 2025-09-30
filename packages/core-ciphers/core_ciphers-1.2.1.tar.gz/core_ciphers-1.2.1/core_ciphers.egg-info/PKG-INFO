@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: core-ciphers
+Version: 1.2.1
+Summary: This project/library contains common elements related to ciphers...
+Author-email: Alejandro Cora González <alek.cora.glez@gmail.com>
+Maintainer: Alejandro Cora González
+License: MIT
+Project-URL: Homepage, https://gitlab.com/bytecode-solutions/core/core-ciphers
+Project-URL: Repository, https://gitlab.com/bytecode-solutions/core/core-ciphers
+Project-URL: Documentation, https://core-ciphers.readthedocs.io/en/latest/
+Project-URL: Issues, https://gitlab.com/bytecode-solutions/core/core-ciphers/-/issues
+Project-URL: Changelog, https://gitlab.com/bytecode-solutions/core/core-ciphers/-/blob/master/CHANGELOG.md
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: core-tests>=2.0.2
+Requires-Dist: cryptography>=43.0.3
+Requires-Dist: pycryptodome>=3.21.0
+Provides-Extra: dev
+Requires-Dist: core-dev-tools>=1.0.1; extra == "dev"
+Dynamic: license-file
+
+# core-ciphers
+_______________________________________________________________________________
+
+This project/library contains common elements related to ciphers...
+
+
+## Execution Environment
+
+### Install libraries
+```shell
+pip install --upgrade pip 
+pip install virtualenv
+```
+
+### Create the Python Virtual Environment.
+```shell
+virtualenv --python={{python-version}} .venv
+virtualenv --python=python3.11 .venv
+```
+
+### Activate the Virtual Environment.
+```shell
+source .venv/bin/activate
+```
+
+### Install required libraries.
+```shell
+pip install .
+```
+
+### Check tests and coverage...
+```shell
+python manager.py run-test
+python manager.py run-coverage
+```
+
+## Security
+
+### Cryptographic Library
+
+This project uses **`pycryptodome`** (version >=3.21.0) for cryptographic operations, not the deprecated `pycrypto` library.
+
+**Important Note:** Security scanners like `bandit` may report false positives (B413 warnings) when scanning this codebase. This occurs because both `pycrypto` (deprecated) and `pycryptodome` (actively maintained) use the same `Crypto` import namespace, causing scanners to incorrectly flag the imports as deprecated.
+
+**Verification:**
+- Check `pyproject.toml` dependencies: `pycryptodome>=3.21.0`
+- `pycryptodome` is actively maintained and regularly updated
+- It is the recommended drop-in replacement for the deprecated `pycrypto`
+
+The B413 bandit warnings can be safely ignored as they are false positives.
