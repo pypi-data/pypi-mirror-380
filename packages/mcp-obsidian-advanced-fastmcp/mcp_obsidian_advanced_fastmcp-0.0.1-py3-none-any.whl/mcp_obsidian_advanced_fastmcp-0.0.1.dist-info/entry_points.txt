@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-obsidian-advanced = mcp_obsidian_advanced.server:main
