@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: youtube-indirici-atilla
+Version: 1
+Summary: Komut satırından YouTube videolarını MP4 olarak indirmek için basit ama güçlü bir Python paketi.
+Author: Atilla, Python Kod Asistanı (Gemini)
+Keywords: youtube,indirici,yt-dlp,gui
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: yt-dlp
+Requires-Dist: Pillow
+
+
+## Güncelleme
+
+- yt-dlp güncelleme kontrolü
+
+- hatalar gözden geçirildi
+  
+## Nasıl Açılır?
+
+CMD ile Şunu Yazın:
+
+```bash
+  youtube-indir veya py -3.13 -m youtube-indir
+```
+## Rozetler
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+  
