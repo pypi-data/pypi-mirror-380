@@ -1,0 +1,32 @@
+server:
+  config:
+    api_key: 6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195
+    rapidapi_host: finance-news2.p.rapidapi.com
+  description: Get finance news and stock news with keyword search functionality.
+  name: Finance News
+  options:
+    requestTimeoutMillis: 15000
+tools:
+- args:
+  - default: Microsoft
+    description: Keyword to search.
+    name: keyword
+    required: 'True'
+  - default: '1'
+    description: 无
+    name: page
+    required: 'False'
+  - default: '10'
+    description: 无
+    name: page_size
+    required: 'False'
+  description: Search for articles that contain a specific keyword in the title.
+  name: search_articles
+  requestTemplate:
+    headers:
+    - key: x-rapidapi-key
+      value: '{{config.api_key}}'
+    - key: x-rapidapi-host
+      value: '{{config.rapidapi_host}}'
+    method: GET
+    url: https://finance-news2.p.rapidapi.com/api/v1/news/articles/search?keyword={{args.keyword}}&page={{args.page}}&page_size={{args.page_size}}
