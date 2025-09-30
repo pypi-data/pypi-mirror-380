@@ -1,0 +1,9 @@
+name,seconds
+cache-parameters-simu,7.2
+annotate-new-simu,2.5
+multi-annotate-new-simu,2.5
+partition-new-simu,5.2
+seed-partition-new-simu,2.6
+vsearch-partition-new-simu,2.8
+get-selection-metrics-new-simu,1.9
+cache-parameters-data,8.9
