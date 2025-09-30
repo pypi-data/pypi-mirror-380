@@ -1,0 +1,12 @@
+livekit/plugins/turn_detector/__init__.py,sha256=thYvA0ieztJX-KZsTQwilyi93UH1zJ8agAd_TFvMv6M,1736
+livekit/plugins/turn_detector/base.py,sha256=tKJMr0okELUIP7H6Iyn0GWKHXnxI-6dtkuCecczoKfs,8455
+livekit/plugins/turn_detector/english.py,sha256=zgrAjg8By6onDLoXFHf99pXXJU4cO0mptrHCkYLOUeg,842
+livekit/plugins/turn_detector/external.py,sha256=Rfz6Lr2xtztAEcsTsx1nqjsrdDZZa5hs6NEzVdVTBXk,19721
+livekit/plugins/turn_detector/log.py,sha256=a0uGBu1dmzh0XgEi4l5dgH3zb0bj86RGP-i-WtDWNRY,76
+livekit/plugins/turn_detector/models.py,sha256=b10CHUbw89vh2ZV8-KI94JLOCzCpnwlhsKdxum7bj7k,256
+livekit/plugins/turn_detector/multilingual.py,sha256=gp_J2Ufm7hnlNAnRFpCcC7LSNOZnO0syHCKUHk6IwIM,3824
+livekit/plugins/turn_detector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/turn_detector/version.py,sha256=r0VEs7ImbFxUrWKZtkBLxoSfn-Cuchxt1BAp_BFy_80,600
+livekit_plugins_external_turn_detector-1.2.14.dist-info/METADATA,sha256=f-2--0tkhyLs8e8FmVj9sC4Gj0dyf8sKYqotriY5sVI,11352
+livekit_plugins_external_turn_detector-1.2.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_external_turn_detector-1.2.14.dist-info/RECORD,,
