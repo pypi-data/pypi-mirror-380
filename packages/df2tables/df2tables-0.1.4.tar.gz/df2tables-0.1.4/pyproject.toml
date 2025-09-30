@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "df2tables"
+version = "0.1.4"
+authors = [
+  { name="Tomasz Sługocki", email="ts.kontakt@gmail.com" },
+]
+description = "df2tables: Pandas and Polars DataFrames to Interactive DataTables"
+
+keywords = ["Pandas", "Polars", "HTML", "DataTables", "Javascript"]
+
+readme = "README.md"
+dependencies = [ ]
+
+[project.optional-dependencies]
+pandas = ["pandas"]
+polars = ["polars"]
+
+
+license = ["MIT"]
+
+[project.urls]
+Homepage = "https://github.com/ts-kontakt/df2tables"
+Issues = "https://github.com/ts-kontakt/df2tables/issues"
+
+[tool.hatch.build]
+skip-excluded-dirs = true
+exclude = [
+  "/*.html",
+  "/df2tables/*test*",
+  "/df2tables/*.txt",
+  "/*.txt",
+  "/*.py"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["df2tables"]
+only-include = ["df2tables"]
+only-packages = true
+
+#[tool.hatch.build.targets.wheel.sources]
+#exclude = "*.html"
+
+
