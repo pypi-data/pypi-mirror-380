@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+circle_detection_hough.egg-info/PKG-INFO
+circle_detection_hough.egg-info/SOURCES.txt
+circle_detection_hough.egg-info/dependency_links.txt
+circle_detection_hough.egg-info/entry_points.txt
+circle_detection_hough.egg-info/requires.txt
+circle_detection_hough.egg-info/top_level.txt
+circle_detection_sdk/__init__.py
+circle_detection_sdk/main.py
+circle_detection_sdk/models/best1.pt
