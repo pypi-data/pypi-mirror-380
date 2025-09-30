@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "ghcp"
+version = "0.1.0"
+description = "Copy a folder or file from GitHub without cloning (CLI)"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+{ name = "Your Name", email = "you@example.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+"requests>=2.28",
+]
+
+
+[project.scripts]
+# CLI entry point
+ghcp = "ghcp.cli:main"
+
+
+[tool.hatch.build]
+packages = ["src/ghcp"]
