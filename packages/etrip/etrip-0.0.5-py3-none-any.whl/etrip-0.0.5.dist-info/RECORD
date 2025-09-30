@@ -1,0 +1,15 @@
+etrip/__init__.py,sha256=uAF5mNpEzaAuAwV1dfMaFafeuyYQ6xjKtVVtwGOPUeg,2168
+etrip/_version.py,sha256=S7u1lbuWmM3A3ajykBialmPoJUK6Jg-WmNqM-9OZFdk,22
+etrip/etrip.py,sha256=LanenXiuITHBzVm9jFy9XVPv074qk0NWkWjIgYEKEz8,14253
+etrip/imageselector.py,sha256=N7WaSCkoR2zcpOcgXQjko1hf-14uVkdAfoUbH59RPb0,297
+etrip/classes/cut.py,sha256=bwxtWYzsoUASnhOyMLOqcWSAPj68PQDJy9QJ1cvzQDM,6187
+etrip/classes/initialisation.py,sha256=HedxXiTXyFAYM3E3gWZrtvqxLlCKUHKVq8gwY6O_t5I,7649
+etrip/classes/manager.py,sha256=NCBiD0nMINPQbViE-uaSVmb3jwOwfxTHuLREP9-81AM,2128
+etrip/classes/manual.py,sha256=V3oT53Xy7g1e2w7nG8NNz-Zr544bd_IVSeTC4ljbrZ8,6726
+etrip/classes/sample.py,sha256=OW8V0ObqqjjzduZfw8j27R5s_CzTDRQn74FbQdcO5rk,25904
+etrip/classes/selection.py,sha256=FnSi6FQa7P9Hy89DkGvQo43Os5qIZFKOboAafnQtCpw,2246
+etrip-0.0.5.dist-info/licenses/LICENSE,sha256=OduPms8DZZWiVm6j_lYLx71l2HSfCI4PSk7y-KbLSzQ,18026
+etrip-0.0.5.dist-info/METADATA,sha256=L1ccYpRWB898kUtHch1PIT3WbizAXCd7Dp53tuGdixk,22859
+etrip-0.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+etrip-0.0.5.dist-info/top_level.txt,sha256=CibjjU3DeMb1yQG4-pVT0t-lTcLc0OQgqO68-hjTNUY,6
+etrip-0.0.5.dist-info/RECORD,,
