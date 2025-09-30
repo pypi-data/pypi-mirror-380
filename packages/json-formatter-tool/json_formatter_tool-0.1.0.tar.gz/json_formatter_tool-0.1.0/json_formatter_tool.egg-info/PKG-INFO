@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: json-formatter-tool
+Version: 0.1.0
+Summary: A lightweight JSON formatter in Python
+Home-page: https://formatjsononline.com
+Author: Anil
+Author-email: anilpeter75@gmail.com
+License: MIT
+Project-URL: Homepage, https://formatjsononline.com/
+Project-URL: JSON Formatter, https://formatjsononline.com/json-formatter
+Project-URL: Excel to JSON, https://formatjsononline.com/excel-to-json
+Project-URL: JSON to Excel, https://formatjsononline.com/json-to-excel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# JSON Formatter Tool
+
+A lightweight Python package to format JSON strings with indentation.  
+
+This package is a minimal JSON formatter, and you can also use the free online tool at [Format JSON Online](https://formatjsononline.com).
+
+## Installation
+```bash
+pip install json-formatter-tool
