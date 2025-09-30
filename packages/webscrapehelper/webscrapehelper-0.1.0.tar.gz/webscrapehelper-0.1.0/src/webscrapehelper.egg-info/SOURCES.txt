@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+examples/record_session.py
+src/webscrapehelper/__init__.py
+src/webscrapehelper/session.py
+src/webscrapehelper.egg-info/PKG-INFO
+src/webscrapehelper.egg-info/SOURCES.txt
+src/webscrapehelper.egg-info/dependency_links.txt
+src/webscrapehelper.egg-info/requires.txt
+src/webscrapehelper.egg-info/top_level.txt
