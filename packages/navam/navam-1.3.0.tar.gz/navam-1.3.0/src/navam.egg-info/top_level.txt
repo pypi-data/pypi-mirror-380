@@ -1,0 +1,4 @@
+company_mcp
+navam
+news_mcp
+stock_mcp

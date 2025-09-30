@@ -1,0 +1,17 @@
+Asset Class,Account,Wealth,Symbol,Value,Stocks,Returns,Invested,Yield
+Cash,Pinnacle Financial,"$1,280",,,,,,
+Cash,Cornerstone Bank,"$64,000",,,,,,
+Cash,Summit Capital,"$326,806",,,,"$6,806","$320,000",2.08%
+Cash,Meridian Trust,"$323,456",,,,"$3,456","$320,000",1.07%
+Cash,Beacon Securities,"$1,062",,,,$0,"$1,062",0.00%
+Bonds,Horizon Wealth,"$12,966",,,,$166,"$12,800",1.28%
+Crypto,Apex Investments,"$95,648",ETHUSD,"$140,240",0.68203595,"-$5,497","$101,145",-5.75%
+401K,Cornerstone Retirement,"$188,855",VTSAX,,,"$28,612","$160,243",15.15%
+Equity,Sterling Securities,"$587,395",AAPL,$281,"2,090","$93,043","$494,352",15.82%
+Equity,Beacon Securities,"$137,324",TSLA,$228,602,"$42,604","$94,720",31.02%
+Equity,Beacon Securities,"$81,833",GOOGL,$654,125,"$17,833","$64,000",21.79%
+ETF,Beacon Securities,"$58,964",QQQ,$294,200,"$15,444","$43,520",26.19%
+ETF,Beacon Securities,"$39,643",SPY,$32,"1,216","$1,243","$38,400",3.13%
+ETF,Beacon Securities,"$34,030",VTI,$104,328,"$3,310","$30,720",9.73%
+Equity,Beacon Securities,"$33,367",META,$316,106,"$7,127","$26,240",21.36%
+ETF,Beacon Securities,"$15,529",IWM,$282,55,"$2,729","$12,800",17.58%
