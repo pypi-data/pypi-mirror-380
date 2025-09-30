@@ -1,0 +1,11 @@
+ros_cdk_paidswapi/__init__.py,sha256=ZMyaiItPaOZXzx-HNH0dhU7v9nXxUgq5jRAXFtrM1MI,74047
+ros_cdk_paidswapi/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ros_cdk_paidswapi/_jsii/__init__.py,sha256=sUb-GwJEtoFSc-5VoeEnoX8x0aglBPIN8JJ__iWZU58,431
+ros_cdk_paidswapi/_jsii/ros-cdk-paidswapi@1.10.0.jsii.tgz,sha256=3Eigb10dPoA4A3RTzwDSSbwLGOoB6VJ_k67KkVQVdmQ,53025
+ros_cdk_paidswapi/datasource/__init__.py,sha256=FuZrWOzGrkWuG_-zB2PQw8dENUR13kH_5aJMq_mAiWE,62028
+ros_cdk_paidswapi-1.10.0.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+ros_cdk_paidswapi-1.10.0.dist-info/METADATA,sha256=jgJlH98vP0pAVeSLa9TSwihhDI4HIdFTpDlogCngUuM,1472
+ros_cdk_paidswapi-1.10.0.dist-info/NOTICE,sha256=2QphLC5EbcXMxwWTewMxg9-WTM-FRkvUc5DpqpFapkA,121
+ros_cdk_paidswapi-1.10.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ros_cdk_paidswapi-1.10.0.dist-info/top_level.txt,sha256=ig-lGWIABqBr5owl-CE4OdAgn6_8sQryo-xhKWGoLjU,18
+ros_cdk_paidswapi-1.10.0.dist-info/RECORD,,
