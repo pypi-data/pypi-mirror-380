@@ -1,0 +1,31 @@
+security:
+  # Audit for known security vulnerabilities
+  # Run with: safety check
+  ignore:
+    # Add any known false positives here
+    # Example: 12345  # False positive for package XYZ
+
+  # Bandit configuration for security linting
+  bandit:
+    exclude_dirs:
+      - tests
+    skips:
+      - B101  # Test for use of assert
+    severity:
+      - medium
+      - high
+
+dependency-check:
+  # Check for outdated dependencies
+  python:
+    ignore:
+      # Add packages to ignore for version updates
+      # Example: package-name==1.0.0
+    
+  vulnerability-db:
+    update: true
+    
+audit:
+  # Automated dependency auditing
+  enabled: true
+  fail-on: medium  # Fail on medium or high severity vulnerabilities
