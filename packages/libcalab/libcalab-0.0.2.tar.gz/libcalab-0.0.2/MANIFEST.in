@@ -1,0 +1,9 @@
+recursive-include src *.py
+recursive-include src/taesooLib/Resource *
+recursive-include libcalab *.so *.dll *.dylib
+
+# include resources
+recursive-include libcalab/Resource *
+
+# include CMake-built shared libs (if setuptools misses them)
+recursive-include libcalab *.so *.pyd *.dll *.dylib
