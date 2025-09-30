@@ -1,0 +1,2 @@
+[console_scripts]
+llm-intercept = llm_intercept.cli:main
