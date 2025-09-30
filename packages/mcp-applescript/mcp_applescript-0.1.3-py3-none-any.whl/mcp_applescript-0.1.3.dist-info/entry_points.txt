@@ -1,0 +1,3 @@
+[console_scripts]
+mcp-applescript = mcp_applescript:main
+
