@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: sim-sci-test-monorepo-core
+Version: 0.0.8
+Summary: Core functionality for sim_sci_test_monorepo
+Project-URL: Homepage, https://github.com/ihmeuw/sim_sci_test_monorepo
+Project-URL: Repository, https://github.com/ihmeuw/sim_sci_test_monorepo
+Project-URL: Issues, https://github.com/ihmeuw/sim_sci_test_monorepo/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+
+# sim_sci_test_monorepo.core
+
+Core functionality for the sim_sci_test_monorepo namespace package.
+
+## Installation
+
+```bash
+pip install sim-sci-test-monorepo-core
+```
+
+## Usage
+
+```python
+from sim_sci_test_monorepo.core import ...
+```
