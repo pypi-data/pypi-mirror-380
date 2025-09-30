@@ -1,0 +1,11 @@
+imdbinfo/__init__.py,sha256=-kR0l39OySeSSjCki1W7scvxw4XqvHC3SCOHPbU7Cb4,1694
+imdbinfo/locale.py,sha256=YKWWh7BrTpPOzMU2HBWJ29urN2VJXKAgiFloO0cEHjc,2337
+imdbinfo/models.py,sha256=V4g1Lon6ceuGi0rnlD5mnQ5BKZeeKxi9qGAdKK81OK8,20752
+imdbinfo/parsers.py,sha256=Am9i8K02djuPrSSHSq7YANj0uIjh_kEywijCrwtjaGo,21559
+imdbinfo/services.py,sha256=tKOBH4UIUCE216N7niiiry1iOhaU2G8ka5FMKi4nqss,16879
+imdbinfo/transformers.py,sha256=dkVDFKpC53T_bh3Y3nfcKuShfUFlIjyF9TxNHza9Hok,3304
+imdbinfo-0.5.8.dist-info/LICENSE,sha256=rSm7MgM5XqJCkDsSPqByHUApT-v-Lexw314AZsnyPdg,1071
+imdbinfo-0.5.8.dist-info/METADATA,sha256=Z9FWp_m2_xK-bK5P13nPo7iU_dNi61z-eUccKMG1Nzg,11271
+imdbinfo-0.5.8.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+imdbinfo-0.5.8.dist-info/top_level.txt,sha256=1204ZLnfhCdCzFCOnxCX3kFFbXKWtHzuKD9Pg5e_14g,9
+imdbinfo-0.5.8.dist-info/RECORD,,
