@@ -1,0 +1,7 @@
+setup.py
+giorgi_kerelashvili_library.egg-info/PKG-INFO
+giorgi_kerelashvili_library.egg-info/SOURCES.txt
+giorgi_kerelashvili_library.egg-info/dependency_links.txt
+giorgi_kerelashvili_library.egg-info/top_level.txt
+my_packages/__init__.py
+my_packages/base_class.py
