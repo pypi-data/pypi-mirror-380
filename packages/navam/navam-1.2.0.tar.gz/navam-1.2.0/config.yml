@@ -1,0 +1,227 @@
+# Stock MCP Server Configuration
+
+# API Configuration
+apis:
+  yahoo_finance:
+    enabled: true
+    rate_limit: 100  # requests per minute
+    timeout: 30      # seconds
+
+  alpha_vantage:
+    enabled: true   # Enable when API key is available
+    rate_limit: 5    # requests per minute (free tier)
+    timeout: 30
+
+  iex_cloud:
+    enabled: false   # Enable when API key is available
+    rate_limit: 100  # requests per minute
+    timeout: 30
+
+  # Company Research APIs
+  sec_edgar:
+    enabled: true
+    base_url: "https://data.sec.gov"
+    rate_limit: 10   # requests per second (SEC requirement)
+    timeout: 30
+    user_agent: "CompanyResearchMCP/1.0 (research@example.com)"
+
+  alpha_vantage_fundamentals:
+    enabled: true    # Uses same API key as alpha_vantage
+    rate_limit: 5    # requests per minute (free tier)
+    timeout: 30
+    endpoints:
+      - company_overview
+      - income_statement
+      - balance_sheet
+      - cash_flow
+      - earnings
+
+  finnhub:
+    enabled: false   # Enable when API key is available
+    rate_limit: 60   # requests per minute
+    timeout: 30
+
+# Cache Configuration
+cache:
+  ttl_minutes: 15      # Time to live for cached data
+  cleanup_interval: 60 # Cleanup interval in seconds
+
+# Server Configuration
+server:
+  name: "Stock Analysis MCP"
+  version: "1.0.0"
+
+  # Transport settings
+  transports:
+    stdio:
+      enabled: true
+    http:
+      enabled: true
+      host: "0.0.0.0"
+      port: 8080
+      cors_origins: ["*"]
+
+# Data Sources Configuration
+data_sources:
+  # Primary data source
+  primary: "yahoo_finance"
+
+  # Fallback order
+  fallback: ["alpha_vantage"]
+
+# Feature Flags
+features:
+  real_time_quotes: true
+  historical_data: true
+  technical_indicators: true
+  fundamental_data: true
+  news_integration: false  # Requires additional API
+  portfolio_analysis: true
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Company Research MCP Server Configuration
+company_research:
+  name: "Company Research MCP"
+  version: "1.0.0"
+
+  # Data sources for company research
+  data_sources:
+    profile: ["alpha_vantage_fundamentals", "sec_edgar"]
+    financials: ["alpha_vantage_fundamentals", "sec_edgar"]
+    filings: ["sec_edgar"]
+    news: ["alpha_vantage_fundamentals"]
+
+  # Feature flags for company research
+  features:
+    company_profiles: true
+    financial_statements: true
+    sec_filings: true
+    insider_trading: true
+    analyst_ratings: true
+    news_sentiment: true
+    peer_comparison: true
+
+  # Cache settings specific to company data
+  cache:
+    profile_ttl: 3600        # 1 hour for company profiles
+    financials_ttl: 3600     # 1 hour for financial data
+    news_ttl: 1800          # 30 minutes for news
+    filings_ttl: 86400      # 24 hours for SEC filings
+
+# News MCP Server Configuration
+news_mcp:
+  name: "Company News MCP"
+  version: "1.0.0"
+  description: "Comprehensive news analysis and financial media monitoring"
+
+  # News API Sources
+  apis:
+    marketaux:
+      enabled: true
+      base_url: "https://api.marketaux.com/v1"
+      rate_limit: 100        # requests per month (free tier)
+      timeout: 30
+      features:
+        - financial_news
+        - sentiment_analysis
+        - entity_extraction
+
+    newsapi:
+      enabled: true
+      base_url: "https://newsapi.org/v2"
+      rate_limit: 1000       # requests per day (free tier)
+      timeout: 30
+      categories:
+        - business
+        - technology
+      features:
+        - everything_endpoint
+        - sources_endpoint
+        - top_headlines
+
+    finnhub_news:
+      enabled: true
+      base_url: "https://finnhub.io/api/v1"
+      rate_limit: 60         # requests per minute (free tier)
+      timeout: 30
+      features:
+        - company_news
+        - market_news
+        - press_releases
+
+    yahoo_finance_news:
+      enabled: true
+      library: "yfinance"
+      rate_limit: 100        # Conservative limit
+      timeout: 30
+      features:
+        - company_news
+        - basic_sentiment
+
+  # Data source priority
+  data_sources:
+    primary: "marketaux"
+    fallback: ["newsapi", "finnhub_news", "yahoo_finance_news"]
+
+  # News processing features
+  features:
+    sentiment_analysis: true
+    entity_extraction: true
+    topic_trending: true
+    market_overview: true
+    news_summarization: true
+    competitive_intelligence: true
+    crisis_monitoring: true
+    earnings_coverage: true
+    breaking_news_alerts: false  # Would require real-time setup
+
+  # Cache configuration for news data
+  cache:
+    search_results_ttl: 900    # 15 minutes for search results
+    trending_topics_ttl: 1800  # 30 minutes for trending topics
+    sentiment_analysis_ttl: 3600  # 1 hour for sentiment analysis
+    market_overview_ttl: 1800  # 30 minutes for market overview
+    company_news_ttl: 1800     # 30 minutes for company-specific news
+    cleanup_interval: 3600     # 1 hour cleanup interval
+
+  # Transport settings
+  transports:
+    stdio:
+      enabled: true
+    http:
+      enabled: true
+      host: "0.0.0.0"
+      port: 8082
+      cors_origins: ["*"]
+
+  # Content filtering and quality
+  content_filters:
+    min_relevance_score: 0.3
+    min_article_length: 50     # characters
+    duplicate_threshold: 0.8   # similarity threshold
+    languages: ["en"]
+    exclude_sources: []        # Sources to exclude
+
+  # Sentiment analysis configuration
+  sentiment:
+    algorithm: "keyword_based"  # Simple keyword-based for now
+    positive_threshold: 0.1
+    negative_threshold: -0.1
+    confidence_threshold: 0.5
+
+  # Alert configuration (for future use)
+  alerts:
+    enabled: false
+    max_alerts_per_day: 50
+    urgent_keywords: ["breaking", "urgent", "alert", "emergency"]
+    sentiment_threshold: 0.7   # For extreme sentiment alerts
+
+  # Rate limiting and quotas
+  quotas:
+    daily_api_calls: 5000      # Combined across all APIs
+    hourly_api_calls: 500
+    requests_per_user: 100     # Per user if authentication is added

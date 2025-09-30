@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "stock-analyzer": {
+      "command": "{{SYS_EXECUTABLE}}",
+      "args": [
+        "-m",
+        "stock_mcp.server",
+        "stdio"
+      ]
+    },
+    "company-research": {
+      "command": "{{SYS_EXECUTABLE}}",
+      "args": [
+        "-m",
+        "company_mcp.server",
+        "stdio"
+      ]
+    },
+    "news-analyzer": {
+      "command": "{{SYS_EXECUTABLE}}",
+      "args": [
+        "-m",
+        "news_mcp.server",
+        "stdio"
+      ]
+    }
+  }
+}
