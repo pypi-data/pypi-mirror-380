@@ -1,0 +1,20 @@
+[project]
+name = "two-goats-one-car"
+version = "1.0.2"
+description = "A Monte Carlo simulator for the Monty Hall Problem"
+authors = [
+    {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+repository = "https://github.com/DJStompZone/MontyCarlo"
+license = {text = "MIT"}
+dependencies = [
+]
+
+[tool.poetry.scripts]
+montycarlo = "two_goats_one_car.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
