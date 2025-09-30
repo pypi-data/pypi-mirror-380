@@ -1,0 +1,10 @@
+ros_cdk_maxcompute/__init__.py,sha256=FrXzrUAo7r8SgOiS8sDnMcF4EmW-KO49YHirpxFNDhE,232106
+ros_cdk_maxcompute/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ros_cdk_maxcompute/_jsii/__init__.py,sha256=YXs6Ey0jyfZxKwofLKe_iqgPXBzm3NkzwdRtWreUBZo,433
+ros_cdk_maxcompute/_jsii/ros-cdk-maxcompute@1.10.0.jsii.tgz,sha256=07h2MfUMfYGFHsMAWQgGuqZB58I5APaPYEhHwoPBBmQ,68921
+ros_cdk_maxcompute-1.10.0.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+ros_cdk_maxcompute-1.10.0.dist-info/METADATA,sha256=k8Olbcqwz_144metwBzM5367wRc92AQYv5CMkg4kQko,1476
+ros_cdk_maxcompute-1.10.0.dist-info/NOTICE,sha256=2QphLC5EbcXMxwWTewMxg9-WTM-FRkvUc5DpqpFapkA,121
+ros_cdk_maxcompute-1.10.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ros_cdk_maxcompute-1.10.0.dist-info/top_level.txt,sha256=fnI4STJfS3ed5tmrD34hlwsLuBQXVlOqJT-PN8d_QL8,19
+ros_cdk_maxcompute-1.10.0.dist-info/RECORD,,
