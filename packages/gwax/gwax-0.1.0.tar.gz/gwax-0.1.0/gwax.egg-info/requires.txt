@@ -1,0 +1,8 @@
+jax
+jax_tqdm
+equinox
+optax
+flowjax
+numpyro
+bilby
+wcosmo
