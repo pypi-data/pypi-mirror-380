@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyimage_scaler/__init__.py
+pyimage_scaler/scaler.py
+pyimage_scaler.egg-info/PKG-INFO
+pyimage_scaler.egg-info/SOURCES.txt
+pyimage_scaler.egg-info/dependency_links.txt
+pyimage_scaler.egg-info/top_level.txt
