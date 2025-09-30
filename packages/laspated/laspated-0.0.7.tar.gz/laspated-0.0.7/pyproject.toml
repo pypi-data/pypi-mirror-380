@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64.4.0", "wheel", "pip>=24.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "laspated"
+version = "0.0.7"
+requires-python = ">= 3.10"
+readme = { file = "README.md", content-type = "text/markdown" }
+description = "Analysis of Spatio-temporal data"
+license = { file = "LICENSE.txt" }
+dependencies = [
+    "numpy==1.25",
+    "pandas==2.0.0",
+    "geopandas==0.12.2",
+    "fiona==1.8.22",
+    "matplotlib",
+    "h3",
+    "geovoronoi",
+    "rtree",
+    "descartes",
+]
+authors = [
+    { name = "Vincent Guigues" },
+    { name = "Anton Kleywegt" },
+    { name = "Giovanni Amorim" },
+    { name = "André Mazal" },
+    { name = "Victor Nascimento" },
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+
+# [project.optional-dependencies]
+# dev = [
+#     "pdbpp",
+#     "bump-my-version",
+#     "pre-commit",
+# ]
+# docs = [
+#     "jupyter-book",
+#     "jupytext",
+#     "sphinxcontrib-bibtex",
+# ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["laspated"]
