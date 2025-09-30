@@ -1,0 +1,90 @@
+# Gordon Surface Library
+
+This library provides a Python implementation for creating Gordon surfaces, which are a method for interpolating a network of curves to generate a smooth surface. It is designed to be compatible with CadQuery's OCP and leverages B-spline mathematics.
+
+It is a line by line translation from the original C++ code in [occ_gordon](https://github.com/rainman110/occ_gordon)
+
+## Features
+
+- Gordon surface interpolation from profile and guide curves.
+- Compatibility with B-spline representations.
+- Integration with CadQuery's OCP (OpenCASCADE Python) for geometric primitives.
+
+## Installation
+
+This package can be installed using pip. It is recommended to use a virtual environment.
+
+```bash
+pip install ocp_gordon
+```
+
+## Dependencies
+
+- OCP (OpenCASCADE Python)
+- NumPy
+- SciPy
+
+## Usage
+
+Here's a basic example of how to use the library:
+
+```python
+# This is a placeholder example. Actual usage may vary based on the library's API.
+from ocp_gordon import interpolate_curve_network
+
+# Assume you have profile_curves and guide_curves defined as lists of B-spline objects
+
+# Example:
+# profile_curves = [...] # List of Geom_BSplineCurve objects
+# guide_curves = [...]   # List of Geom_BSplineCurve objects
+
+try:
+    gordon_surface: Geom_BSplineSurface = interpolate_curve_network(profile_curves, guide_curves)
+    # You can then use gordon_surface with CadQuery or other visualization tools
+    print("Gordon surface created successfully.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+```
+
+For more detailed examples, please refer to the `examples/` directory in the source code.
+
+## Test
+
+To run tests, first install pytest, then:
+
+```bash
+cd tests
+python test_all.py
+
+```
+
+## Notable Difference from C++ Code
+
+- A major difference is that in `intersect_bsplines.py`, a polyfilled `math_BFGS` is used instead of `math_FRPR` because both `math_BFGS` and `math_FRPR` are not usable in OCP because OCP does not implement `math_Vector`. The `activate()` function in this file has also been changed since the original one does not work well.
+- In the `_solve()` function in `bspline_approx_interp.py`, the regularization is added to prevent singular matrix which occurs in some cases for example when the input curve is a bspline converted from a circle.
+- A new file `misc.py` is added to implement some missing classes/functions from OCP. The major ones are `clone_bspline` and `math_BFGS`.
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+
+## Citing
+
+The algorithm was originally described in:
+
+[Siggel M. et. al. (2019), _TiGL: An Open Source Computational Geometry Library for Parametric Aircraft Design_](https://doi.org/10.1007/s11786-019-00401-y)
+
+```
+@article{siggel2019tigl,
+	title={TiGL: an open source computational geometry library for parametric aircraft design},
+	author={Siggel, Martin and Kleinert, Jan and Stollenwerk, Tobias and Maierl, Reinhold},
+	journal={Mathematics in Computer Science},
+	volume={13},
+	number={3},
+	pages={367--389},
+	year={2019},
+	publisher={Springer},
+    doi={10.1007/s11786-019-00401-y}
+}
+```
