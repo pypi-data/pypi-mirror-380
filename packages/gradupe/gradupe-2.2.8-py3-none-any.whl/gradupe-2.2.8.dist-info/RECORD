@@ -1,0 +1,9 @@
+gradupe/__init__.py,sha256=TduhzmHmxhSMXvkZVwhIOxjaqznZDyTW3FTGTu738Ng,64
+gradupe/__main__.py,sha256=3UqD3kASvNHdOGFBXinePQf5Lk7VvSa3_WAyw47ledo,111
+gradupe/cli.py,sha256=ImOWN7LC1vtpZByjH2_LjvbP7irvylQFk2zmIo8WE-c,1811
+gradupe/lib.py,sha256=HjixJlk0_Nvz6tbHm8_VbLd4JyGOkac_mh425u5ZflY,1350
+gradupe-2.2.8.dist-info/entry_points.txt,sha256=puXNCJObEcVquWNLaWUXMfeqfDM2b_I2LCuZqfsprdo,48
+gradupe-2.2.8.dist-info/licenses/LICENSE,sha256=uRD192VIBMQWcv0s3JSjCjbRxFiq0ScLiCgr3G70pnI,1065
+gradupe-2.2.8.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+gradupe-2.2.8.dist-info/METADATA,sha256=oKt8xYpF4bk2LroWItcpIzmlah38ZOvOV8dSq5EDKX4,3987
+gradupe-2.2.8.dist-info/RECORD,,
