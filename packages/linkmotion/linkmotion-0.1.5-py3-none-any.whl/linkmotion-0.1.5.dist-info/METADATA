@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: linkmotion
+Version: 0.1.5
+Summary: Add your description here
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: joblib>=1.5.2
+Requires-Dist: manifold3d>=3.2.1
+Requires-Dist: python-fcl>=0.7.0.8
+Requires-Dist: scipy>=1.16.2
+Requires-Dist: shapely>=2.1.2
+Requires-Dist: trimesh>=4.8.2
+Provides-Extra: jup
+Requires-Dist: jupyter>=1.1.1; extra == 'jup'
+Requires-Dist: k3d>=2.17.0; extra == 'jup'
+Requires-Dist: plotly>=6.3.0; extra == 'jup'
+Description-Content-Type: text/markdown
+
+# Sample
