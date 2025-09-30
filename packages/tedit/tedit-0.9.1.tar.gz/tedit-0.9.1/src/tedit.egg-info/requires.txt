@@ -1,0 +1,5 @@
+pygments>=2.10
+pyperclip>=1.8
+
+[:platform_system == "Windows"]
+windows-curses

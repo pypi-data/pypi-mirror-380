@@ -1,0 +1,41 @@
+[project]
+name = "tedit"         # distribution name on PyPI
+version = "0.9.1"               # aligns with Build #9
+description = "TE: a cross-platform terminal text editor with mouse support and coding syntax highlighting."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "alby13", email = "alby13@singularityon.com" }]
+
+# PEP 639 license fields
+license = "LicenseRef-TE-Pip-Only-1.0"
+license-files = ["LICENSE.txt", "licenses/LICENSE_PSF.txt", "licenses/LICENSE_BSD.txt"]
+
+# optional classifiers (non-license ones are fine)
+classifiers = [
+  "Environment :: Console :: Curses",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Editors",
+]
+
+dependencies = [
+  "pygments>=2.10",
+  "pyperclip>=1.8",
+  "windows-curses; platform_system == 'Windows'"
+]
+
+[project.urls]
+Homepage = "https://github.com/alby13/TE-Text-Editor"
+Issues   = "https://github.com/alby13/TE-Text-Editor/issues"
+
+# two CLI entry points pointing to the same function
+[project.scripts]
+te = "tedit.__main__:main"
+tedit = "tedit.__main__:main"
+
+[build-system]
+requires = ["setuptools>=77", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+# If you use a src/ layout:
+[tool.setuptools.packages.find]
+where = ["src"]
