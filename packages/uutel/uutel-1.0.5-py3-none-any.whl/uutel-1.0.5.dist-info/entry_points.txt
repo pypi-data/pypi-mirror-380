@@ -1,0 +1,2 @@
+[litellm.providers]
+codex = uutel.providers.codex:CodexCustomLLM
