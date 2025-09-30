@@ -1,0 +1,57 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "pysaten"
+description = "Detect silence segment from speech signal."
+version = "2.1.0"
+authors = [
+    {name = "Fumiyoshi MATANO", email = "fumiyoshi.matano@gmail.com"}
+]
+requires-python = ">=3.10, <3.13"
+dependencies = [
+    "numpy>=1.20",  # for numpy.typing
+    "noisereduce",
+    "librosa",
+    "soundfile",  # for cli_runner
+    "scipy",
+    "torch>=2"  # for torch.fft
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
+]
+
+[project.urls]
+Repository = "https://gitlab.com/f-matano44/pysaten.git"
+
+[project.scripts]
+pysaten_trim = "pysaten.pysaten:cli_runner"
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "^3.10.3"
+pandas = "^2.2.3"
+tqdm = "^4.67.1"
+torch = {version = ">=2", source = "torch_cpu", markers = "sys_platform == 'linux'"}
+torchaudio = {version = ">=2", source = "torch_cpu", markers = "sys_platform == 'linux'"}
+inaspeechsegmenter = {version = "^0.8.0", markers = "sys_platform == 'linux'"}
+silero-vad = {version = "^6.0.0", markers = "sys_platform == 'linux'"}
+rvadfast = {version = "^0.0.5", markers = "sys_platform == 'linux'"}
+whisperx = {version = "^3.4.2", markers = "sys_platform == 'linux'"}
+
+[[tool.poetry.source]]
+name = "torch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[tool.black]
+line-length = 90
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+plugins = "numpy.typing.mypy_plugin"
+ignore_missing_imports = true
