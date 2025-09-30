@@ -1,0 +1,36 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "T\u00e1 an gl\u00e9as cumraithe cheana f\u00e9in"
+        },
+        "error": {
+            "cannot_connect": "Theip ar an nascadh",
+            "invalid_auth": "F\u00edordheimhni\u00fa neamhbhail\u00ed",
+            "timeout_connect": "Am cr\u00edochnaithe ag bun\u00fa nasc",
+            "unknown": "Earr\u00e1id gan choinne"
+        }
+    },
+    "device": {
+        "unknown_container": {
+            "name": "Coime\u00e1d\u00e1n anaithnid"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "status": {
+                "name": "St\u00e1das"
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Tharla earr\u00e1id agus iarracht \u00e1 d\u00e9anamh ceangal leis an gc\u00e1s Portainer: {error}"
+        },
+        "invalid_auth": {
+            "message": "Tharla earr\u00e1id agus iarracht \u00e1 d\u00e9anamh f\u00edordheimhni\u00fa: {error}"
+        },
+        "timeout_connect": {
+            "message": "Tharla teorainn ama agus iarracht \u00e1 d\u00e9anamh ceangal leis an gc\u00e1s Portainer: {error}"
+        }
+    }
+}
