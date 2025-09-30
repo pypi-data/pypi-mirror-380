@@ -1,0 +1,11 @@
+# MANIFEST.in
+recursive-include psrdada_cpp/dadaflow/python/psrdada_cpp *.py
+include psrdada_cpp/dadaflow/python/README.md
+include LICENSE
+exclude README.md
+prune psrdada_cpp/*
+prune cmake
+prune debian
+prune doc
+prune docker
+prune tools

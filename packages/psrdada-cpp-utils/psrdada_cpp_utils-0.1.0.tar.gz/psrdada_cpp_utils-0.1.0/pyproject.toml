@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psrdada-cpp-utils"
+version = "0.1.0"
+description = "Python tools for working with psrdada_cpp/dadaflow pipelines"
+dynamic = ["readme"]
+license = { file = "LICENSE" }
+authors = [
+  { name = "Ewan Barr", email = "ebarr@mpifr-bonn.mpg.de" }
+]
+requires-python = ">=3.8"
+dependencies = [
+  "numpy",
+  "posix_ipc"
+]
+keywords = ["radio astronomy", "psrdada", "signal processing", "dadaflow", "psrdada_cpp"]
+
+[tool.setuptools]
+package-dir = { "" = "psrdada_cpp/dadaflow/python" }
+
+[tool.setuptools.dynamic]
+readme = {file=["psrdada_cpp/dadaflow/python/README.md"], content-type="text/markdown"}
+
+[tool.setuptools.packages.find]
+where = ["psrdada_cpp/dadaflow/python"]
+include = ["psrdada_cpp*"]
+exclude = ["tests*"]
+
+[project.urls]
+Homepage = "https://gitlab.mpcdf.mpg.de/mpifr-bdg/psrdada_cpp"
+Documentation = "https://gitlab.mpcdf.mpg.de/mpifr-bdg/psrdada_cpp"
+Repository = "https://gitlab.mpcdf.mpg.de/mpifr-bdg/psrdada_cpp.git"
+"Bug Tracker" = "https://gitlab.mpcdf.mpg.de/mpifr-bdg/psrdada_cpp/issues"
