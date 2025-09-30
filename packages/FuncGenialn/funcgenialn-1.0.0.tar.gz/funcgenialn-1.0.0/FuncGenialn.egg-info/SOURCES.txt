@@ -1,0 +1,9 @@
+LICENSE.txt
+README.txt
+setup.py
+FuncGenialn.egg-info/PKG-INFO
+FuncGenialn.egg-info/SOURCES.txt
+FuncGenialn.egg-info/dependency_links.txt
+FuncGenialn.egg-info/top_level.txt
+genialntools/__init__.py
+genialntools/genial.py
