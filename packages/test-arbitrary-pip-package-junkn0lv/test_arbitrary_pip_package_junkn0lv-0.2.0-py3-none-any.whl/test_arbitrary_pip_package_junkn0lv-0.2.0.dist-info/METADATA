@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: test_arbitrary_pip_package_junkn0lv
+Version: 0.2.0
+Summary: A minimal test package
+Author-email: test <junk@n0.lv>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Test Package
+
+Testing Pip publishing.
+
+## Installation
+
+```bash
+pip install test_arbitrary_pip_package_testn0lv
+```
+
+## Usage
+```python
+from test_arbitrary_pip_package_testn0lv import hello
+print(hello())
+```
