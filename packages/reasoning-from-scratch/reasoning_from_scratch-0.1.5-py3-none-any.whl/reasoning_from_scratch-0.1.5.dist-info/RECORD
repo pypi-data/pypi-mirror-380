@@ -1,0 +1,14 @@
+reasoning_from_scratch/__init__.py,sha256=0WAOzBvBdZALhCHxwvMuU_37JM4ar7mWvJOz8-CC250,937
+reasoning_from_scratch/appendix_c.py,sha256=IpXwBnbMYlXcF1zc2pcyimtmqxBpfVM9uoA2JFdMldU,7129
+reasoning_from_scratch/ch02.py,sha256=GoT_vw_e7qbGrOGmykIMtAxScqhN4bTOLusCJPJQ2fw,2713
+reasoning_from_scratch/ch02_ex.py,sha256=vOXDSTZNA4LMtCkHmZBLVAFSQsk3B0MHLlBL1jdymgA,1630
+reasoning_from_scratch/ch03.py,sha256=EIMdYA-upSTsfpbWrb_hD4gUjInrUt74Oe59OfVxz6I,12060
+reasoning_from_scratch/qwen3.py,sha256=41LhltgqIOHOPGm2bFINBUXHqOXIZ2Wb-yf9TVyAS3U,21374
+reasoning_from_scratch/qwen3_batched.py,sha256=CtoB_oyRvO-CE1zgxhO3-avxq2I2n2QI5SrG2-uAegQ,21598
+reasoning_from_scratch/qwen3_optimized.py,sha256=60X5MvNQup95ABuzY9tCzh9jM70ZlSstvQVXOmHzSZ8,23294
+reasoning_from_scratch/utils.py,sha256=Y4mrzFCciwSuGpMHJPY_QSAtmgSOaskPGmyy8TbrhTs,2015
+reasoning_from_scratch-0.1.5.dist-info/licenses/LICENSE,sha256=fcM4PAC8vLtqpLA9L2EQQiIIagbq9RWCzAWIYNTwozA,11347
+reasoning_from_scratch-0.1.5.dist-info/METADATA,sha256=T8xvFX0PhuCfQ44WiohbrmEH1da4cOaaFfypPImBr4g,21553
+reasoning_from_scratch-0.1.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+reasoning_from_scratch-0.1.5.dist-info/top_level.txt,sha256=R80jYan7ztuMwd0LPRUpZJwYUFFv9oTacCIMyJBJoOM,23
+reasoning_from_scratch-0.1.5.dist-info/RECORD,,
