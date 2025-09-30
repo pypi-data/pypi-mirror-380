@@ -1,0 +1,10 @@
+speedsense/__init__.py,sha256=UfXUz5J95wofUqlV00SVxW9FpxnlLkq5bOIQTlEEkwQ,56
+speedsense/benchmark_functions.py,sha256=y2Ik_jNVBQksl5_J63OIvGmqxHN3jOh4JdkVN-Cz6aM,3234
+speedsense/code_extractor.py,sha256=tkYbDVmNOPAwBhItLsOVUL2cryIoqTMJJJLbtYWAbjk,835
+speedsense/function_generator.py,sha256=luh-WP9N9n2V_4a9jg4wKFl8k0NdB_NDWsleoqnlyuo,3268
+speedsense/tc_estimator.py,sha256=SzsHwZgeutCoIRXqBv066hyRE4q-v4ECpqFU9PH3UvQ,10415
+speedsense-0.2.3.dist-info/LICENSE.txt,sha256=LxIoNp3sRtj1hhX_yZmcPMe-5jBgt6xWjOGE-vDKluw,1065
+speedsense-0.2.3.dist-info/METADATA,sha256=TD3jZXOd9aNWgqaE3ZfcW0DY9Y6WyqNENNhI0-1pWoI,6823
+speedsense-0.2.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+speedsense-0.2.3.dist-info/top_level.txt,sha256=m6MsXPBDqc5uZNvcC-5LluALlg7fwXQ5bcafVKME68k,11
+speedsense-0.2.3.dist-info/RECORD,,
