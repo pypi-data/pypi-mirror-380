@@ -1,0 +1,3 @@
+[console_scripts]
+pyhwlib-cli = pyhwlib.tests.test:get_config
+
