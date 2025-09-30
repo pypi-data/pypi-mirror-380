@@ -1,0 +1,34 @@
+[package]
+name = "oxidd-reorder"
+version = "0.6.0"
+edition = "2021"
+description = "Reordering algorithms for OxiDD"
+readme = "README.md"
+
+authors.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+
+# spell-checker:ignore mpmc
+
+[dependencies]
+oxidd-core.workspace = true
+
+# stack-allocated vectors
+smallvec = { version = "1", features = ["union", "const_generics"] }
+
+# check whether an iterator is sorted
+# (TODO: remove this once we raise the MSRV to 1.82)
+is_sorted = "0.1"
+
+# thread pools, parallel iterators, etc.
+rayon = "1.10"
+
+# mpmc channels
+flume = { version = "0.11", default-features = false }
+
+[dev-dependencies]
+oxidd-test-utils.workspace = true

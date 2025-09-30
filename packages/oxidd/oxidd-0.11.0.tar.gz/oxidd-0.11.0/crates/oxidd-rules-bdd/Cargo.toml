@@ -1,0 +1,42 @@
+[package]
+name = "oxidd-rules-bdd"
+version = "0.11.0"
+edition = "2021"
+description = "Binary decision diagrams (BDDs) for OxiDD"
+readme = "README.md"
+
+authors.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+
+[dependencies]
+oxidd-core.workspace = true
+oxidd-derive.workspace = true
+
+# for implementing `DotStyle`
+oxidd-dump.workspace = true
+
+# bit sets for memory efficient valuations
+fixedbitset = "0.5.7"
+
+# document feature flags
+document-features = "0.2"
+
+
+[features]
+default = ["simple", "complement-edge", "multi-threading"]
+
+## Enable the simple BDD implementation
+simple = []
+
+## Enable the complement edge BDD implementation
+complement-edge = []
+
+## Enable multi-threaded apply implementations
+multi-threading = []
+
+## Enable statistics generation
+statistics = []
