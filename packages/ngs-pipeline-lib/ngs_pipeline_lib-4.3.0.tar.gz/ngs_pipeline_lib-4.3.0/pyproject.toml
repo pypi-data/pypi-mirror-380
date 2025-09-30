@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "ngs-pipeline-lib"
+version = "4.3.0"
+description = "Common code used by every processes in Bio Pipelines"
+authors = ["Vincent ROHOU <vincent.rohou@ext.biomerieux.com>"]
+readme = "README.md"
+packages = [{include = "ngs_pipeline_lib"},{ include = "scripts" },]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest-mock = "^3.10.0"
+docker = "^6.0.1"
+pydantic = {extras = ["dotenv"], version = "^1.10.7"}
+clidantic = "^0.1.0"
+coverage = "^7.2.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+black = "^23.1.0"
+flake8 = "^5.0"
+python-semantic-release = "^7.33.2"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ngs-build = 'scripts:build'
+ngs-push = 'scripts:push'
+ngs-run = 'scripts:run'
+
+[tool.pytest.ini_options]
+addopts = "-v"
+
+[tool.semantic_release]
+version_variable = "ngs_pipeline_lib/__init__.py:__version__"
+version_toml = "pyproject.toml:tool.poetry.version"
+prerelease_tag = "rc"
+branch = "main"
+upload_to_repository = true
+commit_subject = "chore(release): ${version} [skip ci]"
+build_command = "poetry build"
+upload_to_release = false
+repository_url = "https://pdx-platform-224016688692.d.codeartifact.eu-west-1.amazonaws.com/pypi/pdx-python-libs/"
