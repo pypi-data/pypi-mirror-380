@@ -1,0 +1,78 @@
+from core.types import *
+from core.util import *
+
+import json
+
+from dataclasses import asdict, dataclass
+from datetime import datetime
+from typing import Optional
+
+__all__ = [
+    'MultiModel'
+]
+
+multi_enum_options = [
+    'giraffe', 
+    'elephant', 
+    'zebra'
+]
+
+field_list = [
+    'multi_bool',
+    'multi_int',
+    'multi_float',
+    'multi_string',
+    'multi_enum',
+    'multi_datetime',
+    'user_id',
+]
+
+longest_field_name_length = max([len(name) for name in field_list])
+
+@dataclass
+class MultiModel:
+
+    multi_int: list[int]
+    multi_float: list[float]
+    multi_string: list[str]
+    multi_enum: list[str]
+    multi_datetime: list[datetime]
+    id: Optional[str] = None
+
+    def convert_types(self) -> 'MultiModel':
+        return self
+
+    def validate(self) -> 'MultiModel':
+
+        if not isinstance(self.id, str) and self.id is not None:
+            raise TypeError('invalid type for id')
+
+        
+        return self   
+
+    def to_dict(self) -> dict:
+        data = asdict(self)
+        if self.id is None:
+            del data['id']
+        return data
+    
+    def to_json(self) -> str:
+        return to_json(self.to_dict())
+
+    @classmethod
+    def example(cls) -> 'MultiModel':
+        return cls(
+        ) 
+
+    @classmethod
+    def random(cls) -> 'MultiModel':
+        return cls(
+        )
+    
+class MacroOnlyModel:
+    custom_random_field: str
+
+    @classmethod
+    def random(cls) -> 'MacroOnlyModel':
+        return cls(
+        )

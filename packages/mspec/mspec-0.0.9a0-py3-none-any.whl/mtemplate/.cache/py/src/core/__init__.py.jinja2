@@ -1,0 +1,22 @@
+"""
+
+{{ project.name.lower_case }}
+{% for module in modules.values() %}
+    {{ module.name.lower_case }}
+    {% for model in module.models.values() %}
+        {{ model.name.lower_case }}
+            {% if model.auth.require_login is true %}
+            auth: true
+                {% if not model.auth.max_models_per_user is none %}
+                max models: {{ model.auth.max_models_per_user }}
+                {% endif %}
+            {% endif %}
+            fields:
+                {% for field_name, field in model.fields.items() %}
+                {{ field_name }}: {{ field.type_id }}
+                {% endfor %}
+
+    {% endfor %}
+{% endfor %}
+
+"""

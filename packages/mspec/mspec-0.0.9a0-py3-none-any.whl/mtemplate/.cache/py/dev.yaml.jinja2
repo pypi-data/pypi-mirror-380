@@ -1,0 +1,23 @@
+uwsgi:
+  http: :{{ server.port }}
+  wsgi-file: src/core/server.py
+  master: true
+  safe-pidfile: src/core/server.pid
+  {% for module in modules.values() %}
+      {% for model in module.models.values() %}
+
+  # {{ model.name.lower_case }}
+  route: ^/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/create static:../browser1/srv/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/index.html
+  route: ^/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/index(.*) static:../browser1/srv/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/index$1
+  load-file-in-cache: ../browser1/srv/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/index.html
+  route: ^/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/(.*) static:../browser1/srv/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/instance.html
+  load-file-in-cache: ../browser1/srv/{{ module.name.kebab_case }}/{{ model.name.kebab_case }}/instance.html
+      {% endfor %}
+  {% endfor %}
+
+
+  static-map: /=../browser1/srv/
+  static-index: index.html
+  static-expires: /* 0
+  
+  py-auto-reload: 1
