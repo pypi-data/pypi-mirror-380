@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+truecaller.py
+truecaller.egg-info/PKG-INFO
+truecaller.egg-info/SOURCES.txt
+truecaller.egg-info/dependency_links.txt
+truecaller.egg-info/entry_points.txt
+truecaller.egg-info/requires.txt
+truecaller.egg-info/top_level.txt
