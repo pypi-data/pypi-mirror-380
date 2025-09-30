@@ -1,0 +1,13 @@
+foambo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foambo/analysis.py,sha256=yNLwkKfoNABKp-nlwT4p_NB2rU9WbtjM72RsyllLNV8,9084
+foambo/common.py,sha256=nVLXY0OuAltzDo0vozlvlI0U_0YDqeaH3WcK_wE6wyU,14404
+foambo/config.py,sha256=AU4qmdblPTx1mYRou-FlNzgn81yAi6ZUd-B7UqU2lwg,1805
+foambo/default_config.py,sha256=JzPriNZB4TyDa9hELDVqrVO6s-RCWpMI1XugqFAbJAY,21628
+foambo/docs.py,sha256=jNcnSjdFaiKWi5Sad0xCC1ik2OLoegCtZrguVAx2F8s,2693
+foambo/metrics.py,sha256=L8cX49TFthxopoQ0fp94rigXUR14E5cnSfHrVc57AWE,15255
+foambo/optimize.py,sha256=UfOSBrLctMqAkPd_ABwvC64DSGawmgi_5Ks_-TXI_9A,10718
+foambo/orchestrate.py,sha256=AEjCAFgJ_Ii6RaVOQRQXAz3iPak99-4LABGBb8XRTOk,20281
+foambo-1.0.0.dist-info/METADATA,sha256=t21760GG0MXMoJ0bHCcc4UCy5TcENF_643ixYAoZ0rI,2780
+foambo-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+foambo-1.0.0.dist-info/entry_points.txt,sha256=Ucgd8tJZ9PRsmrjyww9YTnQohIgJlZvMYgE2EqNcHuM,48
+foambo-1.0.0.dist-info/RECORD,,
