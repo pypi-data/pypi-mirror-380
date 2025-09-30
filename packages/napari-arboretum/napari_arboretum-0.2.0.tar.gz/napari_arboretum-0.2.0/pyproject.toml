@@ -1,0 +1,124 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools",
+    "setuptools-scm",
+    "wheel",
+]
+
+[project]
+authors = [
+    {email = "a.lowe@ucl.ac.uk", name = "Alan R. Lowe"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: napari",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "matplotlib",
+    "napari-matplotlib>=0.2.1",
+    "napari>=0.6.0",
+    "numpy>=1.17.3",
+    "pandas",
+    "pooch>=1",
+    "qtpy",
+    "scikit-image",
+    "vispy",
+]
+description = "Track graph and lineage tree visualization with napari"
+dynamic = [
+    "version",
+]
+name = "napari-arboretum"
+readme = "README.md"
+requires-python = ">=3.10"
+entry-points."napari.manifest".napari-arboretum = "napari_arboretum:napari.yaml"
+license.file = "LICENCE.md"
+urls.homepage = "https://github.com/lowe-lab-ucl/arboretum"
+
+[tool.coverage]
+report = {skip_covered = true, sort = "cover"}
+run = {branch = true, parallel = true, source = ["napari_arboretum"]}
+paths.source = [
+    "src",
+    ".tox*/*/lib/python*/site-packages",
+]
+
+[tool.mypy]
+explicit_package_bases = true
+plugins = [
+    "numpy.typing.mypy_plugin",
+]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes -v"
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+fix = true
+force-exclude = true
+
+[tool.ruff.lint]
+ignore = [
+    "B905", # python>=3.10
+    "EM101",
+    "ISC001", # conflicts with ruff formatter
+]
+per-file-ignores = {"test_*" = [
+    "S101",
+]}
+select = [
+    "A",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FBT",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "SIM",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["napari_arboretum"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
+
+[tool.setuptools_scm]
+write_to = "src/napari_arboretum/_version.py"
+
+[tool.tomlsort]
+sort_inline_arrays = false
+sort_inline_tables = true
+sort_table_keys = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
