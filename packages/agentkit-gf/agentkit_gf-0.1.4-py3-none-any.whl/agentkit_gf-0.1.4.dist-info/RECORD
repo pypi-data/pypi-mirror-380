@@ -1,0 +1,14 @@
+agentkit_gf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentkit_gf/_base_agent.py,sha256=gF8lbrr808p0uLFZqgHDjVmlQCNPorb79yzJ0o7PibI,4507
+agentkit_gf/delegating_tools_agent.py,sha256=e403nga1MCDWTyJJz2Mdm05BM131adQydp1bLwy9pJw,11297
+agentkit_gf/soft_tool_agent.py,sha256=P1yOk5ZujimaenWqVNnV2Ba3AKfxin94SmctLbxPW-Y,9210
+agentkit_gf/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentkit_gf/tools/agent.py,sha256=0WWOetXKjd2i4J6LmM4x2WqbKEl6XnjzYsKKxqJotkw,1415
+agentkit_gf/tools/builtin_tools_matrix.py,sha256=nYl7sx0vkz2Yd7OydAiZDM61phBYjTwUOkp_UB-0mnQ,2051
+agentkit_gf/tools/fs.py,sha256=zl8haXfMmqZgBs5pQBQ9_DdN2BWis6hf1W3h4o5FuVs,8837
+agentkit_gf/tools/os.py,sha256=_uq1OiXYj9TUEaEIF5LW6mPwoY6b_sfvGIpcdVZlgCI,7920
+agentkit_gf-0.1.4.dist-info/licenses/LICENSE,sha256=A2DAiDxN1xMrav0TotnIJCgdE4z72qEnfz1PPxeKCvI,1087
+agentkit_gf-0.1.4.dist-info/METADATA,sha256=lMvG58KkxlNICj20xjcC5jW1j8Hu7Kmy0fWx6OFjW7g,10004
+agentkit_gf-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+agentkit_gf-0.1.4.dist-info/top_level.txt,sha256=6MFmRkyhsMX0WFFkjTeQCrsyMLk1lF6jH8ZNA_CHBXA,12
+agentkit_gf-0.1.4.dist-info/RECORD,,
