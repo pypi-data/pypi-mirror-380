@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ordeq_viz_cli
+Version: 1.0.1
+Summary: Command line interface for Ordeq visualization
+Author: Niels Neerhoff, Simon Brugman
+Maintainer: Niels Neerhoff, Simon Brugman
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ordeq-viz>=0.4.0
+Dynamic: license-file
+
+../../README.md
