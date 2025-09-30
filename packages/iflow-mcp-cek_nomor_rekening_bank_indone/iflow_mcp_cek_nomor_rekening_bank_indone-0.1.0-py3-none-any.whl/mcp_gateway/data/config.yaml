@@ -1,0 +1,28 @@
+server:
+  config:
+    api_key: 6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195
+    rapidapi_host: cek-nomor-rekening-bank-indonesia1.p.rapidapi.com
+  description: Cek Nomor Rekening Semua Bank Indonesia
+  name: Cek Nomor Rekening Bank Indonesia
+  options:
+    requestTimeoutMillis: 15000
+tools:
+- args:
+  - default: '014'
+    description: Kode Bank Penerbit
+    name: kodeBank
+    required: 'True'
+  - default: '8060127426'
+    description: 'Support : Nomor Rekening / Nomor Virtual Account (VA)'
+    name: noRekening
+    required: 'True'
+  description: Untuk Cek Nomor Rekening
+  name: Cek Nomor Rekening
+  requestTemplate:
+    headers:
+    - key: x-rapidapi-key
+      value: '{{config.api_key}}'
+    - key: x-rapidapi-host
+      value: '{{config.rapidapi_host}}'
+    method: GET
+    url: https://cek-nomor-rekening-bank-indonesia1.p.rapidapi.com/cekRekening?kodeBank={{args.kodeBank}}&noRekening={{args.noRekening}}
