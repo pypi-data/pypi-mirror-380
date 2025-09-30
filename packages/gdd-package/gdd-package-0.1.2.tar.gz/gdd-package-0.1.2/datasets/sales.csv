@@ -1,0 +1,13 @@
+Product,Region,Time,Sales
+TV,North,2023,100
+TV,North,2024,150
+Laptop,North,2023,120
+Laptop,North,2024,160
+Refrigerator,North,2023,90
+Refrigerator,North,2024,130
+TV,South,2023,110
+TV,South,2024,140
+Laptop,South,2023,130
+Laptop,South,2024,170
+Refrigerator,South,2023,95
+Refrigerator,South,2024,120

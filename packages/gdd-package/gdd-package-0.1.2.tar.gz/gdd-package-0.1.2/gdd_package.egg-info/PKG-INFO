@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: gdd-package
+Version: 0.1.2
+Summary: GDD - A comprehensive data science and machine learning package
+Home-page: https://github.com/gdd02/gdd-package
+Author: gdd02
+Author-email: gdd02@example.com
+Project-URL: Bug Reports, https://github.com/gdd02/gdd-package/issues
+Project-URL: Source, https://github.com/gdd02/gdd-package
+Keywords: data science,machine learning,analytics,clustering,classification
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GDD Package
+
+A comprehensive data science and machine learning package containing various experiments and algorithms.
+
+## Installation
+
+```bash
+pip install gdd-package
+```
+
+## Usage
+
+```python
+import gdd
+
+# Access various experiments
+from gdd import exp2_olap, exp3_dt, exp4_lr, exp5_kmeans, exp6_hcluster, exp7_ap
+```
+
+## Features
+
+- OLAP operations (exp2_olap)
+- Decision Trees (exp3_dt)
+- Linear Regression (exp4_lr)
+- K-Means Clustering (exp5_kmeans)
+- Hierarchical Clustering (exp6_hcluster)
+- Affinity Propagation (exp7_ap)
+
+## Requirements
+
+- Python >= 3.8
+- pandas >= 1.3.0
+- numpy >= 1.21.0
+- matplotlib >= 3.3.0
+- scikit-learn >= 1.0.0
+- mlxtend >= 0.19.0
+- scipy >= 1.7.0
+
+## License
+
+MIT License
