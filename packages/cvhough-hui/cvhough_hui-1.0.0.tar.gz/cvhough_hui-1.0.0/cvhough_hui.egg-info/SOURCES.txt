@@ -1,0 +1,12 @@
+README.md
+setup.py
+cvhough_hui.egg-info/PKG-INFO
+cvhough_hui.egg-info/SOURCES.txt
+cvhough_hui.egg-info/dependency_links.txt
+cvhough_hui.egg-info/entry_points.txt
+cvhough_hui.egg-info/requires.txt
+cvhough_hui.egg-info/top_level.txt
+cvhough_sdk/__init__.py
+cvhough_sdk/detector.py
+cvhough_sdk/main.py
+cvhough_sdk/models/best.pt
