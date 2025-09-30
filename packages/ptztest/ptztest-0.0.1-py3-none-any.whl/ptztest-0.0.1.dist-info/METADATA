@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ptztest
+Version: 0.0.1
+Summary: A harmless dummy package created for testing downloads.
+Author-email: Your Name <you@example.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# ptztest
+This is a harmless dummy package created for testing download metrics.  
+Not affiliated with pytest.
+
