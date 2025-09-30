@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pixel-patrol-base
+Version: 0.1.0
+Summary: Image prevalidation tool
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.2.1
+Requires-Dist: dash-ag-grid>=32.3.0
+Requires-Dist: dash-bootstrap-components>=2.0.3
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: polars>=1.31.0
+Requires-Dist: pyarrow>=21.0.0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: statsmodels>=0.14.4
+Requires-Dist: tensorboard>=2.18.0
+Requires-Dist: tensorboardx>=2.6.4
+Requires-Dist: dask>=2025.5.1
+Requires-Dist: tqdm>=4.67.1
