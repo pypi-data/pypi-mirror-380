@@ -1,0 +1,6 @@
+
+[:platform_python_implementation != "Jython"]
+ignition-api<8.3,>=8.1
+
+[:platform_python_implementation == "Jython"]
+typing
