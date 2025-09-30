@@ -1,0 +1,56 @@
+[project]
+name = "certbot-v4-dns-ispconfig"
+version = "0.4.2"
+description = "ispconfig DNS Authenticator plugin for Certbot v5.0+"
+authors = [
+    { name = "Matthias Bilger", email = "matthias@bilger.info" },
+    { name = "Paal A. Bergsmark", email = "paal@kunnskap.no" }
+]
+license = {file = "LICENSE.txt"}
+readme = "README.rst"
+keywords = ["certbot", "dns", "ispconfig", "authenticator", "plugin"]
+requires-python = ">=3.8"
+dependencies = [
+    "acme>=2.11.0",
+    "certbot>=4.2.0",
+    "requests>=2.25.0"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+    "Topic :: System :: Systems Administration",
+    "Topic :: System :: Networking"
+]
+[project.urls]
+Homepage = "https://github.com/paalcyberbook/certbot-v4-dns-ispconfig"
+"Bug Reports" = "https://github.com/paalcyberbook/certbot-v4-dns-ispconfig/issues"
+Source = "https://github.com/paalcyberbook/certbot-v4-dns-ispconfig"
+ForkedFrom = "https://github.com/m42e/certbot-dns-ispconfig"
+
+[project.entry-points."certbot.plugins"]
+dns-ispconfig = "certbot_dns_ispconfig.dns_ispconfig:Authenticator"
+
+[project.optional-dependencies]
+dev = [
+    "mock>=4.0.0",
+    "requests-mock>=1.10.0",
+    "pytest>=6.0.0",
+    "pytest-cov>=2.0.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["certbot_dns_ispconfig"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
