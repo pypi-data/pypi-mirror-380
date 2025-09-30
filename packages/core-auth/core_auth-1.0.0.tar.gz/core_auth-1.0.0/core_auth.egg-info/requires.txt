@@ -1,0 +1,9 @@
+core-mixins>=1.1.2
+core-tests>=2.0.2
+pyjwt[crypto]
+
+[:python_version >= "3.9"]
+pyjwt>=2.10.1
+
+[dev]
+core-dev-tools>=1.0.1

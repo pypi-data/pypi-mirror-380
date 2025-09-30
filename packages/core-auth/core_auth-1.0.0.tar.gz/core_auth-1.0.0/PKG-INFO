@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: core-auth
+Version: 1.0.0
+Summary: This library contains common elements related to authentication & authorization...
+Author-email: Alejandro Cora González <alek.cora.glez@gmail.com>
+Maintainer: Alejandro Cora González
+License: MIT
+Project-URL: Homepage, https://gitlab.com/bytecode-solutions/core/core-auth
+Project-URL: Repository, https://gitlab.com/bytecode-solutions/core/core-auth
+Project-URL: Documentation, https://core-auth.readthedocs.io/en/latest/
+Project-URL: Issues, https://gitlab.com/bytecode-solutions/core/core-auth/-/issues
+Project-URL: Changelog, https://gitlab.com/bytecode-solutions/core/core-auth/-/blob/master/CHANGELOG.md
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: core-mixins>=1.1.2
+Requires-Dist: core-tests>=2.0.2
+Requires-Dist: pyjwt>=2.10.1; python_version >= "3.9"
+Requires-Dist: pyjwt[crypto]
+Provides-Extra: dev
+Requires-Dist: core-dev-tools>=1.0.1; extra == "dev"
+Dynamic: license-file
+
+# core-auth
+_______________________________________________________________________________
+
+This project/library contains common elements related to 
+authentication & authorization...
+
+
+## Execution Environment
+
+### Install libraries
+```shell
+pip install --upgrade pip
+pip install virtualenv
+```
+
+### Create the Python Virtual Environment.
+```shell
+virtualenv --python={{python-version}} .venv
+virtualenv --python=python3.11 .venv
+```
+
+### Activate the Virtual Environment.
+```shell
+source .venv/bin/activate
+```
+
+### Install required libraries.
+```shell
+pip install .
+```
+
+### Check tests and coverage...
+```shell
+python manager.py run-tests
+python manager.py run-coverage
+```
+
+## Current implementations
+
+### JwtToken
+This is a wrapper to simplify the encoding and
+decoding process for JWT tokens using PyJWT library.
+
+Example...
+```python
+# -*- coding: utf-8 -*-
+
+from core_auth.auth.jwt_token.jwt_auth import JwtToken 
+
+client = JwtToken(private_key="S3cr3t")
+token = client.encode(subject="SomeSubject")
+print(client.decode(token))
+```
