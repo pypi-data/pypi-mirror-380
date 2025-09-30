@@ -1,0 +1,5 @@
+setup.py
+Giorgispackage.egg-info/PKG-INFO
+Giorgispackage.egg-info/SOURCES.txt
+Giorgispackage.egg-info/dependency_links.txt
+Giorgispackage.egg-info/top_level.txt
