@@ -1,0 +1,13 @@
+passagemath_frobby-10.6.29.dist-info/RECORD,,
+passagemath_frobby-10.6.29.dist-info/WHEEL,sha256=UCKNBVIKYQJ0QgnMqnqug3WdJ9Ve54rnuICNOtwZyag,136
+passagemath_frobby-10.6.29.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_frobby-10.6.29.dist-info/METADATA,sha256=DRXu1ux6DxV74E51dy-2C5gDfo49vjCRL7N-DluSNYg,4644
+passagemath_frobby.dylibs/libgmpxx.4.dylib,sha256=J13vJS_G0IKYavrZCOMtkE0HqPUQrtiPaMyizbn-jK8,80944
+passagemath_frobby.dylibs/libgmp.10.dylib,sha256=EdwtydV_rP2tfTVoPdGCDkEtwwYJyzbKaxs2Pv6e6pA,486272
+sage_wheels/bin/frobby,sha256=CiMcph4mwpn4DIkt6xQsgBPAfF8qyRiAu97UNwe_IfU,1821552
+sage/all__sagemath_frobby.py,sha256=wUVmrSObaZXZnOlWGlQnNJCuYQR-GTJM0VjPCsysIQg,192
+sage/libs/frobby.abi3.so,sha256=JnUYON74Ty1ZUq2knDvo9OZTp73JwkXfiECG_qaJOJE,54184
+sage/libs/frobby.pyx,sha256=8Gs1smRLFdGXCb2uKk6xy0wkdR8twjy7TlbvxQXV1gc,45
+sage/libs/all__sagemath_frobby.py,sha256=8Gs1smRLFdGXCb2uKk6xy0wkdR8twjy7TlbvxQXV1gc,45
+sage/interfaces/all__sagemath_frobby.py,sha256=8Gs1smRLFdGXCb2uKk6xy0wkdR8twjy7TlbvxQXV1gc,45
+sage/interfaces/frobby.py,sha256=NAXJL2ybODNM3V1EyjMW_C2KKjt0b9wRVrWLWO5ePnI,16693
