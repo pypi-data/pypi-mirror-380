@@ -1,0 +1,3 @@
+[console_scripts]
+ap-donnes-des-sous = ap_donnes_des_sous:main
+
