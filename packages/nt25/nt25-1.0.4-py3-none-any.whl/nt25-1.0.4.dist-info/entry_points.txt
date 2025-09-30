@@ -1,0 +1,4 @@
+[console_scripts]
+ex = nt25.lib.exif:main
+mt = nt25.mt:main
+pgogs = nt25.pgogs:main
