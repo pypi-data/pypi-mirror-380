@@ -1,0 +1,12 @@
+codet/__init__.py,sha256=nMMof3bB6NNptoeRCYmH_QmBMbg96P-r3RBvGio0ZI0,584
+codet/cli.py,sha256=98Tmn86EbJSCrjaipvJFSFp2BrYjAEfkx26nKmQp4c8,8921
+codet/clog.py,sha256=wVCOX6Xf9Sz--bQqtklrgHlxjSsDVze0w1CIGKdOBvY,3462
+codet/codet.py,sha256=qVCbS6mExtro4dUIQXTOLXptDGWI1E3mjz_OOW0LhcI,34404
+codet/dash.py,sha256=GhwmcIlGPAFdAj6i71-6Q3DCt7ETm2YfOPeLfASQCWo,158907
+codet/git_compoent.py,sha256=Hn_4ewcMs2dbMPR0MeNzPKyDKWNonoi_2T11QCDlxaU,12464
+codet-1.0.7.dist-info/licenses/LICENSE,sha256=niL3YSMREUKcnqeX5sXdVZdnJ1yZW9gZC4qEzMFIeME,1066
+codet-1.0.7.dist-info/METADATA,sha256=0TtrMHFCKIiew1DlMUQLRmR9mtHTtrQnglt-LVdCX6c,83468
+codet-1.0.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+codet-1.0.7.dist-info/entry_points.txt,sha256=Q0cZKVRbalYgEIXCumylr1BExeJw_kG0H6b2eM6C4Ls,70
+codet-1.0.7.dist-info/top_level.txt,sha256=4ynSFIw0FHDghYyssBoCeH4V_BaM1FshbBEfg9nJj7s,6
+codet-1.0.7.dist-info/RECORD,,
