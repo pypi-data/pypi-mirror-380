@@ -1,0 +1,11 @@
+words_segmentation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+words_segmentation/chinese.py,sha256=ya3XZSc4eA_-pH6X9IgF0cUvfkshiuS_pKb23eqV3xA,2204
+words_segmentation/japanese.py,sha256=g1Y_RiKoc7RrRx__G-w3HC0iuAFOjixZMEwmN1wmN2o,2525
+words_segmentation/languages.py,sha256=raOGLaqcmHBWEvM3SFUpR0kkm5joIzmjH6xdLZUBprU,3698
+words_segmentation/pretokenizer.py,sha256=UtSEmVYLCNmbD7UmugdxXgs2eFGxsWdlHcjY_QUQ0ls,2824
+words_segmentation/tokenizer.py,sha256=JXZj7TgeCz8EzY5XaElpELQgdVKa6zEGeaK7HZdRdV0,2078
+words_segmentation-0.0.1.dist-info/licenses/LICENSE,sha256=-85p81jfHERhmQnds40xOFt4q3cTlX0GFbSUuJU1jxI,1061
+words_segmentation-0.0.1.dist-info/METADATA,sha256=03NFI2S7uvEictokwatzVygam-1RbApbIsDRWkTUtbM,4087
+words_segmentation-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+words_segmentation-0.0.1.dist-info/top_level.txt,sha256=UhpPc_d6qwdpvEl02jL0pk5vvYd8Q34BJf-CiYQYvZc,19
+words_segmentation-0.0.1.dist-info/RECORD,,
