@@ -1,0 +1,45 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+exclude = [".*/"]
+
+[project]
+name = "gradupe"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+dynamic = ["version", "description"]
+keywords = ["image-dedupe", "sobel-gradient"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Typing :: Typed"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "imagesize>=1.4.1",
+    "numba>=0.62.1",
+    "numpy>=2.2.0,<2.3.0", # opencv maximum
+    "opencv-python-headless>=4.12.0,<5.0.0",
+    "rich>=14.1.0",
+    "typer-slim>=0.19.2,<0.20.0"  # pre-1.x
+]
+
+[[project.authors]]
+name = "David"
+email = "wavim.wu@gmail.com"
+
+[project.scripts]
+gradupe = "gradupe.__main__:cli"
+
+[project.urls]
+Repository = "https://github.com/wavim/gradupe"
