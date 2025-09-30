@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: pyclspv
+Version: 0.0.1
+Summary: Python bindings for clspv, a OpenCL C to SPIR-V compiler
+Author-Email: cookie <softcookiepp@mailfence.com>
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Description-Content-Type: text/markdown
+
+# pyclspv
+
+Python bindings for clspv
+
+## Installation
+
+### Debian/Ubuntu/Mint
+Right now pyclspv can only be installed from source.
+
+First, install the required build dependencies:
+```bash
+sudo apt install build-essential python3-dev
+```
+
+Then, simply install it via pip:
+```bash
+git clone https://codeberg.org/softcookiepp/pyclspv.git --recurse-submodules
+cd pyclspv
+pip install ".[test]"
+```
+
+### Windows
+coming at some point
+
+### Other Linux distributions
+Coming much sooner
+
+## Testing
+To install and run the tests, do the following:
+```bash
+git clone https://codeberg.org/softcookiepp/pyclspv.git --recurse-submodules
+cd pyclspv
+pytest
+```
