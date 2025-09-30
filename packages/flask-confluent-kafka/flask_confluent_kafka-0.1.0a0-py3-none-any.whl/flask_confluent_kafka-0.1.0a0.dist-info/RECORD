@@ -1,0 +1,6 @@
+flask_confluent_kafka/__init__.py,sha256=CfkKMNqqllErD-UcamVE_TB76CqMTUsGHvyxujs2pTQ,73
+flask_confluent_kafka/core.py,sha256=lXZ-jDsLchChmFBraV72Oa6pHeopSCjpPtbbuV-A0_g,2242
+flask_confluent_kafka-0.1.0a0.dist-info/METADATA,sha256=sT2QAMBFgsFkB3DDCMTRZ16oCQvJk9dGbjf99gHWKPo,260
+flask_confluent_kafka-0.1.0a0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flask_confluent_kafka-0.1.0a0.dist-info/entry_points.txt,sha256=xbFgd1oi3VXPFqGz5NAafHm7u01DDtoIDnTevR4femo,86
+flask_confluent_kafka-0.1.0a0.dist-info/RECORD,,
