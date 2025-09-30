@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: mcp-webrtc
+Version: 0.0.0
+Summary: WebRTC Transport for Model Context Protocol
+Author-email: Tomas Pilar <thomas7pilar@gmail.com>
+Requires-Python: >=3.13
