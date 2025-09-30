@@ -1,0 +1,11 @@
+bohrmodel/__init__.py,sha256=YhM-zH4p1BOTrg4CnOUGch6pFl1ZjizA_Nn6ffFDxjI,770
+bohrmodel/atom.py,sha256=HGbrdBmUVTYPSoxQBSG6NkU6VALGw_6bgHlRVMUL3Yg,2537
+bohrmodel/energia.py,sha256=oj8Y3-KYIoBSC9h7xai43pXPzVL2kCAZ0ZGs0oI8jQM,614
+bohrmodel/graficos.py,sha256=60qRSQeuGqJ-T2E_SxBAxArpZsuHqvSg_2Co9R-fo4k,1124
+bohrmodel/radios.py,sha256=Y3DplxtT5VzUH-kOQCKQx-HTrcmn12Mrq-1iW5jdulQ,584
+bohrmodel/transiciones.py,sha256=dFdgdVlT3j9J-IzA58fVN6VmgGiKiCsKknfoVTUUyuc,981
+bohrmodel_neira_cruz_cogua-0.1.0.dist-info/licenses/LICENSE,sha256=MffPGDmSI52eqHGyrPTBghqdL_wJ61eraNOAf8364nA,151
+bohrmodel_neira_cruz_cogua-0.1.0.dist-info/METADATA,sha256=wBlku8zGTA4ATEv5m2SngEQP9pmMxEqMldHnLeqU98w,2318
+bohrmodel_neira_cruz_cogua-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bohrmodel_neira_cruz_cogua-0.1.0.dist-info/top_level.txt,sha256=XTbybaRb1-9a_QkE18MSLdwKEC0DouIjv_Pj3Y8k6WU,10
+bohrmodel_neira_cruz_cogua-0.1.0.dist-info/RECORD,,
