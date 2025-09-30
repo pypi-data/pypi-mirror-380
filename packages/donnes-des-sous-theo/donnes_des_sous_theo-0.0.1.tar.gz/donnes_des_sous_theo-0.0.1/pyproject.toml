@@ -1,0 +1,27 @@
+[project]
+name = "donnes-des-sous-theo"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "theoc", email = "theo.colin@ig2i.centralelille.fr" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+donnes-des-sous-theo = "donnes_des_sous_theo:main"
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "black==25.9.0",
+    "pytest==8.4.2",
+    "pytest-cov==7.0.0",
+    "ruff==0.13.1",
+]
