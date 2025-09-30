@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: PandaExpress
+Version: 0.1.0
+Summary: Catch errors with a verbose, talkative python pandas.
+Home-page: https://github.com/pypa/sampleproject
+Author: NDNnerd
+Author-email: NDNnerd <NDNnerd@gmail.com>
+License: GNU-3.0
+Project-URL: Repository, https://github.com/NDNnerd/PandasExpress
+Keywords: pandas,dataframe,data,data-science,machine-learning
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.3.0
+Dynamic: author
+Dynamic: home-page
+
+# Your Package Name
+
+Catch errors with a verbose, talkative python pandas.
+
+## Installation
+
+### Install from PyPI:
+```bash
+pip install pandas-express
+```
+
+### Install in Editable Mode
+For development, install from your package directory.  This allows you to edit the code and see changes immediately without reinstalling.
+
+```bash
+cd pandas-express  # Navigate to the directory containing pyproject.toml
+pip install -e .
+```
+
+
+
+### Installing from a Local Directory
+To install (non-editable) from a local directory:
+
+```bash
+pip install /path/to/pandas-express
+```
+
+### Build and Install Distribution
+
+```bash
+# Install build tools
+pip install build
+
+# Build the package
+python -m build
+
+# This creates:
+# - dist/pandas-express-0.1.0.tar.gz
+# - dist/pandas-express-0.1.0-py3-none-any.whl
+
+# Then install Wheel tool
+pip install dist/pandas-express-0.1.0-py3-none-any.whl
+```
+
+## Publish to PyPI
+```bash
+# Install twine
+pip install twine
+
+# Upload to PyPI
+python -m twine upload dist/*
+
+python setup.py sdist bdist_wheel
+
+pip install pandas-express
+```
+
+
+## Usage
+```python
+import pandasExpress as px
+from pandasExpress import ExpressDataFrame
+
+df = ExpressDataFrame(data)
+```
+
+
