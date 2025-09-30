@@ -1,0 +1,64 @@
+TRY, TL, türk lirası, ₺  
+USD, $, us dollar, amerikan doları  
+EUR, €, euro  
+GBP, £, pound sterling, ingiliz sterlini  
+JPY, ¥, yen, japon yen’i  
+CNY, ¥, yuan, çin yuanı  
+AUD, A$, australian dollar, avustralya doları  
+CAD, C$, canadian dollar, kanada doları  
+CHF, Fr., swiss franc, isviçre frangı  
+NZD, NZ$, new zealand dollar, yeni zelanda doları  
+SEK, kr, swedish krona, isveç kronu  
+NOK, kr, norwegian krone, norveç kronu  
+DKK, kr, danish krone, danimarka kronu  
+RUB, ₽, ruble, rus rublesi  
+INR, ₹, rupee, hint rupisi  
+BRL, R$, real, brezilya reali  
+ZAR, R, rand, güney afrika randı  
+SGD, S$, singapore dollar, singapur doları  
+HKD, HK$, hong kong dollar, hong kong doları  
+KRW, ₩, won, kore wonu  
+MXN, $, mexican peso, meksika pesosu  
+IDR, Rp, rupiah, endonezya rupisi  
+TRY, TL, türkiye lirası, türk lirası  
+MYR, RM, ringgit, malezya ringgiti  
+PHP, ₱, peso, filipinler pesosu  
+THB, ฿, baht, tayland bahtı  
+HUF, Ft, forint, macar forinti  
+PLN, zł, złoty, polonya złotisi  
+CZK, Kč, koruna, çek korunası  
+ILS, ₪, new israeli shekel, yeni israilli şekeli  
+SAR, ر.س, riyal, suudi arabistan riyali  
+AED, د.إ, dirham, birleşik arap emirlikleri dirhemi  
+EGP, ج.م, pound, mısır lirası (pound)  
+VND, ₫, dong, vietnam dongu  
+PKR, Rs, rupee, pakistan rupisi  
+BDT, ৳, taka, bangladeş takası  
+NGN, ₦, naira, nijerya nairası  
+ARS, $, peso, arjantin pesosu  
+CLP, $, peso, şili pesosu  
+COP, $, peso, kolombiya pesosu  
+PEN, S/, sol, peru solü  
+UYU, $, uruguayan peso, urugay pesosu  
+UYI, uyí, peso unid. indexadas, uruguay modifiye peso  
+KHR, ៛, riel, kambocya rieli  
+LAK, ₭, kip, laos kip’i  
+KWD, د.ك, dinar, kuveyt dinarı  
+BHD, .د.ب, dinar, bahreyn dinarı  
+OMR, ر.ع., rial, umman riali  
+QAR, ر.ق, riyal, katari riyali  
+TND, د.ت, dinar, tunus dinarı  
+MAD, د.م., dirham, fas dirhemi  
+DZD, د.ج, dinar, cezayir dinarı  
+LKR, Rs, rupee, sri lanka rupisi  
+MMK, က်ာ့, kyat, myanmar kyatı  
+KHR, ៛, riel, kambocya (tekrar)  
+MNT, ₮, tögrög, moğol tögrögi  
+GEL, ₾, lari, gürcü lari  
+AZN, ₼, manat, azerbaycan manatı  
+TRY, TL, türk lirası, türkiye lirası  
+XOF, CFA, franc cfa, batı afrika cfa frangı  
+XAF, FCFA, franc cfa, orta afrika cfa frangı  
+XPF, ₣, franc pacifique, pasifik frangı  
+XCD, $, east caribbean dollar, doğu karayip doları  
+XDR, sdr, special drawing right, imf özel çekme hakkı  
