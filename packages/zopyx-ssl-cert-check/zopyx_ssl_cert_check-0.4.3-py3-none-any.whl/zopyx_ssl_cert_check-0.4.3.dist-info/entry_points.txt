@@ -1,0 +1,3 @@
+[console_scripts]
+ssl-cert-check = zopyx_ssl_cert_check.main:main
+
