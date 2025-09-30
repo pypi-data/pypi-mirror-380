@@ -1,0 +1,2 @@
+[console_scripts]
+word-tower = word_tower.main:run_game
