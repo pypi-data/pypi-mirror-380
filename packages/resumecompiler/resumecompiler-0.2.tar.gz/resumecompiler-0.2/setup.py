@@ -1,0 +1,20 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='resumecompiler',
+    version='0.2',
+    packages=find_packages(),
+    install_requires=[
+        'markdown',
+        'beautifulsoup4',
+    ],
+    entry_points={
+        'console_scripts': [
+            # 'resume-compiler=resumecompiler.resumecompiler:main',  # if applicable
+        ],
+    },
+    author='Raphael Li',
+    description='A compiler that compiles Markdown files into a resume PDF file, formatted in LaTeX.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+)
