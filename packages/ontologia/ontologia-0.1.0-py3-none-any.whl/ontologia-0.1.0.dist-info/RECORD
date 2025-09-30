@@ -1,0 +1,11 @@
+ontologia/__init__.py,sha256=8Fk5cIr9tIu_wwnePHFRd0pZ1cOAfVvNQj03YCU_vrE,279
+ontologia/domain/metamodels/instances/linked_object.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ontologia/domain/metamodels/instances/object.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ontologia/domain/metamodels/instances/ontology.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ontologia/domain/metamodels/types/link_type.py,sha256=lrAYwWwti_VgXZnD4vMoKb2qkyhxs39WRIzgLyTagGA,10572
+ontologia/domain/metamodels/types/object_type.py,sha256=MN8ZFQ78hSipCO1nqwZntUan6vXSLTz8ExMPD1rreMQ,5507
+ontologia/domain/metamodels/types/property_type.py,sha256=g62W7E0lEv647ut83iSY-qJeTQmw_YKZz7K4HnQ99bo,7868
+ontologia/domain/models/property_data_type.py,sha256=VW5T59qF3BylsYXN3KjMQvAr8zYtjCixrJmX_-OLJAk,3853
+ontologia-0.1.0.dist-info/METADATA,sha256=yFSv-nqOtvbGu_-JsrPjCEzoohCs-QcsIb1spcWIp-0,2071
+ontologia-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ontologia-0.1.0.dist-info/RECORD,,
