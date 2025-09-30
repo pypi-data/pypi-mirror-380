@@ -1,0 +1,3 @@
+[console_scripts]
+montycarlo=two_goats_one_car.__main__:main
+
