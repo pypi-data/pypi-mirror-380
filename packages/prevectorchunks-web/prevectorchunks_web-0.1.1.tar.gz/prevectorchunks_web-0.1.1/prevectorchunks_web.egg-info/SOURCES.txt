@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+prevectorchunks_web/__init__.py
+prevectorchunks_web.egg-info/PKG-INFO
+prevectorchunks_web.egg-info/SOURCES.txt
+prevectorchunks_web.egg-info/dependency_links.txt
+prevectorchunks_web.egg-info/requires.txt
+prevectorchunks_web.egg-info/top_level.txt
+prevectorchunks_web/api/__init__.py
+prevectorchunks_web/api/views.py

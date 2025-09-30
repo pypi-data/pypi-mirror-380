@@ -1,0 +1,5 @@
+Django==5.1
+django-cors-headers~=4.4.0
+fastapi~=0.112.2
+PyJWT~=2.7.0
+prevectorchunks_core==0.1.1
