@@ -1,0 +1,8 @@
+evo
+numpy
+opencv-python
+pandas
+pykitti
+rosbags
+rosbags-image
+scipy
