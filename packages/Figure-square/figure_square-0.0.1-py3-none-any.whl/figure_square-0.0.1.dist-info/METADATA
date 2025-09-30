@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: Figure_square
+Version: 0.0.1
+Summary: Решение задачи №2 в вакансии.
+Home-page: https://github.com/zteewt/MindBox/
+Author: zteewt
+Author-email: dzynyok@mail.ru
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
