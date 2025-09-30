@@ -1,0 +1,9 @@
+numpy
+pyserial
+dynamixel-sdk
+pyqt6
+matplotlib
+opencv-python
+jinja2
+plotly
+xlsxwriter
