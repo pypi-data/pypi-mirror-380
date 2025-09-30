@@ -1,0 +1,9 @@
+pyfiglet
+colorama
+pyautogui
+yaspin
+alive-progress
+rich
+InquirerPy
+tabulate
+keyboard
