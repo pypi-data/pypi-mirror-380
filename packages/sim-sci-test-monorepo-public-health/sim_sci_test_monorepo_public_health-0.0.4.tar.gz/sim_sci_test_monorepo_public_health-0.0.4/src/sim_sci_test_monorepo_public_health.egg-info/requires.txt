@@ -1,0 +1,7 @@
+sim-sci-test-monorepo-core
+
+[dev]
+pytest>=7.0
+black
+isort
+flake8
