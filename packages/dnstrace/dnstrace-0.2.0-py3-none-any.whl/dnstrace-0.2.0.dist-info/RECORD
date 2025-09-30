@@ -1,0 +1,13 @@
+dnstrace/__init__.py,sha256=gPbHf_aBcXbMuP5Rwa9i0bAcqI7TECkNE7m0BhkQJeA,118
+dnstrace/__main__.py,sha256=VK-j8dxdQCN5RBq5orsZUanrOg1mRPNVFgRh0BTyKqo,1293
+dnstrace/_version.py,sha256=lGFhwRAPwWpbx0Adsy3mfVRCKICv_-tVF2jFHwydSiM,105
+dnstrace/bpf_kprobe.c,sha256=1bZ8hLGtcKQXNiYw5bvk_W-AIi6a8o9oHQvu83aYUPY,897
+dnstrace/bpf_sock.c,sha256=VyF-PYuyneCCm70ocBM3HFBo9G-ESVho98tLpGZ7YHI,1604
+dnstrace/color.py,sha256=mHXPXFdy4fdiQiW9eg9QIouYqwOcBgLAJPbfYztafpA,4652
+dnstrace/dnstrace.py,sha256=ZbtWSbf6sbQJEBarl5vOdvM37p0EngahMGnNHiI6pwc,16635
+dnstrace-0.2.0.dist-info/licenses/LICENSE,sha256=IwKDDIFKp8l-iUcIS5dEoxlgwbgH6-al--0L-MM7wVE,1075
+dnstrace-0.2.0.dist-info/METADATA,sha256=novBVkbos5Ewo4s8TIkIUgAlu1J_J0emCV6x_nDNNKY,3918
+dnstrace-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dnstrace-0.2.0.dist-info/entry_points.txt,sha256=dpNaBB5TBH-RRlyrWTk-9VkM-xw_mB24CBntdRmdhdA,52
+dnstrace-0.2.0.dist-info/top_level.txt,sha256=pD1D0V5vj_efl17tBTdZ5QRUGvBP77mc74rJWzYyVgM,9
+dnstrace-0.2.0.dist-info/RECORD,,
