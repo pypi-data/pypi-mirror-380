@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: pandorasim
+Version: 1.2.0
+Summary: 
+License-File: LICENSE
+Author: Christina Hedges
+Author-email: christina.l.hedges@nasa.gov
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pandorapsf (>=0.7.0)
+Requires-Dist: pandoraref (>=0.1.5)
+Requires-Dist: pandorasat (>=0.12.6)
+Requires-Dist: pyarrow (<17.0.0)
