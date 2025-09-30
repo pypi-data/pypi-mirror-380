@@ -1,0 +1,295 @@
+[2025-09-30T14:59:35.546789 24904] === CCACHE master.971f1183 STARTED =========================================
+[2025-09-30T14:59:35.546792 24902] === CCACHE master.971f1183 STARTED =========================================
+[2025-09-30T14:59:35.546795 24905] === CCACHE master.971f1183 STARTED =========================================
+[2025-09-30T14:59:35.546863 24901] === CCACHE master.971f1183 STARTED =========================================
+[2025-09-30T14:59:35.546789 24904] Config: (default) absolute_paths_in_stderr = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) base_dir = 
+[2025-09-30T14:59:35.546789 24904] Config: (environment) cache_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache
+[2025-09-30T14:59:35.546789 24904] Config: (default) compiler = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) compiler_check = mtime
+[2025-09-30T14:59:35.546789 24904] Config: (default) compiler_type = auto
+[2025-09-30T14:59:35.546789 24904] Config: (default) compression = true
+[2025-09-30T14:59:35.546789 24904] Config: (default) compression_level = 0
+[2025-09-30T14:59:35.546789 24904] Config: (default) cpp_extension = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) debug = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) debug_dir = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) depend_mode = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) direct_mode = true
+[2025-09-30T14:59:35.546789 24904] Config: (default) disable = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) extra_files_to_hash = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) file_clone = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) hard_link = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) hash_dir = true
+[2025-09-30T14:59:35.546789 24904] Config: (default) ignore_headers_in_manifest = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) ignore_options = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) inode_cache = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) keep_comments_cpp = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) limit_multiple = 0.8
+[2025-09-30T14:59:35.546789 24904] Config: (environment) log_file = /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build/ccache-24897.txt
+[2025-09-30T14:59:35.546789 24904] Config: (default) max_files = 0
+[2025-09-30T14:59:35.546789 24904] Config: (default) max_size = 5.0G
+[2025-09-30T14:59:35.546789 24904] Config: (default) path = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) pch_external_checksum = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) prefix_command = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) prefix_command_cpp = 
+[2025-09-30T14:59:35.546789 24904] Config: (default) read_only = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) read_only_direct = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) recache = false
+[2025-09-30T14:59:35.546789 24904] Config: (default) run_second_cpp = true
+[2025-09-30T14:59:35.546789 24904] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2025-09-30T14:59:35.546789 24904] Config: (default) stats = true
+[2025-09-30T14:59:35.546789 24904] Config: (default) temporary_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp
+[2025-09-30T14:59:35.546789 24904] Config: (default) umask = 
+[2025-09-30T14:59:35.547283 24904] Command line: /Users/bibektemp/Library/Caches/Nuitka/downloads/ccache/v4.2.1/ccache /usr/bin/clang -o module.edaclass.os -c -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace module.edaclass.c
+[2025-09-30T14:59:35.546863 24901] Config: (default) absolute_paths_in_stderr = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) base_dir = 
+[2025-09-30T14:59:35.546863 24901] Config: (environment) cache_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache
+[2025-09-30T14:59:35.546863 24901] Config: (default) compiler = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) compiler_check = mtime
+[2025-09-30T14:59:35.546863 24901] Config: (default) compiler_type = auto
+[2025-09-30T14:59:35.546863 24901] Config: (default) compression = true
+[2025-09-30T14:59:35.546863 24901] Config: (default) compression_level = 0
+[2025-09-30T14:59:35.546863 24901] Config: (default) cpp_extension = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) debug = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) debug_dir = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) depend_mode = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) direct_mode = true
+[2025-09-30T14:59:35.546863 24901] Config: (default) disable = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) extra_files_to_hash = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) file_clone = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) hard_link = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) hash_dir = true
+[2025-09-30T14:59:35.546863 24901] Config: (default) ignore_headers_in_manifest = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) ignore_options = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) inode_cache = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) keep_comments_cpp = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) limit_multiple = 0.8
+[2025-09-30T14:59:35.546863 24901] Config: (environment) log_file = /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build/ccache-24897.txt
+[2025-09-30T14:59:35.546863 24901] Config: (default) max_files = 0
+[2025-09-30T14:59:35.546863 24901] Config: (default) max_size = 5.0G
+[2025-09-30T14:59:35.546863 24901] Config: (default) path = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) pch_external_checksum = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) prefix_command = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) prefix_command_cpp = 
+[2025-09-30T14:59:35.546863 24901] Config: (default) read_only = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) read_only_direct = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) recache = false
+[2025-09-30T14:59:35.546863 24901] Config: (default) run_second_cpp = true
+[2025-09-30T14:59:35.546863 24901] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2025-09-30T14:59:35.546863 24901] Config: (default) stats = true
+[2025-09-30T14:59:35.546863 24901] Config: (default) temporary_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp
+[2025-09-30T14:59:35.546863 24901] Config: (default) umask = 
+[2025-09-30T14:59:35.547284 24901] Command line: /Users/bibektemp/Library/Caches/Nuitka/downloads/ccache/v4.2.1/ccache /usr/bin/clang -o __helpers.os -c -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace __helpers.c
+[2025-09-30T14:59:35.546792 24902] Config: (default) absolute_paths_in_stderr = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) base_dir = 
+[2025-09-30T14:59:35.546792 24902] Config: (environment) cache_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache
+[2025-09-30T14:59:35.546792 24902] Config: (default) compiler = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) compiler_check = mtime
+[2025-09-30T14:59:35.546792 24902] Config: (default) compiler_type = auto
+[2025-09-30T14:59:35.546792 24902] Config: (default) compression = true
+[2025-09-30T14:59:35.546792 24902] Config: (default) compression_level = 0
+[2025-09-30T14:59:35.546792 24902] Config: (default) cpp_extension = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) debug = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) debug_dir = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) depend_mode = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) direct_mode = true
+[2025-09-30T14:59:35.546792 24902] Config: (default) disable = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) extra_files_to_hash = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) file_clone = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) hard_link = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) hash_dir = true
+[2025-09-30T14:59:35.546792 24902] Config: (default) ignore_headers_in_manifest = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) ignore_options = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) inode_cache = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) keep_comments_cpp = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) limit_multiple = 0.8
+[2025-09-30T14:59:35.546792 24902] Config: (environment) log_file = /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build/ccache-24897.txt
+[2025-09-30T14:59:35.546792 24902] Config: (default) max_files = 0
+[2025-09-30T14:59:35.546792 24902] Config: (default) max_size = 5.0G
+[2025-09-30T14:59:35.546792 24902] Config: (default) path = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) pch_external_checksum = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) prefix_command = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) prefix_command_cpp = 
+[2025-09-30T14:59:35.546792 24902] Config: (default) read_only = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) read_only_direct = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) recache = false
+[2025-09-30T14:59:35.546792 24902] Config: (default) run_second_cpp = true
+[2025-09-30T14:59:35.546792 24902] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2025-09-30T14:59:35.546792 24902] Config: (default) stats = true
+[2025-09-30T14:59:35.546792 24902] Config: (default) temporary_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp
+[2025-09-30T14:59:35.546792 24902] Config: (default) umask = 
+[2025-09-30T14:59:35.547284 24902] Command line: /Users/bibektemp/Library/Caches/Nuitka/downloads/ccache/v4.2.1/ccache /usr/bin/clang -o __loader.os -c -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace __loader.c
+[2025-09-30T14:59:35.546795 24905] Config: (default) absolute_paths_in_stderr = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) base_dir = 
+[2025-09-30T14:59:35.546795 24905] Config: (environment) cache_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache
+[2025-09-30T14:59:35.546795 24905] Config: (default) compiler = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) compiler_check = mtime
+[2025-09-30T14:59:35.546795 24905] Config: (default) compiler_type = auto
+[2025-09-30T14:59:35.546795 24905] Config: (default) compression = true
+[2025-09-30T14:59:35.546795 24905] Config: (default) compression_level = 0
+[2025-09-30T14:59:35.546795 24905] Config: (default) cpp_extension = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) debug = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) debug_dir = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) depend_mode = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) direct_mode = true
+[2025-09-30T14:59:35.546795 24905] Config: (default) disable = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) extra_files_to_hash = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) file_clone = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) hard_link = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) hash_dir = true
+[2025-09-30T14:59:35.546795 24905] Config: (default) ignore_headers_in_manifest = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) ignore_options = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) inode_cache = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) keep_comments_cpp = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) limit_multiple = 0.8
+[2025-09-30T14:59:35.546795 24905] Config: (environment) log_file = /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build/ccache-24897.txt
+[2025-09-30T14:59:35.546795 24905] Config: (default) max_files = 0
+[2025-09-30T14:59:35.546795 24905] Config: (default) max_size = 5.0G
+[2025-09-30T14:59:35.546795 24905] Config: (default) path = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) pch_external_checksum = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) prefix_command = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) prefix_command_cpp = 
+[2025-09-30T14:59:35.546795 24905] Config: (default) read_only = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) read_only_direct = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) recache = false
+[2025-09-30T14:59:35.546795 24905] Config: (default) run_second_cpp = true
+[2025-09-30T14:59:35.546795 24905] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2025-09-30T14:59:35.546795 24905] Config: (default) stats = true
+[2025-09-30T14:59:35.546795 24905] Config: (default) temporary_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp
+[2025-09-30T14:59:35.546795 24905] Config: (default) umask = 
+[2025-09-30T14:59:35.547284 24905] Command line: /Users/bibektemp/Library/Caches/Nuitka/downloads/ccache/v4.2.1/ccache /usr/bin/clang -o static_src/CompiledFunctionType.os -c -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace static_src/CompiledFunctionType.c
+[2025-09-30T14:59:35.547316 24904] Hostname: bibek.local
+[2025-09-30T14:59:35.547371 24902] Hostname: bibek.local
+[2025-09-30T14:59:35.547375 24905] Hostname: bibek.local
+[2025-09-30T14:59:35.547402 24905] Working directory: /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build
+[2025-09-30T14:59:35.547404 24902] Working directory: /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build
+[2025-09-30T14:59:35.547404 24904] Working directory: /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build
+[2025-09-30T14:59:35.547408 24905] Compiler type: clang
+[2025-09-30T14:59:35.547411 24902] Compiler type: clang
+[2025-09-30T14:59:35.547383 24901] Hostname: bibek.local
+[2025-09-30T14:59:35.547417 24904] Compiler type: clang
+[2025-09-30T14:59:35.547450 24901] Working directory: /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build
+[2025-09-30T14:59:35.547475 24901] Compiler type: clang
+[2025-09-30T14:59:35.547540 24905] Source file: static_src/CompiledFunctionType.c
+[2025-09-30T14:59:35.547540 24902] Source file: __loader.c
+[2025-09-30T14:59:35.547544 24904] Source file: module.edaclass.c
+[2025-09-30T14:59:35.547547 24905] Object file: static_src/CompiledFunctionType.os
+[2025-09-30T14:59:35.547550 24902] Object file: __loader.os
+[2025-09-30T14:59:35.547554 24904] Object file: module.edaclass.os
+[2025-09-30T14:59:35.547585 24901] Source file: __helpers.c
+[2025-09-30T14:59:35.547593 24901] Object file: __helpers.os
+[2025-09-30T14:59:35.547611 24904] Trying direct lookup
+[2025-09-30T14:59:35.547611 24905] Trying direct lookup
+[2025-09-30T14:59:35.547611 24902] Trying direct lookup
+[2025-09-30T14:59:35.547625 24901] Trying direct lookup
+[2025-09-30T14:59:35.547679 24901] Looking for result name in /Users/bibektemp/Library/Caches/Nuitka/ccache/3/a/938temv9ruaacop54pn7eapj5kqai7sM
+[2025-09-30T14:59:35.547690 24902] Looking for result name in /Users/bibektemp/Library/Caches/Nuitka/ccache/b/6/ebtuv80bguapf07uoeskn3lm68a3h1aM
+[2025-09-30T14:59:35.547860 24905] Looking for result name in /Users/bibektemp/Library/Caches/Nuitka/ccache/9/e/b4ubhirs6oa3u0uo1gvb7st69j13ddeM
+[2025-09-30T14:59:35.548011 24900] === CCACHE master.971f1183 STARTED =========================================
+[2025-09-30T14:59:35.548011 24900] Config: (default) absolute_paths_in_stderr = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) base_dir = 
+[2025-09-30T14:59:35.548011 24900] Config: (environment) cache_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache
+[2025-09-30T14:59:35.548011 24900] Config: (default) compiler = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) compiler_check = mtime
+[2025-09-30T14:59:35.548011 24900] Config: (default) compiler_type = auto
+[2025-09-30T14:59:35.548011 24900] Config: (default) compression = true
+[2025-09-30T14:59:35.548011 24900] Config: (default) compression_level = 0
+[2025-09-30T14:59:35.548011 24900] Config: (default) cpp_extension = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) debug = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) debug_dir = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) depend_mode = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) direct_mode = true
+[2025-09-30T14:59:35.548011 24900] Config: (default) disable = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) extra_files_to_hash = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) file_clone = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) hard_link = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) hash_dir = true
+[2025-09-30T14:59:35.548011 24900] Config: (default) ignore_headers_in_manifest = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) ignore_options = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) inode_cache = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) keep_comments_cpp = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) limit_multiple = 0.8
+[2025-09-30T14:59:35.548011 24900] Config: (environment) log_file = /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build/ccache-24897.txt
+[2025-09-30T14:59:35.548011 24900] Config: (default) max_files = 0
+[2025-09-30T14:59:35.548011 24900] Config: (default) max_size = 5.0G
+[2025-09-30T14:59:35.548011 24900] Config: (default) path = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) pch_external_checksum = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) prefix_command = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) prefix_command_cpp = 
+[2025-09-30T14:59:35.548011 24900] Config: (default) read_only = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) read_only_direct = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) recache = false
+[2025-09-30T14:59:35.548011 24900] Config: (default) run_second_cpp = true
+[2025-09-30T14:59:35.548011 24900] Config: (environment) sloppiness = include_file_mtime, include_file_ctime
+[2025-09-30T14:59:35.548011 24900] Config: (default) stats = true
+[2025-09-30T14:59:35.548011 24900] Config: (default) temporary_dir = /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp
+[2025-09-30T14:59:35.548011 24900] Config: (default) umask = 
+[2025-09-30T14:59:35.548777 24900] Command line: /Users/bibektemp/Library/Caches/Nuitka/downloads/ccache/v4.2.1/ccache /usr/bin/clang -o __constants.os -c -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace __constants.c
+[2025-09-30T14:59:35.548859 24900] Hostname: bibek.local
+[2025-09-30T14:59:35.548877 24900] Working directory: /Users/bibektemp/Documents/obfuscation_exmp/src/fount_eda/edaclass.build
+[2025-09-30T14:59:35.548893 24900] Compiler type: clang
+[2025-09-30T14:59:35.549011 24900] Source file: __constants.c
+[2025-09-30T14:59:35.549024 24900] Object file: __constants.os
+[2025-09-30T14:59:35.549058 24900] Trying direct lookup
+[2025-09-30T14:59:35.549140 24900] Looking for result name in /Users/bibektemp/Library/Caches/Nuitka/ccache/d/0/20vqo8a1pianviifapqrj14j366qtfkM
+[2025-09-30T14:59:35.551296 24904] No manifest with name 4000abef5n3ho6kh7b4943u05ds1emmm4 in the cache
+[2025-09-30T14:59:35.551780 24904] Running preprocessor
+[2025-09-30T14:59:35.551803 24904] Executing /usr/bin/clang -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace -E module.edaclass.c
+[2025-09-30T14:59:35.590141 24902] Got result name from manifest
+[2025-09-30T14:59:35.590150 24901] Got result name from manifest
+[2025-09-30T14:59:35.590153 24900] Got result name from manifest
+[2025-09-30T14:59:35.590198 24902] Reading result /Users/bibektemp/Library/Caches/Nuitka/ccache/4/8/874j8721q66c6lb6ph354p24fkojgu8R
+[2025-09-30T14:59:35.590199 24900] Reading result /Users/bibektemp/Library/Caches/Nuitka/ccache/7/0/1coo3cgidn96i2qpgdj9qog7aft9j38R
+[2025-09-30T14:59:35.590198 24901] Reading result /Users/bibektemp/Library/Caches/Nuitka/ccache/4/b/f4k42058986sku9m1hmbj7jmguhl1koR
+[2025-09-30T14:59:35.590380 24901] Reading embedded entry #0 .o (1824 bytes)
+[2025-09-30T14:59:35.590384 24902] Reading embedded entry #0 .o (6752 bytes)
+[2025-09-30T14:59:35.590393 24901] Writing to __helpers.os
+[2025-09-30T14:59:35.590396 24902] Writing to __loader.os
+[2025-09-30T14:59:35.590413 24900] Reading embedded entry #0 .o (9792 bytes)
+[2025-09-30T14:59:35.590423 24900] Writing to __constants.os
+[2025-09-30T14:59:35.590499 24905] Got result name from manifest
+[2025-09-30T14:59:35.590563 24905] Reading result /Users/bibektemp/Library/Caches/Nuitka/ccache/7/3/5dp8b8a6n012or0qgdl96q3vful96acR
+[2025-09-30T14:59:35.590586 24902] Succeeded getting cached result
+[2025-09-30T14:59:35.590599 24902] Result: cache hit (direct)
+[2025-09-30T14:59:35.590652 24900] Succeeded getting cached result
+[2025-09-30T14:59:35.590664 24901] Succeeded getting cached result
+[2025-09-30T14:59:35.590664 24900] Result: cache hit (direct)
+[2025-09-30T14:59:35.590677 24901] Result: cache hit (direct)
+[2025-09-30T14:59:35.590983 24905] Reading embedded entry #0 .o (1414144 bytes)
+[2025-09-30T14:59:35.590992 24905] Writing to static_src/CompiledFunctionType.os
+[2025-09-30T14:59:35.591275 24902] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/8/stats.lock
+[2025-09-30T14:59:35.591428 24900] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/7/0/stats.lock
+[2025-09-30T14:59:35.592864 24901] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/b/stats.lock
+[2025-09-30T14:59:35.595221 24901] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/b/stats.lock
+[2025-09-30T14:59:35.595239 24902] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/8/stats.lock
+[2025-09-30T14:59:35.595262 24900] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/7/0/stats.lock
+[2025-09-30T14:59:35.595270 24901] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/4/b/stats.lock
+[2025-09-30T14:59:35.595288 24902] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/4/8/stats.lock
+[2025-09-30T14:59:35.595302 24900] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/7/0/stats.lock
+[2025-09-30T14:59:35.597819 24905] Succeeded getting cached result
+[2025-09-30T14:59:35.597853 24905] Result: cache hit (direct)
+[2025-09-30T14:59:35.598921 24905] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/7/3/stats.lock
+[2025-09-30T14:59:35.599243 24905] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/7/3/stats.lock
+[2025-09-30T14:59:35.599279 24905] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/7/3/stats.lock
+[2025-09-30T14:59:52.839410 24904] Got result name from preprocessor
+[2025-09-30T14:59:52.840495 24904] No result with name d7b2eecm3sacqck7c7mtagoc0in3oh3go in the cache
+[2025-09-30T14:59:52.840606 24904] Running real compiler
+[2025-09-30T14:59:52.841718 24904] Executing /usr/bin/clang -std=c11 -flto -fvisibility=hidden -fwrapv -pipe -w -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable --target=arm64-apple-macos11.0 -O3 -fPIC -D_NUITKA_MODULE_MODE -D_XOPEN_SOURCE -D_WIN32_WINNT=0x0601 -D__NUITKA_NO_ASSERT__ -D_NUITKA_CONSTANTS_FROM_MACOS_SECTION -D_NUITKA_FROZEN=0 -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/zlib -I/Users/bibektemp/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/include/python3.12 -I. -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/include -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/static_src -I/Users/bibektemp/Documents/obfuscation_exmp/.venv/lib/python3.12/site-packages/nuitka/build/inline_copy/libbacktrace -c -fcolor-diagnostics -o module.edaclass.os module.edaclass.c
+[2025-09-30T14:59:55.125728 24904] Using default compression level 1
+[2025-09-30T14:59:55.126234 24904] Storing result module.edaclass.os
+[2025-09-30T14:59:55.126278 24904] Storing embedded file #0 .o (808400 bytes) from module.edaclass.os
+[2025-09-30T14:59:55.129514 24904] Stored in cache: /Users/bibektemp/Library/Caches/Nuitka/ccache/d/7/b2eecm3sacqck7c7mtagoc0in3oh3goR
+[2025-09-30T14:59:55.129714 24904] Adding result name to /Users/bibektemp/Library/Caches/Nuitka/ccache/4/0/00abef5n3ho6kh7b4943u05ds1emmm4M
+[2025-09-30T14:59:55.131051 24904] Using default compression level 1
+[2025-09-30T14:59:55.131797 24904] Result: cache miss
+[2025-09-30T14:59:55.132432 24904] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/stats.lock
+[2025-09-30T14:59:55.134996 24904] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/4/stats.lock
+[2025-09-30T14:59:55.135028 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/4/stats.lock
+[2025-09-30T14:59:55.135081 24904] Acquired lock /Users/bibektemp/Library/Caches/Nuitka/ccache/d/stats.lock
+[2025-09-30T14:59:55.135700 24904] Releasing lock /Users/bibektemp/Library/Caches/Nuitka/ccache/d/stats.lock
+[2025-09-30T14:59:55.135730 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/d/stats.lock
+[2025-09-30T14:59:55.135764 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp/tmp.stderr.wI52tr
+[2025-09-30T14:59:55.135790 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp/tmp.stdout.X5lFG8
+[2025-09-30T14:59:55.135817 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp/tmp.cpp_stderr.YlNdP1
+[2025-09-30T14:59:55.135855 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp/tmp.cpp_stdout.T9ZSEO.i
+[2025-09-30T14:59:55.137468 24904] Unlink /Users/bibektemp/Library/Caches/Nuitka/ccache/tmp/tmp.cpp_stdout.T9ZSEO
