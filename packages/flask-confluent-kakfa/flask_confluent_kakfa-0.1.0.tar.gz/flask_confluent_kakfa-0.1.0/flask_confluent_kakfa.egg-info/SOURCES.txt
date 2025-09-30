@@ -1,0 +1,8 @@
+README.md
+flask_confluent_kafka.py
+pyproject.toml
+flask_confluent_kakfa.egg-info/PKG-INFO
+flask_confluent_kakfa.egg-info/SOURCES.txt
+flask_confluent_kakfa.egg-info/dependency_links.txt
+flask_confluent_kakfa.egg-info/requires.txt
+flask_confluent_kakfa.egg-info/top_level.txt
