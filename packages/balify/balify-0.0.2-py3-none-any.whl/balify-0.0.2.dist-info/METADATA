@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: balify
+Version: 0.0.2
+Author-email: Josh <josh.yu_8@live.com>
+License-File: LICENSE
+Requires-Python: <3.14,>=3.10
+Requires-Dist: aiomysql<1,>=0.2.0
+Requires-Dist: aiosqlite<1,>=0.20.0
+Requires-Dist: asyncpg<1,>=0.30.0
+Requires-Dist: fastapi-pagination<0.15,>=0.13
+Requires-Dist: fastapi-users[sqlalchemy]<15,>=13
+Requires-Dist: fastapi<1,>=0.106
+Requires-Dist: importlib-metadata>=8.7.0
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: pydantic-settings<2.12,>=2.5
+Requires-Dist: pyhumps~=3.8
+Requires-Dist: pymysql>=1.1.2
+Requires-Dist: sqlalchemy~=2.0
+Requires-Dist: sqlmodel>=0.0.25
+Requires-Dist: typer<1,>=0.15.0
+Requires-Dist: uvicorn<0.36,>=0.29
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bali-framework/bali/master/docs/img/bali.png" alt='bali framework' />
+</p>
+<p align="center">
+    <b>balify</b><br />
+    <em>🏝 Minimalist declarative API.</em>    
+</p>
+
+<p align="center">
+    <a href="https://pepy.tech/project/bali-va">
+        <img src="https://pepy.tech/badge/bali-va" alt="" />
+    </a>
+    <a href="https://pypi.org/project/bali-va/">
+        <img src="https://img.shields.io/pypi/v/bali-va" alt="" />
+    </a>
+    <a href="https://github.com/bali-framework/bali-va/actions/workflows/python-ci.yml">
+      <img src="https://github.com/bali-framework/bali-va/actions/workflows/python-ci.yml/badge.svg" alt="" />
+    </a>
+</p>
+
+---
+
+> The framework's conventions are opinionated and follow industry-leading practices.
+> 
