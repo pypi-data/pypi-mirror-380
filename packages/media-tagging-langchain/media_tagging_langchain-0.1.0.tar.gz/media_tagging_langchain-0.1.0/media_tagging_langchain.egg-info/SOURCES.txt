@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+media_tagging_langchain/__init__.py
+media_tagging_langchain/tagger.py
+media_tagging_langchain/tagging_strategies.py
+media_tagging_langchain.egg-info/PKG-INFO
+media_tagging_langchain.egg-info/SOURCES.txt
+media_tagging_langchain.egg-info/dependency_links.txt
+media_tagging_langchain.egg-info/entry_points.txt
+media_tagging_langchain.egg-info/requires.txt
+media_tagging_langchain.egg-info/top_level.txt
