@@ -1,0 +1,12 @@
+whisperkey/.flake8,sha256=tq9E9GGDpGRsiR6-rMXaAhVH3aRmEra6h_nbHYkQ_cw,29
+whisperkey/.gitignore,sha256=cQmCeRyrZ7NoPVsUItfuRiK11FYYKL8K1QAe5C9Myjk,12
+whisperkey/__init__.py,sha256=-iA8gELO2TKOlIMYp9Su35JgZnxrxMKk7knCSN2TVtY,186
+whisperkey/config.py,sha256=iF9iR3fTE4E0GhPX-QSMm_LSnk_9kKs_naynz8Yw388,701
+whisperkey/file_handler.py,sha256=_wJB8UNp63CnYM6LoI94IyU8vLcXtgf9aRMR8Xk1k2M,1934
+whisperkey/keyboard_handler.py,sha256=G1poOJuvncdtxaTs6sDn9yyAhfmWNxDGWo7pReayhXo,1539
+whisperkey/main.py,sha256=p-1GtsMMBroFYkkpWynKDBHOcZURkoXjHNOAb_w8a4Q,14347
+whisperkey/utils.py,sha256=f_FWehqt_CJtE0B7ud5JExgtGNvNQNajaF1miMlDZdU,1093
+whisperkey-0.2.0.dist-info/METADATA,sha256=9fsXr86r0XxsDfjLFl6XAloQ3vZSCR_SlpYPsmx_CFU,3395
+whisperkey-0.2.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+whisperkey-0.2.0.dist-info/entry_points.txt,sha256=b7eRRCwdOqN9CcHz5H7nzGfawUF3X4hRUx6bK6N0zzo,51
+whisperkey-0.2.0.dist-info/RECORD,,
