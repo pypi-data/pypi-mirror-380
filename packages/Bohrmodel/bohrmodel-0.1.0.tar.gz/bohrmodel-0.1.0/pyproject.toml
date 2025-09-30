@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# 🚨 AJUSTE 1: Cambia el nombre del proyecto al nombre de tu paquete (Bohrmodel)
+name = "Bohrmodel" 
+version = "0.1.0"
+description = "Cálculos del modelo de Bohr (Radios, Energía, Transiciones)."
+readme = "README.md"
+authors = [
+    { name = "Juan Esteban Neira Díaz", email = "jueneirad@udistrital.edu.co" },
+    { name = "Kevin Cruz Velandia" }
+]
+# 🚨 AJUSTE 2: Dependencias como lista de cadenas (strings)
+dependencies = ["matplotlib", "numpy"]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+# Ajusta la URL de homepage si el repositorio contiene el código de Bohrmodel
+homepage = "https://github.com/XxyamzxX/-tomo_bohr.git" 
+
+# Esto es correcto y coincide con tu estructura:
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/Bohrmodel/__init__.py
+src/Bohrmodel/atom.py
+src/Bohrmodel/graficos.py
+src/Bohrmodel/radios.py
+src/Bohrmodel/transiciones.py
+src/Bohrmodel.egg-info/PKG-INFO
+src/Bohrmodel.egg-info/SOURCES.txt
+src/Bohrmodel.egg-info/dependency_links.txt
+src/Bohrmodel.egg-info/requires.txt
+src/Bohrmodel.egg-info/top_level.txt
