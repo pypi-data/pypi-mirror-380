@@ -1,0 +1,2 @@
+[console_scripts]
+kin = localkin_service_audio.cli:main
