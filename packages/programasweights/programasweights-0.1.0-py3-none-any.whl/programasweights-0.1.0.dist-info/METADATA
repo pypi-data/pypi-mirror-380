@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: programasweights
+Version: 0.1.0
+Summary: ProgramAsWeights. [PLACEHOLDER - NOT YET FUNCTIONAL]
+Author-email: ProgramAsWeights <support@programasweights.com>
+License: MIT
+Keywords: neural-programs,nlp,prefix-tuning,runtime,transformers
+Requires-Python: >=3.8
+Requires-Dist: torch
+Requires-Dist: transformers
+Description-Content-Type: text/markdown
+
+# ProgramAsWeights
+
+**⚠️ PLACEHOLDER PACKAGE - NOT YET FUNCTIONAL ⚠️**
+
+This package is currently a placeholder to reserve the name "programasweights" on PyPI. 
+
+The functionality is not yet available for public use. Please check back later for updates.
