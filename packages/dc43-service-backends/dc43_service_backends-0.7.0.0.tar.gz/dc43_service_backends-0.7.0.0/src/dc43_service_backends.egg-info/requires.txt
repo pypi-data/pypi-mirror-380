@@ -1,0 +1,5 @@
+dc43-service-clients>=0.0.3
+open-data-contract-standard==3.0.2
+
+[spark]
+pyspark>=3.4

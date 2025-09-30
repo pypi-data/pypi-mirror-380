@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: dc43-service-backends
+Version: 0.7.0.0
+Summary: Backend service implementations for dc43
+Author: Andy Petrella
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: dc43-service-clients>=0.0.3
+Requires-Dist: open-data-contract-standard==3.0.2
+Provides-Extra: spark
+Requires-Dist: pyspark>=3.4; extra == "spark"
+
+# dc43-service-backends
+
+Backend-facing components that fulfill the dc43 service contracts live in this package.
+Install it alongside `dc43-service-clients` when wiring custom storage, governance, or
+quality enforcement backends.
