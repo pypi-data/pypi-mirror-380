@@ -1,0 +1,89 @@
+# Rust
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+.eggs/
+*.whl
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# PyO3 / Maturin
+.cargo/
+*.dylib
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation
+docs/_build/
+
+# Build artifacts
+*.o
+*.a
+*.lib
+
+# Maturin build output
+target/wheels/
+
+# Python package build
+*.tar.gz
+
+# Local development
+.env
+.python-version
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Git submodule tracking (keep .gitmodules)
+# But ignore submodule contents if not initialized
+UUID/target/
+UUID/*.so
+UUID/.cargo/
+
+# Test outputs
+test_output/
+*.test.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory

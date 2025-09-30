@@ -1,0 +1,74 @@
+name: Test Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      features:
+        description: 'Features to test (comma-separated, e.g., uuid,boost)'
+        required: false
+        default: 'uuid'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
+        features: ['', 'uuid']
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+
+    - name: Install maturin
+      run: pip install maturin
+
+    - name: Debug environment
+      run: |
+        echo "Python version: ${{ matrix.python-version }}"
+        echo "Features: ${{ matrix.features }}"
+        echo "UUID directory exists: $(ls -la UUID/)"
+        echo "UUID Cargo.toml exists: $(test -f UUID/Cargo.toml && echo 'YES' || echo 'NO')"
+
+    - name: Build with features
+      env:
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: 1
+      run: |
+        if [ -n "${{ matrix.features }}" ]; then
+          echo "Building with features: ${{ matrix.features }}"
+          maturin build --features ${{ matrix.features }} --verbose
+        else
+          echo "Building without features"
+          maturin build --verbose
+        fi
+
+    - name: Test Python import
+      run: |
+        # Install the built wheel
+        echo "Installing wheel..."
+        pip install target/wheels/*.whl
+        
+        # Test basic import
+        echo "Testing basic import..."
+        python -c "import Rusthonian; print('Rusthonian imported successfully')"
+        
+        # Test that the module has expected attributes
+        python -c "import Rusthonian; print(f'Version: {Rusthonian.__version__}')"
+        python -c "import Rusthonian; print(f'Description: {Rusthonian.__description__}')"

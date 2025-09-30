@@ -1,0 +1,68 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "Rusthonian"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+    "Typing :: Typed",
+]
+dynamic = ["version"]
+description = "High-performance Python bindings for Rust crates"
+readme = "README.md"
+keywords = ["rust", "python", "bindings", "rusthonian", "uuid", "performance"]
+license = {text = "MIT OR Apache-2.0"}
+authors = [
+    {name = "Rusthonian Team", email = "contact@rusthonian.org"}
+]
+maintainers = [
+    {name = "Rusthonian Team", email = "contact@rusthonian.org"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-benchmark>=4.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Rusthonian/Rusthonian"
+Documentation = "https://github.com/Rusthonian/Rusthonian#readme"
+Repository = "https://github.com/Rusthonian/Rusthonian"
+"Bug Tracker" = "https://github.com/Rusthonian/Rusthonian/issues"
+Changelog = "https://github.com/Rusthonian/Rusthonian/releases"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "."
+module-name = "Rusthonian.rusthonian"
+include = ["Rusthonian/**/*.py", "Rusthonian/py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false

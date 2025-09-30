@@ -1,0 +1,24 @@
+[package]
+name = "rusthonian-uuid"
+version = "0.1.0"
+edition = "2021"
+description = "Python bindings for the Rust UUID crate via Rusthonian"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Rusthonian/UUID"
+keywords = ["uuid", "python", "bindings", "rusthonian"]
+categories = ["api-bindings", "python"]
+readme = "README.md"
+
+[lib]
+name = "rusthonian_uuid"
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+uuid = { version = "1.18", features = ["v1", "v3", "v4", "v5", "v6", "v7", "v8", "serde"] }
+pyo3 = { version = "0.22", features = ["extension-module"] }
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+
+[build-dependencies]
+pyo3-build-config = "0.22"

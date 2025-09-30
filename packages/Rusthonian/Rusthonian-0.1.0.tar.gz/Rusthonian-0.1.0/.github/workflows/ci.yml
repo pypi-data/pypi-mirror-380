@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test on Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
+        features: ['', 'uuid']
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+    
+    - name: Install maturin
+      run: pip install maturin
+    
+    - name: Build (no features)
+      if: matrix.features == ''
+      run: maturin build --release
+      env:
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: 1
+    
+    - name: Build (with features)
+      if: matrix.features != ''
+      run: maturin build --release --features ${{ matrix.features }}
+      env:
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: 1
+    
+    - name: Install built wheel
+      run: pip install target/wheels/*.whl
+    
+    - name: Test import
+      run: python -c "import Rusthonian; print(f'Rusthonian {Rusthonian.__version__} imported successfully')"
+    
+    - name: Test UUID (if built)
+      if: matrix.features == 'uuid'
+      run: python -c "from Rusthonian import uuid; u = uuid.uuid4(); print(f'UUID test: {u}')"
+    
+    - name: Run examples
+      if: matrix.features == 'uuid'
+      run: |
+        python examples/basic_usage.py
+        python examples/uuid_example.py
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        components: rustfmt, clippy
+        override: true
+    
+    - name: Check formatting
+      run: cargo fmt -- --check
+    
+    - name: Clippy
+      run: cargo clippy --all-features -- -D warnings
+      env:
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: 1

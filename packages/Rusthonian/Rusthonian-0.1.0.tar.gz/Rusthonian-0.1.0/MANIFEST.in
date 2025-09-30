@@ -1,0 +1,10 @@
+include Cargo.toml
+include Cargo.lock
+include pyproject.toml
+include README.md
+include LICENSE-MIT
+include LICENSE-APACHE
+recursive-include src *.rs
+recursive-include uuid *.rs *.toml
+recursive-include examples *.py
+recursive-include Rusthonian *.py py.typed

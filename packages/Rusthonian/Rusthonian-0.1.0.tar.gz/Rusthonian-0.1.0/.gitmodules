@@ -1,0 +1,4 @@
+[submodule "uuid"]
+	path = uuid
+	url = https://github.com/Rusthonian/uuid
+	branch = main
