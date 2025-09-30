@@ -1,0 +1,10 @@
+mad_metric/__init__.py,sha256=GqQHo_wnBmgVAcyZ0TjbfV86xIJg_cKZAfb5dux2C7s,101
+mad_metric/__main__.py,sha256=w6STOpW9lSiZiVB0SV5JpMVoEE7lE2qDx2iPqSCqhXM,1465
+mad_metric/compute_mad.py,sha256=fUItC-35IZngLl2oVJrJtMTkNXq9uqaNKAu0hoFytkk,4350
+mad_metric/embedding_models.py,sha256=2OmUZ3_r5omGR0s7LocusSZbMsV3r1wm_u4xGOuPxcI,997
+mad_metric-0.0.6.dist-info/licenses/LICENSE,sha256=9Q9bXwbuJC7lQYJSzFPc3x_jvkE29gwrxsXB3BRk7N4,1090
+mad_metric-0.0.6.dist-info/METADATA,sha256=tQHKW30t6sbLjlVJ-622Ohuf9oJ_mhpAh-ZXwRz2V6Y,2826
+mad_metric-0.0.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mad_metric-0.0.6.dist-info/entry_points.txt,sha256=-bAexJOf4lO4rWwIPs1S-bGMsb9hNkukzoekTz-XFYw,47
+mad_metric-0.0.6.dist-info/top_level.txt,sha256=xH0cqD8TXMF84Bn9YF46StRb6qt3gOZtTLdrKA3UJ1o,11
+mad_metric-0.0.6.dist-info/RECORD,,
