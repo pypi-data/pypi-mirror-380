@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+scipy
+getdist
+rich
+plotly
+psutil
+anesthetic
+plotext
