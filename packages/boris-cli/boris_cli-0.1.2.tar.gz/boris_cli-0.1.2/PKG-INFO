@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: boris-cli
+Version: 0.1.2
+Summary: Terminal-first AI coding/chat assistant with safe shell tools.
+Author-email: Riccardo Tordini <tordiniriccardo@gmail.com>
+License: BORIS PERSONAL USE LICENSE
+        
+        Copyright (c) 2025 APPLEBAR SRL
+        
+        Permission is hereby granted, free of charge, to any individual person
+        to download, build, and use this software for personal, non-commercial
+        purposes only.
+        
+        Restrictions:
+        1. Commercial or corporate use of this software, in any form, is not permitted
+           without a separate commercial license from the copyright holder.
+        2. You may not modify, patch, or create derivative works of this software
+           for the purpose of redistribution or deployment. Local modifications
+           for personal, private use are permitted.
+        3. You may not sublicense, distribute, host, or provide this software as a
+           service to others without prior written permission.
+        
+        This software is provided "AS IS", without warranty of any kind, express
+        or implied, including but not limited to the warranties of merchantability,
+        fitness for a particular purpose, and noninfringement. In no event shall the
+        authors or copyright holders be liable for any claim, damages, or other
+        liability, whether in an action of contract, tort, or otherwise, arising
+        from, out of, or in connection with the software or the use of the software.
+        
+        For commercial or corporate licensing inquiries, please contact:
+        tordiniriccardo@gmail.com
+Project-URL: Homepage, https://github.com/applebar17/Boris
+Keywords: cli,ai,chat,terminal,coding,assistant,boris,boris-cli
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer>=0.12
+Requires-Dist: platformdirs>=4.2.0
+Requires-Dist: rich>=13
+Requires-Dist: prompt-toolkit>=3.0
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.11
+Requires-Dist: httpx>=0.27
+Requires-Dist: openai>=1.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: tomli; python_version < "3.11"
+Requires-Dist: pathspec>=0.12.1
+Requires-Dist: langsmith>=0.4.27
+Requires-Dist: tiktoken>=0.11.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-cov>=4; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
+Requires-Dist: pexpect>=4.9.0; extra == "dev"
+Requires-Dist: sqlite-utils>=3; extra == "dev"
+Requires-Dist: langsmith>=0.4.27; extra == "dev"
+Dynamic: license-file
+
+# Boris CLI
+
+## Introduction
+Boris CLI is a command-line chat application that interacts with local and remote engines for processing user inputs. It provides a text user interface (TUI) for seamless interaction with AI models, enabling users to manage coding tasks efficiently.
+
+## General Information
+- Boris is a command-line chat application that integrates local and remote engines for dynamic code generation.
+- It uses a sophisticated reasoning and coding agent to help you manage and update your projects.
+- Enhanced context token management and bug fixes improve stability and performance.
+
+## Changelog
+* **0.1.0**: Initial release.
+* **0.1.1**: Improved reasoning and coding agent, minor and major fixes, context token management, and bug fixing.
+
+## Usage
+To use Boris CLI, install it via PyPI and run the command line interface to start interacting with the AI models.
+
+### Quick Start
+```bash
+# 1) Initialize config
+boris ai init            # project-local .env
+# or
+boris ai init --global   # ~/.config/boris/.env
+
+# 2) Choose a provider
+boris ai use-openai --api-key sk-... --chat gpt-4o-mini --reasoning o3-mini
+# or Azure OpenAI (use your deployment names)
+boris ai use-azure --endpoint https://<resource>.openai.azure.com/ --api-key ... --chat my-gpt4o-mini
+
+# 3) Verify
+boris ai show
+boris ai test
+
+# 4) Chat in any repo
+cd /path/to/your/repo
+boris chat
+```
+When a chat starts, Boris “studies” your project and shows a concise scan summary. The first study can be slower; subsequent runs are faster thanks to snapshots.
+
+---
