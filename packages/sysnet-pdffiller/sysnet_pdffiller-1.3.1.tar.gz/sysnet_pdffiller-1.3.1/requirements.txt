@@ -1,0 +1,4 @@
+pypdf>=6.1.1
+fillpdf==0.7.3
+pyreportjasper~=2.1.4
+sysnet-pyutils>=1.0.7
