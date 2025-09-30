@@ -1,0 +1,2 @@
+[console_scripts]
+omni-fs-mcp = omni_fs_mcp.mcp_server:main

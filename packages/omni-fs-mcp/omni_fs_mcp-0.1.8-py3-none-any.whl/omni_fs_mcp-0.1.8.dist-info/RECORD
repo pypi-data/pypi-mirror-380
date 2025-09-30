@@ -1,0 +1,9 @@
+omni_fs_mcp/__init__.py,sha256=ZrDfoBmKSrlmkB5_2tGXAlRKwJBGTkw8dzRo_YDOVes,57
+omni_fs_mcp/backend_manager.py,sha256=8775EWk34XBUz5N0pT0A77U8rr2ZqAo02dUaMuQ1gdg,9604
+omni_fs_mcp/dal.py,sha256=FxQI7wQRPfHlB2qvegEquDjG-PQ_pO4q63mtCEJhORU,8089
+omni_fs_mcp/mcp_server.py,sha256=CrWgeG_292R9salwFYaFdw246CPhFmlcZutfbiHLV98,16604
+omni_fs_mcp-0.1.8.dist-info/METADATA,sha256=qGHEhBZTgbN1F7EAvQTCPdYtT3KprQwkii21xurY2jo,4071
+omni_fs_mcp-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+omni_fs_mcp-0.1.8.dist-info/entry_points.txt,sha256=TQRsHeiQJrWECqTCHKXqwz7IxcyM7mV_SX7xQmILzhs,60
+omni_fs_mcp-0.1.8.dist-info/licenses/LICENSE,sha256=af0ZXcmY96Z_YOaW1Omn6NvtW7R-DYExL177jWWpxZ0,1066
+omni_fs_mcp-0.1.8.dist-info/RECORD,,
