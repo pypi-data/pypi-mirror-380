@@ -1,0 +1,6 @@
+deployment
+dist
+env
+fmfactlabel
+resources
+web
