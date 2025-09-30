@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: truecaller
+Version: 0.1.0
+Summary: Truecaller CLI (Worker + Clearout merged lookup)
+Author: Darkboy
+Author-email: wasdark336@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: rich
