@@ -1,0 +1,7 @@
+[console_scripts]
+aii = aii.main:cli_main
+aii-legacy = aii_0_3_x.cli:main
+aii-mvp-v1 = aii_mvp_v1.cli.main:main
+aiia = aii_mvp_alpha.aiia_entry_simple:main
+aiit = aii_0_3_x.cli:main_translate
+aiiware = aii_0_3_x.cli:main
