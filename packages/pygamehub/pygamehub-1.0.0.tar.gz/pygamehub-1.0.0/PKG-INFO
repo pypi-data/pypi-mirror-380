@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pygamehub
+Version: 1.0.0
+Summary: coleção de minigames clássicos em pygame
+Author: Jonas Emmanuel, José Kauan
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pygame>=2.5.0
+Dynamic: license-file
