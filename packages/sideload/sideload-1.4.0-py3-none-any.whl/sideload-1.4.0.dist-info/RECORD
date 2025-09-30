@@ -1,0 +1,11 @@
+sideload/__init__.py,sha256=Y3rHLtR7n0sjLXrn-BEcrbIHx-9uE1tPZkooavo7xcA,222
+sideload/cli.py,sha256=4nG0QLwcYypN2A7ENffEE4IEh0VNzwrAdL7cX4ZxjPM,21932
+sideload/jsonbin.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sideload/jsonbin_connector.py,sha256=IS7YdSBZeZMoTwOyA1I0T7aw36-KERYNnD324dRRI5A,2305
+sideload/jsonbin_old.py,sha256=Rs657F3dTtdoxVYolByuyINABCIQx_VLxwxgdne1mws,8865
+sideload/main.py,sha256=_YE0b93jhDFN8PcBfHLKbZp1EPQGfWq3wIYyX7nT7Qo,7600
+sideload/scripts/cleanup_pypi.py,sha256=YPzYVsutFVsRoCi4qG6vZo8x5YiLzpAfJ7xKxZiZWgI,15264
+sideload-1.4.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+sideload-1.4.0.dist-info/entry_points.txt,sha256=7ULrIjaVhrxMhuddTeoPjeIrqmIvVc9cSU3lZU2_YqE,44
+sideload-1.4.0.dist-info/METADATA,sha256=VbhpNuxWsOFNVCvw9gBBUtT-mxqKvM626A5rGvzB4xE,4309
+sideload-1.4.0.dist-info/RECORD,,
