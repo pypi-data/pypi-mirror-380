@@ -1,0 +1,19 @@
+# EnvSugar
+
+A simple package to make getting env vars syntactically nicer
+
+## Usage
+
+To import an environment variable, you can simply declare it as an import. See below for an example.
+
+```py
+from envsugar import my_env_var
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](LICENSE)
