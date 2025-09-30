@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: midomtoolbox
+Version: 0.2.0
+Summary: Shape, convert, summarize and analyse MIDOM deidentification Protocols
+License-Expression: Apache-2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: lark>=1.2.2
+Requires-Dist: midom>=0.3.1
+Requires-Dist: pre-commit>=4.3.0
+Requires-Dist: pydicom>=3.0.1
+Requires-Dist: pytest-cov>=7.0.0
+Requires-Dist: tabulate>=0.9.0
+Dynamic: license-file
+
+# MIDOM Toolbox
+
+[![CI](https://github.com/ResearchBureau/midomtoolbox/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ResearchBureau/midomtoolbox/actions/workflows/build.yml?query=branch%3Amain)
+[![PyPI](https://img.shields.io/pypi/v/midomtoolbox)](https://pypi.org/project/midomtoolbox/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/midomtoolbox)](https://pypi.org/project/midomtoolbox/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+
+Shape, convert, summarize and analyse MIDOM deidentification Protocols. 
+
+_⚠️ Major version 0. Not feature complete. Still testing out the interface_
+
+* Works with MIDOM Protocols (https://pypi.org/project/midom/)
+* Converts to CTP scripts
+* Generates summaries
+
+## installation
+```
+pip install midomtoolbox
+```
+
+## usage
+To take a MIDOM protocol json file and render to markup format:
+```python
+from midom.components import Protocol    
+from midomtoolbox.render import render_protocol
+
+# load protocol
+with open("/tmp/ctp_pipeline.json") as f:
+    protocol = Protocol.model_validate_json(f.read())
+
+# render
+with open("/tmp/output.md", "w") as f:
+    f.write(render_protocol(protocol))
+```
+
+For other examples, see [/examples](https://github.com/ResearchBureau/midomtoolbox/tree/main/examples) 
+
+## planned features
+* Characterizes according to protocol taxonomy
+* Wizzard-based Protocol generation
