@@ -1,0 +1,2 @@
+[console_scripts]
+engineer-your-data = src.server:main
