@@ -1,0 +1,4 @@
+mg-models-occ176
+SQLAlchemy==1.*
+Cython
+keyrings.google.artifactregistry-auth
