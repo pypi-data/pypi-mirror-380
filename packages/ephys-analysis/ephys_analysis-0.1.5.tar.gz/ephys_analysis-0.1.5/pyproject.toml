@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ephys-analysis"
+version = "0.1.5"
+description = "Electrophysiology data analysis"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [{name = "Unknown"}]
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyabf",
+    "tk",
+    "peakutils",
+    "scipy",
+    "tqdm"
+]
+
+[project.scripts]
+ephys = "EphysAnalysis.APP:main"

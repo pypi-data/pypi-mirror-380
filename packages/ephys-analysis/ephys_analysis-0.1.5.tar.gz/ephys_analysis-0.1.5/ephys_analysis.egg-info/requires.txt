@@ -1,0 +1,7 @@
+numpy
+pandas
+pyabf
+tk
+peakutils
+scipy
+tqdm
