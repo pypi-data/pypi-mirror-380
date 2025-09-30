@@ -1,0 +1,5 @@
+test_arbitrary_pip_package/__init__.py,sha256=Is76thJoZDkfwK1VUmUJw9EtGD7jEFA5a8NB9tU1oo8,87
+test_arbitrary_pip_package_junkn0lv-0.1.0.dist-info/METADATA,sha256=Vkzltf4v4nVnDWMqLKqJ0zH_UIY8m7QrQlKwVK0JNA8,499
+test_arbitrary_pip_package_junkn0lv-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+test_arbitrary_pip_package_junkn0lv-0.1.0.dist-info/top_level.txt,sha256=QFrwGiYwHaP9an0Q-WT0LVyw48unfiZow1543iOBHos,27
+test_arbitrary_pip_package_junkn0lv-0.1.0.dist-info/RECORD,,
