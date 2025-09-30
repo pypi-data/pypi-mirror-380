@@ -1,0 +1,12 @@
+xpense/__init__.py,sha256=augB6ef9DSMffufPApYbA1xONDFJAyUaHhdzOpi45fY,81
+xpense/cli.py,sha256=1pwj0Bymknxk9AQ5hWiUFCMWVo7-5XzzfXEPwXe6Bso,14618
+xpense/config.py,sha256=QdYGaMfebP6LtRJAJFbPfKZZ-mWN1PppfQv0EGBnrTY,5090
+xpense/display.py,sha256=mvYriRf3yU50Cl5UUUAdawWKEZveML5jwhdSCD9q92s,9866
+xpense/main.py,sha256=8EHtmgHHz2B7Oabx3jNJG1eDF56_lnlR-T9XEBSCo_s,950
+xpense/storage.py,sha256=M6BACGXbjxyrd9FNcRK2fVBm9WMG7sSX5pTDMQf-ct8,8987
+xpense-0.2.4.dist-info/licenses/LICENSE,sha256=LMfQkPtlkVGVmRrtmD-lEgkpjR7eBNOmDAq-Tk4jq_E,1075
+xpense-0.2.4.dist-info/METADATA,sha256=iQSFYM6puykwGCk37RPIQ3eQTUVBppjL5eF9zS3WZ9Q,5656
+xpense-0.2.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+xpense-0.2.4.dist-info/entry_points.txt,sha256=_dAiEZvk8YHRo0IffVaR5DGJzzRBYr61FcDctCIE564,44
+xpense-0.2.4.dist-info/top_level.txt,sha256=EQA1HR9PPz4ueaPHtC2sgIEzF1TseF0vwc9XbLkpz9E,7
+xpense-0.2.4.dist-info/RECORD,,
