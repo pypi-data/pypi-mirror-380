@@ -1,0 +1,7 @@
+functools2/__init__.py,sha256=8NE_HVl1BpCXArQWt5mpE3e6W6s9FSmdnN0aSTF-F7U,201
+functools2/async_lru.py,sha256=yPuRVcAMaax4UAK7SrHbfZKoMAJ3V9oexCoHFSiK6rE,10786
+functools2/backends/__init__.py,sha256=Im5XSZXfO9YuAK6rxzcwclqfrvkVre7lEHmXgNoo1nY,172
+functools2/backends/memory.py,sha256=iTFdKlIdJ54P6mOPXKhlPFL1IvTNYlRRbgmaEqWo050,2011
+functools2-0.1.1.dist-info/METADATA,sha256=Dfuk3n37dqTjkbXgHCy5BeoQplCzI88UdLtOkkC3Id4,7456
+functools2-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+functools2-0.1.1.dist-info/RECORD,,
