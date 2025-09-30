@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: bids-mosaic
+Version: 0.1.0
+Summary: A BIDS tool for creating PDFs containing slices of nifti images
+Author-email: Joseph Wexler <jbwexler@stanford.edu>
+License-Expression: MIT
+Project-URL: Source, https://github.com/jbwexler/bids-mosaic
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pybids>=0.16.0
+Requires-Dist: nilearn>=0.10.0
+Requires-Dist: nibabel>=5.0.0
+Requires-Dist: reportlab>=3.6.12
+Requires-Dist: pillow>=9.3.0
+Requires-Dist: matplotlib>=3.7.0
+Dynamic: license-file
+
+## BIDS-Mosaic
+A BIDS tool for creating PDFs containing slices of nifti images
+
+## Installation
+```
+pip install bids-mosaic
+```
+
+## Usage
+```
+bids-mosaic <bids_dataset_directory>
+```
+
+For more options:
+```
+bids-mosaic --help
+```
+
+## Example
+![alt text](visuals/example.png)
+
+## License
+BIDS-Mosaic is licensed under [MIT license](LICENSE.txt).
