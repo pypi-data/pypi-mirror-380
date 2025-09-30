@@ -1,0 +1,5 @@
+[console_scripts]
+ngs-build=scripts:build
+ngs-push=scripts:push
+ngs-run=scripts:run
+
