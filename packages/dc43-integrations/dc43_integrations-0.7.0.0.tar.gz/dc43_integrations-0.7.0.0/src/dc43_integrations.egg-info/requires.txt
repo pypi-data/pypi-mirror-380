@@ -1,0 +1,5 @@
+dc43-service-clients>=0.0.3
+pyspark>=3.4
+
+[spark]
+pyspark>=3.4
