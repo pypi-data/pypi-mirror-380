@@ -1,0 +1,10 @@
+sideload/__init__.py,sha256=Y3rHLtR7n0sjLXrn-BEcrbIHx-9uE1tPZkooavo7xcA,222
+sideload/cli.py,sha256=2UQ_DgvB7S0MXmBhXwjx2T78-ZZzCUO4hN2YfCJ2hf8,15061
+sideload/jsonbin.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sideload/jsonbin_connector.py,sha256=HtR1Pwnpm5jfYcmnvcug9HaKxFpsyJBXYYlLuzWPiTE,1680
+sideload/jsonbin_old.py,sha256=ve21WsV7Ay60moFfrR4lSM_JRZNqo4z5v69cNw0Iqo0,8411
+sideload/main.py,sha256=5iAQQlHeCdCHxOWE9OPKHF9TNs0k45n9rnUbruleT8w,7589
+sideload-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+sideload-0.1.0.dist-info/entry_points.txt,sha256=7ULrIjaVhrxMhuddTeoPjeIrqmIvVc9cSU3lZU2_YqE,44
+sideload-0.1.0.dist-info/METADATA,sha256=Ouf83o2V29NcOs2pEPWVxmhgzUBP1D-SvgDt69-jZlY,4247
+sideload-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,138 @@
+Metadata-Version: 2.3
+Name: sideload
+Version: 0.1.0
+Summary: Download large files via PyPI packages
+Author: Sygmei
+Author-email: Sygmei <3835355+Sygmei@users.noreply.github.com>
+Requires-Dist: build>=1.3.0
+Requires-Dist: twine>=6.2.0
+Requires-Dist: wheel>=0.45.1
+Requires-Dist: rich>=13.0.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pip>=25.2
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# 🚀 Sideload
+
+Download large files via PyPI packages! Sideload automatically splits large files into PyPI-compliant chunks and allows you to download them through a beautiful CLI interface.
+
+## Features
+
+- ✨ **Beautiful CLI** powered by Rich with progress bars and status updates
+- 📦 **Automatic file splitting** into 99MB PyPI-compliant chunks
+- 🔄 **Automatic reassembly** of downloaded parts
+- 🌐 **JSONBin integration** for request tracking
+- 🛡️ **Error handling** with detailed progress monitoring
+
+## Installation
+
+```bash
+git clone <repository-url>
+cd Sideload
+uv install
+```
+
+## Usage
+
+### Environment Variables
+
+Set up your credentials:
+
+```bash
+export JSONBIN_TOKEN="your_jsonbin_token"
+export SIDELOAD_COLLECTION_ID="your_collection_id"
+```
+
+### Download a File
+
+```bash
+# Basic usage
+uv run sideload download https://example.com/largefile.zip
+
+# Specify output directory
+uv run sideload download https://example.com/largefile.zip --output ./downloads/
+
+# Override credentials
+uv run sideload download https://example.com/largefile.zip --token YOUR_TOKEN --collection YOUR_COLLECTION
+```
+
+### How it Works
+
+1. **Submit Request**: The CLI creates a new request in your JSONBin collection
+2. **Monitor Progress**: Real-time progress monitoring with beautiful progress bars
+3. **Download Packages**: Automatically downloads all PyPI packages containing file parts
+4. **Reassemble**: Extracts and concatenates parts to rebuild the original file
+
+### CLI Interface
+
+The CLI provides:
+
+- 🌈 **Colorful output** with status indicators
+- 📊 **Progress bars** for downloads and processing
+- 📈 **Real-time monitoring** of server-side processing
+- ✅ **Success/error reporting** with detailed information
+- 📋 **Summary tables** showing download statistics
+
+### Example Output
+
+```
+🚀 SIDELOAD
+Download large files via PyPI packages
+
+🌐 Requesting download for: https://example.com/largefile.zip
+✅ Created sideload request: abc123def456
+
+📡 Monitoring Progress
+📥 Downloading... (45%) ████████████████▌                 
+🔨 Building packages...
+📤 Uploading part 1/3...
+
+📊 Download Summary
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property          ┃ Value                           ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Original Filename │ largefile.zip                   │
+│ File Size         │ 250,123,456 bytes               │
+│ Total Packages    │ 3                               │
+│ Status            │ ✅ UPLOADED                     │
+└───────────────────┴─────────────────────────────────┘
+
+📦 Downloading Packages
+📦 Downloading package 1/3... ████████████████████████████
+
+🔧 Reassembling File
+🔗 Assembling part 1/3... ████████████████████████████
+
+✨ Complete
+🎉 File successfully downloaded to: largefile.zip
+📊 File size: 250,123,456 bytes
+```
+
+## Development
+
+### Server Setup
+
+The server component handles file processing and PyPI uploads:
+
+```bash
+# Set environment variables
+export JSONBIN_TOKEN="your_token"
+export PYPI_TOKEN="your_pypi_token"
+
+# Run the server
+uv run python src/sideload/main.py
+```
+
+### Project Structure
+
+```
+src/sideload/
+├── __init__.py     # Package initialization
+├── main.py         # Server component
+└── cli.py          # CLI client
+```
+
+## License
+
+[Your License Here]
