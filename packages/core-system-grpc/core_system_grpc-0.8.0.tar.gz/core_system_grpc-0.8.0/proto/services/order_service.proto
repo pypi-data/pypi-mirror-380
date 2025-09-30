@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package core_system.order.v1;
+
+import "messages/common/request.proto";
+import "messages/order/response.proto";
+
+option py_generic_services = true;
+
+// OrderService 정의
+service OrderService {
+    rpc GetOrdersByShop(core_system.common.v1.GetByShopRequest) returns (GetOrdersByShopResponse);
+}
