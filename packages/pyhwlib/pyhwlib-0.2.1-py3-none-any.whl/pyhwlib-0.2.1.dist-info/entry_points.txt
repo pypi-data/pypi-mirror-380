@@ -1,0 +1,5 @@
+[console_scripts]
+pyhwlib = pyhwlib.tests.test:hello
+pyhwlib-cli = pyhwlib.tests.test:get_config
+pyhwlib-main = pyhwlib.tests.test:main
+
