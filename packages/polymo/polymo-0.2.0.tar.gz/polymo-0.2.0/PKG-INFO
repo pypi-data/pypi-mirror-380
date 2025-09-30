@@ -1,0 +1,101 @@
+Metadata-Version: 2.3
+Name: polymo
+Version: 0.2.0
+Summary: API ingestion for PySpark
+Author: Daniel Tom
+Author-email: Daniel Tom <d.e.tom89@gmail.com>
+Requires-Dist: fsspec>=2025.9.0
+Requires-Dist: httpx>=0.26
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: polymo[builder,smoke] ; extra == 'all'
+Requires-Dist: fastapi>=0.110 ; extra == 'builder'
+Requires-Dist: uvicorn>=0.24 ; extra == 'builder'
+Requires-Dist: jinja2>=3.1.6 ; extra == 'builder'
+Requires-Dist: pyspark>=4 ; extra == 'builder'
+Requires-Dist: pyarrow>=13 ; extra == 'builder'
+Requires-Dist: pyspark>=4 ; extra == 'smoke'
+Requires-Dist: pyarrow>=13 ; extra == 'smoke'
+Requires-Python: >=3.10
+Provides-Extra: all
+Provides-Extra: builder
+Provides-Extra: smoke
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img src="builder-ui/public/logo.png" alt="Polymo" width="220">
+</p>
+
+Polymo turns REST APIs into Spark DataFrames with a single declarative configuration file. The library builds on top of the DataSource V2 implementation for PySpark 4, while the companion builder UI helps you design, validate, and preview connectors without writing code.
+
+## Highlights
+- Visual builder keeps a form-based editor and live YAML in sync, with validation and previews.
+- Configuration is plain YAML: describe the base URL, pagination, query parameters, and optional record selectors—no custom code required.
+- Spark-native DataSource exposes `spark.read.format("polymo")`, so connectors slot into existing ETL jobs, notebooks, or scheduled (lakeflow) pipelines.
+- Fast sampling pipeline shows both DataFrame output and raw API pages, making it easy to debug response shapes and headers.
+- Jinja templating, environment variable lookups, and runtime Spark options let you parameterise connectors for different environments.
+- Incremental sync support seeds API cursors from JSON state files (local or remote via `fsspec`) and updates them automatically between runs.
+
+## Install
+
+```bash
+# Lightweight core package with only httpx, pydantic and jinja2 dependencies
+pip install polymo
+# Adds Spark, FastAPI/uvicorn and frontend assets for the builder UI
+pip install "polymo[builder]"
+
+```
+
+Polymo requires PySpark 4.x. The CLI enforces this requirement before launching the builder or smoke test helpers.
+
+## Quick Start
+
+1. **Describe a stream** in YAML:
+
+   ```yaml
+   version: 0.1
+   source:
+     type: rest
+     base_url: https://jsonplaceholder.typicode.com
+   stream:
+     path: /posts
+     params:
+       _limit: 20
+     infer_schema: true
+   ```
+
+2. **Read the API with Spark**:
+
+   ```python
+   from pyspark.sql import SparkSession
+   from polymo import ApiReader
+
+   spark = SparkSession.builder.getOrCreate()
+   spark.dataSource.register(ApiReader)
+
+   df = (
+    spark.read.format("polymo")
+    .option("config_path", "./config.yml")
+    .option("token", "<YOUR_BEARER_TOKEN>")
+    .load()
+   
+   df.show()
+   ```
+
+3. **Use the builder UI** to iterate faster:
+
+   ```bash
+   polymo builder --port 9000
+   ```
+
+   The browser app walks you through the same settings, validates the YAML against the Python backend, runs sample requests, and lets you save polished configs.
+
+## Project Pieces
+- `src/polymo/` – PySpark DataSource, config validation, and REST client.
+- `polymo builder` – FastAPI backend with a React/Tailwind single-page app under `builder-ui/`.
+- `examples/` – Ready-to-run connector samples used by the smoke test and the builder landing screen.
+
+## Where to Next
+Read the docs [here](https://dan1elt0m.github.io/polymo/)
+
+Contributions and early feedback welcome!
