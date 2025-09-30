@@ -1,0 +1,10 @@
+include *.py
+include *.txt
+include *.md
+recursive-include soulless_ai_dem *.py
+recursive-include soulless_ai_dem *.ttf
+recursive-include soulless_ai_dem *.png
+recursive-include soulless_ai_dem *.jpg
+include soulless_ai_dem/templates/*.jpg
+recursive-include soulless_ai_dem/templates *
+include README.md
