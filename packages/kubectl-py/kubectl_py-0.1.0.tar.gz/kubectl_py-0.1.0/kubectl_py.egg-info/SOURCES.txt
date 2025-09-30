@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kubectl_py/kustomize.py
+kubectl_py.egg-info/PKG-INFO
+kubectl_py.egg-info/SOURCES.txt
+kubectl_py.egg-info/dependency_links.txt
+kubectl_py.egg-info/entry_points.txt
+kubectl_py.egg-info/top_level.txt
