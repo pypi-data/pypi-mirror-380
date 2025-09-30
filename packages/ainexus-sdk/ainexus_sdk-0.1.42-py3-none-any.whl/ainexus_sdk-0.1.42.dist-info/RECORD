@@ -1,0 +1,10 @@
+ainexus_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ainexus_sdk/cli.py,sha256=I4Ydfyn0a0zP4LwQIrqCN-2cqi9ByZ_m2tRbcpWhE90,2500
+ainexus_sdk/client.py,sha256=08iaYUxCwBv7gXQJNHyLor2im2_AYCn00e-2K892ho0,5890
+ainexus_sdk/config.py,sha256=Sw9URmBAIPfbc-U_D-0LI1BGzqqq7BwfwI2mVBntlmQ,2317
+ainexus_sdk/model.py,sha256=wk1CbLCmfRGh_5EolioSRvq59O8VumUI409ve19KqOc,909
+ainexus_sdk/supabase_handler.py,sha256=upfWbcHE9EiKteJdeeQpPBqJcOfSnwg9AhYucyc3Gds,891
+ainexus_sdk-0.1.42.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+ainexus_sdk-0.1.42.dist-info/entry_points.txt,sha256=TE6zs11Usjd5bO0TF0WTekjj55y62enyrXisxNGFGKU,49
+ainexus_sdk-0.1.42.dist-info/METADATA,sha256=FAqNHlkV65M9kHbXnSzsxPGlPXQKETuZ3NuNnPaW7rE,1030
+ainexus_sdk-0.1.42.dist-info/RECORD,,
