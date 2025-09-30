@@ -1,0 +1,15 @@
+awsbatch/__init__.py,sha256=bCZiDjDlSL4k5hlcjsJIwqVzdJEMp_t_hviGaO5h06E,554
+awsbatch/awsbhosts.py,sha256=P1JK-N5nSpXz3VWAGDni5uHiKn5KM1KvHm9YR7giZXo,13191
+awsbatch/awsbkill.py,sha256=x2wftdQu3gXV6JM9ls79jOkHrBd_OeAyy9L5I6sUUlE,4777
+awsbatch/awsbout.py,sha256=tcoAN-mEqlGjpCWbdXDaXloR2FVqv5SlKwEXWATS2FQ,8787
+awsbatch/awsbqueues.py,sha256=Aqbc5fu5ClvNPQO8E7SxhFwFeTwdA1PqPAD72G3jAQg,5500
+awsbatch/awsbstat.py,sha256=n16ZdcuuPiMwVRjxoGpSkA_StqRFJDRPOBGZouk1RHA,19247
+awsbatch/awsbsub.py,sha256=VD5Aqy73MHy5ZqKM1PDCwcoXqBtx8CMHAVP0-kuQ-tk,22244
+awsbatch/common.py,sha256=cNj-Ew8oMUR8EqKdieKTex9DPLoYZJEH9hiB-ZM30Zo,14826
+awsbatch/utils.py,sha256=I2Hue6BKIolBPhBr8ykPu77bSankIj1CvL2NcM8phnc,4653
+awsbatch/examples/awsbatch-cli.cfg,sha256=FEMB15Dvz-1aHWoz1gF_MmiKKpq5T92KHyE3I15TuGU,2515
+aws_parallelcluster_awsbatch_cli-1.5.0.dist-info/METADATA,sha256=JBlk7OOzYlF2cfned0kPzG6BF1tpAM1vT_rXoJX5Df0,1828
+aws_parallelcluster_awsbatch_cli-1.5.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aws_parallelcluster_awsbatch_cli-1.5.0.dist-info/entry_points.txt,sha256=1RncD7DijV89MjX2OGBeZSaXuX8Y6itwQGj-m1706so,224
+aws_parallelcluster_awsbatch_cli-1.5.0.dist-info/top_level.txt,sha256=2hy4g6sttiUJnvhwTNDfjox8Rq4TvGpV0x79sk8X-nM,9
+aws_parallelcluster_awsbatch_cli-1.5.0.dist-info/RECORD,,
