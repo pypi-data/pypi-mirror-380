@@ -1,0 +1,26 @@
+{
+  "name": "0g-compute-starter-kit",
+  "version": "1.0.0",
+  "description": "REST API starter kit for interacting with the 0G Compute Network",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "serve": "ts-node src/index.ts",
+    "watch": "nodemon --exec ts-node src/index.ts",
+    "demo": "ts-node src/demo-compute-flow.ts"
+  },
+  "dependencies": {
+    "@0glabs/0g-serving-broker": "^0.4.4",
+    "@types/crypto-js": "4.2.2",
+    "circomlibjs": "^0.1.7",
+    "crypto-js": "4.2.0",
+    "ethers": "^6.13.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
