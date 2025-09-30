@@ -1,0 +1,2 @@
+[console_scripts]
+pypi-test-app = pypi_test_app.cli:main
