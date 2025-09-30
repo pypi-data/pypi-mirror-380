@@ -1,0 +1,11 @@
+magic_admin/__init__.py,sha256=DuRZ7GbiA_ZmOZ-9eOjTMvRDC5JuVE-4F7ZG4IoGfG4,213
+magic_admin/config.py,sha256=n2HFDIxDTRRQTOYwLspb4lGUnObQTwK3gK5_kohWNDs,456
+magic_admin/error.py,sha256=73yr-TWgxGY5kvMMrtPJKzP566HI41MZ_hVd6OcrFO0,2270
+magic_admin/http_client.py,sha256=9Sg5rLhIZDfVo-xj9agkuqOOR_xQqHxLAAhg0fdlXJk,4570
+magic_admin/magic.py,sha256=-ydXF1ALw4l53bWVZPuZRw-LIL-9LEIyaitggdd2AHw,1542
+magic_admin/response.py,sha256=irjZDDLv79IzmIK_sohcZw-1UAbDZWsDjccKv0kujO8,178
+magic_admin/version.py,sha256=g3cxz98sq2sH94EJfsXt9vgetLlENXp3IEKtEY6wMyg,18
+magic_admin-2.1.2.dist-info/METADATA,sha256=e_IHIQzzeeQ6A-m1Vxg4fOdMcuU61Y03lx7CPo2V6m4,4433
+magic_admin-2.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+magic_admin-2.1.2.dist-info/top_level.txt,sha256=apXKs0D-XDoIjenh62w68eONw8qHW7s5FgRoA5vc2aw,12
+magic_admin-2.1.2.dist-info/RECORD,,
