@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+ayikla/__init__.py
+ayikla/extractor.py
+ayikla/firmalar.txt
+ayikla/isimler.txt
+ayikla/kurlar.txt
+ayikla/lokasyon.txt
+ayikla/olculer.txt
+ayikla/soyisimler.txt
+ayikla.egg-info/PKG-INFO
+ayikla.egg-info/SOURCES.txt
+ayikla.egg-info/dependency_links.txt
+ayikla.egg-info/requires.txt
+ayikla.egg-info/top_level.txt
