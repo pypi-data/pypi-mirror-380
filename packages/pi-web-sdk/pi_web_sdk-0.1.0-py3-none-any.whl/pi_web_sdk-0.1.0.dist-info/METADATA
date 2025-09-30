@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: pi-web-sdk
+Version: 0.1.0
+Summary: Python SDK for the OSIsoft PI Web API
+Author: PI Web API SDK Maintainers
+Project-URL: Homepage, https://example.com/pi-web-sdk
+Project-URL: Repository, https://example.com/pi-web-sdk/source
+Keywords: osi,pi,web,api,sdk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Requires-Dist: requests<3,>=2.31
