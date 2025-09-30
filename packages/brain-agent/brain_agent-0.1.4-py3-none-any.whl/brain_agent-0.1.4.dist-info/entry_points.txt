@@ -1,0 +1,2 @@
+[console_scripts]
+brain-agent-server = brain_agent.brain_agent_mcp:main
