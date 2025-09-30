@@ -1,0 +1,13 @@
+aplicacion_ventas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aplicacion_ventas/descuentos.py,sha256=WGGEAczt45sKuvMX32A8ZVyl3sZDQ_AvQ-CCe6in5BQ,361
+aplicacion_ventas/exceptions.py,sha256=bVw220GICNMvD7z9aLdbOXcOxC8qimk-7jZ1mCUJlo0,103
+aplicacion_ventas/gestor_ventas.py,sha256=4J0aiufywsfFHrLpWLGHKJC_rFbaPHcJ7_MnxcPKJ5o,699
+aplicacion_ventas/impuestos.py,sha256=p4_Oqhh_0mZu8v1IwT2C1FyNNH4jmA-delqR2d4JKMc,360
+aplicacion_ventas/precios.py,sha256=DOjBR-Y6RjHD1UvkWpp7KL4CzLC049Xa6m2WG5XomiU,150
+aplicacion_ventas_mbracho-0.1.0.dist-info/licenses/LICENSE,sha256=A5yB-9wWzzRfwfKcuFpEDawxs6Z8uMRLpI2zienHmzU,1210
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aplicacion_ventas.py,sha256=xw4knCzWRkZlyy_DIZLlCvfVujiB6jTdCeKouaCYkKg,727
+aplicacion_ventas_mbracho-0.1.0.dist-info/METADATA,sha256=7XddUH2U3bY5eeGaIX2x4q0thPKnnzVbsyxCirmyOzI,952
+aplicacion_ventas_mbracho-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aplicacion_ventas_mbracho-0.1.0.dist-info/top_level.txt,sha256=e68vDMUd0q6tO18ZL6CxZSvXsWFGh3xXNwO4KUgPHvI,24
+aplicacion_ventas_mbracho-0.1.0.dist-info/RECORD,,
