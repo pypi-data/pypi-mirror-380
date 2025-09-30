@@ -1,0 +1,14 @@
+nonebot_plugin_copywrite/__init__.py,sha256=EZhBa2fE-0tRpYLjR7a5QHjOwsu4zgPYU8b-Eml6zUE,13834
+nonebot_plugin_copywrite/chat.py,sha256=aIuMfEcAvC7kOqItiHXRE2PEZThJ8hu2cGw0OC78r4Y,1241
+nonebot_plugin_copywrite/config.py,sha256=sCCmloPzBz_JgGo5wKm2fm7BKPyCAHRKsrvC0DQJA98,147
+nonebot_plugin_copywrite/copywrite/__init__.py,sha256=oEu73StI7dTqMpyUN__Z-IGxXIk2TD-jzbzF3zQwxho,1403
+nonebot_plugin_copywrite/copywrite/default.long.yaml,sha256=jMa6KiluLW30_kG5nt6YJf_b46cb0mwf9ivWKD_E558,38405
+nonebot_plugin_copywrite/copywrite/default.short.yaml,sha256=VHNeYXlF7aoq8B7EXMXvCi0x8mAGtpr3iPzim5IstP8,17051
+nonebot_plugin_copywrite/copywrite/fran.long.yaml,sha256=cpteWvvn8Evxd-RJfgL2n9J6z8yRoh7lA07H0HcWVJ8,6432
+nonebot_plugin_copywrite/copywrite/fran.short.yaml,sha256=wkElK-Cuay47duzjZP8BDsem27eiK-b7UGKOqT1rCVI,4747
+nonebot_plugin_copywrite/copywrite/life.checkpoint.long.yaml,sha256=LxufC-v6j_xi_W0km6483ig9US0dDtjhzKBF4t-M14U,13574
+nonebot_plugin_copywrite/copywrite/sujoke.short.yaml,sha256=k-6YL97H2EK_BExf5Onapt68ix0LJmAanH7lBgV6aac,782
+nonebot_plugin_copywrite-0.3.0.dist-info/METADATA,sha256=oWabH8KJgT0w4WE7xlu1arFmUdG3RmqHi343IOmih50,5751
+nonebot_plugin_copywrite-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nonebot_plugin_copywrite-0.3.0.dist-info/licenses/LICENSE,sha256=YwX5XGk3mLSfNTRIfnRwpBGVDeOLLMPEqZvJW8wWlF4,11333
+nonebot_plugin_copywrite-0.3.0.dist-info/RECORD,,
