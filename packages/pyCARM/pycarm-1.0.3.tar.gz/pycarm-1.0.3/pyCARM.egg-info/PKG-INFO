@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: pyCARM
+Version: 1.0.3
+Summary: pyCARM: Cellular Automata for Aircraft Arrival Modelling
+Home-page: https://github.com/IkeoluwaSta/pyCARM
+Author: The Hong Kong University of Science
+Author-email: iiogedengbe@connect.ust.hk
+Project-URL: Source Code, https://github.com/IkeoluwaSta/pyCARM
+Project-URL: Bug Tracker, https://github.com/IkeoluwaSta/pyCARM/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: distinctipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Project
+
+## pyCARM - Cellular Automata for Aircraft Arrival Modeling
+
+This repository contains some of the source code used for the paper titled *Cellular automata for the investigation of navigation dynamics and aircraft mix in terminal arrival traffic*. Physica A, 671 (2025), 130628. https://doi.org/10.1016/j.physa.2025.130628. The article is available online at [Link](https://doi.org/10.1016/j.physa.2025.130628) and in the [docs](docs) folder. 
+
+# Introduction
+Investigating the impact of traffic mix and route flexibility on the arrival traffic dynamic within the terminal maneuvering area (TMA) is challenging, mainly due to the spatial constraints and wake turbulent separation requirements. In this study, we capture the dynamism of complex interactions and non-linearity in traffic by using a cellular automaton that is modified to enable more realistic representation of air traffic movements. Our results show that route flexibility makes traffic less sensitive to changes caused by size-based traffic mix and demonstrate the emergence of an organized flow zone in the fundamental diagram of the flexible strategies. When a gentle TMA saturation behavior is preferred, however, less flexible routes are deemed more suitable. As a general principle, we propose to adopt a mixed strategy that uses a fixed
+routing strategy at low TMA occupancies and a flexible routing strategy at medium to high TMA occupancies.
+
+<img width="607" height="370" alt="Image" src="https://github.com/user-attachments/assets/f73621d4-d229-4439-82db-e0015056b3c7" />
+
+# Dependencies
+numpy
+
+distinctipy
+
+matplotlib
+
+Collections
+
+
+# Citation
+
+```
+@article{ogedengbe2025cellular,
+  title={Cellular automata for the investigation of navigation dynamics and aircraft mix in terminal arrival traffic},
+  author={Ogedengbe, Ikeoluwa Ireoluwa and Tai, Tak Shing and Wong, KY Michael and Liem, Rhea P},
+  journal={Physica A: Statistical Mechanics and its Applications},
+  pages={130628},
+  year={2025},
+  publisher={Elsevier}
+}
+
+```
+
+# References
+[1] Ogedengbe, I. I., Tai, T. S., Wong, K. M., & Liem, R. P. (2025). Cellular automata for the investigation of navigation dynamics and aircraft mix in terminal arrival traffic. Physica A: Statistical Mechanics and its Applications, 130628.
+
+[2] Ogedengbe, I. I., Wong, M. K., & Liem, R. P. (2023). A Comparative Analysis of Terminal Area Navigation and Conventional Standard Arrival Routes with Cellular Automata. In AIAA AVIATION 2023 Forum (p. 3969).
+
