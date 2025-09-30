@@ -1,0 +1,9 @@
+numpy==1.25
+pandas==2.0.0
+geopandas==0.12.2
+fiona==1.8.22
+matplotlib
+h3==3.7.7
+geovoronoi==0.4.0
+rtree==1.2.0
+descartes==1.1.0
