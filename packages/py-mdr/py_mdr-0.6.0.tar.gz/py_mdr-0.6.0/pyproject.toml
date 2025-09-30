@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "py-mdr"
+version = "0.6.0"
+description = "Project to help interacting with the internal MDR project."
+authors = ["Jorge L. Martinez <jmartinez@schubergphilis.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+httpx = "^0.28.1"
+requests = "^2.32.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
