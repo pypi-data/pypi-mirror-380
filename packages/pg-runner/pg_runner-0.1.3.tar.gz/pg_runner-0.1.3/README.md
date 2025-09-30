@@ -1,0 +1,131 @@
+# PG Runner: A Robust PostgreSQL Script Runner
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+PG Runner is a standalone, production-ready Python CLI tool for reliably executing SQL scripts against a PostgreSQL database. It’s built to handle the realities of non-trivial SQL files so your database setup and migrations are safe, repeatable, and easy to debug.
+
+At its core is a robust SQL statement splitter that correctly handles semicolons appearing inside comments, string literals, and PostgreSQL dollar-quoted strings—preventing common script-running failures.
+
+## Key Features
+
+- Robust SQL parser:
+- Single-quoted strings (`'...'`) with escaped quotes (`''`)
+- Double-quoted identifiers (`"..."`) with escaped quotes (`""`)
+- Dollar-quoted strings (`$$...$$` and `$tag$...$tag$`)
+- Line comments (`-- ...`) and block comments (`/* ... */`)
+- Transactional by default:
+- Executes each file within a transaction; on error, changes are rolled back
+- Two execution modes:
+
+  1. phases: For structured projects using named files (`schema.sql`, `indexes.sql`, `views.sql`)
+  2. dir: Run all `.sql` files in a directory in alphabetical order
+
+- Non-transactional DDL support:
+- Autocommit mode for operations like `CREATE INDEX CONCURRENTLY`
+- Flexible configuration:
+- Use `--db-url`, individual CLI flags (`--host`, `--user`, ...), or `POSTGRES_*` environment variables
+
+## Installation
+
+Use pip or pipx:
+
+```bash
+pip install pg-runner
+# or
+pipx install pg-runner
+```
+
+Requires Python 3.10+.
+
+## Usage
+
+The `pg-runner` command provides two primary subcommands (`phases` and `dir`) and convenience commands for individual phases.
+
+```text
+usage: pg-runner [-h] [--log-level LOG_LEVEL] [--no-emoji]
+                 [--db-url DB_URL] [--host HOST] [--port PORT]
+                 [--database DATABASE] [--user USER] [--password PASSWORD]
+                 COMMAND ...
+
+Standalone PostgreSQL database setup and SQL runner
+
+options:
+  -h, --help            show this help message and exit
+  --log-level LOG_LEVEL Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL) [default: INFO]
+  --no-emoji            Disable emoji output for CI environments
+
+database connection options:
+  --db-url DB_URL       SQLAlchemy DB URL (overrides all other options). Can also use DATABASE_URL or DB_URL env vars.
+  --host HOST           DB host (env: POSTGRES_HOST; default: localhost)
+  --port PORT           DB port (env: POSTGRES_PORT; default: 5432)
+  --database DATABASE   DB name (env: POSTGRES_DB or POSTGRES_DATABASE; default: postgres)
+  --user USER           DB user (env: POSTGRES_USER; default: postgres)
+  --password PASSWORD   DB password (env: POSTGRES_PASSWORD; default: empty)
+
+commands:
+  phases                 Run project-style phases (schema, indexes, views)
+  dir                    Run all .sql files in a directory alphabetically
+  schema                 Run only the 'schema' phase
+  indexes                Run only the 'indexes' phase
+  views                  Run only the 'views' phase
+```
+
+### Example: phases mode
+
+Project-style layout:
+
+```text
+my_project/
+└── database/
+    ├── schema.sql
+    ├── indexes.sql
+    └── views.sql
+```
+
+Run all phases:
+
+```bash
+export POSTGRES_USER=myuser
+export POSTGRES_PASSWORD=secret
+export POSTGRES_DB=mydb
+
+pg-runner phases --db-dir ./database
+```
+
+Run only a single phase:
+
+```bash
+pg-runner schema --db-dir ./database
+```
+
+Enable concurrent indexes (autocommit during indexes phase):
+
+```bash
+pg-runner phases --db-dir ./database --concurrent-indexes
+```
+
+### Example: dir mode
+
+Run every `.sql` file in alphabetical order:
+
+```bash
+pg-runner dir \
+  ./migration_scripts \
+  --db-url "postgresql://myuser:secret@localhost:5432/mydb"
+```
+
+Recurse into subdirectories and run in autocommit mode:
+
+```bash
+pg-runner dir ./indexes --recursive --autocommit
+```
+
+## Notes
+
+- This tool is not a migration framework (no schema versioning or down migrations). It’s a robust SQL runner suitable for bootstrapping, seeding, and operational scripts.
+- If your scripts create indexes concurrently, use `--concurrent-indexes` in phases mode or `--autocommit` in dir mode to avoid running those statements inside a transaction.
+
+## License
+
+MIT — see the LICENSE file for details.
