@@ -1,0 +1,13 @@
+toolos/__init__.py,sha256=BW4dnwUZ3GNOYCxmdRKk4IuA51EVB4qn6WTMm57SIrc,86
+toolos/api.py,sha256=O5CP4Zrp35z9o5zVcX35zRowLFC_CNV_p076R1kDIIk,20440
+toolos/data/lang/de.json,sha256=F2x8bVc5Y3tTag6Gb9WAvscmFA9Bb-IyTA0GEw74TOQ,6875
+toolos/data/lang/en.json,sha256=GTpEK6MmZKKgOfZDNByLzpMUE4iAyJVwG2UHs2KksJc,6363
+toolos/data/lang/es.json,sha256=Gf7jcXWAaMcdIkMfCKL_hQDo1A6KyQdAOuxQ6UaMtBE,6844
+toolos/data/lang/fr.json,sha256=EwpMz0Idh4vU8rtCJhr-zgbV3qq8x27EBKaBtCOtEjU,6873
+toolos/data/lang/ru.json,sha256=5_PJhBo68FbuZEiNs1gydnEU9Wycuu2zUYGEF5XJF_E,8948
+toolos/data/lang/sv.json,sha256=5mFOrhkjtHHiR7y53Uhy1h9wrxW4oeijuiA1bbCvKxU,6616
+toolos/data/lang/tr.json,sha256=jj8xqfyLygPYk7VclkdRqCBIOjTYQQZSqNYTexng3cI,6705
+toolos-2.3.4.dist-info/METADATA,sha256=m-zjJT_NBpltMKlUAcDem_BdmQFnk6e6lnHYKKoRIAA,10273
+toolos-2.3.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+toolos-2.3.4.dist-info/top_level.txt,sha256=HLIf5M0HgSUBN5emOFzCoZUW9dvbZwVyzxzJv9kYgTI,7
+toolos-2.3.4.dist-info/RECORD,,
