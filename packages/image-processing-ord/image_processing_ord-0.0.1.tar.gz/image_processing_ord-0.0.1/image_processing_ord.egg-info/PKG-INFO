@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: image_processing_ord
+Version: 0.0.1
+Summary: Pacote de Processamento de Imagens
+Author: ORD
+Author-email: ord@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# image_processing
+
+DescriÃ§Ã£o
+Pacote de processamento de Imagens:
+	- Processing
+		- Find difference
+		- Transfer histogram
+		- Resize image
+	- Utils
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram
+
+## InstalaÃ§Ã£o
+
+Use o gerenciador de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar image_processing.
+
+```bash
+pip install image_processing
+```
+
+## UtilizaÃ§Ã£o
+
+```python
+from image_processing.processing import combination
+combination.find_difference()
+```
+
+## Autor
+ORD
+
+## LicenÃ§a
+[MIT](https://choosealicense.com/licenses/mit/)
