@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: rmonico.tabular
+Version: 0.0.1
+Summary: Generate text tables
+Home-page: https://codeberg.org/rmonico/tabular
+Author: Rafael Monico
+Author-email: rmonico1@gmail.com
+License: GPL3
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary

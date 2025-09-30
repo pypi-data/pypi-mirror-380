@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+rmonico.tabular.egg-info/PKG-INFO
+rmonico.tabular.egg-info/SOURCES.txt
+rmonico.tabular.egg-info/dependency_links.txt
+rmonico.tabular.egg-info/not-zip-safe
+rmonico.tabular.egg-info/top_level.txt
+tabular/__init__.py
+tabular/currency.py
+tabular/factory.py
+tabular/formatters.py
+tabular/theme.py
+tests/test_currency.py
+tests/test_tabular.py
