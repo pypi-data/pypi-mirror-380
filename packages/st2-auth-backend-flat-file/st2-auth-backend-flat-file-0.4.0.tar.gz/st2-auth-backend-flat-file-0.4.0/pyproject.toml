@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+pythonpath = [
+  ".",
+  "st2auth_flat_file_backend"
+]
