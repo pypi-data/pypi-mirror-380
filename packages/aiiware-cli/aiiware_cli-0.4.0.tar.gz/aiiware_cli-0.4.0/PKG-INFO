@@ -1,0 +1,434 @@
+Metadata-Version: 2.4
+Name: aiiware-cli
+Version: 0.4.0
+Summary: AI-powered terminal assistant for developers: natural language commands for git commits, code generation, translation, content writing, shell automation, and analysis. Supports Claude, GPT, and Gemini.
+Author-email: aii Dev <aii-dev@aiiware.com>
+Maintainer-email: aii Dev <aii-dev@aiiware.com>
+License: Apache-2.0
+License-File: LICENSE
+Keywords: ai,ai-assistant,ai-cli,ai-code-review,ai-commands,ai-git-commit,ai-translation,ai-writing,anthropic,automation,chatgpt,chatgpt-cli,claude,cli,code-analysis,code-assistant,code-explainer,code-generation,coding-assistant,command-line,commit-message-generator,content-generation,conversational-ai,cross-platform,developer-tools,devtools,gemini,git-assistant,git-commit,google-ai,gpt,llm,llm-cli,natural-language,openai,productivity,pydantic-ai,python,python-cli,shell-automation,terminal,terminal-assistant,translation,translator,workflow-automation,writing-assistant
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: System Shells
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.9.0
+Requires-Dist: aiosqlite>=0.19.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: google-genai>=1.0.0
+Requires-Dist: google-generativeai>=0.8.5
+Requires-Dist: httpx>=0.28.0
+Requires-Dist: importlib-metadata>=1.0; python_version < '3.8'
+Requires-Dist: keyring>=24.0.0
+Requires-Dist: psutil>=7.1.0
+Requires-Dist: pydantic-ai>=1.0.6
+Requires-Dist: pydantic>=2.10.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: rich>=13.0.0
+Requires-Dist: types-pyyaml>=6.0.12.20250915
+Requires-Dist: typing-extensions>=4.0.0; python_version < '3.11'
+Provides-Extra: dev
+Requires-Dist: black>=25.1.0; extra == 'dev'
+Requires-Dist: isort>=5.13.2; extra == 'dev'
+Requires-Dist: mypy>=1.10.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.25.0; extra == 'dev'
+Requires-Dist: pytest-cov>=5.0.0; extra == 'dev'
+Requires-Dist: pytest>=8.4.2; extra == 'dev'
+Requires-Dist: ruff>=0.6.0; extra == 'dev'
+Requires-Dist: types-psutil>=5.9.5.20240502; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# AII — AI-Powered Terminal Assistant
+
+**AII** (pronounced *"eye"*) is your **intelligent command-line companion** that brings Claude, GPT, and Gemini directly into your terminal through natural language commands.
+
+**🎉 Version 0.4.0** — Feature-complete beta with LLM-first architecture
+
+## Why AII?
+
+**One CLI. 23 AI Functions. Natural Language. Zero Configuration Headaches.**
+
+Stop context-switching between your terminal and ChatGPT. Get instant AI assistance for git commits, code generation, translation, content writing, shell automation, and analysis—all without leaving your terminal.
+
+**Perfect for:**
+- **Developers**: AI-powered git commits, code generation, and shell automation
+- **Creators**: Content writing, translation, and social media posts
+- **Professionals**: Email templates, document analysis, and research assistance
+
+Built with the Pydantic AI framework for reliable, multi-provider LLM integration (Anthropic Claude, OpenAI GPT, Google Gemini).
+
+### 📊 AII vs. Traditional Workflows
+
+| Task | Without AII | With AII |
+|------|-------------|----------|
+| **Git Commit** | Write commit message manually | `aii commit` → AI analyzes diff, generates conventional commit |
+| **Translation** | Copy to browser → ChatGPT → Copy back | `aii translate "text" to spanish` → Instant result |
+| **Code Generation** | Search Stack Overflow → Adapt code | `aii create python email validator` → Complete function |
+| **Shell Commands** | Google syntax → Test carefully | `aii find large files` → Safe command with explanation |
+| **Content Writing** | Open docs/emails separately | `aii write email declining meeting` → Professional draft |
+
+**Result:** Stay in your terminal, maintain flow state, get instant AI assistance.
+
+---
+
+## ✨ Key Features
+
+### 🎯 Natural Language Interface
+Just describe what you want—no commands to memorize:
+- **23 AI Functions**: Content generation, code operations, git integration, shell automation, analysis, translation
+- **Multi-Provider**: Anthropic Claude, OpenAI GPT, Google Gemini with automatic fallbacks
+- **Smart Confirmations**: Context-aware safety checks that don't interrupt safe operations
+- **Session Memory**: Persistent conversations across commands
+
+### 🛡️ Advanced Features in v0.4.0
+- **LLM-First Architecture**: Advanced natural language understanding as primary intent recognition
+- **Thinking Mode Display**: See AI reasoning, confidence scores, and token usage in real-time
+- **Token Tracking**: Monitor usage and costs across all LLM interactions
+- **Debug Mode**: Complete diagnostics with 56 security patterns for command validation
+
+---
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+# With uv (recommended)
+uv tool install aiiware-cli
+
+# Or with pip
+pip install aiiware-cli
+
+# Verify
+aii --version  # → aiiware-cli 0.4.0
+```
+
+### Setup
+
+```bash
+# Interactive configuration
+aii config init
+```
+
+Guides you through provider selection (Claude/GPT/Gemini) and API key setup.
+
+**Get API Keys:**
+- **Claude**: [console.anthropic.com](https://console.anthropic.com/)
+- **GPT**: [platform.openai.com](https://platform.openai.com/)
+- **Gemini**: [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+
+---
+
+## 💡 What You Can Do
+
+### 🔧 Core Use Cases
+
+#### 🔀 **AI Git Commits** — Smart commit message generation
+```bash
+git add . && aii commit
+# Analyzes changes → Generates conventional commit → Shows confidence score
+```
+
+#### 💻 **Code Generation** — Language-agnostic with best practices
+```bash
+aii create a python function to validate emails
+# Complete with typing, docstrings, error handling, and examples
+```
+
+#### 🌍 **Translation** — Context-aware with cultural notes
+```bash
+aii translate "running late for meeting" to spanish
+# → "Voy a llegar tarde a la reunión" with tone analysis
+```
+
+#### 📝 **Content Creation** — Professional writing assistance
+```bash
+aii write a tweet about AI breakthroughs in 2025
+# → Engaging tweet with hashtags, character count validation
+```
+
+#### 🐚 **Shell Automation** — Safe command generation with explanations
+```bash
+aii find all python files modified this week
+# → Generates command, explains safety, requests confirmation
+```
+
+#### 🧠 **Explanations** — Clear technical concepts
+```bash
+aii explain how transformers work in LLMs
+# → Structured explanation with examples and analogies
+```
+
+```bash
+# Translation
+aii translate good morning to french
+aii what does konnichiwa mean?
+
+# Code generation
+aii create a react todo component
+aii write a dockerfile for a node.js app
+
+# Git (after staging changes)
+git add . && aii commit
+aii what changed in the last commit?
+
+# Content creation
+aii write an email declining this meeting politely
+aii generate a product announcement
+
+# Explanations
+aii explain docker containers simply
+aii summarize this article: [paste text]
+```
+
+---
+
+## 📖 Usage Guide
+
+### 🎯 Natural Language Commands
+
+No need to memorize syntax—just describe what you want:
+
+| Command Type | Example | What Happens |
+|-------------|---------|--------------|
+| **Translation** | `aii translate hello to spanish` | Context-aware translation with cultural notes |
+| **Git** | `aii commit` | Analyzes diff → Generates conventional commit |
+| **Code** | `aii write a python email validator` | Complete function with types, docs, examples |
+| **Content** | `aii write a tweet about AI` | Character-limited, engaging, with hashtags |
+| **Shell** | `aii find large files` | Generates safe command with explanation |
+| **Analysis** | `aii explain machine learning` | Structured explanation with examples |
+
+### 🔧 All 23 AI Functions
+
+<details>
+<summary><b>📝 Content Generation</b> (5 functions) — Click to expand</summary>
+
+- **Universal Content**: Flexible generation with tone/style customization
+- **Twitter/Social**: Platform-specific posts with character limits
+- **Email Templates**: Professional business communication
+- **Blog/Article**: Long-form content creation
+</details>
+
+<details>
+<summary><b>💻 Code Operations</b> (2 functions)</summary>
+
+- **Code Generation**: Multi-language with best practices, typing, documentation
+- **Code Review**: Security analysis, style suggestions, optimization tips
+</details>
+
+<details>
+<summary><b>🔀 Git Integration</b> (3 functions)</summary>
+
+- **AI Commit**: Diff analysis → Conventional commit messages
+- **Git Status**: Repository insights with actionable suggestions
+- **Git Diff**: Intelligent change analysis and explanations
+</details>
+
+<details>
+<summary><b>🐚 Shell Operations</b> (4 functions)</summary>
+
+- **Command Generation**: Safe shell command creation with confirmation
+- **Enhanced Shell**: AI-powered execution with tool calling
+- **Streaming Shell**: Real-time command output
+- **Contextual Shell**: Environment-aware operations
+</details>
+
+<details>
+<summary><b>🧠 Analysis & Research</b> (3 functions)</summary>
+
+- **Explain**: Technical concepts with examples and analogies
+- **Summarize**: Intelligent content condensation
+- **Research**: Web-based research with source validation
+</details>
+
+<details>
+<summary><b>🌍 Translation & Language</b> (2 functions)</summary>
+
+- **Translation**: Multi-language with cultural context
+- **Language Detection**: Automatic language identification
+</details>
+
+<details>
+<summary><b>📊 Context Management</b> (3 functions)</summary>
+
+- **Git Context**: Repository history and structure analysis
+- **File Context**: Project structure and file system insights
+- **System Context**: Environment information gathering
+</details>
+
+<details>
+<summary><b>⚙️ System</b> (2 functions)</summary>
+
+- **Help**: Dynamic assistance based on your context
+- **Clarification**: Handles ambiguous requests intelligently
+</details>
+
+### 🎛️ Advanced Features
+
+#### **Thinking Mode Display**
+See exactly what the AI is doing:
+
+```bash
+aii translate hello to spanish
+
+# Output shows:
+# 🔍 aii • Claude Sonnet 3.5 • Functions: 23 loaded
+# 🧠 Thinking: Converting greeting to Spanish, selecting appropriate formality...
+# 🌐 Translation: "hola"
+# 🎯 Confidence: 98.0% • 🔢 Tokens: 89↗ 23↘
+```
+
+#### **Smart Risk-Based Confirmations**
+- **Safe operations** (translate, explain): Execute immediately, no interruption
+- **Risky operations** (shell, git): Show command preview + safety notes + confirmation
+
+#### **Token Tracking**
+Monitor LLM usage and costs across all operations:
+```bash
+# 📊 Session: 3.2s • Tokens: 142↗ 28↘ (170 total)
+```
+
+#### **Session Persistence**
+```bash
+aii explain quantum computing  # Auto-saves as session_abc123
+aii --continue give me more examples  # Resumes conversation
+```
+
+#### **Debug Mode**
+```bash
+AII_DEBUG=1 aii commit  # Shows: security patterns, LLM recognition, token breakdown
+```
+
+---
+
+## 🎨 Real-World Examples
+
+### **AI Git Commit**
+
+```bash
+git add . && aii commit
+
+# 🧠 Thinking: Analyzing changes... console.log added for debugging
+# 💻 Commit: feat(app): add console logging for debugging
+# 🎯 Confidence: 89% • Tokens: 245↗ 67↘
+# Proceed? (y/n): y
+# ✅ Committed: a1b2c3d
+```
+
+### **Context-Aware Translation**
+
+```bash
+aii translate "running late for meeting" to spanish
+
+# 🧠 Converting informal business expression, maintaining urgency...
+# 🌐 "Voy a llegar tarde a la reunión"
+# 📝 Informal but professional. Alternative: "Me voy a retrasar" (more formal)
+# 🎯 Confidence: 94%
+```
+
+### **Code Generation with Best Practices**
+
+```bash
+aii create a python email validator with error handling
+
+# 💻 Returns complete function with:
+# - RFC 5322 regex pattern
+# - Type hints (typing.bool)
+# - Comprehensive docstring
+# - Error handling (TypeError, re.error)
+# - Example usage with test cases
+# 🎯 Confidence: 92% • 445 tokens generated
+```
+
+---
+
+## ⚙️ Configuration
+
+```bash
+# Interactive setup
+aii config init        # Guided provider + API key setup
+aii config show        # View current config
+aii config validate    # Check configuration
+
+# Command-line options
+aii --help             # Show help
+aii --version          # Version info
+aii --continue "msg"   # Resume last session
+```
+
+---
+
+## 🐛 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| ❌ `ANTHROPIC_API_KEY not found` | Run `aii config init` or `export ANTHROPIC_API_KEY="key"` |
+| ❌ `aii command not found` | Restart terminal or check PATH: `uv tool install aiiware-cli` |
+| ⚠️ Slow responses | Check network or try different provider: `aii config init` |
+| 🔍 Need diagnostics | Enable debug: `AII_DEBUG=1 aii your-command` |
+
+---
+
+## 🔧 Architecture
+
+AII uses LLM-first design with:
+- **Intent Recognition**: Natural language → function mapping via LLMs
+- **Function Plugins**: 23 extensible functions across 8 categories
+- **Smart Risk Assessment**: Context-aware confirmations
+- **Multi-Provider**: Anthropic Claude, OpenAI GPT, Google Gemini
+- **Session Persistence**: Conversation memory and metrics
+
+---
+
+## 📚 Links & Resources
+
+- **📦 [PyPI Package](https://pypi.org/project/aiiware-cli)** — Official distribution
+- **📖 Documentation** — Comprehensive examples in this README
+- **🔄 Releases** — Version history on PyPI
+
+---
+
+## 📄 License & Credits
+
+**License:** Apache 2.0 • Copyright 2025-present aiiware.com
+
+**Built with:**
+- [Pydantic AI](https://ai.pydantic.dev/) — Reliable LLM integration framework
+- [Anthropic Claude](https://www.anthropic.com/claude) • [OpenAI GPT](https://openai.com/) • [Google Gemini](https://ai.google.dev/)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for developers who want AI-powered assistance without leaving the terminal**
+
+[⬆ Back to top](#aii--ai-powered-terminal-assistant-for-developers)
+
+</div>

@@ -1,0 +1,1 @@
+"""aii-mvp: Modern LLM-powered CLI Assistant."""
