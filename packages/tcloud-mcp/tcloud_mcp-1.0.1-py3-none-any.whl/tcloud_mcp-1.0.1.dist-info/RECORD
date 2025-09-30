@@ -1,0 +1,13 @@
+config/claude_desktop_config.json,sha256=l-0phFKOVLbX-0HJGUkAWHZ7v7O6u0rjMiu1daPx23c,312
+docs/SDK_DEPLOYMENT_GUIDE.md,sha256=BEixtuR6sCUCIzXI87X9iRx5f6QrrEAS9fCVoR3WX0E,4246
+examples/advanced_usage.md,sha256=24xr8AQ2nRHEC62Va9hKjNWt3r78FacDJ6pAbqX4jDg,10247
+examples/basic_usage.md,sha256=GhhIhPDgCxRdstrflmklh6qJvD8KmnpDJOl-hvcm3_M,4924
+main.py,sha256=6FpNrncRTqhInyD0X20QqiK8P81QjqfrS9pWPgz7Lmw,510
+src/__init__.py,sha256=7jpfA8thBPoH6bG7ocPrEzQ0tJJn5ayBRr8jLlqj9wA,210
+src/sdk_server.py,sha256=UiPhe-odSgOJ5n-mFPzG49xGwayRqILMIsn-TpVp-gg,18446
+src/tccli_service_loader.py,sha256=8hO-SC7-xEAYpcKlQVFAizgOPXWQCbxHv6SGzsmHsFg,7318
+src/tencent_sdk_wrapper.py,sha256=E-cXfgOwpH7NCf3hzWXvxvDYhi8NyN5Npy4-plZVblk,11191
+tcloud_mcp-1.0.1.dist-info/METADATA,sha256=Ghz1FvIkhVK4WvjzDUd2NQQYEenm61FpNEIHUrOx0Gc,4563
+tcloud_mcp-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tcloud_mcp-1.0.1.dist-info/entry_points.txt,sha256=CHCLHPW0SOb31gioMNYe2c_ZEWMjjhliXt01hyJQo3Q,41
+tcloud_mcp-1.0.1.dist-info/RECORD,,
