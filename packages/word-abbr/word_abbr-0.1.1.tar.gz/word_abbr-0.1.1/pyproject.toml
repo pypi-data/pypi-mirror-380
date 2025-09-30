@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.26"]  # 必须指定 hatchling
+build-backend = "hatchling.build"  # 关键：使用 hatchling 而非 hatch
+
+[project]
+name = "word-abbr"
+version = "0.1.1"
+description = "A simple Python library for querying common abbreviations of English words."
+authors = [
+    { name = "Ethan Jiang", email = "ethn.jiang@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = []  # 主依赖（如 ["requests>=2.28"]）
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy"]  # 开发依赖
+
+[project.scripts]
+word-abbr = "word_abbr.cli:main"  # CLI 入口
+
+[project.urls]
+Homepage = "https://github.com/ethnjiang/word-abbr"
+
+# 数据文件打包配置
+[tool.hatch.build]
+include = [
+    "word_abbr/data/*.json",  # 包含数据文件
+]
+packages = ["word_abbr"]
+
+# 动态版本管理（可选）
+[tool.hatch.version]
+path = "word_abbr/__init__.py"  # 从 __init__.py 同步版本
