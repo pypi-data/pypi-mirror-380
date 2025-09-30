@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+first_dance/__init__.py
+first_dance/core.py
+first_dance.egg-info/PKG-INFO
+first_dance.egg-info/SOURCES.txt
+first_dance.egg-info/dependency_links.txt
+first_dance.egg-info/top_level.txt
+tests/test_core.py
