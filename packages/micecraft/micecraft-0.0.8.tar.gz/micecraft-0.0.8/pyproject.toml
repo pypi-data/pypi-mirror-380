@@ -1,0 +1,36 @@
+[project]
+name = "micecraft"
+version = "0.0.8"
+description = "MiceCraft"
+authors = [
+  { name = "Fabrice de Chaumont", email = "fabrice.de.chaumont@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+#license = "GPL-3.0-only"
+license = {file = "LICENSE.txt"}
+
+classifiers = ["Programming Language :: Python :: 3",
+"Operating System :: OS Independent" ]
+
+
+dependencies = [
+  "numpy",
+  "pyserial",
+  "dynamixel-sdk",
+  "pyqt6",
+  "matplotlib",
+  "opencv-python",
+  "jinja2",
+  "plotly",
+  "xlsxwriter"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/micecraft"
+Issues = "https://github.com/micecraft/issues"
+documentation = "https://micecraft.org"
+
+
