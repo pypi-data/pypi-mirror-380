@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: trcli_za
+Version: 0.1.0
+Summary: Terminal üzerinden metin çeviri yapan CLI aracı
+Home-page: https://github.com/seninhesabin/cli-translator
+Author: Senin Adın
+Author-email: seninmailin@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: googletrans==4.0.0-rc1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Translate CLI
+
+Terminalden metin çevirisi yapan basit bir Python CLI aracı.
+
+## Kullanım
+```bash
+translate "hello" tr
+# hello -> merhaba

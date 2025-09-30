@@ -1,0 +1,9 @@
+README.md
+setup.py
+translate.py
+trcli_za.egg-info/PKG-INFO
+trcli_za.egg-info/SOURCES.txt
+trcli_za.egg-info/dependency_links.txt
+trcli_za.egg-info/entry_points.txt
+trcli_za.egg-info/requires.txt
+trcli_za.egg-info/top_level.txt
