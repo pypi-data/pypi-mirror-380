@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+bids_mosaic.egg-info/PKG-INFO
+bids_mosaic.egg-info/SOURCES.txt
+bids_mosaic.egg-info/dependency_links.txt
+bids_mosaic.egg-info/entry_points.txt
+bids_mosaic.egg-info/requires.txt
+bids_mosaic.egg-info/top_level.txt
+bidsmosaic/__init__.py
+bidsmosaic/mosaic.py
