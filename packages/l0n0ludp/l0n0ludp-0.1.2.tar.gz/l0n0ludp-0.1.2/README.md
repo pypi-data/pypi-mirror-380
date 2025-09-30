@@ -1,0 +1,72 @@
+# 1. 安装
+```bash
+pip install l0n0ludp
+```
+# 2. udp隧道服务器
+```bash
+l0n0ludptransserver -h
+usage: l0n0ludptransserver [-h] [--interval INTERVAL] [--resend-time RESEND_TIME] [--max-resend-times MAX_RESEND_TIMES]
+                           [--no-uvloop]
+                           listen_host listen_port server_host server_port password
+
+启动UDP服务器并连接远端
+
+positional arguments:
+  listen_host           本地监听地址
+  listen_port           本地监听端口
+  server_host           远程服务器地址
+  server_port           远程服务器端口
+  password              通信密码
+
+options:
+  -h, --help            show this help message and exit
+  --interval INTERVAL   心跳间隔(秒)
+  --resend-time RESEND_TIME
+                        消息重传时间(秒)
+  --max-resend-times MAX_RESEND_TIMES
+                        消息重传最大次数(次)
+  --no-uvloop           启用调试模式
+
+```
+# 3. udp隧道客户端
+```bash
+l0n0ludptransclient -h
+usage: l0n0ludptransclient [-h] [--interval INTERVAL] [--resend-time RESEND_TIME] [--max-resend-times MAX_RESEND_TIMES]
+                           [--no-uvloop]
+                           listen_host listen_port server_host server_port password
+
+启动UDP服务器并连接远端
+
+positional arguments:
+  listen_host           本地监听地址
+  listen_port           本地监听端口
+  server_host           远程服务器地址
+  server_port           远程服务器端口
+  password              通信密码
+
+options:
+  -h, --help            show this help message and exit
+  --interval INTERVAL   心跳间隔(秒)
+  --resend-time RESEND_TIME
+                        消息重传时间(秒)
+  --max-resend-times MAX_RESEND_TIMES
+                        消息重传最大次数(次)
+  --no-uvloop           启用调试模式
+
+```
+
+# 4. sock5服务器
+```bash
+l0n0ludpsocks5 -h
+usage: l0n0ludpsocks5 [-h] listen_host listen_port
+
+启动UDP服务器并连接远端
+
+positional arguments:
+  listen_host  本地监听地址
+  listen_port  本地监听端口
+
+options:
+  -h, --help   show this help message and exit
+
+```
