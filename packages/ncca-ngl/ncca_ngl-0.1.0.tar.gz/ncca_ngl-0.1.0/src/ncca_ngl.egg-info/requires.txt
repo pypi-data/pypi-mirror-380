@@ -1,0 +1,6 @@
+numpy>=2.3.3
+PyOpenGL
+Pillow
+glfw>=2.9.0
+freetype-py>=2.5.1
+pyside6>=6.9.2
