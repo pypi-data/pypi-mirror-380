@@ -1,0 +1,7 @@
+setup.py
+autofuse/__init__.py
+autofuse/main.py
+autofuse.egg-info/PKG-INFO
+autofuse.egg-info/SOURCES.txt
+autofuse.egg-info/dependency_links.txt
+autofuse.egg-info/top_level.txt
