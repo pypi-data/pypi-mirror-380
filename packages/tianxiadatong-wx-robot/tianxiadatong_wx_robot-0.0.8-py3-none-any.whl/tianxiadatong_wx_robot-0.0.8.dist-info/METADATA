@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: tianxiadatong_wx_robot
+Version: 0.0.8
+Summary: tianxiadatong_wx_robot SDK
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: websockets==15.0.1
+Requires-Dist: aiohttp==3.12.15
+Requires-Dist: esdk-obs-python==3.25.3
+Requires-Dist: sentry-sdk==0.10.2
+Requires-Dist: comtypes==1.4.11
+Requires-Dist: colorama==0.4.6
+Requires-Dist: pywin32==310
+Requires-Dist: pyperclip==1.9.0
+Requires-Dist: psutil==7.1.0
+Requires-Dist: pillow==11.2.1
+
+# WX-Robot
+
+WX 群机器人 SDK
+
+## 安装
+```bash
+pip install tianxiadatong-wx-robot
+```
+
+## 快速开始
+```bash
+import tianxiadatong_wx_robot
