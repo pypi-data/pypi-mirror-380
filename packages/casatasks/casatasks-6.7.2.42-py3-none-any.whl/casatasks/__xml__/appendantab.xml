@@ -1,0 +1,78 @@
+<casaxml xsi:schemaLocation="http://casa.nrao.edu/schema/casa.xsd file:///opt/casa/code/xmlcasa/xml/casa.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://casa.nrao.edu/schema/psetTypes.html">
+
+<task category="calibration" name="appendantab" type="function">
+<shortdescription>Append syscal and gaincurve data from an antab file</shortdescription>
+<description>
+Provide an MS created from a fitsidi file using importfitsidi and an antab file associated with that data.
+This task will parse the antab file file and fill the MS SYSCAL and GAIN_CURVE subtables based on the information
+in the antab file.
+</description>
+<input>
+    <param mustexist="true" name="vis" type="path">
+<shortdescription>Name of input visibility file</shortdescription>
+<description>Name of input visibility file
+                     Default: none
+
+                        Example: vis='ngc5921.ms'
+</description>
+        <value/>
+    </param>
+
+    <param mustexist='true' name="outvis" type="string">
+<shortdescription>Name of output  visibility file</shortdescription>
+<description>Name of output visibility file. If the file name specified already exists it will be replaced
+                     Default: none
+
+                        Example: caltable='ngc5921.ms'
+</description>
+        <value/>
+    </param>
+
+    <param mustexist='true' name="antab" type="path">
+<shortdescription>Name of the input antab file</shortdescription>
+<description>Name of antab file to append info from
+                     Default: none
+
+                        Example: caltable='bc246b.antab'
+</description>
+        <value/>
+    </param>
+
+    <param name="overwrite" type="bool">
+<shortdescription>Allow overwrite of outvis</shortdescription>
+<description>Allows the outvis file to be overwritten
+                     Default: False
+
+</description>
+        <value>False</value>
+    </param>
+
+    <param name="append_tsys" type="bool">
+<shortdescription>Append the SYSCAL subtable</shortdescription>
+<description>Use the information from the antab file to create and fill the SYSCAL subtable
+                     Default: True
+
+</description>
+        <value>True</value>
+    </param>
+
+    <param name="append_gc" type="bool">
+<shortdescription>Append the GAIN_CURVE subtable</shortdescription>
+<description>Use the information from the antab file to create and fill the GAIN_CURVE subtable
+                     Default: True
+
+</description>
+        <value>True</value>
+    </param>
+
+</input>
+<example>
+
+For more information, see the task pages of appendantab in CASA Docs:
+
+https://casa.nrao.edu/casadocs/
+
+</example> 
+
+<returns>void</returns></task>
+</casaxml>
