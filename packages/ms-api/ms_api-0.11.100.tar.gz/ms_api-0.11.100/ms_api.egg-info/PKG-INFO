@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: ms_api
+Version: 0.11.100
+Summary: Python wrapper for the Mahjong Soul (Majsoul) Protobuf objects. It allows to use their API.
+Home-page: https://github.com/MahjongRepository/mahjong_soul_api
+Author: Nihisil
+Author-email: alexey@nihisil.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: protobuf
+Requires-Dist: websockets
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
