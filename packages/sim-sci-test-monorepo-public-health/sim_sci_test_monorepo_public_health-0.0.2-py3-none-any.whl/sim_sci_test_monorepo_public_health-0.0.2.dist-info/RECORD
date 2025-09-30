@@ -1,0 +1,8 @@
+sim_sci_test_monorepo/__init__.py,sha256=L6gM7Bc3u7NJU5d2lx1nkcCtWdsTq_mHwPh5yqb34Q4,84
+sim_sci_test_monorepo/public_health/__init__.py,sha256=QRT7hbjNS238_aaRuQPukvo5gdBS6ugvCmyjzE6InVc,184
+sim_sci_test_monorepo/public_health/_version.py,sha256=huLsL1iGeXWQKZ8bjwDdIWC7JOkj3wnzBh-HFMZl1PY,704
+sim_sci_test_monorepo/public_health/models.py,sha256=j1csHNku_EwAs_qvlaml67O6psmKBuG8X4867wdfn_k,604
+sim_sci_test_monorepo_public_health-0.0.2.dist-info/METADATA,sha256=ArY3DKZl6zmhlueu5Qw5x0KOtSx0cC0ApMTHV-Hk0KM,1252
+sim_sci_test_monorepo_public_health-0.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sim_sci_test_monorepo_public_health-0.0.2.dist-info/top_level.txt,sha256=Vtekmvie7XmdG-Eg655QkZtJul6TUn-5hjKM2alD3C4,22
+sim_sci_test_monorepo_public_health-0.0.2.dist-info/RECORD,,
