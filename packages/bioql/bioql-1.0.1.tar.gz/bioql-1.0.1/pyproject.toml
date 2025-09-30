@@ -1,0 +1,154 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioql"
+version = "1.0.1"
+authors = [
+    {name = "SpectrixRD Team", email = "hello@spectrixrd.com"},
+]
+description = "Quantum Computing Framework for Bioinformatics - API Key Authentication Required"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = [
+    "quantum computing",
+    "bioinformatics",
+    "qiskit",
+    "quantum algorithms",
+    "computational biology",
+    "quantum machine learning",
+    "genomics",
+    "proteomics",
+]
+dependencies = [
+    "qiskit>=0.45.0",
+    "qiskit-aer",
+    "numpy>=1.21.0",
+    "matplotlib>=3.5.0",
+    "biopython>=1.79",
+    "requests>=2.28.0",
+    "python-dotenv>=0.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=0.991",
+    "isort>=5.10.0",
+    "pre-commit>=2.20.0",
+]
+docs = [
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinx-autodoc-typehints>=1.19.0",
+]
+cloud = [
+    "boto3>=1.26.0",
+    "azure-quantum>=1.0.0",
+    "cirq-ionq>=1.0.0",
+]
+visualization = [
+    "plotly>=5.0.0",
+    "seaborn>=0.11.0",
+    "pandas>=1.4.0",
+]
+
+[project.scripts]
+bioql = "bioql.cli:main"
+bioql-compiler = "bioql.compiler:main"
+bioql-quantum = "bioql.quantum_connector:main"
+
+[project.urls]
+Homepage = "https://bioql.com"
+Documentation = "https://docs.bioql.com"
+Repository = "https://github.com/bioql/bioql"
+"Bug Reports" = "https://github.com/bioql/bioql/issues"
+Changelog = "https://github.com/bioql/bioql/blob/main/CHANGELOG.md"
+Funding = "https://bioql.com/pricing"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "*_service.py", "demo_*", "create_*", "populate_*", "test_*"]
+
+[tool.setuptools.package-data]
+bioql = [
+    "data/*.json",
+    "data/*.yaml",
+    "templates/*.qasm",
+    "schemas/*.json",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = [
+    "tests",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["bioql"]
+omit = [
+    "tests/*",
+    "*/test_*.py",
+    "*_service.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
