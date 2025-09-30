@@ -1,0 +1,14 @@
+xpython_launcher.py,sha256=BBo2M_gIQfJGwdz1ybxSUGs11F15_IG-Vvbn0K45DZU,211
+xeus_python-0.15.12.dist-info/RECORD,,
+xeus_python-0.15.12.dist-info/LICENSE,sha256=WvdF-7mGwDyzMvBMaZQHGbNiSAlWm1n4fhmQyyvB_MM,1552
+xeus_python-0.15.12.dist-info/WHEEL,sha256=g5O9UoEf8RbeRvvT5PH4Vaog8DZlWglhZEEfDvGuy_c,131
+xeus_python-0.15.12.dist-info/top_level.txt,sha256=XtzggjVzmp4R-5T4I4R_gyLydIcRMhatWCkrCrsPDE0,25
+xeus_python-0.15.12.dist-info/METADATA,sha256=men8vgskrOo6-D5_Obwglx2uzP1-_81wNHt8bPcW17c,273
+xpython/__init__.py,sha256=CbW79f27_ZXHOjNBJEglG4Dn5GBijJvXJwmf5a2SbjI,39
+xpython/xpython_extension.cpython-313-darwin.so,sha256=SBZB6kpNA3OLczXvx0TeVisDNIJ_bOVI0FZMLmlHd5s,4165624
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython/kernel.json,sha256=MdwQ--lmjXr-OHpqlB86s4jdwcbd_RQJNCV4QR8GEuk,219
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython/logo-64x64.png,sha256=L2Wd22HYX7X7dyzLvff7nOZ5gyC2h4OvnViWCN-UIC0,3131
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython/logo-32x32.png,sha256=jbE1V2z-E-ol3NzZY_jYKnZyhSrY-Qb8WZgO1tj9Ipk,1379
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython-raw/kernel.json,sha256=7-Ei7kIfrfLbful8QQ-hn_psGrCDp8hIBTX5tuku-94,239
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython-raw/logo-64x64.png,sha256=L2Wd22HYX7X7dyzLvff7nOZ5gyC2h4OvnViWCN-UIC0,3131
+xeus_python-0.15.12.data/data/share/jupyter/kernels/xpython-raw/logo-32x32.png,sha256=jbE1V2z-E-ol3NzZY_jYKnZyhSrY-Qb8WZgO1tj9Ipk,1379
