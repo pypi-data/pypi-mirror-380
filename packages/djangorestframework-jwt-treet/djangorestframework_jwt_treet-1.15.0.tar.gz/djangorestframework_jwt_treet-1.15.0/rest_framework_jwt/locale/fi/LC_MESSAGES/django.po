@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-14 10:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: rest_framework_jwt/authentication.py:36 rest_framework_jwt/serializers.py:90
+msgid "Signature has expired."
+msgstr "Allekirjoitus on vanhentunut."
+
+#: rest_framework_jwt/authentication.py:39 rest_framework_jwt/serializers.py:93
+msgid "Error decoding signature."
+msgstr "Allekirjoituksen purkaminen epäonnistui."
+
+#: rest_framework_jwt/authentication.py:56
+#: rest_framework_jwt/serializers.py:102
+msgid "Invalid payload."
+msgstr "Virheellinen hyötykuorma."
+
+#: rest_framework_jwt/authentication.py:62
+msgid "Invalid signature."
+msgstr "Virheellinen allekirjoitus."
+
+#: rest_framework_jwt/authentication.py:66 rest_framework_jwt/serializers.py:56
+#: rest_framework_jwt/serializers.py:113
+msgid "User account is disabled."
+msgstr "Käyttäjätunnus on poistettu käytöstä."
+
+#: rest_framework_jwt/authentication.py:96
+msgid "Invalid Authorization header. No credentials provided."
+msgstr "Virheellinen Authorization-otsikko. Käyttäjätunnukset puuttuvat."
+
+#: rest_framework_jwt/authentication.py:100
+msgid ""
+"Invalid Authorization header. Credentials string should not contain spaces."
+msgstr ""
+"Virheellinen Authorization-otsikko. Käyttäjätunnus ei saa sisältää välilyöntejä."
+
+#: rest_framework_jwt/serializers.py:63
+msgid "Unable to log in with provided credentials."
+msgstr "Sisäänkirjautuminen annetuilla käyttäjätunnuksilla epäonnistui."
+
+#: rest_framework_jwt/serializers.py:66
+#, python-brace-format
+msgid "Must include \"{username_field}\" and \"password\"."
+msgstr "Täytyy sisältää \"{username_field}\" ja \"password\"."
+
+#: rest_framework_jwt/serializers.py:109
+msgid "User doesn't exist."
+msgstr "Käyttäjätunnusta ei ole olemassa."
+
+#: rest_framework_jwt/serializers.py:157
+msgid "Refresh has expired."
+msgstr "Päivitys on vanhentunut."
+
+#: rest_framework_jwt/serializers.py:160
+msgid "orig_iat field is required."
+msgstr "orig_iat-kenttä vaaditaan."
