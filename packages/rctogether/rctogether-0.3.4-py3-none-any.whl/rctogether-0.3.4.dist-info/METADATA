@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: rctogether
+Version: 0.3.4
+Author-email: Adam Kelly <adam@cthulahoops.org>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: aiohttp>=3.7.4
+Requires-Dist: websockets>=10.2
