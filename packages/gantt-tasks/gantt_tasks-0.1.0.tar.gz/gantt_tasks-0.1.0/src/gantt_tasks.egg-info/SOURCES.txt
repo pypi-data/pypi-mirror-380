@@ -1,0 +1,13 @@
+README.md
+license
+pyproject.toml
+src/gantt_tasks/__init__.py
+src/gantt_tasks/gantt.py
+src/gantt_tasks/manager.py
+src/gantt_tasks/models.py
+src/gantt_tasks/utils.py
+src/gantt_tasks.egg-info/PKG-INFO
+src/gantt_tasks.egg-info/SOURCES.txt
+src/gantt_tasks.egg-info/dependency_links.txt
+src/gantt_tasks.egg-info/requires.txt
+src/gantt_tasks.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: gantt-tasks
+Version: 0.1.0
+Summary: Organização de tarefas por prioridade/sequência e geração de Gantt mensal
+Author-email: Teu Nome <geraldo.sm.almeida@gmail.com>
+License: MIT
+Keywords: gantt,tasks,scheduler,project-management
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: license
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: python-dateutil>=2.8
+Requires-Dist: pillow>=9.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Dynamic: license-file
