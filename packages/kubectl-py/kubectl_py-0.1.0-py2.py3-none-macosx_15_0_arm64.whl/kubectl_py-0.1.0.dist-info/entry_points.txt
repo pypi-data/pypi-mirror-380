@@ -1,0 +1,2 @@
+[console_scripts]
+kustomize = kubectl_py.kustomize:main

@@ -1,0 +1,8 @@
+kubectl_py-0.1.0.data/purelib/kubectl_py/kustomize.py,sha256=7oU1mLbYAz2VFqn7LOVj74TS7YyGu9j8liNonGgFzRI,262
+kubectl_py-0.1.0.data/scripts/kubectl,sha256=1JH0xHw0hWGI046HonhmvZSmale42zCTqCrkO687sg0,59775314
+kubectl_py-0.1.0.dist-info/licenses/LICENSE,sha256=jTKW3pHi9E3D73qq-rdFvV2iwKOEqR9DsFzPWcQjyzs,1068
+kubectl_py-0.1.0.dist-info/METADATA,sha256=xIJLrTRYMyIcev2NOHvDMYNfpQHnv9jAdM1nkMq2SOk,1322
+kubectl_py-0.1.0.dist-info/WHEEL,sha256=COi4g5EliDnNnBauK6ZvVTScwAwTtH1sFnouHib9c4g,138
+kubectl_py-0.1.0.dist-info/entry_points.txt,sha256=7wNly3jB3qPBXMSrTanZB8GQygImvv09ND42_bLhWB8,56
+kubectl_py-0.1.0.dist-info/top_level.txt,sha256=SIEsjDNJY5YLxDgBDv2aMFWSUVmKpU2UarVQnjar6FE,11
+kubectl_py-0.1.0.dist-info/RECORD,,
