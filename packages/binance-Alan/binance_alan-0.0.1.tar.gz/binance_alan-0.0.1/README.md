@@ -1,0 +1,44 @@
+# Alan Binance SDK (请改成你在 pyproject.toml 中写的 name)
+
+这是一个简单的 SDK，用于从 Binance.US 获取指定日期的加密货币 K 线（K-line）数据。
+
+## 安装
+
+你可以通过 pip 从 PyPI 安装本库。
+(注意：此命令仅在你的包成功发布后才能使用)
+
+```bash
+# !!! 把 my-binance-sdk-alan 替换成你自己的包名
+pip install my-binance-sdk-alan
+```
+
+## 如何使用
+
+下面是一个快速上手的使用示例：
+
+```python
+# 1. 从你的 SDK 中导入主类
+from my_binance_sdk import BinanceDataFetcher
+
+# 2. 创建一个 fetcher 实例
+# 数据将默认保存在 'crypto_daily_data' 文件夹中
+fetcher = BinanceDataFetcher(output_dir='crypto_daily_data')
+
+# 3. 调用方法获取数据并直接保存为文件
+
+# 获取比特币 2025-09-24 的数据并保存为 CSV
+fetcher.get_daily_klines_as_file(
+    symbol_name='bitcoin',
+    date_str='2025-09-24',
+    output_format='csv'
+)
+
+# 获取以太坊 2025-09-25 的数据并保存为 JSON
+fetcher.get_daily_klines_as_file(
+    symbol_name='eth',
+    date_str='2025-09-25',
+    output_format='json'
+)
+
+print("任务完成！")
+```

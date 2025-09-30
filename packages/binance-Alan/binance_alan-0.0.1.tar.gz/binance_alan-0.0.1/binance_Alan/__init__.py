@@ -1,0 +1,1 @@
+from .fetcher.py import BinanceDataFetcher
