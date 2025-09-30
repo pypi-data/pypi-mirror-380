@@ -1,0 +1,4 @@
+pyyaml
+packaging
+gdstk
+rich
