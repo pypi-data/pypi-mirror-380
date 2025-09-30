@@ -1,0 +1,8 @@
+lattica-1.0.0.dist-info/METADATA,sha256=Nm2ECjbhKYHLe637AlfdmqgeZJN0CXx1bnhKYSY0i7Q,5636
+lattica-1.0.0.dist-info/WHEEL,sha256=NOMs1MdVcEWyaeT2j95Z65pmYXrQCtsVAd0_H3LkRg0,108
+lattica/__init__.py,sha256=BLGWIZILK6lm9ewbDaAtU1WNuq4qJ7JNmMu_-3AAEA4,255
+lattica/client.py,sha256=-wxEgMW-c_MA8Vc-I5PB34878xVvlP2aNYZIHrdRKy8,8437
+lattica/connection_handler.py,sha256=oNFxBNO5-UJe9YWPvaojn1ayADjy4CC7ZDozU_jlqT4,13296
+lattica_python_core/__init__.py,sha256=uXPn47KzWKWEomcCmXdktHbovVOR38Cbsv8Vu8IrTPQ,159
+lattica_python_core/lattica_python_core.cpython-312-x86_64-linux-gnu.so,sha256=4Fkt5D185FvcNEQUATA5rYglXwK8HEbb7tViTGywSpA,29066040
+lattica-1.0.0.dist-info/RECORD,,
