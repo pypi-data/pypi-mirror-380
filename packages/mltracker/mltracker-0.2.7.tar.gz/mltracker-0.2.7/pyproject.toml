@@ -1,0 +1,28 @@
+[project]
+name = "mltracker"
+version = "0.2.7"
+description = "A simple tool for tracking machine learning aggregates and storing their data."
+authors = [
+    {name = "entropy-flux",email = "eric.hermosis@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "attrs (>=25.3.0,<26.0.0)",
+] 
+
+[project.optional-dependencies]
+tinydb = ["tinydb"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+tinydb = "^4.8.2"
+
