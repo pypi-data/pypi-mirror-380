@@ -1,0 +1,5 @@
+"""AWS Content MCP Server - Retrieve and analyze content from aws.amazon.com"""
+
+__version__ = "0.1.0"
+__author__ = "Your Name"
+__email__ = "your.email@example.com"
