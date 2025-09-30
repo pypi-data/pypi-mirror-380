@@ -1,0 +1,8 @@
+README.md
+setup.py
+notmath/__init__.py
+notmath/main.py
+notmath.egg-info/PKG-INFO
+notmath.egg-info/SOURCES.txt
+notmath.egg-info/dependency_links.txt
+notmath.egg-info/top_level.txt
