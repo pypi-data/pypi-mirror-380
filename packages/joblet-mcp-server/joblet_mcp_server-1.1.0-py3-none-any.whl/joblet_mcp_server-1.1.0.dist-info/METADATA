@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: joblet-mcp-server
+Version: 1.1.0
+Summary: MCP (Model Context Protocol) server for Joblet job orchestration system
+Author: Jay Ehsaniara
+License: MIT
+Project-URL: Homepage, https://github.com/ehsaniara/joblet-mcp-server
+Project-URL: Repository, https://github.com/ehsaniara/joblet-mcp-server
+Project-URL: Documentation, https://github.com/ehsaniara/joblet-mcp-server/blob/main/README.md
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: typing-extensions>=4.8.0
+Requires-Dist: aiofiles>=23.0.0
+Provides-Extra: sdk
+Requires-Dist: joblet-sdk-python>=1.1.4; extra == "sdk"
+Provides-Extra: cli
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Dynamic: license-file
+
+# Joblet MCP Server
+
+MCP server for [Joblet](https://github.com/ehsaniara/joblet) job orchestration - enables AI assistants to manage distributed computing jobs through the Joblet platform.
+
+## Quick Start
+
+```bash
+# Install
+pip install joblet-mcp-server[sdk]
+
+# Configure (~/.rnx/rnx-config.yml)
+mkdir -p ~/.rnx
+cp sample_config.yaml ~/.rnx/rnx-config.yml
+# Edit with your Joblet server credentials
+
+# Run
+joblet-mcp-server
+```
+
+## Features
+
+- 🚀 **Jobs** - Run, monitor, and manage compute jobs
+- 🔄 **Workflows** - Orchestrate multi-job pipelines
+- 💾 **Storage** - Create and manage persistent volumes
+- 🌐 **Networks** - Configure isolated networks
+- 📊 **Monitoring** - Real-time metrics and GPU status
+
+## Configuration
+
+Create `~/.rnx/rnx-config.yml`:
+
+```yaml
+version: "3.0"
+nodes:
+  default:
+    address: "joblet-server.com:50051"
+    cert: |
+      -----BEGIN CERTIFICATE-----
+      # Your client certificate
+      -----END CERTIFICATE-----
+    key: |
+      -----BEGIN PRIVATE KEY-----
+      # Your private key
+      -----END PRIVATE KEY-----
+    ca: |
+      -----BEGIN CERTIFICATE-----
+      # Your CA certificate
+      -----END CERTIFICATE-----
+```
+
+## Requirements
+
+- Python 3.10+
+- [Joblet server](https://github.com/ehsaniara/joblet) with TLS certificates
+- Optional: `joblet-sdk` for better performance
+
+## Documentation
+
+- [Setup Guide](MCP_SETUP_GUIDE.md)
+- [Sample Config](sample_config.yaml)
+
+## License
+
+MIT
