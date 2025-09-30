@@ -1,0 +1,2 @@
+[console_scripts]
+rxn_rdf_converter = rxn_rdf_converter.cli:main
