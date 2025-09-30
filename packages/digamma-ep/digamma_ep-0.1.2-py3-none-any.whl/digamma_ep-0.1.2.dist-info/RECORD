@@ -1,0 +1,12 @@
+epe_maria/__init__.py,sha256=JZrrkVzNhSTV5RoBG3QB6W42x7srEGry2u2hJ2Hxp0g,155
+epe_maria/benchmark.py,sha256=Jc1RbKUx6EYxBzL4NFLcH_959HRvS9UvuTwfP5vl2As,517
+epe_maria/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epe_maria/info.py,sha256=PZ5yWD3DOaLIhCGpddslQpQva2G47WMssHBHdW_XVcM,1429
+epe_maria/metrics.py,sha256=tf_-dvplPimqEHZCqDM8DVuHmWF-WsYFjRHMkBh8bEc,1119
+epe_maria/monitor.py,sha256=t14VAxHwCDUMy8-hKsaLBKl6B6WA0OQQNemOk4LUX3c,844
+epe_maria/temporal.py,sha256=zynmKWhTCkacAY_pAHPkmPal9CGC5T1YO6e0oKjIW4g,599
+epe_maria/test_temporal.py,sha256=DS7_XqYidRmIwlNeEfdY4cp2J-MNDUYczhLJqVWsQAU,1831
+digamma_ep-0.1.2.dist-info/METADATA,sha256=sSaGZF4SMey6exBEREOF0VB-GfU_qED2JA0dC33bZtQ,1356
+digamma_ep-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+digamma_ep-0.1.2.dist-info/top_level.txt,sha256=8BaMqbSs_s5eoDg6s6UG5b9DzmVApRNm7Qx4fOffuPs,10
+digamma_ep-0.1.2.dist-info/RECORD,,
