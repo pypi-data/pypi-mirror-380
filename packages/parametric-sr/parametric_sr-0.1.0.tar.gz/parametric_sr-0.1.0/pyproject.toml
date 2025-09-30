@@ -1,0 +1,67 @@
+[build-system]
+requires      = ["setuptools >= 77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name    = "parametric-sr"
+dynamic = ["version"]
+
+authors = [{ name = "Sijie Fu" }]
+description = "Parametric Symbolic Regression for Modeling a Series of Datasets via Genetic Programming"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E.*"]
+keywords = [
+    "symbolic regression",
+    "genetic programming",
+    "parametric symbolic regression",
+    "mathematical pattern discovery",
+    "machine learning",
+    "artificial intelligence",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Typing :: Typed",
+]
+
+requires-python = ">= 3.12"
+dependencies = [
+    "numpy >= 2.3",
+    "scipy >= 1.16",
+    "sympy >= 1.14",
+    "matplotlib >= 3.10",
+    "networkx >= 3.5",
+    "scikit-learn >= 1.7",
+]
+
+[project.optional-dependencies]
+all = ["scipy-stubs >= 1.16", "pygraphviz >= 1.14"]
+dev = [
+    "mypy >= 1.17",
+    "pre-commit >= 4.2",
+    "pre-commit-hooks >= 6.0",
+    "pytest >= 8.4",
+    "sphinx >= 8.2",
+    "sphinx-autodoc-typehints >= 3.2",
+    "sphinx_rtd_theme >= 3.0",
+    "numpydoc >= 1.9",
+]
+
+[project.urls]
+Homepage   = "https://github.com/SijieFu/parametric-symbolic-regression"
+Repository = "https://github.com/SijieFu/parametric-symbolic-regression.git"
+Issues     = "https://github.com/SijieFu/parametric-symbolic-regression/issues"
+Changelog  = "https://github.com/SijieFu/parametric-symbolic-regression/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages]
+find.exclude = ['docs', 'docs.*', 'tests', 'tests.*']
+
+[tool.setuptools.dynamic]
+version = { attr = "psr.__version__" }
