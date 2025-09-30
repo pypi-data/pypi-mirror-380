@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: extended_a2a
+Version: 0.1.0
+Summary: Extended Agent-to-Agent communication library with rich message types for reasoning, tools, and structured content
+Project-URL: Homepage, https://github.com/hienhayho/agents-chat-hub-v2
+Project-URL: Documentation, https://github.com/hienhayho/agents-chat-hub-v2/tree/main/extended_a2a
+Project-URL: Repository, https://github.com/hienhayho/agents-chat-hub-v2.git
+Project-URL: Issues, https://github.com/hienhayho/agents-chat-hub-v2/issues
+Author-email: Agents Chat Hub <support@agentschathub.com>
+License: MIT
+Keywords: a2a,agents,ai,communication,reasoning,rich-content,tools
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: a2a-sdk[http-server]==0.3.6
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: typing-extensions>=4.0.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Extended A2A
+
+Extended Agent-to-Agent communication library with reasoning and tools messages.
+
+## Installation
+
+```bash
+pip install extended_a2a
+```
+
+## Usage
+
+```python
+from extended_a2a import (
+    new_agent_reasoning_message,
+    new_agent_tools_message,
+    create_agent_tool
+)
+
+# Create reasoning message
+msg = new_agent_reasoning_message("My analysis shows...")
+
+# Create tools message
+tool = create_agent_tool("search", {"query": "test"})
+tools_msg = new_agent_tools_message([tool])
+```
