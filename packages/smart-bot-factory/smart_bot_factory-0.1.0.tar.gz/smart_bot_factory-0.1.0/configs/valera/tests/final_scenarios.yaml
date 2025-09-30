@@ -1,0 +1,168 @@
+scenarios:
+  - name: "Простое знакомство и вопрос о цене"
+    steps:
+      - user_input: "Здравствуйте"
+        expected_keywords: ["здравствуйте", "рад"]
+        forbidden_keywords: ["до свидания"]
+        
+      - user_input: "Сколько стоит участие?"
+        expected_keywords: ["стоимость", "рубл"]
+        forbidden_keywords: ["бесплатно"]
+
+  - name: "Врач интересуется развитием"
+    steps:
+      - user_input: "Привет, я врач"
+        expected_keywords: ["привет", "врач"]
+        forbidden_keywords: ["не для врачей"]
+        
+      - user_input: "Хочу развиваться в медицинском бизнесе"
+        expected_keywords: ["развива", "бизнес"]
+        forbidden_keywords: ["не стоит"]
+        
+      - user_input: "Что даст мне конференция?"
+        expected_keywords: ["конференция", "получите"]
+        forbidden_keywords: ["ничего не даст"]
+
+  - name: "Директор клиники с проблемами"
+    steps:
+      - user_input: "Добрый день, я директор клиники"
+        expected_keywords: ["добрый день", "директор"]
+        forbidden_keywords: ["не интересно"]
+        
+      - user_input: "У нас падает прибыль"
+        expected_keywords: ["понимаю", "проблем"]
+        forbidden_keywords: ["не помогу"]
+
+  - name: "Быстрая регистрация на мероприятие"
+    steps:
+      - user_input: "Можно быстро зарегистрироваться?"
+        expected_keywords: ["регистрац", "можно"]
+        forbidden_keywords: ["нельзя", "сложно"]
+
+  - name: "Стоматолог планирует клинику"
+    steps:
+      - user_input: "Я стоматолог, планирую свою клинику"
+        expected_keywords: ["стоматолог", "клинику"]
+        forbidden_keywords: ["не ваша сфера"]
+        
+      - user_input: "Боюсь не справиться с управлением"
+        expected_keywords: ["поможем", "управлени"]
+        forbidden_keywords: ["сложно будет"]
+
+  - name: "Проверка IT направления"
+    steps:
+      - user_input: "Работаю с технологиями в медицине"
+        expected_keywords: ["технологи", "медицин"]
+        forbidden_keywords: ["не ваша тема"]
+        
+      - user_input: "Интересуют цифровые решения"
+        expected_keywords: ["цифров", "решени"]
+        forbidden_keywords: ["только бизнес"]
+
+  - name: "Скептичный клиент требует доказательств"
+    steps:
+      - user_input: "Не очень верю в такие мероприятия"
+        expected_keywords: ["понимаю", "скептицизм"]
+        forbidden_keywords: ["согласен", "действительно"]
+        
+      - user_input: "Докажите, что это не пустая трата времени"
+        expected_keywords: ["докаж", "результат"]
+        forbidden_keywords: ["пустая трата", "согласен"]
+
+  - name: "Иностранный участник"
+    steps:
+      - user_input: "Hello, I work in Moscow medical center"
+        expected_keywords: ["hello", "moscow", "medical"]
+        forbidden_keywords: ["только на русском"]
+        
+      - user_input: "Can I participate in Russian conference?"
+        expected_keywords: ["russian", "participate"]
+        forbidden_keywords: ["impossible"]
+
+  - name: "Тест знания содержимого приветственного файла"
+    steps:
+      - user_input: "Здравствуйте, расскажите о ваших продуктах и услугах"
+        expected_keywords: ["продукт", "услуг", "компани"]
+        forbidden_keywords: ["не знаю"]
+        
+      - user_input: "Есть ли специальные предложения?"
+        expected_keywords: ["специальн", "предложени"]
+        forbidden_keywords: ["нет предложений"]
+        
+      - user_input: "Как с вами связаться?"
+        expected_keywords: ["контакт", "связать"]
+        forbidden_keywords: ["не могу сказать"]
+
+  - name: "Новичок в медицинском бизнесе ищет полную информацию"
+    steps:
+      - user_input: "Привет, только начинаю в медицинском бизнесе"
+        expected_keywords: ["привет", "начина", "бизнес"]
+        forbidden_keywords: ["не для новичков"]
+        
+      - user_input: "Нужна вся информация о вашей компании"
+        expected_keywords: ["информация", "компани"]
+        forbidden_keywords: ["не предоставляем"]
+        
+      - user_input: "Где найти ответы на часто задаваемые вопросы?"
+        expected_keywords: ["вопрос", "ответ", "информаци"]
+        forbidden_keywords: ["нет такого раздела"]
+
+  - name: "Клиент проверяет команду поддержки"
+    steps:
+      - user_input: "Добрый день, хочу узнать о команде поддержки"
+        expected_keywords: ["добрый день", "команда", "поддержк"]
+        forbidden_keywords: ["нет поддержки"]
+        
+      - user_input: "Насколько профессиональна ваша команда?"
+        expected_keywords: ["профессиональн", "команда"]
+        forbidden_keywords: ["не очень"]
+        
+      - user_input: "С уважением отношусь к качественному сервису"
+        expected_keywords: ["уважением", "качественн", "сервис"]
+        forbidden_keywords: ["не важно"]
+
+  - name: "Врач изучает полный спектр возможностей"
+    steps:
+      - user_input: "Здравствуйте, я врач, хочу изучить все возможности"
+        expected_keywords: ["здравствуйте", "врач", "возможност"]
+        forbidden_keywords: ["ограниченные возможности"]
+        
+      - user_input: "Расскажите подробно о содержании ваших материалов"
+        expected_keywords: ["содержани", "материал", "подробно"]
+        forbidden_keywords: ["не могу рассказать"]
+        
+      - user_input: "Важно получить всю необходимую информацию сразу"
+        expected_keywords: ["необходим", "информаци", "важно"]
+        forbidden_keywords: ["не все сразу"]
+
+  - name: "Многоэтапная консультация по развитию клиники"
+    steps:
+      - user_input: "Добро пожаловать! Хочу развивать свою клинику"
+        expected_keywords: ["добро пожаловать", "развива", "клинику"]
+        forbidden_keywords: ["не поможем"]
+        
+      - user_input: "Нужна информация о бизнес-стратегиях"
+        expected_keywords: ["информация", "бизнес", "стратеги"]
+        forbidden_keywords: ["не знаем"]
+        
+      - user_input: "Какие у вас есть специальные программы?"
+        expected_keywords: ["специальн", "программ"]
+        forbidden_keywords: ["нет программ"]
+        
+      - user_input: "Можно ли получить персональную консультацию?"
+        expected_keywords: ["персональн", "консультаци"]
+        forbidden_keywords: ["только групповые"]
+
+  - name: "Проверка осведомленности о welcome файле"
+    steps:
+      - user_input: "Пожалуйста, ознакомьте меня с вашими услугами"
+        expected_keywords: ["пожалуйста", "ознаком", "услуг"]
+        forbidden_keywords: ["не ознакомлю"]
+        
+      - user_input: "Хочу получить всю необходимую информацию"
+        expected_keywords: ["необходим", "информаци", "получить"]
+        forbidden_keywords: ["не дам"]
+        
+      - user_input: "Благодарю команду за подробные ответы"
+        expected_keywords: ["команд", "подробн", "ответ"]
+        forbidden_keywords: ["не за что"]

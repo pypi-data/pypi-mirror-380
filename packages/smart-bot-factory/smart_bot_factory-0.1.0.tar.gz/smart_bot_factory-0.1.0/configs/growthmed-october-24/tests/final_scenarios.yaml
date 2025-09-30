@@ -1,0 +1,80 @@
+scenarios:
+  - name: "Простое знакомство и вопрос о цене"
+    steps:
+      - user_input: "Здравствуйте"
+        expected_keywords: ["здравствуйте", "рад"]
+        forbidden_keywords: ["до свидания"]
+        
+      - user_input: "Сколько стоит участие?"
+        expected_keywords: ["стоимость", "рубл"]
+        forbidden_keywords: ["бесплатно"]
+
+  - name: "Врач интересуется развитием"
+    steps:
+      - user_input: "Привет, я врач"
+        expected_keywords: ["привет", "врач"]
+        forbidden_keywords: ["не для врачей"]
+        
+      - user_input: "Хочу развиваться в медицинском бизнесе"
+        expected_keywords: ["развива", "бизнес"]
+        forbidden_keywords: ["не стоит"]
+        
+      - user_input: "Что даст мне конференция?"
+        expected_keywords: ["конференция", "получите"]
+        forbidden_keywords: ["ничего не даст"]
+
+  - name: "Директор клиники с проблемами"
+    steps:
+      - user_input: "Добрый день, я директор клиники"
+        expected_keywords: ["добрый день", "директор"]
+        forbidden_keywords: ["не интересно"]
+        
+      - user_input: "У нас падает прибыль"
+        expected_keywords: ["понимаю", "проблем"]
+        forbidden_keywords: ["не помогу"]
+
+  - name: "Быстрая регистрация на мероприятие"
+    steps:
+      - user_input: "Можно быстро зарегистрироваться?"
+        expected_keywords: ["регистрац", "можно"]
+        forbidden_keywords: ["нельзя", "сложно"]
+
+  - name: "Стоматолог планирует клинику"
+    steps:
+      - user_input: "Я стоматолог, планирую свою клинику"
+        expected_keywords: ["стоматолог", "клинику"]
+        forbidden_keywords: ["не ваша сфера"]
+        
+      - user_input: "Боюсь не справиться с управлением"
+        expected_keywords: ["поможем", "управлени"]
+        forbidden_keywords: ["сложно будет"]
+
+  - name: "Проверка IT направления"
+    steps:
+      - user_input: "Работаю с технологиями в медицине"
+        expected_keywords: ["технологи", "медицин"]
+        forbidden_keywords: ["не ваша тема"]
+        
+      - user_input: "Интересуют цифровые решения"
+        expected_keywords: ["цифров", "решени"]
+        forbidden_keywords: ["только бизнес"]
+
+  - name: "Скептичный клиент требует доказательств"
+    steps:
+      - user_input: "Не очень верю в такие мероприятия"
+        expected_keywords: ["понимаю", "скептицизм"]
+        forbidden_keywords: ["согласен", "действительно"]
+        
+      - user_input: "Докажите, что это не пустая трата времени"
+        expected_keywords: ["докаж", "результат"]
+        forbidden_keywords: ["пустая трата", "согласен"]
+
+  - name: "Иностранный участник"
+    steps:
+      - user_input: "Hello, I work in Moscow medical center"
+        expected_keywords: ["hello", "moscow", "medical"]
+        forbidden_keywords: ["только на русском"]
+        
+      - user_input: "Can I participate in Russian conference?"
+        expected_keywords: ["russian", "participate"]
+        forbidden_keywords: ["impossible"]
