@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/gist_cli.egg-info/PKG-INFO
+src/gist_cli.egg-info/SOURCES.txt
+src/gist_cli.egg-info/dependency_links.txt
+src/gist_cli.egg-info/entry_points.txt
+src/gist_cli.egg-info/requires.txt
+src/gist_cli.egg-info/top_level.txt
+src/gst/__init__.py
+src/gst/main.py
