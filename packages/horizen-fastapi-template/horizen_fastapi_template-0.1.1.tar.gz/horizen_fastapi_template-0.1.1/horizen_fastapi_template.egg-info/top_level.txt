@@ -1,0 +1,4 @@
+dist
+horizen_fastapi_template
+temp
+venv
