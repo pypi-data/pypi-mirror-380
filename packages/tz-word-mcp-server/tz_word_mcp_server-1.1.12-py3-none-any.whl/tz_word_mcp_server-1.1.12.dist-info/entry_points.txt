@@ -1,0 +1,3 @@
+[console_scripts]
+tz-word-mcp-server = word_document_server.main:run_server
+word_mcp_server = word_document_server.main:run_server
