@@ -1,0 +1,2 @@
+[console_scripts]
+xronai = studio.cli:app
