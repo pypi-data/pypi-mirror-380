@@ -1,0 +1,8 @@
+BP&PL
+bioql
+bioql-windows-20250929
+branding
+dist
+examples
+htmlcov
+ide_extensions
