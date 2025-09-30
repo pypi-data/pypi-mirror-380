@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ot_handler/__init__.py
+ot_handler/liquid_handler.py
+ot_handler.egg-info/PKG-INFO
+ot_handler.egg-info/SOURCES.txt
+ot_handler.egg-info/dependency_links.txt
+ot_handler.egg-info/requires.txt
+ot_handler.egg-info/top_level.txt
+tests/test_liquid_handler.py
