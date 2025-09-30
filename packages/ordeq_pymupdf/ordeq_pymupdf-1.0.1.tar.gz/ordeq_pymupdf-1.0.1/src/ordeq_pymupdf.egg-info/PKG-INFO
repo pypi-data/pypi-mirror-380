@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ordeq_pymupdf
+Version: 1.0.1
+Author: Niels Neerhoff, Simon Brugman
+Maintainer: Niels Neerhoff, Simon Brugman
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ordeq>=0.2.1
+Requires-Dist: pymupdf
+Dynamic: license-file
+
+../../README.md
