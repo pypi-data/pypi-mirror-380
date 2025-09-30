@@ -1,0 +1,110 @@
+import os
+import sys
+import time
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from pymadng import MAD
+
+original_dir = Path.cwd()
+os.chdir(Path(__file__).resolve().parent)
+
+pid = os.fork()
+# Test 1
+if pid > 0:
+    with (
+        MAD() as mad
+    ):  # open mad process, if you just use mad = MAD(), then be sure to close it afterwords; for multiprocessing, os.fork() can work with the with statement
+        arr0 = np.zeros((10000, 1000)) + 1j  # 2*10000*1000*8 -> 160 MB
+
+        # Set variables within the mad class
+        start_time = time.time()
+        mad["arr"] = arr0
+        # print(mad.arr)
+        mad["arr2", "arr3", "arr4"] = arr0, arr0, arr0
+        print("send large array", time.time() - start_time)
+
+        # Directly send to mad
+        # mad.writeToProcess("arr = arr * 2")
+        mad.send("arr = arr:mul(2)")
+        print((mad["arr"] == arr0 * 2).all())
+        mad.send("arr2 = arr * 2")
+        mad.send("arr3 = arr / 3")
+
+        # Recieving variables: update retrieves all the variables within the mad class or just send a string and the variable of that name will be retrieved
+        start_time = time.time()
+        print((mad["arr"] == arr0 * 2).all())
+        print((mad["arr2"] == arr0 * 2 * 2).all())
+        print((mad["arr3"] == arr0 * 2 / 3).all())
+        print("receive large array", time.time() - start_time)
+
+    with (
+        MAD() as mad
+    ):  # open mad process, if you just use mad = MAD(), then be sure to close it afterwords; for multiprocessing, os.fork() can work with the with statement
+        num_vars = 25000
+        varname_list = []
+        values = [12345.0] * num_vars
+        for i in range(num_vars):
+            varname_list.append(f"var{i}")
+
+        mad.send(f"myvector = MAD.vector({num_vars})")
+        start_time = time.time()
+        for i in range(num_vars):
+            mad.send(f"myvector[{i + 1}] = py:recv()")
+            mad.send(12345.0)
+        print(f"send {num_vars} vals", time.time() - start_time)
+
+        start_time = time.time()
+        mad.send_vars(**dict(zip(varname_list, values)))
+        print(f"send {num_vars} vals v2", time.time() - start_time)
+
+        start_time = time.time()
+        for i in range(num_vars):
+            mad.send(f"py:send(myvector[{i + 1}])")
+            mad.recv()
+        print(f"receive {num_vars} vals", time.time() - start_time)
+
+        start_time = time.time()
+        mad.recv_vars(*varname_list)
+        print(f"receive {num_vars} vals v2", time.time() - start_time)
+    print("proc1 ended", time.time() - start_time)
+else:
+    with MAD() as mad:
+        mad.load("element", "quadrupole")
+        # METHOD 1
+        mad.MADX.load("'fodo.seq'", "'fodo.mad'")
+        mad["seq"] = mad.MADX.seq
+        mad.seq.beam = mad.beam()
+        mad["mtbl", "mflw"] = mad.twiss(sequence=mad.seq)
+        plt.plot(mad.mtbl.s, mad.mtbl["beta11"])
+        # plt.show()
+
+        # METHOD 2
+        mad["circum", "lcell"] = 60, 20
+        mad["deferred"] = mad.MAD.typeid.deferred
+        mad["v"] = mad.create_deferred_expression(f="lcell/math.sin(math.pi/4)/4", k="1/v.f")
+
+        mad["qf"] = mad.quadrupole("knl:={0,  v.k}", l=1)
+        mad["qd"] = mad.quadrupole("knl:={0,  -v.k}", l=1)
+
+        mad.send("""
+        seq2 = sequence 'seq2' { refer='entry', l=circum, -- assign to seq in scope!
+        qf { at = 0 },
+        qd { at = 0.5 * lcell },
+        qf { at = 1.0 * lcell },
+        qd { at = 1.5 * lcell },
+        qf { at = 2.0 * lcell },
+        qd { at = 2.5 * lcell },
+        }""")
+        mad.seq2.beam = mad.beam()
+        mad["mtbl2", "mflw2"] = mad.twiss(
+            sequence=mad.seq2, nslice=10, implicit=True, save="'atbody'"
+        )
+        plt.plot(mad.mtbl2.s, mad.mtbl2["beta11"])
+        plt.show()
+        print(mad.mtbl2.header)
+    sys.exit()  # exit the child process
+
+os.chdir(original_dir)
