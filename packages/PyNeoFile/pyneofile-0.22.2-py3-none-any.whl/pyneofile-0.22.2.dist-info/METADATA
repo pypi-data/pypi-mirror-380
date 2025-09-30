@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: PyNeoFile
+Version: 0.22.2
+Summary: A tar like file format name archivefile.
+Home-page: https://github.com/GameMaker2k/PyArchiveFile
+Download-URL: https://github.com/GameMaker2k/PyArchiveFile/neo/master.tar.gz
+Author: Kazuki Przyborowski
+Author-email: Kazuki Przyborowski <kazuki.przyborowski@gmail.com>, Kazuki Suzuki Sadeghi <kazuki.suzuki.sadeghi@gmail.com>, Game Maker 2k <gamemaker2k@gmail.com>
+Maintainer: Kazuki Suzuki Sadeghi
+Maintainer-email: kazuki.suzuki.sadeghi@gmail.com
+License: BSD-3-Clause
+Platform: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+
+A tar like file format name NeoFile
+![](logo.png?raw=true)
