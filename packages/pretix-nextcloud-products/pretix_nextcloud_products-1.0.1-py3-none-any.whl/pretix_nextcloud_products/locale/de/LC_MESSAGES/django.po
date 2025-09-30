@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 15:57+0200\n"
+"PO-Revision-Date: 2025-09-22 16:56+0000\n"
+"Last-Translator: hansegucker <hansegucker@noreply.codeberg.org>\n"
+"Language-Team: German <https://translate.codeberg.org/projects/"
+"pretix-nextcloud-products/pretix-nextcloud-products/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#: pretix_nextcloud_products/apps.py:17
+msgid "Nextcloud Products"
+msgstr "Nextcloud-Produkte"
+
+#: pretix_nextcloud_products/apps.py:20
+msgid "Instead of ticket downloads, create share links for Nextcloud"
+msgstr "Anstatt von Ticket-Downloads Share-Links für Nextcloud generieren"
+
+#: pretix_nextcloud_products/models.py:17
+msgid "Order position"
+msgstr "Bestellungposition"
+
+#: pretix_nextcloud_products/models.py:20
+msgid "Share ID"
+msgstr "Share-ID"
+
+#: pretix_nextcloud_products/models.py:21
+msgid "Share URL"
+msgstr "Share-URL"
+
+#: pretix_nextcloud_products/models.py:22
+msgid "Share expiration"
+msgstr "Share-Ablaufzeitpunkt"
+
+#: pretix_nextcloud_products/models.py:36
+msgid "Nextcloud path"
+msgstr "Nextcloud-Pfad"
+
+#: pretix_nextcloud_products/models.py:85
+#, python-brace-format
+msgid "Personal download link for {name}"
+msgstr "Persönlicher Download-Link für {name}"
+
+#: pretix_nextcloud_products/ticketoutput.py:12
+msgid "Nextcloud share"
+msgstr "Nextcloud-Share"
+
+#: pretix_nextcloud_products/ticketoutput.py:13
+msgid "Download"
+msgstr "Download"
+
+#: pretix_nextcloud_products/ticketoutput.py:14
+msgid "Download product"
+msgstr "Produkt herunterladen"
+
+#: pretix_nextcloud_products/ticketoutput.py:26
+msgid "Nextcloud URL"
+msgstr "Nextcloud-URL"
+
+#: pretix_nextcloud_products/ticketoutput.py:27
+msgid "Root URL of the Nextcloud instance"
+msgstr "Root-URL der Nextcloud-Instanz"
+
+#: pretix_nextcloud_products/ticketoutput.py:34
+msgid "Nextcloud username"
+msgstr "Nextcloud-Benutzername"
+
+#: pretix_nextcloud_products/ticketoutput.py:36
+msgid "Username of the Nextcloud user used for creating shares"
+msgstr ""
+"Benutzername des Nextcloud-Benutzers, der zum Erstellen der Shares verwendet "
+"wird"
+
+#: pretix_nextcloud_products/ticketoutput.py:44
+msgid "Nextcloud password"
+msgstr "Nextcloud-Passwort"
+
+#: pretix_nextcloud_products/ticketoutput.py:46
+msgid "Password of the Nextcloud user used for creating shares"
+msgstr ""
+"Passwort des Nextcloud-Benutzers, der zum Erstellen der Shares verwendet wird"
