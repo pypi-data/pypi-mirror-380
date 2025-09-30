@@ -1,0 +1,2 @@
+[console_scripts]
+laguardia = laguardia.cli:main
