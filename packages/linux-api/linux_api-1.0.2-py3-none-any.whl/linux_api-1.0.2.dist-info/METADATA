@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: Linux-API
+Version: 1.0.2
+Summary: A FastAPI-based Python web server for Linux system monitoring and information
+Home-page: https://github.com/Ivole32/Linux-API
+Author: Ivole32
+Project-URL: Bug Reports, https://github.com/Ivole32/Linux-API/issues
+Project-URL: Source, https://github.com/Ivole32/Linux-API
+Project-URL: Documentation, https://github.com/Ivole32/Linux-API/blob/main/README.md
+Keywords: linux,system-monitoring,fastapi,rest-api,system-information,server-monitoring
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: FastAPI
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.118.0
+Requires-Dist: uvicorn==0.37.0
+Requires-Dist: slowapi==0.1.9
+Requires-Dist: pydantic==2.11.9
+Requires-Dist: bcrypt==5.0.0
+Requires-Dist: psutil==7.1.0
+Requires-Dist: python-dotenv==1.1.1
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Linux-API
+A linux API server to get system informations and other live informations about your linux machine.
