@@ -1,0 +1,9 @@
+# Tencent Cloud SDK MCP Server Requirements
+# Standalone version - no TCCLI installation required
+
+# Core Tencent Cloud SDK
+tencentcloud-sdk-python>=3.0.1399
+
+# Utility libraries (same as TCCLI dependencies)
+jmespath==0.10.0
+six==1.16.0
