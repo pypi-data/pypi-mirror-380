@@ -1,0 +1,8 @@
+mcp_server_jira/__init__.py,sha256=LpmajCQ8QKUbQLB7O7xJzgvT5P9m5SQ6mQK4mnrRon4,772
+mcp_server_jira/__main__.py,sha256=9OvMII_9KRh_LMmO3b6bpltxEAuKX5JGZld6t-UcLNQ,145
+mcp_server_jira/server.py,sha256=rHeVd3oASfvxRqS1n5o64Vwszr7nQpKutFDj4HThSXI,21375
+mcp_server_jira-0.1.0.dist-info/METADATA,sha256=E9Pxg71I92FOl-mhhLVQwQE80-BTU2drqGL41rysGkE,8628
+mcp_server_jira-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_jira-0.1.0.dist-info/entry_points.txt,sha256=S9uKmCrN6tI6V3VVwBK6wcyDZSxo1zNVSK4fVXmbvwk,57
+mcp_server_jira-0.1.0.dist-info/licenses/LICENSE,sha256=VkrLqGtqiNFXA8PRPCjy51w6_gn5yAj8DGCEs8nqd1A,1091
+mcp_server_jira-0.1.0.dist-info/RECORD,,
