@@ -1,0 +1,76 @@
+[project]
+name = "ellphi"
+version = "0.1.0"
+description = "Fast ellipse tangency solver"
+authors = [
+  { name = "Tomoki Uda", email = "tomoki.uda@gmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+]
+keywords = [
+  "topological data analysis",
+  "computational geometry",
+  "ellipse",
+  "tangency",
+]
+
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.12",
+  "joblib>=1.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/t-uda/ellphi"
+Repository = "https://github.com/t-uda/ellphi"
+
+[project.optional-dependencies]
+# `pip install ellphi[dev]` / `poetry install -E dev`
+dev = [
+  "jupyterlab>=4.1",
+  "ipykernel>=6.28",
+  "nbformat>=5.10",
+  "matplotlib>=3.9",
+  "plotly>=5.22",
+  # "anywidget>=0.9",
+  # "ripser>=0.6",
+  # "persim>=0.3"
+]
+
+[tool.poetry]
+packages = [{ include = "ellphi", from = "src" }]
+package-mode = true
+include = [
+  { path = "src/ellphi/_tangency_cpp_impl.*", format = ["sdist", "wheel"] },
+]
+
+[tool.poetry.build]
+script = "build_tangency_cpp.py"
+
+[tool.poetry.group.dev.dependencies]
+pandas = "^2.2.0"
+homcloud = "^4.8.0"
+tqdm = "^4.67.1"
+flake8 = "^7.3.0"
+black = "^25.1.0"
+mypy = "^1.8"
+scipy-stubs = { version = "^1.16.0.2", python = ">=3.11" }
+pytest = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core>=1.9.0", "setuptools>=65"]
+build-backend = "poetry.core.masonry.api"
