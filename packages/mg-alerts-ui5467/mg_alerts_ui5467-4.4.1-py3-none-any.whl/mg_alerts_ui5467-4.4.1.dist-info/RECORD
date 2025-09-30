@@ -1,0 +1,16 @@
+mg_alerts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mg_alerts/alert_models.py,sha256=KrsleRf45nv5cDZKqWmB2jOdscRSxKX7Bdk5m_b_2Ms,623
+mg_alerts/compile.py,sha256=_s4jN2ofUGEfF7Eywb9Ehuit2g8IQVXqYqTyEwLv-TY,394
+mg_alerts/process_manager.py,sha256=xPLMwyZPXS_n6R9R-ouFkujuOOz68OA_6bZnJnfEtkA,1018
+mg_alerts/push_notifications/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mg_alerts/signal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mg_alerts/telegram/__init__.py,sha256=PlAUvwSCCZHUYEqJX2jITeCHmUUBYvzhyua7P7cUB0o,163
+mg_alerts/telegram/compile.py,sha256=FAkoHgXvh-D8GvwyExePVkhQR8BtYOBTSgJOz911gsI,446
+mg_alerts/telegram/tg_alerts.py,sha256=mu7FxuvoGgz9LVZ6JuNC6JqpO_H1OH8_5vU6n81qfss,15254
+mg_alerts/telegram/tg_base.py,sha256=ZKBxoQSGZegwTyXgRVqPpWKTRU5Q2voJdtxrs41av6Y,2347
+mg_alerts/telegram/tg_config.py,sha256=8pbwCOXyZWPWH8NqEP1GHdyRudxO__Zh7qYjjIL9dgo,537
+mg_alerts/whatsapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mg_alerts_ui5467-4.4.1.dist-info/METADATA,sha256=VI6eK1_hCLFJg9mWDW_Mkft6nrCfK9xzz1VxEnmzAQ4,236
+mg_alerts_ui5467-4.4.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mg_alerts_ui5467-4.4.1.dist-info/top_level.txt,sha256=GZnPSNYIgjPig9MSZ_Pqx3jq1w03BRQBvqQ5NSW7g9g,10
+mg_alerts_ui5467-4.4.1.dist-info/RECORD,,
