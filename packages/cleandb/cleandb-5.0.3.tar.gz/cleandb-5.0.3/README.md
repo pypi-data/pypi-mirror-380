@@ -1,0 +1,339 @@
+---
+
+# 🧾 CleanDB
+
+### A Lightweight Data Cleaning and Quality Solution for Text-Based Structured Data
+
+**CleanDB** is a **Python-native, zero-dependency** utility for managing structured `.txt` files. Perfect when full database integration is overkill using simple 1D/2D list logic.
+
+Ideal for microservices, pipelines, automation scripts, bots, or lightweight data auditing.
+
+---
+
+## 📦 Features
+
+* ✅ **Structured Data Enforcement** (1D or 2D)
+* ✍️ **Write, Read, Append, and Delete** with built-in validation
+* 🔍 **SQL-style read filtering** by column index
+* 🧹 **Selective delete**, **file trimming**, and cleanup
+* 🎗️ **Multi-console safe** (handles concurrent access)
+* 💾 **Manual backups** and **timed snapshots**
+* 🧪 **Debug tool** with auto-fix for invalid rows
+* 🗂️ Organized folder structure with versioned files
+* 🔐 **File hiding/unhiding** with access controls
+* 🗃️ **Zero external dependencies**
+* 💪 **Tamper-resistant** and structure-locked
+
+---
+
+## ⚙️ Installation
+
+```bash
+pip install cleandb
+```
+
+### ♻️ Upgrade
+
+```bash
+pip install --upgrade cleandb
+```
+
+---
+
+## 🚀 Quick Start
+
+```python
+import cleandb as db
+
+db.w("tasks", [["Read", "Done"], ["Code", "Pending"]])
+db.a("tasks", [["Test", "Pending"]])
+print(db.r("tasks"))
+
+db.d("tasks", del_list=["Done"], index=1)
+db.backup("tasks")
+db.snapshot("tasks", unit="h", gap=6)
+```
+
+---
+
+## 🧰 Function Overview
+
+### 🔄 Write
+
+```python
+w(txt_name, write_list, is2d=None)
+```
+
+* Overwrites file content with a validated structure.
+* Use `is2d=True` for 2D data, `False` for 1D.
+* Use `[]` to reset file and structure lock.
+
+---
+
+### 📖 Read
+
+```python
+r(txt_name, index=None, set_new=[], notify_new=True)
+```
+
+* Reads file contents.
+* Optional filtering using index (single or list).
+* If file doesn’t exist, creates and returns `set_new`.
+
+---
+
+### ➕ Append
+
+```python
+a(txt_name, append_list, is2d=None)
+```
+
+* Appends rows to the file.
+* Must match existing structure.
+* `is2d` required if appending to a new file.
+
+---
+
+### ❌ Delete
+
+```python
+d(txt_name, del_list=[], index=None, cutoff=None, keep=None, reverse=False, size=None)
+```
+
+* Deletes matching rows using flexible criteria:
+
+  * `index`: single, list, or `"*"` (match entire row)
+  * `cutoff`: max deletions per value
+  * `keep`: retain only N matches
+  * `reverse`: delete from end
+  * `size`: trim file to last N rows
+
+---
+
+### 💾 Backup
+
+```python
+backup(txt_name, display=True)
+```
+
+* Manual backup of a file.
+* Use `*` to back up all files.
+
+---
+
+### ⏱ Snapshot
+
+```python
+snapshot(txt_name, unit, gap, trim=None, begin=0, display=True)
+```
+
+* Time-based snapshot after `gap` duration.
+* Units: `'s'`, `'m'`, `'h'`, `'d'`, `'mo'`, `'y'`
+
+---
+
+### 🧹 Debug
+
+```python
+debug(txt_name, is2d=None, length=None, display=True)
+```
+
+* Finds structural issues (e.g., wrong row lengths).
+
+---
+
+### 🧨 Remove File
+
+```python
+remove(txt_name, display=True)
+```
+
+* Deletes file and all its backups.
+
+---
+
+### 🙈 Hide / Unhide
+
+```python
+hide(txt_name, display=True)
+unhide(txt_name, display=True)
+```
+
+* Hide or unhide files.
+* Use `*` for all files.
+
+---
+
+### 📋 List Files
+
+```python
+listdir(display=True)
+```
+
+* Lists all stored file names.
+
+---
+
+### ℹ️ File Info
+
+```python
+info(txt_name, display=True)
+describe(txt_name, display=True)
+```
+
+* Shows metadata: type, shape, row count, etc.
+
+---
+
+## 👉 1D List Example
+
+```python
+# Create a 1D file
+db.w("shopping_list", ["Apples", "Bread", "Milk"], is2d=False)
+# is2d=False is a must only for 1D list on first write / append or after a validation reset.
+
+# Append a new item
+db.a("shopping_list", ["Eggs"])
+
+# Read all items
+print(db.r("shopping_list"))           # ['Apples', 'Bread', 'Milk', 'Eggs']
+print(db.r("shopping_list", index=1))  # 'Bread'
+
+# Delete items
+db.d("shopping_list", "Milk")
+db.d("shopping_list", ["Bread", "Eggs"])
+```
+
+---
+
+## 👉 2D List Example
+
+```python
+tasks = [
+    ["Read Docs", "Done", "Low"],
+    ["Fix Bug", "Pending", "High"],
+    ["Write Tests", "Pending", "Medium"],
+    ["Deploy", "In Progress", "High"],
+    ["Fix Bug", "Done", "Low"]
+]
+
+db.w("task_board", tasks)
+```
+
+---
+
+### 🧹 Delete Workflow (Structured & Clear)
+
+#### 1️⃣ Delete rows where Priority is "Low"
+
+```python
+db.d("task_board", del_list=["Low"], index=2)
+```
+
+#### 2️⃣ Delete an exact row
+
+```python
+db.d("task_board", del_list=[["Fix Bug", "Pending", "High"]], index="*")
+```
+
+#### 3️⃣ Delete by partial match on Task
+
+```python
+db.d("task_board", del_list=[["Deploy"], ["Write Tests"]], index=0)
+```
+
+#### 4️⃣ Delete rows where Status = "Done" and Priority = "High"
+
+```python
+db.d("task_board", del_list=[["Done", "High"]], index=[1, 2])
+```
+
+#### 5️⃣ Trim file to last 2 rows
+
+```python
+db.d("task_board", size=2)
+```
+
+#### 6️⃣ Clean invalid rows
+
+```python
+db.debug("task_board", is2d=True, length=3)
+```
+
+---
+
+### 💾 Backup & Snapshot
+
+```python
+db.backup("task_board")
+db.snapshot("task_board", unit="h", gap=6, trim=10)
+```
+
+---
+
+## 🧪 Advanced Delete: cutoff, keep, size
+
+```python
+tasks = [
+    ["Read Docs", "Done"],
+    ["Fix Bug", "Pending"],
+    ["Write Tests", "Pending"],
+    ["Deploy", "Pending"],
+    ["Fix Bug", "Done"],
+    ["Write Tests", "Done"],
+    ["Fix Bug", "Pending"],
+    ["Deploy", "Done"]
+]
+
+db.w("task_board", tasks)
+
+# 1️⃣ Delete up to 2 rows where Status == "Pending"
+db.d("task_board", del_list=["Pending"], index=1, cutoff=2)
+
+# 2️⃣ Keep only 1 "Fix Bug" row
+db.d("task_board", del_list=["Fix Bug"], index=0, keep=1)
+
+# 3️⃣ Keep only last 4 rows
+db.d("task_board", size=4)
+```
+
+---
+
+## 📂 Backup & Recovery
+
+* 🔄 **Backups** are stored in: `Backup 💾/`
+* 📸 **Snapshots** are stored in: `Snapshot 📸/`
+* 🔁 **Restore:** Just copy desired file back to the main data directory.
+
+---
+
+## 🧠 Notes
+
+* **Structure Locking:** On first write/append, shape (1D/2D) and length are saved.
+* Use `w("file", [])` to reset structure.
+* Only list data is supported.
+* All operations auto-sync with backups.
+
+---
+
+## 🛡 Best Practices
+
+* Always use CleanDB methods (`w()`, `a()`, `d()`, etc.).
+* Avoid manual file edits — validation will fail.
+* Use `debug()` when operations fail unexpectedly.
+* Automate `snapshot()` for long-running apps.
+
+---
+
+## 📜 License
+
+This project is **free to use, modify, and distribute**.
+No warranties are provided.
+
+---
+
+## 🙋 Contribution
+
+Pull requests, issues, and forks are welcome!
+
+---
