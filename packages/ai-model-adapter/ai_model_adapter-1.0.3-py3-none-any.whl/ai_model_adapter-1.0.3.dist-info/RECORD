@@ -1,0 +1,9 @@
+ai_model_adapter/__init__.py,sha256=3a1X1yi5ZExplwU0yS_-yGggowLsY7kn1xhTNEHXqT4,2195
+ai_model_adapter/cli.py,sha256=uQ6Usltl8fG84PP8WtgSpSQzZTkgoo33rk976qxviDA,2632
+ai_model_adapter/model_adapter.py,sha256=gFlbMngDtAW471gznMbYQoTLNzWQKdGv6_-WRm8HyAo,67711
+ai_model_adapter-1.0.3.dist-info/licenses/LICENSE,sha256=6cXnGrGrUPVXetLqbun5aYrIHTJC8NpecpcVQfjVlb4,1095
+ai_model_adapter-1.0.3.dist-info/METADATA,sha256=ztE-5rrdCL51Yc7Lb_zDuCJFRxeIy_TdEaeMNhrfy1c,12997
+ai_model_adapter-1.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ai_model_adapter-1.0.3.dist-info/entry_points.txt,sha256=nIaM4vIvak--ixtRfcSCKicRwHDgU1MEVHklkgra4ZA,57
+ai_model_adapter-1.0.3.dist-info/top_level.txt,sha256=nu3cSXd6p-VA5vdLbkiqqydYazhjVr3eIoxwPYgc6t0,17
+ai_model_adapter-1.0.3.dist-info/RECORD,,
