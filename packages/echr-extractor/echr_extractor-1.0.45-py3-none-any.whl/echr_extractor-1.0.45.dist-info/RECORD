@@ -1,0 +1,14 @@
+echr_extractor/ECHR_html_downloader.py,sha256=cScw4t_fN0t2o4Svitn9ikxV0b2quQfSsmVFf5vufJY,2653
+echr_extractor/ECHR_metadata_harvester.py,sha256=uXgivS4h6FYse__b9csttv1JG3fv-ZmJb88rAZhktRI,19458
+echr_extractor/ECHR_nodes_edges_list_transform.py,sha256=D8n5Ru8L20YoBIwT_htafMRfCd5lXlsMKjbZtCixSwA,9321
+echr_extractor/__init__.py,sha256=Ni6iuNF27KAfpLv6e7H9N66mL4nN0jEuW6soTtrAhkM,403
+echr_extractor/clean_ref.py,sha256=cAlaprZo8I8_SKUlpFjemjdOHoRig-2NQkG8tIzlF0o,198
+echr_extractor/cli.py,sha256=-DDPhz_ihpSFai3HlYgoNlMwvv13WR2d-l3XKNiUF-c,4155
+echr_extractor/echr.py,sha256=j4E53I7u4Z7Cwx6HURPNxpjb24Ten3W-NFUjb5Tb35g,10136
+echr_extractor/testing_file.py,sha256=1U_Q3489at5WtQquYmLhhkElUhu8OjvY8yp--LR3kCA,668
+echr_extractor-1.0.45.dist-info/licenses/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+echr_extractor-1.0.45.dist-info/METADATA,sha256=b3GFYuDRL55fhvCHAYsS-nRVtToXVpKILm2s_lfxyZg,5886
+echr_extractor-1.0.45.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+echr_extractor-1.0.45.dist-info/entry_points.txt,sha256=TmNI9MFujDX0hsVO9kCCUX4fy6HfLSHZQjAQXlJNtrw,59
+echr_extractor-1.0.45.dist-info/top_level.txt,sha256=_3q8klfvemMhS7KOxqjrEIJROrwhIM0bWKDAvldqfQY,15
+echr_extractor-1.0.45.dist-info/RECORD,,
