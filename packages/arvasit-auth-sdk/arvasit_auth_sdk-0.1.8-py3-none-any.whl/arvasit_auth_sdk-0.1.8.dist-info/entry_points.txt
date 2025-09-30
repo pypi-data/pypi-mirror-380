@@ -1,0 +1,2 @@
+[console_scripts]
+arvasit-auth-test = auth_sdk.test:main
