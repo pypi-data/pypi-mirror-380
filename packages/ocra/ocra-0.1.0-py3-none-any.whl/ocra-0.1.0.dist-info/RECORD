@@ -1,0 +1,10 @@
+ocra/orientation/__init__.py,sha256=J1sKNUXesgr27S_ffLEu5oU5GKupRL89WHeBNX76Uws,7716
+ocra/orientation/dataset.py,sha256=Zx_PQxLjaX8nhKNVpoSBxxfWEjJJh8Fz2ZoMxJOBIQQ,3853
+ocra/orientation/generate_rotations_csv.py,sha256=7Nqm5LjUUMwsNjBo0Yb3JzxpbLtEDovGO2l5fjb3xBQ,1608
+ocra/orientation/model.py,sha256=jH4QqOF0V6bLLUtt1AUc7KYvS70aYhTLZyRLPhlbmg8,1083
+ocra/orientation/train.py,sha256=_woe_MAViH52PgrFO2ZIgLUKLSXZ6EvFLQFGUQ2AHuM,15407
+ocra/orientation/utils.py,sha256=f-OIWu69bkY3P0eyX2du3xeGznxK1qms20H0cJlQfh8,1597
+ocra-0.1.0.dist-info/METADATA,sha256=eITMOQaQa5tBWJ6OJtDZYoJ--tzQdT0gpYNQQV0JDiE,1655
+ocra-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ocra-0.1.0.dist-info/top_level.txt,sha256=1BowYC7hxAfpzpHzR8d0K7IjxjA3-UHVMRy7Gcziym8,5
+ocra-0.1.0.dist-info/RECORD,,
