@@ -1,0 +1,14 @@
+LICENSE.txt
+pyproject.toml
+licenses/LICENSE_BSD.txt
+licenses/LICENSE_PSF.txt
+src/tedit/__init__.py
+src/tedit/__main__.py
+src/tedit/_pip_only.py
+src/tedit/app.py
+src/tedit.egg-info/PKG-INFO
+src/tedit.egg-info/SOURCES.txt
+src/tedit.egg-info/dependency_links.txt
+src/tedit.egg-info/entry_points.txt
+src/tedit.egg-info/requires.txt
+src/tedit.egg-info/top_level.txt

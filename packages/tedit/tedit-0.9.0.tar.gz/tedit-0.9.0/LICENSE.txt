@@ -1,0 +1,60 @@
+TEdit Pip-Only Public Use License v1.0
+Identifier: LicenseRef-TE-Pip-Only-1.0
+
+Copyright © 2024–2025 alby13 (“Licensor”). All rights reserved.
+
+1. Definitions
+
+Software means the TEdit (Text Editor) program and accompanying files owned by Licensor.
+
+Authorized Channel means the Python Package Index (PyPI) and installation via the pip tool using the official package published by Licensor.
+
+Authorized Copy means an unmodified copy of the Software obtained from the Authorized Channel and installed via pip.
+
+You means the individual or entity exercising rights under this license.
+
+2. Limited License Grant (Pip-Only)
+
+Subject to your full compliance with this license, Licensor grants you a limited, non-exclusive, non-transferable, revocable, royalty-free license to install and run the Software solely as an Authorized Copy installed via pip from the Authorized Channel. This license covers any purpose (including commercial use) and is provided free of charge; it does not grant support, warranties, or updates.
+
+Redistribution Exception for PyPI: Unmodified copies of the package files (sdists and wheels) obtained from the official PyPI project page may be reproduced and redistributed solely for the purpose of installation via pip, including via caches and mirrors that support PyPI and pip.
+
+3. Restrictions
+
+Except as expressly permitted in Section 2, you may not:
+
+Run the Software from source, from a git checkout, from local editable installs, or from any distribution channel other than the Authorized Channel.
+
+Modify, adapt, translate, create derivative works of, reverse engineer, decompile, or disassemble the Software, except to the extent such restrictions are prohibited by applicable law.
+
+Copy, redistribute, publish, sell, sublicense, host, mirror, or make the Software available to others (including by re-packaging or re-uploading to any index, repository, or app store).
+
+Remove or alter copyright, license, or attribution notices.
+
+4. Contributor Development Exception (Non-Production)
+
+Individuals contributing changes to the Software may run it from source solely for development and testing in order to submit contributions back to Licensor. This exception does not permit production use, redistribution, or any other use from source.
+
+5. Third-Party Components
+
+The Software may bundle or interface with third-party libraries that are licensed under their own terms (e.g., PSF License, BSD-3-Clause). Those licenses govern the third-party components; this license governs the original portions of the Software.
+
+6. Ownership
+
+The Software is licensed, not sold. Licensor retains all right, title, and interest in and to the Software.
+
+7. Termination
+
+This license terminates automatically if you breach it. Upon termination, you must cease all use of the Software. Sections 3, 5, 6, 8, and 9 survive termination.
+
+8. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+9. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR IS NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.
+
+10. General
+
+This is a custom, proprietary license and is not an open-source license. If any provision is unenforceable, the remainder remains in effect. Use of trademarks, names, or logos is not licensed.
