@@ -1,0 +1,209 @@
+Metadata-Version: 2.4
+Name: aspect-sdk
+Version: 0.0.6
+Summary: Python SDK for Aspect Media Engine API
+Author-email: Aspect Team <admin@aspect.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/aspect/aspect-media-engine
+Project-URL: Repository, https://github.com/aspect/aspect-media-engine
+Keywords: aspect,media,engine,api,sdk
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<3.0.0,>=2.1.0
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Requires-Dist: setuptools>=80.9.0
+Requires-Dist: wheel>=0.45.1
+Requires-Dist: build>=1.3.0
+
+# Aspect Python SDK
+
+This SDK delivers an intuitive interface for building applications with Aspect's video intelligence platform. Designed for Python developers, it provides comprehensive methods for video analysis, search, and management while eliminating complex integration overhead and reducing development time.
+
+## Installation
+
+```bash
+pip install aspect-sdk
+```
+
+## Usage
+
+### Initialize the Aspect client
+
+Sign up for your api key [here](https://playground.aspect.inc) and then head to the Api keys [tab](https://playground.aspect.inc/api-keys)
+
+```python
+from aspect_sdk import Aspect, AspectConfig
+
+client = Aspect(AspectConfig(
+    api_key='your-api-key',  # Required: Your API key 
+))
+```
+
+### Create an Index
+
+Indexes are organizational containers for your assets. Think of them like folders or collections.
+
+```python
+from aspect_sdk import IndexCreateRequest
+
+index = client.indexes.create(IndexCreateRequest(
+    name='My Video Collection',
+    description='Collection of marketing videos',
+    features=['embedding']  # Optional: specify which AI features to run by default on all assets when they're created in this index
+))
+
+print('Created index:', index.id)
+```
+
+### Create an Asset
+
+Assets are videos or images that get AI-indexed by the system. You can upload from a file path, URL, or file object.
+
+```python
+from aspect_sdk import AssetCreateRequest
+
+# Upload from file path
+response = client.assets.create(AssetCreateRequest(
+    index_id=index.id,
+    name='video.mp4',
+    asset_file='/path/to/video.mp4',
+    # asset_url='https://example.com/video.mp4',  # can also optionally pass a url instead of file
+    save_original=True,  # Whether to store the original file
+    features=['transcription']  # Optional: specify which AI features to additionally run specifically for this asset (union with index default features)
+))
+
+asset_id = response.asset_id
+task_id = response.task_id
+
+print('Created asset from file:', asset_id)
+
+# Wait on the asset to finish indexing its features
+task = client.tasks.wait_for_done(task_id, WaitForDoneOptions(
+    interval=5000,
+    callback=lambda task: print(task.features)
+))
+
+if task.features.transcription.state == "failed":
+    raise Exception("Transcription failed")
+```
+
+### Search Assets
+
+Search across your indexed video content using natural language queries.
+
+```python
+# Basic search
+search_results = client.search.run({
+    'index_id': index.id,
+    'query': "",
+})
+print("Search results", search_results)
+
+# Note: The search API is currently being developed and will support
+# parameters like filters, sorting, and pagination
+```
+
+## API Structure
+
+The SDK is organized into resource-based modules:
+
+- **`client.indexes`** - Create and manage indexes (collections)
+- **`client.assets`** - Upload and manage video assets
+- **`client.search`** - Search across indexed content
+- **`client.tasks`** - Monitor processing tasks
+- **`client.users`** - User account management
+- **`client.analyze`** - AI analysis operations
+
+## Asset Processing
+
+When you create an asset, Aspect automatically runs tasks for the playground:
+
+- **Proxies** - Optimized versions for streaming
+- **Previews** - Thumbnail images and preview clips
+
+You can choose to run these AI jobs whenever you want (either through index's default features, assets.create, or tasks.create):
+
+- **Transcription** - Speech-to-text extraction
+- **Embedding** - Semantic vector embeddings for search
+
+You can monitor processing status through the task polling system or via webhooks.
+
+## Type Safety
+
+This SDK is built with type safety in mind using Pydantic models and type hints:
+
+```python
+from aspect_sdk import (
+    IndexCreateRequest,
+    AssetCreateResponse,
+    AspectConfig,
+    WaitForDoneOptions,
+)
+```
+
+## Error Handling
+
+```python
+from aspect_sdk import ApiException
+
+try:
+    asset = client.assets.create(AssetCreateRequest(
+        index_id='invalid-id',
+        name='video.mp4',
+        asset_file='/path/to/video.mp4',
+        save_original=True
+    ))
+except ApiException as error:
+    print('Failed to create asset:', str(error))
+```
+
+## Advanced Usage
+
+### File Input Types
+
+The SDK supports multiple file input types for asset creation:
+
+```python
+# File path (string)
+asset = client.assets.create(AssetCreateRequest(
+    index_id=index_id,
+    name='video.mp4',
+    asset_file='/path/to/video.mp4',
+    save_original=True
+))
+
+# Pathlib.Path object
+from pathlib import Path
+asset = client.assets.create(AssetCreateRequest(
+    index_id=index_id,
+    name='video.mp4',
+    asset_file=Path('/path/to/video.mp4'),
+    save_original=True
+))
+
+# Raw bytes
+with open('/path/to/video.mp4', 'rb') as file:
+    video_bytes = file.read()
+
+asset = client.assets.create(AssetCreateRequest(
+    index_id=index_id,
+    name='video.mp4',
+    asset_file=video_bytes,
+    save_original=True
+))
+
+# File-like object
+with open('/path/to/video.mp4', 'rb') as file:
+    asset = client.assets.create(AssetCreateRequest(
+        index_id=index_id,
+        name='video.mp4',
+        asset_file=file,
+        save_original=True
+    ))
+```
+
+## License
+
+MIT License
