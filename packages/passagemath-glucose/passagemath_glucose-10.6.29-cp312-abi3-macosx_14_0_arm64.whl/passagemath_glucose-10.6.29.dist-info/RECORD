@@ -1,0 +1,10 @@
+passagemath_glucose-10.6.29.dist-info/RECORD,,
+passagemath_glucose-10.6.29.dist-info/WHEEL,sha256=ADNt44mHKqsOu4SDxsmR93Rs2zJZXSXbCVUlWBfFeFI,135
+passagemath_glucose-10.6.29.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_glucose-10.6.29.dist-info/METADATA,sha256=SrwE16OS-nVb3IECy_Rrpn3cpIDChi-7f25gJkOlXOE,5229
+sage_wheels/bin/glucose,sha256=9IbIyPqMEQP-87fvItidCWsVu3W3w1iomdjHdD3YDUo,236472
+sage_wheels/bin/glucose-syrup,sha256=-aH-H4Fx1v-4z2IJyKM-V7iNcS4OY4RjxDid335MRF0,305760
+sage/all__sagemath_glucose.py,sha256=awZSOrFQvzunMNXbI_A6vXx7Y4d3vJ4F_GqvK-b0Rz4,109
+sage/libs/glucose.pyx,sha256=wZF2_APmQAOubApunDSuSgmOOCsTEKvGk2hwtk_OoEw,46
+sage/libs/all__sagemath_glucose.py,sha256=wZF2_APmQAOubApunDSuSgmOOCsTEKvGk2hwtk_OoEw,46
+sage/libs/glucose.abi3.so,sha256=WSvKSF4mek7YTPiZ_hGLtrDQzN-ZiEFRFbwbww2u86s,54704
