@@ -1,0 +1,11 @@
+cvnn/__init__.py,sha256=VOktDAEESCaRt4gsEOnmgx91Ly0-qL3klgyDZnXkiFI,1175
+cvnn/activations.py,sha256=TTmXJcoCnuPcEHmT0FmsFJVIFyaWIs7v1fxVI3ZciWA,5001
+cvnn/data.py,sha256=c1eAEFXlHYpW9C0XnNpE2FTbdHqESNMooYeftmEa1ic,1985
+cvnn/help.py,sha256=w_Pg-PplLBv6sGcybD0SDm6uIxXiM6lnGglLp2dIMI4,2104
+cvnn/initialisations.py,sha256=IQGloLnGY6ycbsnWojGVWGGtR2Vz4AcUworlP2Cu5nc,7218
+cvnn/layers.py,sha256=_TKkjXHrNbaYJYW7OSfyrCn1td1nJYQ0HfuboiSfjjA,7338
+cvnn/model.py,sha256=ulFaNGv84cbUleuaCljZUxOtAULoBu7mnuZ13TN5aqY,7030
+CVNN_Jamie-0.2.34.dist-info/METADATA,sha256=aR5B0zyv517lGRI1KAc0zwrDRatOGjcFd9skMGTsG78,4761
+CVNN_Jamie-0.2.34.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+CVNN_Jamie-0.2.34.dist-info/top_level.txt,sha256=HQ2XgOoVYQZKjiCyxHvchp4ugNHiSlFE47F7RPHuoMI,5
+CVNN_Jamie-0.2.34.dist-info/RECORD,,
