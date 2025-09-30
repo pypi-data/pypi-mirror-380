@@ -1,0 +1,3 @@
+[console_scripts]
+donnes-des-sous-hakim = donnes_des_sous_hakim:main
+
