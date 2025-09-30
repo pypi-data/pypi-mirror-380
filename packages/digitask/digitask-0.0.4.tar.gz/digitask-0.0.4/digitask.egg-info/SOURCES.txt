@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+digitask/__init__.py
+digitask/core.py
+digitask.egg-info/PKG-INFO
+digitask.egg-info/SOURCES.txt
+digitask.egg-info/dependency_links.txt
+digitask.egg-info/requires.txt
+digitask.egg-info/top_level.txt
