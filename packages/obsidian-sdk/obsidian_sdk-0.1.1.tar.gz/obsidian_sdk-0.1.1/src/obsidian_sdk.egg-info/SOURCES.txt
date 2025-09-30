@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/obsidian_sdk/__init__.py
+src/obsidian_sdk/core.py
+src/obsidian_sdk/log.py
+src/obsidian_sdk/server.py
+src/obsidian_sdk.egg-info/PKG-INFO
+src/obsidian_sdk.egg-info/SOURCES.txt
+src/obsidian_sdk.egg-info/dependency_links.txt
+src/obsidian_sdk.egg-info/requires.txt
+src/obsidian_sdk.egg-info/top_level.txt
+tests/test_main.py
