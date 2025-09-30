@@ -1,0 +1,2 @@
+# unitx
+What is unitx? Unitx is the best Python library for converting units between each other dynamically! It currently provides support to 5 different type of unit categories, but more will be added in the future!
