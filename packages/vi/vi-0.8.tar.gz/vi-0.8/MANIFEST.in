@@ -1,0 +1,24 @@
+include *.txt *.md *.rst *.yml *.yaml *.cfg *.ini *.conf
+include LICENSE AUTHORS CHANGELOG HISTORY NEWS
+include requirements*.txt
+include test-requirements*.txt
+include tox.ini .testr.conf .coveragerc
+include Procfile
+include manage.py
+include tasks.py
+
+recursive-include vi *.py *.yaml *.yml *.conf *.cfg *.txt *.md *.rst
+recursive-include docs *.py *.rst *.txt *.md *.bat *.css *.js *.html *.png *.jpg *.gif
+recursive-include etc *.conf *.cfg *.ini *.yaml *.yml *.txt
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .git*
+recursive-exclude * .tox*
+recursive-exclude * .coverage*
+recursive-exclude * *.egg-info*
+
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude .DS_Store
+global-exclude Thumbs.db
