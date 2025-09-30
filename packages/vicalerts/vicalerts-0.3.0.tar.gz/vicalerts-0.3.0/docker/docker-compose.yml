@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  vicalerts:
+    build:
+      context: .
+    image: vicalerts:latest
+    container_name: vicalerts
+    restart: unless-stopped
+
+    environment:
+      - TZ=Australia/Melbourne
+
+    volumes:
+      # Mount local directory for database persistence
+      - ./data:/data
+
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "/healthcheck.py"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Labels for autoheal and organization
+    labels:
+      - "autoheal=true"
+      - "com.vicalerts.description=Victorian Emergency Alerts Tracker"
+      - "com.vicalerts.version=0.3.0"
+      - "com.vicalerts.maintainer=lnxd"
