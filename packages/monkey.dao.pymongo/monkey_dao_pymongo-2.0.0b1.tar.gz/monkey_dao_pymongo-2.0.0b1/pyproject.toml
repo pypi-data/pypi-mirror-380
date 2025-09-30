@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monkey.dao.pymongo"
+version = "2.0.0b1"
+description = 'Simple Data Access Object pattern implementation for MongoDB database.'
+readme = "README.md"
+license-files = ["LICENSE"]
+
+authors = [
+    { name = "Xavier ROY", email = "xavier@monkey-python.org" }
+]
+maintainers = [
+
+]
+
+requires-python = ">= 3.10"
+
+dependencies = [
+    "monkey.dao>=2.0.0b1",
+    "pymongo>=4.3.3",
+    "setuptools"
+]
+
+classifiers = [
+    'Programming Language :: Python',
+    'Development Status :: 4 - Beta',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3.10',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Intended Audience :: Developers'
+]
+
+[project.urls]
+Repository = "https://bitbucket.org/monkey-python/monkey-dao-pymongo/"
+
+[dependency-groups]
+doc = [
+    "mkdocs",
+    "mkdocs-autorefs",
+    "mkdocs-material",
+    "mkdocs-macros-plugin",
+    "mkdocstrings[python]",
+    "mike"
+]
+test = [
+    "pytest",
+    "mongomock"
+]
+tools = [
+    "black",
+    "pip-tree",
+    "ruff"
+]
+all = [
+    { include-group = "doc" },
+    { include-group = "test" },
+    { include-group = "tools" }
+]
+
+[tool.distutils.egg_info]
+egg_base = "."
+
+[tool.setuptools]
+package-dir = { "" = "src/main/python" }
+
+[tool.setuptools.packages.find]
+where = ["src/main/python"]
+namespaces = true
+
+[tool.pytest.ini_options]
+# @See: https://docs.pytest.org/en/stable/reference/reference.html#ini-options-ref
+minversion = "6.0"
+testpaths = [
+    "src/ut/python",
+    "src/it/python",
+]
+
+[tool.ruff]
+include = ["pyproject.toml", "src/**/*.py", "scripts/**/*.py"]

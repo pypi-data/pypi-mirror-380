@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: monkey.dao.pymongo
+Version: 2.0.0b1
+Summary: Simple Data Access Object pattern implementation for MongoDB database.
+Author-email: Xavier ROY <xavier@monkey-python.org>
+Project-URL: Repository, https://bitbucket.org/monkey-python/monkey-dao-pymongo/
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: monkey.dao>=2.0.0b1
+Requires-Dist: pymongo>=4.3.3
+Requires-Dist: setuptools
+Dynamic: license-file
+
+# Monkey DAO PyMongo
+Simple Data Access Object pattern implementation for [MongoDB](http://www.mongodb.org/) using [PyMongo API](https://api.mongodb.com/python/current/)
+
+
+Installation guide
+------------------
+
+::
+
+    pip install monkey-dao-pymongo
+
+User guide
+----------
+
+
+# Monkey DAO
+
+Simple Data Access Object pattern implementation
+
+## Installation
+
+````
+
+    pip install monkey-dao-pymongo
+
+````
+
+# Documentation
+For full documentation, visit [https://pymongo-dao.monkey-python.org](https://pymongo-dao.monkey-python.org)
