@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: stsiskar_library
+Version: 0.1.0
+Summary: A simple Base class example
+Author: Shota
+Author-email: shota.tsiskaridze@iliauni.edu.ge
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
