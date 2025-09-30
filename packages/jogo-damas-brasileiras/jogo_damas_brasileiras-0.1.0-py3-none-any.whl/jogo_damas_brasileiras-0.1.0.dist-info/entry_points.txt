@@ -1,0 +1,2 @@
+[console_scripts]
+jogo-damas = jogo_damas.main:main
