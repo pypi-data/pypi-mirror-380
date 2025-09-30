@@ -1,0 +1,81 @@
+CHANGES
+=======
+
+0.2.2
+-----
+
+* git diff changes to only include changed files to base (#8)
+
+0.2.1
+-----
+
+* add payload output (#7)
+
+0.2.0
+-----
+
+* Gh actions (#6)
+
+0.1.0
+-----
+
+* Fix input validation (#5)
+* Fix false positives (#4)
+* Update README.md (#3)
+* enable zuul builds and refactor code style (#2)
+* Add Readme
+* Add confidence value to args and fix regex
+* Fix issues
+* Fix issues
+* Added regex arg to image recognition
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* regex patterns
+* regex patterns
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* muh
+* Improvements
+* Improvements
+* Changes
+* Changes
+* Changes
+* Changelog
+* Chinese
+* Changelog
+* Added text\_processing
+* Added text\_processing
+* Added text\_processing
+* Added text\_processing
+* add text file recognition
+* changelog
+* refactor
+* refactor
+* relocate file structure
+* Fixes
+* Added requirements
+* Changelog
+* Refinements
+* Refinements
+* picture list
+* OCR working
+* Dotenv
+* Demo docs added
+* first try
+* Initial commit
+* Update README.md
+* Initial commit
