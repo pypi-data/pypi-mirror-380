@@ -1,0 +1,145 @@
+# LDC Dashboard RBAC - Django Feature-Based Role Access Control
+
+A lightweight, backend-only Django app for implementing feature-based role-based access control (RBAC) with group-level permissions.
+
+## Features
+
+- 🔐 **Feature-based permissions** - Control access to specific features/views
+- 👥 **Group management** - Organize users into groups with shared permissions
+- 🎚️ **Permission levels** - Support for read, write, and admin access levels
+- 🔧 **Flexible configuration** - Works with any authentication system
+- ⚡ **Performance optimized** - Built-in caching and bulk operations
+- 🛠️ **Management commands** - CLI tools for feature synchronization
+- 🎯 **Backend only** - No frontend dependencies, use your own UI
+- 📦 **Lightweight** - Minimal dependencies, maximum flexibility
+
+## Installation
+
+```bash
+pip install ldc-dashboard-rbac
+```
+
+## Quick Start
+
+1. Add `ldc_dashboard_rbac` to your `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    # ... your apps
+    'ldc_dashboard_rbac',
+]
+```
+
+2. Configure the package in your settings:
+
+```python
+# User getter function - adapt to your authentication system
+def get_current_user(request):
+    return getattr(request, 'user', None)
+
+def is_super_admin(user):
+    return user and user.is_superuser
+
+def can_manage_rbac(user):
+    return user and user.is_staff
+
+GROUP_RBAC = {
+    'USER_MODEL': 'auth.User',  # Your user model
+    'USER_GETTER': get_current_user,
+    'SUPER_ADMIN_CHECK': is_super_admin,
+    'ADMIN_CHECK': can_manage_rbac,
+}
+```
+
+3. Run migrations:
+
+```bash
+python manage.py migrate
+```
+
+4. Sync features from your URLs:
+
+```bash
+python manage.py sync_features
+```
+
+## Usage
+
+### In Views (Decorators)
+
+```python
+from ldc_dashboard_rbac.decorators import feature_required
+
+@feature_required('user_management')
+def user_list(request):
+    # Only users with 'user_management' feature access can view this
+    return render(request, 'users/list.html')
+
+@feature_required('user_management', permission_level='admin')
+def user_delete(request, user_id):
+    # Only users with admin-level access to user_management
+    return redirect('user_list')
+```
+
+### In Class-Based Views
+
+```python
+from ldc_dashboard_rbac.decorators import FeatureRequiredMixin
+
+class UserManagementView(FeatureRequiredMixin, ListView):
+    required_feature = 'user_management'
+    required_permission_level = 'write'
+    model = User
+```
+
+### Programmatic Permission Checking
+
+```python
+from ldc_dashboard_rbac.permissions import user_has_feature_permission, get_user_features
+
+# Check single permission
+if user_has_feature_permission(request.user, 'user_management', 'write'):
+    # User can edit users
+    pass
+
+# Get all user's features
+user_features = get_user_features(request.user)
+for feature in user_features:
+    print(f"User has access to: {feature.name}")
+
+# Bulk permission check (more efficient)
+from ldc_dashboard_rbac.permissions import bulk_check_permissions
+permissions = bulk_check_permissions(
+    request.user, 
+    ['user_management', 'admin_panel', 'reports'],
+    'read'
+)
+# Returns: {'user_management': True, 'admin_panel': False, 'reports': True}
+```
+
+### In Your Own Templates
+
+Since this is backend-only, you implement your own template logic:
+
+```python
+# In your view
+def my_view(request):
+    from ldc_dashboard_rbac.permissions import user_has_feature_permission
+    
+    context = {
+        'can_manage_users': user_has_feature_permission(request.user, 'user_management'),
+        'can_view_reports': user_has_feature_permission(request.user, 'reports', 'read'),
+        'is_admin': user_has_feature_permission(request.user, 'admin_panel', 'admin'),
+    }
+    return render(request, 'my_template.html', context)
+```
+
+```html
+<!-- In your template -->
+{% if can_manage_users %}
+    <a href="{% url 'user_list' %}">Manage Users</a>
+{% endif %}
+
+{% if is_admin %}
+    <button class="delete-user">Delete User</button>
+{% endif %}
