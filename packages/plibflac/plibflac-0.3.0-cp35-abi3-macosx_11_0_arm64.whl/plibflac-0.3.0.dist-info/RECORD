@@ -1,0 +1,9 @@
+_plibflac.abi3.so,sha256=ZcNBk5VdYrIawnzSISUz5nL73FiY_BRGkibEMGQj0D4,360896
+plibflac/_decoder.py,sha256=7McoT377diYcil4-ebvoF_WLCn9BGMBXH6A_F7urAF8,11042
+plibflac/__init__.py,sha256=aGCAualPU93trxhcyEWgtXWezdO2yJMCqtLF8iE_tL8,264
+plibflac/_encoder.py,sha256=0wHy-ZB1uSYLGfhlfuOc422CK8Z88yOINjqQH-Zjjyw,15869
+plibflac-0.3.0.dist-info/RECORD,,
+plibflac-0.3.0.dist-info/WHEEL,sha256=Bc0E-pVelzrjKLgzW3ztVgCs2ABV9VuTU84CQctFNCY,134
+plibflac-0.3.0.dist-info/top_level.txt,sha256=Ekfy2QRYtfDD7vSTnYXnRhuMs2E_Z5KCmJXZofQbHio,19
+plibflac-0.3.0.dist-info/METADATA,sha256=QCRRpslwCDvBo2ZlUeDVMfG3nMOeEQXxLFh1QfyMJRg,2247
+plibflac-0.3.0.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
