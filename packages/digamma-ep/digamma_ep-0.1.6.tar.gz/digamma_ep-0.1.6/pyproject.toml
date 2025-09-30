@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digamma-ep"
+version = "0.1.6"
+description = "Symbolic audit framework for model divergence and integrity"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+authors = [
+    { name="Cerene Rúbio", email="teu@email.com" }
+]
+license = { text = "MIT" }
