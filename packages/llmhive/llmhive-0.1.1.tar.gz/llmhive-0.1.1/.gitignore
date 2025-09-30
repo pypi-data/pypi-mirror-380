@@ -1,0 +1,14 @@
+.DS_STORE
+
+# Python-generated files
+.pytest_cache
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+uv.lock
+
+# Virtual environments
+.venv
