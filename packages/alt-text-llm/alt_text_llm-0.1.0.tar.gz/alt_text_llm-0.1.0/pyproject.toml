@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alt-text-llm"
+version = "0.1.0"
+description = "AI-powered alt text generation and labeling tools for markdown content"
+readme = "README.md"
+authors = [{name = "TurnTrout"}]
+license = "MIT"
+requires-python = ">=3.11"
+keywords = ["alt-text", "accessibility", "markdown", "llm", "ai"]
+
+dependencies = [
+    "gitpython",
+    "requests",
+    "ruamel.yaml",
+    "markdown-it-py",
+    "rich",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "types-requests"]
+
+[project.scripts]
+alt-text-llm = "alt_text_llm.main:main"
+
+[project.urls]
+Repository = "https://github.com/alexander-turner/alt-text-llm"
