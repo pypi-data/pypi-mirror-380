@@ -1,0 +1,224 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "advanced-video-processor"
+version = "0.5.1"
+description = "Professional video processing pipeline with computer vision analysis, 360° processing, and adaptive streaming"
+authors = [{name = "Ryan Malloy", email = "ryan@malloys.us"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+keywords = ["video", "processing", "ffmpeg", "360", "vr", "streaming", "computer-vision", "opencv", "multimedia"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Video :: Conversion",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "pillow>=11.2.1",
+    "msprites2>=0.1.0",
+    "procrastinate>=2.15.1,<4.0.0",  # Support both 2.x and 3.x during migration
+    "psycopg[pool]>=3.2.9",
+    "python-dateutil>=2.9.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "exifread>=3.5.1",
+]
+
+[project.urls]
+Homepage = "https://git.supported.systems/video/video-processor"
+Documentation = "https://git.supported.systems/video/video-processor/tree/main/docs"
+Repository = "https://git.supported.systems/video/video-processor.git"
+Issues = "https://git.supported.systems/video/video-processor/issues"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.7.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    # Integration testing dependencies
+    "docker>=6.1.0",
+    "psycopg2-binary>=2.9.0",
+    # Publishing dependencies
+    "build>=1.0.0",
+    "twine>=5.0.0",
+]
+
+# Computer vision dependencies (shared by multiple features)
+opencv = [
+    "opencv-python>=4.5.0",     # Computer vision for content analysis
+    "numpy>=1.21.0",            # Mathematical operations for image processing
+    "pillow>=9.0.0",            # Image processing utilities
+]
+
+# Advanced content analysis (computer vision + statistical analysis)
+analysis = [
+    "advanced-video-processor[opencv]",   # Base computer vision
+    "scikit-learn>=1.0.0",      # Statistical analysis utilities
+]
+
+# Core 360° video processing
+video-360 = [
+    "advanced-video-processor[opencv]",   # Shared computer vision dependencies
+    "py360convert>=0.1.0",      # 360° projection conversions
+    "scipy>=1.7.0",             # Scientific computing for spherical geometry
+]
+
+# Spatial audio processing for 360° videos
+spatial-audio = [
+    "librosa>=0.9.0",           # Audio analysis and processing
+    "soundfile>=0.11.0",        # Multi-channel audio I/O
+]
+
+# Complete 360° package with all features
+video-360-full = [
+    "advanced-video-processor[video-360]",
+    "advanced-video-processor[spatial-audio]",
+    "advanced-video-processor[analysis]",
+]
+
+# All features combined
+all = [
+    "advanced-video-processor[video-360-full]",
+]
+
+# Enhanced metadata extraction for 360° videos
+metadata-360 = [
+    "exifread>=3.0.0",          # 360° metadata parsing
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_processor"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/README.md",
+    "/pyproject.toml",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings  
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "UP",   # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]  # Allow assert in tests
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+# Test discovery
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+# Async support
+asyncio_mode = "auto"
+
+# Plugin configuration
+addopts = [
+    "-v",                                    # Verbose output
+    "--strict-markers",                      # Require marker registration
+    "--tb=short",                           # Short traceback format
+    "--disable-warnings",                   # Disable warnings in output
+    "--color=yes",                          # Force color output
+    "--durations=10",                       # Show 10 slowest tests
+]
+
+# Test markers (registered by plugin but documented here)
+markers = [
+    "unit: Unit tests for individual components",
+    "integration: Integration tests across components",
+    "performance: Performance and benchmark tests",
+    "smoke: Quick smoke tests for basic functionality",
+    "regression: Regression tests for bug fixes",
+    "e2e: End-to-end workflow tests",
+    "video_360: 360° video processing tests",
+    "opencv_analysis: Computer vision-enhanced video analysis tests",
+    "streaming: Streaming and adaptive bitrate tests",
+    "requires_ffmpeg: Tests requiring FFmpeg installation",
+    "requires_gpu: Tests requiring GPU acceleration",
+    "slow: Slow-running tests (>5 seconds)",
+    "memory_intensive: Tests using significant memory",
+    "cpu_intensive: Tests using significant CPU",
+    "benchmark: Benchmark tests for performance measurement",
+]
+
+# Test filtering
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+    "ignore::UserWarning:requests.*",
+]
+
+# Parallel execution (requires pytest-xdist)
+# Usage: pytest -n auto (auto-detect CPU count)
+# Usage: pytest -n 4 (use 4 workers)
+
+# Minimum test versions
+minversion = "7.0"
+
+# Test timeouts (requires pytest-timeout)
+timeout = 300  # 5 minutes default timeout
+timeout_method = "thread"
+
+[dependency-groups]
+dev = [
+    "docker>=7.1.0",
+    "mypy>=1.17.1",
+    "numpy>=2.3.2",
+    "opencv-python>=4.11.0.86",
+    "psycopg2-binary>=2.9.10",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=6.2.1",
+    "pytest-xdist>=3.6.0", # Parallel test execution
+    "pytest-timeout>=2.3.1", # Test timeout handling
+    "pytest-html>=4.1.1", # HTML report generation
+    "pytest-json-report>=1.5.0", # JSON report generation
+    "psutil>=6.0.0", # System resource monitoring
+    "requests>=2.32.5",
+    "ruff>=0.12.12",
+    "tqdm>=4.67.1",
+    "build>=1.3.0",
+    "twine>=6.2.0",
+]
