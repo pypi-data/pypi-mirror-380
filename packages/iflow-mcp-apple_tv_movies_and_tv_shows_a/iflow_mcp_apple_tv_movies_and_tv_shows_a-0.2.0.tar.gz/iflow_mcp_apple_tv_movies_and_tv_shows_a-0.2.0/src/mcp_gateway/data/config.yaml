@@ -1,0 +1,27 @@
+server:
+  name: Apple TV Movies And TV Shows API By APIRobots
+  description: "Our Apple TV Movies and TV Shows API provides instant access to the latest and greatest content available on Apple TV. Whether you're a developer looking to enhance your streaming apps or a content enthusiast seeking inspiration, our API offers unparalleled flexibility and ease of use."
+  options:
+    requestTimeoutMillis: 15000
+
+tools:
+  - name: Get Apple TV Movies and TV Shows
+    description: "Returns a list of Apple TV titles, optionally filtered by name and paginated"
+    args:
+      - name: "name"
+        description: "Filter the results by name"
+        required: "False"
+        default: "无"
+      - name: "page"
+        description: "无"
+        required: "False"
+        default: "1"
+
+    requestTemplate:
+      url: https://apple-tv-movies-and-tv-shows-api-by-apirobots.p.rapidapi.com/v1/apple-tv?name={{args.name}}&page={{args.page}}
+      method: GET
+      headers:
+        - key: x-rapidapi-key
+          value: "6b9ef1f769msh95c46a345010a18p1fa99cjsn7d5c1b0c7195"
+        - key: x-rapidapi-host
+          value: "apple-tv-movies-and-tv-shows-api-by-apirobots.p.rapidapi.com"
