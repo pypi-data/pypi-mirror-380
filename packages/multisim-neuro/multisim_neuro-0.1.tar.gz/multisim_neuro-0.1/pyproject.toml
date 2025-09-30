@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multisim-neuro"
+dynamic = ["version"]
+description = "A package for simulating time resolved data with multivariate effects"
+authors = [
+    { name = "Alex Lepauvre", email = "alex.lepauvre@gmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+docs = ["mne", "eeglabio", "scikit-learn", "scipy", "pydata-sphinx-theme", "numpydoc", "nbsphinx", "ruff", "ipython", "sphinxcontrib-bibtex", "myst-nb"]
+export = ["mne", "eeglabio"]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/AlexLepauvre/multisim-neuro"
+Repository = "https://github.com/AlexLepauvre/multisim-neuro"
+
+[tool.setuptools]
+packages = ["multisim"]  # Automatically find the package
+
+[tool.setuptools.package-data]
+"multisim" = ["*.json", "*.csv"]  # Include additional data files if needed
+
+[tool.setuptools.dynamic]
+version = {attr = "multisim.__version__"}
