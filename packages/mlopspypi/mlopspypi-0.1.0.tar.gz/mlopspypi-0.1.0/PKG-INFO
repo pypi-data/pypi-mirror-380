@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: mlopspypi
+Version: 0.1.0
+Summary: A small reusable Python utilities package
+Project-URL: Homepage, https://github.com/yourusername/mlopspypi
+Project-URL: Bug Tracker, https://github.com/yourusername/mlopspypi/issues
+Author-email: MLOps Team <mlopsteam@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: example,reusable,utility
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+```bash
+your_package/
+├── your_package/        # main package folder
+│   ├── __init__.py
+│   └── main.py
+├── tests/               # optional
+│   └── test_main.py
+├── pyproject.toml       # modern build config
+├── README.md            # package description
+├── LICENSE              # open-source license
+└── .gitignore
+```

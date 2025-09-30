@@ -1,0 +1,11 @@
+
+License: Choose MIT, Apache, or GPL (MIT is simplest for open source).
+
+---
+
+## 5. Build Your Package
+
+First install build tools:
+
+```bash
+pip install build twine
