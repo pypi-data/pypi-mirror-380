@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ulid-python
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: typing-extensions ; python_full_version < '3.10'
+Requires-Dist: pytest>=6.0 ; extra == 'test'
+Requires-Dist: pytest>=6.0 ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Provides-Extra: test
+Provides-Extra: dev
+License-File: LICENSE
+Summary: High-performance ULID (Universally Unique Lexicographically Sortable Identifier) implementation for Python
+Author: Yoseph Bernandus
+Requires-Python: >=3.8
