@@ -1,0 +1,16 @@
+from .. import get_engine_name as get_engine_name, get_schema_name as get_schema_name
+from ....auth.auth_router import AuthRouter as AuthRouter
+from ....schemas.query_request import QueryRequest as QueryRequest
+from ....services.data_service import DataService as DataService
+from ....utils.response_utils import ResponseUtil as ResponseUtil
+from ..entity_table.t_enum_value import TEnumValue as TEnumValue, TEnumValueCreate as TEnumValueCreate, TEnumValueResponse as TEnumValueResponse, TEnumValueUpdate as TEnumValueUpdate
+from _typeshed import Incomplete
+from sqlalchemy.ext.asyncio import AsyncSession as AsyncSession
+
+TEnumValue_Router: Incomplete
+
+async def t_enum_value_query(*, query: QueryRequest, db: AsyncSession = ...): ...
+async def t_enum_value_create(*, create_model: TEnumValueCreate, db: AsyncSession = ...): ...
+async def t_enum_value_read(*, primary_id: int, db: AsyncSession = ...): ...
+async def t_enum_value_update(*, primary_id: int, update_model: TEnumValueUpdate, db: AsyncSession = ...): ...
+async def t_enum_value_delete(*, primary_id: int, db: AsyncSession = ...): ...

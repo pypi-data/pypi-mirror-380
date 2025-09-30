@@ -1,0 +1,16 @@
+from .. import get_engine_name as get_engine_name, get_schema_name as get_schema_name
+from ....auth.auth_router import AuthRouter as AuthRouter
+from ....schemas.query_request import QueryRequest as QueryRequest
+from ....services.data_service import DataService as DataService
+from ....utils.response_utils import ResponseUtil as ResponseUtil
+from ..entity_table.t_enum_group import TEnumGroup as TEnumGroup, TEnumGroupCreate as TEnumGroupCreate, TEnumGroupResponse as TEnumGroupResponse, TEnumGroupUpdate as TEnumGroupUpdate
+from _typeshed import Incomplete
+from sqlmodel.ext.asyncio.session import AsyncSession as AsyncSession
+
+TEnumGroup_Router: Incomplete
+
+async def t_enum_group_query(*, query: QueryRequest, db: AsyncSession = ...): ...
+async def t_enum_group_create(*, create_model: TEnumGroupCreate, db: AsyncSession = ...): ...
+async def t_enum_group_read(*, primary_id: int, db: AsyncSession = ...): ...
+async def t_enum_group_update(*, primary_id: int, update_model: TEnumGroupUpdate, db: AsyncSession = ...): ...
+async def t_enum_group_delete(*, primary_id: int, db: AsyncSession = ...): ...
