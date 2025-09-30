@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: chembl_miner
+Version: 0.1.0
+Summary: A package for automating QSAR analysis on ChEMBL data.
+Author-email: Henrique Gabriel Wuchryn Martins <henriq.gwm@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/henriqwuchryn/chembl_miner
+Project-URL: Bug Tracker, https://github.com/henriqwuchryn/chembl_miner/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: chembl_webresource_client
+Requires-Dist: padelpy
+Requires-Dist: rdkit
+Requires-Dist: sklearn-genetic-opt
+Requires-Dist: xgboost
+Requires-Dist: statsmodels
+Dynamic: license-file
+
+ROADMAP:
+-implementation on generic algorithm for hyperparameter optimization
+-implementation of additional outlier detection methods
+-implementation of additional feature selection methods
+-implementation of classifier pipeline
