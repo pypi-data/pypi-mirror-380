@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: casampi
+Version: 0.5.9
+Summary: the CASA MPI framework
+Home-page: https://open-bitbucket.nrao.edu/projects/CASA/repos/casampi/browse
+Download-URL: https://casa.nrao.edu/download/
+Author: CASA development team
+Author-email: casa-feedback@nrao.edu
+Maintainer: Sandra Castro
+Maintainer-email: scastro@eso.org
+License: GNU Library or Lesser General Public License (LGPL)
+Keywords: CASA
+Requires-Dist: mpi4py >=4.0
+Requires-Dist: casatools
+
+common astronomy software applications
+scientific computing
+MPI
+message passing interface
+parallel computing
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: mpi4py>=4.0
+Requires-Dist: casatools
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary
+
+The CASAmpi is the MPI framework to process CASA tools and tasks in parallel.
