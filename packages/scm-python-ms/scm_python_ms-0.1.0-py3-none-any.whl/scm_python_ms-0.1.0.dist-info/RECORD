@@ -1,0 +1,12 @@
+scm_python_ms/lib/ssz_micro_service.py,sha256=cxIv3NvUW0ZOua37B7uX1EaqaLV9aaQfYH6fTNWqo_w,2431
+scm_python_ms/tapps/ssz_micro_service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scm_python_ms/tapps/ssz_micro_service/context_processor.py,sha256=CF_t6dYx-UDRVip109jFyVv2CkQavDd3731ZwEEMFEU,2849
+scm_python_ms/tapps/ssz_micro_service/etc_processor.py,sha256=wfpkLmHUG081ay1uy424Nq3_sByK9mDnbUBNftqheRY,347
+scm_python_ms/tapps/ssz_micro_service/jar_processor.py,sha256=aOZItLCBd-1R5PfYtDo2_1aK2MtjQ-7l5nn7vrp-svw,7723
+scm_python_ms/tapps/ssz_micro_service/ssh_processor.py,sha256=A3qN1wZNeYyJQktGDdnQHjs1B3712z5Z6bceSgjJEhw,789
+scm_python_ms/tapps/ssz_micro_service/printer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scm_python_ms/tapps/ssz_micro_service/printer/simple_printer.py,sha256=1YW_9frHi6T04vG6axdA5u-IOeZShCt_9Gd8-ltld08,2878
+scm_python_ms-0.1.0.dist-info/METADATA,sha256=PQJ-2NCNIKqark-97rgxkkH9CrCwt6XHpP5k5DNn0iU,486
+scm_python_ms-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scm_python_ms-0.1.0.dist-info/top_level.txt,sha256=mm0AIPES1TY8oGBhFt52mtqR426bMN3xPE4WO7oXeUU,14
+scm_python_ms-0.1.0.dist-info/RECORD,,
