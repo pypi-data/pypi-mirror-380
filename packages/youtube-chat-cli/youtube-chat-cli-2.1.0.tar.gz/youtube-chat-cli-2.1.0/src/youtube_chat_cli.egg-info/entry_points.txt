@@ -1,0 +1,4 @@
+[console_scripts]
+youtube-chat = youtube_chat_cli.cli.main:main
+youtube-chat-cli = youtube_chat_cli.cli.main:main
+
