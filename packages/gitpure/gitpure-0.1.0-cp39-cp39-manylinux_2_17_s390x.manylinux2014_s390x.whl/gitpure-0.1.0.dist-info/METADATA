@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: gitpure
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pytest ; extra == 'test'
+Provides-Extra: test
+Requires-Python: >=3.8
