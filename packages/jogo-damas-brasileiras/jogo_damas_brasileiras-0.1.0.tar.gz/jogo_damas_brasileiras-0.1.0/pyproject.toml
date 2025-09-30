@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jogo-damas-brasileiras"
+version = "0.1.0"
+description = "Um jogo de damas em Python com pygame."
+authors = [
+  { name="Stefany Nicole Santos Alves", email="stefany.nicole.santos.alves@ccc.ufcg.edu.br" }, 
+  { name="Rebeca de Medeiros Silva", email="rebeca.de.medeiros.silva@ccc.ufcg.edu.br" }
+]
+readme = "README.md"
+dependencies = ["pygame"]
+requires-python = ">=3.8"
+
+
+[project.urls]
+"GitHub" = "https://github.com/rebecamdrs/Projeto-Damas"
+"Vídeo" = "https://youtu.be/y_fSPHQ6510?si=7CYMslPc9dpVqPJP"
+
+[project.scripts]
+jogo-damas = "jogo_damas.main:main"
