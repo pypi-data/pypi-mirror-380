@@ -1,0 +1,11 @@
+capiscio/__init__.py,sha256=utGPgL4iVTbz3bvbCbtbLQVAnbnVRaVwGeCbgaA0EAQ,255
+capiscio/cli.py,sha256=bQ_BJVsthM1Bd7Y658Gjcj9xadl2zSWGIQjesARm0Tg,3650
+capiscio/binaries/capiscio-darwin-arm64,sha256=c1JmhfMYebjk7RWi_awxkBInPiVlzu62ewVGBHm71Cg,50595760
+capiscio/binaries/capiscio-darwin-x64,sha256=KQVJhikEmfidcoYMC1NtwlCG3z9i0jApheKuy_tegvc,56817088
+capiscio/binaries/capiscio-linux-x64,sha256=NWUNfTsUT58PJACqa1e9fWbYY6W-ioZ9XB91LddJHOs,52127973
+capiscio/binaries/capiscio-win-x64.exe,sha256=dQuxH4K9d4T2VbNnyTpyb6RSmVil0K24cVSziKuDBGM,43340118
+capiscio-1.2.5.dist-info/METADATA,sha256=5uRIUcpVNAF1Mbuq-XT7NrcamMxMrTTaD9uA4Pq-kA0,8672
+capiscio-1.2.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+capiscio-1.2.5.dist-info/entry_points.txt,sha256=VopPHB5eo2LBjOFiraE3JiEOzVmJJVwtUPVfXlYS_ns,47
+capiscio-1.2.5.dist-info/top_level.txt,sha256=Kuk2V-rnWre1x0tW87SRnlteIV1NhngUaXo6V1klMHk,9
+capiscio-1.2.5.dist-info/RECORD,,
