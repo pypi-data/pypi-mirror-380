@@ -1,0 +1,196 @@
+Metadata-Version: 2.3
+Name: pratac
+Version: 0.4.0
+Summary: Python script designed to streamline dorm room cleaning assignments 
+Author: Martin Lejko
+Author-email: Martin.lejko@outlook.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Pratac - Cleaning Schedule Manager
+
+Pratac is a flexible Python package for managing rotating cleaning schedules for roommates, dorm residents, or any group sharing cleaning responsibilities. It automatically rotates tasks among participants and supports both quick setup and custom configurations.
+
+## ✨ Features
+
+- **Interactive Setup**: Create custom schedules with guided prompts
+- **Roommate Sharing**: Multiple people get identical schedules automatically
+- **Flexible Configuration**: Any number of people and cleaning areas
+- **Week-based Rotation**: Fair, automatic task rotation over time
+- **Backward Compatible**: Works with existing setups
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+pip install pratac
+```
+
+### First Time Setup
+
+Create your cleaning schedule interactively:
+
+```bash
+pratac init
+```
+
+This will guide you through:
+1. **Cleaning areas** (bathroom, kitchen, etc.)
+2. **Participants** with optional nicknames
+3. **Start date** for the rotation
+
+### Get Your Schedule
+
+```bash
+# Get your cleaning assignment for this week
+pratac alice
+
+# Get everyone's assignments
+pratac all
+
+# Check next week's assignments
+pratac alice 1
+
+# Check last week's assignments
+pratac alice -1
+```
+
+## 📖 Usage Examples
+
+### Interactive Setup Example
+
+```bash
+$ pratac init
+
+Pratac Interactive Setup
+========================
+
+Cleaning Areas Setup
+Default areas: shower, toilet, floor, kitchen
+Use default cleaning areas? (y/n): n
+
+Enter cleaning areas (press Enter with empty input to finish):
+Area 1: bathroom
+Area 2: kitchen
+Area 3: living room
+Area 4:
+
+Participants Setup
+Participant 1 name (or press Enter to finish): Alice
+Enter aliases for Alice (press Enter with empty input to finish):
+  Alias: Al
+  Alias:
+
+Participant 2 name (or press Enter to finish): Bob
+Enter aliases for Bob (press Enter with empty input to finish):
+  Alias: Bobby
+  Alias:
+
+Participant 3 name (or press Enter to finish): Charlie
+[... setup continues ...]
+
+Configuration saved to /Users/username/.pratac/config.json
+You can now use 'pratac <person>' to get schedules!
+```
+
+### Daily Usage
+
+```bash
+# Check who cleans what this week
+$ pratac all
+For week 15 the schedule for Alice is: bathroom
+For week 15 the schedule for Bob is: kitchen
+For week 15 the schedule for Charlie is: living room
+
+# Check your specific assignment
+$ pratac alice
+For week 15 the schedule for alice is: bathroom
+
+# Plan ahead - check next week
+$ pratac bob 1
+For week 16 the schedule for bob is: living room
+```
+
+## 🏠 Perfect for Roommates
+
+When roommates each run `pratac init` with the same people and areas (in any order), they automatically get **identical schedules**. No coordination needed!
+
+**Roommate 1 enters**: Alice, Bob, Charlie
+**Roommate 2 enters**: Charlie, Alice, Bob
+**Roommate 3 enters**: Bob, Charlie, Alice
+
+All get the same rotation because participants are automatically sorted alphabetically.
+
+## ⚙️ Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `pratac init` | Set up custom cleaning schedule |
+| `pratac <person>` | Get cleaning assignment for person |
+| `pratac <person> <weeks>` | Get assignment with week offset |
+| `pratac all` | Get assignments for everyone |
+| `pratac config` | View current configuration |
+| `pratac reset` | Return to default settings |
+
+## 🔄 How Rotation Works
+
+Pratac uses a simple, fair rotation system:
+
+1. **Week calculation**: Counts weeks from your start date
+2. **Task assignment**: `(week + person_position) % total_areas`
+3. **Fair rotation**: Everyone gets each task equally over time
+
+Example with 3 people and 3 areas:
+```
+Week 1: Alice→bathroom, Bob→kitchen, Charlie→living room
+Week 2: Alice→kitchen, Bob→living room, Charlie→bathroom
+Week 3: Alice→living room, Bob→bathroom, Charlie→kitchen
+Week 4: Alice→bathroom, Bob→kitchen, Charlie→living room
+```
+
+## 📁 Configuration
+
+Custom settings are stored in:
+- **Linux/macOS**: `~/.pratac/config.json`
+- **Windows**: `C:\Users\<username>\.pratac\config.json`
+
+The configuration includes:
+- Participant names and aliases
+- Cleaning areas
+- Start date
+- Rotation settings
+
+## 🔧 Development
+
+Pratac is built with Python and uses Poetry for dependency management.
+
+```bash
+# Clone the repository
+git clone https://github.com/martinlejko/pratac.git
+cd pratac
+
+# Install dependencies
+poetry install
+
+# Run the CLI
+poetry run pratac init
+```
+
+## 🆘 Support
+
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/martinlejko/pratac/issues)
+- **Discussions**: Ask questions in [GitHub Discussions](https://github.com/martinlejko/pratac/discussions)
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+---
+
+*Made with ❤️ for cleaner living spaces*
+
