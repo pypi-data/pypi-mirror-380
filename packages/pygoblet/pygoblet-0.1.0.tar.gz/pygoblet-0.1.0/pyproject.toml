@@ -1,0 +1,52 @@
+[project]
+name = "pygoblet"
+version = "0.1.0"
+description = "A Python Global Optimization Benchmarking Library for Evaluation and Testing (pyGOBLET)."
+authors = [
+    {name = "Byron Selvage"},
+    {name = "Weslley da Silva Pereira", email = "weslley.dasilvapereira@nrel.gov"},
+]
+dependencies = ["numpy", "matplotlib", "array-api-compat", "scipy", "cocopp", "pandas", "floris"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+
+[dependency-groups]
+test = [
+    "pytest",
+]
+lint = [
+    "ruff",
+]
+doc = [
+    "sphinx",
+    "furo",
+    "sphinx-autodoc-typehints",
+]
+optional = [
+    "pyomo",
+    "codecarbon",
+]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W"]
+ignore = []
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 60
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 80
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+includes = ["pygoblet"]
+
+[tool.setuptools.packages.find]
+include = ["pygoblet*"]
