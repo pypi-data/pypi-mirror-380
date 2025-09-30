@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test_arbitrary_pip_package_junkn0lv"
+version = "0.1.0"
+authors = [{name = "test", email = "junk@n0.lv"}]
+description = "A minimal test package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
