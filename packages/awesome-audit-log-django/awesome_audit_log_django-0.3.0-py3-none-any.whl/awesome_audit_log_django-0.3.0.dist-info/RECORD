@@ -1,0 +1,13 @@
+awesome_audit_log/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+awesome_audit_log/apps.py,sha256=PE95xZLEte3NKSLL6vhPuJGvAkvix8LcM6e3IklreVI,387
+awesome_audit_log/conf.py,sha256=LCgWxCGxhLFfcEXz9fDI8lulweJHZtBvkVrP6Sgqfb4,952
+awesome_audit_log/context.py,sha256=hD8ZmEqdzpsJ-gENpq_0OwYOV5GHYWARe8sVw2IQamQ,744
+awesome_audit_log/db.py,sha256=OEIWZb_3H9YxKVfgNqkObtG5qelh9wbJKHMi3riq2_U,10909
+awesome_audit_log/middleware.py,sha256=Xc4xVE_gYlBAsfoRRAkLKOg6yGkm1tEfmDvoTf2HVg0,1683
+awesome_audit_log/signals.py,sha256=P69JsTNeHQqT_SmkGdwhIad201wHN9QayUBG8_3D7H8,3471
+awesome_audit_log/tasks.py,sha256=K13PiN9leRbVhqzMNK3ZJ1ET89nQaq72bnoSm750eTA,1918
+awesome_audit_log/utils.py,sha256=dWemXXE_QNik4DkjivYuT2oJzCL2AxZ_TpTVMExIIak,1448
+awesome_audit_log_django-0.3.0.dist-info/METADATA,sha256=S5yV4ZRSueYp0VByJqETHxRxvQM8dS7pp2G6EWa4wks,5136
+awesome_audit_log_django-0.3.0.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+awesome_audit_log_django-0.3.0.dist-info/licenses/LICENSE,sha256=VpKZyJ3XSSfhM-X4upphcIJGMmDqItPncEHV-TcxmiA,1093
+awesome_audit_log_django-0.3.0.dist-info/RECORD,,
