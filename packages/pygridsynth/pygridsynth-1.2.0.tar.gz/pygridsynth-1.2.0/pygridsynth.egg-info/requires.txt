@@ -1,0 +1,10 @@
+mpmath>=1.3
+setuptools
+matplotlib
+
+[dev]
+pytest
+flake8
+mypy
+black
+isort
