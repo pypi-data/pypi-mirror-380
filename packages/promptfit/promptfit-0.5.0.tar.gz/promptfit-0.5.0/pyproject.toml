@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptfit"
+version = "0.5.0"
+description = "Multi-provider LLM prompt optimization toolkit: compress prompts by 50-80% while preserving quality. Supports Cohere, Gemini with automatic failover. Perfect for RAG, API cost reduction, and production GenAI workflows."
+authors = [
+    { name="Vedant Laxman Chandore", email="vedantchandore5@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["llm", "prompt", "optimization", "rag", "ai", "cohere", "gemini", "cost-reduction", "genai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic"
+]
+dependencies = [
+    "cohere>=4.37",
+    "google-generativeai>=0.3.0",
+    "scikit-learn>=1.0.0",
+    "numpy>=1.21.0",
+    "nltk>=3.8",
+    "python-dotenv>=0.19.0",
+    "rich>=13.0.0",
+    "typer>=0.9.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "mypy>=0.991"
+]
+production = [
+    "structlog>=22.0.0",
+    "prometheus-client>=0.15.0",
+    "cachetools>=5.0.0",
+    "tenacity>=8.0.0",
+    "pydantic>=2.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/VedantChandore/promptfit"
+Documentation = "https://github.com/VedantChandore/promptfit#readme"
+Repository = "https://github.com/VedantChandore/promptfit"
+Issues = "https://github.com/VedantChandore/promptfit/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["promptfit*"]
+exclude = ["demo*"] 

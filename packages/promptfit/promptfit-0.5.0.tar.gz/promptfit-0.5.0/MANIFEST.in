@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include promptfit *.py
+recursive-exclude demo *
+recursive-exclude examples *
+recursive-exclude docs *
+exclude .env*
+exclude *.log
