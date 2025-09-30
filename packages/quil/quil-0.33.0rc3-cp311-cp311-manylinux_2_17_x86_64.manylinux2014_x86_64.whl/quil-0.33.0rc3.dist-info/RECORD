@@ -1,0 +1,11 @@
+quil-0.33.0rc3.dist-info/METADATA,sha256=w6x4behHG5v9BuYO4_P5YPAbJSFqMY-JdvJYzBQ0TiQ,1851
+quil-0.33.0rc3.dist-info/WHEEL,sha256=QeyYpa1YUpbJRnX7LOfl37sE783fyEKoPr2lUagOT-k,129
+quil/__init__.py,sha256=u0U2The9F_tA6bEmwLbB_pqEQm9XNxRbvbgjdujmNng,547
+quil/__init__.pyi,sha256=2wBUsJbkZhZI8Zs_DtenNx1VTQa2zt2i8da-GLSgoWM,659
+quil/_quil.cpython-311-x86_64-linux-gnu.so,sha256=-ftGtAkv2YmnXglynPUbaBaY-pneF1RvSr_XQBPEW9w,6297632
+quil/expression.pyi,sha256=CUhs-WEnzvaV6WsHXAQ37aC_bG9iKdq8aXhPTraLN_8,9427
+quil/instructions.pyi,sha256=JokS5Sly9PeN7Ikz_Ylhf231R7gmwVD814iln_-N6A4,69816
+quil/program.pyi,sha256=rQtauES8CvjVY-QG7AToCbELRbqfCYqTD3nbniIvu_E,28040
+quil/validation/identifier.pyi,sha256=OP9t3OyHuTgszEht8yypvbUkwWrBn3kNSfTAddR85Go,561
+quil/waveforms.pyi,sha256=wfv4z7CIkMDmMFyiVxJK5DzjVy1jcKSD4XPNg333BFw,14333
+quil-0.33.0rc3.dist-info/RECORD,,
