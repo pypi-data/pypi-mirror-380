@@ -1,0 +1,10 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+cmdhelper.py
+pyproject.toml
+cmdhelper.egg-info/PKG-INFO
+cmdhelper.egg-info/SOURCES.txt
+cmdhelper.egg-info/dependency_links.txt
+cmdhelper.egg-info/top_level.txt
