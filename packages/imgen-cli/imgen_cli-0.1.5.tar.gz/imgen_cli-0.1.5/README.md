@@ -1,0 +1,124 @@
+# Image Slots Toolkit
+
+This repository provides a complete workflow for managing durable image slots with generated variants. It includes:
+
+- A remote FastMCP planner (`server.py`) that helps agents gather missing context and build CLI commands without touching local paths.
+- A local CLI executor (`imgen`) that generates variants via the OpenRouter HTTP API (defaulting to Google Gemini 2.5 Flash Image Preview), writes session manifests, promotes variants atomically, and surfaces structured JSON for agents.
+- A lightweight gallery server (`imgen gallery serve`) for browsing sessions and switching variants from the browser.
+
+## Getting started
+
+1. Create a virtual environment and install dependencies from the lockfile:
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   uv pip install -r requirements.txt
+   ```
+
+2. Install the package in editable mode if you want the `imgen` console script locally:
+
+   ```bash
+   uv pip install -e .
+   ```
+
+   (Once published to PyPI you can install globally via `pipx install imgen-cli`.)
+
+3. Confirm the CLI is available:
+
+```bash
+imgen --help
+```
+
+## Project setup
+
+Initialize a project once to create `.imagemcp/config.json` and register the target asset directory:
+
+```bash
+imgen init \
+  --project-root /path/to/your/project \
+  --target-root public/img
+```
+
+After this step, all CLI commands auto-detect the project root (even when called from subdirectories) and write assets under the configured target folder.
+
+## CLI usage
+
+Generate variants for a slot and receive structured JSON:
+
+```bash
+imgen gen \
+  --slot hero \
+  --target-root public/img \
+  --prompt "Launch hero concept" \
+  --n 3 \
+  --json
+```
+
+- Variants are written under `.imagemcp/.sessions/<slot>_<sessionId>/` with a manifest (`session.json`).
+- The first variant is auto-promoted to `<targetRoot>/<slot>.png` using atomic writes.
+- CLI output includes the selected index, target path, session directory, warnings, and a localhost gallery URL.
+
+Switch to a different variant later:
+
+```bash
+imgen select \
+  --target-root public/img \
+  --slot hero \
+  --session hero-20250101_abcdef \
+  --index 2 \
+  --json
+```
+
+Inspect slots and sessions:
+
+```bash
+imgen slots list --target-root public/img
+imgen sessions list --target-root public/img --slot hero
+imgen sessions info --target-root public/img --slot hero --session hero-20250101_abcdef
+```
+
+## AI SDK bridge
+
+The CLI calls OpenRouter directly over HTTPS and defaults to the `google/gemini-2.5-flash-image-preview` model. Configure `OPENROUTER_API_KEY` in `.env` before running `imgen gen`. Optional headers (like `IMAGEMCP_OPENROUTER_HTTP_REFERER` and `IMAGEMCP_OPENROUTER_APP_TITLE`) and concurrency (`IMAGEMCP_OPENROUTER_MAX_WORKERS`) can also be set via environment variables. If you prefer calling Google directly, set `--provider google` (or `IMAGEMCP_DEFAULT_PROVIDER=google`)—note that the pure-Python generator currently supports OpenRouter only.
+
+## Gallery server
+
+Run the local gallery to browse variants from the browser:
+
+```bash
+imgen gallery serve --target-root public/img --port 8765 --open-browser
+```
+
+The gallery binds to `localhost` and allows selecting variants from any session. The CLI always prints the expected gallery URL so agents can surface it to users.
+
+## FastMCP planner
+
+`server.py` exposes two planning tools for agents:
+
+- `collect_context_questions`: identifies missing slot context, provides sensible defaults, and highlights provider constraints (size vs aspect ratio, seeds, etc.).
+- `plan_image_job`: returns an AI generation plan along with a CLI command template and stdin payload ready for execution by the local CLI.
+
+Run the planner locally during development:
+
+```bash
+python server.py
+```
+
+## Testing
+
+Install the test extras and run `pytest`:
+
+```bash
+uv pip install -e .[dev]
+pytest
+```
+
+The tests cover end-to-end CLI behaviour (generation + selection) and planning logic.
+
+## Notes
+
+- The default generator uses OpenRouter's HTTP API with the `google/gemini-2.5-flash-image-preview` model. Provide `OPENROUTER_API_KEY` in `.env`. To call Google directly, switch the `--provider` flag or set `IMAGEMCP_DEFAULT_PROVIDER=google` (direct Google support is not yet implemented in the pure-Python generator).
+- You can still opt into the local mock generator for offline testing via `--generator mock`.
+- All file operations enforce project-root scoping and use atomic promotion to keep dev servers stable.
+- Update `.env.example` if new environment variables are introduced. Secrets must never be committed.
