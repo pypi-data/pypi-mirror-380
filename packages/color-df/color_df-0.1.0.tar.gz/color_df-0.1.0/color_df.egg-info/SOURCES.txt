@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+color_df.egg-info/PKG-INFO
+color_df.egg-info/SOURCES.txt
+color_df.egg-info/dependency_links.txt
+color_df.egg-info/requires.txt
+color_df.egg-info/top_level.txt
+color_df_module/color_df.py
+color_df_module/init.py

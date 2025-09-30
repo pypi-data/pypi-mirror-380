@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "color-df"
+version = "0.1.0"
+description = "A simple module to style pandas DataFrames with colors and highlights"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+authors = [
+    { name = "Sachin Laxman Masti", email = "sachinmasti88@gmail.com" }
+]
+dependencies = [
+    "pandas",
+    "ipython"
+]
+
+[project.urls]
+Homepage = "https://github.com/Yo845/color_df_package"
+Issues = "https://github.com/Yo845/color_df_package/issues"

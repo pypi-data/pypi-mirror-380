@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: color-df
+Version: 0.1.0
+Summary: A simple module to style pandas DataFrames with colors and highlights
+Author-email: Sachin Laxman Masti <sachinmasti88@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Yo845/color_df_package
+Project-URL: Issues, https://github.com/Yo845/color_df_package/issues
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: ipython
+Dynamic: license-file
+
+# color_df_package
+A simple module to style pandas DataFrames with colors and highlights
