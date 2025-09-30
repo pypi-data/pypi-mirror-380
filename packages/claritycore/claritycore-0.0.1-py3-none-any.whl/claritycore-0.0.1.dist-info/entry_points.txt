@@ -1,0 +1,2 @@
+[console_scripts]
+claritycore = claritycore.__main__:main
