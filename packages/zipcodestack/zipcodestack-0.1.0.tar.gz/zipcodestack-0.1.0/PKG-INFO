@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: zipcodestack
+Version: 0.1.0
+Summary: Official Python client for zipcodestack.com API
+Home-page: https://zipcodestack.com/docs/
+Author: Zipcodestack
+Author-email: support@zipcodestack.com
+License: MIT
+Project-URL: Documentation, https://zipcodestack.com/docs/
+Project-URL: Source, https://github.com/everapihq/zipcodestack-python
+Project-URL: Tracker, https://github.com/everapihq/zipcodestack-python/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: everapi>=0.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Zipcodestack Python Client
+
+Official Python wrapper for the Zipcodestack API.
+
+- Docs: https://zipcodestack.com/docs/
+- Built on: https://github.com/everapihq/everapi-python
+- Example reference: https://github.com/everapihq/freecurrencyapi-python
+
+## Installation
+
+```bash
+pip install zipcodestack
+```
+
+Install from source:
+
+```bash
+pip install git+https://github.com/everapihq/zipcodestack-python.git
+```
+
+## Quickstart
+
+```python
+import os
+from zipcodestack import Client
+
+client = Client(os.environ["ZIPCODESTACK_API_KEY"])  # or Client("YOUR_API_KEY")
+
+# Retrieve API status & quota
+print(client.status())
+
+# Search postal/zip codes
+print(client.search(codes=["1010", "1020"], country="AT"))
+
+# Calculate distance between postal/zip codes
+print(client.distance(code="99501", compare=["90210", "10001"], country="US", unit="km"))
+```
+
+## API
+
+- `Client(api_key: str, *, base_url: str = "https://api.zipcodestack.com/v1", timeout: float | None = None)`
+- `status()` → dict
+- `search(*, codes: str | Iterable[str], country: str | None = None, **params)` → dict
+- `distance(*, code: str, compare: str | Iterable[str], country: str | None = None, unit: str | None = None, **params)` → dict
+
+See the official docs for accepted parameters and response formats: https://zipcodestack.com/docs/
+
+## License
+
+MIT
+
