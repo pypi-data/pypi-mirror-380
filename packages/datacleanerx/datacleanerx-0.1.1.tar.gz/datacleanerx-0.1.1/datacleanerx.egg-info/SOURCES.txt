@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+datacleaner_ai/__init__.py
+datacleaner_ai/cleaner.py
+datacleaner_ai/detectors.py
+datacleaner_ai/reports.py
+datacleaner_ai/transformers.py
+datacleaner_ai/utils.py
+datacleanerx.egg-info/PKG-INFO
+datacleanerx.egg-info/SOURCES.txt
+datacleanerx.egg-info/dependency_links.txt
+datacleanerx.egg-info/requires.txt
+datacleanerx.egg-info/top_level.txt
+tests/test_cleaner.py
