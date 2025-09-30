@@ -1,0 +1,15 @@
+ellphi/__init__.py,sha256=W1m0rCeEovT_XgSgXbmWuZ9K0lmOpfVIJahSnrxEtYU,991
+ellphi/_solver_python.py,sha256=pDF5THOytfm_eLV2YPnQ743uOOeZjHm5KxJWY06EO8U,5137
+ellphi/_tangency_cpp.py,sha256=bwUAHccxpRTJzjX_l3Mb6SiEg2_p-DHI1CK2w_Ccjnw,4540
+ellphi/_tangency_cpp_impl.cpp,sha256=Ko9cj98QgJCyUNiwXM4qiXihFFpld-N_TW3v01LNovc,10414
+ellphi/_tangency_cpp_impl.so,sha256=EZ4S70FrLzzGiOColEeMpKhMwT6q9T9DkvQm4wdAtC8,60008
+ellphi/_tangent_pencil.py,sha256=2TI_sIDgjfKOWtFN4GIs7A4JBci1cT-64EW6aYGRBIA,2657
+ellphi/differentiable_solver.py,sha256=Z7Eo4zr6shPX3R5M58IRaCXeUuEppaTVmZUzXde3uf4,3320
+ellphi/ellcloud.py,sha256=X8ZA5PGrBr8dZMQRnYxZxSivx9Wd6fpJc4PsF7nurHs,7726
+ellphi/geometry.py,sha256=F3sB9snlmgAtUbxDBUM7QLZ0oEUAJYTikn4jEQLlIAg,3734
+ellphi/solver.py,sha256=Ma2mE-5L4n5lorGq-BBGFvfw569gHn5r6ouMWtrLG_U,3580
+ellphi/visualization.py,sha256=y63nUd3E66OVHnybyFQd6HrexksRjoxBNaBAtQylu98,645
+ellphi-0.1.0.dist-info/METADATA,sha256=2uJwp7obw0a3xv06G2pQJissG_C4_4i9KYKL_aXv0xg,3768
+ellphi-0.1.0.dist-info/WHEEL,sha256=cY1X-cHy29bhOBzrCfCyh3E5QFBpSN7j6jQJfHkVxjI,106
+ellphi-0.1.0.dist-info/licenses/LICENSE,sha256=j37w4Ut19htTfgkIdydzTv9gcjjbzD1LfETEptPB3Ls,1067
+ellphi-0.1.0.dist-info/RECORD,,
