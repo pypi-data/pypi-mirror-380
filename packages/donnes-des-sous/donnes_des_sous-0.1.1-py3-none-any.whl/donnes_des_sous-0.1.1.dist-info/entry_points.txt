@@ -1,0 +1,3 @@
+[console_scripts]
+donnes-des-sous = donnes_des_sous:main
+
