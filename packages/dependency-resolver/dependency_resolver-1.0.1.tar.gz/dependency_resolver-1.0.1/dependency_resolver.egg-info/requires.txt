@@ -1,0 +1,8 @@
+requests
+python-dotenv
+
+[:python_version < "3.11"]
+StrEnum
+
+[test]
+pytest
