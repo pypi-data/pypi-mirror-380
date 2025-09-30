@@ -1,0 +1,9 @@
+roman_lcs/__init__.py,sha256=ctYJG1WYQQo4z9uW-yAKDR883NggO-rPfE3vUgMyDQE,346
+roman_lcs/machine.py,sha256=A9IVJzEdcWRXNSpUE1jLK2sy9O4W3Nt1GObSU5zEg_k,46076
+roman_lcs/perturbation.py,sha256=wnehWtKJ5RpqioN0j08UE43sCNDgYIfaubB-sApqPBU,20893
+roman_lcs/roman.py,sha256=-Stb8wYQVN3MJ5nAPognDu0YkkIklzZCUNDLpOaUvb8,35872
+roman_lcs/utils.py,sha256=KoOZUbfL6OH6P5wf3ROUujDC7v09g2OM7c7ErCi42OQ,30163
+roman_lcs-0.4.0.dist-info/LICENSE,sha256=Bny3D90-5CgJz_VojBd02lfnIrJXXfn9oIYOGAdGC2k,1081
+roman_lcs-0.4.0.dist-info/METADATA,sha256=9c9qIFjX2rz1InY9LgU-eZ7CjtXYQ6ac0JkA0EkU_Mw,2016
+roman_lcs-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+roman_lcs-0.4.0.dist-info/RECORD,,
