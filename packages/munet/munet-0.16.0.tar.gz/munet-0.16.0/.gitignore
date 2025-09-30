@@ -1,0 +1,13 @@
+**/__pycache__/
+/dist/
+doc/build
+err.out
+/coverage.xml
+/.testtmp/
+*.log
+*.pyc
+*.yang
+bzImage
+rootfs.cpio.gz
+.coverage*
+.dir-locals.el
