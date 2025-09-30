@@ -1,0 +1,64 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "langchain-opendataloader-pdf"
+version = "0.0.1"
+description = "A LangChain integration for OpenDataLoader PDF"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "opendataloader-project", email = "open.dataloader@hancom.com" }]
+keywords = ["langchain", "dataloader", "pdf", "document loader", "ai", "document-parsing", "document"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "langchain-core>=0.3.20,<0.4.0",
+    "opendataloader-pdf>=1.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/opendataloader-project/opendataloader-pdf"
+Repository = "https://github.com/opendataloader-project/langchain-opendataloader-pdf"
+Issues = "https://github.com/opendataloader-project/langchain-opendataloader-pdf/issues"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "T201"]
+
+[tool.mypy]
+disallow_untyped_defs = "True"
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers --strict-config --durations=5"
+markers = [
+    "compile: mark placeholder test used to compile integration tests without running them",
+]
+
+# Development and testing dependencies are grouped here for convenience.
+[tool.poetry.group.dev.dependencies]
+# Testing
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.2"
+pytest-socket = "^0.7.0"
+pytest-watcher = "^0.3.4"
+langchain-tests = "^0.3.5"
+
+# Linting and Formatting
+ruff = "^0.5"
+codespell = "^2.2.6"
+
+# Type Checking
+mypy = "^1.10"
