@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pixel-patrol
+Version: 0.3.0
+Summary: Image prevalidation tool - PixelPatrol and its add-ons packages
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pixel-patrol-base>=0.1.0
+Requires-Dist: pixel-patrol-image>=0.1.0
+Requires-Dist: pixel-patrol-loader-bio>=0.1.0
