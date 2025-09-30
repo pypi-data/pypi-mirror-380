@@ -1,0 +1,27 @@
+"""Type definitions for envsh library."""
+
+from typing import list, Type, Union, overload
+from typing_extensions import Literal
+
+# Supported return types
+SupportedTypes = Union[Type[int], Type[float], Type[str], Type[list[int]], Type[list[str], Type[dict[Any, Any]]]]
+SupportedValues = Union[int, float, str, list[int], list[str], dict[Any, Any]]
+
+# Type overloads for read_env function
+@overload
+def read_env(name: str, return_type: type[int], default: int | None = None) -> int: ...
+
+@overload
+def read_env(name: str, return_type: type[float], default: float | None = None) -> float: ...
+
+@overload
+def read_env(name: str, return_type: type[str], default: str | None = None) -> str: ...
+
+@overload
+def read_env(name: str, return_type: type[list[int]], default: list[int] | None = None) -> list[int]: ...
+
+@overload
+def read_env(name: str, return_type: type[list[str]], default: list[str] | None = None) -> list[str]: ...
+
+@overload
+def read_env(name: str, return_type: type[dict[Any, Any]], default: dict[Any, Any] | None = None) -> dict[Any, Any]: ...
