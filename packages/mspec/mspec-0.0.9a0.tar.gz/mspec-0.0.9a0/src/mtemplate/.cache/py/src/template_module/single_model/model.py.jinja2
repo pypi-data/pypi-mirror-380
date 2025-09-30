@@ -1,0 +1,105 @@
+from dataclasses import asdict, dataclass
+from datetime import datetime
+from typing import Optional
+
+from core.types import *
+from core.util import *
+
+
+__all__ = [
+    '{{ model.name.pascal_case }}'
+]
+
+
+
+{% for field_name, field in model.fields.items() %}
+    {% if 'enum' in field %}
+{{ macro.py_enum_definition_begin(field_name=field_name) }}
+            {% for option in field.enum %}
+{{ macro.py_enum_definition_option(option=option) }}
+            {% endfor %}
+{{ macro.py_enum_definition_end() }}
+    {% endif %}
+{% endfor %}
+
+
+field_list = [
+    {% for field in model.sorted_fields %}
+{{ macro.py_field_list_entry(field=field) }}
+    {% endfor %}
+]
+
+longest_field_name_length = max([len(name) for name in field_list])
+
+@dataclass
+class {{ model.name.pascal_case }}:
+
+    {% for field in model.sorted_fields if field.name.snake_case != 'user_id' %}
+        {% if field.type == 'list' %}
+{{ macro.py_field_definition_list(field=field) }}
+        {% else %}
+{{ macro.py_field_definition(field=field) }}
+        {% endif %}
+    {% endfor %}
+    {% if 'user_id' in model.fields %}
+{{ macro.py_field_definition_user_id() }}
+    {% endif %}
+    id: Optional[str] = None
+
+    def convert_types(self) -> '{{ model.name.pascal_case }}':
+
+        {% for field in model.non_list_fields if field.type == 'datetime' %}
+{{ macro.py_convert_types_datetime(field=field) }}
+        {% endfor %}
+
+        {% for field in model.list_fields if field.element_type == 'datetime' %}
+{{ macro.py_convert_types_list_datetime(field=field) }}
+        {% endfor %}
+
+        return self
+
+    def validate(self) -> '{{ model.name.pascal_case }}':
+        
+        if not isinstance(self.id, str) and self.id is not None:
+            raise TypeError('invalid type for id')
+
+
+        {% for field in model.fields.values() %}
+{{ macro_by_type('py_verify', field.type_id, field=field) }}
+        {% endfor %}
+
+        return self
+
+    def to_dict(self) -> dict:
+        data = asdict(self)
+        if self.id is None:
+            del data['id']
+        return data
+    
+    def to_json(self) -> str:
+        return to_json(self.to_dict())
+
+    @classmethod
+    def example(cls) -> '{{ model.name.pascal_case }}':
+        return cls(
+            {% for field in model.fields.values() %}
+                {% if field.name.snake_case == 'user_id' %}
+{{ macro.py_example_user_id() }}
+                {% else %}
+{{ macro_by_type('py_example', field.type_id, field=field) }}
+                {% endif %}
+            {% endfor %}
+        ) 
+
+    @classmethod
+    def random(cls) -> '{{ model.name.pascal_case }}':
+        return cls(
+
+            {% for field in model.fields.values() if field.name.snake_case != 'user_id' %}
+                {% if 'random' in field %}
+{{ macro.py_random_field_custom(field=field) }}
+                {% else %}
+{{ macro_by_type('py_random', field.type_id, field=field) }}
+                {% endif %}
+            {% endfor %}
+        )
