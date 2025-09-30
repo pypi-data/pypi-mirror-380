@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-asset-screener"
+version = "0.1.1"
+description = "CLI screener for US stocks based on LLM + financial metrics (P/FCF, EV/EBITDA, SOTP, float/EV)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Evgeny Igumnov", email = "igumnovnsk@gmail.com" }]
+keywords = ["finance", "stocks", "LLM", "valuation", "edgar", "10-K", "screener"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Office/Business :: Financial :: Investment",
+  "Environment :: Console",
+]
+dependencies = [
+  "requests==2.32.3",
+  "yfinance==0.2.65",
+  "pandas==2.2.3",
+  "edgartools==4.8.1",
+  "langgraph==0.6.6",
+  "langchain_openai==0.3.31",
+  "langchain_mcp_adapters==0.1.9",
+  "mcp_server_calculator==0.2.0",
+  "argparse",
+  "python-dotenv==1.1.0",
+]
+
+[project.scripts]
+ai-asset-screener = "app.console:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["cache*"]
