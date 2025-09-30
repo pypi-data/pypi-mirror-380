@@ -1,0 +1,10 @@
+soda_mq/__init__.py,sha256=5YyEca0HXIvmK2C0lvOH7IehRnBnE9s-NbXHGGbU_64,233
+soda_mq/client_factory.py,sha256=IXkIYX3BT7bg5scVomWGEqI9x8dGlX394D0PL7FO3kM,744
+soda_mq/soda_client.py,sha256=AXbFjW3wDEMLDu-6dUGHrGY_GjBVEgFk5CUcj_E2pFQ,1617
+soda_mq/soda_consumer.py,sha256=qE-dx6uVgC39GjdC_eG8tAApaVvfLcZNvC8sDqa8NT0,1054
+soda_mq/soda_producer.py,sha256=YJNvMGfgcB1IRPlUgu2TdVuRsrxLfTQCJhbeyr5IfpQ,453
+soda_mq_client-0.1.4.dist-info/LICENSE,sha256=FiEWFEIhPOEQzAvKKA2i_A__AUisPpiITaRn0R7hGwo,1062
+soda_mq_client-0.1.4.dist-info/METADATA,sha256=WtuqWJoxb_sZuvW-e2iEhX4epcUMtQKR0i7J3g44-Gc,1345
+soda_mq_client-0.1.4.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+soda_mq_client-0.1.4.dist-info/top_level.txt,sha256=MFMjEu4Rxvqki7doBrNpjvEWNhO5GjEcCVmXPbIB-Q8,8
+soda_mq_client-0.1.4.dist-info/RECORD,,
