@@ -1,0 +1,7 @@
+gitlab_gemini_reviewer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitlab_gemini_reviewer/gemini_mr_review.py,sha256=JZP1oUogbpCwlODAeGoFpwzoWvNalK5HAOcuOil_WEk,64867
+gitlab_gemini_reviewer-0.3.6.dist-info/METADATA,sha256=D8PH-H8XJyFXB8rjKl52yhEL1Yuv_pRuWn-ZAcNyES0,17074
+gitlab_gemini_reviewer-0.3.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gitlab_gemini_reviewer-0.3.6.dist-info/entry_points.txt,sha256=NE1QH5KGBsb2u8vvaJBx34jVJ1o0as3JXQ6BQOPjrmo,81
+gitlab_gemini_reviewer-0.3.6.dist-info/top_level.txt,sha256=r4djZ9FRiCQDNqXlOutMzAFYNvIgiGAT1rvRzI4STcA,23
+gitlab_gemini_reviewer-0.3.6.dist-info/RECORD,,
