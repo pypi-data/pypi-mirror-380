@@ -1,0 +1,11 @@
+rugo-0.1.1.dist-info/RECORD,,
+rugo-0.1.1.dist-info/WHEEL,sha256=XDdnntmiCRXNVLdY5WCtwp2KApIYJ413gXaKlPbYNQ4,107
+rugo-0.1.1.dist-info/top_level.txt,sha256=JjIK1YwSPgvdGtINn3RLoqr3WwFm_mF56CFmpXXYgE4,5
+rugo-0.1.1.dist-info/METADATA,sha256=-8C6qel0iPlVvX6ZIFCKASiD-f2I2H6RSaT2Yg--qEA,24584
+rugo-0.1.1.dist-info/licenses/LICENSE,sha256=jesOZPL5NlZq8BmEr-9Y-jjY-0iyEZV0JexfTpTygH0,11342
+rugo/__init__.py,sha256=ecwhbUcLSZIPZpubf_v8oxXXxORHLGFL4ZYz1ef81KI,414
+rugo/parquet.cpython-39-darwin.so,sha256=ILR-zUdGUKYBDGP_qGyrl1brXZzxFat9UsAO-i09Z2U,186752
+rugo/converters/orso.py,sha256=2-fYN_KpeMC-zoZzsf4IjmmxrE0rmwOL2yRMSxJoNrI,5119
+rugo/converters/__init__.py,sha256=R30vdpgN2tjctNJtNuY7CagpEMIywXfME5_BqKVM_-k,118
+rugo/parquet/metadata_reader.pxd,sha256=0qYufe3v3t8HrAQkhBatsFFEHLkcIE9ngwLEzRwbT2Y,871
+rugo/parquet/metadata_reader.pyx,sha256=q74KNaC97xX02Q-Gcmun6iTm5TghaXsnDZ81vdJi298,3635
