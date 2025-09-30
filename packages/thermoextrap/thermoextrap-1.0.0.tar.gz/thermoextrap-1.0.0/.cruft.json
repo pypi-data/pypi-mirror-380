@@ -1,0 +1,32 @@
+{
+  "template": "https://github.com/usnistgov/cookiecutter-nist-python.git",
+  "commit": "2780e495e5c2c96890f8863f4efc9ea4fa28504d",
+  "checkout": "develop",
+  "skip": [
+    "src/thermoextrap/__init__.py",
+    "docs/examples/usage/demo.ipynb",
+    "examples/usage/demo.ipynb",
+    "docs/examples/example-usage.md"
+  ],
+  "context": {
+    "cookiecutter": {
+      "project_name": "thermoextrap",
+      "project_slug": "thermoextrap",
+      "project_short_description": "Thermodynamic extrapolation",
+      "full_name": "William P. Krekelberg",
+      "email": "wpk@nist.gov",
+      "github_username": "usnistgov",
+      "pypi_username": "wpk-nist",
+      "conda_channel": "conda-forge",
+      "command_line_interface": "none",
+      "sphinx_use_autodocsumm": true,
+      "sphinx_theme": "sphinx_book_theme",
+      "year": "2020",
+      "__answers": "",
+      "_copy_without_render": [],
+      "_template": "https://github.com/usnistgov/cookiecutter-nist-python.git",
+      "_commit": "2780e495e5c2c96890f8863f4efc9ea4fa28504d"
+    }
+  },
+  "directory": null
+}

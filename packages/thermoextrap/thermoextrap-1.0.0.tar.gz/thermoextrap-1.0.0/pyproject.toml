@@ -1,0 +1,469 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+    "hatch-fancy-pypi-readme",
+    "hatch-vcs",
+    "hatchling",
+]
+
+[project]
+name = "thermoextrap"
+description = "Thermodynamic extrapolation"
+keywords = [
+    "thermoextrap",
+]
+license = "NIST-PD"
+license-files = [ "LICENSE" ]
+authors = [
+    { name = "Jacob Monroe", email = "jacob.monroe@nist.gov" },
+    { name = "William Krekelberg", email = "wpk@nist.gov" },
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dynamic = [
+    "readme",
+    "version",
+]
+dependencies = [
+    "attrs>=24.1.0",
+    "cmomy>=1.0.1",
+    "dm-tree",
+    "lazy-loader",
+    "module-utilities[inherit]>=0.11.0",
+    "numba>=0.60.0",
+    "numpy>=1.26.0",
+    "packaging",
+    "scipy",
+    "sympy",
+    "xarray>=2024.7.0",
+]
+optional-dependencies.accel = [
+    "bottleneck",
+]
+optional-dependencies.all = [
+    "thermoextrap[mbar,gpr,accel,parallel,viz]",
+]
+optional-dependencies.gpr = [
+    "gpflow>=2.6.0",
+    "tensorflow>=2.13",
+    "tensorflow-probability[tf]~=0.24.0",
+]
+optional-dependencies.mbar = [
+    "pymbar[jax]>=4.0",
+]
+optional-dependencies.openmm = [
+    "openmm",
+]
+optional-dependencies.parallel = [
+    "dask[complete]",
+]
+optional-dependencies.viz = [
+    "matplotlib",
+]
+urls.Documentation = "https://pages.nist.gov/thermoextrap/"
+urls.Homepage = "https://github.com/usnistgov/thermoextrap"
+
+[dependency-groups]
+dev = [
+    "nbconvert",
+    "righttyper",
+    "thermoextrap[all]",
+    { include-group = "mypy" },
+    { include-group = "notebook" },
+    { include-group = "nox" },
+    # { include-group = "pytest-accept" },
+    { include-group = "test" },
+    { include-group = "test-notebook" },
+    { include-group = "typecheck" },
+]
+
+test = [
+    "pytest-cov",
+    "pytest-env",
+    "pytest-sugar",
+    "pytest-xdist>3.6.0",
+    "thermoextrap[mbar,gpr]",
+    { include-group = "pandas" },
+    { include-group = "pytest" },
+]
+docs = [
+    "autodocsumm",
+    "myst-nb",
+    "pyenchant",
+    "sphinx>=5.3.0",
+    "sphinx-book-theme",
+    "sphinx-copybutton",
+    "sphinxcontrib-spelling",
+    "thermoextrap[gpr,mbar,viz]",
+]
+# other packages/tools
+ipython = [ "ipython" ]
+mypy = [ "mypy>=1.15.0", "orjson" ]
+notebook = [ "ipykernel", "nbclient" ]
+nox = [ "nox>=2025.5.1" ]
+pandas = [ "pandas" ]
+pylint = [ "pylint" ]
+pytest = [ "pytest" ]
+pytest-accept = [ "pytest-accept" ]
+# other environments
+docs-live = [
+    "sphinx-autobuild",
+    { include-group = "docs" },
+]
+docs-spelling = [
+    "pyenchant",
+    "sphinxcontrib-spelling",
+    { include-group = "docs" },
+]
+test-extras = [
+    { include-group = "test" },
+]
+test-notebook = [
+    "nbval",
+    "thermoextrap[viz]",
+    { include-group = "test" },
+]
+typecheck = [
+    "matplotlib; python_version=='3.12'",
+    "pandas-stubs",
+    "scipy-stubs; python_version>='3.10'",
+    "thermoextrap[mbar,gpr]",
+    "types-tensorflow",
+    { include-group = "pylint" },
+    { include-group = "pytest" },
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build]
+exclude = [
+    ".*_cache",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "examples",
+    "docs",
+]
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+fragments = [
+    { path = "README.md" },
+    { path = "CHANGELOG.md" },
+    { path = "LICENSE" },
+]
+
+[tool.nbqa.exclude]
+ruff = "^examples/gpr_active_learning|^examples/usage/gpr"
+
+[tool.repo-review]
+ignore = [
+    "GH",    # enable for actions
+    "PC140", # do this externally
+    "PC170", # pygrep
+    "PC901", # ci message
+    "RTD",
+]
+
+[tool.codespell]
+skip = "examples/*"
+
+[tool.check-wheel-contents]
+toplevel = [
+    "thermoextrap",
+]
+src_dir = [
+    "src",
+]
+
+[tool.pyproject-fmt]
+# tensorflow max allowed python version (for now).
+max_supported_python = "3.12"
+
+# * Testing --------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+addopts = [
+    "-ra",
+    "--strict-config",
+    "--strict-markers",
+    "--doctest-modules",
+    "--doctest-glob=*.md",
+    "--pyargs",
+    "--cov-config=pyproject.toml",
+    "--ignore-glob='**/legacy/**",
+    "-n",
+    "4",
+]
+testpaths = [
+    "README.md",
+    "tests",
+    "thermoextrap",
+]
+minversion = "8"
+log_cli_level = "INFO"
+xfail_strict = true
+filterwarnings = [
+    "error",
+    "ignore: Type google:DeprecationWarning",
+    "ignore: distutils Version classes are deprecated:DeprecationWarning",
+    "ignore: pkg_resources is deprecated as an API:DeprecationWarning",
+    "ignore: FNV hashing is not implemented in Numba:UserWarning",
+    "ignore: A kernel object:UserWarning",
+    "ignore: Unknown solver options",
+    "ignore::docstring_inheritance.DocstringInheritanceWarning",
+    "ignore: Module thermoextrap was never imported:coverage.exceptions.CoverageWarning",
+    "ignore: No data was collected:coverage.exceptions.CoverageWarning",
+    "ignore: pkg_resources is deprecated:UserWarning",
+    "ignore: invalid escape sequence:SyntaxWarning",
+    "ignore: The default datetime:DeprecationWarning",
+]
+
+[tool.pytest_env]
+NUMBA_CACHE_DIR = { value = "{PWD}/.numba_cache", transform = true, skip_if_set = true }
+
+[tool.coverage.run]
+branch = true
+parallel = true
+
+[tool.coverage.report]
+# show_missing = true
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+omit = [
+    "*/vendored/*",
+    "*/_typing.py",
+]
+include = [
+    "src/*",
+]
+
+[tool.coverage.paths]
+source = [
+    "src/",
+    ".nox/**/site-packages/",
+]
+
+# * typecheck ---------------------------------------------------------------------
+
+[tool.mypy]
+files = [
+    "src",
+    "tests",
+]
+warn_unused_ignores = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unreachable = true
+exclude = [
+    ".eggs",
+    ".tox",
+    ".nox",
+    ".venv",
+    ".numba_cache",
+    "docs",
+]
+check_untyped_defs = true
+strict = true
+enable_error_code = [
+    "ignore-without-code",
+    "redundant-expr",
+    "truthy-bool",
+]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+    "matplotlib.*",
+    "scipy.*",
+    "sympy.*",
+    "pymbar.*",
+    "tensorflow_probability.*",
+]
+
+[[tool.mypy.overrides]]
+strict = false
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = false
+module = [
+    "tests.*",
+]
+
+[[tool.mypy.overrides]]
+check_untyped_defs = false
+module = [
+    "tests.legacy.*",
+]
+
+[tool.pyright]
+include = [
+    "src",
+    "tests",
+]
+exclude = [
+    "**/__pycache__",
+    ".tox/**",
+    ".nox/**",
+    ".venv/**",
+    "**/.mypy_cache",
+    "**/.numba_cache",
+    "**/legacy/*.py",
+]
+pythonVersion = "3.11"
+typeCheckingMode = "standard"
+strict = [
+    "noxfile.py",
+    "tools/*.py",
+    "src/thermoextrap/*.py",
+    "src/thermoextrap/core/*.py",
+    "src/thermoextrap/gpr_active/ig_active.py",
+    # "src/thermoextrap/gpr_active/active_utils.py",
+    # "src/thermoextrap/gpr_active/gp_models.py",
+    "src/thermoextrap/gpr_active/sine_active.py",
+    "tests/test_typing.py",
+]
+reportDuplicateImport = true
+reportInvalidStubStatement = true
+reportOverlappingOverload = true
+reportPropertyTypeMismatch = true
+reportUntypedClassDecorator = true
+reportUntypedFunctionDecorator = true
+reportUntypedNamedTuple = true
+reportUnusedImport = true
+# Extra flags
+enableTypeIgnoreComments = false
+reportUnnecessaryTypeIgnoreComment = true
+reportUnreachable = "warning"
+
+[tool.pytype]
+inputs = [
+    "src",
+    "tests",
+]
+
+# * Dependency creation --------------------------------------------------------
+
+[tool.pyproject2conda]
+user-config = "config/userconfig.toml"
+template-python = "requirements/py{py}-{env}"
+template = "requirements/{env}"
+name = "py{py}-{env}"
+python = "default"
+channels = "conda-forge"
+style = "yaml"
+deps = "pip"
+
+[tool.pyproject2conda.dependencies]
+pytest-accept = { pip = true }
+matplotlib = { skip = true, packages = "matplotlib-base" }
+lazy-loader = { skip = true, packages = "lazy_loader" }
+dask = { skip = true, packages = "dask" }
+gpflow = { pip = true }
+tensorflow = { pip = true }
+tensorflow-probability = { pip = true }
+pymbar = { pip = true }
+jax = { pip = true }
+module-utilities = { packages = "docstring-inheritance" }
+
+[tool.pyproject2conda.envs.dev]
+groups = [ "dev" ]
+python = "default"
+
+[tool.pyproject2conda.envs.test]
+groups = [ "test" ]
+python = "all"
+
+[tool.pyproject2conda.envs.uvx-tools]
+reqs = [
+    # these used solely for specking tools to be used with uvx ...
+    "conda-lock>=2.5.5",
+    "cruft",
+    "grayskull>=2.5.3",
+    "nbqa>=1.8.4",
+    "pre-commit>=4.0.0",
+    "pre-commit-uv",
+    "prek",
+    "pyrefly",
+    "pyright>=1.1.396",
+    "basedpyright>=1.31.3",
+    "scriv",
+    "twine>=5.0.0",
+    "ty",
+]
+groups = [
+    "mypy",
+    "nox",
+]
+skip-package = true
+style = "requirements"
+
+[tool.pyproject2conda.envs.test-extras]
+groups = [ "test-extras" ]
+skip-package = true
+python = "all"
+
+# * uv -------------------------------------------------------------------------
+
+[tool.uv]
+managed = true
+default-groups = [ "dev" ]
+fork-strategy = "requires-python"
+required-version = ">=0.7.15"
+
+[tool.uv.pip]
+annotation-style = "line"
+generate-hashes = true
+
+[tool.uv.dependency-groups]
+dev.requires-python = ">=3.12"
+docs.requires-python = ">=3.12"
+docs-live.requires-python = ">=3.12"
+docs-spelling.requires-python = ">=3.12"
+# other tools
+ipython.requires-python = ">=3.12"
+mypy.requires-python = ">=3.12"
+notebook.requires-python = ">=3.12"
+nox.requires-python = ">=3.12"
+
+# * Other tools ----------------------------------------------------------------
+
+[tool.scriv]
+format = "md"
+md_header_level = "2"
+new_fragment_template = "file: changelog.d/templates/new_fragment.md.j2"
+
+[tool.commitizen]
+use_shortcuts = true
+
+[tool.cruft]
+
+[tool.typos.files]
+extend-exclude = [ "spelling_wordlist.txt" ]
+
+[tool.typos.default]
+extend-ignore-identifiers-re = [
+    "struc_.*",
+    ".*equil.*",
+    "NDArray.*",
+]
+
+[tool.typos.default.extend-identifiers]
+gather_nd = "gather_nd"
+numer = "numer"
+pertNumer = "pertNumer"
