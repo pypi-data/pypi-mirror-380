@@ -1,0 +1,30 @@
+[project]
+name = "HowdenRag"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [ "pathlib (>=1.0.1,<2.0.0)", "openai (>=1.109.1,<2.0.0)", "azure-identity (>=1.25.0,<2.0.0)", "azure-search-documents (>=11.5.3,<12.0.0)", "python-dotenv (>=1.1.1,<2.0.0)", "howdenconfig (>=1.0.6,<2.0.0)", "llama-index-core (>=0.14.3,<0.15.0)",]
+[[project.authors]]
+name = "JesperThoftIllemannJ"
+email = "jesper.jaeger@howdendanmark.dk"
+
+[build-system]
+requires = [ "poetry-core>=2.0.0,<3.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "HowdenRag"
+version = "0.1.5"
+description = "Package that handles rag functionalitet."
+authors = [ "JesperThoftIllemannJ <jesper.jaeger@howdendanmark.dk>",]
+readme = "README.md"
+license = "MIT"
+keywords = [ "config", "configuration", "pydantic", "json",]
+homepage = "https://github.com/yourusername/config"
+repository = "https://github.com/yourusername/config"
+documentation = "https://github.com/yourusername/config"
+[[tool.poetry.packages]]
+include = "HowdenRag"
+
+[tool.poetry.group.dev.dependencies]
+howdenpipeline = "^1.0.3"
