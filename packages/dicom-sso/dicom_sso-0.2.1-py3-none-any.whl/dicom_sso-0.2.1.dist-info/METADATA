@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: dicom-sso
+Version: 0.2.1
+Summary: Convert DICOM SSO to VTK files and vice versa.
+Author-email: Patrick de Koning <pjhdekoning@lumc.nl>
+Requires-Python: >=3.13
+Requires-Dist: highdicom>=0.26.1
+Requires-Dist: vtk>=9.5.1
