@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+scm_python_ms.egg-info/PKG-INFO
+scm_python_ms.egg-info/SOURCES.txt
+scm_python_ms.egg-info/dependency_links.txt
+scm_python_ms.egg-info/requires.txt
+scm_python_ms.egg-info/top_level.txt
+scm_python_ms/lib/ssz_micro_service.py
+scm_python_ms/tapps/ssz_micro_service/__init__.py
+scm_python_ms/tapps/ssz_micro_service/context_processor.py
+scm_python_ms/tapps/ssz_micro_service/etc_processor.py
+scm_python_ms/tapps/ssz_micro_service/jar_processor.py
+scm_python_ms/tapps/ssz_micro_service/ssh_processor.py
+scm_python_ms/tapps/ssz_micro_service/printer/__init__.py
+scm_python_ms/tapps/ssz_micro_service/printer/simple_printer.py

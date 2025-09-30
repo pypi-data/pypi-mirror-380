@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: scm-python-ms
+Version: 0.1.0
+Summary: An micro service plugin Python project to use cli manage it
+Author-email: "Shao,ShunZhong" <tempestwin@163.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+
+# Micro Service Build 相关扩展
+
