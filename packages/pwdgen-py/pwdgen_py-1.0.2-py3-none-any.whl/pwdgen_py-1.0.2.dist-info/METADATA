@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: pwdgen-py
+Version: 1.0.2
+Summary: A secure password generator
+Project-URL: Source, https://github.com/mentiferous/pwdgen.git
+Author: mentiferous
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Keywords: generator,passwords,pwdgen,pwdgen-py
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# `pwdgen`
+
+A secure password generator
+
+```text
+usage: pwdgen [-h] [-V] [-b] [--hex] [-d] [-l LENGTH]
+
+A secure password generator
+
+options:
+  -h, --help           show this help message and exit
+  -V, --version        show program's version number and exit
+  -b, --base85         generate a base85 password
+  --hex                generate a hex password
+  -d, --digits         generate a password of digits
+  -l, --length LENGTH  choose a password length (default: 32)
+```
+
+## Installation
+
+### Prerequisites
+
+- Python >= 3.6
+- [pipx](https://pipx.pypa.io/stable/installation/#on-linux)
+
+```sh
+pipx install pwdgen-py
+```
+
+## Usage
+
+```sh
+pwdgen
+```
+
+## License
+
+[GNU General Public License v3.0 or later](https://github.com/mentiferous/pwdgen/blob/main/LICENSE)
