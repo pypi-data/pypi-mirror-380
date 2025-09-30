@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/Bohrmodel_NEIRA_CRUZ_COGUA.egg-info/PKG-INFO
+src/Bohrmodel_NEIRA_CRUZ_COGUA.egg-info/SOURCES.txt
+src/Bohrmodel_NEIRA_CRUZ_COGUA.egg-info/dependency_links.txt
+src/Bohrmodel_NEIRA_CRUZ_COGUA.egg-info/requires.txt
+src/Bohrmodel_NEIRA_CRUZ_COGUA.egg-info/top_level.txt
+src/bohrmodel/__init__.py
+src/bohrmodel/atom.py
+src/bohrmodel/energia.py
+src/bohrmodel/graficos.py
+src/bohrmodel/radios.py
+src/bohrmodel/transiciones.py
