@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: raul_python_test
+Version: 0.0.9
+Summary: Raul's Python Test project
+Author-email: Raul Viera-Mercado <vieramercado1@llnl.gov>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/vieramercado/test-python
+Project-URL: Repository, https://github.com/vieramercado/test-python.git
+Keywords: test,alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Environment :: Console
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: virtualenv; extra == "dev"
+Requires-Dist: setuptools-scm; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# test-python
+
+This is a dummy Python project to test deployment to PyPi and GitHub Actions.
+
+## Notes
+
+### Build
+
+```bash
+python -m build . -o dist
+```
+
+### Deploy
+
+[Using TestPyPi](https://packaging.python.org/en/latest/guides/using-testpypi/#using-test-pypi)
+
+[Deploy to PyPi](https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#uploading-your-project-to-pypi)
+
+```bash
+export TWINE_USERNAME=__token__
+export TWINE_PASSWORD=<insert_password>
+twine upload --repository testpypi dist/*
+```
+
+### Run
+
+```bash
+raul-python-test
+```

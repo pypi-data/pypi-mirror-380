@@ -1,0 +1,2 @@
+[console_scripts]
+raul-python-test = test_python.main:main
