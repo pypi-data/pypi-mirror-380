@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: intra
+Version: 0.0.1
+Summary: Python SDK to orchestrate agents using intra.
+Author: Srujan
+Author-email: Srujan <srujan@tryintra.app>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Project-URL: Homepage, https://github.com/intra-app/intra-python-sdk
+Project-URL: Issues, https://github.com/intra-app/intra-python-sdk/issues
+Description-Content-Type: text/markdown
+
+# Intra Package
+
+This is a initial version of intra. You can check it out at
+[intra-python-sdk](https://github.com/intra-app/intra-python-sdk)
