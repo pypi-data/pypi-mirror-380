@@ -1,0 +1,8 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/main.py,sha256=ItY2y2fadS5NEvMGvOm2wEYBMz6aEUB_SxSu5TdTeGg,10529
+orchestry-1.0.0.dist-info/licenses/LICENSE,sha256=JLH4wPEDrkKMlD3xrJeV8YVbff8oHbxXQFw_eZGNlF0,35080
+orchestry-1.0.0.dist-info/METADATA,sha256=_CeEX5CGArnrxPo_gZLHdXAAqAbAh8a8mIGbcf5VeNM,3239
+orchestry-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+orchestry-1.0.0.dist-info/entry_points.txt,sha256=ZdVtalitCuIOL2kkxyjOGF-xzEAAHsaYpjLk-A7EnQI,43
+orchestry-1.0.0.dist-info/top_level.txt,sha256=2ImG917oaVHlm0nP9oJE-Qrgs-fq_fGWgba2H1f8fpE,4
+orchestry-1.0.0.dist-info/RECORD,,
