@@ -1,0 +1,4 @@
+[console_scripts]
+mcp-server-hw-test = mcp_server_hw_test:main
+mcp-server-hw-test-hello = mcp_server_hw_test:hello
+
