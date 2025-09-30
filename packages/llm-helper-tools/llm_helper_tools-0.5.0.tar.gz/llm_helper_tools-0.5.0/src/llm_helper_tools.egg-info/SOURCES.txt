@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/llm_helper/__init__.py
+src/llm_helper/ai.py
+src/llm_helper/index.py
+src/llm_helper/prompting.py
+src/llm_helper/task.py
+src/llm_helper_tools.egg-info/PKG-INFO
+src/llm_helper_tools.egg-info/SOURCES.txt
+src/llm_helper_tools.egg-info/dependency_links.txt
+src/llm_helper_tools.egg-info/requires.txt
+src/llm_helper_tools.egg-info/top_level.txt
