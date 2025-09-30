@@ -1,0 +1,6 @@
+[console_scripts]
+napari-mcp = napari_mcp.server:main
+napari-mcp-install = napari_mcp.cli.main:app
+
+[napari.manifest]
+napari-mcp = napari_mcp:napari.yaml
