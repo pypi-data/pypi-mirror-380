@@ -1,0 +1,17 @@
+ldc_dashboard_rbac/__init__.py,sha256=GIayjP-z7kEmJeEz8Qram8itRu_5el_7suVbs9KQngA,1414
+ldc_dashboard_rbac/apps.py,sha256=PlMh3NJfwIiog4aAmGQf4nqmy7tMljFPu8ZArs-3mPc,735
+ldc_dashboard_rbac/decorators.py,sha256=ZlktNZL4sgKQ9uvoK3QK2isx2OKVHBqBaB3juZygTtg,5596
+ldc_dashboard_rbac/drf_permissions.py,sha256=dBWfhQEUTMs8Cx6yPqSgW-OkkPGLMQGR2T-Qm1JpXEs,5154
+ldc_dashboard_rbac/models.py,sha256=8fW7XVthKehcSGV0MB1vIsM01oi6hWPHZFuQSyN2rMA,2319
+ldc_dashboard_rbac/permissions.py,sha256=ce7CvlHDwyfLKRzx92Hhu75APG-syQelcDvxcGPDVXs,9093
+ldc_dashboard_rbac/signals.py,sha256=MJo796AXPtae9kKBiHS7F4mDUpSwhe28aKf2fbJz7hc,2679
+ldc_dashboard_rbac/utils.py,sha256=899D-1lzgT8HVf5IikRKHFROqwmogUZ926ZxKNIp5j0,12198
+ldc_dashboard_rbac/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ldc_dashboard_rbac/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ldc_dashboard_rbac/management/commands/rbac_status.py,sha256=5aCdxjyZ2fQadmF7C3BweyVAH97pVabFntlZAZCpWiU,5055
+ldc_dashboard_rbac/management/commands/sync_features.py,sha256=cQEqPKvsDivrfHlciVEl1mLto50-eJYFXrAbTBN0lMw,3077
+ldc_dashboard_rbac-1.0.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ldc_dashboard_rbac-1.0.0.dist-info/METADATA,sha256=fl0hOBt9-Eq0XgEk1LChHeRfyXruu1b2QdoWcf5imOE,6103
+ldc_dashboard_rbac-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ldc_dashboard_rbac-1.0.0.dist-info/top_level.txt,sha256=bRiRuOGiG-oFj1VyvAdevmHAPlSU1-OqiDbhj-sRzpc,19
+ldc_dashboard_rbac-1.0.0.dist-info/RECORD,,
