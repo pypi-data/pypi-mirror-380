@@ -1,0 +1,16 @@
+forca2/main.py,sha256=TOyZRx97s8vCe91cRseBAFk40J1rqgCBCuJndJAi79s,198
+forca2/jogo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forca2/jogo/jogo.py,sha256=TBxfjs2j-Y7l20mcyaNe_uqEVALNqsvURCpaBjEj0n0,6824
+forca2/menu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forca2/menu/menu.py,sha256=ZvFI_5ghAAHnz1oFHU6ZT_hw7KTBFeAscjVHKVmhbsI,3224
+forca2/titulo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forca2/titulo/titulo.py,sha256=yXUfGokjtj94vmIwOgysZXrOaNtNAZlKKmUZVclsEpQ,2520
+forca2/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forca2/utils/bancodepalavras.py,sha256=Yy9K--zJZWcjz9ClPIIrqs8GDHHXKQo0vTXWq9sriPc,3198
+forca2/utils/utilidades.py,sha256=tr6vocrZr7KetSnnb5tQazClYujji2xgzFPEIqzC7pM,6056
+forca2-0.1.2.dist-info/licenses/LICENSE.txt,sha256=-E1iQwFsGJd5uYElsaAZ-uKK2sME4Z0JvdlU-E2DRt4,1103
+forca2-0.1.2.dist-info/METADATA,sha256=kp28HGuPO5aVOxnRU797ilPL__IU5df1NfhLBG6chnU,2146
+forca2-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+forca2-0.1.2.dist-info/entry_points.txt,sha256=gjcE7n3kKzuSVYl3nO_uuPJ5p1zWUnxH7ojGgL7Hc6c,44
+forca2-0.1.2.dist-info/top_level.txt,sha256=qpQ3WkUk7nBAvdvs5Y43eB3kz65CAUxLIwTWdLzWg3Q,7
+forca2-0.1.2.dist-info/RECORD,,
