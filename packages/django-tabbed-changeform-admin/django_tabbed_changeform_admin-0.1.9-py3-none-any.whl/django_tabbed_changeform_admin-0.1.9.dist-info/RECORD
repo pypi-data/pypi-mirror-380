@@ -1,0 +1,15 @@
+django_tabbed_changeform_admin/__init__.py,sha256=0mbXppJZyl24NLMrImWVMiIuf1PoTbUKyz3r7K-aYRk,55
+django_tabbed_changeform_admin/admin.py,sha256=1t9McHH5niIvtvWX38XFoy9CtLm6OLYC-iUCT9OjfIs,1102
+django_tabbed_changeform_admin/apps.py,sha256=4nIJX5tKlAmpKi5pZcDa2gpQlK--2g3-KGeL_ykmUIQ,189
+django_tabbed_changeform_admin/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tabbed_changeform_admin/tests.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tabbed_changeform_admin/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tabbed_changeform_admin/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tabbed_changeform_admin/static/django-tabbed-changeform-admin/css/django-tabbed-changeform-admin.css,sha256=ArDs46xNL7c6o8KsULFnpl2GMEIgchVHTbJzcUwbJ8A,854
+django_tabbed_changeform_admin/static/django-tabbed-changeform-admin/js/django-tabbed-changeform-admin.js,sha256=Io7Zk2k1lnUoRUfa18ZRgGSj4Jwx8pGmyn8zWVsh0Rg,1183
+django_tabbed_changeform_admin/templates/admin/change_form.html,sha256=dENTXBm9Yw89lJAOY1DPFnzBTN_QeYbzgkxYn8bWNU4,673
+django_tabbed_changeform_admin-0.1.9.dist-info/licenses/LICENSE,sha256=Sab-PDrW2ewofErc63Lsk5nAyKBmakL3ZnkGpsud9EE,1065
+django_tabbed_changeform_admin-0.1.9.dist-info/METADATA,sha256=v-cC0DqBI0zJgXTncI3Jx81J_swWmiui727ObDseHUk,3856
+django_tabbed_changeform_admin-0.1.9.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+django_tabbed_changeform_admin-0.1.9.dist-info/top_level.txt,sha256=hRU4hoL73rVgDb0ebadMXMXp1CCY4Yr1vMXgbSuLOPU,31
+django_tabbed_changeform_admin-0.1.9.dist-info/RECORD,,
