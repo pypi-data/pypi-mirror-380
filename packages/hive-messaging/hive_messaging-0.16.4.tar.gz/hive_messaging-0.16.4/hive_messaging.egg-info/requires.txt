@@ -1,0 +1,5 @@
+cloudevents[pydantic]
+contenttype
+hive-common>=0.3.5
+pika
+typing-extensions
