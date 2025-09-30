@@ -1,0 +1,13 @@
+kalibr_sdk/__init__.py,sha256=L_5OptkOmev08V7M2H-MmUex15FfXTvC_DGhTDpVeKs,122
+kalibr_sdk/core.py,sha256=qLVsWhoUamgRBRHIC02CjanVvm2Ei6aMbbBF4Z3bHTs,2038
+kalibr_sdk/core_v2.py,sha256=3jANBgtkBlcZQ6pNNX5yXxgZeQtRzwVR25_sWaTi8ms,1979
+kalibr_sdk/normalizer.py,sha256=_p_SiiEp4RLLvvGpLSK67rgkWvEwU8IMFGCylECYik8,2789
+kalibr_sdk/adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kalibr_sdk/adapters/claude.py,sha256=OHymCwn9w0uWjpALfR5eVJ7kq_DSawvvF9G7Ts7Oulg,2176
+kalibr_sdk/adapters/gpt.py,sha256=uk0LG9Hf8SeurLLvAUxoe0TeZgdtwh6CjYNbT64UBHk,1657
+kalibr_sdk/schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kalibr_sdk/schemas/action.py,sha256=HzTOmxMe3e1-pRpwNXRFKflHgCb7SAC_6Zz7dosKn-4,552
+kalibr-0.1.0.dist-info/METADATA,sha256=eKezSA-O_DPMzXB_IokXF4NmHUdOj1RNq5SzNfS5O0g,3352
+kalibr-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+kalibr-0.1.0.dist-info/top_level.txt,sha256=HA5tN9PHo2m7cu4hCh8T3bc7aDx6-uYW4RGuypSuc1E,11
+kalibr-0.1.0.dist-info/RECORD,,
