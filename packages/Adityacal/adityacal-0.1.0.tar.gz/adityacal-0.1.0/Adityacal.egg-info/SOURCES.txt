@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Adityacal/__init__.py
+Adityacal/calculator.py
+Adityacal.egg-info/PKG-INFO
+Adityacal.egg-info/SOURCES.txt
+Adityacal.egg-info/dependency_links.txt
+Adityacal.egg-info/entry_points.txt
+Adityacal.egg-info/top_level.txt
