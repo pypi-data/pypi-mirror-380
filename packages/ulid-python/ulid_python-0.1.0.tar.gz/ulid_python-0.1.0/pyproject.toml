@@ -1,0 +1,35 @@
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ulid-python"
+description = "High-performance ULID (Universally Unique Lexicographically Sortable Identifier) implementation for Python"
+requires-python = ">=3.8"
+authors = [{name = "Yoseph Bernandus"}]
+dependencies = [
+    "typing_extensions; python_version<'3.10'",
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+]
+dev = [
+    "pytest>=6.0",
+    "ruff",
+]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.5",
+]
