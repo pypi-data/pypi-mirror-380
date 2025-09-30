@@ -1,0 +1,3 @@
+[console_scripts]
+ui-cli = src.main:main
+unified-intelligence-cli = src.main:main
