@@ -1,0 +1,32 @@
+[project]
+name = "donnes-des-sous-mathis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mathis", email = "mathis.rade@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx==0.28.1",
+]
+
+[project.scripts]
+donnes-des-sous-mathis = "donnes_des_sous_mathis:main"
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "pytest==8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "donnes_des_sous-mathis",
+]
