@@ -1,0 +1,8 @@
+README.md
+setup.py
+chess_som/__init__.py
+chess_som/main.py
+chess_som.egg-info/PKG-INFO
+chess_som.egg-info/SOURCES.txt
+chess_som.egg-info/dependency_links.txt
+chess_som.egg-info/top_level.txt
