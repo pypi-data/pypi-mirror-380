@@ -1,0 +1,14 @@
+aurora_dsql_django/.coverage,sha256=Z3C-MchhHcl-B7wuYBR5hdoeeVNsm7ub3sHM9O-VJgc,53248
+aurora_dsql_django/__init__.py,sha256=sw4P9tfe723aVpNRrt5d57kBhGsNPN4o0lWwNOxnk4k,741
+aurora_dsql_django/base.py,sha256=SzfpbPTAgahA1IpPhjyVuDtGi8plHEmvPTGG29LMjuE,6321
+aurora_dsql_django/creation.py,sha256=crFiQdD8uXzxkco-U8LjFjVF4JkfKiEtPcWcMP0b1J8,1094
+aurora_dsql_django/features.py,sha256=wyushkx4Wtgaa183FZ7CVs08Zv16iCmpZWcdfED4OpU,2318
+aurora_dsql_django/operations.py,sha256=sHXCHYvW257ergjHe3BYimFNEsou4Me0QrsCKfYwwI0,1355
+aurora_dsql_django/py.typed,sha256=B2sVTJwpR1oEwMXePQBcum9Mg1RE5LmVxJ4c1zpvHyo,627
+aurora_dsql_django/schema.py,sha256=nDXXzXllwuygOz_6P_sZMSK_I1yFUQdJR61g7QZfiL0,4073
+aurora_dsql_django-0.2.0.dist-info/licenses/LICENSE,sha256=CeipvOyAZxBGUsFoaFqwkx54aPnIKEtm9a5u2uXxEws,10142
+aurora_dsql_django-0.2.0.dist-info/licenses/NOTICE,sha256=1CkO1kwu3Q_OHYTj-d-yiBJA_lNN73a4zSntavaD4oc,67
+aurora_dsql_django-0.2.0.dist-info/METADATA,sha256=rEPF1awfAVbBqNUkEnrBQCg6I04iXl-jIJ9lvVwH2jE,6477
+aurora_dsql_django-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aurora_dsql_django-0.2.0.dist-info/top_level.txt,sha256=zF0oUkitO1ULjzryT_cnzyltOO2oE9EPIWREO3sT9C4,19
+aurora_dsql_django-0.2.0.dist-info/RECORD,,
