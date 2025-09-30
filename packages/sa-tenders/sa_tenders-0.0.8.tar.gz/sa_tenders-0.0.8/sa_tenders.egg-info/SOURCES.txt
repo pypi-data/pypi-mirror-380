@@ -1,0 +1,13 @@
+setup.py
+sa_tenders/__init__.py
+sa_tenders/adding_variables.py
+sa_tenders/data_cleaning.py
+sa_tenders/dict_to_dataframe.py
+sa_tenders/main.py
+sa_tenders/old.py
+sa_tenders/test_ideas.py
+sa_tenders.egg-info/PKG-INFO
+sa_tenders.egg-info/SOURCES.txt
+sa_tenders.egg-info/dependency_links.txt
+sa_tenders.egg-info/requires.txt
+sa_tenders.egg-info/top_level.txt
