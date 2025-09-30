@@ -1,0 +1,15 @@
+usajobsapi/__init__.py,sha256=aBW3k55oM36uSmS3rQTfZ4U7yDLgph2Jskjt9OhNj_4,226
+usajobsapi/__main__.py,sha256=PloaXIhre_I7a4hzPgOJs2kx5vi3Ou7bQMLa7XWe31M,76
+usajobsapi/_version.py,sha256=uVT6GYQcLb79Ypvp-0m9rSDmnuhbRBD8PB-BqtqUm-E,75
+usajobsapi/cli.py,sha256=wSxfT4AD_aDkb6YNRrlnRe4D8I0oYk9AnoKP4cRUId0,29
+usajobsapi/client.py,sha256=7ek-2IHkOGIx8X6SDaFyYELQb0qWeWcmrLj4mqdMixg,10184
+usajobsapi/utils.py,sha256=yHJvAbJf7r63jOOaBSajDs0rYXt1XAUTFAs_ue-4E8w,3605
+usajobsapi/endpoints/__init__.py,sha256=vVszwUDqYeBI5I0-HlmWInPJ9Q_f11WxXnDgm4afAbQ,289
+usajobsapi/endpoints/_validators.py,sha256=IlaPBOAE3QE2n6-j1x8n7F79Q_d3Eu_6nJKeV3KjGUk,592
+usajobsapi/endpoints/announcementtext.py,sha256=7tyFelZVfbGIM--16VbJeKUtsLfasUF2EefG4YWIMY8,430
+usajobsapi/endpoints/historicjoa.py,sha256=q_-j__1DJwUsUfc3tAeXhjUyu4DBsBzEsrqdi-sPxTA,9273
+usajobsapi/endpoints/search.py,sha256=CHB6WAREbZwzN4B3IiAw8n_ieiyHAgbaOIc5_z-_7X4,31215
+python_usajobsapi-0.2.0.dist-info/METADATA,sha256=-bguYR8yBOCY6tMpvG_uKLnuBI5BBpJkPiAqPV9pmRY,43191
+python_usajobsapi-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_usajobsapi-0.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+python_usajobsapi-0.2.0.dist-info/RECORD,,
