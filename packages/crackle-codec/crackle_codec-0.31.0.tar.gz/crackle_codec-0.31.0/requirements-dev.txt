@@ -1,0 +1,7 @@
+cloud-volume
+compresso
+fastremap
+pytest
+networkx
+tqdm
+scipy
