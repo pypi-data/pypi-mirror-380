@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug `arcade mcp`",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/libs/arcade-cli/run_cli.py",
+      "args": ["mcp"],
+      "console": "integratedTerminal",
+      "jinja": true,
+      "justMyCode": true,
+      "cwd": "${workspaceFolder}/toolkits/<your_server_name>"
+    }
+  ]
+}
