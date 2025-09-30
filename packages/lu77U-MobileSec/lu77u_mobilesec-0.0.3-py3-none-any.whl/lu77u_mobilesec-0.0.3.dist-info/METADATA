@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: lu77U-MobileSec
+Version: 0.0.3
+Summary: The Only Mobile Security Tool Which You Need
+Author-email: Sam MG Harish <sammgharish@gmail.com>
+Maintainer-email: Sam MG Harish <sammgharish@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/sam-mg/lu77U-MobileSec
+Keywords: mobile,security,cli,tool,automation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: androguard>=4.1.3
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: weasyprint>=66.0
+Requires-Dist: Pillow>=11.3.0
+Dynamic: license-file
+
+# lu77U-MobileSec
+
+**The Only Mobile Security Tool Which You Need**
+
+## Installation
+
+```bash
+pip install lu77U-MobileSec
+```
+
+## Usage
+
+```bash
+# Basic usage
+lu77U-MobileSec
+
+# With verbose mode
+lu77U-MobileSec -V
+
+# Show help
+lu77U-MobileSec --help
+
+# Show version
+lu77U-MobileSec -v
+```
+
+## Features
+
+- 🎯 **Simple Interface**: Clean, minimal command-line interface
+- 🔧 **Auto-Setup**: Automatically installs required dependencies
+- 🌐 **GitHub Integration**: Direct access to project repository
+- 🐍 **Python 3.12+**: Built for modern Python environments
+- 🎨 **Cross-Platform**: Works on Windows, macOS, and Linux
+
+## Requirements
+
+- Python 3.12 or higher
+- Internet connection for dependency installation
+
+## License
+
+MIT License
+
+Happy Pentesting!
+
+<p align="right">
+  <img src="https://wakatime.com/badge/user/f5bf5341-405c-480f-bd76-40a5c1a8ada9/project/bf85413c-ecef-42cb-a459-a8677138ea8b.svg?style=for-the-badge" alt="WakaTime Repo Image" />
+</p>
