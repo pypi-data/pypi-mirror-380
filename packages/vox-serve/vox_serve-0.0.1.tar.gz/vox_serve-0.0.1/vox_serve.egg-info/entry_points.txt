@@ -1,0 +1,2 @@
+[console_scripts]
+vox-serve = vox_serve.launch:main
