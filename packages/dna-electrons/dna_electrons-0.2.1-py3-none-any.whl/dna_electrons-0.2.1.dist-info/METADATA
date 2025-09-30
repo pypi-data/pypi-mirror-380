@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: dna-electrons
+Version: 0.2.1
+Summary: Compute total electrons for DNA sequences with FASTA parsing and Biopython integration.
+Author: Yash Munnalal Gupta
+License: MIT License
+        
+        Copyright (c) 2025 Yash Munnalal Gupta
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to do so, subject to the
+        following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/yashmgupta/dna-electrons
+Project-URL: Issues, https://github.com/yashmgupta/dna-electrons/issues
+Project-URL: Repository, https://github.com/yashmgupta/dna-electrons
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biopython>=1.80
+Dynamic: license-file
+
+# dna-electrons
+
+Compute total electrons for DNA sequences with toggles for backbone and phosphate charges.
+Now includes **FASTA parsing** and **Biopython** integration.
+
+
+## Install (from source)
+
+```bash
+git clone https://github.com/yashmgupta/dna-electrons.git
+cd dna-electrons
+python -m venv .venv && source .venv/bin/activate  # on Windows: .venv\Scripts\activate
+pip install -U pip build
+pip install -e .
+```
+
+## CLI
+
+```bash
+dna-electrons --seq ATGCAT --double --include-backbone --include-charge
+dna-electrons --fasta sequences.fasta --output csv > results.csv
+```
+
+## Python API
+
+```python
+from dna_electrons import compute_electrons
+from dna_electrons.io import compute_from_fasta
+
+res = compute_electrons("ATGCAT", double_stranded=True, include_backbone=True, include_phosphate_charge=True)
+for rec_id, r in compute_from_fasta("sequences.fasta", double_stranded=True):
+    print(rec_id, r.total, r.breakdown)
+```
+
+## Contributing
+
+- Run tests: `pytest -q`
+- Lint (optional): add your preferred linter/formatter.
+
+## License
+
+MIT © 2025 {Yash Munnalal Gupta}
