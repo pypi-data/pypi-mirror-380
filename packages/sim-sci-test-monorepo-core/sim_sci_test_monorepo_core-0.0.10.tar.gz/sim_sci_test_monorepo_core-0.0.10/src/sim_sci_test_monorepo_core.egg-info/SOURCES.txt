@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/sim_sci_test_monorepo/__init__.py
+src/sim_sci_test_monorepo/core/__init__.py
+src/sim_sci_test_monorepo/core/_version.py
+src/sim_sci_test_monorepo/core/utils.py
+src/sim_sci_test_monorepo_core.egg-info/PKG-INFO
+src/sim_sci_test_monorepo_core.egg-info/SOURCES.txt
+src/sim_sci_test_monorepo_core.egg-info/dependency_links.txt
+src/sim_sci_test_monorepo_core.egg-info/requires.txt
+src/sim_sci_test_monorepo_core.egg-info/top_level.txt
+tests/__init__.py
+tests/test_utils.py
