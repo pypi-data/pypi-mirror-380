@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+celyatrix/__init__.py
+celyatrix/celyatrix_agi.py
+celyatrix/celyatrix_ami.py
+celyatrix.egg-info/PKG-INFO
+celyatrix.egg-info/SOURCES.txt
+celyatrix.egg-info/dependency_links.txt
+celyatrix.egg-info/top_level.txt
