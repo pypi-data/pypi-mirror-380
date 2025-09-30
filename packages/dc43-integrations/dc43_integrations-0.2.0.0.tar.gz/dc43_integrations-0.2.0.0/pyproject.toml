@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dc43-integrations"
+version = "0.2.0.0"
+description = "Runtime integrations built on dc43 service contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Andy Petrella" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "dc43-service-clients>=0.0.3",
+  "pyspark>=3.4",
+]
+
+[project.optional-dependencies]
+spark = [
+  "pyspark>=3.4",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dc43_integrations*"]
