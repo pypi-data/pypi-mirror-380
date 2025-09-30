@@ -1,0 +1,4 @@
+[console_scripts]
+format=blacksrc
+repo-map=repo_map.main:run_main
+
