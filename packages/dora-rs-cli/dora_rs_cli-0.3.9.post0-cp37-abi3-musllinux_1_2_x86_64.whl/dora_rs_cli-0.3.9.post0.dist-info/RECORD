@@ -1,0 +1,7 @@
+dora_cli.libs/libgcc_s-98a1ef30.so.1,sha256=XOVRhHznCIpbSdhFoozhla-OfRqBtXftKPQ4cSMKjrs,433441
+dora_cli/__init__.py,sha256=qrutQA9DsBZNsl4q81736NjxpBLjLDJqES1mjjK7Uts,115
+dora_cli/dora_cli.abi3.so,sha256=S--dFQcq_KJnC2sv59MWkJDUITK1JVnlZeiu22-tPgE,29384937
+dora_rs_cli-0.3.9.post0.dist-info/METADATA,sha256=SeEZcjDd5geHgu-hroBurC_F6aP3D7tXlerCSEEEEfE,138
+dora_rs_cli-0.3.9.post0.dist-info/WHEEL,sha256=yIvvihvELH2-eZ6hYrs5IZVP7JMyRJJ4vuyIhE_KLD0,105
+dora_rs_cli-0.3.9.post0.dist-info/entry_points.txt,sha256=zbnh0GUaWctaHrIIc3stOrRmjzKbyisVZS8ShZDmcZU,40
+dora_rs_cli-0.3.9.post0.dist-info/RECORD,,
