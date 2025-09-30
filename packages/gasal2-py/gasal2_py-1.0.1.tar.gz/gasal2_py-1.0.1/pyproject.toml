@@ -1,0 +1,48 @@
+[build-system]
+requires = ["scikit-build-core>=0.9", "pybind11>=2.12", "cmake>=3.23"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "gasal2-py"
+version = "1.0.1"  # update on every release
+description = "Python bindings for GASAL2 (GPU-accelerated pairwise alignment)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "BSD-3-Clause" }  # or your actual license
+authors = [{ name = "Eli Niktab", email = "maniktab@gmail.com" }]
+keywords = ["alignment", "bioinformatics", "GPU", "CUDA", "genomics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: C++",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+Homepage = "https://github.com/eniktab/GASAL2-Py"
+Issues = "https://github.com/eniktab/GASAL2-Py/issues"
+
+[tool.scikit-build]
+minimum-version = "0.9"
+# Rebuild the extension in editable installs when sources change
+editable.rebuild = true
+# Optional: keep build artifacts in a predictable folder
+build-dir = "build/{wheel_tag}"
+
+# ---- SINGLE declaration only (do not duplicate this table) ----
+[tool.scikit-build.cmake]
+version = ">=3.23"
+args = ["-G", "Ninja"]  
+
+[tool.scikit-build.cmake.define]
+CMAKE_BUILD_TYPE = "Release"
+# (Optional) pass any cache entries here, e.g.:
+# GASAL2_GPU_SM_ARCH = "sm_90"
+# GASAL2_CUDA_HOME = "/usr/local/cuda"
+
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-xdist>=3", "pytest-timeout>=2"]
+
