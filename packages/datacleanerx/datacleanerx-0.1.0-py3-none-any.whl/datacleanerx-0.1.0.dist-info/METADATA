@@ -1,0 +1,222 @@
+Metadata-Version: 2.4
+Name: datacleanerx
+Version: 0.1.0
+Summary: Automated dataset cleaner for machine learning
+Home-page: https://github.com/SatyamSingh8306/datacleaner-ai
+Author: Satyam Singh
+Author-email: satyamsingh7734@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scikit-learn>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 📘 Dataset Cleaner for ML – Documentation & Implementation Guide
+
+## 1. 📌 Overview
+
+**Dataset Cleaner for ML** (`datacleaner_ai`) is a Python library designed to simplify the preprocessing pipeline by automatically detecting and fixing common data quality issues.
+
+### 🔹 Features:
+
+* Detects:
+
+  * Missing values
+  * Duplicate rows
+  * Class imbalance
+  * Outliers
+* Cleans:
+
+  * Handles missing values (drop, mean/median fill, forward/backward fill)
+  * Removes duplicates
+  * Balances classes (oversampling/undersampling)
+  * Handles outliers (clip, remove, replace)
+* Easy to use:
+
+  ```python
+  from datacleaner_ai import Cleaner
+  cleaner = Cleaner(strategy="auto")
+  df_clean = cleaner.fit_transform(df)
+  ```
+* Generates **summary reports** about detected issues.
+
+---
+
+## 2. 🎯 Problem It Solves
+
+* Data scientists spend **60–80% of time** cleaning data before model training.
+* Beginners often forget key steps (like handling imbalance or outliers).
+* Current tools (like `pandas`) are flexible but not **opinionated or automated**.
+
+This library makes preprocessing **1-line simple**, while still allowing **custom strategies**.
+
+---
+
+## 3. 🏗️ Library Architecture
+
+```
+datacleaner_ai/
+│
+├── datacleaner_ai/
+│   ├── __init__.py
+│   ├── cleaner.py          # Main Cleaner class
+│   ├── detectors.py        # Functions to detect issues
+│   ├── transformers.py     # Functions to clean data
+│   ├── reports.py          # Summary report generator
+│   └── utils.py            # Helper functions
+│
+├── tests/                  # Unit tests
+│   ├── test_cleaner.py
+│   ├── test_detectors.py
+│   └── test_transformers.py
+│
+├── examples/               # Example notebooks/scripts
+│
+├── setup.py or pyproject.toml
+├── README.md
+├── LICENSE
+└── requirements.txt
+```
+
+---
+
+## 4. ⚙️ Core Components
+
+### 🔹 `Cleaner` (Main API class)
+
+* **Methods:**
+
+  * `fit(df)` → analyzes dataset
+  * `transform(df)` → applies fixes
+  * `fit_transform(df)` → runs both
+  * `report()` → generates summary of issues
+
+* **Parameters:**
+
+  * `strategy` : `"auto" | "manual"`
+  * `missing_values` : `"drop" | "mean" | "median" | "ffill" | "bfill"`
+  * `duplicates` : `True | False`
+  * `imbalance` : `"smote" | "undersample" | "oversample" | None`
+  * `outliers` : `"clip" | "remove" | None`
+
+---
+
+### 🔹 `detectors.py`
+
+* Functions:
+
+  * `detect_missing(df)`
+  * `detect_duplicates(df)`
+  * `detect_imbalance(df, target)`
+  * `detect_outliers(df, method="zscore" | "iqr")`
+
+---
+
+### 🔹 `transformers.py`
+
+* Functions:
+
+  * `handle_missing(df, method="mean")`
+  * `remove_duplicates(df)`
+  * `balance_classes(df, target, method="smote")`
+  * `handle_outliers(df, method="clip")`
+
+---
+
+### 🔹 `reports.py`
+
+* Generates a readable summary:
+
+  ```text
+  === Dataset Cleaner Report ===
+  Missing values: 12% (Handled with median fill)
+  Duplicates: 350 rows removed
+  Class imbalance: SMOTE applied (positive class upsampled)
+  Outliers: 2.3% clipped using IQR
+  ==============================
+  ```
+
+---
+
+## 5. 🚀 Example Usage
+
+```python
+import pandas as pd
+from datacleaner_ai import Cleaner
+
+# Load data
+df = pd.read_csv("data.csv")
+
+# Create cleaner with auto strategy
+cleaner = Cleaner(strategy="auto", missing_values="median", imbalance="smote")
+
+# Clean dataset
+df_clean = cleaner.fit_transform(df)
+
+# Get summary
+print(cleaner.report())
+```
+
+---
+
+## 6. 🔧 Implementation Roadmap
+
+### ✅ MVP (Minimum Viable Product)
+
+1. Basic `Cleaner` class.
+2. Handle missing values (drop, mean, median).
+3. Remove duplicates.
+4. Generate basic report.
+
+### 🚀 Phase 2
+
+1. Add class imbalance handling (SMOTE via `imblearn`).
+2. Add outlier detection & treatment.
+3. Expand missing value strategies (ffill, bfill).
+4. Add plotting (missing value heatmaps, class balance bar chart).
+
+### 🌟 Phase 3 (Advanced Features)
+
+1. Integration with **Scikit-learn pipelines** (`TransformerMixin`).
+2. GUI/CLI tool for non-coders.
+3. Save/load cleaning strategies as JSON.
+4. Parallel processing for large datasets.
+
+---
+
+## 7. 📦 Tech Stack & Dependencies
+
+* **Core:** `pandas`, `numpy`
+* **Optional (for imbalance):** `imblearn` (SMOTE, RandomOverSampler, RandomUnderSampler)
+* **Visualization (optional):** `matplotlib`, `seaborn`
+
+---
+
+## 8. 🧪 Testing Strategy
+
+* Unit tests with `pytest`.
+* Test datasets (with known issues) stored in `tests/data/`.
+* CI/CD integration (GitHub Actions) to auto-test on push.
+
+---
+
+## 9. 📄 License & Publishing
+
+* Use **MIT License** (widely adopted for open-source).
+* Publish to PyPI via `twine`.
+* Provide docs in README + Example Jupyter notebooks.
+
