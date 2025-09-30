@@ -1,0 +1,12 @@
+plex_mcp/__init__.py,sha256=kTdqNHQqd-7duigeBUKpRKw9kXqpMqsiCZwhLyIrTsg,4780
+plex_mcp/client/__init__.py,sha256=5xSG2Gf7TXIhq2uid6hWnd1vmIurd3aKz-e4NTi2n_o,1118
+plex_mcp/client/plex_client.py,sha256=wqJ7c912Z-MIKjyxXYni3E7dG4V1VBpoR925x10smyo,4431
+plex_mcp/sections/__init__.py,sha256=HPGme6dAumpA0VtGK8XgyqgF3sSZOZXhl935pO9ToF4,1287
+plex_mcp/sections/movies.py,sha256=Vd8ujIC_eqw5RrhgVb1txbvg4hUYWJN8WgX9BJGQhp4,17711
+plex_mcp/sections/music.py,sha256=tjLpKfkklA_TyVC6GGeK0IebR86dyPwMx4h9ptPOTSo,15860
+plex_mcp/sections/tv_shows.py,sha256=Eam6S6XoTbj9OM4z-Q_TWmuzaEqVTcBvBH_kevaA3CM,15396
+plex_mcp-0.1.0.dist-info/METADATA,sha256=YLkwHtfGQLsUyoLOKMVH8kpjIA-ZHRjIf_wxEsiy-zU,5068
+plex_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plex_mcp-0.1.0.dist-info/entry_points.txt,sha256=wVfQSKWdzQGi3KGqpD72dxn46N2WSBjCOnEsaWP83sk,43
+plex_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=ef8me57f11fP6IO3MTtuFqTzM0CwEZ1w6QrHO7f3xOA,1065
+plex_mcp-0.1.0.dist-info/RECORD,,
