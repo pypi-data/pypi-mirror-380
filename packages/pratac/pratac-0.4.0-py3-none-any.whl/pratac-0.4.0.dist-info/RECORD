@@ -1,0 +1,11 @@
+pratac/__init__.py,sha256=xhR_sZuIf_znxkIhbMYFnNbrjqYZf5fr-8stfvSlXx0,74
+pratac/__main__.py,sha256=8YYgL_kSONNPnhz9obg7EhLaIsvd_JbjoOD88jgAk1A,1967
+pratac/argparser.py,sha256=fcSCWsVJtxejeHhQ6SUlrT_URA2NaPRZEPvGJQDqVgQ,2540
+pratac/config.py,sha256=TpWDFEtlC8UfE48DZjF1zjvgYPBXSjwp4-1PWHZKeig,2346
+pratac/definitions.py,sha256=JKo2dMguf5zi54NM5UcY6ZOpnPoWrTw0a0lUAMt3eoQ,1551
+pratac/interactive.py,sha256=wOc6QozXZRVtUXCkGHVN6FNxKBgjaxANObNHQLOGCBs,6549
+pratac-0.4.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pratac-0.4.0.dist-info/METADATA,sha256=oQc_0wr4WL3uM0MpfkDtFm03kh0Dy7ikFlG_SHhiY64,5233
+pratac-0.4.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pratac-0.4.0.dist-info/entry_points.txt,sha256=RS3rZyOmhV3oejLgEbn5v7oHznRkAL9OjLqKOdtm1yg,47
+pratac-0.4.0.dist-info/RECORD,,
