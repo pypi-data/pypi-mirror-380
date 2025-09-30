@@ -1,0 +1,9 @@
+ordeq_pymupdf/__init__.py,sha256=lY0ckovZY43X3YDWhE2X4iVgHMgTeuUp3DEHiaaRR5M,75
+ordeq_pymupdf/_version.py,sha256=JvmBpae6cHui8lSCsCcZQAxzawN2NERHGsr-rIUeJMo,704
+ordeq_pymupdf/pdf_file.py,sha256=NWVEBl-s6tzzF2bKSAL5wl2lZtvIgYDehuUXg0H_Zfk,861
+ordeq_pymupdf/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ordeq_pymupdf-1.0.1.dist-info/licenses/LICENSE,sha256=1Tb5TKkY_yEJ7ahFvkRBa73zh6osNbeQWmGPXWi9pqA,14
+ordeq_pymupdf-1.0.1.dist-info/METADATA,sha256=qNcANR8RGpta3pXalB0Ej6EG4-gpYmZn6MkpZtKvMxc,337
+ordeq_pymupdf-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ordeq_pymupdf-1.0.1.dist-info/top_level.txt,sha256=miMeideOwcIiFmOg6gV9kmK7kp_sEbVFgkL-_6upbfQ,14
+ordeq_pymupdf-1.0.1.dist-info/RECORD,,
