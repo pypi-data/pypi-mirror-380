@@ -1,0 +1,2 @@
+[console_scripts]
+自然派 = ziranpai.ziranpai_main:main

@@ -1,0 +1,133 @@
+Metadata-Version: 2.4
+Name: ziranpai
+Version: 0.1.1
+Summary: 一个类似自然语言的中文编程语言：自然派。
+Author-email: amozeng <1019191262@qq.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# 自然派 (Ziranpai) —— 类似自然语言的编程语言
+
+[![PyPI version](https://badge.fury.io/py/ziranpai.svg)](https://badge.fury.io/py/ziranpai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**自然派 (Ziranpai)** 并非又一个实验品，而是对未来编程语言形态的一次大胆探索和实践。它旨在打破传统编程语言的桎梏，构建一种更符合人类自然思维的编程范式。其语法脱胎于 Lisp 的精髓，但彻底摒弃了繁复的括号，让代码如诗歌般流畅自然。(这一句AI写的还不错)
+
+我们相信，编程不应是少数人的专利。通过 `自然派`，我们正朝着一个人人皆可编程的未来，迈出坚实的一步。(这一句写的不好，划掉)
+
+* **GitHub 项目主页**: [https://github.com/Amo-Zeng/ziranpai](https://github.com/Amo-Zeng/ziranpai)
+
+## ✨ 核心设计
+
+-   **未来导向**：重新定义代码与人的交互方式，让编程回归创造的本质。
+-   **无括号设计**：借鉴 Lisp 的强大能力，但以更简洁、更具可读性的语法呈现。
+-   **中文内核**：深度融合中文语境，为中文世界的开发者提供前所未有的编程体验。
+-   **极简部署**：通过 PyPI 全球发布，一条命令即可开启未来之旅。
+-   **无限可能**：基于 Python 构建，拥有强大的生态支持和跨平台能力。(有点吹，我就先不评论了)
+
+## 🚀 安装
+
+通过 pip 从 PyPI 官方仓库安装 `自然派`。请确保您的 Python 版本为 3.7 或更高。
+
+```bash
+pip install ziranpai
+````
+
+## 🎯 快速上手
+
+安装完成后，在您的终端（命令行）中输入 `自然派`，即可启动交互式解释器环境。
+
+```bash
+自然派
+```
+
+## 📜 更多示例
+
+`自然派` 的语法直观且强大，以下是一些功能示例，展示其部分能力。
+
+### 变量与基本运算
+
+```ziranpai
+# 定义变量 甲 为 10
+令 甲 10
+
+# 定义变量 乙 为 20
+令 乙 20
+
+# 执行加法并将结果赋给 新变量
+令 丙 加 甲 乙
+打印 丙
+# 输出: 30
+
+# 您也可以直接执行运算
+加 乘 5 8 4
+# 输出: 44
+
+# 字符串拼接
+打印 合 "欢迎来到" "自然派的世界"
+# 输出: 欢迎来到自然派的世界
+```
+
+### 数组（组）与循环
+
+```ziranpai
+# 遍历数组并打印
+循 组 3 甲 打印 甲 
+# 输出：0 1 2
+
+```
+
+### 交互与系统命令
+
+```ziranpai
+# 从用户处获取输入
+令 你的名字 手动输入 "请输入您的名字："
+打印 合 "你好, " 你的名字
+# 输出: 你好, [你输入的名字]
+
+# 执行操作系统命令 (以 Linux/macOS 为例)
+系统命令 “ls -l”
+```
+
+### 类与对象操作
+
+`自然派` 支持面向对象编程，可以方便地定义和操作类。
+
+```ziranpai
+输入：定义类 点 无 【名函 （初始化 我 x y） 【设 我#符x x 设 我#符y y 我】名函 （获取x 我）我#符x 名函 （ 打招呼 我 甲）打印 合 你好 甲】
+输入：定义类 圆点 类点 【名函 （初始化 我 x y r） 【设 我#符x x 设 我#符y y 设 我#半径 r 我】名函 （获取半径 我）我#半径 名函 （打骂 我 甲）打印 合 你不好 甲】
+输入：令 丙 圆点 3 4 5
+输入：丙#打招呼 张三
+你好张三
+输入：令 乙 （典之 名 李四 体重 60）
+输入：打印 乙#名
+李四
+输入  令 甲 名
+输入：打印 乙#甲
+李四
+输入：设 乙#符甲 身高170
+输入：打印 乙#甲
+李四
+输入：打印 乙#符甲
+身高170
+输入：删除变量 甲
+删除变量甲成功！
+输入：打印 乙#甲
+身高170
+输入：令 甲 （组之 3 乙 丙 0）
+输入：打印 甲#1#符甲
+身高170
+输入：甲#2#打骂 李四
+你不好李四
+```
+
+想要探索 `自然派` 的全部能力，请查阅项目主页上最详尽的用法说明文件：
+[**`自然派用法.jsonl`**](https://www.google.com/search?q=https://github.com/Amo-Zeng/ziranpai/blob/main/%25E8%2587%25AA%25E7%2584%25B6%25E6%25B4%25BE%25E7%2594%25A8%25E6%25B3%2595.jsonl)
+
+## 📝 许可
+
+本项目采用 MIT 许可证。详情请见 [LICENSE](https://www.google.com/search?q=https://github.com/Amo-Zeng/ziranpai/blob/main/LICENSE) 文件。
+

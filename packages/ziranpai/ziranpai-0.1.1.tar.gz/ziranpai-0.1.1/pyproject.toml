@@ -1,0 +1,26 @@
+# pyproject.toml
+
+# 指定构建工具
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# 项目元数据
+[project]
+name = "ziranpai"  # 这是在 PyPI 上显示的名字，可以为中文
+version = "0.1.1" # 每次上传新版本时都需要增加版本号
+authors = [
+  { name="amozeng", email="1019191262@qq.com" },
+]
+description = "一个类似自然语言的中文编程语言：自然派。" # 一句话简介
+readme = "README.md" # 指向你的说明文件
+requires-python = ">=3.7" # 指定支持的 Python 版本
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # 证书类型，可自选
+    "Operating System :: OS Independent",
+]
+
+# [重要] 定义命令行工具
+[project.scripts]
+"自然派" = "ziranpai.ziranpai_main:main"
