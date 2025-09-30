@@ -1,0 +1,8 @@
+cvbiasmitigation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvbiasmitigation/md.py,sha256=JUYkDk6gwzr5iZ969dFv2BAsQUMUOXCMH-klfv-OTOE,36166
+cvbiasmitigation/suggest.py,sha256=7lHMMJjzc-1XnYcmOT9Uy_bhZX3Ga-msswtXfbGUQFI,29062
+cvbiasmitigation/data/rfw.csv,sha256=_kI516SaP3NbxQQSKtzeI69Fyfy62SRztiiq-lnvf_Q,3015977
+cvbiasmitigation-0.0.15.dist-info/METADATA,sha256=Y4OjgW9tGgB9-_1xSLyz30f3eD8TxwDWgyIL2Bgi-8I,847
+cvbiasmitigation-0.0.15.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cvbiasmitigation-0.0.15.dist-info/top_level.txt,sha256=sid-c5EHyCvivGQq2JitoQAwE7CPp8mbemOX0_fdc4c,17
+cvbiasmitigation-0.0.15.dist-info/RECORD,,
