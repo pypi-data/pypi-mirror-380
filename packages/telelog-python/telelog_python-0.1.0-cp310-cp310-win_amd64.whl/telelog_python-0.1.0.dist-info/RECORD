@@ -1,0 +1,5 @@
+telelog/__init__.py,sha256=1BQLjYkgeAXR9p7cx2rdsmUMjNcQdQkjBnVfCNBhNfc,279
+telelog/telelog.cp310-win_amd64.pyd,sha256=Yq388e2l8jqiuB2MDixQxh3wPfMuPfESkv6CljA3ATM,626688
+telelog_python-0.1.0.dist-info/METADATA,sha256=8RhJC-3vJFZu00QnqxXnzRtS6UPpe8mtnKSCL4W_XXM,5258
+telelog_python-0.1.0.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+telelog_python-0.1.0.dist-info/RECORD,,
