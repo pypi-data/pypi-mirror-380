@@ -1,0 +1,2 @@
+[console_scripts]
+bullinv-ws = bullinv_api_client.cli:main
