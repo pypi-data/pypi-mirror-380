@@ -1,0 +1,36 @@
+# The order of packages is significant, because pip processes them in the order
+# of appearance. Changing the order has an impact on the overall integration
+# process, which may cause wedges in the gate later.
+#sh>=1.11
+#pbr>=1.6
+#six>=1.9.0
+#sigtools
+#clize
+#pyyaml
+#jinja2
+
+
+#--index http://pypi.mirrors.ustc.edu.cn/simple
+# --index http://mirrors.ustc.edu.cn/pypi/web/simple/
+
+commutils
+docopt
+sh
+pyyaml
+biopython
+numpy
+mongokit
+pymongo==2.8   ## must be 2.8, or will mismath with mongokit and will raise error
+rq
+pandas
+clize
+requests
+
+sphinx>=1.1.2,!=1.2.0,!=1.3b1,<1.3
+
+flask==0.10.1
+flask-markdown
+Flask-Mail
+gunicorn
+python-docx==0.7.6
+lxml==3.4.0

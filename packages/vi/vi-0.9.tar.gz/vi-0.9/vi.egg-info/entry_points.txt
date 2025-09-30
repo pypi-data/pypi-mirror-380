@@ -1,0 +1,6 @@
+[console_scripts]
+labkit = vi.cmd.cli:cli
+labkit-api = vi.cmd.api:main
+
+[oslo.config.opts]
+vi = vi.opts:list_opts

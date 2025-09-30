@@ -1,0 +1,9 @@
+# redis: /usr/local/opt/redis/bin/redis-server /usr/local/etc/redis.conf
+# mongodb: /usr/local/opt/mongodb/bin/mongod --config /usr/local/etc/mongod.conf
+#redis: redis-server etc/redis.conf
+
+mongod: mongod --config etc/mongod.conf
+beanstalkd: beanstalkd -b /usr/local/var/binlog
+rest: labkit rest
+
+front: labkit front
