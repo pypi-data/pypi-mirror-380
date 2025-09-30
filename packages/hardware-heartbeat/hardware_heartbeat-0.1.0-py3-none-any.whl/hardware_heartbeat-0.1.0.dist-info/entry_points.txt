@@ -1,0 +1,2 @@
+[console_scripts]
+hardware-heartbeat = hardware_heartbeat.__main__:main

@@ -1,0 +1,147 @@
+Metadata-Version: 2.4
+Name: hardware_heartbeat
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Requires-Dist: mcp[cli]>=1.15.0
+Requires-Dist: psutil>=5.9.0
+Description-Content-Type: text/markdown
+
+Hardware Heartbeat 硬件心跳监控
+一个 Model Context Protocol (MCP) 服务器，提供实时硬件监控并用通俗易懂的语言生成状态报告。用普通人能理解的方式查看电脑的CPU、内存、磁盘、显卡和网络使用情况。
+
+功能特点
+🚀 实时CPU监控 - 查看处理器工作状态
+
+🧠 内存使用跟踪 - 检查RAM使用情况和剩余空间
+
+💾 磁盘空间分析 - 监控所有驱动器的存储情况
+
+🎮 显卡状态报告 - 追踪显卡使用率和显存
+
+🌐 网络活动监控 - 查看上传/下载速度
+
+⚡ 快速状态概览 - 获取系统健康快照
+
+📈 资源监控 - 随时间变化追踪资源使用
+
+🗣️ 通俗易懂的描述 - 没有技术术语，只有清晰易懂的说明
+
+安装
+前提条件
+Python 3.12 或更高版本
+
+MCP服务器配置
+
+json
+{
+  "mcpServers": {
+    "hardware_heartbeat": {
+      "command": "uvx",
+      "args": ["hardware_heartbeat"]
+    }
+  }
+}
+
+使用示例
+配置完成后，只需像平常聊天一样提问：
+
+基础状态查询
+"帮我看看电脑现在状态怎么样"
+
+"检查一下我的系统状态"
+
+"我的硬件现在什么情况？"
+
+详细分析
+"显示我的CPU使用情况"
+
+"我用了多少内存？"
+
+"检查我的磁盘空间"
+
+"我的显卡现在忙吗？"
+
+实时监控
+"监控我的资源10秒钟"
+
+"观察一下CPU和内存的变化"
+
+可用工具
+get_hardware_status()
+获取完整的硬件状态报告，包含所有组件信息。
+
+get_quick_status()
+快速概览CPU、内存和显卡状态。
+
+get_cpu_status()
+详细的CPU处理器信息和使用情况。
+
+get_memory_status()
+内存使用情况和可用空间。
+
+get_gpu_status()
+显卡使用率、显存和温度信息。
+
+get_disk_status()
+所有磁盘分区的存储空间情况。
+
+monitor_resources(duration=10, interval=2)
+实时监控资源随时间的变化。
+
+示例输出
+text
+💻 电脑硬件状态报告
+
+🚀 CPU处理器
+   CPU正在正常工作，用了25%的力量
+   📊 使用率: 25% | 核心: 8核16线程
+   ⚡ 频率: 3600.0 MHz
+
+🧠 内存
+   内存还很宽裕，用了8.2GB，还剩15.8GB空间
+   📊 使用率: 34% | 总量: 24.0GB
+
+💾 磁盘存储
+   C:\ (C:\) - 🟡 适中
+   空间还算够用，还剩45.2GB
+   📊 使用率: 78% | 总量: 256.0GB
+系统要求
+mcp[cli]>=1.15.0
+
+psutil>=5.9.0
+
+显卡支持
+Hardware Heartbeat 自动检测和监控：
+
+NVIDIA 显卡 (通过 nvidia-smi)
+
+AMD/Intel 显卡 (基础信息)
+
+集成显卡
+
+要获得完整的显卡监控功能，请确保：
+
+NVIDIA: 安装最新驱动并确保 nvidia-smi 在 PATH 中
+
+Windows: 启用 WMIC
+
+Linux: 安装合适的显卡驱动
+
+故障排除
+"无法获取显卡信息"
+安装最新的显卡驱动
+
+确保 nvidia-smi 在 PATH 中 (NVIDIA用户)
+
+某些集成显卡可能只显示有限信息
+
+"权限被拒绝"错误
+使用适当的权限运行以访问硬件信息
+
+某些磁盘分区可能无法访问
+
+监控功能不工作
+确保 psutil 正确安装
+检查 Python 版本兼容性
+
