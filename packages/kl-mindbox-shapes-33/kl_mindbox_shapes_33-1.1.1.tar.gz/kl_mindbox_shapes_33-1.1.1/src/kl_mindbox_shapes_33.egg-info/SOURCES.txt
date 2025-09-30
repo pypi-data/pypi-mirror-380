@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+src/kl_mindbox_shapes_33/__init__.py
+src/kl_mindbox_shapes_33/base.py
+src/kl_mindbox_shapes_33/circle.py
+src/kl_mindbox_shapes_33/core.py
+src/kl_mindbox_shapes_33/triangle.py
+src/kl_mindbox_shapes_33.egg-info/PKG-INFO
+src/kl_mindbox_shapes_33.egg-info/SOURCES.txt
+src/kl_mindbox_shapes_33.egg-info/dependency_links.txt
+src/kl_mindbox_shapes_33.egg-info/top_level.txt
+tests/test_shapes.py

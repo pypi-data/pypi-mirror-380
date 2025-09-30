@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: kl-mindbox-shapes-33
+Version: 1.1.1
+Summary: Library for working with geometric shapes
+Author: Konstantin Larin
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: license-file
+
+## Usage
+
+## Run tests via terminal: 
+    pip install -e .
+    python -m unittest discover tests

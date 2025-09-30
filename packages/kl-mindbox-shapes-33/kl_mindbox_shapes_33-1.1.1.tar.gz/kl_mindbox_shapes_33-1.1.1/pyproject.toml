@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kl-mindbox-shapes-33"
+version = "1.1.1"
+description = "Library for working with geometric shapes"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Konstantin Larin" }
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
