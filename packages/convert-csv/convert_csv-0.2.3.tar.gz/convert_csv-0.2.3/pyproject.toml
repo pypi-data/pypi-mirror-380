@@ -1,0 +1,13 @@
+[project]
+name = "convert-csv"
+version = "0.2.3"
+description = "A simple and easy-to-use CSV format converter that helps you process amount and date formats in batch."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "chardet>=5.2.0",
+    "pandas>=2.3.2",
+]
+
+[project.scripts]
+convert-csv = "main:main"
