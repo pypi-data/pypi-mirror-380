@@ -1,0 +1,1 @@
+from .lasha_chipashvili import Base

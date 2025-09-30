@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lasha_chipashvili_package
+Version: 0.1
+Summary: Package for practical exercise
+Author: Lasha Chipashvili
+Author-email: lasha.chipashvili.1@iliauni.edu.ge
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary

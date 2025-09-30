@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+lasha_chipashvili/__init__.py
+lasha_chipashvili/lasha_chipashvili.py
+lasha_chipashvili_package.egg-info/PKG-INFO
+lasha_chipashvili_package.egg-info/SOURCES.txt
+lasha_chipashvili_package.egg-info/dependency_links.txt
+lasha_chipashvili_package.egg-info/top_level.txt
