@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: pyhwlib
+Version: 0.2.0
+Summary: Add your description here
+Author: wenzhiwei
+Author-email: wenzhiwei <wzw773828204@gmail.com>
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: python-decouple>=3.8
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
