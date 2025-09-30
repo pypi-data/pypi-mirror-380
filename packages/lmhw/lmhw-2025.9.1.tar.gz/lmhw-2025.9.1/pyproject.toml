@@ -1,0 +1,19 @@
+[project]
+name = "lmhw"
+version = "2025.9.1"
+description = "Lagrangian marine heatwaves"
+authors = [
+    {name = "Ezra Eisbrenner",email = "lmhw@ezra-eisbrenner.eu"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "<3.13,>=3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "lmhw", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
