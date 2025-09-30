@@ -1,0 +1,2 @@
+[console_scripts]
+un-datacommons-mcp = datacommons_mcp.cli:cli
