@@ -1,0 +1,7 @@
+setup.py
+ReGeorged_I.egg-info/PKG-INFO
+ReGeorged_I.egg-info/SOURCES.txt
+ReGeorged_I.egg-info/dependency_links.txt
+ReGeorged_I.egg-info/top_level.txt
+my_packages/__init__.py
+my_packages/base_class.py
