@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+logcore/__init__.py
+logcore/config.py
+logcore/formatters.py
+logcore/handlers.py
+logcore/logger.py
+logcore/utils.py
+logcore.egg-info/PKG-INFO
+logcore.egg-info/SOURCES.txt
+logcore.egg-info/dependency_links.txt
+logcore.egg-info/requires.txt
+logcore.egg-info/top_level.txt
+tests/test_logforge.py
