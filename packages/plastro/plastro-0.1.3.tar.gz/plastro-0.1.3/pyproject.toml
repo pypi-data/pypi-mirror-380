@@ -1,0 +1,207 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "pybind11>=2.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plastro"
+version = "0.1.3"
+description = "A Python package for simulating cellular plasticity in single-cell data"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Sitara Persad", email = "sitara.persad@example.com"},
+]
+maintainers = [
+    {name = "Sitara Persad", email = "sitara.persad@example.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "single-cell",
+    "plasticity", 
+    "lineage-tracing",
+    "phylogeny",
+    "bioinformatics",
+    "computational-biology",
+    "cellular-plasticity",
+    "CRISPR",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pybind11>=2.6.0",  # Must be first - required for building graph-walker
+    "graph-walker>=1.0.6",  # Essential for random walk functionality
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.4.0",
+    "seaborn>=0.11.0",
+    "scanpy>=1.8.0",
+    "anndata>=0.8.0",
+    "networkx>=2.6.0",
+    "ete3>=3.1.2",
+    "scikit-learn>=1.0.0",
+    "tqdm>=4.60.0",
+    "icecream>=2.1.0",
+    "scikit-bio>=0.5.7",  # Required for neighbor joining algorithm
+]
+# dynamic = ["version"]  # Commented out since we're using static version
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.8",
+    "pre-commit>=2.0",
+]
+docs = [
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+    "nbsphinx>=0.8",
+    "pandoc>=1.0",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+    "matplotlib>=3.0",
+    "seaborn>=0.11",
+]
+lineage = [
+    "cassiopeia-lineage>=2.0.0",
+    "igraph>=0.10.0",  # Required for Leiden clustering
+]
+clustering = [
+    "igraph>=0.10.0",  # Optional for Leiden clustering in phenotype simulation
+]
+all = [
+    "plastro[dev,docs,notebooks,lineage,clustering]",
+]
+
+[project.urls]
+Homepage = "https://github.com/dpeerlab/PLASTRO"
+Documentation = "https://plastro.readthedocs.io/"
+Repository = "https://github.com/dpeerlab/PLASTRO.git"
+"Bug Tracker" = "https://github.com/dpeerlab/PLASTRO/issues"
+Changelog = "https://github.com/dpeerlab/PLASTRO/blob/main/CHANGELOG.md"
+
+
+[tool.setuptools.packages.find]
+include = ["plastro*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+plastro = ["data/*.csv", "data/*.h5ad"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["plastro"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "docs/source/conf.py",
+    "old",
+    "build",
+    "dist",
+]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "scipy.*",
+    "sklearn.*",
+    "scanpy.*",
+    "anndata.*",
+    "ete3.*",
+    "networkx.*",
+    "walker.*",
+    "cassiopeia.*",
+    "archetypes.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    "--cov=plastro",
+    "--cov-report=term-missing",
+    "--cov-report=xml",
+    "--cov-report=html",
+    "--strict-markers",
+    "--strict-config",
+    "--disable-warnings",
+]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["plastro"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
