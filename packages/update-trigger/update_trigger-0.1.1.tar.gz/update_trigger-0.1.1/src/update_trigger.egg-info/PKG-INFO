@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: update-trigger
+Version: 0.1.1
+Summary: Pacote utilizado para publicar mensagens MQTT quando um arquivo é atualizado.
+Author-email: Felipe Ribeiro <feliperibeiromachado@edu.univali.br>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: paho-mqtt==2.1.0
+Requires-Dist: python-dotenv==1.1.1
+
+# update-trigger 🚀
+
+[![PyPI version](https://img.shields.io/pypi/v/update-trigger.svg)](https://pypi.org/project/update-trigger/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+
+Pacote Python utilizado para **publicar mensagens MQTT** (payload `"update"`) quando acionado em pipelines de **CI/CD**, como no **GitHub Actions**.  
+
+Esse pacote facilita a integração com serviços que precisam ser notificados sobre atualizações de arquivos ou sistemas.
+
+---
+
+## 📦 Instalação
+
+Instale o pacote via **PyPI** (após publicação):
+
+```bash
+pip install update-trigger
+```
+
+Ou localmente durante o desenvolvimento:
+
+```bash
+pip install .
+```
+
+---
+
+## ⚙️ Configuração
+
+O pacote utiliza variáveis de ambiente para se conectar ao broker MQTT.  
+Crie um arquivo `.env` com as seguintes chaves:
+
+```env
+MQTT_BROKER=test.mosquitto.org
+MQTT_PORT=8883
+MQTT_USERNAME=seu_usuario
+MQTT_PASSWORD=sua_senha
+```
+
+---
+
+## 🧩 Uso em Python
+
+Você pode importar a classe `MqttService` diretamente no seu projeto:
+
+```python
+from update_trigger import MqttService
+import os
+
+service = MqttService(
+    broker=os.environ["MQTT_BROKER"],
+    port=int(os.environ["MQTT_PORT"]),
+    client_id="github-actions",
+    topic="actions",
+)
+
+service.send_message()
+```
+
+---
+
+## 🤖 Uso no GitHub Actions
+
+Exemplo de workflow que dispara o **update-trigger** após um push na branch `main`:
+
+```yaml
+name: Trigger MQTT Update
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mqtt-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install update-trigger
+        run: pip install update-trigger
+
+      - name: Send MQTT update
+        env:
+          MQTT_BROKER: ${{ secrets.MQTT_BROKER }}
+          MQTT_PORT: ${{ secrets.MQTT_PORT }}
+          MQTT_USERNAME: ${{ secrets.MQTT_USERNAME }}
+          MQTT_PASSWORD: ${{ secrets.MQTT_PASSWORD }}
+        run: python -m update_trigger
+```
+
+> ⚠️ Configure os valores de conexão (`MQTT_BROKER`, `MQTT_PORT`, `MQTT_USERNAME`, `MQTT_PASSWORD`) como **GitHub Secrets** para maior segurança.  
+
+---
+
+## 📜 Licença
+
+Distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.  
