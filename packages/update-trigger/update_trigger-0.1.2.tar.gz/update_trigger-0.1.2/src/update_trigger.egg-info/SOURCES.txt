@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/update_trigger/__init__.py
+src/update_trigger/__main__.py
+src/update_trigger/main.py
+src/update_trigger.egg-info/PKG-INFO
+src/update_trigger.egg-info/SOURCES.txt
+src/update_trigger.egg-info/dependency_links.txt
+src/update_trigger.egg-info/entry_points.txt
+src/update_trigger.egg-info/requires.txt
+src/update_trigger.egg-info/top_level.txt
