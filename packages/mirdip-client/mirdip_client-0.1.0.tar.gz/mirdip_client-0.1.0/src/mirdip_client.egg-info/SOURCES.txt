@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/mirdip_client/__init__.py
+src/mirdip_client/cli.py
+src/mirdip_client/http.py
+src/mirdip_client.egg-info/PKG-INFO
+src/mirdip_client.egg-info/SOURCES.txt
+src/mirdip_client.egg-info/dependency_links.txt
+src/mirdip_client.egg-info/entry_points.txt
+src/mirdip_client.egg-info/requires.txt
+src/mirdip_client.egg-info/top_level.txt
+tests/test_client.py

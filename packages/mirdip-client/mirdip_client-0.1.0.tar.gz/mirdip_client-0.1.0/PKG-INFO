@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: mirdip-client
+Version: 0.1.0
+Summary: Typed Python client and CLI for mirDIP HTTP API
+Author: mirDIP Contributors
+License: MIT
+Keywords: mirDIP,microRNA,bioinformatics,API,client
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Classifier: Environment :: Console
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: black>=24.0; extra == "dev"
+Requires-Dist: isort>=5.12; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.4; extra == "test"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5; extra == "docs"
+Dynamic: license-file
+
+# mirdip-client
+
+Typed Python client and CLI for the mirDIP HTTP API.
+
+[![CI](https://github.com/your-org/mirdip-client/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/mirdip-client/actions/workflows/ci.yml)
+
+## Install
+
+```bash
+pip install .
+```
+
+## Usage (Python)
+
+```python
+from mirdip_client import MirDIPClient
+
+client = MirDIPClient()
+resp = client.search_genes("AKAP17A,AKR1C2,APP,ZZZ3,MARK4,C17orf51", "Very High")
+print(resp.results_size)
+print(resp.results)  # Tab-delimited
+```
+
+### Pandas helper
+The `results` field is a tab-delimited string. To convert to a DataFrame:
+
+```python
+import pandas as pd
+from io import StringIO
+
+# results contains header row followed by rows
+df = pd.read_csv(StringIO(resp.results), sep="\t")
+```
+
+## CLI
+
+```bash
+mirdip genes "AKAP17A,AKR1C2" "Very High"
+mirdip micrornas "hsa-miR-603,hsa-let-7a-3p" "High"
+mirdip bidirectional "AKAP17A,APP" "hsa-miR-603" "Medium" "TargetScan_v7_2" 2
+```
+
+## Notes
+- Base URL defaults to `http://ophid.utoronto.ca/mirDIP`.
+- Score classes: Very High, High, Medium, Low.
+- Responses include raw text and parsed fields.
+
+## Contributing
+See `CONTRIBUTING.md` for development and release instructions.

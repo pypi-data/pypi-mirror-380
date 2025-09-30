@@ -1,0 +1,10 @@
+
+[dev]
+black>=24.0
+isort>=5.12
+
+[docs]
+mkdocs>=1.5
+
+[test]
+pytest>=7.4

@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirdip-client"
+version = "0.1.0"
+description = "Typed Python client and CLI for mirDIP HTTP API"
+readme = "README.md"
+authors = [{ name = "mirDIP Contributors" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["mirDIP", "microRNA", "bioinformatics", "API", "client"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Intended Audience :: Science/Research",
+  "Environment :: Console"
+]
+dependencies = []
+
+[project.scripts]
+mirdip = "mirdip_client.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mirdip_client*"]
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.0",
+  "isort>=5.12",
+]
+test = [
+  "pytest>=7.4",
+]
+docs = [
+  "mkdocs>=1.5",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]

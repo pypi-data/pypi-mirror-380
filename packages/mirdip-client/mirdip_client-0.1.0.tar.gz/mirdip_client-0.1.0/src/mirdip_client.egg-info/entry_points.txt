@@ -1,0 +1,2 @@
+[console_scripts]
+mirdip = mirdip_client.cli:main
