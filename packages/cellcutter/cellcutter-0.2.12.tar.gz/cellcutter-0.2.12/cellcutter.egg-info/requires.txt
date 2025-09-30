@@ -1,0 +1,6 @@
+scikit-image
+numpy
+pandas
+tifffile
+zarr<=2.14.0
+numcodecs

@@ -1,0 +1,3 @@
+[console_scripts]
+cut_cells = cellcutter.cli:cut
+cut_tiles = cellcutter.cli:cut_tiles
