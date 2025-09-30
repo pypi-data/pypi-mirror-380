@@ -1,0 +1,3 @@
+[console_scripts]
+pg-runner=pg-runner.cli:main
+
