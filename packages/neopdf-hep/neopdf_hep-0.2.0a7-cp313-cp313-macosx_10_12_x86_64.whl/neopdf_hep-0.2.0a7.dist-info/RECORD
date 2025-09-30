@@ -1,0 +1,5 @@
+neopdf/__init__.py,sha256=GXJnvQa6HKAJy3JWgFoTRhuyA5oK2sbNlLxrTBvi5zs,107
+neopdf/neopdf.cpython-313-darwin.so,sha256=4okcyo_vvHKhNMWab-Fr_trb5nI8Je3uSVamS8SCl8U,4765932
+neopdf_hep-0.2.0a7.dist-info/METADATA,sha256=BS9Prim_eaZXgWxtfvYy0ScEtHyltA00-bupC4EUK3k,940
+neopdf_hep-0.2.0a7.dist-info/WHEEL,sha256=iXfRWk7-127zCPB-_BNFDQE-qLd9Rsj-fJMRKNRg-kg,106
+neopdf_hep-0.2.0a7.dist-info/RECORD,,
