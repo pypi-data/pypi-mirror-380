@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joker-area-calc"
+version = "1.0.0"
+description = "Библиотека для вычисления площади геометрических фигур"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Абубакр Ахмедов", email = "xspace1902@gmail.com"},
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."] 
+testpaths = ["tests"]

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+area_calc/__init__.py
+area_calc/main.py
+joker_area_calc.egg-info/PKG-INFO
+joker_area_calc.egg-info/SOURCES.txt
+joker_area_calc.egg-info/dependency_links.txt
+joker_area_calc.egg-info/top_level.txt
+tests/test_functions.py
