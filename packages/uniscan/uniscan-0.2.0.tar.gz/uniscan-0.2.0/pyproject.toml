@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uniscan"
+version = "0.2.0"
+description = "Redirect package for the renamed Usentinel project."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Tianjiao Li" }
+]
+classifiers = [
+    "Development Status :: 7 - Inactive",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "usentinel>=0.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/TLI-1994/Usentinel"
+Repository = "https://github.com/TLI-1994/Usentinel"
+Issues = "https://github.com/TLI-1994/Usentinel/issues"
+
+[project.scripts]
+uniscan = "usentinel.main:main"
+
+
+[tool.setuptools]
+packages = ["uniscan"]
+package-dir = { "uniscan" = "src/uniscan" }

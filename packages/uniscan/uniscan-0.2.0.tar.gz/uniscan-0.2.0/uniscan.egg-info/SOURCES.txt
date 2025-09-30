@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/uniscan/__init__.py
+uniscan.egg-info/PKG-INFO
+uniscan.egg-info/SOURCES.txt
+uniscan.egg-info/dependency_links.txt
+uniscan.egg-info/entry_points.txt
+uniscan.egg-info/requires.txt
+uniscan.egg-info/top_level.txt
