@@ -1,0 +1,6 @@
+hello_pkg/__init__.py,sha256=jVNWzZ8kNic1nxBJPItRWE5pGlBcEhkJBFXAXPvBSxA,79
+hello_pkg/core.py,sha256=2b8eHdE-5ZxjsAWW92yqKM4N9OUTErvw4medjiw5rY4,115
+hello_pkg_ykp-0.1.0.dist-info/METADATA,sha256=xIifTpbMm0L8CoUJaWoMx2_EakNbIGw0K6f4iMu1kbw,505
+hello_pkg_ykp-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+hello_pkg_ykp-0.1.0.dist-info/top_level.txt,sha256=fMY4hCQ8kL4nQdd8Eckib277xdtR6kpYCYmT0FcwyzI,10
+hello_pkg_ykp-0.1.0.dist-info/RECORD,,
