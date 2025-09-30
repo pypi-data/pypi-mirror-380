@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: digitask
+Version: 0.0.6
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fireworks>=2.0.5
+Requires-Dist: woolworm>=0.0.9
+
+# DigiTask
+
+DigiTask is a set of Fireworks Tasks for Digitization and OCR for Libraries and Cultural Heritage Institutions.
+
+DigiTask is experimental software. Not recommended for use in systems requiring high-performance.
