@@ -1,0 +1,12 @@
+shinkuro/__init__.py,sha256=xhb0MQwF3Z3zs_8UL3VXGN1BKsEtOMHS-6hzBAKqxiw,47
+shinkuro/file.py,sha256=aVuuUDAuEFx3_bXjtl73Y-P59nla_c7hBzm6ijCo4Uw,1359
+shinkuro/main.py,sha256=85PN-cBbG5Hddzvk5qYTj8EsMj2QeVCkp2xEleh96XA,979
+shinkuro/server.py,sha256=0MwDK6ZQFcqZdIoM8zbQXZo7HDkr4LpJRs-taOEzIfE,893
+shinkuro/remote/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+shinkuro/remote/git.py,sha256=pd6tblIMLicOsoXORO4utZk7j7T8Lo0_x-npbOrxdBc,1490
+shinkuro/remote/utils.py,sha256=gUZZNLURMG9qjejOueSFCGh0ydfP928xn8ljiJYq2BY,358
+shinkuro-0.2.0.dist-info/METADATA,sha256=cKj7sCkDbCvZXCNJjJ5kP9twKZN_7kaG11f1zb4AdC8,2612
+shinkuro-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+shinkuro-0.2.0.dist-info/entry_points.txt,sha256=iWtHocMEI1taoHFBXeZUposSljQ4PhGwrKufTf_Iv5M,48
+shinkuro-0.2.0.dist-info/licenses/LICENSE,sha256=WV0dxca98gx2Wops4SgudesOPrXaTy0TLd84JFamog4,1068
+shinkuro-0.2.0.dist-info/RECORD,,
