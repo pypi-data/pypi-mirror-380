@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: flask-confluent-kakfa
+Version: 0.1.0a0
+Summary: A simple Flask extension for integrating Confluent Kafka.
+Author-email: River <vicente.marcal@gmail.com>
+License: GPL+v3
+Requires-Python: >=3.13
+Requires-Dist: confluent-kafka>=2.11.1
