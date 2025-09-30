@@ -1,0 +1,17 @@
+dbt/adapters/gizmosql/__init__.py,sha256=lxrg90o6Iy4bF7rTqKWfRrvF04X9F6kIWpJJAg1sPYY,435
+dbt/adapters/gizmosql/__version__.py,sha256=9UsQLZYw3LX7NO0PsCa8nGInSg0LC4sQ67EJUs50ljU,18
+dbt/adapters/gizmosql/column.py,sha256=ZPAEOl9Zq1VE7NcgglrC5Ib_-1jJHX6hHyVX5y6DblU,3390
+dbt/adapters/gizmosql/connection_proxy.py,sha256=HGIl0QEcK8YL33OOMSO3Ec01cGZPdeJEjkgfbr5aOyo,3821
+dbt/adapters/gizmosql/connections.py,sha256=m5BPbUJsOBkzwdFEd1W59VYUh7ex4lFloa33zYjLvto,6947
+dbt/adapters/gizmosql/impl.py,sha256=vM2OAccIMLUwcrcBsePlVOTntKmrKCsCtJ4rMDcHEcE,1483
+dbt/adapters/gizmosql/relation.py,sha256=fWJkDvcYOwhpjJIKz4iDaVuxsQxQmp1wUeq15KEiPhs,417
+dbt/include/gizmosql/__init__.py,sha256=vBGWeG-dHHkimfnX8axBJ4IgAowFw8xADmo6Auzn2xc,52
+dbt/include/gizmosql/dbt_project.yml,sha256=dCYZSZgtND27fm8VWKpiTh0l9M9r3WtB3655zfRdnnY,77
+dbt/include/gizmosql/profile_template.yml,sha256=LjZC6rJiOrt9r8CBGj3EHWWd38mb8Q_2YuiqLZH5PYc,483
+dbt/include/gizmosql/macros/adapters.sql,sha256=sC6qexS1_PxKpRTl7I9Aj7pVgtQkMdjYANZ_brz66U0,13824
+dbt/include/gizmosql/macros/catalog.sql,sha256=Li6JO4olX4V4PK2gbugj90j8RTkkQ_8kGMyhkGBZFWM,1393
+dbt_gizmosql-1.10.3.dist-info/licenses/LICENSE,sha256=PhzSYq-sHvHdMYD2vNluzojs3FbCPj22jKEagHbAVSc,807
+dbt_gizmosql-1.10.3.dist-info/METADATA,sha256=mOTAlUHSs8X5SI7MAI86VmNpYOE1tMT2AjAERwUoj1o,5840
+dbt_gizmosql-1.10.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dbt_gizmosql-1.10.3.dist-info/top_level.txt,sha256=B2YH4he17ajilEWOGCKHbRcEJlCuZKwCcgFcLPntLsE,4
+dbt_gizmosql-1.10.3.dist-info/RECORD,,
