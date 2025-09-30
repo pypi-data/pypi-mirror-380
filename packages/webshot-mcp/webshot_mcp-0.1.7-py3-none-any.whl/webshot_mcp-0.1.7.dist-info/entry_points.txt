@@ -1,0 +1,2 @@
+[console_scripts]
+webshot-mcp = webshot_mcp.server:run_server
