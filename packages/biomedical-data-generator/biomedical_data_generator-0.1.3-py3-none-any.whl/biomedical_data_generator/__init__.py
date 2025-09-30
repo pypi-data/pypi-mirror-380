@@ -1,0 +1,26 @@
+# Copyright (c) 2022 Sigrun May,
+# Helmholtz-Zentrum für Infektionsforschung GmbH (HZI)
+# Copyright (c) 2022 Sigrun May,
+# Ostfalia Hochschule für angewandte Wissenschaften
+#
+# This software is distributed under the terms of the MIT license
+# which is available at https://opensource.org/licenses/MIT
+
+"""Data generator main package."""
+
+from .config import CorrCluster, DatasetConfig
+from .generator import (
+    DatasetMeta,
+    find_seed_for_correlation,
+    generate_correlated_cluster,
+    generate_dataset,
+)
+
+__all__ = [
+    "DatasetConfig",
+    "CorrCluster",
+    "DatasetMeta",
+    "generate_dataset",
+    "generate_correlated_cluster",
+    "find_seed_for_correlation",
+]
