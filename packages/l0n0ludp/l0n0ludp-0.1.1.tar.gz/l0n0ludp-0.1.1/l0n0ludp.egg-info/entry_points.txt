@@ -1,0 +1,4 @@
+[console_scripts]
+l0n0ludpsocks5 = l0n0ludp.SOCKS5服务器:main
+l0n0ludptransclient = l0n0ludp.本地TCP服务器:main
+l0n0ludptransserver = l0n0ludp.远端UDP服务器:main
