@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: fourier-aurora-client
+Version: 0.1.1rc1
+Summary: Aurora Python Client - Python client for the Aurora API
+Project-URL: Homepage, https://gitlab.fftaicorp.com/motioncontrol/aurorapy
+Project-URL: Repository, https://gitlab.fftaicorp.com/motioncontrol/aurorapy
+Author-email: James <qianyue.zhang@fftai.com>
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Aurora Python Client
+
+This is the Python client for the Aurora API. It allows you to interact with the Aurora API to retrieve data and perform actions on the Aurora platform.
+
+## Entering docker container
+
+To enter the docker container, run the following command:
+
+```
+sudo bash docker_run.bash
+```
+
+This will start the docker container and drop you into a bash shell inside the container.
+
+Please make sure to have Docker installed and `192.168.3.32:9595/aurora/aurora:feature_tele_1.2` image on your machine.
+
+## Starting Aurora
+
+To start Aurora, run the following command:
+
+```
+AuroraCore
+```
+
+This will start the Aurora core server.
+
+## Using the client
+
+Start another terminal and use `docker exec` to enter the docker container you just started. Then, run the following command under `src` directory:
+
+```
+python3 -m examples.client_usage
+```
+Then you can follow the instructions in the terminal to interact with the Aurora API.
