@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: ap-donnes-des-sous
+Version: 0.1.1
+Summary: Add your description here
+Author: Adele Peire
+Author-email: Adele Peire <aapeire@gmail.com>
+Requires-Dist: httpx>=0.28.1
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
