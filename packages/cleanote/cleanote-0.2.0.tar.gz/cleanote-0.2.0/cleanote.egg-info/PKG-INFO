@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: cleanote
+Version: 0.2.0
+Summary: CleanNote: preprocessing and harmonization of medical notes
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2
+Requires-Dist: pyyaml
+Requires-Dist: typer
+Requires-Dist: rich
+Requires-Dist: datasets
+Requires-Dist: transformers>=4.41.0
+Requires-Dist: torch>=2.3.0
+Requires-Dist: accelerate>=0.30.0
+Requires-Dist: safetensors>=0.4.3
+Dynamic: license-file
+
+# CleanNote
+
+![CI](https://github.com/corentinlaval/CleanNote/actions/workflows/ci.yml/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/corentinlaval/CleanNote/branch/main/graph/badge.svg?branch=main)](https://codecov.io/gh/corentinlaval/CleanNote)
+[![PyPI version](https://img.shields.io/pypi/v/cleanote.svg)](https://pypi.org/project/cleanote/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+
+
+**CleanNote** transforms raw notes from the medical domain into standardized, clean, and structured text that can be used for analysis and clinical research.  
+
+---
+
+## Quickstart  
+
+Clone the repository:  
+
+```
+git clone https://github.com/corentinlaval/CleanNote.git
+cd CleanNote
+python -m cleanote --config configs/base.yaml
+```
+
+---
+
+
+## Installation
+
+Depuis PyPI (version stable) :
+```bash
+pip install cleanote
+```
+
+---
+
+## License  
+This project is licensed under the [MIT License](LICENSE).  
