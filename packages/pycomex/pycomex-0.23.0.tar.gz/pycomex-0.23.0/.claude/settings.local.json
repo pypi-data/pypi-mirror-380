@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source:*)",
+      "Bash(uv add:*)",
+      "WebSearch",
+      "Bash(/media/ssd/Programming/pycomex/.venv/bin/mkdocs build)",
+      "Bash(python:*)",
+      "Bash(find:*)",
+      "Bash(pycomex archive:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
