@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/nandorapi/__init__.py
+src/nandorapi/client.py
+src/nandorapi/tools.py
+src/nandorapi.egg-info/PKG-INFO
+src/nandorapi.egg-info/SOURCES.txt
+src/nandorapi.egg-info/dependency_links.txt
+src/nandorapi.egg-info/top_level.txt
