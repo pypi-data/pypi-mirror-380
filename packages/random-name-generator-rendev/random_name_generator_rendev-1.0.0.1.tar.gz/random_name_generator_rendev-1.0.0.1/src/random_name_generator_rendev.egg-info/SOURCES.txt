@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/random_name_generator_rendev/__init__.py
+src/random_name_generator_rendev/generator.py
+src/random_name_generator_rendev.egg-info/PKG-INFO
+src/random_name_generator_rendev.egg-info/SOURCES.txt
+src/random_name_generator_rendev.egg-info/dependency_links.txt
+src/random_name_generator_rendev.egg-info/top_level.txt
