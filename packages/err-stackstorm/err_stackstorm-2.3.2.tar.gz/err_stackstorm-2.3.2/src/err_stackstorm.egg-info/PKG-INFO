@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: err-stackstorm
+Version: 2.3.2
+Summary: StackStorm ChatOps for Errbot
+Author-email: Err-stackstorm maintainers <nzlosh@yahoo.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/nzlosh/err-stackstorm
+Project-URL: Bug Tracker, https://github.com/nzlosh/err-stackstorm/issues
+Project-URL: Documentation, https://err-stackstorm.readthedocs.io/
+Keywords: errbot,stackstorm
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.20.0
+Requires-Dist: sseclient
+Requires-Dist: jsonschema
+Dynamic: license-file
+
+# err-stackstorm
+
+StackStorm ChatOps for Errbot.
+
+[![CI](https://github.com/nzlosh/err-stackstorm/actions/workflows/main.yml/badge.svg)](https://github.com/nzlosh/err-stackstorm/actions/workflows/main.yml)[![Documentation Status](https://readthedocs.org/projects/err-stackstorm/badge/?version=latest)](https://err-stackstorm.readthedocs.io/en/latest/?badge=latest)
+
+For quick start, installation, troubleshooting and more [visit the documentation website](https://err-stackstorm.readthedocs.io/)

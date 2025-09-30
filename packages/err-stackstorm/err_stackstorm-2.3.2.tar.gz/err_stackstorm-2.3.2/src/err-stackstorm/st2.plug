@@ -1,0 +1,9 @@
+[Core]
+Name = St2
+Module = st2
+
+[Documentation]
+Description = StackStorm chatops plugin for Errbot.
+
+[Python]
+Version = 3
