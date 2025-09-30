@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jogo-da-velha-python"  
+version = "0.1.0"
+description = "Um jogo da velha em Python com IA e menu interativo"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  { name="Luiz Anselmo Medeiros Lima", email="luiz.anselmo.medeiros.lima@ccc.ufcg.edu.br" }
+]
+dependencies = []
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/Fr00g/jogo_da_velha.py"
+
+[project.scripts]
+jogo-da-velha = "jogo_da_velha.main:main"

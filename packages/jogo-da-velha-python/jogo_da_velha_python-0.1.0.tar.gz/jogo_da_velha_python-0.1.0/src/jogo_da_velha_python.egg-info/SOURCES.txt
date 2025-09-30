@@ -1,0 +1,17 @@
+LICENSE.txt
+pyproject.toml
+src/main.py
+src/core/__init__.py
+src/core/ia.py
+src/core/jogo.py
+src/core/logica.py
+src/jogo_da_velha_python.egg-info/PKG-INFO
+src/jogo_da_velha_python.egg-info/SOURCES.txt
+src/jogo_da_velha_python.egg-info/dependency_links.txt
+src/jogo_da_velha_python.egg-info/entry_points.txt
+src/jogo_da_velha_python.egg-info/top_level.txt
+src/menu/__init__.py
+src/menu/menu_inicial.py
+src/utils/__init__.py
+src/utils/helpers.py
+src/utils/print_big_board.py
