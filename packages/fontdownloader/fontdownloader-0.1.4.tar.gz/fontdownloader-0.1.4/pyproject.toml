@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fontdownloader"
+version = "0.1.4"
+description = "CLI to download Google Fonts (TTF/OTF/TTC + WOFF), OFL license, and SCSS"
+readme = "README.md"
+authors = [{ name = "Mauc" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+  "click",
+  "requests",
+  "beautifulsoup4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "pytest",
+]
+
+[project.scripts]
+fontdownloader = "fontdownloader.cli:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+ [tool.ruff.lint]
+ select = [
+     "E",  # pycodestyle errors
+     "W",  # pycodestyle warnings
+     "F",  # pyflakes
+     "I",  # isort
+     "B",  # flake8-bugbear
+     "C4", # flake8-comprehensions
+     "UP", # pyupgrade
+ ]
+ ignore = [
+     "E501",  # line too long
+     "F401",  # unused imports (sometimes useful for future use)
+     "F541",  # f-string without placeholders (sometimes cleaner for consistency)
+     "W291",  # trailing whitespace (auto-fixable, not critical)
+     "W292",  # no newline at end of file (auto-fixable)
+     "W293",  # blank line contains whitespace (auto-fixable)
+     "C414",  # unnecessary list() call (sometimes clearer)
+     "I001",  # import sorting (can be opinionated)
+ ]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
