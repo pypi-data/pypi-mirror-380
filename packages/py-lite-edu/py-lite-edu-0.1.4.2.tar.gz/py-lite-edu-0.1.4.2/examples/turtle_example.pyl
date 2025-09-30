@@ -1,0 +1,36 @@
+# Пример использования модуля turtle для рисования в окне
+# После выполнения кода откроется окно с результатом
+
+import turtle
+
+# Очищаем холст перед началом
+turtle.reset()
+
+# Рисуем красный квадрат
+turtle.color("red")
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+
+# Поднимаем перо и перемещаемся
+turtle.penup()
+turtle.forward(150)
+turtle.pendown()
+
+# Рисуем синий треугольник
+turtle.color("blue")
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(100)
+turtle.left(120)
+
+# Завершаем рисование и показываем окно
+turtle.done()
+

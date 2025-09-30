@@ -1,0 +1,69 @@
+# Математические помощники
+
+import math
+
+def circle_area(radius):
+    """Вычисляет площадь круга"""
+    return math.pi * radius ** 2
+
+def circle_circumference(radius):
+    """Вычисляет длину окружности"""
+    return 2 * math.pi * radius
+
+def is_even(number):
+    """Проверяет, является ли число чётным"""
+    return number % 2 == 0
+
+def factorial(n):
+    """Вычисляет факториал числа"""
+    if n <= 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result = result * i
+    return result
+
+def fibonacci(n):
+    """Возвращает n-е число Фибоначчи"""
+    if n <= 1:
+        return n
+    
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        c = a + b
+        a = b
+        b = c
+    return b
+
+# Примеры использования
+print("🧮 Математические расчёты")
+print()
+
+# Круг
+radius = 5
+print("Радиус:", radius)
+print("Площадь круга:", round(circle_area(radius), 2))
+print("Длина окружности:", round(circle_circumference(radius), 2))
+print()
+
+# Чётность
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("Чётные числа из", numbers, ":")
+for num in numbers:
+    if is_even(num):
+        print(num)
+print()
+
+# Факториал
+print("Факториалы:")
+for i in range(1, 6):
+    print(str(i) + "! =", factorial(i))
+print()
+
+# Числа Фибоначчи
+print("Первые 10 чисел Фибоначчи:")
+fib_numbers = []
+for i in range(10):
+    fib_numbers = fib_numbers + [fibonacci(i)]
+print(fib_numbers)
