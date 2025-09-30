@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolos"
+version = "2.3.5"
+description = "A very Usefull API-Framework for All-Type Python Projects"
+authors = [
+  { name = "Lilias", email = "lilias.ge@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.setuptools]
+packages = ["toolos"]
+
+[tool.setuptools.package-data]
+toolos = ["data/lang/*.json"]
