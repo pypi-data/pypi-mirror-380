@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+traducir/__init__.py
+traducir.egg-info/PKG-INFO
+traducir.egg-info/SOURCES.txt
+traducir.egg-info/dependency_links.txt
+traducir.egg-info/top_level.txt
