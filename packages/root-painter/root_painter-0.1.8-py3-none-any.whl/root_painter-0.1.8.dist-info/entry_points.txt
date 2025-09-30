@@ -1,0 +1,3 @@
+[console_scripts]
+root-painter = root_painter_cli.main:main
+
