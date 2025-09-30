@@ -1,0 +1,7 @@
+aiohttp
+aiofiles
+getmac
+
+[dev]
+pytest
+pytest-asyncio
