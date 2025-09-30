@@ -1,0 +1,81 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  linux-amd64:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout with submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        fetch-depth: 0
+    - name: Install Google Test
+      run: sudo apt-get update && sudo apt-get install -y libgtest-dev
+    - name: CMake configure
+      run: cmake -S native -B build
+    - name: CMake build
+      run: cmake --build build --config Release
+    - name: CMake install
+      run: cmake --install build --prefix target/x86_64-unknown-linux-gnu
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Cxx11BindingsTests.so
+        path: build/lib/Cxx11BindingsTests.so
+
+  windows-amd64:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout with submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        fetch-depth: 0
+    - name: Run vcpkg
+      uses: lukka/run-vcpkg@v11
+      with:
+        vcpkgDirectory: ${{ runner.workspace }}/b/vcpkg
+        vcpkgGitCommitId: ef7dbf94b9198bc58f45951adcf1f041fcbc5ea0
+    - name: CMake configure
+      run: cmake -S native -B build -DCMAKE_TOOLCHAIN_FILE=${{ runner.workspace }}/b/vcpkg/scripts/buildsystems/vcpkg.cmake
+    - name: CMake build
+      run: cmake --build build --config Release
+    - name: CMake install
+      run: cmake --install build --prefix target/x86_64-pc-windows-msvc
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Cxx11BindingsTests.dll
+        path: build/lib/Release/Cxx11BindingsTests.dll
+
+  build:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, windows-latest]
+        python-version: [3.8, 3.9, '3.10', '3.11', '3.13']
+
+    runs-on: ${{ matrix.platform }}
+    needs: [linux-amd64, windows-amd64]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install .[test]
+    - name: Download artifact Linux
+      uses: actions/download-artifact@v4
+      with:
+        name: Cxx11BindingsTests.so
+    - name: Download artifact Windows
+      uses: actions/download-artifact@v4
+      with:
+        name: Cxx11BindingsTests.dll
+    - name: Test with pytest
+      run: pytest -n auto
