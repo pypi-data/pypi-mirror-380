@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: celyatrix
+Version: 0.1.1
+Summary: Une librairie Python pour se connecter a Asterisk
+Author-email: CELYA <celya@celya.fr>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+Librairie Python pour remplacer l'ancienne librairie Pytrix qui n'est plus maintenue
+
+from celyatrix import celyatrix_agi
+from celyatrix import celyatrix_ami
+
+agi = celyatrix_agi.celyatrix_agi()
+
+Attention les accès au manager sont codé en dur

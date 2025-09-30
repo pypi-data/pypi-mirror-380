@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celyatrix"
+version = "0.1.1"
+description = "Une librairie Python pour se connecter a Asterisk"
+authors = [
+  { name="CELYA", email="celya@celya.fr" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
