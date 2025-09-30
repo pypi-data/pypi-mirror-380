@@ -1,0 +1,16 @@
+annotation/__init__.py,sha256=w7H3ruV16cThiWWHIlGHOLeEdd2gzyii5BlL039HREM,67
+annotation/annotate.py,sha256=-WArsAzcqYPFktkfJJrInNytB8pGrEGkQTLvoTY6x64,9715
+annotation/bands.py,sha256=oV2d38iD741Qtlv3Vo190vuo1baYCstkPKbqFu9aHTU,2455
+annotation/cli_main.py,sha256=ecpGh5z5qxuuwDTTMAI8UCI0en7b5sSslp1_Qv8Apks,1672
+annotation/ladder.py,sha256=ZIBpEwgG7VvwETn98c7OO3t3H-VPvYtOENRVjGimR5g,2387
+annotation/utils.py,sha256=1KlXDqJTWeFSdhQnvIV7Qkp4HM_1Yzuv39uT5T6cB0A,2811
+annotation/wells.py,sha256=hhD_EXN56_nqhajtQ1JPphKUxRQ1pUfhftl6bLlaauo,5734
+annotation/assets/icon.ico,sha256=_xn-lxNzqh6-ky7yov6srqz8JeXrwQ1ZHiFuNvtWq5I,125866
+annotation/assets/icon.png,sha256=8bQbF8AZ1AMaBUMqlippkZskd7LGyBwjZ67U3omZRcE,213147
+annotation/gui/gel_gui_wrapper.py,sha256=cBxL78h9eSA632AjFbXdl50-y9P6xF3DgFPYFLzNQFc,20293
+annotation/scripts/shortcuts.py,sha256=HDhFS6n-z01VzhPv-7bmx8sKsnsYdLr5VwOE-CqAKr0,3769
+aer_gel_annotate-0.1.8.dist-info/METADATA,sha256=AVNyU_M2vqz4905JbE4MOfOOY-iTnY_NmO6MBqD75dQ,3445
+aer_gel_annotate-0.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+aer_gel_annotate-0.1.8.dist-info/entry_points.txt,sha256=JWpKINuRfXUxOEb6L-aIV0h4A91-2sTgAbnZF-Q1J-0,171
+aer_gel_annotate-0.1.8.dist-info/top_level.txt,sha256=EiPmReVR0qsENiEExoxMvee28w87NmzR4GkDgcsIjHA,11
+aer_gel_annotate-0.1.8.dist-info/RECORD,,
