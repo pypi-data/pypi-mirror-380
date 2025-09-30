@@ -1,0 +1,13 @@
+[project]
+name = "ljc-mcp-server"
+version = "0.1.1"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.12.4",
+]
+
+
+
+[project.scripts]
+ljc-mcp-server = "ljc_mcp_server:main"

@@ -1,0 +1,2 @@
+[console_scripts]
+ljc-mcp-server = ljc_mcp_server:main
