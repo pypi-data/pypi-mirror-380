@@ -1,0 +1,16 @@
+main.py,sha256=6vx2tBt7ubne2Urmw12PEqcj3TvhB9ucwu02CYP-EbU,78
+core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core/ia.py,sha256=CLGYjoKxifLYQ6lkDARhbZDaG42CkVukmnCyfFskWBo,2199
+core/jogo.py,sha256=g_yH-lY4hh6eqTOHgJMEPId0_Qnuit_Kj6zJOxZyKE0,4717
+core/logica.py,sha256=dE_w4VjN1FO088z70pkVqcyfiFsp1jdqBvKEzSqkebQ,446
+jogo_da_velha_python-0.1.0.dist-info/licenses/LICENSE.txt,sha256=9AFH-ePCSgCPp8HuXYQOaCwZZvYXJ1iPUHt0BGiEO08,1104
+menu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+menu/menu_inicial.py,sha256=BZ2phT103kkVpZKvLLoOicQ70FDvPbIBRPsSkA8vlU4,624
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/helpers.py,sha256=A5Xr5I1bqa-mR4w-EtFHmCpgeHR8QCoc8PBUpVhNR30,12373
+utils/print_big_board.py,sha256=poZYLpK2i9rDdXly1iUWlKrf7gQvQjRkMl7BGmeUHHo,2957
+jogo_da_velha_python-0.1.0.dist-info/METADATA,sha256=-m84oQDD-45ry3MERZVo5hpEENDGNNiEpCA7hKULVZk,411
+jogo_da_velha_python-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+jogo_da_velha_python-0.1.0.dist-info/entry_points.txt,sha256=s5jMeAfzJcOevlE2kUvZFBQT7SheM7vzrI9YoH0fFes,58
+jogo_da_velha_python-0.1.0.dist-info/top_level.txt,sha256=Q8dfE6eXSx2Qppj-_bJZKwxckLmACVkpD8RmYzA3A2s,21
+jogo_da_velha_python-0.1.0.dist-info/RECORD,,
