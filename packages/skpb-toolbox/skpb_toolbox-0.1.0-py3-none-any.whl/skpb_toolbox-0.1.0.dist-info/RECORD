@@ -1,0 +1,10 @@
+skpb_toolbox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skpb_toolbox/numbers.py,sha256=TPZSvK1MFnBDN1p0fo2WbGaUZgWOlptuIpT1e1Yz3kg,257
+skpb_toolbox/parsing.py,sha256=5_SrJqY7iEdkPsffHNu_aTh9GAKr4uKWiVl5Jo_LSx0,663
+skpb_toolbox/printing.py,sha256=JOkDY3lv1lHVLIpseXHf2xo-_ZTAf_ezUqR1ZWA95c8,1283
+skpb_toolbox/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skpb_toolbox/solvers.py,sha256=7fBC6W35rDPWCbCyU581ytJ9BeOLly7RCb9L3UK8FEM,1708
+skpb_toolbox/symbolic.py,sha256=XNMNJ9FJQT8ivLJaMDzeNihmYYXg-yZdGJyP6EKi-W4,291
+skpb_toolbox-0.1.0.dist-info/METADATA,sha256=kXBT2e_FGxgVwzQz5K47mwouxSpiW9xjtBnsVTF64HQ,433
+skpb_toolbox-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+skpb_toolbox-0.1.0.dist-info/RECORD,,
