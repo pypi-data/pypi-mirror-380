@@ -1,0 +1,3 @@
+[console_scripts]
+m3georeferencer=m3georeferencer.cli:main
+
