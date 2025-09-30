@@ -1,0 +1,2 @@
+[console_scripts]
+ai-asset-screener = app.console:main
