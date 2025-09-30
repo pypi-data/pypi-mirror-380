@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+cscan/__init__.py
+cscan/cli.py
+cscan.egg-info/PKG-INFO
+cscan.egg-info/SOURCES.txt
+cscan.egg-info/dependency_links.txt
+cscan.egg-info/entry_points.txt
+cscan.egg-info/top_level.txt
