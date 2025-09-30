@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/djdownloader/__init__.py
+src/djdownloader/tests.py
+src/djdownloader.egg-info/PKG-INFO
+src/djdownloader.egg-info/SOURCES.txt
+src/djdownloader.egg-info/dependency_links.txt
+src/djdownloader.egg-info/requires.txt
+src/djdownloader.egg-info/top_level.txt
