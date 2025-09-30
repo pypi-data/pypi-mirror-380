@@ -1,0 +1,2 @@
+[console_scripts]
+usentinel = usentinel.main:main

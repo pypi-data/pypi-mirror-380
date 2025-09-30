@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usentinel"
+version = "0.2.0"
+description = "A lightweight CLI tool to audit Unity projects for risky code and binaries."
+readme = { file = "docs/README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Tianjiao Li" }
+]
+keywords = [
+    "unity",
+    "security",
+    "static-analysis",
+    "cli",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+dependencies = [
+    "semgrep>=1.72.0",
+    "PyYAML>=6.0",
+    "certifi>=2023.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/TLI-1994/Usentinel"
+Repository = "https://github.com/TLI-1994/Usentinel"
+Issues = "https://github.com/TLI-1994/Usentinel/issues"
+
+[project.scripts]
+usentinel = "usentinel.main:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools]
+packages = ["usentinel", "usentinel_rules"]
+package-dir = { "usentinel" = "src/usentinel", "usentinel_rules" = "rules" }
+include-package-data = true
+
+[tool.setuptools.package-data]
+"usentinel_rules" = ["core/**/*.yaml"]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests that invoke CLI end to end",
+]
