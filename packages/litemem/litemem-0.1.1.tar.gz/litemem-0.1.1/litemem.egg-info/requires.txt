@@ -1,0 +1,2 @@
+sqlite-lembed>=0.0.1a8
+sqlite-vec>=0.1.6

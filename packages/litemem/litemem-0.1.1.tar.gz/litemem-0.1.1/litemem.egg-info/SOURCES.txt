@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+litemem/__init__.py
+litemem/mem.py
+litemem.egg-info/PKG-INFO
+litemem.egg-info/SOURCES.txt
+litemem.egg-info/dependency_links.txt
+litemem.egg-info/requires.txt
+litemem.egg-info/top_level.txt
+tests/test_mem.py

@@ -1,0 +1,139 @@
+Metadata-Version: 2.4
+Name: litemem
+Version: 0.1.1
+Summary: Lightweight memory store for embeddings
+Author: Ivan
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlite-lembed>=0.0.1a8
+Requires-Dist: sqlite-vec>=0.1.6
+Dynamic: license-file
+
+# LiteMem
+
+LiteMem - это легковесная библиотека для управления памятью с использованием SQLite, sqlite-vec и локальных эмбеддингов. Библиотека предоставляет два основных класса для работы с памятью: `Memory` и `MemoryEmbedded`.
+
+## Основные возможности
+
+- **Векторный поиск**: Поиск похожих сообщений с использованием эмбеддингов
+- **Полнотекстовый поиск**: Традиционный текстовый поиск по сообщениям
+- **Гибридный поиск**: Комбинация векторного и полнотекстового поиска
+- **Локальные эмбеддинги**: Поддержка локальных моделей для генерации эмбеддингов
+- **SQLite база данных**: Все данные хранятся в SQLite с расширениями для векторного поиска
+
+## Установка
+
+```bash
+pip install litemem
+```
+
+## Быстрый старт
+
+### Использование Memory с внешними эмбеддингами
+
+```python
+from litemem import Memory
+import ollama
+
+# Функция для генерации эмбеддингов
+def embedder(text):
+    response = ollama.embeddings(model='nomic-embed-text', prompt=text)
+    return response['embedding']
+
+# Создание экземпляра памяти
+memory = Memory('memory.db', embedder)
+
+# Добавление сообщений
+memory.add([
+    "Я люблю программирование на Python",
+    "Машинное обучение - это интересная область",
+    "SQLite - отличная встраиваемая база данных"
+])
+
+# Векторный поиск
+results = memory.search_vec("программирование на Python")
+print(results)
+
+# Полнотекстовый поиск
+results = memory.search_fts("Python")
+print(results)
+
+# Гибридный поиск
+results = memory.hybrid_search("программирование")
+print(results)
+
+# Закрытие соединения
+memory.close()
+```
+
+### Использование MemoryEmbedded с локальными моделями
+
+```python
+from litemem import MemoryEmbedded
+
+# Создание экземпляра памяти с локальной моделью
+memory = MemoryEmbedded('memory.db')
+
+# Добавление сообщений
+memory.add([
+    "Я люблю программирование на Python",
+    "Машинное обучение - это интересная область",
+    "SQLite - отличная встраиваемая база данных"
+])
+
+# Поиск
+results = memory.search_vec("программирование на Python")
+print(results)
+
+# Закрытие соединения
+memory.close()
+```
+
+## Основные классы
+
+### Memory
+
+Класс `Memory` требует внешнюю функцию для генерации эмбеддингов. Подходит для использования с любыми моделями эмбеддингов.
+
+#### Методы:
+- `add(message)`: Добавление сообщений в память
+- `search_vec(query, limit=64)`: Векторный поиск
+- `search_fts(query, limit=32)`: Полнотекстовый поиск
+- `hybrid_search(query, limit=32)`: Гибридный поиск
+- `remove(ids)`: Удаление сообщений по ID
+- `clear()`: Очистка всей памяти
+
+### MemoryEmbedded
+
+Класс `MemoryEmbedded` использует локальные модели эмбеддингов и включает модель `all-MiniLM-L6-v2-Q8_0.gguf` в дистрибутив. Модель загружена [отсюда](https://huggingface.co/second-state/All-MiniLM-L6-v2-Embedding-GGUF).
+
+#### Методы:
+- `add(message)`: Добавление сообщений в память
+- `search_vec(query, limit=64)`: Векторный поиск
+- `search_fts(query, limit=32)`: Полнотекстовый поиск
+- `hybrid_search(query, limit=32)`: Гибридный поиск
+- `clear(ids)`: Удаление сообщений по ID
+- `clear_all()`: Очистка всей памяти
+
+## Требования
+
+- Python >= 3.12
+- sqlite-vec >= 0.1.6
+- sqlite-lembed >= 0.0.1a8
+
+
+## Используемые библиотеки
+
+[sqlite-vec](https://github.com/asg017/sqlite-vec)
+[sqlite-lembed](https://github.com/asg017/sqlite-lembed)
+
+## Лицензия
+
+MIT

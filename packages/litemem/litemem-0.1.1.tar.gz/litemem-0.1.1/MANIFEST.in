@@ -1,0 +1,23 @@
+# Include important metadata files
+include README.md
+include LICENSE
+
+# Ensure only package .py files are included from litemem
+recursive-include litemem *.py
+recursive-include litemem *.md
+
+# Exclude model binaries and large model folders from source distribution
+recursive-exclude litemem/models *
+prune litemem/models
+prune models
+
+# Exclude common large binary formats just in case
+global-exclude *.gguf
+global-exclude *.safetensors
+global-exclude *.bin
+global-exclude *.pth
+global-exclude *.ckpt
+global-exclude *.h5
+global-exclude *.onnx
+global-exclude *.tar.gz
+global-exclude *.zip
