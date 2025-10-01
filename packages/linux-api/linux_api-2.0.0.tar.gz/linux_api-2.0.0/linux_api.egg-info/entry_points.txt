@@ -1,0 +1,2 @@
+[console_scripts]
+linux-api = linux_api.start:main
