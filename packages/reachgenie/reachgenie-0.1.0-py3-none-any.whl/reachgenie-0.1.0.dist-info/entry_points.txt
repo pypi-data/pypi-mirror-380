@@ -1,0 +1,2 @@
+[console_scripts]
+reachgenie = src.main:main
