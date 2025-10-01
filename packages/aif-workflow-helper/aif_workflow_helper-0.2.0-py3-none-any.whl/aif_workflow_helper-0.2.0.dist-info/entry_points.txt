@@ -1,0 +1,3 @@
+[console_scripts]
+aif-workflow-helper = aif_workflow_helper.cli.main:main
+
