@@ -1,0 +1,70 @@
+[project]
+name = "flexipde"
+dynamic = ["version"]
+description = "Flexible high‑performance plasma physics solver in Python using JAX and NumPy"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Authors and maintainers
+authors = [
+  { name = "UWPlasma", email = "uwplasma@wisc.edu" },
+]
+maintainers = [
+  { name = "UWPlasma", email = "uwplasma@wisc.edu" },
+]
+
+license = "MIT"
+license-files = ["LICENSE"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+# Core dependencies: NumPy and tomllib
+dependencies = [
+  "numpy",
+  "tomli; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+# JAX and friends for acceleration and differentiability
+jax = ["jax", "equinox", "diffrax", "optax", "jaxtyping"]
+symbolic = ["sympy2jax"]
+docs = ["mkdocs-material", "mkdocstrings-python"]
+testing = ["pytest", "pytest-cov", "mypy"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm[toml]>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flexipde*"]
+
+[tool.setuptools_scm]
+tag_regex = '^v(?P<version>\d+\.\d+\.\d+(?:[a-zA-Z0-9\.-]+)?)$'
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
+write_to = "flexipde/_version.py"
+write_to_template = "__version__ = \"{version}\"\n"
+
+[tool.setuptools.package-data]
+flexipde = ["py.typed"]
+
+# Mypy configuration: ignore missing import stubs and exclude examples from strict checking
+[tool.mypy]
+ignore_missing_imports = true
+# Exclude example and test directories from type checking.  Mypy will
+# ignore these paths when checking the package, which avoids warnings
+# about missing stubs for external libraries like matplotlib or jax in
+# example scripts.  The regular expression matches the top‑level
+# examples and tests directories.
+exclude = "(examples/|tests/)"
+
+[project.scripts]
+flexipde = "flexipde.run:main"

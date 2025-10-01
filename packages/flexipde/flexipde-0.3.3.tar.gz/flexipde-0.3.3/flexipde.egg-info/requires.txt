@@ -1,0 +1,23 @@
+numpy
+
+[:python_version < "3.11"]
+tomli
+
+[docs]
+mkdocs-material
+mkdocstrings-python
+
+[jax]
+jax
+equinox
+diffrax
+optax
+jaxtyping
+
+[symbolic]
+sympy2jax
+
+[testing]
+pytest
+pytest-cov
+mypy
