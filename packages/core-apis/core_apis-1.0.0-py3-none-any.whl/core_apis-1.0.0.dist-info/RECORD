@@ -1,0 +1,16 @@
+core_apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_apis/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_apis/api/__init__.py,sha256=Bz42BvYfK8SdPu2RefQOw_oje9Ea-NiTg8mC_rFkzk8,2098
+core_apis/api/server.py,sha256=3BKsyD6q2tEW8wpOjUci08WmnzX-ok5GTho3F9Ksl1Q,1837
+core_apis/api/routers/__init__.py,sha256=kovB7o5J1i13i7wDkELn9QeTQ74CVahHfZljKhRtxiU,634
+core_apis/api/routers/health.py,sha256=YaUqkoyZTW62fJtueXs-d3tlqA9ZWIOpCqpIyK0SWvk,682
+core_apis/decorators/__init__.py,sha256=ZOJiR2bHRHddNh6y_eHDInq7ZWd6lk8B7puWLSqUn6A,276
+core_apis/decorators/response_wrapper.py,sha256=ROGEEsJODUioo4Yugc_EnqjMA_VGH3FFVD2bG1jqZEY,2913
+core_apis/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_apis/tests/base.py,sha256=5iTJBK1DEGAhbaNKsy_TrCxItYN72tasAviCZFXhOqs,1942
+core_apis/tests/runner.py,sha256=tt9md81-Nkjz3PVmMmzNkdrRHhx1sO_252OGbr8hfJg,1263
+core_apis-1.0.0.dist-info/licenses/LICENSE,sha256=dj8Wz7OWOIOTyLJzaYLn8RFz_W5uYWSGR2xS5lHNAl4,1082
+core_apis-1.0.0.dist-info/METADATA,sha256=m6D6ewlCSnaRQoaJxauvLOm2zYx5WVmZIhRO9coyVvs,3305
+core_apis-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+core_apis-1.0.0.dist-info/top_level.txt,sha256=l_heQes_N1pM7rAbWWCzWZvltxQCJsYhF6jaRbV3x_4,10
+core_apis-1.0.0.dist-info/RECORD,,
