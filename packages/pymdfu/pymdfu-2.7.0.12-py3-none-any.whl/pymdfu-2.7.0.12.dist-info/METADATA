@@ -1,0 +1,333 @@
+Metadata-Version: 2.4
+Name: pymdfu
+Version: 2.7.0.12
+Summary: Microchip Device Firmware Update Tools
+Author-email: Microchip Technology <support@microchip.com>
+License: MIT
+Project-URL: Homepage, https://www.microchip.com
+Keywords: Microchip
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: appdirs
+Requires-Dist: pyserial
+Requires-Dist: packaging
+Requires-Dist: EasyMCP2221
+Requires-Dist: mcp2210-python
+Requires-Dist: pyaardvark
+Requires-Dist: tomli>=1.1.0; python_version < "3.11"
+Requires-Dist: tqdm
+Requires-Dist: python-can
+Requires-Dist: can-isotp
+Provides-Extra: dev
+Requires-Dist: pylint>=2.15; extra == "dev"
+Provides-Extra: test
+Requires-Dist: mock; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Provides-Extra: doc
+Requires-Dist: mock; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+Dynamic: license-file
+
+# Microchip Device Firmware Update Tools (pymdfu package)
+
+The `pymdfu` Python package contains various tools to support firmware updates of clients that implement the Microchip Device Firmware Update (MDFU) protocol.
+
+![PyPI - Format](https://img.shields.io/pypi/format/pymdfu)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pymdfu)
+![PyPI - License](https://img.shields.io/pypi/l/pymdfu)
+
+## Installation
+Install using pip from [pypi](https://pypi.org/project/pymdfu):
+```sh
+pip install pymdfu
+```
+
+# MDFU host application command line interface pymdfu
+
+`pymdfu` is a command line interface for the Microchip Device Firmware Update (MDFU) host application. It provides various actions to interact with MDFU clients, including updating firmware, retrieving client information, and getting help on tool-specific parameters.
+
+## Usage
+```sh
+pymdfu [-h | --help] [-v <level> | --verbose <level>] [-V | --version] [-R | --release-info] [<action>]
+```
+
+### Actions
+
+- `client-info`: Get MDFU client information.
+- `tools-help`: Get help on tool-specific parameters.
+- `update`: Perform a firmware update.
+
+### Global Options
+
+- `-h, --help`: Show help message and exit.
+- `-v <level>, --verbose <level>`: Set logging verbosity/severity level. Valid levels are [debug, info, warning, error, critical]. Default is `info`.
+- `-V, --version`: Print `pymdfu` version number and exit.
+- `-R, --release-info`: Print `pymdfu` release details and exit.
+
+## Examples
+
+### Update Firmware
+
+Update firmware through a serial port with `update_image.img`:
+
+```sh
+pymdfu update --tool serial --image update_image.img --port COM11 --baudrate 115200
+```
+
+### Get Client Information
+
+Retrieve MDFU client information using a serial tool:
+
+```sh
+pymdfu client-info --tool serial --port COM11 --baudrate 115200
+```
+
+### Version and release information
+To print the version of `pymdfu` command line tool and the supported MDFU protocol version:
+
+```sh
+pymdfu --version
+```
+
+To print release details:
+
+```sh
+pymdfu --release-info
+```
+
+### Help
+
+For general help:
+
+```sh
+pymdfu --help
+```
+
+For help on a specific action:
+
+```sh
+pymdfu <action> --help
+```
+
+Get help on tool-specific parameters:
+
+```sh
+pymdfu tools-help
+```
+
+## Configuration File
+
+For some actions like `update` and `client-info` it is possible to specify a configuration file using the `-c` or `--config-file` option. The configuration file should be in TOML format and can include common parameters and tool-specific parameters. Parameters provided on the command line will take precedence over parameters specified in the config file. Options in tool-specific section will only be applied if the corresponding tool is used e.g. if `--tool serial` is provided the parameters in the section `[serial]` will be applied.
+
+### Example Configuration File
+
+```toml
+[common]
+verbose = "debug"
+
+[serial]
+port = "COM11"
+baudrate = 115200
+
+[network]
+host = "192.168.1.100"
+port = 8080
+```
+# MDFU client command line interface pymdfuclient
+
+The `pymdfuclient` is a MDFU client with a command line interface and can be used to test MDFU hosts. The client implements the MDFU protocol but not any firmware image specific functions like decoding or verifying the firmware image. This means the tool is firmware image file agnostic and any file can be transferred with the client returning an image state as success after the transfer.
+
+Future versions of this tool might offer specific client implementations that can decode and verify FW images e.g. FW images for Microchip 8-bit microcontroller that use the pyfwimagebuilder tool: https://pypi.org/project/pyfwimagebuilder/
+
+## Usage
+
+```sh
+pymdfuclient [-h | --help] [-v <level> | --verbose <level>] [-V | --version] [-R | --release-info]  [--config <path-to-config-file>] --tool <tool> [<tools-args>...]
+```
+## Examples
+
+Start MDFU client on localhost port 5558 and use the serial transport layer:
+```sh
+pymdfuclient --tool network --host localhost --port 5558 --transport serial
+```
+
+Start MDFU client on serial port COM11 with baudrate 115200:
+```sh
+pymdfuclient --tool serial --port COM11 --baudrate 115200
+```
+
+## Client configuration
+
+The MDFU client can be configured with the client information that is passed to a host and delays for command responses to simulate e.g. the time needed to verify the image or to program flash. The configuration can be done by passing a TOML file on the command line with the `--config` argument. When no configuration is provided all response delays are set to zero and the following default values are used for the client information.
+
+Default client information:
+- Version: 1.2.0
+- Buffer count: 1
+- Buffer size: 512
+- Default timeout 10 seconds
+- Inter transaction delay: 0 seconds
+
+The configuration TOML file must contain sections for client information and response delays.
+
+Example configuration file:
+```TOML
+[client_info]
+version = "1.2.0"
+# Inter transaction delay in seconds
+inter_transaction_delay = 0
+buffer_count = 1
+# Client buffer size in bytes
+buffer_size = 512
+# Default timeout in seconds that is used for all unspecified timeouts
+default_timeout = 10 
+
+# Client reported timeouts for commands in seconds
+[client_info.timeouts]
+GET_CLIENT_INFO = 0.1
+START_TRANSFER = 1
+WRITE_CHUNK = 0.5
+GET_IMAGE_STATE = 4
+END_TRANSFER = 1
+
+# Response delays must not exceed corresponding client info timeouts
+# All delays are specified in seconds
+[response_delays]
+GET_CLIENT_INFO = 0
+START_TRANSFER = 0
+WRITE_CHUNK = 0.2
+GET_IMAGE_STATE = 2
+END_TRANSFER = 0
+```
+# Changelog
+## [2.7.0] - September 2025
+- pymdfu CLI and library
+  - CAN with ISO-TP support
+  - Binary artifacts release on Github
+  - Progress bar for updates
+- pymdfuclient
+    CAN with ISO-TP support
+    Configuration of MDFU client information
+- Documentation
+    Bugfixes and CAN documentation
+
+### Added
+- PYTOOLS-29 Progress bar for updates
+- PYTOOLS-524 Improved client information printing in CLI
+- PYTOOLS-490 CAN with ISO-TP support
+- PYTOOLS-523 Log error cause also when doing a new re-send attempt
+- PYTOOLS-529 Client information configuration of MDFU client
+- PYTOOLS-533 Allow hexadecimal values as input for CAN ID
+### Fixed
+- PYTOOLS-464 Report MDFU protocol version incompatibility before decoding remaining client info
+- PYTOOLS-470 pymdfuclient is missing I2C transport in CLI help
+- PYTOOLS-538 pymdfuclient does not exit upon CTRL-C when using python-can-tp
+- PYTOOLS-586 Adjust progress bar total based on calculated duration
+- PYTOOLS-424 Documentation fixes
+
+## [2.5.1] - December 2024
+- pymdfu CLI and library
+  - MDFU specification 1.2.0 support
+  - Position independent common CLI arguments
+  - Common checksum library
+  - Configurable number of retries
+  - I2C transport
+  - I2C transport over network
+- pymdfuclient
+  - I2C transport support
+  - Inter transaction delay support
+
+### Added
+- PYTOOLS-12 As a user I want to list supported hardware tools/adapters
+- PYTOOLS-36 pymdfu simulator target tests
+- PYTOOLS-272 Move padding and CRC creation from transport layers to utils
+- PYTOOLS-309 Allow common arguments anywhere on the command line
+- PYTOOLS-311 I2C transport specification updates
+
+## [2.4.0] - August 2024
+- pymdfu CLI and library
+  - SPI transport layer
+  - Packet based networking layer
+  - Linux SPI subsystem support
+  - Linux I2C subsystem support
+  - Transport and MAC layers refactored into their own sub-modules
+  - Aardvark tool support with SPI and I2C interfaces
+  - MCP2221A tool support
+  - MCP2210 tool support
+  - Logging configuration through TOML file
+  - Support MDFU protocol specfication version 1.1
+  - Checks for client MDFU version and exits if not supported by host
+  - CLI help for tool specific options
+  - CLI configuration by file
+- pymdfuclient
+  - Support for serial port.
+
+### Added
+- PYTOOLS-278 Packet based networking MAC
+- PYTOOLS-277 Serial interface support in pymdfuclient
+- PYTOOLS-275 Linux SPI and I2C subsystem support
+- PYTOOLS-274 SPI transport layer spec update
+- PYTOOLS-271 Transport and MAC layer restructuring
+- PYTOOLS-270 Aardvark tool support
+- PYTOOLS-269 Replace yaml logging configuration with TOML
+- PYTOOLS-267 Update pymdfu excludes
+- PYTOOLS-257 Remove @property from classmethods since it will not be supported in Python 3.13
+- PYTOOLS-254 SPI transport layer
+- PYTOOLS-253 MCP2210 tool
+- PYTOOLS-243 MCP2221A tool
+- PYTOOLS-242 I2C transport layer prototype
+- PYTOOLS-191 Add supported MDFU protocol version and verify client version
+- PYTOOLS-160 Tools API rework
+- PYTOOLS-111 Specification for CLI configuration file
+- PYTOOLS-17 Support for reading configuration file
+- PYTOOLS-14 CLI help for tool specific options
+- PYTOOLS-258 Document new CLI commands and options
+### Fixed
+- PYTOOLS-265 Handle file transfer abort response when no additional data is present
+- PYTOOLS-210 Code in pymdfu break binary building
+
+## [1.0.2] - December 2023
+### Added
+- PYTOOLS-211 Add missing packaging dependency
+
+## [1.0.1] - December 2023
+
+- Support MDFU get client info command
+  - Read client command timeouts
+  - Read client MDFU protocol version
+- Support individual command timeouts
+- Decode transport and file transfer abort error causes
+- Check image state command response
+- Bugfixes
+
+### Added
+- PYTOOLS-156 New get client information command with version and command timeouts
+- PYTOOLS-91  Decode transport and file transfer abort error causes
+- PYTOOLS-90  Check "get image state" command response packet payload for image status
+
+### Fixed
+- PYTOOLS-155 PyMDFU tool usage guideline is incorrect
+- PYTOOLS-84  Document link between pymdfu and pyfwimagebuilder
+
+## [0.1.4] - October 2023
+
+Initial public beta release.
+
+### Initial beta release
+
+## [0.0.1] - October 2023
+
+- Placeholder release
