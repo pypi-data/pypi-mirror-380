@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: oppm
+Version: 0.1.0
+Summary: A simple Portable Package Manager written in Python
+Requires-Dist: tomlkit>=0.13.3
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# OPPM
+
+A simple Portable Package Manager written in Python
