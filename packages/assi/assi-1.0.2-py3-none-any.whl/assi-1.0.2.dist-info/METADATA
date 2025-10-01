@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: assi
+Version: 1.0.2
+Summary: Advanced Scientific Computing Library
+Requires-Python: >=3.8
+
