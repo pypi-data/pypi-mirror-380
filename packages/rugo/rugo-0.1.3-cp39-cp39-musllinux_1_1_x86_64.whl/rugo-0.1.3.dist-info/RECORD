@@ -1,0 +1,13 @@
+rugo/parquet.cpython-39-x86_64-linux-gnu.so,sha256=rlXkrlRYBep-6XSXHbpwjJ21BPR1b80ynssFJATHCRM,3034625
+rugo/__init__.py,sha256=T7pNdu3Y5J61pHpQ-UAjpcfgz_Xgwj8wpCm5KwBoKTk,577
+rugo/converters/orso.py,sha256=PE6Lg-9vbJ6_0gzYEYP078u54Fp-r8Tm2BUyAQHHOjI,5394
+rugo/converters/__init__.py,sha256=R30vdpgN2tjctNJtNuY7CagpEMIywXfME5_BqKVM_-k,118
+rugo/parquet/metadata_reader.pxd,sha256=0qYufe3v3t8HrAQkhBatsFFEHLkcIE9ngwLEzRwbT2Y,871
+rugo/parquet/metadata_reader.pyx,sha256=XO-RReK-9EXf8ZhSPJsjl5FdLg4ETIfS8T0aliDB77M,4939
+rugo.libs/libstdc++-a9383cce.so.6.0.28,sha256=Wy9UCdwS1rwI9GU5e7qE61S0AkRqqwti1q_adWSs-Rk,2447393
+rugo.libs/libgcc_s-a04fdf82.so.1,sha256=YxqJNaesQMhDswHEQpXsiLnVvMBBbYO6KYMDZFPWKSM,81257
+rugo-0.1.3.dist-info/WHEEL,sha256=9j4NCRGfl3q_KLmUxDACJtzd34gOk9sxZtezfksWmJc,110
+rugo-0.1.3.dist-info/top_level.txt,sha256=JjIK1YwSPgvdGtINn3RLoqr3WwFm_mF56CFmpXXYgE4,5
+rugo-0.1.3.dist-info/METADATA,sha256=Ol4kJUnI_zATdXyisOHePxl9shrPazjX-OMk1qE7VHo,24801
+rugo-0.1.3.dist-info/RECORD,,
+rugo-0.1.3.dist-info/licenses/LICENSE,sha256=jesOZPL5NlZq8BmEr-9Y-jjY-0iyEZV0JexfTpTygH0,11342
