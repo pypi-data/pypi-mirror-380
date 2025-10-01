@@ -1,0 +1,10 @@
+majorgroove/__init__.py,sha256=l6Df3AazFJLLh51AkmnBqpkbuUqU8DbCSX1DPP-eaXA,804
+majorgroove/client.py,sha256=MBK7rNfnr-E6yfguBoZZaclYc6jLcp8-rwNvrW6Qk8A,11744
+majorgroove/constraints.py,sha256=bPnJBLGFR3LzO0nUejA-EkEl_UoU23KlD349cJ-TwvM,7123
+majorgroove/export.py,sha256=NPmsbP-Q4S1be-CIn1ntlP9bAoAxUcg0h_YQbbulqq4,4599
+majorgroove/models.py,sha256=FojrCO12D9DMjeYcxyiZK3kNtDexDUBtksCaIiSdzUQ,8976
+majorgroove/parser.py,sha256=_GhX9Zyb8WHnBYW6_32EaUtZDgqbjUxHk7_4Hk5pBTM,10430
+majorgroove-0.2.0.dist-info/METADATA,sha256=-7bLbSb0ZunXQB3H1q2xWjNsTkG0HEgrL8cKiMmAE1M,4759
+majorgroove-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+majorgroove-0.2.0.dist-info/top_level.txt,sha256=HnKLEcp3jTaskBZPR26kD_EtzoXwc7uW7Occ8KeQSnQ,12
+majorgroove-0.2.0.dist-info/RECORD,,
