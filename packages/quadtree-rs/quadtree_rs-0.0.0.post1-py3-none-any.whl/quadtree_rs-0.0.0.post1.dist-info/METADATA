@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: quadtree-rs
+Version: 0.0.0.post1
+Summary: This project was renamed. Install fastquadtree.
+Classifier: Development Status :: 7 - Inactive
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+This package was renamed. Use: pip install fastquadtree
