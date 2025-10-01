@@ -1,0 +1,18 @@
+# Include important metadata files
+include README.md
+include LICENSE
+
+# Ensure package python files and markdown are included
+recursive-include litemem *.py
+recursive-include litemem *.md
+
+# Include model files and all content under litemem/models in distributions
+recursive-include litemem/models *
+
+# If you also have a top-level models/ folder you want published with the package,
+# include it as well (optional):
+recursive-include models *
+
+# Keep excluding archive bundles by default
+global-exclude *.tar.gz
+global-exclude *.zip
