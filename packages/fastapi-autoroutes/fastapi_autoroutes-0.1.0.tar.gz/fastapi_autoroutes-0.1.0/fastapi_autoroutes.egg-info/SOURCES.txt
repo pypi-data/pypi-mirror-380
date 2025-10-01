@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+fastapi_autoroutes.egg-info/PKG-INFO
+fastapi_autoroutes.egg-info/SOURCES.txt
+fastapi_autoroutes.egg-info/dependency_links.txt
+fastapi_autoroutes.egg-info/requires.txt
+fastapi_autoroutes.egg-info/top_level.txt
+fastcrud/__init__.py
+fastcrud/router.py
