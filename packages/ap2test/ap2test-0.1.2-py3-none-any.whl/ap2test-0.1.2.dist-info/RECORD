@@ -1,0 +1,10 @@
+ap2test/__init__.py,sha256=ipHKkINpBHZl7RTV54WqLVFphCK0r75cB50PaVRCIgg,471
+ap2test/cli.py,sha256=v3QOucx1rZrx5lx_sw-ChGntEIewqf0A2u1bt2GLjcE,11491
+ap2test/harness.py,sha256=Y48e4T4ksJ3ED7xYZMKiF1_Ln42gScjDCpz7uHSGrn4,9950
+ap2test/mandates.py,sha256=iOtXJGoPCMd39xf6ex-of0dysJ4PUJS_hygipj_EGa0,5002
+ap2test-0.1.2.dist-info/licenses/LICENSE,sha256=V2A6Yx1_XCU6qkyvENu-AKp6PJyTrJwVi6W00apIFzA,1062
+ap2test-0.1.2.dist-info/METADATA,sha256=oyb-9P4NZ6BvQELuO4O-DScVe70OB9tvDwp2oT1553o,2429
+ap2test-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ap2test-0.1.2.dist-info/entry_points.txt,sha256=2AfpW_VEco0Kwxca3eCRXDL3Ik3-o5XksiIIibFB3i0,44
+ap2test-0.1.2.dist-info/top_level.txt,sha256=Qz6kUEugg6Aw72vKfdj4lD2R42VyOQaNFUJPplqwu5Y,8
+ap2test-0.1.2.dist-info/RECORD,,
