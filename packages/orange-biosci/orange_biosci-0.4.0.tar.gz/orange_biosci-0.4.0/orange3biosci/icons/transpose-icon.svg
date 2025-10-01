@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="transpose-icon.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="16.895833"
+     inkscape:cx="24.029593"
+     inkscape:cy="24"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="1990"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <!-- Table grid before transpose -->
+  <!-- Arrow showing transpose action -->
+  <!-- Table grid after transpose (rotated 90 degrees) -->
+  <!-- Curved arrow indicating rotation/transpose -->
+  <g
+     id="g8"
+     transform="translate(0,2.0924269)">
+    <g
+       opacity="0.6"
+       id="g4"
+       transform="matrix(1.2821479,0,0,1.2821479,-6.8899211,-6.2996807)">
+      <rect
+         x="6"
+         y="8"
+         width="12"
+         height="4"
+         fill="#666666"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect1" />
+      <rect
+         x="6"
+         y="12"
+         width="12"
+         height="4"
+         fill="#888888"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect2" />
+      <rect
+         x="6"
+         y="16"
+         width="12"
+         height="4"
+         fill="#888888"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect3" />
+      <rect
+         x="6"
+         y="20"
+         width="12"
+         height="4"
+         fill="#888888"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect4" />
+    </g>
+    <g
+       id="g5"
+       transform="matrix(1.2821479,0,0,1.2821479,-6.8899211,-6.2996807)">
+      <path
+         d="m 22,16 h 4"
+         stroke="#444444"
+         stroke-width="2"
+         fill="none"
+         id="path4" />
+      <path
+         d="m 24,14 2,2 -2,2"
+         stroke="#444444"
+         stroke-width="2"
+         fill="none"
+         stroke-linejoin="miter"
+         id="path5" />
+    </g>
+    <g
+       id="g7"
+       transform="matrix(1.2821479,0,0,1.2821479,-6.8899211,-6.2996807)">
+      <rect
+         x="30"
+         y="24"
+         width="4"
+         height="12"
+         fill="#666666"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect5" />
+      <rect
+         x="34"
+         y="24"
+         width="4"
+         height="12"
+         fill="#888888"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect6" />
+      <rect
+         x="38"
+         y="24"
+         width="4"
+         height="12"
+         fill="#888888"
+         stroke="#333333"
+         stroke-width="0.5"
+         id="rect7" />
+    </g>
+    <path
+       d="m 18.753036,29.60046 q 5.128591,5.12859 10.257182,0"
+       stroke="#555555"
+       stroke-width="1.69025"
+       fill="none"
+       stroke-linecap="round"
+       id="path7" />
+    <path
+       d="m 26.445923,28.318311 2.564295,1.282149 -1.282147,2.564294"
+       stroke="#555555"
+       stroke-width="1.69025"
+       fill="none"
+       stroke-linejoin="miter"
+       id="path8" />
+  </g>
+</svg>
