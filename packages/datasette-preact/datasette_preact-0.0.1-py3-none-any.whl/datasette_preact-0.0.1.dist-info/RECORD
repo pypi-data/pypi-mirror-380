@@ -1,0 +1,11 @@
+datasette_preact/__init__.py,sha256=8UpHy1ovWkkAN9FdbyzxChBK-W7JoJ3c7Zhyaok8oCk,604
+datasette_preact/static/preact-10.27.2-htm-3.1.1.min.js,sha256=KtTwbFF-lotjgsJiYjY-u4nr17zz99wpqDaP5bVChhs,13231
+datasette_preact/templates/datasette-preact.html,sha256=QAS2epMn-tJPje0s64P7nJsmEiclZa7MG3S0Or3aHC0,118
+datasette_preact-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+examples/sample.py,sha256=Mol4Eoxw1U6wvBokSiAVprs1aAW7BnuBlonnU_jDH1A,1163
+tests/test_preact.py,sha256=LGYOnK6DH89OOK2S_b-12eMm1JcWaQKPySnaaPtC8uQ,362
+datasette_preact-0.0.1.dist-info/METADATA,sha256=O2dOPF46rkzWCvucrKpDeyr-60Q0IAhb-McrJ2ohtCw,1969
+datasette_preact-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+datasette_preact-0.0.1.dist-info/entry_points.txt,sha256=DWhdopHWNT4S6QVW0qe6x7f-UlMqAyfVofC6vKWGEbk,38
+datasette_preact-0.0.1.dist-info/top_level.txt,sha256=Xca58Yfcm9b0phOF-EwSxOptm7MRBUwXbgWo5Xa5XPg,32
+datasette_preact-0.0.1.dist-info/RECORD,,
