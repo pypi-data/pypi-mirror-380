@@ -1,0 +1,7 @@
+pedpol/__init__.py,sha256=foOJYh1JeaZa0Azk-EpPtkyzfUmz0NnLYln7GihsKfU,52
+pedpol/core.py,sha256=TkFyP-el6Ya8GYG1xmh-XlF7Hq7vXSLyT0rJdA-8Ru8,3320
+pedpol/generations.py,sha256=DV-eQjF8jE1dkZDCfww5rKG4Gw4CAJZwHDdD6EYmUfs,4611
+pedpol/validation.py,sha256=OiB_BGd_LA-PCdJBQtyzjsD96st7bdKpcm15vmp2IHE,10728
+pedpol-0.3.1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+pedpol-0.3.1.dist-info/METADATA,sha256=Pi18aCsnmtIUjaWRcDC1-5xQuDXfOUYPM_8L8Z4d-L4,1004
+pedpol-0.3.1.dist-info/RECORD,,
