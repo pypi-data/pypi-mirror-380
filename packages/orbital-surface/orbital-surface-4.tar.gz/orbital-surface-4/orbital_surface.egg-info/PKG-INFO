@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: orbital-surface
+Version: 4
+Summary: Python library for constructing and visualizing curves on surfaces
+Home-page: http://github.com/niels-lubbes/orbital
+Author: Niels Lubbes
+License: MIT
+Keywords: curves surfaces parametrization Povray
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+License-File: LICENSE
+
+UNKNOWN
+
