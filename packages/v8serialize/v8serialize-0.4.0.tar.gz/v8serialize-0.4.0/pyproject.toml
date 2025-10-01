@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "v8serialize"
+version = "0.4.0"
+description = "Read & write JavaScript values from Python with the V8 serialization format."
+authors = ["Hal Blackburn <hwtb2@cam.ac.uk>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+packaging = ">=14.5" # this version introduces the VERSION_PATTERN constant
+
+[tool.poetry.group.dev.dependencies]
+exceptiongroup = { version = "^1", python = "<3.11" }
+hypothesis = "^6.108.8"
+pytest = "^8"
+mypy = "^1.11.1"
+frozendict = "^2.4.4"
+pytest-cov = "^7"
+pytest-insta = "^0.3.0"
+httpx = "^0.28.1"
+typing-extensions = "^4.12.2"
+pytest-xdist = "^3.6.1"
+ruff = "^0.13.2"
+
+
+[tool.poetry.group.docs.dependencies]
+quartodoc = "^0.11.1"
+jupyter = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
+
+[tool.coverage.report]
+exclude_also = ["if TYPE_CHECKING:"]
+
+[tool.pytest.ini_options]
+addopts = [
+  "-n",
+  "auto",
+  "--strict-markers",
+  "-m",
+  "not integration",
+  "--doctest-modules",
+]
+markers = ["integration: Integration tests"]
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "D",   # pydocstyle
+  "E",
+  "F",
+  "PYI", # flake8-pyi
+  "I",   # isort
+]
+ignore = [
+  "PYI041", # prefer "float" over "int | float". They are not the same!
+  "D100",   # "Missing docstring in public module" — not everything is documented yet
+  "D101",   # "Missing docstring in public class" — not everything is documented yet
+  "D102",   # "Missing docstring in public method" — not everything is documented yet
+  "D103",   # "Missing docstring in public function" — not everything is documented yet
+  "D104",   # "Missing docstring in public package" — not everything is documented yet
+  "D105",   # "Missing docstring in magic method" — not everything is documented yet
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.isort]
+extra-standard-library = ["typing_extensions", "_typeshed"]
+required-imports = ["from __future__ import annotations"]
