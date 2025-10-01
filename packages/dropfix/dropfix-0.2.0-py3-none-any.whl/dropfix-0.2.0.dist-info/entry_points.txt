@@ -1,0 +1,3 @@
+[console_scripts]
+dropfix = dropfix.dropfix:main
+
