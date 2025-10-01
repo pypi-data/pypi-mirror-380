@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+entityidentity/__init__.py
+entityidentity.egg-info/PKG-INFO
+entityidentity.egg-info/SOURCES.txt
+entityidentity.egg-info/dependency_links.txt
+entityidentity.egg-info/requires.txt
+entityidentity.egg-info/top_level.txt
+tests/__init__.py
+tests/test_basic.py
