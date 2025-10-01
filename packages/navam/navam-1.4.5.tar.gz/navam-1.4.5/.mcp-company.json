@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "company-research": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.company_mcp.server", "stdio"]
+    }
+  }
+}
