@@ -1,0 +1,2 @@
+[console_scripts]
+ghcp = ghcp.cli:main
