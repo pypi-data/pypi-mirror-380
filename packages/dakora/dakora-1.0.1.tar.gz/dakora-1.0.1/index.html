@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dakora – Prompt Management Platform</title>
+    <meta name="description" content="A lightweight, type-safe prompt management platform for Python: live updates, versioning, validation, and optional logging.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23667eea'/><stop offset='100%25' style='stop-color:%23764ba2'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><path d='M30 25h40c8.284 0 15 6.716 15 15v20c0 8.284-6.716 15-15 15H30c-8.284 0-15-6.716-15-15V40c0-8.284 6.716-15 15-15z' fill='white' opacity='0.9'/><rect x='20' y='50' width='60' height='8' rx='4' fill='white' opacity='0.7'/><rect x='25' y='62' width='50' height='6' rx='3' fill='white' opacity='0.6'/><circle cx='75' cy='45' r='3' fill='%23667eea'/></svg>">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Star CTA */
+        .star-cta {
+            margin: 2.25rem auto 1.5rem;
+            max-width: 840px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            padding: 2rem 2.25rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+        .star-cta h3 {
+            color: white;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin: 0 0 0.5rem 0;
+        }
+        .star-cta p {
+            color: rgba(255,255,255,0.92);
+            margin: 0 0 1.25rem 0;
+            font-size: 1.05rem;
+        }
+        .star-cta-actions {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .btn.btn-ghost {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.8);
+        }
+        .btn.btn-ghost:hover {
+            background: white;
+            color: #667eea;
+        }
+        .btn-lg { padding: 0.9rem 1.4rem; font-size: 1.05rem; border-radius: 10px; }
+        .btn-outline-light { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.85); }
+        .btn-outline-light:hover { background: white; color: #667eea; }
+        @media (max-width: 768px) {
+            .star-cta { padding: 1.25rem; }
+            .star-cta h3 { font-size: 1.25rem; }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #667eea;
+        }
+
+        .mobile-nav .close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-badge i {
+            margin-right: 0.5rem;
+            color: #4ade80;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.1s both;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-badge {
+            animation: fadeInUp 1s ease, pulse 3s ease-in-out infinite 2s;
+        }
+
+        /* Enhanced code examples */
+        .code-example {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid #4a5568;
+        }
+
+        .code-example:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .final-cta > p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .cta-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ade80;
+        }
+
+        .cta-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-card .btn {
+            background: white;
+            color: #667eea;
+            border: none;
+        }
+
+        .cta-card .btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.5s both;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .feature:nth-child(1) { animation-delay: 0.1s; }
+        .feature:nth-child(2) { animation-delay: 0.2s; }
+        .feature:nth-child(3) { animation-delay: 0.3s; }
+        .feature:nth-child(4) { animation-delay: 0.4s; }
+        .feature:nth-child(5) { animation-delay: 0.5s; }
+        .feature:nth-child(6) { animation-delay: 0.6s; }
+        .feature:nth-child(7) { animation-delay: 0.7s; }
+        .feature:nth-child(8) { animation-delay: 0.8s; }
+
+        .feature i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .code-example {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-example::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #667eea;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .install-command {
+            background: #1a202c;
+            color: #4ade80;
+            padding: 1.25rem;
+            border-radius: 12px;
+            font-family: 'Monaco', monospace;
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease 0.4s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .install-command::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .install-command:hover::before {
+            left: 100%;
+        }
+
+        .install-command i {
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .playground-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .playground-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .playground-screenshot {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .playground-screenshot:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .playground-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .playground-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .playground-feature i {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-top: 0.25rem;
+            min-width: 24px;
+        }
+
+        .playground-feature h4 {
+            margin: 0 0 0.5rem 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .playground-feature p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .playground-cta {
+            text-align: center;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 4rem;
+        }
+
+        .playground-cta h3 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .playground-cta code {
+            background: #f1f5f9;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Monaco', monospace;
+        }
+
+        .playground-command {
+            background: #1a202c;
+            color: #4ade80;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Monaco', monospace;
+            text-align: center;
+            font-size: 1rem;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .playground-command pre {
+            margin: 0;
+        }
+
+        .playground-command code {
+            background: none;
+            color: inherit;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        .section.github-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat h3 {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .footer {
+            background: #1a202c;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .github-stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .playground-demo {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .playground-screenshot {
+                order: -1;
+            }
+
+            .playground-cta {
+                padding: 2rem 1rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .final-cta > p {
+                font-size: 1.1rem;
+            }
+
+            .cta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <i class="fas fa-vault"></i> Dakora
+            </a>
+            <ul class="nav-links">
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#playground" onclick="toggleMobileMenu()">Playground</a>
+        <a href="#features" onclick="toggleMobileMenu()">Features</a>
+        <a href="#quickstart" onclick="toggleMobileMenu()">Quick Start</a>
+        <a href="#examples" onclick="toggleMobileMenu()">Examples</a>
+        <a href="#contribute" onclick="toggleMobileMenu()">Contribute</a>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-rocket"></i> Interactive Web Playground Included
+            </div>
+            <h1>Dakora</h1>
+            <p class="hero-subtitle">The modern prompt management platform for Python developers</p>
+            <p class="hero-description">Manage, version, and hot‑reload prompts with type‑safe inputs, interactive playground, and zero‑deploy updates.</p>
+
+            <div class="install-command">
+                <i class="fas fa-terminal"></i> pip install dakora
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://github.com/bogdan-pistol/dakora" class="btn btn-primary">
+                    <i class="fab fa-github"></i> ⭐ Star on GitHub
+                </a>
+                <a href="#playground" class="btn btn-secondary">
+                    <i class="fas fa-play"></i> Try Playground
+                </a>
+                <a href="#quickstart" class="btn btn-secondary">
+                    <i class="fas fa-rocket"></i> Quick Start
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>🎯 Interactive</strong>
+                    <span>Web playground like Jupyter</span>
+                </div>
+                <div class="stat-item">
+                    <strong>🛡️ Type-safe</strong>
+                    <span>Validated inputs & outputs</span>
+                </div>
+                <div class="stat-item">
+                    <strong>⚡ Hot-reload</strong>
+                    <span>Live template updates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playground" class="section playground-section">
+        <div class="container">
+            <h2>🎯 Interactive Playground</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Experience the power of Dakora with our modern web playground. Edit, test, and preview templates in real-time with a Jupyter-like interface.
+            </p>
+
+            <div class="playground-demo">
+                <img src="docs/assets/playground-interface.png" alt="Dakora Playground Interface" class="playground-screenshot">
+                <div class="playground-features">
+                    <div class="playground-feature">
+                        <i class="fas fa-edit"></i>
+                        <h4>Live Template Editing</h4>
+                        <p>Real-time syntax highlighting and validation as you type</p>
+                    </div>
+                    <div class="playground-feature">
+                        <i class="fas fa-flask"></i>
+                        <h4>Interactive Testing</h4>
+                        <p>Test templates instantly with custom inputs and see live results</p>
+                    </div>
+                    <div class="playground-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Responsive</h4>
+                        <p>Works perfectly on desktop, tablet, and mobile devices</p>
+                    </div>
+                    <div class="playground-feature">
+                        <i class="fas fa-palette"></i>
+                        <h4>Modern UI</h4>
+                        <p>Built with shadcn/ui components for a beautiful experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playground-cta">
+                <h3>Ready to try it yourself?</h3>
+                <div class="playground-command" style="margin: 1rem 0;">
+<pre><code>dakora playground</code></pre>
+                </div>
+                <p style="color: #666; margin-bottom: 1.5rem;">Automatically builds and launches at <code>http://localhost:3000</code></p>
+                <a href="#quickstart" class="btn btn-primary" style="background: #667eea; color: white;">
+                    <i class="fas fa-rocket"></i> Get Started Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Powerful Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Type-Safe Templates</h3>
+                    <p>Define inputs with strict typing: string, number, boolean, array, and object types with validation and coercion.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>File-Based Management</h3>
+                    <p>Organize templates in YAML files with clear structure, making them easy to version control and collaborate on.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Hot Reload</h3>
+                    <p>Automatic template reloading during development with built-in file watching for rapid iteration.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-code"></i>
+                    <h3>Jinja2 Templating</h3>
+                    <p>Full Jinja2 support with custom filters like 'yaml' and 'default' for powerful template composition.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tags"></i>
+                    <h3>Semantic Versioning</h3>
+                    <p>Built-in version management with semantic versioning support and easy version bumping via CLI.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-database"></i>
+                    <h3>Execution Logging</h3>
+                    <p>Optional SQLite logging of template executions for debugging and analytics with zero configuration.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-terminal"></i>
+                    <h3>CLI Interface</h3>
+                    <p>Complete command-line interface for template management, listing, version control, and development workflow.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>Thread-Safe Caching</h3>
+                    <p>Production-ready with thread-safe template caching using RLock for high-performance concurrent access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quickstart" class="section">
+        <div class="container">
+            <h2>Quick Start</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+                Get up and running with Dakora in minutes
+            </p>
+
+            <div style="display: grid; gap: 3rem; max-width: 800px; margin: 0 auto;">
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem;"><span style="background: #667eea; color: white; border-radius: 50%; padding: 0.5rem; font-size: 1rem; margin-right: 1rem;">1</span>Initialize Project</h3>
+                    <div class="code-example" data-lang="bash">
+<pre><code>dakora init</code></pre>
+                    </div>
+                    <p style="color: #666;">Creates configuration file and example templates</p>
+                </div>
+
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem;"><span style="background: #667eea; color: white; border-radius: 50%; padding: 0.5rem; font-size: 1rem; margin-right: 1rem;">2</span>Create Template</h3>
+                    <div class="code-example" data-lang="yaml">
+<pre><code>id: greeting
+version: 1.0.0
+description: A personalized greeting template
+template: |
+  Hello {{ name }}!
+  {% if age %}You are {{ age }} years old.{% endif %}
+  {{ message | default("Have a great day!") }}
+inputs:
+  name:
+    type: string
+    required: true
+  age:
+    type: number
+    required: false
+  message:
+    type: string
+    required: false</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem;"><span style="background: #667eea; color: white; border-radius: 50%; padding: 0.5rem; font-size: 1rem; margin-right: 1rem;">3</span>Use in Python</h3>
+                    <div class="code-example" data-lang="python">
+<pre><code>from dakora import Vault
+
+# Initialize vault
+vault = Vault("dakora.yaml")
+
+# Get and render template
+template = vault.get("greeting")
+result = template.render(name="Alice", age=25)
+print(result)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples" class="section">
+        <div class="container">
+            <h2>Real-World Examples</h2>
+
+            <div style="display: grid; gap: 3rem; margin-top: 2rem;">
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">FastAPI + OpenAI Integration</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">
+                        Perfect for building LLM-powered APIs with structured prompts and type validation.
+                    </p>
+                    <div class="code-example" data-lang="python">
+<pre><code>from fastapi import FastAPI
+from dakora import Vault
+from openai import OpenAI
+
+app = FastAPI()
+vault = Vault("dakora.yaml")
+client = OpenAI()
+
+@app.post("/chat")
+async def chat_endpoint(message: str, template_id: str):
+    template = vault.get(template_id)
+
+    result = template.run(
+        lambda prompt: client.chat.completions.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}]
+        ).choices[0].message.content,
+        message=message
+    )
+
+    return {"response": result}</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Development Workflow</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">
+                        Hot-reload templates during development for rapid iteration and testing.
+                    </p>
+                    <div class="code-example" data-lang="python">
+<pre><code>from dakora import Vault
+from dakora.watcher import Watcher
+
+vault = Vault("dakora.yaml")
+watcher = Watcher("./prompts", on_change=vault.invalidate_cache)
+watcher.start()
+
+# Templates reload automatically when files change
+template = vault.get("my_template")
+result = template.render(input_text="Hello world")</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">CLI Workflow</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">
+                        Manage templates, versions, and development workflow from the command line.
+                    </p>
+                    <div class="code-example" data-lang="bash">
+<pre><code># List all templates
+dakora list
+
+# Get template content
+dakora get summarizer
+
+# Bump version (patch, minor, major)
+dakora bump summarizer --minor
+
+# Watch for changes during development
+dakora watch</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contribute" class="github-section section">
+        <div class="container">
+            <h2>Join the Community</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                Help make Dakora better for everyone
+            </p>
+
+            <div class="github-stats">
+                <div class="stat">
+                    <h3>⭐</h3>
+                    <p>Star on GitHub</p>
+                </div>
+                <div class="stat">
+                    <h3>🍴</h3>
+                    <p>Fork & Contribute</p>
+                </div>
+                <div class="stat">
+                    <h3>🐛</h3>
+                    <p>Report Issues</p>
+                </div>
+                <div class="stat">
+                    <h3>💡</h3>
+                    <p>Share Ideas</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="https://github.com/bogdan-pistol/dakora" class="btn" style="margin: 0.5rem; background: #4a5568; color: white; border: 2px solid #4a5568;">
+                    <i class="fab fa-github"></i> ⭐ Star on GitHub
+                </a>
+                <a href="https://github.com/bogdan-pistol/dakora/fork" class="btn btn-secondary" style="margin: 0.5rem;">
+                    <i class="fas fa-code-branch"></i> Fork Repository
+                </a>
+            </div>
+
+            <div style="margin-top: 2rem; font-size: 1.1rem;">
+                <p style="color: white;"><strong>💻 Looking for contributors:</strong></p>
+                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                    <li style="color: white; margin-bottom: 0.5rem; opacity: 0.95;">🔧 Core library improvements</li>
+                    <li style="color: white; margin-bottom: 0.5rem; opacity: 0.95;">📚 Documentation and examples</li>
+                    <li style="color: white; margin-bottom: 0.5rem; opacity: 0.95;">🧪 Testing and quality assurance</li>
+                    <li style="color: white; margin-bottom: 0.5rem; opacity: 0.95;">🎨 CLI UX enhancements</li>
+                    <li style="color: white; margin-bottom: 0.5rem; opacity: 0.95;">🔌 Registry backends (S3, HTTP, etc.)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section section">
+        <div class="container">
+            <div class="final-cta">
+                <h2>Ready to Transform Your Prompt Management?</h2>
+                <p>Join developers who've already made the switch to structured, type-safe prompt templates</p>
+
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Install Now</h3>
+                        <div class="code-example" data-lang="bash" style="margin: 1rem 0; font-size: 0.9rem;">
+<pre><code>pip install dakora</code></pre>
+                        </div>
+                        <a href="#quickstart" class="btn btn-primary">Get Started</a>
+                    </div>
+
+                    <div class="cta-card">
+                        <i class="fab fa-github"></i>
+                        <h3>Star & Follow</h3>
+                        <p>Help us reach 1000+ stars and get updates on new features</p>
+                        <a href="https://github.com/bogdan-pistol/dakora" class="btn btn-primary">⭐ Star on GitHub</a>
+                    </div>
+
+                    <div class="cta-card">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Try Playground</h3>
+                        <p>Experience the interactive web interface - no installation required</p>
+                        <a href="#playground" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/bogdan-pistol/dakora">GitHub</a>
+                <a href="https://github.com/bogdan-pistol/dakora/issues">Issues</a>
+                <a href="https://github.com/bogdan-pistol/dakora/blob/main/LICENSE">License</a>
+                <a href="https://pypi.org/project/dakora/">PyPI</a>
+            </div>
+            <p>&copy; 2024 Dakora. Released under the Apache-2.0 License.</p>
+            <p style="margin-top: 1rem; color: #666;">
+                Built with ❤️ for the Python community
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            if (mobileNav.classList.contains('active') &&
+                !mobileNav.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Add scroll effect to header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('.header');
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
