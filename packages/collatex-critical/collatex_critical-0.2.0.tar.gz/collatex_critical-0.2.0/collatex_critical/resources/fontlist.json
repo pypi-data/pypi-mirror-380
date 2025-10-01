@@ -1,0 +1,57 @@
+{
+  "devanagari": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  },
+  "bengali": {
+    "file": "TiroBangla-Regular.ttf",
+    "url": "https://github.com/google/fonts/raw/main/ofl/tirobangla/TiroBangla-Regular.ttf",
+    "fontname": "TiroBangla-Regular"
+  },
+  "tamil": {
+    "file": "TiroTamil-Regular.ttf",
+    "url": "https://github.com/google/fonts/raw/main/ofl/tirotamil/TiroTamil-Regular.ttf",
+    "fontname": "TiroTamil-Regular"
+  },
+  "telugu": {
+    "file": "TiroTelugu-Regular.ttf",
+    "url": "https://github.com/google/fonts/raw/main/ofl/tirotelugu/TiroTelugu-Regular.ttf",
+    "fontname": "TiroTelugu-Regular"
+  },
+  "kannada": {
+    "file": "TiroKannada-Regular.ttf",
+    "url": "https://github.com/google/fonts/raw/main/ofl/tirokannada/TiroKannada-Regular.ttf",
+    "fontname": "TiroKannada-Regular"
+  },
+ "gurmukhi": {
+    "file": "TiroGurmukhi-Regular.ttf",
+    "url": "https://github.com/google/fonts/raw/main/ofl/tirogurmukhi/TiroGurmukhi-Regular.ttf",
+    "fontname": "TiroGurmukhi-Regular"
+  },
+  "slp1": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  },
+  "iast": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  },
+  "itrans": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  },
+  "wx": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  },
+  "velthuis": {
+    "file": "Sanskrit2003.ttf",
+    "url": "https://www.ashtangayoga.info/fileadmin/03_Philosophie/04_Sanskrit/fonts/Sanskrit2003.ttf",
+    "fontname": "Sanskrit2003"
+  }
+}
