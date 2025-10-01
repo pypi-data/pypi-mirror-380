@@ -1,0 +1,3 @@
+[console_scripts]
+docx-interactive = main:main
+docx-mcp = main:main
