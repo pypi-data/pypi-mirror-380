@@ -1,0 +1,13 @@
+queue_agnostic/__init__.py,sha256=jKwkSgBHVlRC69LZSC-yR9dfkIOmOpZ_Fq7F_dWa3d0,631
+queue_agnostic/queue_factory.py,sha256=8p-7dL4NU_90E2K3_JxIx5_ovUl1qaoMWigfcWAP2Fw,4724
+queue_agnostic/queue_interface.py,sha256=NY5hY-WJsw_CrelDeF8HO6mVu16o_xazJa2pUFeVO7g,1883
+queue_agnostic/adapters/__init__.py,sha256=OP9zwLsfP6s49ZobUZkiF34e5RDSNuUyZ878Odk-s2E,360
+queue_agnostic/adapters/aws_sqs_adapter.py,sha256=N3NvUETdNdi7Df_s4Z-6Xwe4-X3R9koljW8l4RiDDK8,6034
+queue_agnostic/adapters/azure_servicebus_adapter.py,sha256=g5PHPh59iP592jMlvS-iAgJL3gEdzEuPa8WVDc3W7ow,4422
+queue_agnostic/adapters/gcp_pubsub_adapter.py,sha256=TH1hIXEHdncn5JQoO1lJ9_pD3QzZ7TkEDYVTQ-ivoCQ,6184
+queue_agnostic/adapters/rabbitmq_adapter.py,sha256=QDwZcEQzBDlGX051S1Yrt6XJJ86VnGQsDwyIR55XkAc,4123
+queue_agnostic-1.0.0.dist-info/licenses/LICENSE,sha256=9bgVNTqOb8kqFsWMHiQDP1tg-MMzBrXKnB9e4hDGARE,1066
+queue_agnostic-1.0.0.dist-info/METADATA,sha256=DglflLDJTh4UFH5u1UrrognF51z3SlCK08UUOM6eVMk,7040
+queue_agnostic-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+queue_agnostic-1.0.0.dist-info/top_level.txt,sha256=qcT1vNfPefS_3eD2KQb2wTm2ZyQtJ5WsN0lKJTrtqCY,15
+queue_agnostic-1.0.0.dist-info/RECORD,,
