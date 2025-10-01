@@ -1,0 +1,9 @@
+dropfix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dropfix/_checker.py,sha256=qiPVDtzUqccJ64wC9k4g3qy4MQhJYAP0rOJQiOyd2_0,14111
+dropfix/_formatter.py,sha256=wWjzGsohcedSYX50m8i2LbpTLyls1q1xyKoZJtFx5QA,2889
+dropfix/_logger.py,sha256=Laa65PIy27w387zpRb5VK8oTSTMZREuEtE1gc4YQ2Jk,826
+dropfix/dropfix.py,sha256=v8X043wpeo1GVvMiVDnnL7UfO8rEZlsBGR1FqF-tJB4,8808
+dropfix-0.1.1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+dropfix-0.1.1.dist-info/entry_points.txt,sha256=QrZZ4Nfi4u9h2ljmFgny0A2t9xQVtGu-5BUTj5Y-HhY,88
+dropfix-0.1.1.dist-info/METADATA,sha256=zlAIw22CEOC90G2VMnTIjzdfeeRgxnpivDns5jhvTb0,2593
+dropfix-0.1.1.dist-info/RECORD,,

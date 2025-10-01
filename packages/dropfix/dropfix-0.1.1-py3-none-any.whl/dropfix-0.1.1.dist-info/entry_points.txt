@@ -1,0 +1,4 @@
+[console_scripts]
+dropfix = dropfix.dropfix:main
+dropfix-check = dropfix._checker:main
+
