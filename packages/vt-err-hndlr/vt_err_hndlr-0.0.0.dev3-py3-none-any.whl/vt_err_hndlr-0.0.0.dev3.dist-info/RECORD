@@ -1,0 +1,15 @@
+vt/utils/errors/error_specs/__constants__.py,sha256=GOsoBBsZzaAg3VD4mcxQG58IgnszHVEFmIhyksku2Ro,2168
+vt/utils/errors/error_specs/__init__.py,sha256=ZAjInLt8178idXy_hsE98XXHonyGs2a2op8lYxyFaz0,2745
+vt/utils/errors/error_specs/base.py,sha256=clfaVRUEZudbcga2AqnmP22LX_5-7_uWeLgpdIROQL4,6610
+vt/utils/errors/error_specs/errmsg.py,sha256=XSBnuutiO1B5ezoBdO_9EyWe8ThqfWWSEtFToCT2pmQ,17467
+vt/utils/errors/error_specs/error_codes.py,sha256=eECAUhpHBNzzEme0cf6swJhkrInXTCzF6ckjIJDnDTA,1352
+vt/utils/errors/error_specs/exceptions.py,sha256=7zBUu4YqCHA0V2kzu2XT1IXOUl4724g9xNOIlPBaexw,28535
+vt/utils/errors/error_specs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vt/utils/errors/error_specs/utils.py,sha256=IE8k-5XOFEzlNCY9NzLn4E57mOabNe0ZGZg3j3JegTw,11972
+vt/utils/errors/warnings/__init__.py,sha256=9FtOpP-TnS8z1h3TdFo25Vl2vz1in7OKK49vWQqUctc,3133
+vt/utils/errors/warnings/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vt_err_hndlr-0.0.0.dev3.dist-info/licenses/LICENSE,sha256=pOzr5bMWS6mHi3vro8d5vw0qW1i14rVq2XFrDuystVY,11372
+vt_err_hndlr-0.0.0.dev3.dist-info/METADATA,sha256=G0CA44tJXkqCqHCHQ58FhMQCM69FUJx0T9fkLFXPwfQ,2627
+vt_err_hndlr-0.0.0.dev3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+vt_err_hndlr-0.0.0.dev3.dist-info/top_level.txt,sha256=aN5KWgJq84W0MDifCX3yRJAp04FH7pd5PDh7qa2P8sM,3
+vt_err_hndlr-0.0.0.dev3.dist-info/RECORD,,
