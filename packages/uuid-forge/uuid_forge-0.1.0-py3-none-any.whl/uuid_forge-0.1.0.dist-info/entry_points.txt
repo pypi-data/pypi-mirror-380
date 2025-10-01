@@ -1,0 +1,2 @@
+[console_scripts]
+uuid-forge = uuid_forge.cli:main
