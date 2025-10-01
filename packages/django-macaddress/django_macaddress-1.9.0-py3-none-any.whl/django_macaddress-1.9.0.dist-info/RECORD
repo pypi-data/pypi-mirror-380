@@ -1,0 +1,12 @@
+django_macaddress-1.9.0.dist-info/licenses/LICENSE,sha256=o5UEg0mzm_5OkHpS_huW3zjwg-ZHjJjcSfN0KZrn1sE,1529
+macaddress/__init__.py,sha256=97889Y-QIU-CfRRjjnDaievBey6hD_iO8Fqnyoe3_5I,2478
+macaddress/fields.py,sha256=sQJdjnzWg85CXLLP-EtKz5Fe9KbL9DBy71ie31NMm-k,3613
+macaddress/formfields.py,sha256=m66zxoRJ1kQ0WNK3q6mzV3qQbfPl5N2t2X226ZkzoPA,821
+macaddress/models.py,sha256=RaF-TB9TtjCF2AR80Es5MBMNEuJ0t0tc38kqlyMpbwI,38
+macaddress/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+macaddress/tests/models.py,sha256=P78Ps3onmGpilgPGs92mArvBASLjxKiLtEOYFdOzCm0,223
+macaddress/tests/test_fields.py,sha256=HQgTxn7YH1oHj0R4Q0t5NSai3uamjDqvQgLZziifJrw,825
+django_macaddress-1.9.0.dist-info/METADATA,sha256=9ZvS0Co4vteq28BxzlJiMXpuz4P3D8pkTwPvJhhQeFg,5292
+django_macaddress-1.9.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_macaddress-1.9.0.dist-info/top_level.txt,sha256=aTG_8KQi8bIjlXyAU4qCS3AxIu2Svxh4Gmz-vAOmI4M,11
+django_macaddress-1.9.0.dist-info/RECORD,,
