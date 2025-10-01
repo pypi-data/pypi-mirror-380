@@ -1,0 +1,148 @@
+[build-system]
+requires = ["setuptools>=80.9", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaingpt"
+version = "1.1.3"
+description = "Official Python SDK for ChainGPT API - Web3 AI Platform"
+readme = "README.md"
+authors = [
+    {name = "ChainGPT", email = "support@chaingpt.org"}
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+keywords = ["chaingpt", "web3", "ai", "llm", "nft", "smart-contracts-generator", "smart-contracts-audit", "ai-crypto-news", "blockchain"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.11.5",
+    "colorama>=0.4.6",
+    "python-dotenv>=1.1.0",
+    "typing-extensions>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "setuptools>=80.9",
+    "twine>=6.1.0",
+    "build>=1.2.2.post1",
+]
+test = [
+    "pytest>=8.4.0",
+    "pytest-asyncio>=1.0.0",
+    "pytest-cov>=6.2.1",
+    "pytest-mock>=3.14.1",
+    "coverage>=7.9.0",
+    "black>=25.1.0",
+    "mypy>=1.16.0",
+    "flake8>=7.2.0",
+]
+all = [
+    "chaingpt[dev,test]",
+]
+
+
+[project.urls]
+Homepage = "https://chaingpt.org"
+Documentation = "https://docs.chaingpt.org/dev-docs-b2b-saas-api-and-sdk/introduction-to-chaingpts-developer-tools"
+Repository = "https://github.com/ChainGPT-org/chaingpt-python"
+"Bug Tracker" = "https://github.com/ChainGPT-org/chaingpt-python/issues"
+
+[tool.setuptools.packages.find]
+include = ["chaingpt*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | htmlcov
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests", 
+    "slow: Slow tests",
+    "asyncio: Async tests"
+]
+
+[tool.coverage.run]
+source = ["chaingpt"]
+omit = [
+    "*/tests/*",
+    "*/examples/*",
+    "*/__pycache__/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\bProtocol\\):",
+    "@(abc\\.)?abstractmethod"
+]
