@@ -1,0 +1,6 @@
+AIAgent/Agent/__init__.py,sha256=UJoX-_XmFHGdaps4zM8hKNpdgiEdkGfn4pUFI-gdrtU,34
+AIAgent/Agent/agent.py,sha256=q8SxlIvQdIKoju3zHL4WJ-Q_7vUHUpk9GOWXkzEEbu0,17569
+AIAgent/Agent/plugin_manager.py,sha256=5O0MNIub89rumjnwl2NBXp8j7O1IA6pMo7sUkGMSD8M,1518
+robotframework_aiagent_slim-0.0.1.dist-info/METADATA,sha256=YFr0k4ZgqXJZpjIXxj2E-YkJPURZEf39Z3rerRbiVu4,1212
+robotframework_aiagent_slim-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+robotframework_aiagent_slim-0.0.1.dist-info/RECORD,,
