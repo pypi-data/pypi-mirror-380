@@ -1,0 +1,3 @@
+[console_scripts]
+minigun = minigun.cli:main
+test = minigun.cli:main
