@@ -1,0 +1,10 @@
+mdwarf_contin/.DS_Store,sha256=v6PXD7CahoBwtH7KA2BWkxTJWpgpU4apyHnrCDqYP-E,6148
+mdwarf_contin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdwarf_contin/manipulate_spectra.py,sha256=7eM9IbmtB4HvvBNSbqi_jhNrDJBh_tZZaau-yzp2_8E,11274
+mdwarf_contin/normalize.py,sha256=eVOpQfmJ-KfZPeIigngy5PwDo-ElKJVG1PfT9c8HauY,14104
+mdwarf_contin/response_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdwarf_contin/response_data/resp_PCA_results.npz,sha256=7Qs62NIY19T9ttqpfuOfLh3Gker8A3Hn6s57WfNt8rY,2074126
+mdwarf_contin-1.0.0.dist-info/LICENSE.md,sha256=vx5qWg5yK3ZEZ668V1cex3Ue0Jdb_1wT7nI-0hsLoFA,1511
+mdwarf_contin-1.0.0.dist-info/METADATA,sha256=cxZlEFTCnpm8DpcfpZUEnvdkcq-ZsmKjyJ_P9F1Aqvk,1452
+mdwarf_contin-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mdwarf_contin-1.0.0.dist-info/RECORD,,
