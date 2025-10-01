@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=77.0.0", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyroids"
+dynamic = ["version"]
+description = "Asteroids game"
+authors = [
+  {email = "marcusaread.prog@proton.me"},
+  {name = "Marcus Read"}
+]
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "game",
+    "arcade",
+    "asteroids",
+    "multiplayer",
+    "pyglet",
+]
+requires-python = ">=3.9.0"
+
+classifiers = [
+	"Development Status :: 4 - Beta",
+    "Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+	"Programming Language :: Python :: Implementation :: CPython",
+    'Topic :: Games/Entertainment :: Arcade',
+]
+
+dependencies = ['pyglet~=1.5']
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.2",
+]
+
+[project.urls]
+homepage = "https://github.com/maread99/pyroids"
+documentation = "https://github.com/maread99/pyroids/blob/master/README.md"
+"Issue Tracker" = "https://github.com/maread99/pyroids/issues"
+"Source Code" = "https://github.com/maread99/pyroids"
+
+[project.scripts]
+pyroids = "pyroids.play:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+pyroids = [
+    'resources/*.png',
+    'resources/*.wav',
+    'config/*.py'
+]
+
+[tool.setuptools_scm]
+write_to = "pyroids/_version.py"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
