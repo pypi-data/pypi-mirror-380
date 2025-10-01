@@ -1,0 +1,11 @@
+# OpenAI API key for test data generation
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Path to your trained models checkpoint directory
+CHECKPOINT_DIR=../../outputs_1spec/prefix_kv
+
+# Directory to store compiled models
+COMPILED_MODELS_DIR=./compiled_models
+
+# Temporary directory for file operations
+TEMP_DIR=./temp

@@ -1,0 +1,25 @@
+Collapse a multi-paragraph numbered instruction list into plain lines by removing all numbering and indentation, outputting each step on its own line in original order.
+From a speaker-labeled transcript where utterances may span multiple lines and speaker labels repeat, produce single-line 'Speaker: utterance' lines preserving chronological order and trimming extra whitespace.
+Parse an option block using labels like 'A)', 'B.', '(1)' etc., remove labels, and return options in original order separated by ' | '.
+Extract nested multiple-choice blocks where top-level options contain suboptions (e.g., 'A. (i) ...'); output each top-level option followed by its suboptions in square brackets separated by commas.
+Return the text following the last occurrence of 'Final answer:' or 'Answer:' (case-insensitive), trimmed; if none found return an empty string.
+Extract the last standalone line that matches a numeric value optionally followed by units (e.g., '42', '3.5 kg'); if none exists return an empty string.
+Convert a comma-separated list of 'key:value' pairs on one line into newline-separated 'key: value' lines with trimmed keys and values.
+Merge multi-line stack traces into single-line log entries by joining lines until a new timestamped line is encountered; output each entry as 'TIMESTAMP | LEVEL | MESSAGE'.
+Find and return all email addresses including obfuscated forms like 'name [at] domain [dot] com' or 'name(at)domain.com', normalized to standard 'name@domain.com', unique and in original order, comma-separated.
+Extract all balanced nested-parentheses contents and output each matched parenthetical (including nested inner ones) on its own line, deepest matches first.
+Normalize all absolute dates in the text to ISO 8601 date 'YYYY-MM-DD' for formats like 'MM/DD/YYYY', 'DD-MM-YYYY', and 'Month D, YYYY'; leave unrelated text untouched.
+Convert date-time expressions that include timezone abbreviations or offsets (e.g., '2021-03-14 02:30 PST', 'March 14, 2021 14:30+0200') to full ISO 8601 datetimes with timezone offsets; if no timezone present append 'Z'.
+Replace spelled-out integers up to one million (e.g., 'two hundred forty-five' → '245') with digits, preserving surrounding punctuation and capitalization where applicable.
+Normalize mixed-format numeric ranges such as '1–3,000', '2 to 4.5 million', or 'one–ten' into canonical 'start—end' using an en-dash, digits without thousands separators, and converting words to numbers when present.
+Convert all Celsius temperatures in the text (e.g., '20°C', '20 C') to Fahrenheit rounded to the nearest integer and replace them with 'NN°F'.
+Detect lengths given in mixed formats (e.g., '5 ft 3 in', '160cm', '1.8 m') and replace each measurement with a single value in centimeters with one decimal place (e.g., '160.0 cm').
+From lines formatted like 'Key = Value' or 'Key: Value', extract pairs and output one 'Key|Value' line per pair preserving input order and trimming whitespace.
+Extract key-value pairs where values may be quoted and may span multiple lines, and output a single JSON object string with keys in input order; if ambiguous, return the most conservative parsing that preserves quoted newlines.
+Convert an ASCII '|' delimited table that includes a header separator row (like '---') into CSV, quoting fields that contain commas and preserving header order.
+Parse an irregular whitespace-aligned table (no delimiters, columns aligned by spaces) by inferring column boundaries from the header line and output as CSV with quoted fields when necessary.
+Given a single URL, extract its query parameters, percent-decode names and values, and output 'key=value' pairs one per line in the order they appear.
+Find all URLs in free text, aggregate their query parameters into a single JSON object where duplicate parameter names map to arrays of values in order of appearance, and return the compact JSON string.
+Fix common invalid JSON issues: convert single quotes to double quotes, remove trailing commas, and return compact valid JSON; if input cannot be repaired, return the single-line string 'INVALID'.
+Convert underlined headings written as a line followed by '===' or '---' into Markdown headings using '#' (one '#' for '===', two for '---'), preserving following paragraphs and blank lines.
+Strip all HTML tags while preserving text content; replace <img> elements with '[ALT: alt-text]' using the alt attribute when present, and collapse consecutive whitespace into single spaces.
