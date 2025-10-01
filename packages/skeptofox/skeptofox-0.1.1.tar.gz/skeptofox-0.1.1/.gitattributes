@@ -1,0 +1,8 @@
+# Set default behavior to automatically handle line endings
+* text=auto
+
+# Explicitly declare file types to be treated as text
+*.py text
+*.md text
+*.toml text
+*.txt text
