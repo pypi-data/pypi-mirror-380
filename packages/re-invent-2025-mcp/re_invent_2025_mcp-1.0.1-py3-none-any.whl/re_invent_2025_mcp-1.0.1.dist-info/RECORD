@@ -1,0 +1,13 @@
+reinvent_2025_mcp/__init__.py,sha256=6vg91giBAFPr8Qea71v5hvGws2SUpA1RIL-4oJWtjXM,32
+reinvent_2025_mcp/main.py,sha256=9hGJgrlcr2gdGpfL7AiKeuRW8o5vsR07AAjWW7U5V34,1785
+reinvent_2025_mcp/data/__init__.py,sha256=2HkncoEJIzlnq7O_5ZFZFRDCSScMaWMQk3fzIv829mU,22
+reinvent_2025_mcp/data/loader.py,sha256=_M9J73DD_4NATbew-r6M0LzZpC4JbnqXPp3No2iMOvc,531
+reinvent_2025_mcp/data/sessions.msgpack,sha256=AaD4MEuNbHJQjwDNemS6_muQFK50cTSxPmzszslVGiQ,2323353
+reinvent_2025_mcp/services/__init__.py,sha256=jBfMqpv3qPZsxuuRZAQatlLaHukwirAXM1u3TwbHmhU,26
+reinvent_2025_mcp/services/session_service.py,sha256=AsvGNXXDWED06EPki1aNzTOYwOp5i8WEqSFUNRVadOM,7454
+reinvent_2025_mcp/tools/__init__.py,sha256=8wgJqYlNOsMqmLCqkYefM0HOf3MGNzt0B9YY8GZMjMk,24
+reinvent_2025_mcp/tools/session_tools.py,sha256=LFrzA7Fxi8FXv6KChwYejaJaJ0NpQCXmhL0VENmBDYo,17237
+re_invent_2025_mcp-1.0.1.dist-info/METADATA,sha256=1SyttUMe3RGVA5sVvoRu0GP8_myAMJXCnDVx_KqbIWQ,3283
+re_invent_2025_mcp-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+re_invent_2025_mcp-1.0.1.dist-info/entry_points.txt,sha256=N2H9VI_PKwlDS6wFHkuSk3VvRMNvXLs2fF-QCb7XIHI,67
+re_invent_2025_mcp-1.0.1.dist-info/RECORD,,
