@@ -1,0 +1,6 @@
+eq_sql_connector/__init__.py,sha256=nOfhsyksBw0VLd3m_J3PzZLcaJhwJyVdUQJ6vbbAvlI,164
+eq_sql_connector/connector.py,sha256=ymV9qLW8ga-dtusidxXOH8G_W8DA4HpwPWfTw51m5dg,7850
+eq_sql_connector-0.1.0.dist-info/LICENSE,sha256=h1hdev1ljC91eF5ras6b7rmGXAZbKKseIoZYkJ2jfoE,1064
+eq_sql_connector-0.1.0.dist-info/METADATA,sha256=DC7q2hIapdXhGXf028LWAtSFpuQ_Loj4bvFAsRce-E4,1269
+eq_sql_connector-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+eq_sql_connector-0.1.0.dist-info/RECORD,,
