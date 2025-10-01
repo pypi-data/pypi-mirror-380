@@ -1,0 +1,15 @@
+awsui/__init__.py,sha256=bcWKVkTbkGdQdJHDSiuNhIGXjQse_wBQ9WsbYk8rb0g,66
+awsui/app.py,sha256=sSFYD4iv5nOVN7xFsXVfk-ssBYNj_BFo0_669ADdTaA,53025
+awsui/autocomplete.py,sha256=Iv6n_Y0dakGUNxn_Jn7tC6KxhsBf0b3ymcZvlKp1axY,4901
+awsui/aws_cli.py,sha256=wmIVP6AZ0HeGCHfQTPEB6YVq78Ku1bsg_RP_QXBiphw,3262
+awsui/cheatsheet.py,sha256=rmJOR7MZ_cqZ6xrJZ2oqWfV-YxgHbFWSBjmJKSG03E0,6859
+awsui/config.py,sha256=b9hTg1WxBNhY2EtudghT0XD1yr3NSwoOv1NZuV9QXNc,3572
+awsui/i18n.py,sha256=gFZG0zr2vaM8c1peNX3wXIbwWkbxRKl14bCKM-Lzr9g,9743
+awsui/logging.py,sha256=_sUhYCIVud7yfD5zkyiUwd8HpvgxCKlzNEpmRKefK2k,2661
+awsui/models.py,sha256=_ytDnEF6FbgojNaSzefmCvnpyhd2yzvwtUxCwSfHYMU,352
+awsui/q_assistant.py,sha256=WNAIY3q52aSkmHY4j12aB1UJHYUOCBXgSGr3SWNRroE,6194
+awsui-0.1.0.dist-info/METADATA,sha256=u4XeyZLUkqO5mnkIO80qM2uh_NiafjZCKlnnUWZayWY,12646
+awsui-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+awsui-0.1.0.dist-info/entry_points.txt,sha256=XoP-MxagdvHnaA0Hc2BRJa84-8EjlVpXF4xam6TZVfs,41
+awsui-0.1.0.dist-info/licenses/LICENSE,sha256=4T-vKet_MUH5Uc7Eree7tjmlwk342Mwwnw206KFn7AA,1100
+awsui-0.1.0.dist-info/RECORD,,

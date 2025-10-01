@@ -1,0 +1,2 @@
+[console_scripts]
+awsui = awsui.app:main
