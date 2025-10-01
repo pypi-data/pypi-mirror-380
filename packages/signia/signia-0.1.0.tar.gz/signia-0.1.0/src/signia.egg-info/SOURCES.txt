@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/signia/__init__.py
+src/signia/_core.py
+src/signia/py.typed
+src/signia.egg-info/PKG-INFO
+src/signia.egg-info/SOURCES.txt
+src/signia.egg-info/dependency_links.txt
+src/signia.egg-info/top_level.txt
+tests/test_combine.py
+tests/test_merge.py
+tests/test_mirror.py
+tests/test_same.py
