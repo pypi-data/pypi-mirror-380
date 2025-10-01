@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: charter-compiler
+Version: 0.1.0
+Summary: Agent compiler with orchestration-level memoization for LLM inference
+License-File: LICENSE
+Author: Wency Suo
+Author-email: w@usecharter.ai> and Jesus Fileto <j@usecharter.ai
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: click (>=8.1.0,<9.0.0)
+Requires-Dist: libcst (>=1.0.0,<2.0.0)
+Requires-Dist: networkx (>=3.0,<4.0)
+Requires-Dist: numpy (>=1.24.0,<2.0.0)
+Requires-Dist: prometheus-client (>=0.19.0,<0.20.0)
+Requires-Dist: pydantic (>=2.0.0,<3.0.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Requires-Dist: rich (>=13.0.0,<14.0.0)
+Requires-Dist: tritonclient[grpc,http] (>=2.40.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Charter Compiler
+
+Agent compiler with orchestration-level memoization for LLM inference.
+
+See TECHNICAL_SPEC.md for architecture and IMPLEMENTATION_TASKS.md for tasks.
+
+
+
