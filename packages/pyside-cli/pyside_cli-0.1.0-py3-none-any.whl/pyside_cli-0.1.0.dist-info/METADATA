@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyside-cli
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: glom>=24.11.0
+Requires-Dist: nuitka>=2.7.16
+Requires-Dist: pyside6>=6.6.3.1
+Requires-Dist: toml>=0.10.2
+
