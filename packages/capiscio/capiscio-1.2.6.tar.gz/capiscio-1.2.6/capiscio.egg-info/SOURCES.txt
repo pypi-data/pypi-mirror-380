@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+capiscio/__init__.py
+capiscio/cli.py
+capiscio.egg-info/PKG-INFO
+capiscio.egg-info/SOURCES.txt
+capiscio.egg-info/dependency_links.txt
+capiscio.egg-info/entry_points.txt
+capiscio.egg-info/top_level.txt
+capiscio/binaries/capiscio-darwin-arm64
+capiscio/binaries/capiscio-darwin-x64
+capiscio/binaries/capiscio-linux-x64
+capiscio/binaries/capiscio-win-x64.exe
