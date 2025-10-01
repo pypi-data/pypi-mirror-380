@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "acme",
+  "version": "0.15.0-alpha.1759255822",
+  "server": "github://api.github.com/pulumiverse/pulumi-acme"
+}
