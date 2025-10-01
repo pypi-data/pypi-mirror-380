@@ -1,0 +1,315 @@
+Metadata-Version: 2.4
+Name: santok
+Version: 1.0.1
+Summary: SanTOK - A comprehensive text tokenization system with mathematical analysis and statistical features
+Home-page: https://github.com/chavalasantosh/SanTOK
+Author: Santosh Chavala
+Author-email: Santosh Chavala <chavalasantosh@hotmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/chavalasantosh/SanTOK
+Project-URL: Repository, https://github.com/chavalasantosh/SanTOK
+Project-URL: Issues, https://github.com/chavalasantosh/SanTOK/issues
+Keywords: tokenization,text-processing,nlp,mathematical-analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.8; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# SanTOK - Universal Text Tokenization Framework
+
+A comprehensive text tokenization system with mathematical analysis, statistical features, and a modern web interface.
+
+## 🌟 Overview
+
+SanTOK is a complete tokenization framework that combines advanced mathematical algorithms with a modern React-based web interface. It provides multiple tokenization strategies, statistical analysis, and real-time processing capabilities for text analysis and natural language processing tasks.
+
+## ✨ Features
+
+### 🔧 Core Tokenization Engine
+- **Multiple Tokenization Strategies**: Whitespace, word boundary, character, and subword tokenization
+- **Mathematical Analysis**: Weighted sum calculation, digital root computation, and hash-based algorithms
+- **Statistical Features**: Mean, variance, entropy index, and balance index calculations
+- **Configurable Processing**: Customizable preprocessing and processing parameters
+- **Pure Python**: No external dependencies required for core functionality
+
+### 🌐 Web Interface
+- **Modern React/Next.js Frontend**: Responsive, interactive web dashboard
+- **Real-time Processing**: Live tokenization and analysis
+- **File Upload Support**: Process large text files up to 100GB+
+- **Performance Analytics**: Comprehensive metrics and visualization
+- **Multiple Output Formats**: JSON, CSV, and human-readable formats
+
+### 📊 Advanced Analytics
+- **Comprehensive Testing**: Advanced test suites for massive datasets
+- **Performance Monitoring**: Real-time performance metrics and analysis
+- **Academic Documentation**: Professional IEEE papers and research documentation
+- **Statistical Analysis**: Detailed mathematical analysis and comparison studies
+
+## 🚀 Quick Start
+
+### Installation
+
+#### From PyPI (Recommended)
+```bash
+pip install santok
+```
+
+#### From Source
+```bash
+git clone https://github.com/chavalasantosh/SanTOK.git
+cd SanTOK
+pip install -e .
+```
+
+### Basic Usage
+
+#### Python API
+```python
+from santok import TextTokenizationEngine
+
+# Create tokenization engine
+tokenization_engine = TextTokenizationEngine(
+    random_seed=12345,
+    embedding_bit=False,
+    normalize_case=True,
+    remove_punctuation=False,
+    collapse_repetitions=0
+)
+
+# Tokenize text
+result = tokenization_engine.tokenize("Hello World!", "whitespace")
+
+print(f"Tokens: {result['tokens']}")
+print(f"Frontend Digits: {result['frontend_digits']}")
+print(f"Features: {result['features']}")
+```
+
+#### Command Line Interface
+```bash
+# Basic tokenization
+santok "Hello World!" --method whitespace
+
+# With statistical features
+santok "Hello World!" --method word --features
+
+# Comprehensive analysis
+santok "Hello World!" --analyze
+
+# Process file
+santok --file input.txt --method character --output results.json
+```
+
+#### Web Interface
+```bash
+# Start the web server
+cd frontend
+npm install
+npm run dev
+
+# Or use the Python server
+python src/servers/main_server.py
+```
+
+## 🏗️ Project Structure
+
+```
+SanTOK/
+├── 📁 santok/                    # Core Python package
+│   ├── __init__.py              # Package initialization
+│   ├── santok.py                # Main tokenization engine
+│   └── cli.py                   # Command-line interface
+├── 📁 frontend/                  # React/Next.js web interface
+│   ├── app/                     # Next.js app directory
+│   ├── components/              # React components
+│   ├── lib/                     # Utility libraries
+│   └── types/                   # TypeScript definitions
+├── 📁 src/                      # Backend source code
+│   ├── core/                    # Core tokenization algorithms
+│   ├── servers/                 # Web servers and APIs
+│   ├── tests/                   # Test suites and data
+│   └── examples/                # Usage examples
+├── 📁 docs/                     # Documentation and papers
+│   ├── papers/                  # Academic papers
+│   ├── guides/                  # User guides
+│   └── performance/             # Performance documentation
+├── 📁 data/                     # Sample data and outputs
+│   ├── samples/                 # Sample datasets
+│   └── outputs/                 # Generated outputs
+├── 📁 scripts/                  # Setup and deployment scripts
+├── setup.py                     # Python package configuration
+├── package.json                 # Frontend dependencies
+├── requirements.txt             # Python dependencies
+└── main.py                      # Main entry point
+```
+
+## 🔬 Tokenization Methods
+
+### Whitespace Tokenization
+Splits text by whitespace delimiters.
+```python
+result = tokenization_engine.tokenize("Hello World!", "whitespace")
+# Tokens: ["Hello", "World!"]
+```
+
+### Word Boundary Tokenization
+Splits text into words (alphabetic characters only).
+```python
+result = tokenization_engine.tokenize("Hello World!", "word")
+# Tokens: ["Hello", "World"]
+```
+
+### Character Tokenization
+Splits text into individual characters.
+```python
+result = tokenization_engine.tokenize("Hello", "character")
+# Tokens: ["H", "e", "l", "l", "o"]
+```
+
+### Subword Tokenization
+Splits text into fixed-size subword units.
+```python
+result = tokenization_engine.tokenize("Hello", "subword", chunk_size=3)
+# Tokens: ["Hel", "lo"]
+```
+
+## 🧮 Mathematical Features
+
+### Frontend Digits
+Small numbers (1-9) calculated using:
+- **Weighted Sum**: ASCII value × position
+- **Digital Root**: 9-centric reduction
+- **Hash Value**: Polynomial rolling hash
+- **Combined Digit**: (Weighted_Digit × 9 + Hash_Digit) % 9 + 1
+
+### Statistical Features
+- **Length Factor**: Number of tokens modulo 10
+- **Balance Index**: Mean of frontend digits modulo 10
+- **Entropy Index**: Variance of frontend digits modulo 10
+- **Mean & Variance**: Standard statistical measures
+
+## 🌐 Web Interface Features
+
+### Dashboard
+- **Real-time Processing**: Live tokenization and analysis
+- **File Upload**: Support for large text files
+- **Multiple Methods**: All tokenization strategies available
+- **Performance Metrics**: Real-time statistics and analysis
+
+### Analytics
+- **Comprehensive Metrics**: Detailed performance analysis
+- **Visualization**: Charts and graphs for data analysis
+- **Export Options**: Multiple output formats
+- **History Tracking**: Previous analysis results
+
+## 📚 Documentation
+
+### Academic Papers
+- **Professional IEEE Paper**: Ready for publication
+- **Comparison Analysis**: Detailed tokenization method comparisons
+- **Performance Studies**: Comprehensive performance analysis
+- **Mathematical Documentation**: Complete mathematical framework
+
+### User Guides
+- **Backend Integration**: API integration guide
+- **Performance Optimization**: Performance tuning guide
+- **Decoding Guide**: Text reconstruction methods
+- **API Reference**: Complete API documentation
+
+## 🧪 Testing
+
+### Test Suites
+```bash
+# Run all tests
+python -m pytest
+
+# Run specific test categories
+python src/tests/advanced_comprehensive_test.py
+python src/tests/extreme_stress_test.py
+python src/tests/real_time_monitor.py
+```
+
+### Performance Testing
+- **Massive Dataset Testing**: Handles 100GB+ files
+- **Stress Testing**: Extreme load testing
+- **Real-time Monitoring**: Performance monitoring
+- **Comprehensive Analysis**: Detailed test reports
+
+## 🚀 Deployment
+
+### Development
+```bash
+# Install dependencies
+pip install -r requirements.txt
+cd frontend && npm install
+
+# Start development servers
+python src/servers/main_server.py  # Backend
+cd frontend && npm run dev         # Frontend
+```
+
+### Production
+```bash
+# Build for production
+cd frontend && npm run build
+
+# Deploy with Docker
+docker build -t santok .
+docker run -p 8000:8000 santok
+```
+
+## 📊 Performance
+
+- **Large File Support**: Handles files up to 100GB+
+- **High Performance**: Optimized algorithms for speed
+- **Memory Efficient**: Minimal memory footprint
+- **Scalable**: Supports concurrent processing
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Santosh Chavala**
+- Email: chavalasantosh@example.com
+- GitHub: [@chavalasantosh](https://github.com/chavalasantosh)
+
+## 🙏 Acknowledgments
+
+- Academic research and mathematical framework development
+- Performance optimization and testing
+- Web interface design and implementation
+- Documentation and user experience
+
+---
+
+**SanTOK** - Universal Text Tokenization Framework for the modern era of natural language processing.

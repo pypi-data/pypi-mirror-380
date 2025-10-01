@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+santok/__init__.py
+santok/cli.py
+santok/santok.py
+santok.egg-info/PKG-INFO
+santok.egg-info/SOURCES.txt
+santok.egg-info/dependency_links.txt
+santok.egg-info/entry_points.txt
+santok.egg-info/requires.txt
+santok.egg-info/top_level.txt
