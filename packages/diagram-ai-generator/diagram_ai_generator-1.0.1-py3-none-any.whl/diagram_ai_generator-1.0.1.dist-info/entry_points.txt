@@ -1,0 +1,2 @@
+[console_scripts]
+diagram-ai-mcp = src.application.mcp.server_modular:main
