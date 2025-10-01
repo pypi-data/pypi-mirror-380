@@ -1,0 +1,49 @@
+[project]
+name = "big_text"
+version = "0.2.1"
+description = "Generate ascii art from text input."
+authors = [
+    { name = "Geoffrey Lentner", email = "glentner@purdue.edu" },
+]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/glentner/big-text"
+repository = "https://github.com/glentner/big-text"
+documentation = "https://github.com/glentner/big-text"
+keywords = [
+    "command-line",
+    "utility"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "cmdkit>=2.7.7",
+
+]
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "hatchling>=1.27.0",
+]
+
+[project.scripts]
+big-text = "big_text:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = ["--strict-markers", ]
+markers = [
+    'unit',
+]
