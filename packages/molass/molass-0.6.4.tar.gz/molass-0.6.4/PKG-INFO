@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: molass
+Version: 0.6.4
+Summary: Matrix Optimization with Low-rank factorization for Automated analysis of SEC-SAXS
+Project-URL: Repository, https://github.com/molass-saxs/molass-library
+Author: Molass Community
+Maintainer: Molass Community
+License: GNU General Public License v3.0
+License-File: LICENSE.txt
+Keywords: SEC-SAXS
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Requires-Python: <3.13,>=3.9
+Requires-Dist: learnsaxs
+Requires-Dist: matplotlib
+Requires-Dist: molass-legacy>=0.2.5
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: psutil
+Requires-Dist: pybaselines>=1.2.0
+Requires-Dist: ruptures
+Requires-Dist: scikit-learn
+Requires-Dist: scipy<1.16.0
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: toml
+Requires-Dist: tqdm
+Provides-Extra: excel
+Requires-Dist: pywin32; extra == 'excel'
+Description-Content-Type: text/markdown
+
+<h1 align="center"><a href="https://molass-saxs.github.io/molass-library"><img src="docs/_static/molass-title.png" width="300"></a></h1>
+
+Molass Library is a rewrite of [MOLASS](https://pfwww.kek.jp/saxs/MOLASSE.html), a tool for the analysis of SEC-SAXS experiment data currently hosted at [Photon Factory](https://www2.kek.jp/imss/pf/eng/) and [SPring-8](http://www.spring8.or.jp/en/), Japan.
+
+To install this package, use pip as follows.
+
+```
+pip install -U molass
+```
+
+If you want to use Excel reporting features (Windows only), install with the `excel` extra:
+
+```
+pip install -U molass[excel]
+```
+
+> **Note:** The `excel` extra installs `pywin32`, which is required for Excel reporting and only works on Windows.
+
+For details, see also:
+
+- **Essence:** https://molass-saxs.github.io/molass-essence for theory,
+- **Tutorial:** https://molass-saxs.github.io/molass-tutorial for how to use,
+- **Technical:** https://freesemt.github.io/molass-technical for technical details,
+- **Reference:** https://molass-saxs.github.io/molass-library for function reference,
+- **Legacy Repository:** https://github.com/freesemt/molass-legacy for legacy codes.
+
+To join the community, see also:
+
+- **Handbook:** https://molass-saxs.github.io/molass-develop for maintenance.
+
+<br>
