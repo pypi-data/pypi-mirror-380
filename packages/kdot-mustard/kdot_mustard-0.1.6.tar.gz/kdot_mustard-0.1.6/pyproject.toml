@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kdot-mustard"
+version = "0.1.6"
+authors = [
+  { name="KrashKart", email="shootandscoot222@gmail.com" },
+]
+description = "The ultimate hotdog condiment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy", "tqdm", "Pillow"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: Microsoft :: Windows",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Repo = "https://github.com/KrashKart/kdot"

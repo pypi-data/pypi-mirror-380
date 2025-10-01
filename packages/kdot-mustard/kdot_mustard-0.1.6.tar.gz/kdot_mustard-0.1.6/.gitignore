@@ -1,0 +1,6 @@
+venv
+.vscode
+__pycache__
+testpypi_api.txt
+pypi_api.txt
+dist
