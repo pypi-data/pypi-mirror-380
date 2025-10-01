@@ -1,0 +1,4 @@
+include requirements.txt
+include README.md
+include LICENSE.txt
+recursive-include MedImageInsights/v20240927 *.txt *.json *.yaml
