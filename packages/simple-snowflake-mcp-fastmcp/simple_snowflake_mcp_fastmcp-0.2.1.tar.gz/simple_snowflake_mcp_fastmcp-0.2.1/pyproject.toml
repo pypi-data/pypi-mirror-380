@@ -1,0 +1,38 @@
+[project]
+name = "simple-snowflake-mcp-fastmcp"
+version = "0.2.1"
+description = "Simple Snowflake MCP Server to work behind a corporate proxy"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.10.1",
+    "snowflake-connector-python",
+    "python-dotenv",
+    "pydantic",
+    "PyYAML"
+]
+authors = [
+    { name = "Yann Barraud", email = "yann@barraud.io" }
+]
+license = { file = "LICENSE" }
+keywords = ["snowflake", "mcp", "server", "proxy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/fastmcp-me/simple_snowflake_mcp#readme"
+Repository = "https://github.com/fastmcp-me/simple_snowflake_mcp.git"
+Issues = "https://github.com/fastmcp-me/simple_snowflake_mcp/issues"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+simple-snowflake-mcp = "simple_snowflake_mcp:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/simple_snowflake_mcp"]
