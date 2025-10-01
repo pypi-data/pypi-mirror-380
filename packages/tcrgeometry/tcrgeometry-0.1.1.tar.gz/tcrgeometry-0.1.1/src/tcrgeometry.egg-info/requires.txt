@@ -1,0 +1,9 @@
+numpy>=1.22
+pandas>=1.5
+biopython>=1.80
+biotite>=0.40
+MDAnalysis>=2.4
+tqdm>=4.65
+
+[vis]
+pymol-open-source>=2.5
