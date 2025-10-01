@@ -1,0 +1,52 @@
+[project]
+name = "odm-hlp-oracle"
+version = "1.0.0"
+description = "Oracle database helper functions and utilities for ETL operations"
+authors = [
+    {name = "Marc Monteys", email = "marcmonteys@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+dependencies = [
+    "oracledb>=3.3.0",
+    "sqlalchemy>=2.0.0",
+    "odm-hlp-decorations>=1.0.1",
+    "python-dotenv>=1.0.0"
+]
+keywords = ["oracle", "database", "etl", "sql", "utilities"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/odm-hlp-oracle"
+Repository = "https://github.com/your-username/odm-hlp-oracle"
+Issues = "https://github.com/your-username/odm-hlp-oracle/issues"
+
+[tool.poetry]
+packages = [{include = "odm_hlp_oracle"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+oracledb = "^3.3.0"
+sqlalchemy = "^2.0.0"
+odm-hlp-decorations = "^1.0.1"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
