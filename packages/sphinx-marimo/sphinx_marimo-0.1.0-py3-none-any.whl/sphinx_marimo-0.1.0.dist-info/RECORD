@@ -1,0 +1,11 @@
+sphinx_marimo/__init__.py,sha256=usRXyE8ZkPBDIkrJyAdStEMEWq7K_8yeBfSGhh58J-0,88
+sphinx_marimo/builder.py,sha256=JIaONr_a0sz3RLrOkXRWiQw-uUgflRc6aPKs00zxfJA,5393
+sphinx_marimo/directives.py,sha256=INjH7oJfppZZyZHZFHph9Q4TpSztmp747JzkKFqtJGY,2374
+sphinx_marimo/extension.py,sha256=QNC0Ofh4lhxhhLXxANf4CjjFaP0W6QY-ukA52IC3hj0,3391
+sphinx_marimo/gallery_integration.py,sha256=Ahlp1I0HjLeVCmeCS-64oSmcr5jZfiwqybQWLdR_nvU,7254
+sphinx_marimo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinx_marimo/static.py,sha256=eB224rea8bm3fdVHiBqbcrdM1GpubWbPAksJqz-d7PA,19773
+sphinx_marimo-0.1.0.dist-info/METADATA,sha256=X2a7EwBzjZtgW53S_ryL5sRw1gG4IJHfVAnF6ddsqyk,3393
+sphinx_marimo-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sphinx_marimo-0.1.0.dist-info/entry_points.txt,sha256=QsUl6GRia8naCMYxLPT7qJxQHWq0LFZLiKuM8iyC_0w,66
+sphinx_marimo-0.1.0.dist-info/RECORD,,
