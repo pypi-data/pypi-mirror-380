@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: platoon
+Version: 0.0.0
+Summary: Build and train systems of agents.
+Author-email: Apurva Gandhi <apurvasgandhi@gmail.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# platoon
+
+Build and train systems of agents.
