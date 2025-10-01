@@ -1,0 +1,10 @@
+README.rst
+pyproject.toml
+requirements.txt
+setup.py
+stoat/__init__.py
+stoat.py.egg-info/PKG-INFO
+stoat.py.egg-info/SOURCES.txt
+stoat.py.egg-info/dependency_links.txt
+stoat.py.egg-info/requires.txt
+stoat.py.egg-info/top_level.txt

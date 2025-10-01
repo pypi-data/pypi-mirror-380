@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: stoat.py
+Version: 0.0.1a0
+Summary: A Python wrapper for the Stoat API
+Author: MCausc78
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: requests
+
+stoat.py
+========
+
+Currently dead simple library for [Stoat](https://stoat.chat/) API.

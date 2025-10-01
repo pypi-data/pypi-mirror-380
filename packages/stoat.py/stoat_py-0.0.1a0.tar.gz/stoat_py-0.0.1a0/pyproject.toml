@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stoat.py"
+description = "A Python wrapper for the Stoat API"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "MCausc78" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dynamic = ["version", "dependencies"]
+
+
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt" }
+[tool.pyright]
+typeCheckingMode = "standard"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+# convert-typed-dict-functional-to-class = true
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "ARG001",
+    "ARG003",
+    "ARG004",
+    "ARG005",
+    "F401",
+    "F841",
+    "F842",
+    "UP037"
+]
+
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+section-order = ["future", "standard-library", "first-party", "local-folder", "third-party"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F403"]
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = false
+# quoted-annotation = false
+
+[tool.setuptools]
+packages = [
+    "stoat"
+]
+include-package-data = true
