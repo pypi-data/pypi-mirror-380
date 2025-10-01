@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include requirements.txt
+
+# Include package data files
+recursive-include entityidentity/data *.parquet *.csv *.txt README.md
+
