@@ -1,0 +1,10 @@
+msprites2/__init__.py,sha256=A-C2_BlT00wRXjUbJ9Pyj2rMHinyGbT3DuOU7_LxJ4k,735
+msprites2/audio_transcription.py,sha256=OzdJPyH-SJ9qNFJdZhAy_w_PJwzX5vv1deGKCGOY20c,9011
+msprites2/montage_sprites.py,sha256=BBK3Mlasokxl7PtGbZ-C7n1WOnlPxgnOuX2dYM6IUAE,7920
+msprites2/parallel_extractor.py,sha256=m_BFddU52iWJr6yREDLBANvBA7NE-jMjVcZTlOgPwfI,16084
+msprites2/settings.py,sha256=bUp1QOllGa3BFd9ZET1yzrG8VimonWmwD8XHz8Hiz8c,645
+msprites2/visual_analysis.py,sha256=P_CY0Df5he8KqNVUlkxLOOEAfIHpDF1l8HiyAEsg7Cs,12059
+msprites2-0.12.1.dist-info/METADATA,sha256=d1n0PH5yhEWfYCoif-U5wr3Nbor6qaCiEpG7fUBeJPk,20824
+msprites2-0.12.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+msprites2-0.12.1.dist-info/licenses/LICENSE,sha256=FlKCoYX4DcWJS5aO03Xf6CTyxxfnfJAxLvvsPeiKea8,1068
+msprites2-0.12.1.dist-info/RECORD,,
