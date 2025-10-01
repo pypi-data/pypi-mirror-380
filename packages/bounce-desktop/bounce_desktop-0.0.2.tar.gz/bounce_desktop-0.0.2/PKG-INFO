@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bounce_desktop
+Version: 0.0.2
+Author-Email: William Henning <wchenningwchenning@gmail.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# BounceDesktop
+
+BounceDesktop is a lightweight hardware-accelerated library for creating and interacting
+with virtual desktops.
+
+# Dependencies
+
+libvncserver, gmock, gtest
