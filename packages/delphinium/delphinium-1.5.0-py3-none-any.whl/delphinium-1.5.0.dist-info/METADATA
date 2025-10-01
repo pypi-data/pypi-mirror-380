@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: delphinium
+Version: 1.5.0
+Summary: Heliotrope wrapper (Python)
+License: MIT
+License-File: LICENSE
+Author: Ryu Juheon
+Author-email: saidbysolo@gmail.com
+Requires-Python: >=3.13,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: aiohttp (>=3.11.18,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Delphinium
+
+> Heliotrope's Python wrapper
+
