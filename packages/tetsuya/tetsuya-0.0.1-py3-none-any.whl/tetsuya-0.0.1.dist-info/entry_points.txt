@@ -1,0 +1,2 @@
+[console_scripts]
+tetsuya = tetsuya.app:main
