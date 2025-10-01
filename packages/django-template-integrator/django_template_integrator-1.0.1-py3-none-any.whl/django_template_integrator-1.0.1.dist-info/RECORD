@@ -1,0 +1,8 @@
+django_template_integrator/__init__.py,sha256=G26ce1pNKsNMtEDbM_jhjjFH80ldR65f3onIOHL9aCk,261
+django_template_integrator/cli.py,sha256=bcBzbfYqRS3Mr8jetj57sPlkVa51Bgq0wQslEyrD31E,2173
+django_template_integrator/core.py,sha256=dS0_xX8OnqY15Tk8629ebwbXFy3EH-3Rb_YnWOnvh6c,8996
+django_template_integrator/utils.py,sha256=9zXUO7J0XJtOGnPXRugsfrnDxUfVEuwoE5MLJYjNTmY,1896
+django_template_integrator-1.0.1.dist-info/METADATA,sha256=TY4t_0Elb0nL9IsNqNaIpQGzckvpDnqark-vbn-Bkaw,5819
+django_template_integrator-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_template_integrator-1.0.1.dist-info/top_level.txt,sha256=Wb0LwPjRZ-hwqvfaCd4gsxMlsjcwPcdAa3E2VzZ9grg,27
+django_template_integrator-1.0.1.dist-info/RECORD,,
