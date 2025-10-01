@@ -1,0 +1,5 @@
+pyfaup/__init__.py,sha256=6s_dhPCcfzs5hOhtisvhbxRCy5-u0fgOLevnGZJHcGI,107
+pyfaup/pyfaup.pypy311-pp73-aarch64-linux-gnu.so,sha256=K6UYpUf0xydM6jHl2lSvq7UjqwoFjAp5Klg27Wa6BJ4,1852752
+pyfaup_rs-0.1.1.dist-info/METADATA,sha256=xA6ie1Idrw_w34yzamTwFPuuHWLDbsApSpHTHcHITmM,3867
+pyfaup_rs-0.1.1.dist-info/WHEEL,sha256=UohoatodDp9URyLmikOYOCBCuapmVMjvrIXlt5N_7Gw,138
+pyfaup_rs-0.1.1.dist-info/RECORD,,
