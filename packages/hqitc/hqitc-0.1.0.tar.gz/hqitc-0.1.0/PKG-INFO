@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: hqitc
+Version: 0.1.0
+Summary: Hybrid Quantum-Inspired Transform Codec - A novel image compression algorithm combining quantum-inspired encoding, attention mechanisms, and adaptive DCT transforms
+Project-URL: Homepage, https://github.com/yourusername/hqitc
+Project-URL: Documentation, https://hqitc.readthedocs.io/
+Project-URL: Repository, https://github.com/yourusername/hqitc.git
+Project-URL: Issues, https://github.com/yourusername/hqitc/issues
+Project-URL: Changelog, https://github.com/yourusername/hqitc/blob/main/CHANGELOG.md
+Author-email: Your Name <your.email@example.com>
+Maintainer-email: Your Name <your.email@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: attention-mechanism,computer-vision,dct-transform,image-compression,quantum-inspired,signal-processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Provides-Extra: all
+Requires-Dist: black>=22.0.0; extra == 'all'
+Requires-Dist: flake8>=4.0.0; extra == 'all'
+Requires-Dist: isort>=5.10.0; extra == 'all'
+Requires-Dist: matplotlib>=3.5.0; extra == 'all'
+Requires-Dist: mypy>=0.950; extra == 'all'
+Requires-Dist: myst-parser>=0.17.0; extra == 'all'
+Requires-Dist: pillow>=9.0.0; extra == 'all'
+Requires-Dist: pre-commit>=2.17.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'all'
+Requires-Dist: pytest>=7.0.0; extra == 'all'
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'all'
+Requires-Dist: sphinx>=4.5.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black>=22.0.0; extra == 'dev'
+Requires-Dist: flake8>=4.0.0; extra == 'dev'
+Requires-Dist: isort>=5.10.0; extra == 'dev'
+Requires-Dist: mypy>=0.950; extra == 'dev'
+Requires-Dist: pre-commit>=2.17.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=0.17.0; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'docs'
+Requires-Dist: sphinx>=4.5.0; extra == 'docs'
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.5.0; extra == 'viz'
+Requires-Dist: pillow>=9.0.0; extra == 'viz'
