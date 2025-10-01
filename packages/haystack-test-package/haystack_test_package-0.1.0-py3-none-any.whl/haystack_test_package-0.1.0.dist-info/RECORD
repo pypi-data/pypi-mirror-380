@@ -1,0 +1,10 @@
+haystack-test-package/__init__.py,sha256=_XV9uYskJeiiu8Gj8k2Bxp2IWVgE3iJULbis-28n8D8,75
+haystack-test-package/app.py,sha256=d7rW250ZocRxNnAwNXvD9olp3LfzyokxQ45V61t7LX0,4577
+haystack-test-package/cache.py,sha256=splvWqEvX4wi_vAUXUKe09W78L5mMjrushPOX9GvJ2k,505
+haystack-test-package/dynamo.py,sha256=1WeQReIZHX3YvjC6abwznqN67-Lax_YEMJ9z_xqw0Z4,3312
+haystack-test-package/model_store.py,sha256=43JpsJBKloCfqV0Cq4jREcsBCbWmfO5QqXOKaHzB5i4,1189
+haystack-test-package/settings.py,sha256=2JH-H7NtKaVbc11jq4Yl3h5TjCve98g--8pqNvQjfj4,574
+haystack_test_package-0.1.0.dist-info/METADATA,sha256=LdUaDWC3DYuyoLO-CKtGt_BWMgG69Ko5tydgndd-FlM,460
+haystack_test_package-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+haystack_test_package-0.1.0.dist-info/top_level.txt,sha256=ZcEjEonKIg9VEpM7xyf-KXwKbu_rxf0_02q7IiFJcHM,22
+haystack_test_package-0.1.0.dist-info/RECORD,,
