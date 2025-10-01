@@ -1,0 +1,9 @@
+netcdf4
+pyyaml
+
+[dev]
+coverage
+codecov
+six
+pytest-cov
+pytest
