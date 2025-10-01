@@ -1,0 +1,9 @@
+README.md
+setup.py
+hyperxar/__init__.py
+hyperxar/core.py
+hyperxar.egg-info/PKG-INFO
+hyperxar.egg-info/SOURCES.txt
+hyperxar.egg-info/dependency_links.txt
+hyperxar.egg-info/requires.txt
+hyperxar.egg-info/top_level.txt
