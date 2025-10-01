@@ -1,0 +1,16 @@
+calypso/__init__.py,sha256=FtbjoE3s9hzuI0S4Pz9G-gHTbPHt7pguqFFcNzFBquw,22
+calypso/model/__init__.py,sha256=h-lXdDD710fDkNIRW5xuRYJ9nDaJ__dKZ8MHIOHl4rI,29
+calypso/model/scraper.py,sha256=SInMJidtPu3Nns1wKZZInas0OOukL6hYQ8GeJ1YZAh4,1377
+calypso/service/__init__.py,sha256=QRT-uBRlLUXZ_2HGWJsiK5_ihOlekdtoVNz3Ndtg5SA,236
+calypso/service/binsx.py,sha256=s_HwtsJ3JpQ6VbymHdpdAhT16FQ08Le8Ug9xu5b3fKg,1304
+calypso/service/coomer.py,sha256=h4UG_TQZF7uY25f6RndNTDsY69i6LfevpLtQG9VFA14,4100
+calypso/service/gotanynudes.py,sha256=bc9fGR-HvbUW6z4_IdqXSjp1QqmSppRAj403lL8iv3Q,3899
+calypso/service/leakedzone.py,sha256=Z9bSFsX_YqaeCEZnJltRRreZowVRdZhggRFVPPeNflA,9201
+calypso/service/openfoodfacts_v3.py,sha256=wen9HrfRBXycY_el3MN1b9fTrEgkOz6zRE7cTDgm5SI,13226
+calypso/service/voiranime.py,sha256=nzJyYsKAeYjpnJeagopAixgrsaQSV-wO9yedEXu93uU,4604
+calypso/service/voirdrama.py,sha256=gvp0-ougwKFi4vOztGDKr6EBKKjM1Ra51nQxzbdnVYU,4598
+pycalypso-0.1.7.dist-info/licenses/LICENSE.txt,sha256=GEe8Vi6lRCHYXsW1dMdIGSQt9DXVBd2WoIDM_IAxK2k,1063
+pycalypso-0.1.7.dist-info/METADATA,sha256=-wNiQgwDwyGXAum_i6fqeZVb5kDKEjWyVqq-P4SD9TM,3310
+pycalypso-0.1.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pycalypso-0.1.7.dist-info/top_level.txt,sha256=qhOtxUwnqh_au9au1ody8qs0w0xlUKxenCM7uE57ic4,8
+pycalypso-0.1.7.dist-info/RECORD,,
