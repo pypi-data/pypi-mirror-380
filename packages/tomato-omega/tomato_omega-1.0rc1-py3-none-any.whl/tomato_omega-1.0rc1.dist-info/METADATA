@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: tomato-omega
+Version: 1.0rc1
+Summary: This package is a part of tomato. It has been made for the automation of Omega *USBH pressure transducers.
+Author-email: Peter Kraus <peter.kraus@ceramics.tu-berlin.de>
+Project-URL: Homepage, https://github.com/dgbowl/tomato-omega
+Project-URL: Bug Tracker, https://github.com/dgbowl/tomato-omega/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tomato>=2.2rc2
+Requires-Dist: pyserial>=3.5
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Dynamic: license-file
+
+# tomato-omega
+`tomato` driver for Omega *USBH pressure transducers.
+
+This driver is using the serial port interface, based on the commands in the [`API documentation`](https://br.omega.com/omegaFiles/software/PX409-USBH_r.html). This driver is developed by the [ConCat lab at TU Berlin](https://tu.berlin/en/concat).
+
+## Installation
+Install the package using `pip`, e.g. `pip install tomato-omega`. No further driver-specific steps are necessary.
+
+## Supported functions
+
+### Capabilities
+- `measure_pressure` which measures the temperature on a given serial port (`address`)
+
+### Attributes
+- `pressure` which is the current pressure, `pint.Quantity(float, unit)`
+
+### Constants
+- `serial` which is the serial number (`str`) of the device,
+- `gauge` which is a `bool` indicating whether gauge (`True`) or absolute (`False`) pressure is reported
+
+## Contributors
+
+- Peter Kraus
