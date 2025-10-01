@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: mapmatcher
+Version: 0.7.1
+Summary: A package to map-match GPS traces onto an arbitrary network
+Author: Pedro Camargo
+Maintainer-email: Pedro Camargo <pedro@outerloop.io>
+License: MIT
+Project-URL: Homepage, https://github.com/pedrocamargo/map_matching
+Keywords: map-matching,gps,network,routing,aequilibrae
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+Requires-Dist: aequilibrae<2.0.0
+Requires-Dist: geopandas
+Requires-Dist: tqdm
+Provides-Extra: testing
+Requires-Dist: ruff==0.9.10; extra == "testing"
+Requires-Dist: black==25.1.0; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Provides-Extra: build
+Requires-Dist: setuptools; extra == "build"
+Requires-Dist: wheel; extra == "build"
+Requires-Dist: build; extra == "build"
+Provides-Extra: auxiliary
+Requires-Dist: folium; extra == "auxiliary"
+Requires-Dist: notebook; extra == "auxiliary"
+Provides-Extra: docs
+Requires-Dist: pyaml; extra == "docs"
+Requires-Dist: enum34>=1.1.6; extra == "docs"
+Requires-Dist: Sphinx; extra == "docs"
+Requires-Dist: pydata-sphinx-theme; extra == "docs"
+Requires-Dist: pillow; extra == "docs"
+Requires-Dist: matplotlib; extra == "docs"
+Requires-Dist: folium; extra == "docs"
+Requires-Dist: sphinx-gallery; extra == "docs"
+Requires-Dist: ipython_genutils; extra == "docs"
+Requires-Dist: folium; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: mapmatcher[auxiliary,build,docs,testing]; extra == "dev"
+
+# MapMatcher
+MapMatcher is yet another Python Package designed to map-match GPS traces onto a network.
+
+This package is built around [AequilibraE](https://www.aequilibrae.com) adding new powerful resources to its ecosystem.
+
+Following on the AequilibraE ethos, however, one does not need an AequilibraE model 
+to use MapMatcher to map-match GPS traces to a bespoke link network.
+
+MapMatcher was previously maintained at [this repository](https://github.com/pedrocamargo/map_matching).
+
+## Documentation
+
+MapMatcher documentation can be found [here](https://aequilibrae.github.io/mapmatcher/).
+
+## Citing
+
+Case you use MapMatcher, please cite:
+
+> P. Camargo and R. Imai, ‘Map-matching large streams of vehicle GPS data into bespoke networks’, Australasian Transport Research Forum 2024 Proceedings. 
+  Available at: https://australasiantransportresearchforum.org.au/map-matching-large-streams-of-vehicle-gps-data-into-bespoke-networks/
