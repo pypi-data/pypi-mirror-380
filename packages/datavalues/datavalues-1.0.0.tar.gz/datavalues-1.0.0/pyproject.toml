@@ -1,0 +1,34 @@
+[project]
+name = "datavalues"
+authors = [
+    { name="Ben Nassif", email="bennassif@gmail.com" }
+]
+
+dynamic = ["version"]
+
+description = "Package for converting data units"
+readme = "README.md"
+
+requires-python = ">=3.10"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Programming Language :: Python :: 3",
+]
+keywords = [
+    "conversion", "data", "units", "byte", "helper"
+]
+
+license = "MIT"
+license-files = [
+    "LICEN[CS]E"
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "datavalues.__version__.__version__" }
+
+[project.urls]
+homepage = "https://github.com/bnassif/datavalues"
+issues = "https://github.com/bnassif/datavalues/issues"
