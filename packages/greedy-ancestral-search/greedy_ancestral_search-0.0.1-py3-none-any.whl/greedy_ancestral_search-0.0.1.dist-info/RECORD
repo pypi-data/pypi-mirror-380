@@ -1,0 +1,8 @@
+greedy_ancestral_search/__init__.py,sha256=cenFWkXpb3kerDXK7EntWMQVBMwZj3-uQ0PLwH9cNUY,81
+greedy_ancestral_search/core.py,sha256=H-M5I3VPKRF5k0z3n2YnBjsRQvF7K7N13V2nDW5kdTs,7767
+greedy_ancestral_search/sets.py,sha256=4Kiha5d_4ITWR-_lT_PnrRWAGCpO_pqa-nMIi4Z3-4M,2178
+greedy_ancestral_search/utils.py,sha256=iMVXM97PXRfmuucxyVnOT9zMoX5G-_ryvi8m1lWKMIE,3117
+greedy_ancestral_search-0.0.1.dist-info/METADATA,sha256=lQHkObgYgMK1xegiGUEvPqvUH-vIg7_XlyDj-MOEn4Y,1320
+greedy_ancestral_search-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+greedy_ancestral_search-0.0.1.dist-info/licenses/LICENSE.md,sha256=pigN-lPOffhtGIZXc4fxsB4NhTYHpIFzzhdVFBeEf0Q,1144
+greedy_ancestral_search-0.0.1.dist-info/RECORD,,

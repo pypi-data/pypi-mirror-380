@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: greedy-ancestral-search
+Version: 0.0.1
+Summary: Python implementation of the Greedy Ancestral Seach (GAS) algorithm from our paper 'On the Number of Conditional Independence Tests in Constraint-based Causal Discovery'.
+Project-URL: Repository, https://github.com/uhlerlab/greedy-ancestral-search
+Project-URL: Issues, https://github.com/uhlerlab/greedy-ancestral-search/issues
+Author: Marc Franquesa Monés, Jiaqi Zhang, Caroline Uhler
+License-Expression: MIT
+License-File: LICENSE.md
+Keywords: causal discovery,constraint-based causal discovery
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: networkx>=3.4.2
+Description-Content-Type: text/markdown
+
+# Greedy Ancestral Search
+
+## Getting started
+
+Using `uv` for dependency management.
+Read [here](https://docs.astral.sh/uv/) for more information.
+
+If you don't have it download it
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+To sync dependencies run
+```
+uv sync
+```
+
+## Testing
+
+```
+EXPORT PYTHONPATH=. && uv run pytest
+```
+## Benchmarks
+
+```
+uv run benchmarks/<script>.py
+```
+
+For the SERGIO benchmark, ensure you have SERGIO installed in the correct path.
+Should be in `benchmarks/SERGIO`.
