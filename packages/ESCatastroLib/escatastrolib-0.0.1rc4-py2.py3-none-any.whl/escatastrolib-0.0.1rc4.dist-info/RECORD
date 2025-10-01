@@ -1,0 +1,15 @@
+escatastrolib/__about__.py,sha256=AewrDcLR1tQuIZMxuJxO3bT_jYsC-D1tpsXR9A0cF94,131
+escatastrolib/__init__.py,sha256=QCXZ5qTCAGhkZr63i0Y7zZpkLKd342edUzjt9U_Ujqs,220
+escatastrolib/models/Calle.py,sha256=TfgJfRiCSl6Fgug2--Wo2x5cj6JQdhHQojtZDZOgVSo,2846
+escatastrolib/models/InfoCatastral.py,sha256=H8Eo96OThC_OSnpQ7Jeuwo4We5f1XZ4C51lbvcDUSq4,23308
+escatastrolib/models/Municipio.py,sha256=J3X9G7EMc63651EDAMOqo846Ed-5cVjJfZLZeohPw74,1566
+escatastrolib/models/__init__.py,sha256=Y8nN1Qp3_-VX7njuXwFWSq-62clHj878miEQGnzNXlc,149
+escatastrolib/utils/__init__.py,sha256=kQj0ORkR_JMgwWgGi73APqn3p-UQipiuMY1QaBBmkLs,106
+escatastrolib/utils/converters.py,sha256=cxjesg23z0gxhaquuPaEQjhgb2Gnj5Ip2BqX_n3wY0s,2621
+escatastrolib/utils/exceptions.py,sha256=YM3AuKHZ61SYgpmtYFz9n7JavdEOq2mLwyk2VzIol5A,759
+escatastrolib/utils/statics.py,sha256=PpHPS-lopMYWg5pJeeCU5NtIJU6nUpeh9njFFKwfVfc,3958
+escatastrolib/utils/utils.py,sha256=76ZuW_kFjAjazLztvGnsiuKrvzyPx_e0flhTqp2yaDU,8772
+escatastrolib-0.0.1rc4.dist-info/METADATA,sha256=08CGcJ_dUg-XoBhuMczsRaNd6YjbMSheRzUqvcywZlU,18067
+escatastrolib-0.0.1rc4.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+escatastrolib-0.0.1rc4.dist-info/licenses/LICENSE,sha256=kgDY5GRu9WGoKk_0F0iYmXuLmGiZ9hgtReHhCfJBWr8,11319
+escatastrolib-0.0.1rc4.dist-info/RECORD,,
