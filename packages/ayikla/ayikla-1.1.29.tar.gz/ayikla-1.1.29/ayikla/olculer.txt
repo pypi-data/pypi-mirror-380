@@ -1,0 +1,117 @@
+mg, miligram
+cg, santigram
+dg, desigram
+g, gram
+dag, dekagram
+kg, kilogram, kilo
+q, quintal
+ton, ton
+ct, karat
+lb, libre, pound
+oz, ons, ounce
+stone, stone
+mm, milimetre
+cm, santimetre
+dm, desimetre
+m, metre
+dam, dekametre
+hm, hektometre
+km, kilometre
+inç, inch
+ft, fit, foot
+yd, yard
+mil, mil
+deniz mili, nautical mile
+ışık yılı, light year
+astronomik birim, au
+parsek, parsec
+mm², milimetrekare
+cm², santimetrekare
+dm², desimetrekare
+m², metrekare
+dam², dekametrekare
+ha, hektar
+km², kilometrekare
+dönüm, dönüm
+acre, acre
+ml, mililitre
+cl, santilitre
+dl, desilitre
+l, litre, lt
+hl, hektolitre
+m³, metreküp
+cm³, santimetreküp
+galon, gallon
+quart, quart
+pint, pint
+cup, bardak
+tablespoon, yemek kaşığı
+teaspoon, çay kaşığı
+varil, barrel
+fıçı, keg
+ns, nanosaniye
+µs, mikrosaniye
+ms, milisaniye
+sn, saniye, s, sec
+dk, dakika, min
+saat, saat, h, hr
+gün, day
+hafta, hafta, week
+ay, month
+yıl, yıl, sene, year
+onyıl, on yıl, decade
+yüzyıl, yüzyıl, century
+j, joule
+kj, kilojoule
+mj, megajoule
+gj, gigajoule
+cal, kalori, calorie
+kcal, kilokalori, kcalorie
+wh, watt-saat
+kwh, kilowatt-saat
+mwh, megawatt-saat
+gwh, gigawatt-saat
+btu, british thermal unit
+w, watt
+kw, kilowatt
+mw, megawatt
+gw, gigawatt
+hp, beygir gücü, horsepower
+v, volt
+kv, kilovolt
+a, amper
+ma, miliamper
+µa, mikroamper
+c, coulomb
+ohm, ohm
+s, siemens
+f, farad
+h, henry
+t, tesla
+wb, weber
+pa, pascal
+kpa, kilopascal
+mpa, megapascal
+bar, bar
+atm, atmosfer, atmosphere
+torr, torr
+mmhg, milimetre cıva
+inhg, inç cıva
+°c, santigrat derece, celsius
+°f, fahrenhayt, fahrenheit
+k, kelvin
+°r, rankine
+lm, lümen, lumen
+lx, lüks, lux
+cd, candela
+nit, nit
+adet, piece, pcs
+parça, piece
+paket, paket
+kutu, box
+şişe, bottle
+teneke, can
+poşet, bag
+çift, pair
+düzine, dozen
+koli, carton

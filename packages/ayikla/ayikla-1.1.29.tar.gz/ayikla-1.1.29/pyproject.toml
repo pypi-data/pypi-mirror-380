@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ayikla"
+version = "1.1.29"
+authors = [
+    { name = "Hasan Çağrı Güngör", email = "iletisim@cagrigungor.com" }
+]
+description = "Türkçe metinlerden isim, telefon, tarih/saat, tarih aralıkları, lokasyon/adres, firma adları, TCKN, IBAN, e-posta, web sitesi, IP adresi, UUID4, miktar/ölçü birimi (olculer) ve para birimi (kurlar) ayıklayan kütüphane. (1.1.17: tarih_aralik, 1.1.18: firmalar, 1.1.19: tckn, 1.1.20: iban, 1.1.21: email+url, 1.1.22: ip+uuid4, 1.1.23: olculer, 1.1.24: kurlar, 1.1.26: olculer performans, 1.1.28: firma performans)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "phonenumbers",
+    "python-dateutil",
+    "dateparser"
+]
+license = { text = "MIT" }
+keywords = [
+    "nlp",
+    "turkish",
+    "entity-extraction",
+    "ayikla",
+    "adres",
+    "adres-ayiklama",
+    "isim-soyisim"
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/ayikla/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ayikla*"]
+
+[tool.setuptools.package-data]
+ayikla = ["*.txt"]
+

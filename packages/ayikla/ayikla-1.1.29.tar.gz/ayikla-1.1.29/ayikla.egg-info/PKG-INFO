@@ -1,0 +1,207 @@
+Metadata-Version: 2.4
+Name: ayikla
+Version: 1.1.29
+Summary: Türkçe metinlerden isim, telefon, tarih/saat, tarih aralıkları, lokasyon/adres, firma adları, TCKN, IBAN, e-posta, web sitesi, IP adresi, UUID4, miktar/ölçü birimi (olculer) ve para birimi (kurlar) ayıklayan kütüphane. (1.1.17: tarih_aralik, 1.1.18: firmalar, 1.1.19: tckn, 1.1.20: iban, 1.1.21: email+url, 1.1.22: ip+uuid4, 1.1.23: olculer, 1.1.24: kurlar, 1.1.26: olculer performans, 1.1.28: firma performans)
+Author-email: Hasan Çağrı Güngör <iletisim@cagrigungor.com>
+License: MIT
+Project-URL: Homepage, https://pypi.org/project/ayikla/
+Keywords: nlp,turkish,entity-extraction,ayikla,adres,adres-ayiklama,isim-soyisim
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: phonenumbers
+Requires-Dist: python-dateutil
+Requires-Dist: dateparser
+
+# Ayikla
+
+**Ayikla**, Türkçe metinlerden yapılandırılmış varlıkları ayıklayan hafif bir Python kütüphanesidir. Tek çağrıda geniş bir yelpazede bilgiyi normalize eder.
+
+Desteklenen varlık anahtarları (`bul(metin)`) çıktısında yer alır:
+- isimler
+- telefonlar
+- tarihler (tarih + opsiyonel saat)
+- tarih_aralik (başlangıç/bitis)
+- lokasyonlar (adres benzeri tetikleyici bloklar)
+- firmalar
+- tckn (T.C. Kimlik No)
+- iban (TR IBAN)
+- emailler
+- websiteler (URL)
+- ip_adresleri (IPv4 / IPv6)
+- uuid4
+- olculer (miktar + ölçü birimi)
+- kurlar (miktar + para birimi)
+
+### Seçmeli Çalıştırma (1.1.27+)
+Varsayılan olarak bütün varlık çıkarıcılar çalışır. Performans veya gereksinim nedeniyle belirli anahtarları sınırlamak isterseniz:
+
+```python
+from ayikla import bul
+metin = "Ahmet 250 TL ve 3 kilo un aldı, TR33 0006 1005 1978 6457 8413 26"
+
+# 1) sadece -> Yalnızca belirtilen anahtarlar
+bul(metin, sadece=["iban","kurlar"])  # isimler vs. çalışmaz
+
+# 2) aktif -> Çalıştırılacak alt küme
+bul(metin, aktif=["isimler","telefonlar"])  # diğerleri boş listeler döner
+
+# 3) pasif -> Bu anahtarları kapat, diğerleri çalışsın
+bul(metin, pasif=["iban","uuid4"])  # iban ve uuid4 çıkarılmaz
+
+# 4) include_meta -> Pasif kalanları görmek için
+bul(metin, sadece=["kurlar"], include_meta=True)["_pasif"]  # diğer tüm anahtarların listesi
+```
+
+Öncelik sırası: `sadece` > (`aktif` / `pasif`) > (varsayılan hepsi). Tanınmayan anahtarlar sessizce yok sayılır. Çıktı şeması sabit olduğundan çalıştırılmayan anahtarlar yine boş liste (`[]`) olarak bulunur; böylece tip beklentileri değişmez.
+
+## Kurulum
+```bash
+pip install ayikla
+```
+
+## Hızlı Kullanım
+```python
+from ayikla import bul
+metin = "Dr. Ahmet Yılmaz beni 0532 123 45 67 numarasından yarın akşam 8'de ara, 250 TL gönder."
+sonuc = bul(metin)
+print(sonuc.keys())
+```
+
+## Örnekler
+### İsim + Telefon + Tarih/Saat
+```python
+bul("Dr. Ahmet Yılmaz beni 0532 123 4567 numarasından yarın saat 19'da ara.")
+```
+
+### Belirli Tarih
+```python
+bul("Çağrı Güngör 532 123 4567 – 18 Ocak saat 19'da görüşelim.")
+```
+
+### Sadece Saat
+```python
+bul("Sadece saat 19'da uygun olur.")
+```
+
+### Lokasyon / Adres
+```python
+bul("Toplantı salı günü saat 14'te istanbul beşiktaş çarşı mah. no:5 kat 2 daire 4 ofiste olsun.")
+```
+
+### Tarih Aralıkları
+```python
+metin = "Önümüzdeki hafta ve 3-5 Ocak 2024 ile 25 Aralık - 3 Ocak 2025 arası müsait değilim. Mart - Nisan 2025 planlayalım."
+bul(metin)["tarih_aralik"]
+```
+
+### Ölçü / Miktar (olculer)
+```python
+bul("on kilo un ve 3.5 lt süt aldım, ayrıca 250gram tereyağı")['olculer']
+```
+
+### Para Birimi (kurlar)
+```python
+bul("250,5 TL ve 99$ ile 1.250,75 usd harcadım")['kurlar']
+```
+
+---
+## Özellikler (Özet)
+- Türkçe isim / soyisim sözlükleri ve ünvan yakalama
+- Telefon numarası normalizasyonu (E.164 TR varsayılan)
+- Doğal dil tarih & saat: "yarın", "bugün", "akşam 8", tek başına saat
+- Tarih aralıkları: relative (önümüzdeki/geçen/bugün), gün-ay aralığı (3-5 Ocak), ay-ay (Mart - Nisan), çapraz (25 Aralık - 3 Ocak)
+- Lokasyon tetikleyici blokları (mahalle, cadde, sokak, no, kat, daire + sözlük)
+- Firma tespiti (sözlük + sonek heuristiği: Holding, A.Ş., Ltd, Ltd Şti, Anonim Şirketi, Şirketi, Firması...)
+- TCKN algoritmik doğrulama
+- TR IBAN (MOD 97) doğrulama
+- E-posta, URL tespiti
+- IP adresleri (IPv4 / IPv6 ipaddress doğrulaması)
+- UUID4 pattern
+- Ölçü/miktar çıkarımı (4kg, 3.5 lt, on kilo, iki yemek kaşığı...)
+- Para birimi çıkarımı (250 TL, 99$, 1.250,75 usd, 45€, 10 amerikan doları)
+
+---
+## Detaylı Açıklamalar
+### 1. İsim / Ünvan
+- `isimler.txt` + `soyisimler.txt` sözlükleri
+- Ünvan seti (Dr, Prof, Av vb.)
+- Çoklu ad + soyad zinciri
+
+### 2. Telefon
+- `phonenumbers` kullanır; boşluk/tire varyantları normalize
+- Maskeleme ile tarih çıkarım çakışması azaltılır
+
+### 3. Tarih & Saat
+- Türkçe doğal ifadeler normalize: "akşam 8" -> 20:00
+- Tek saat + tek tarih kombinasyonu birleştirilir
+
+### 4. Tarih Aralıkları
+- Relative: önümüzdeki hafta/ay/yıl, geçen, bu
+- Gün aralığı: 3-5 Ocak 2024
+- Ay aralığı: Mart - Nisan 2025
+- Çapraz: 25 Aralık - 3 Ocak
+- Çıktı: {"baslangic", "bitis"}
+
+### 5. Lokasyon
+- Regex tetikleyiciler + `lokasyon.txt` kelimeleri
+- Karakter aralığına göre segment birleştirme (gap <= 8)
+
+### 6. Firma
+- Sözlük eşleşmesi + sonek bazlı geri genişleme
+
+### 7. TCKN
+- 11 hane, ilk hane ≠ 0, 10. & 11. hane algoritması
+
+### 8. IBAN (TR)
+- 26 karakter, TR + 24 alfanumerik
+- MOD 97 parçalı hesap
+
+### 9. E-posta & URL
+- Basit sağlam regex kalıpları
+
+### 10. IP Adresi
+- Aday regex + `ipaddress.ip_address` doğrulaması
+
+### 11. UUID4
+- Versiyon alanı 4, varyant bitleri 8/9/a/b
+
+### 12. Ölçü / Miktar (olculer)
+- `olculer.txt` ilk alias kanonik
+- Sayı (1, 1.5, 2,5, 250gram) & kelime sayı (on kilo)
+
+### 13. Para Birimi (kurlar)
+- `kurlar.txt` ilk öğe ISO kodu
+- 250 TL, 99$, 1.250,75 usd, 10 amerikan doları
+- Karışık binlik/ondalık ayracı sezgisel normalize
+
+---
+## Sınırlamalar (Genel)
+- Yaklaşık/örnekleyici ifadeler (~, ≈, "yaklaşık") henüz işlenmiyor
+- Ölçülerde ve kurlarda aralık (3-5 kg, 10-12 USD) ayrıştırılmıyor
+- Çok karmaşık sayısal dil ("iki milyon yüz on üç bin") kısmen desteklenir
+- Lokasyonlar tam adres ayrıştırması değildir; tetikleyici bloklar
+
+---
+## Gelişmiş Kullanım
+```python
+from ayikla.extractor import TextEntityExtractor
+extr = TextEntityExtractor()
+print(extr.extract_all("on kilo un 250 TL"))
+```
+
+---
+## Sürüm Notları (Özet)
+- 1.1.17: tarih_aralik format sadeleştirme
+- 1.1.18: firmalar
+- 1.1.19: tckn
+- 1.1.20: iban
+- 1.1.21: emailler, websiteler
+- 1.1.22: ip_adresleri, uuid4
+- 1.1.23: olculer
+- 1.1.24: kurlar
+- 1.1.26: olculer performans (regex precompile)
+- 1.1.27: seçmeli çalıştırma parametreleri (sadece/aktif/pasif/include_meta)
+
+---
+## Lisans
+MIT
