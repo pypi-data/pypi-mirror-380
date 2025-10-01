@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: plink-pipelines
+Version: 0.8.3
+Summary: PLINK format genomics data processing pipelines
+Author: Arnor Sigurdsson
+Author-email: Arnor Sigurdsson <arnor-sigurdsson@users.noreply.github.com>
+Requires-Dist: luigi>=3.5.2
+Requires-Dist: aislib>=0.3.0
+Requires-Dist: numpy>=2.3.0
+Requires-Dist: numba>=0.62.0
+Requires-Dist: pyarrow>=18.0.0
+Requires-Dist: geno-reader>=0.1.0
+Requires-Python: >=3.11
