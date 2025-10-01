@@ -1,0 +1,12 @@
+currency_rates_cbr/__init__.py,sha256=-jDdvMKfgqRY_2fSrZHSPoJroQQcm9GcDR0Laos-WPg,362
+currency_rates_cbr/cli.py,sha256=3wEgdx3sn-WryvDNg10Xa441ffXRn3n1noDnuggDEpE,1440
+currency_rates_cbr/controller.py,sha256=IcBmYGOFWA0IfI96f_e5Dm6DLEu_fUnoK5oVoebTcZE,951
+currency_rates_cbr/database.py,sha256=5EMXHKcFqqw2wiVqwmswVdizXzwJNQp5DW5G7gevGTk,1811
+currency_rates_cbr/model.py,sha256=jNuV5qT9EYiGa_ENdZoRyoAoAu-DLfGRRKZEx_6mACs,2755
+currency_rates_cbr/view.py,sha256=Z9kQXPP4uuGolhvG-WSx34NDexX5W4zgis6wyYT5OTQ,1062
+currency_rates_cbr-1.0.0.dist-info/licenses/LICENSE,sha256=xKtiYi2bTv7Sg0tEPwdDdsgoGuQOsfT6mVF_K2YgcAs,97
+currency_rates_cbr-1.0.0.dist-info/METADATA,sha256=bw-f3ybcE4Xvvv9PW8sC7qpeNKd6YUBQEox2BB-h24I,939
+currency_rates_cbr-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+currency_rates_cbr-1.0.0.dist-info/entry_points.txt,sha256=44EPYPYA2C9BMkx--b6CkP-ns0uP-RulnheQ7DOshIg,63
+currency_rates_cbr-1.0.0.dist-info/top_level.txt,sha256=ctNl6aBU9Kl45aIAFqPt5skAa30pmjPpyJ4mkVZZ0ik,19
+currency_rates_cbr-1.0.0.dist-info/RECORD,,
