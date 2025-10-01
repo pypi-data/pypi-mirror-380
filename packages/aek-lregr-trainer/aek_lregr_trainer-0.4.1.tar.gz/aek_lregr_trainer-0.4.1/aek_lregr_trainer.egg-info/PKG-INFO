@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: aek-lregr-trainer
+Version: 0.4.1
+Summary: Automatic ANN/DNN Linear Regression and Classification Trainer
+Home-page: https://github.com/alpemre8/aek-lregr-trainer
+Author: Alp Emre Karaahmet
+Author-email: alpemrekaraahmet@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/alpemre8/aek-img-trainer/main/logo.png" alt="AEK Automatic ANN/DNN Linear Regression and Classification TrainerLogo" width="400"/>
+  
+  # AEK Automatic ANN/DNN Linear Regression and Classification Trainer
+  
+  AI Automatic ANN/DNN Linear Regression and Classification Library 
+</div>
