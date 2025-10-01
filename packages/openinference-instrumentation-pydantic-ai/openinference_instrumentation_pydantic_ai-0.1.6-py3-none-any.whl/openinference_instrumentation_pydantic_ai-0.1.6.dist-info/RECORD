@@ -1,0 +1,11 @@
+openinference/instrumentation/pydantic_ai/__init__.py,sha256=kRkgykpzhxd21b0hDjgPpIfQRu-VHry9VXfwAkhEGOA,358
+openinference/instrumentation/pydantic_ai/package.py,sha256=oouR5c-NIiN7o7SEOd1qbpkhS7qv-HmNGxU0e-PaJpA,67
+openinference/instrumentation/pydantic_ai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openinference/instrumentation/pydantic_ai/semantic_conventions.py,sha256=LeuwL2Etc6PSiXe07ekWA9u9F8n6ZYXuUzKTMl645ck,29291
+openinference/instrumentation/pydantic_ai/span_processor.py,sha256=ylPtpGzWRuZOWgqq2xnTtE1CNbpRiObuArIELIBgVjc,3249
+openinference/instrumentation/pydantic_ai/utils.py,sha256=cWFnClEjHVHp1YljepUtfrdzGBjI3gHnohWq5PHT5WE,696
+openinference/instrumentation/pydantic_ai/version.py,sha256=n3oM6B_EMz93NsTI18NNZd-jKFcUPzUkbIKj5VFK5ok,22
+openinference_instrumentation_pydantic_ai-0.1.6.dist-info/METADATA,sha256=XZ8zykw3WKz34EPXg1DUdL7bX4CNTeeIneKdxJNdEtQ,4923
+openinference_instrumentation_pydantic_ai-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openinference_instrumentation_pydantic_ai-0.1.6.dist-info/licenses/LICENSE,sha256=x_Y7OX-lWxSUhmKoivlrD6WN3jWlIHxdug8BJv2SI34,10870
+openinference_instrumentation_pydantic_ai-0.1.6.dist-info/RECORD,,
