@@ -1,0 +1,16 @@
+LICENSE
+README.md
+README_shepherd.md
+pyproject.toml
+shepherd/__init__.py
+shepherd/shepherd_launch.py
+shepherd_shrine.egg-info/PKG-INFO
+shepherd_shrine.egg-info/SOURCES.txt
+shepherd_shrine.egg-info/dependency_links.txt
+shepherd_shrine.egg-info/entry_points.txt
+shepherd_shrine.egg-info/top_level.txt
+tests/test_admin_service.py
+tests/test_firebase_connection.py
+tests/test_shepherd.py
+tests/test_shrine_adapter.py
+tests/test_smoke.py

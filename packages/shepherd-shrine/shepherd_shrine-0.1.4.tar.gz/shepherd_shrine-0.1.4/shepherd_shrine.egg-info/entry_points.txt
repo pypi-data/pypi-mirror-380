@@ -1,0 +1,2 @@
+[console_scripts]
+shepherd = shepherd.shepherd_launch:main
