@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include pyproject.toml
+recursive-include src/markdown_renderer *.py
+recursive-include src/markdown_renderer/templates *.html
+global-exclude *.pyc
+global-exclude __pycache__
