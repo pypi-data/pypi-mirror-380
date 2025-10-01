@@ -1,0 +1,8 @@
+jax/pyjit/__init__.py,sha256=w6K3NLjKO92aL3GNYWgC0VfO_JNMJJw-aGKIzPToOAU,2874
+jax/pyjit/activities.py,sha256=fdyGc6rz3MabPRrKY7U7Qitt5vGfqfRYGdR0r_OzX64,3079
+jax/pyjit/dao.py,sha256=x4YwtJZFZhNeZM-p466MSKX7zHUP72E_pUyTyWI01m0,3501
+jax/pyjit/worker.py,sha256=vt7YP78hAzHFOfwKWc3edAge4fGILMdlJ45LKbR86vQ,3798
+jax_pyjit-0.0.9.dist-info/LICENSE.txt,sha256=zPCfgvvBi-uDdgiAsNC-o5_qIGna2U94AnsGGZ7c1IA,11371
+jax_pyjit-0.0.9.dist-info/METADATA,sha256=s15QQmk3EBl8FH9OxT7GqWSF_y2gBz6OpLvdAqzJzlY,1280
+jax_pyjit-0.0.9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+jax_pyjit-0.0.9.dist-info/RECORD,,
