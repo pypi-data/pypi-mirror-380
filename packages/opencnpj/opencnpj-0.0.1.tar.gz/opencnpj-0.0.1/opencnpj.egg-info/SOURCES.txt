@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+opencnpj/__init__.py
+opencnpj/wrapper.py
+opencnpj.egg-info/PKG-INFO
+opencnpj.egg-info/SOURCES.txt
+opencnpj.egg-info/dependency_links.txt
+opencnpj.egg-info/requires.txt
+opencnpj.egg-info/top_level.txt

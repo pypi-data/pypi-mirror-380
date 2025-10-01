@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: opencnpj
+Version: 0.0.1
+Author: ofcoliva
+Author-email: ofcoliva@gmail.com
+License: MIT License
+Keywords: opencnpj api cnpj
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi==2025.8.3
+Requires-Dist: charset-normalizer==3.4.3
+Requires-Dist: docutils==0.22.2
+Requires-Dist: id==1.5.0
+Requires-Dist: idna==3.10
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.3.0
+Requires-Dist: keyring==25.6.0
+Requires-Dist: markdown-it-py==4.0.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.8.0
+Requires-Dist: nh3==0.3.0
+Requires-Dist: packaging==25.0
+Requires-Dist: pip_system_certs==5.2
+Requires-Dist: Pygments==2.19.2
+Requires-Dist: pywin32-ctypes==0.2.3
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: requests==2.32.5
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==14.1.0
+Requires-Dist: setuptools==80.9.0
+Requires-Dist: twine==6.2.0
+Requires-Dist: urllib3==2.5.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+
+# OpenCNPJ
+
+Biblioteca **Python** para integrar de maneira descomplicada com **[OpenCNPJ API](https://opencnpj.org/).**
+
+A base de dados usada estÃ¡ disponÃ­vel para download no site da receita, mas caso nÃ£o precise de altos limites de requisiÃ§Ã£o, a soluÃ§Ã£o via api pode atender sua aplicaÃ§Ã£o ou suas validaÃ§Ãµes de CNPJ.
+
+# DocumentaÃ§Ã£o OpenCNPJ
+
+Clique aqui para visualizar e tira dÃºvidas sobre os limites da api **[OpenCNPJ API](https://opencnpj.org/)**.
+
+# TÃ©cnologias Usadas
+
+Neste projeto foi usado requisiÃ§Ãµes sincronas, futuramente devo implementar assincronas e outras funcionalidades como limitador de requisiÃ§Ãµes para que nÃ£o estoure os limites do **opencnpj**
+
+## Como Instalar no seu ambinete de desenvolvimento Python:
+
+```
+pip install opencnpj
+```
+
+## Como usar
+
+```
+from opencnpj import OpenCNPJ
+
+o = OpenCNPJ()
+result = o.find_by_cnpj(cnpj="00.000.000/0001-91")
+print(result)
+
+```
