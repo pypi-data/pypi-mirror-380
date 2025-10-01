@@ -1,0 +1,5 @@
+[console_scripts]
+uutel = uutel.__main__:main
+
+[litellm.providers]
+codex = uutel.providers.codex:CodexCustomLLM
