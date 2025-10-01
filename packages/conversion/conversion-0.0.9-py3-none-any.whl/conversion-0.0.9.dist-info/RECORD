@@ -1,0 +1,13 @@
+conversion/__init__.py,sha256=WsRCRNKtJm86udj3ZuloWuAw4b3xnjUe5iLjBTXIHl4,146
+conversion/_version.py,sha256=X2FLFwBoUmgJPsOV-1l-SxIXNSTX1TQ036Kf2j9Mc68,704
+conversion/base64.py,sha256=X25OkNXqyMtoYR1emcxc2PW-gc_DtM0nvk_TTahuNvI,814
+conversion/boolean.py,sha256=ZgC2QpSTxSeopz87bq6OJUIAi1TMCA0c-eDHGMtcy60,365
+conversion/compat.py,sha256=BbPaSQIf93wLfxBGrwHq26RcWFr9VNoPbgF_arQDWZc,639
+conversion/delta.py,sha256=10nJAl_Y_DGEl8VOyhmuN2hoq9v_V6L2Jk1QCOrFIBE,876
+conversion/json.py,sha256=mfboIXYkZ-Uky-1f-KohWcGXzBpHapHq3pCTL_oKmZg,266
+conversion/list.py,sha256=HkxcikOZvGWMNfJwmsQQh_zoYQrE3ceqtO_Fro3tu9w,371
+conversion-0.0.9.dist-info/licenses/LICENSE,sha256=bcDgaNzzpbyOBUIFuFt3IOHUkmW7xkv1FdLPeRl99po,11323
+conversion-0.0.9.dist-info/METADATA,sha256=5Gq9I3xEVgquEFHgZNFrxuAK6WZ9oqVD2505ZXO02p8,15173
+conversion-0.0.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+conversion-0.0.9.dist-info/top_level.txt,sha256=Sy8nre_gACdGYf2JlaLYnxWjI4pDyb_q0fPVLiWFziA,11
+conversion-0.0.9.dist-info/RECORD,,
