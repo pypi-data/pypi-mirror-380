@@ -1,0 +1,14 @@
+LICENCE
+README.md
+pyproject.toml
+src/xmlKit.egg-info/PKG-INFO
+src/xmlKit.egg-info/SOURCES.txt
+src/xmlKit.egg-info/dependency_links.txt
+src/xmlKit.egg-info/entry_points.txt
+src/xmlKit.egg-info/top_level.txt
+src/xmlkit/__init__.py
+src/xmlkit/py.typed
+src/xmlkit/types.py
+tests/test_dicttoxml.py
+tests/test_preserve_cdata.py
+tests/test_xmltodict.py
