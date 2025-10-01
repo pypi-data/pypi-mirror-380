@@ -1,0 +1,17 @@
+version: 2
+distribution_spec:
+  description: Ragas evaluation provider for inline execution with Llama Stack
+  providers:
+    eval:
+    - provider_type: remote::trustyai_ragas
+      module: llama_stack_provider_ragas==0.2.1
+    inference:
+    - provider_type: remote::ollama
+    telemetry:
+    - provider_type: inline::meta-reference
+    datasetio:
+    - provider_type: inline::localfs
+    files:
+    - provider_type: inline::localfs
+image_type: venv
+image_name: trustyai_ragas_distro_default

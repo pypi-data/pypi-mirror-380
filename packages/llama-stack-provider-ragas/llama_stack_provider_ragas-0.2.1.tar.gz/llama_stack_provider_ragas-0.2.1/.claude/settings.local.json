@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(oc get routes:*)",
+      "Bash(oc get:*)",
+      "Bash(oc logs:*)",
+      "Bash(oc describe:*)",
+      "Bash(find:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
