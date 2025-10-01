@@ -1,0 +1,10 @@
+LICENSE
+README.md
+prefix_free_sorted_cowlist_set.py
+pyproject.toml
+setup.cfg
+prefix_free_sorted_cowlist_set.egg-info/PKG-INFO
+prefix_free_sorted_cowlist_set.egg-info/SOURCES.txt
+prefix_free_sorted_cowlist_set.egg-info/dependency_links.txt
+prefix_free_sorted_cowlist_set.egg-info/requires.txt
+prefix_free_sorted_cowlist_set.egg-info/top_level.txt
