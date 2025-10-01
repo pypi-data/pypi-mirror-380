@@ -1,0 +1,18 @@
+[console_scripts]
+agents = machineconfig.scripts.python.agents:main_from_parser
+choose_wezterm_theme = machineconfig.scripts.python.choose_wezterm_theme:main
+cloud_copy = machineconfig.scripts.python.cloud_copy:arg_parser
+cloud_mount = machineconfig.scripts.python.cloud_mount:arg_parser
+cloud_repo_sync = machineconfig.scripts.python.cloud_repo_sync:args_parser
+cloud_sync = machineconfig.scripts.python.cloud_sync:arg_parser
+croshell = machineconfig.scripts.python.croshell:arg_parser
+devops = machineconfig.scripts.python.devops:app
+fire = machineconfig.scripts.python.fire_jobs:main_from_parser
+ftpx = machineconfig.scripts.python.ftpx:main_from_parser
+initai = machineconfig.scripts.python.ai.initai:main
+kill_process = machineconfig.utils.procs:main
+mount_nfs = machineconfig.scripts.python.mount_nfs:main
+mount_nw_drive = machineconfig.scripts.python.mount_nw_drive:main
+sessions = machineconfig.scripts.python.sessions:main_from_parser
+start_slidev = machineconfig.scripts.python.start_slidev:arg_parser
+wifi_conn = machineconfig.scripts.python.wifi_conn:arg_parser
