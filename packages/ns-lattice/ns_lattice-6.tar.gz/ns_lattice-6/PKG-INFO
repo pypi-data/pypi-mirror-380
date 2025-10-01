@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ns_lattice
+Version: 6
+Summary: Algorithms for computing in Neron-Severi lattice
+Home-page: http://github.com/niels-lubbes/ns_lattice
+Author: Niels Lubbes
+License: MIT
+Keywords: Neron-Severi-lattice
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+License-File: LICENSE
+
+UNKNOWN
+
