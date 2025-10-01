@@ -1,0 +1,260 @@
+# tintap
+
+AI Audio Detection & Attribution Solutions - Python SDK
+
+## About
+
+tintap provides the most realistic audio AI detection platform. Over 1,000,000 creative minds use tintap to detect AI-generated audio and protect their content.
+
+## Installation
+
+```bash
+pip install tintap
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+import tintap
+
+# Create client
+client = tintap.create_client(
+    api_key='your-api-key-here',
+    endpoint='http://your-api-server.com/api'  # Optional, defaults to localhost:3005
+)
+
+# Analyze audio file
+try:
+    result = client.analyze_audio('./audio.mp3')
+    print('Analysis result:', result)
+except tintap.TintapError as e:
+    print('Analysis failed:', str(e))
+```
+
+### Advanced Usage
+
+```python
+from tintap import TintapClient
+from pathlib import Path
+
+# Initialize client with environment variable
+client = TintapClient()  # Uses TINTAP_API_KEY env var
+
+# Analyze from file path
+result = client.analyze_audio('/path/to/audio.mp3')
+
+# Analyze from Path object
+audio_path = Path('./music/song.wav') 
+result = client.analyze_audio(audio_path)
+
+# Analyze from bytes
+with open('./audio.mp3', 'rb') as f:
+    audio_data = f.read()
+    result = client.analyze_audio(audio_data, filename='audio.mp3')
+
+# Analyze from file object
+with open('./audio.mp3', 'rb') as f:
+    result = client.analyze_audio(f, filename='audio.mp3')
+```
+
+### Error Handling
+
+```python
+import tintap
+from tintap import TintapAPIError, TintapConnectionError, TintapAuthError
+
+client = tintap.create_client(api_key='your-key')
+
+try:
+    result = client.analyze_audio('./audio.mp3')
+    print(f"AI Detection: {result['result']['percentages']}")
+    
+except TintapAuthError:
+    print("Invalid API key")
+    
+except TintapConnectionError:
+    print("Failed to connect to API server")
+    
+except TintapAPIError as e:
+    print(f"API error: {e}")
+    
+except tintap.TintapError as e:
+    print(f"General error: {e}")
+```
+
+## Features
+
+- ✅ **AI-generated audio detection**
+- ✅ **Detailed segment analysis**  
+- ✅ **Vocal segment classification**
+- ✅ **Real-time analysis**
+- ✅ **Multiple audio format support** (FLAC, MP3, WAV, OGG)
+- ✅ **Multiple input types** (file paths, Path objects, bytes, file objects)
+- ✅ **Comprehensive error handling**
+- ✅ **Type hints** for better IDE support
+- ✅ **Environment variable support**
+
+## API Reference
+
+### TintapClient
+
+Main client class for interacting with the tintap API.
+
+#### Constructor
+
+```python
+TintapClient(
+    api_key: Optional[str] = None,
+    endpoint: str = "http://localhost:3005/api",
+    timeout: int = 120
+)
+```
+
+**Parameters:**
+- `api_key` (str, optional) - Your tintap API key. If not provided, looks for `TINTAP_API_KEY` env var.
+- `endpoint` (str) - API endpoint URL. Defaults to localhost:3005.
+- `timeout` (int) - Request timeout in seconds. Defaults to 120.
+
+#### Methods
+
+##### analyze_audio()
+
+```python
+analyze_audio(
+    audio_file: Union[str, Path, BinaryIO, bytes],
+    filename: Optional[str] = None
+) -> Dict[str, Any]
+```
+
+Analyzes an audio file for AI-generated content detection.
+
+**Parameters:**
+- `audio_file` - Path to audio file, Path object, file object, or bytes data
+- `filename` (str, optional) - Filename for the audio file (required when passing bytes/file object)
+
+**Returns:** Dictionary with analysis results
+
+**Raises:**
+- `TintapAuthError` - If API key is invalid
+- `TintapValidationError` - If input parameters are invalid  
+- `TintapAPIError` - If API returns an error
+- `TintapConnectionError` - If connection fails
+
+##### get_analysis()
+
+```python
+get_analysis(analysis_id: str) -> Dict[str, Any]
+```
+
+Gets analysis results by ID (for future async processing).
+
+##### get_info()
+
+```python
+get_info() -> Dict[str, Any]
+```
+
+Gets API information and supported features.
+
+##### test_connection()
+
+```python
+test_connection() -> bool
+```
+
+Tests connection to the API server. Returns `True` if successful.
+
+### Helper Functions
+
+#### create_client()
+
+```python
+create_client(
+    api_key: Optional[str] = None,
+    endpoint: str = "http://localhost:3005/api",
+    timeout: int = 120
+) -> TintapClient
+```
+
+Creates a new tintap client instance.
+
+## Environment Variables
+
+- `TINTAP_API_KEY` - Your tintap API key
+
+## Supported Audio Formats
+
+- 🎵 MP3, WAV, FLAC, OGG, AAC and more
+
+## Examples
+
+### Batch Processing
+
+```python
+import tintap
+from pathlib import Path
+
+client = tintap.create_client(api_key='your-key')
+
+audio_files = Path('./music').glob('*.mp3')
+
+for audio_file in audio_files:
+    try:
+        result = client.analyze_audio(audio_file)
+        ai_percentage = result['result']['percentages']['ai']
+        print(f"{audio_file.name}: {ai_percentage:.1f}% AI")
+    except Exception as e:
+        print(f"Failed to analyze {audio_file.name}: {e}")
+```
+
+### Web Integration
+
+```python
+from flask import Flask, request, jsonify
+import tintap
+
+app = Flask(__name__)
+client = tintap.create_client()
+
+@app.route('/analyze', methods=['POST'])
+def analyze_audio():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file provided'}), 400
+    
+    file = request.files['file']
+    
+    try:
+        result = client.analyze_audio(file, filename=file.filename)
+        return jsonify(result)
+    except tintap.TintapError as e:
+        return jsonify({'error': str(e)}), 500
+```
+
+## Development
+
+### Installing from source
+
+```bash
+git clone https://github.com/tintap/tintap-python.git
+cd tintap-python
+pip install -e .
+```
+
+### Running tests
+
+```bash
+pip install -e ".[dev]"
+pytest
+```
+
+## Support
+
+- **Website:** https://tintap.ai
+- **Email:** contact@tintap.ai
+- **Documentation:** https://docs.tintap.ai
+
+## License
+
+MIT License

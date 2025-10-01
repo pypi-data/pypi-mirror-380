@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+tintap/__init__.py
+tintap/client.py
+tintap/exceptions.py
+tintap.egg-info/PKG-INFO
+tintap.egg-info/SOURCES.txt
+tintap.egg-info/dependency_links.txt
+tintap.egg-info/not-zip-safe
+tintap.egg-info/requires.txt
+tintap.egg-info/top_level.txt
