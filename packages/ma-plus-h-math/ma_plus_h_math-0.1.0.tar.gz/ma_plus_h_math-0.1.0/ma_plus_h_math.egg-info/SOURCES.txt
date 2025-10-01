@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ma+h/__init__.py
+ma_plus_h_math.egg-info/PKG-INFO
+ma_plus_h_math.egg-info/SOURCES.txt
+ma_plus_h_math.egg-info/dependency_links.txt
+ma_plus_h_math.egg-info/top_level.txt
+meth/__init__.py
+meth/math_functions.py
