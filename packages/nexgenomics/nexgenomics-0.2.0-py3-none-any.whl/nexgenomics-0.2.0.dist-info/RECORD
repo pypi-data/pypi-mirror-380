@@ -1,0 +1,9 @@
+nexgenomics/__init__.py,sha256=QAL-RA2sDo16IvVVybiGArcU_tBo7TZRuLvemlUTqy8,122
+nexgenomics/agentstore.py,sha256=-aHskEvwRrE2fwUgFoj10d39vbr8VsC-knSesXd-9PE,1051
+nexgenomics/threads.py,sha256=K5j-pptm1ZqBeerEelP4r9XDsekhQkNXWtVxZ8ItLvo,3383
+nexgenomics/webhook.py,sha256=dR4xaHYOjVQeRredKHskEhPWO7JjmwTdplyC_0tw-HQ,130
+nexgenomics-0.2.0.dist-info/licenses/LICENSE,sha256=8ZlbGJmkZEMxAnOswavRISIm5QnJ2BOU5AngkkwIsIE,1498
+nexgenomics-0.2.0.dist-info/METADATA,sha256=xt5z-nCW1cXGdyu7NdXbmoJ_BEivg4dG8XsSf0ttBI0,596
+nexgenomics-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+nexgenomics-0.2.0.dist-info/top_level.txt,sha256=6Vd5FvVSelOdEAj0LarHJLN7NPMAXiUq74OqQVbXmyg,12
+nexgenomics-0.2.0.dist-info/RECORD,,
