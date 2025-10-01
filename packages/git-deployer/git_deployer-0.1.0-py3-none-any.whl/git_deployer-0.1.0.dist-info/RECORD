@@ -1,0 +1,12 @@
+git_deployer/__init__.py,sha256=TcGQSu3HkJLoAVk67OXM5dRR1EWOu2W4A-Y-yeyEaLc,225
+git_deployer/__main__.py,sha256=USa8WB1zIGznBmZXIRjj0sc6oN5yotII58MILgpIsf0,62
+git_deployer/configutils.py,sha256=k_7Ty5t5HzG1QoGGSk2shLTb_24NO23uvOEUwHpa5M0,1083
+git_deployer/gitdeploy.py,sha256=RdHkPvgRgb51tDDZyZ94FQ4UVEImBrs0rB86goMIkfI,2981
+git_deployer/gitutils.py,sha256=4_5v81gy0_CMJX5yfgIlThztlEUeatMmZznoGrDSsFI,8056
+git_deployer/pathutils.py,sha256=V9tC1e9Oa7cYF_z4zDZRAolo9g46B_tBr0vU30P4e1A,760
+git_deployer-0.1.0.dist-info/licenses/LICENSE,sha256=sHvvcu_g7cb-1E6wqTbw9ba3bzkrBBK8pFlisBLwFCU,1096
+git_deployer-0.1.0.dist-info/METADATA,sha256=-d3MtySzLsi7s1ZWNn7Oq5kal73GcVQssOrup-PHPBE,4244
+git_deployer-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+git_deployer-0.1.0.dist-info/entry_points.txt,sha256=rBX1_A8g_mgmLIQWiiwxMlPYYTERIHXkyeKNAqj-nMc,45
+git_deployer-0.1.0.dist-info/top_level.txt,sha256=fqnrUDwXvuw8A9yI165IB86hOePK1a4wqXS2Cjfbq0Y,13
+git_deployer-0.1.0.dist-info/RECORD,,
