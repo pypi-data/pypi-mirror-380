@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "gandi",
+  "version": "2.1.0-alpha.1759259585",
+  "server": "github://api.github.com/pulumiverse"
+}
