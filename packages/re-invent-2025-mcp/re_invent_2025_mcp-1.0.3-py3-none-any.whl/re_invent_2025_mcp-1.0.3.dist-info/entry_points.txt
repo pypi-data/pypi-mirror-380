@@ -1,0 +1,2 @@
+[console_scripts]
+re-invent-2025-mcp = reinvent_2025_mcp.main:main
