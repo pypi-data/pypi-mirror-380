@@ -1,0 +1,266 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xlib-pillars"
+version = "1.0.0"
+description = "xlib-pillars: A comprehensive library ecosystem with modular pillars for modern Python development"
+readme = "README.md"
+authors = [
+    {name = "xlibrary", email = "contact@xlibrary.dev"}
+]
+license = {text = "MIT"}
+keywords = ["xlib-pillars", "xlibrary", "ecosystem", "ai", "config", "pillars", "claude", "openai", "deepseek", "media", "download", "encryption", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+requires-python = ">=3.8"
+dependencies = [
+    # Core xlibrary with minimal dependencies
+    "requests>=2.28.0",
+    "typing-extensions>=4.0.0; python_version<'3.10'"
+]
+
+[project.optional-dependencies]
+# AI Pillar - Complete AI provider ecosystem
+ai = [
+    "anthropic>=0.25.0",
+    "openai>=1.0.0",
+    "tiktoken>=0.4.0"
+]
+
+# Individual AI providers
+claude = ["anthropic>=0.25.0"]
+openai = ["openai>=1.0.0", "tiktoken>=0.4.0"]
+deepseek = ["openai>=1.0.0", "tiktoken>=0.4.0"]
+
+# CONFIG Pillar - Configuration management with TOML + OmegaConf
+config = [
+    "omegaconf>=2.3.0",
+    "toml>=0.10.2",
+    "tomli>=2.0.1;python_version<'3.11'"
+]
+
+# DOWNLOAD Pillar - Advanced download manager with multi-content support
+download = [
+    "yt-dlp>=2023.12.30",
+    "rich>=13.0.0",
+    "tqdm>=4.65.0",
+    "aiohttp>=3.8.0",
+    "aiofiles>=0.8.0"
+]
+
+# MEDIA Pillar - Advanced media processing (video, image, watermarking)
+media = [
+    "Pillow>=10.0.0",     # Image processing
+    "numpy>=1.24.0",      # Array operations
+    "moviepy>=1.0.3",     # Video processing
+    "opencv-python>=4.7.0"  # Computer vision
+]
+
+# ENCRYPTION Pillar - Comprehensive encryption and security utilities
+encryption = [
+    "cryptography>=41.0.0"  # Modern cryptographic library
+]
+
+# FILES Pillar - Comprehensive file and directory management
+files = [
+    "python-magic>=0.4.27",
+    "python-magic-bin>=0.4.14;platform_system=='Windows'"
+]
+
+# IMPORTS Pillar - Advanced file import management system
+imports = [
+    "python-magic>=0.4.27",
+    "python-magic-bin>=0.4.14;platform_system=='Windows'",
+    "watchdog>=3.0.0"
+]
+
+# PIPELINE Pillar - Universal pipeline management system
+pipeline = [
+    "pydantic>=2.0.0"
+]
+
+# CLI Pillar - Professional command-line interface framework
+cli = [
+    "click>=8.0.0",
+    "rich>=13.0.0"
+]
+
+# Install all pillars
+all = [
+    # AI pillar dependencies
+    "anthropic>=0.25.0",
+    "openai>=1.0.0",
+    "tiktoken>=0.4.0",
+    # CONFIG pillar dependencies
+    "omegaconf>=2.3.0",
+    "toml>=0.10.2",
+    "tomli>=2.0.1;python_version<'3.11'",
+    # DOWNLOAD pillar dependencies
+    "yt-dlp>=2023.12.30",
+    "rich>=13.0.0",
+    "tqdm>=4.65.0",
+    "aiohttp>=3.8.0",
+    "aiofiles>=0.8.0",
+    # MEDIA pillar dependencies
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "moviepy>=1.0.3",
+    "opencv-python>=4.7.0",
+    # ENCRYPTION pillar dependencies
+    "cryptography>=41.0.0",
+    # FILES pillar dependencies
+    "python-magic>=0.4.27",
+    "python-magic-bin>=0.4.14;platform_system=='Windows'",
+    # IMPORTS pillar dependencies
+    "python-magic>=0.4.27",
+    "python-magic-bin>=0.4.14;platform_system=='Windows'",
+    "watchdog>=3.0.0",
+    # PIPELINE pillar dependencies
+    "pydantic>=2.0.0",
+    # CLI pillar dependencies
+    "click>=8.0.0"
+]
+
+# Development dependencies
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.991",
+    "twine>=4.0.0",
+    "build>=0.10.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/ileswade/xlibrary"
+Repository = "https://github.com/ileswade/xlibrary"
+Documentation = "https://github.com/ileswade/xlibrary/blob/main/README.md"
+"Bug Reports" = "https://github.com/ileswade/xlibrary/issues"
+
+[tool.setuptools]
+packages = [
+    "xlibrary",
+    "xlibrary.ai",
+    "xlibrary.ai.core",
+    "xlibrary.ai.health",
+    "xlibrary.ai.limits",
+    "xlibrary.ai.logging",
+    "xlibrary.ai.metrics",
+    "xlibrary.ai.providers",
+    "xlibrary.ai.session",
+    "xlibrary.ai.testing",
+    "xlibrary.config",
+    "xlibrary.config.core",
+    "xlibrary.config.encryption",
+    "xlibrary.config.interpolation",
+    "xlibrary.config.loaders",
+    "xlibrary.download",
+    "xlibrary.download.core",
+    "xlibrary.download.metrics",
+    "xlibrary.download.strategies",
+    "xlibrary.encryption",
+    "xlibrary.encryption.core",
+    "xlibrary.files",
+    "xlibrary.files.core",
+    "xlibrary.imports",
+    "xlibrary.imports.core",
+    "xlibrary.imports.core.imports",
+    "xlibrary.media",
+    "xlibrary.media.core",
+    "xlibrary.media.animation",
+    "xlibrary.media.watermark",
+    "xlibrary.pipeline",
+    "xlibrary.pipeline.core",
+    "xlibrary.cli",
+    "xlibrary.cli.core",
+    "xlibrary.cli.interactive",
+    "xlibrary.cli.ui",
+    "xlibrary.communication",
+    "xlibrary.communication.core",
+    "xlibrary.communication.email",
+    "xlibrary.communication.email.core",
+    "xlibrary.communication.email.providers",
+    "xlibrary.communication.cli"
+]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.package-data]
+xlibrary = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | support
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = "xlibrary.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=src/xlibrary --cov-report=html --cov-report=term-missing -v"
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/xlibrary"]
+omit = ["*/tests/*", "*/test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:"
+]

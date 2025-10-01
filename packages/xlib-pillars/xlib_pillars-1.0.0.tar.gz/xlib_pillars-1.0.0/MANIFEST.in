@@ -1,0 +1,48 @@
+# Include essential package files
+include README.md
+include LICENSE
+include pyproject.toml
+
+# Include core package
+recursive-include ai_provider *.py
+include ai_provider/py.typed
+
+# Exclude test files from distribution
+recursive-exclude ai_provider/tests *
+recursive-exclude tests *
+
+# Exclude development files
+exclude docs/*
+recursive-exclude docs *
+exclude examples/*
+recursive-exclude examples *
+
+# Exclude build artifacts
+exclude *.txt
+exclude *_validation_*.txt
+exclude *_comprehensive_*.txt
+exclude *_demo.py
+exclude keys.txt
+exclude CLAUDE.md
+
+# Exclude version control and IDE files
+exclude .gitignore
+exclude .git/*
+recursive-exclude .git *
+exclude .vscode/*
+recursive-exclude .vscode *
+exclude .idea/*
+recursive-exclude .idea *
+
+# Exclude Python cache files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude .pytest_cache
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# Exclude OS files
+global-exclude .DS_Store
+global-exclude Thumbs.db
