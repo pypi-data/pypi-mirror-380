@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/sinapsis_huggingface_hub/__init__.py
+src/sinapsis_huggingface_hub.egg-info/PKG-INFO
+src/sinapsis_huggingface_hub.egg-info/SOURCES.txt
+src/sinapsis_huggingface_hub.egg-info/dependency_links.txt
+src/sinapsis_huggingface_hub.egg-info/requires.txt
+src/sinapsis_huggingface_hub.egg-info/top_level.txt
+src/sinapsis_huggingface_hub/helpers/__init__.py
+src/sinapsis_huggingface_hub/helpers/tags.py
+src/sinapsis_huggingface_hub/templates/__init__.py
+src/sinapsis_huggingface_hub/templates/huggingface_downloader.py

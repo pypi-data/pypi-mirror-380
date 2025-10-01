@@ -1,0 +1,8 @@
+huggingface-hub>=0.34.4
+sinapsis>=0.2.22
+
+[all]
+sinapsis-huggingface-hub[hf-xet]
+
+[hf-xet]
+huggingface-hub[hf-xet]>=0.34.4
