@@ -1,0 +1,14 @@
+inspectr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inspectr/__main__.py,sha256=Rojob_KTdzcHjItkGgA3TPLqPd223pIfeajpCWDP3Gc,652
+inspectr/authenticity.py,sha256=fgKJSE_1qYE1NgLdXmOjPQjo-dwD42sEhqpcsazIj3U,1703
+inspectr/bare_ratio.py,sha256=oQfag96zjGnmFHofZ5qabBGGVoKUnmRNzGq_WX_8ZZg,1997
+inspectr/count_exceptions.py,sha256=UhUc3ZZY8eDxLtlLX1USKzP_JEPY3clx8R8TPvtQ5LE,1588
+inspectr/duplicates.py,sha256=3uCZkHlS2uEmCy_cPK9NBpq6NPS07adTf7d0hIPyuRY,1476
+inspectr/size_counts.py,sha256=Yw-k5v7lPylzfh-9SUs1PtlV3Bhvdy9X7w2Pi93xL9g,2920
+inspectr/with_open.py,sha256=qbCAb14cZ15yX7SbLo2C3nE1sDEKLiZ48bvFQfTAKJk,606
+inspectr-0.0.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+inspectr-0.0.3.dist-info/METADATA,sha256=C_IkQpYnGMiAAUZ9xUb7dYGgE0RlWU3YKVZ6_41N1Xw,1573
+inspectr-0.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+inspectr-0.0.3.dist-info/entry_points.txt,sha256=IrOM4SpCRfFZzBWngg3ezXuX31ZqFBR-flSU5c8tbTo,52
+inspectr-0.0.3.dist-info/top_level.txt,sha256=NlTFBMaWgYmxFzjQtp4Y6itVQQV8sBPtAAZvFnviT-A,9
+inspectr-0.0.3.dist-info/RECORD,,
