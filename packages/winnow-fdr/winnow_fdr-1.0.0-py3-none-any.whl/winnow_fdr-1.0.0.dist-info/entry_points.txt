@@ -1,0 +1,2 @@
+[console_scripts]
+winnow = winnow.scripts.main:app
