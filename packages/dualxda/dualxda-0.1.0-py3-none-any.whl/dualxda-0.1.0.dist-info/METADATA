@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: dualxda
+Version: 0.1.0
+Summary: A library for DualXDA: a state-of-the-art data attribution method for classification
+Author-email: Galip Umit Yolcu <galip.uemit.yolcu@hhi.fraunhofer.de>, Moritz Weckbecker <moritz.weckbecker@hhi.fraunhofer.de>
+License: BSD-3-Clause-Clear
+Project-URL: License, https://spdx.org/licenses/BSD-3-Clause-Clear.html
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: torchvision
+Requires-Dist: zennit
+Requires-Dist: matplotlib
+Requires-Dist: dualxda_skl
+Dynamic: license-file
