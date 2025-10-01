@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: cactus_client
+Version: 0.0.1
+Summary: Tools for evaluating a CSIP Aus server implementation via a virtual client
+License-File: LICENSE
+Requires-Dist: cactus-test-definitions>=1.0.0
+Requires-Dist: envoy-schema>=0.27.0
+Requires-Dist: rich<15,>=14.1.0
+Requires-Dist: treelib<2,>=1.8.0
+Requires-Dist: aiohttp<4,>=3.11.12
+Requires-Dist: pyyaml<7,>=6.0.2
+Requires-Dist: dataclass-wizard<1,>=0.35.0
+Requires-Dist: pydantic_xml[lxml]<3,>=2.11.7
+Requires-Dist: reportlab<5,>=4.4.1
+Provides-Extra: dev
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: flake8-bugbear; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-PyYAML; extra == "dev"
+Requires-Dist: lxml-stubs; extra == "dev"
+Requires-Dist: types-reportlab; extra == "dev"
+Provides-Extra: test
+Requires-Dist: assertical; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-aiohttp; extra == "test"
+Requires-Dist: freezegun; extra == "test"
+Requires-Dist: cryptography; extra == "test"
+Dynamic: license-file
