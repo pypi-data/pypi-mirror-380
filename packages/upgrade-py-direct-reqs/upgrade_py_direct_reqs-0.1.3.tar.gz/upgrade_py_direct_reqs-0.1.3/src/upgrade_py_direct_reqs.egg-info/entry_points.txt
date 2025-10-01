@@ -1,0 +1,2 @@
+[console_scripts]
+upgrade-py-direct-reqs = upgrade_py_direct_reqs.cli:main
