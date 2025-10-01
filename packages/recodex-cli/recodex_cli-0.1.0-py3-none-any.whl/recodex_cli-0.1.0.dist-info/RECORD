@@ -1,0 +1,17 @@
+recodex_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recodex_cli/__main__.py,sha256=Rc9r6VDky258lQO4kB1p6wR-tdJR-8IqJxCfh11ydWo,37
+recodex_cli/console.py,sha256=qvNnuF-bmfCS8bm6uFoBzNv1uWErRiqr4hIYHPJIKF0,5668
+recodex_cli/call_command/command.py,sha256=eqikCpDEGtLyAV_U0ThEcfqRekllQqt1NnfkbtrjN7s,7455
+recodex_cli/call_command/command_state.py,sha256=g9R2PIgDzgMw7ShUfYa1XWaGhbxcK4a8HM6I0DrWas0,582
+recodex_cli/call_command/help_printer.py,sha256=MoYqiHbwkhe80-bIhtH5cUhJrhABlRY8GmX9YsOjVHM,3934
+recodex_cli/call_command/response_printer.py,sha256=ZxAJphTRc8yGkCP-mErrS90Zsi0iM8AOPwjd7MNkyzw,1231
+recodex_cli/plugins/file_plugins.py,sha256=QxCgbkTnVq8NEmurb7mhwlcItj585XXVY4LcAMtdxSI,1917
+recodex_cli/plugins/info_plugins.py,sha256=IxLRNttpuweVw1c-aQuziKJXMhyRTYIApfmy0ZvXMWc,428
+recodex_cli/utils/client_factory.py,sha256=rKifqw0JhZkQDs138j808wOjY7c4kr0LGRSwrpPkEIw,3391
+recodex_cli/utils/cmd_utils.py,sha256=Ri7LxVD2NX_EQKCAvKgoSn7-CAuhWWPzhLW6sdI2Ov4,3489
+recodex_cli/utils/login_info.py,sha256=gQqHOQ8BnGkJT8fq6fZoOUtDi5GlieJov1rEM0iQ8NI,657
+recodex_cli-0.1.0.dist-info/licenses/LICENSE,sha256=qxTU7gpiRla6XTIyDUEaAPJqx6dHNzY8-FxOIQUyQLw,1071
+recodex_cli-0.1.0.dist-info/METADATA,sha256=ObHMLjFv6PTZVK9UgnbAxElozoTNkHTz9DYhyV5n6BM,6990
+recodex_cli-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+recodex_cli-0.1.0.dist-info/top_level.txt,sha256=Rb97rIGDrUKI1AbhVpI_V-D92CA393il5umr-URA8nI,12
+recodex_cli-0.1.0.dist-info/RECORD,,
