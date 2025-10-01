@@ -1,0 +1,10 @@
+rfp_betterment_analyzer/__init__.py,sha256=iHKrT931HsusJGfUUL0Z-iAMNZ9l-D7iIW31VLr-6yI,140
+rfp_betterment_analyzer/analyzer.py,sha256=z0igUljrg4IVL-3XrsKYZpmuwIxSIqnH4Fm5pbtDSo0,5503
+rfp_betterment_analyzer/cli.py,sha256=si6oK-2UNX9tBpkTCNz_IukeWM2FW1ohaHQxKjwdiFs,9787
+rfp_betterment_analyzer/models.py,sha256=gjq9UcXCXxB2O6JHTLxGKUfyzpbT1Hnj_TgdFJU_zaQ,6800
+rfp_betterment_analyzer/utils.py,sha256=E5OS0J27gqEXcu1U0Hh6Cy4I_yBNVyonk3OKMx9iS9c,17367
+rfp_betterment_analyzer-1.0.0.dist-info/METADATA,sha256=eQdcLr1CGf7L4wIAFJkc8wpBNTRoVD0b7fb7hsLcz-I,7886
+rfp_betterment_analyzer-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+rfp_betterment_analyzer-1.0.0.dist-info/entry_points.txt,sha256=TNMowgi7_ESlbkxiQmz0QGEhHxCslsRi9uWt1fGMT7A,43
+rfp_betterment_analyzer-1.0.0.dist-info/top_level.txt,sha256=KAz60O_ZfHBPlMJVPrADvQTolBOZ56b3ydgbbCnpmtY,24
+rfp_betterment_analyzer-1.0.0.dist-info/RECORD,,
