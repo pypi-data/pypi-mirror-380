@@ -1,0 +1,9 @@
+marple/__init__.py,sha256=5J4hO2I_jEKkDTASob61ZuOaP9Lc9Ok2V94-s9_Y2ZE,118
+marple/db.py,sha256=tTw4s8EdaH_vqmKqvkBM2zYrNzxT804oOxc7G33pWP4,12560
+marple/files.py,sha256=VCzrUo7a_12KUUOKznKRg4E3T0VS6sKMRmuH8d2mzYI,5631
+marple/insight.py,sha256=5w6clWqQCms-qgz3FutoipTjSfGpj29C2690zm_t-2M,4007
+marple/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marpledata-2.2.0.dist-info/LICENSE,sha256=fRwEDTmrp-L8eMovf7qPw29AVRylNVps-SZFoaQXWgU,568
+marpledata-2.2.0.dist-info/METADATA,sha256=xsqPd6NKBxHl5olOD50q4vBurV-SuHYXkrm-H3XC5G0,5016
+marpledata-2.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+marpledata-2.2.0.dist-info/RECORD,,
