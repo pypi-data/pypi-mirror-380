@@ -1,0 +1,40 @@
+# stackifier
+
+Minimal demo of PyPI package.
+
+## Installation
+
+```bash
+pip install stackifier
+```
+
+## Usage
+
+```python
+from stackifier import hi
+print(hi("Bryan"))
+```
+
+## Build & Publish
+
+1. Install build tools:
+```bash
+python -m pip install build twine
+```
+
+2. Build the package:
+```bash
+python -m build
+```
+
+3. Upload to PyPI:
+```bash
+python -m twine upload dist/*
+```
+
+## Test Locally
+
+Before publishing, you can test locally:
+```bash
+pip install -e .
+```

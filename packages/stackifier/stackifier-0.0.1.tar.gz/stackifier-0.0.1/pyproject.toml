@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stackifier"
+version = "0.0.1"
+description = "Minimal hello-world package"
+readme = "README.md"
+authors = [ {name="BryanTheLai", email="owner@bryanslab.com"} ]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = []
