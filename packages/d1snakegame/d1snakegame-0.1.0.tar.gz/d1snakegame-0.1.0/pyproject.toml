@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d1snakegame"
+version = "0.1.0"
+description = "A simple snake game in Python using pygame"
+authors = [{ name="Your Name" }]
+dependencies = ["pygame"]
+
+[project.scripts]
+d1snake = "d1snake.__main__:run"
