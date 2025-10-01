@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orchestrator-logger"
+version = "1.0.1"
+description = "A simple logger for orchestrator API"
+authors = [{name = "Orchestrator Robot Logger", email = "tech-support@kineticstaff.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = ["requests"]
+requires-python = ">=3.7"
