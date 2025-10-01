@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h0rn3t_sp1d3r"
+version = "0.1.0"
+description = "WP CMS Backdoors scanner module"
+authors = [
+    {name="H0rn3t Sp1d3r", email="h0rn3t.sp1d3rs@gamil.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["build_env"]
