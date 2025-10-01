@@ -1,0 +1,26 @@
+[project]
+name = "ygg-torrent-mcp-fastmcp"
+version = "1.8.2"
+description = "Ygg Torrent MCP Server"
+authors = [{ name = "philogicae" }]
+requires-python = ">=3.10,<4.0"
+readme = "README.md"
+license = "MIT"
+dependencies = ["bencodepy", "requests", "fastmcp", "fastapi"]
+
+[project.urls]
+Homepage = "https://github.com/fastmcp-me/ygg-torrent-mcp#readme"
+Repository = "https://github.com/fastmcp-me/ygg-torrent-mcp.git"
+Issues = "https://github.com/fastmcp-me/ygg-torrent-mcp/issues"
+[project.scripts]
+ygg-torrent-mcp = "ygg_torrent.__main__:cli"
+
+[dependency-groups]
+dev = ["ruff", "pytest", "pytest-asyncio", "mypy"]
+
+[tool.hatch.build]
+include = ["ygg_torrent"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
