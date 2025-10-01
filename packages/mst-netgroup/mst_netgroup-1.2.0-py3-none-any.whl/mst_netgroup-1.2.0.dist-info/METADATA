@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mst-netgroup
+Version: 1.2.0
+Summary: A collection of utilities to interact with netgroups.
+Author-email: Missouri University of Science and Technology - Information Technology <it-ai@mst.edu>
+Requires-Python: >=3.11
+Requires-Dist: mst-core
+Requires-Dist: mst-simplerpc >=1.2.0
+Requires-Dist: cachetools
+
