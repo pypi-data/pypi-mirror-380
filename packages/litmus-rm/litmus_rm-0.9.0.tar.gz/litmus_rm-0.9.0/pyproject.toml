@@ -1,0 +1,41 @@
+
+[project]
+name = "litmus-rm"
+version = "0.9.0"
+authors = [
+  { name="Hugh McDougall", email="hughmcdougallemail@gmail.com" },
+]
+description = "JAX-based lag recovery for AGN reverberation mapping"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  'jax==0.4.31',
+  'jaxlib>=0.4.31',
+  'jaxopt>=0.8.3',
+  'numpyro>=0.15.3',
+  'tinygp>=0.3.0',
+  'matplotlib>=3.9.2',
+  'numpy>=1.26.4',
+  'scikit-learn>1.5.2',
+  'scipy>=1.14.1',
+  'chainconsumer>=1.1.2',
+  'typing>=2.50',
+  'ipython>=8.29.0',
+  'nptyping>=2.5.0',
+]
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+packages = ["litmus"]
+
+[project.optional-dependencies]
+jaxns = ["etils", "tensorflow_probability", "jaxns"]
+
+[project.urls]
+repository = "https://github.com/HughMcDougall/LITMUS"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
