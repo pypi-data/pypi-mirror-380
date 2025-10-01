@@ -1,0 +1,18 @@
+syntax: glob
+*.egg-info
+*.mo
+*.pyc
+.devenv*
+.idea
+.installed.cfg
+.pre-commit-config.yaml
+.vscode/
+/eggs
+/bin
+/buildout-cache
+/develop-eggs
+/dist
+/parts
+/robot_*
+/test_*
+devenv.local.nix
