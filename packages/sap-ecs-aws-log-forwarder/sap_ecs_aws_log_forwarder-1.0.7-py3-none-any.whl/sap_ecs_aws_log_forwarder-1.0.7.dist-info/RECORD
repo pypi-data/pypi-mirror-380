@@ -1,0 +1,10 @@
+sap_ecs_aws_log_forwarder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sap_ecs_aws_log_forwarder/config.py,sha256=CYrV4IKNQAzePM-jq-nFZT7hXSJFOnMH4BHvJ_wduio,4031
+sap_ecs_aws_log_forwarder/log_processor.py,sha256=3YAYo7n5SIgyddLZNNgxrMnNw0jaI36nVRfJZPgXw74,3164
+sap_ecs_aws_log_forwarder/message_processing.py,sha256=hdIyWU9K09FQvFCgU8uYlK3oXI9Fp_lBV9Qm6RSFlxQ,7283
+sap_ecs_aws_log_forwarder/queue_consumer.py,sha256=2zz3ThxVZAYtrYZhqjwlrA27LaqgeOG9EEao3YBmGwo,3931
+sap_ecs_aws_log_forwarder-1.0.7.dist-info/LICENSE,sha256=RTHTDJe35fXCEJkg3wT9DHAO8QQZWRNd9NELcyj4jN0,13528
+sap_ecs_aws_log_forwarder-1.0.7.dist-info/METADATA,sha256=NB36lH9w8SrC7yJv3mabjkmfuQRh7fB4DjV9gyM6EWw,10370
+sap_ecs_aws_log_forwarder-1.0.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sap_ecs_aws_log_forwarder-1.0.7.dist-info/entry_points.txt,sha256=ZgTAtsRa2a78_yXQQhnn1WU5chtI5dW8Gf76OueEGA4,100
+sap_ecs_aws_log_forwarder-1.0.7.dist-info/RECORD,,
