@@ -1,0 +1,9 @@
+LICENSE
+README.md
+find_unicode_control.py
+pyproject.toml
+find_unicode_control.egg-info/PKG-INFO
+find_unicode_control.egg-info/SOURCES.txt
+find_unicode_control.egg-info/dependency_links.txt
+find_unicode_control.egg-info/top_level.txt
+tests/test_simple.py
