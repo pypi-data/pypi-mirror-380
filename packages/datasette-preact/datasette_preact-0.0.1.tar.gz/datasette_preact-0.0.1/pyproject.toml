@@ -1,0 +1,43 @@
+[project]
+name = "datasette-preact"
+version = "0.0.1"
+description = "Pre-bundled Preact for easy interactive JS Datasette plugins"
+readme = "README.md"
+authors = [{name = "Alex Garcia"}]
+license = "Apache-2.0"
+classifiers=[
+    "Framework :: Datasette"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "datasette"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/datasette/datasette-preact"
+Changelog = "https://github.com/datasette/datasette-preact/releases"
+Issues = "https://github.com/datasette/datasette-preact/issues"
+CI = "https://github.com/datasette/datasette-preact/actions"
+
+[project.entry-points.datasette]
+preact = "datasette_preact"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.setuptools.package-data]
+datasette_preact = ["static/*", "templates/*"]
+
+
+[tool.setuptools.packages.find]
+exclude = [
+    "node_modules",
+]

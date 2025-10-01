@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+datasette_preact/__init__.py
+datasette_preact.egg-info/PKG-INFO
+datasette_preact.egg-info/SOURCES.txt
+datasette_preact.egg-info/dependency_links.txt
+datasette_preact.egg-info/entry_points.txt
+datasette_preact.egg-info/requires.txt
+datasette_preact.egg-info/top_level.txt
+datasette_preact/static/preact-10.27.2-htm-3.1.1.min.js
+datasette_preact/templates/datasette-preact.html
+examples/sample.py
+tests/test_preact.py

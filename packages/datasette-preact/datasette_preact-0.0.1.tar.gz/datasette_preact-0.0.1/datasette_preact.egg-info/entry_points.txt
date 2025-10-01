@@ -1,0 +1,2 @@
+[datasette]
+preact = datasette_preact
