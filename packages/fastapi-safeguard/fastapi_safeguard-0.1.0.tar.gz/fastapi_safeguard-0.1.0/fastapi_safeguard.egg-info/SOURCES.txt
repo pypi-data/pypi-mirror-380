@@ -1,0 +1,11 @@
+LICENSE
+README.md
+fastapi_safeguard.py
+pyproject.toml
+fastapi_safeguard.egg-info/PKG-INFO
+fastapi_safeguard.egg-info/SOURCES.txt
+fastapi_safeguard.egg-info/dependency_links.txt
+fastapi_safeguard.egg-info/requires.txt
+fastapi_safeguard.egg-info/top_level.txt
+tests/test_plugin.py
+tests/test_unit_checks.py
