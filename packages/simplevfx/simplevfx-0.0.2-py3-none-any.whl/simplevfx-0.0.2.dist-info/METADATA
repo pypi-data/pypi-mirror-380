@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: simplevfx
+Version: 0.0.2
+Summary: A simple way to spawn image-based visual effects in PyGame.
+Project-URL: Documentation, https://github.com/Brent Pollard/simplevfx#readme
+Project-URL: Issues, https://github.com/Brent Pollard/simplevfx/issues
+Project-URL: Source, https://github.com/Brent Pollard/simplevfx
+Author-email: Brent Pollard <brentjpollard@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+SimpleVFX: A simple way to spawn image-based visual effects in PyGame.
+
+This repo contains 2 files: SimpleVFX.py, the file with the actual code, and SimpleVFXExample.py, an example showing how you can use it
+
+All classes and functions in the main file are thoroughly commented, but please open an Issue if anything is unclear.
+
+Feel free to use this as you like, without credit or charge, if it's helpful. Or to rage at me if it's not. If you do use it, I would love to see how!
+
+Thanks,
+BProgramming
