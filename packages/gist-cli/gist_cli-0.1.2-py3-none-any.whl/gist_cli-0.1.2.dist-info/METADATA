@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: gist-cli
+Version: 0.1.2
+Summary: GitHub Gist cli without github, only gist.
+Author-email: Adrian Makridenko <adrianmakridenko@duck.com>
+License: Apache-2.0 license
+Project-URL: Homepage, https://gst.makridenko.ru
+Project-URL: Repository, https://github.com/lyaguxafrog/gst
+Project-URL: Issues, https://github.com/lyaguxafrog/gst/issues
+Keywords: cli,gist,github,httpx,keyring,click
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: click>=8.3.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: keyring>=25.6.0
+Dynamic: license-file
+
+# Gst
+
+![Static Badge](https://img.shields.io/badge/python-3.13-gray?style=flat&logo=python&logoColor=white&label=Python&color=blue)
+![GitHub License](https://img.shields.io/github/license/lyaguxafrog/gst)
+![PyPI - Version](https://img.shields.io/pypi/v/gist-cli)
+
+
+## For what?
+I don't use anything in `gh-cli` except gist,
+so why should I keep the entire `gh-cli`?
+
+
+## Installation
+```bash
+pip install gist-cli
+```
+
+## Example:
+```bash
+gst create -d "My new gist" -f example.p
+```
