@@ -1,0 +1,2 @@
+[console_scripts]
+sensor_bin_to_csv = wearablepermed_utils.sensor_bin_to_csv:run
