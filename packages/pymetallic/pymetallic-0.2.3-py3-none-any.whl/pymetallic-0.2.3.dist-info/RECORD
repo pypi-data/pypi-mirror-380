@@ -1,0 +1,12 @@
+pymetallic/__init__.py,sha256=1MkR2IdRJFVPZYt__g9hvu672OPB3Jb9OjThDpnPPPY,969
+pymetallic/helpers.py,sha256=aSVfKPMDzW4Rvnd_b1_29zJEAZZqZT8VP6jR6NiG9AE,67899
+pymetallic/libpymetallic.dylib,sha256=k_fdmkWF5rHqbLgCztB_vX-toVeVjgMSlAM3abC9wAU,83888
+pymetallic/metallic.py,sha256=dDB831-u8gVlEj1tVBPLLljgMFTz0yHAzVMmydH3jrI,31381
+pymetallic/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymetallic/scripts/demo.py,sha256=UsLN9uDRC9OamPUDHKyYwgPVajTFjhdGfkfzGzUZPl0,2606
+pymetallic/scripts/smoke.py,sha256=fftuBe_NwWhyFDHTWvMQ3A3nvKWg2Ndx0VtxFx7wQ7M,1889
+pymetallic-0.2.3.dist-info/METADATA,sha256=CYTwt5DMSeRdM8LIKk7jPBKAwLHU_WFnFZKwYeWFEIA,9407
+pymetallic-0.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pymetallic-0.2.3.dist-info/entry_points.txt,sha256=tS1t4YvgDP0jumBV8lJGFcMjtW846ZmyCo2HOoRw1Rc,110
+pymetallic-0.2.3.dist-info/licenses/LICENSE,sha256=-2nUPwi_rbiVlkGkfrWoESSnX_jnBpDCWEZpsGLdrwc,1066
+pymetallic-0.2.3.dist-info/RECORD,,
