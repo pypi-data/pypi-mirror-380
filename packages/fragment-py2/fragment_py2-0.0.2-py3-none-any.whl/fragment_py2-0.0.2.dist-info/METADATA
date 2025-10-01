@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: fragment-py2
+Version: 0.0.2
+Summary: A Python library for interacting with Fragment platform (Telegram usernames, stars, premium, TON wallets)
+Home-page: https://github.com/illussioon/fragment-py
+Author: kompromizzdev
+Author-email: your.email@example.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/illussioon/fragment-py/issues
+Project-URL: Documentation, https://github.com/illussioon/fragment-py#readme
+Project-URL: Source Code, https://github.com/illussioon/fragment-py
+Keywords: fragment telegram ton blockchain stars premium usernames
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Communications :: Chat
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: TonTools
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: black>=21.0.0; extra == "dev"
+Requires-Dist: flake8>=3.8.0; extra == "dev"
+Requires-Dist: mypy>=0.800; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Fragment Python Library - A Python library for interacting with Fragment platform (Telegram usernames, stars, premium, TON wallets)
