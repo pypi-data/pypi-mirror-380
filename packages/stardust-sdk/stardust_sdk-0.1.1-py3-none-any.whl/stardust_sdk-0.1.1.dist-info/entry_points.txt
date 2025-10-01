@@ -1,0 +1,2 @@
+[console_scripts]
+stardust = stardust.command.export:main
