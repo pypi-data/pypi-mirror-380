@@ -1,0 +1,93 @@
+# Игнорируем файлы Jupyter Notebooks
+jupyter
+pynblib
+*.ipynb
+
+# Игнорируем каталоги виртуальных сред Python
+__pycache__
+venv/
+env/
+.venv/
+.env
+
+# Игнорируем файлы сборки Python
+*.py[cod]
+$PYTHONPATH
+*.so
+*.o
+*.a
+*.lib
+*.la
+*.lo
+
+# Игнорируем конфигурационные файлы IDE
+.idea/
+.project
+.pydevproject
+*.iml
+
+# Игнорируем файлы, созданные системой
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Игнорируем файлы журналов и дампов
+*.log
+*.dump
+
+# Игнорируем настройки конкретного разработчика
+.settings
+.local
+.history
+
+# Файлы и папки, созданные инструментами тестирования
+.coverage
+.noseids
+htmlcov/
+pytest_cache/
+
+# Дополнительные опции для Flask/Django проектов
+instance/
+migrations/
+
+# Данные, генерируемые тестовыми фреймворками
+.cache/
+.profiles/
+.tox/
+dist/
+build/
+.sphinx/
+.egg-info/
+.egg/
+*.egg
+*.whl
+*.tar.gz
+*.zip
+*.tgz
+*.rar
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyd
+*.exe
+*.dll
+*.so
+*.dylib
+*.db
+*.sqlite
+.env*
+Dockerfile*
+docker-compose.*
+Dockerfile.*
+docker-compose.*
+Dockerfile.*
+
+# Другие вспомогательные файлы и папки
+dist
+node_modules/
+.babelrc
+.eslintrc
+.prettierignore
+.tslint.json
+.editorconfig

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "modchem"
+version = "0.0.3"
+authors = [
+ { name="Modestra", email="kirillkarachev04@gmail.com" },
+]
+description = "Library for registration chemistry experiment"
+readme = "README.md"
+requires-python = ">=3.10.0"
+keywords = ["science", "chem", "chemistry"]
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+]
+dependencies = [
+    "argparse>=1.4.0",
+    "Events>=0.5",
+    "requests>=2.32.5",
+]
+
+[tool.poetry.scripts]
+chem-init = "modchem.commands:execute_experiment_environment"
+
+[tool.setuptools.packages.find]
+where = ["src"]
