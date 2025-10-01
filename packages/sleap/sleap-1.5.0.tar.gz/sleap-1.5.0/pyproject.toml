@@ -1,0 +1,140 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sleap"
+description = "SLEAP (Social LEAP Estimates Animal Poses) is a deep learning framework for animal pose tracking."
+authors = [
+    {name = "Liezl Maree", email = "lmaree@salk.edu"},
+    {name = "Talmo Pereira", email = "talmo@salk.edu"}
+]
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.11"
+keywords = ["deep learning", "pose estimation", "tracking", "neuroscience"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dynamic = ["version", "readme"]
+dependencies = [
+    "attrs",
+    "cattrs",
+    "omegaconf",
+    "imageio",
+    "imageio-ffmpeg",
+    "imgstore",
+    "jsmin",
+    "jsonpickle",
+    "ndx-pose",
+    "networkx",
+    "nixio",
+    "numpy",
+    "opencv-python",
+    "pandas",
+    "psutil",
+    "pykalman",
+    "pynwb",
+    "PySide6",
+    "python-rapidjson",
+    "pyyaml",
+    "pyzmq",
+    "qtpy",
+    "rich",
+    "scikit-image",
+    "scikit-learn",
+    "scikit-video",
+    "scipy",
+    "seaborn",
+    "urllib3",
+    "albumentations",
+    "requests",
+    "matplotlib",
+    "sleap-io[all]>=0.5.3",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "sleap.version.__version__"}
+readme = {file = ["README.md"], content-type="text/markdown"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pytest-qt>=4.4.0",
+    "pytest-xvfb",
+    "ruff",
+]
+
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-jupyter",
+    "mkdocstrings[python]",
+    "mkdocs-gen-files",
+    "mkdocs-literate-nav",
+    "mkdocs-section-index",
+    "mike",
+]
+
+jupyter = [
+    "jupyter",
+    "jupyterlab",
+]
+
+nn-cpu = [
+    "sleap-nn[torch-cpu]"
+]
+
+nn-gpu = [
+    "sleap-nn[torch-cuda128]"
+]
+
+[project.urls]
+Homepage = "https://sleap.ai"
+Documentation = "https://sleap.ai/"
+"Bug Tracker" = "https://github.com/talmolab/sleap/issues"
+"Source Code" = "https://github.com/talmolab/sleap"
+
+[project.scripts]
+sleap-convert = "sleap.io.convert:main"
+sleap-render = "sleap.io.visuals:main"
+sleap-label = "sleap.gui.app:main"
+sleap-inspect = "sleap.info.labels:main"
+sleap-diagnostic = "sleap.diagnostic:main"
+sleap-train = "sleap.legacy_cli_adaptors:train_command"
+sleap-track = "sleap.legacy_cli_adaptors:track_command"
+# sleap-export = "sleap.legacy_cli_adaptors:export_cli"
+
+[tool.setuptools.packages.find]
+exclude = ["tests", "tests.*", "docs"]
+
+[tool.setuptools.package-data]
+"*" = ["*.ui", "*.txt", "*.md"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = [
+    "E721",  # Use isinstance() for type comparisons
+    "E731",  # Do not assign a lambda expression
+    "E741",  # Ambiguous variable name
+    "F405",  # May be undefined, or defined from star imports
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "E402"]
+"tests/*" = ["F403", "F405"]
