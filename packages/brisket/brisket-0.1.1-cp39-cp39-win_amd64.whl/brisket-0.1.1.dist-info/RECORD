@@ -1,0 +1,8 @@
+brisket/__init__.py,sha256=3ma0iVeOArzJlWCi61D96x-kyJE_Cvs8TBzPdqWaTeE,766
+brisket/brisket.pyd,sha256=Sj5MviOWH8dcLtbWG8-Mo29U1Woq_a0T2m_TWGxrnOw,56320
+brisket/brisket.pyi,sha256=8ZKKSuhoGihW4764g_egylyYApQWOh6vS-WHuy0VcwU,635
+brisket/brisket.pyx,sha256=T-f7MQogzUbl7dXHgZzf6LyLt6dr3uQrn2fEOI24Dc8,775
+brisket-0.1.1.dist-info/licenses/LICENSE,sha256=HD_nxIH-FghuwoWlgbvKzprqr63xWTUrKcDHQZ-HLUw,1101
+brisket-0.1.1.dist-info/METADATA,sha256=f_z_3wdALoAlPYGxuhSn5pJoxtretfcpPj6PxAuz0rQ,2318
+brisket-0.1.1.dist-info/WHEEL,sha256=QU7FDsFDrZ9yAzK6IYpWiWbI39OZ9mf4WcPzEbbvV9A,96
+brisket-0.1.1.dist-info/RECORD,,
