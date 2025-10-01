@@ -1,0 +1,200 @@
+[project]
+name = "voicebridge"
+dynamic = ["version"]
+description = "Comprehensive bidirectional voice-text CLI tool with Whisper and VibeVoice"
+authors = [
+    {name = "Patrick"},
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # Core dependencies
+    "typer>=0.16.0",
+    "rich>=14.0.0",
+    "pydantic>=2.11.0",
+    "PyYAML>=6.0.2",
+    
+    # Audio processing
+    "openai-whisper>=20250625",
+    "pygame>=2.6.1",
+    "setuptools>=70.0.0,<81",  # Constrain setuptools to avoid pygame pkg_resources warnings
+    "PyAudio>=0.2.14",
+    "soundfile>=0.13.1",
+    "librosa>=0.11.0",
+    "noisereduce>=3.0.3",
+    "pydub>=0.25.1",
+    "ffmpy>=0.6.1",
+    
+    # Machine Learning
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0",
+    "torchvision>=0.23.0",
+    "torchmetrics>=1.8.2",
+    "transformers==4.51.3",
+    "accelerate>=1.10.1",
+    "diffusers>=0.35.1",
+    "safetensors>=0.6.2",
+    "tiktoken>=0.11.0",
+    "tokenizers>=0.21.4",
+    
+    # TTS Dependencies (using VibeVoice, TTS incompatible with Python 3.12)
+    "anyascii>=0.3.2",
+    "coqpit>=0.0.17",
+    "encodec>=0.1.1",
+    
+    # VibeVoice dependencies (local copy included in project)
+    "ml-collections>=0.1.1",
+    "absl-py>=2.0.0",
+    "av>=13.1.0",
+    "aiortc>=1.9.0",
+    "numba>=0.57.0",
+    "llvmlite>=0.40.0",
+    "gradio>=5.0.0",
+    
+    # System & UI
+    "pynput>=1.8.1",
+    "pyperclip>=1.9.0",
+    "psutil>=7.0.0",
+    "python-xlib>=0.33; sys_platform == 'linux'",
+    "evdev>=1.9.2; sys_platform == 'linux'",
+    
+    # Web & API
+    "fastapi>=0.116.1",
+    "uvicorn>=0.35.0",
+    "httpx>=0.28.1",
+    "aiohttp>=3.8.0",
+    "aiofiles>=24.1.0",
+    "websockets>=15.0.1",
+    
+    # Data processing
+    "numpy>=2.2.6",
+    "pandas>=2.3.2",
+    "scipy>=1.16.2",
+    "scikit-learn>=1.7.2",
+    
+    # Utilities
+    "python-dateutil>=2.9.0",
+    "tqdm>=4.67.1",
+    "joblib>=1.5.1",
+    "filelock>=3.18.0",
+    "packaging>=25.0",
+    "certifi>=2025.6.15",
+    "requests>=2.32.4",
+    "beautifulsoup4>=4.13.4",
+    "huggingface_hub[hf_xet]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=6.3.0",
+    "pytest-mock>=3.15.0",
+    "pytest-asyncio>=0.21.0",
+    "ruff>=0.1.15",
+    "black>=25.1.0",
+    "coverage>=7.10.6",
+]
+
+cuda = [
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0", 
+    "torchvision>=0.23.0",
+    "triton>=3.4.0",
+]
+
+tray = [
+    "pystray>=0.19.4",
+    "Pillow>=11.2.1",
+]
+
+[project.scripts]
+voicebridge = "voicebridge.main:main"
+whisper-cli = "voicebridge.main:main"
+
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["voicebridge*", "vibevoice*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "voicebridge.__version__"}
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long
+    "B008",  # do not perform function calls in argument defaults
+    "B905",  # zip without an explicit strict= parameter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**/*.py" = ["B", "F401"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers"
+testpaths = [
+    "tests",
+    "voicebridge/tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+markers = [
+    "unit: marks tests as unit tests",
+    "integration: marks tests as integration tests", 
+    "slow: marks tests as slow",
+    "requires_audio: marks tests requiring audio hardware",
+    "e2e_slow: marks E2E tests as slow running",
+    "e2e_audio: marks E2E tests as requiring audio files",
+    "e2e_batch: marks E2E tests as batch processing tests",
+    "e2e_config: marks E2E tests as configuration tests", 
+    "e2e_session: marks E2E tests as session management tests",
+    "asyncio: marks tests as asyncio tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["voicebridge"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__pycache__/*",
+    "*/venv/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "pass",
+    "except ImportError:",
+]
