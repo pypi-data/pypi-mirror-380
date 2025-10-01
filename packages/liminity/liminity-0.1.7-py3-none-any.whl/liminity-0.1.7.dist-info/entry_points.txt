@@ -1,0 +1,3 @@
+[console_scripts]
+liminity = liminity.liminity:main
+
