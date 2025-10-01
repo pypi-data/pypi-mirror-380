@@ -1,0 +1,16 @@
+cosci/__init__.py,sha256=M_pgDHNdniqperRYQrY8sAyCryezZ4BE7OoIWxz61Hk,1361
+cosci/__version__.py,sha256=0ZBevyRtxIx7lIUfbXMLPA7H474b9almM6vkNF3_DqA,113
+cosci/api_client.py,sha256=O5SMtFDLQ7CnyJ6KYODBS5xL5hQszqf9qh5yykXv6B4,19949
+cosci/auth.py,sha256=s3GZtA1E_wdKIBOVKgCqH1LxW7lyp7UPWeccFYfs0hY,6010
+cosci/client.py,sha256=_vzvVkMAa_-aJ7XQlQ1rSpLAzKdWCroPFW-kg_PM7TA,6032
+cosci/config.py,sha256=5XQCIxcrKqW4pkQn3cNH6fofAYXy2PZVS4A81IyjB5o,3595
+cosci/exceptions.py,sha256=z341T9jNrjbTlhMgkWSOQW2FncBhAy7bzhCv8uauk4g,892
+cosci/logger.py,sha256=w7PlKgI_bcpgAgkGxML9Z5PthXPhelHXpiU_7T1OOVg,6652
+cosci/models.py,sha256=Vd2K-aYA_F6NQHwM_QCVabmRvxuJwQJWpln6Si02W74,3786
+cosci/session.py,sha256=GjNPWScZpdkDVTwcm18uQj_Tv5qB9GdOA4PlE0sAMAE,16258
+cosci/utils.py,sha256=r3edUX5lS3JaZAcRBlCnoTHzjIAGO1tTvB3Q26Wlq7U,4679
+py_cosci-0.1.2.dist-info/licenses/LICENSE,sha256=3ZKpK_iBsTjPsG3fMHuxMuZ-ySNtFxQ1svGTcxD8pGA,1073
+py_cosci-0.1.2.dist-info/METADATA,sha256=dy7jxt9dT-rzCi9IUZTH8dnWH-r5NRQoV8PP_YlAedk,10449
+py_cosci-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py_cosci-0.1.2.dist-info/top_level.txt,sha256=1m3fyOph3OBTWIqcSF5W-o4MKD9IBqguIdMMLQjVRsY,6
+py_cosci-0.1.2.dist-info/RECORD,,
