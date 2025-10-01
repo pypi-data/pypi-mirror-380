@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source:*)",
+      "Bash(cmdata cache:*)",
+      "Bash(grep:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(uv pip install:*)",
+      "WebSearch",
+      "Bash(cat:*)",
+      "Bash(cmdata:*)",
+      "Bash(python3:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
