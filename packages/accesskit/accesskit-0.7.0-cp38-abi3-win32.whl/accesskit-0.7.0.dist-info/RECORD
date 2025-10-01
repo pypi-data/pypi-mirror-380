@@ -1,0 +1,12 @@
+LICENSE-APACHE,sha256=IP57AOkE7WkOO5_WBzeE0_xCgUHb0QuBwB_RQ9B5f1g,9899
+LICENSE-MIT,sha256=NlFq79yExdWh50hUJZE6ItvaaesZMMXoTWrklytRlLk,1046
+LICENSE.chromium,sha256=K11EIgzufVQe_e8xJs6Diy5z6uuuL0Qa81c8ssCvTXA,1586
+accesskit-0.7.0.dist-info/METADATA,sha256=qSWitXOLBxaK_CyuhA00dGEbyrf3MfAozivjK6To5rs,802
+accesskit-0.7.0.dist-info/WHEEL,sha256=jqWOnj9MJMcVOhRvipbD_HJ5aGwHb2kcbqU5x15Xtbk,90
+accesskit-0.7.0.dist-info/licenses/AUTHORS,sha256=kaYPcH_4Plu9vESp5qS5TVRX_luhrHHaWBnEl6oK0ak,350
+accesskit-0.7.0.dist-info/licenses/LICENSE-APACHE,sha256=IP57AOkE7WkOO5_WBzeE0_xCgUHb0QuBwB_RQ9B5f1g,9899
+accesskit-0.7.0.dist-info/licenses/LICENSE-MIT,sha256=NlFq79yExdWh50hUJZE6ItvaaesZMMXoTWrklytRlLk,1046
+accesskit-0.7.0.dist-info/licenses/LICENSE.chromium,sha256=K11EIgzufVQe_e8xJs6Diy5z6uuuL0Qa81c8ssCvTXA,1586
+accesskit/__init__.py,sha256=iQ9f53mTnCn2eiiEmf7FOoWV9Lio9PNKOlB2bwIo1P0,119
+accesskit/accesskit.pyd,sha256=yfNA_u9ncJle89Anv_O_lN_YrxXCSBTtnqlyuuN7OBY,752640
+accesskit-0.7.0.dist-info/RECORD,,

@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: accesskit
+Version: 0.7.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: User Interfaces
+License-File: LICENSE-APACHE
+License-File: LICENSE-MIT
+License-File: LICENSE.chromium
+License-File: AUTHORS
+Requires-Python: >=3.8
+Project-URL: Homepage, https://github.com/AccessKit/accesskit-python
