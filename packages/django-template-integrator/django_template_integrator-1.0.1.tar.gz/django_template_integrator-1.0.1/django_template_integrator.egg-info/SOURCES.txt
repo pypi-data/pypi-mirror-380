@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+django_template_integrator/__init__.py
+django_template_integrator/cli.py
+django_template_integrator/core.py
+django_template_integrator/utils.py
+django_template_integrator.egg-info/PKG-INFO
+django_template_integrator.egg-info/SOURCES.txt
+django_template_integrator.egg-info/dependency_links.txt
+django_template_integrator.egg-info/requires.txt
+django_template_integrator.egg-info/top_level.txt
+tests/test_basic.py

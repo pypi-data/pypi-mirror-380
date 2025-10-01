@@ -1,0 +1,111 @@
+Metadata-Version: 2.4
+Name: django-template-integrator
+Version: 1.0.1
+Summary: Easily integrate any HTML template into your Django project
+Author-email: Daniyal Akhtar <your@email.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.12.0
+
+# Django Template Integrator
+
+## Overview
+
+Django Template Integrator (DTI) is a Python CLI tool that automates the integration of frontend HTML templates into Django projects. It eliminates the manual, repetitive work of moving static assets, updating file paths, and converting standard HTML templates to Django's template format. The tool extracts ZIP files containing frontend templates, reorganizes the file structure to match Django's conventions (static/ and templates/ directories), and automatically rewrites asset paths to use Django's `{% static %}` template tags.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### CLI Architecture
+- **Entry Point**: Console script registered via setuptools (`django-template-integrator` command)
+- **Argument Parsing**: Uses argparse for command-line argument handling
+- **Core Execution Flow**: CLI layer delegates to the DjangoTemplateIntegrator core class
+- **Output Control**: Verbose/quiet mode support for controlling log output
+
+**Rationale**: Simple CLI architecture keeps the tool lightweight and easy to use. The separation between CLI parsing and core logic allows the integrator to be used programmatically if needed.
+
+### File Processing Pipeline
+
+The tool follows a sequential pipeline:
+
+1. **ZIP Extraction**: Extracts frontend template ZIP to temporary directory with path traversal security checks
+2. **Asset Detection**: Identifies static assets (CSS, JS, images, fonts) by extension and path patterns
+3. **File Relocation**: Moves assets to Django's static/ directory structure, HTML files to templates/
+4. **Path Rewriting**: Parses HTML with BeautifulSoup and converts asset references to Django {% static %} tags
+5. **Template Tag Injection**: Adds {% load static %} to all HTML files
+6. **Cleanup**: Removes temporary extraction directory
+
+**Rationale**: This pipeline approach ensures each step is independent and can be tested/modified separately. The temporary directory prevents conflicts with existing project files.
+
+### Asset Type Classification
+
+Assets are categorized into subdirectories within static/:
+- **css/**: Stylesheets (.css)
+- **js/**: JavaScript files (.js)
+- **img/**: Images (.jpg, .png, .gif, .svg, .ico, .webp, .bmp)
+- **fonts/**: Font files (.woff, .woff2, .ttf, .eot, .otf)
+- **assets/**: Fallback for unclassified files
+
+**Rationale**: Django best practice organizes static files by type. This structure is conventional and makes asset management easier in production deployments.
+
+### HTML Processing Strategy
+
+- **Parser**: BeautifulSoup4 for robust HTML parsing and manipulation
+- **Path Detection**: Pattern matching for asset references in href, src, and other attributes
+- **Path Conversion**: Replaces relative/absolute asset paths with Django template syntax
+- **Template Tag Insertion**: Adds {% load static %} at the beginning of each HTML file
+
+**Rationale**: BeautifulSoup handles malformed HTML gracefully and provides a reliable DOM manipulation API. This is safer than regex-based replacement for HTML modification.
+
+### Security Considerations
+
+- **Path Traversal Protection**: Validates ZIP entries to reject absolute paths and directory traversal attempts
+- **Known Limitation**: v1.0 does not explicitly block symlinks/hardlinks in ZIP files - designed for trusted template sources only
+
+**Rationale**: Basic security measures prevent accidental or malicious file extraction outside the intended directory. The tool is designed for developer use with trusted frontend templates, not for processing untrusted user uploads.
+
+### Error Handling
+
+- File not found errors for missing ZIP files
+- ValueError exceptions for unsafe ZIP contents
+- Path resolution validation during extraction
+
+**Rationale**: Clear error messages help developers quickly identify configuration issues or problematic template files.
+
+## External Dependencies
+
+### Core Dependencies
+
+1. **beautifulsoup4 (>=4.12.0)**
+   - Purpose: HTML parsing and DOM manipulation
+   - Used for: Rewriting asset paths in HTML files and injecting Django template tags
+   - Why chosen: Industry-standard HTML parser with excellent handling of malformed markup
+
+### Python Standard Library
+
+The tool relies on several Python built-in modules:
+- **zipfile**: ZIP archive extraction
+- **pathlib**: Modern path manipulation
+- **argparse**: Command-line interface
+- **re**: Regular expression pattern matching (for path detection)
+- **shutil**: File operations (copying, directory removal)
+
+**Rationale**: Minimal external dependencies keep the tool lightweight and reduce installation friction. Standard library modules provide all necessary functionality except HTML parsing.
+
+### Distribution
+
+- **setuptools**: Package distribution and console script entry point registration
+- **pip**: Installation method
+
+**Rationale**: Standard Python packaging approach makes the tool easy to install and distribute through PyPI or direct installation.
+
+### Target Environment
+
+- **Django Projects**: The tool outputs files structured for Django's static files and template system
+- **No Django Dependency**: Intentionally does not require Django installation, allowing use in pre-Django setup phases or standalone environments
+
+**Rationale**: Keeping Django as an implicit dependency (not explicit) allows developers to run the integration before Django is fully configured in their project.
