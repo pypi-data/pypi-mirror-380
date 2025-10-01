@@ -1,0 +1,19 @@
+{
+  "analysis_info": {
+    "ticker": "SPY",
+    "analysis_period": "2024-01-01 to 2024-06-01",
+    "generated_at": "2025-09-28T15:34:21.907662",
+    "initial_capital": 100000.0,
+    "best_strategy": "buy_and_hold"
+  },
+  "performance_summary": {
+    "total_return_pct": 11.91387153986508,
+    "annualized_return": 0.31015116655438146,
+    "sharpe_ratio": 2.5890854752400254,
+    "sortino_ratio": 4.185951642515341,
+    "max_drawdown_pct": 5.349811756955354,
+    "total_trades": 1,
+    "win_rate": 100.0,
+    "final_value": 112441.5439779358
+  }
+}
