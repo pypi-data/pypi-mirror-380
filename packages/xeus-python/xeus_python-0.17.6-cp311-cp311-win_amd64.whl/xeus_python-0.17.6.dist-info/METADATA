@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: xeus-python
+Version: 0.17.6
+Summary: A wheel for xeus-python
+Author: Sylvain Corlay, Johan Mabille, Martin Renou
+License: BSD-3-Clause
+License-File: LICENSE
+Requires-Dist: pygments<3,>=2.3.1
+Requires-Dist: xeus-python-shell[ipython]<0.7,>=0.6
+
