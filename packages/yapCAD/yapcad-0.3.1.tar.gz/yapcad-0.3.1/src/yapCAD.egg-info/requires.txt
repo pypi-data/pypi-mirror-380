@@ -1,0 +1,12 @@
+ezdxf>=1.1
+pyglet<2,>=1.5
+mpmath>=1.2
+
+[:platform_system == "Darwin"]
+pyobjc-core
+pyobjc-framework-Cocoa
+pyobjc-framework-Quartz
+
+[tests]
+pytest
+pytest-cov
