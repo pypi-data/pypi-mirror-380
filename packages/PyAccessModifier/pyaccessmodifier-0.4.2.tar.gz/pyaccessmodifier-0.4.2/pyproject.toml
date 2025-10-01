@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyAccessModifier"             # PyPI에 올라갈 이름
+version = "0.4.2"
+description = "Python Kotlin Acess Modifier"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "howShouldIChooseMyUsername", email = "trademark2179@gmail.com"}]
+dependencies = []
+keywords = ["access", "capsule"]
