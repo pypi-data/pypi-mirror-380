@@ -1,0 +1,10 @@
+callosum_dsl/__init__.py,sha256=vv8ytDeNqpo2IiQNDBc_WVDOPpE9rx2_5xtNG4B7pUE,913
+callosum_dsl/core.py,sha256=GJ9-8IDrePmAursDzoNdXiQZ3x-yTLyRvSnD7MzvOiE,13295
+callosum_dsl/templates.py,sha256=Ln9WHcGeK9n9lbnXqhi6-jTTVTq1MDiRjvzOp9HSHno,1668
+callosum_dsl/bin/dsl-parser,sha256=b9EPqc0QaXlfIQ7eBTsAujmq71yG3OQ9nGgFYPr3tWM,4125368
+callosum_dsl-0.1.0.dist-info/licenses/LICENSE,sha256=FtyGJGVbWe-43lffKc7R81n_5YH30MturWVPPKpTevI,1070
+callosum_dsl-0.1.0.dist-info/METADATA,sha256=hXF_5weiJuhU-TgU7kIgzPV6jSjOX813XmHypHp1bhI,9919
+callosum_dsl-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+callosum_dsl-0.1.0.dist-info/entry_points.txt,sha256=7mLCYnqcarLunktsMEPwCPhoQ76q64yHe3AVNiPdHNA,65
+callosum_dsl-0.1.0.dist-info/top_level.txt,sha256=Ek6PGFpuSQtyElNVx-CmWvHeujsLPhHGdFpw2fQ92zA,13
+callosum_dsl-0.1.0.dist-info/RECORD,,
