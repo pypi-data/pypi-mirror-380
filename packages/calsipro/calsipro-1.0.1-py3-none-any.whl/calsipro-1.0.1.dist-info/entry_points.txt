@@ -1,0 +1,3 @@
+[console_scripts]
+calsipro = calsipro.cli:cli
+
