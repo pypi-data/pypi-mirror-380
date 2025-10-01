@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: common-py-config
+Version: 0.1.2
+Summary: Shared dev/test/lint configuration for all projects
+License: MIT
+Author: Beniamin Kalinowski
+Author-email: beniamin.kalinowski@gmail.com
+Maintainer: Beniamin Kalinowski
+Maintainer-email: beniamin.kalinowski@gmail.com
+Requires-Python: >=3.8
+Classifier: Framework :: Pytest
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+Shared configuration for all the projects.
+
