@@ -1,0 +1,8 @@
+openai>=1.10.0
+PyYAML
+httpx
+beautifulsoup4
+typing
+validators
+python-telegram-bot
+tiktoken
