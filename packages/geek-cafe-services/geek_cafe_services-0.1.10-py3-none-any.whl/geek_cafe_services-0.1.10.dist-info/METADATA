@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: geek_cafe_services
+Version: 0.1.10
+Summary: Base Reusable Services for SaaS
+Author-email: Eric Wilson <eric.wilson@geekcafe.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: boto3-assist
