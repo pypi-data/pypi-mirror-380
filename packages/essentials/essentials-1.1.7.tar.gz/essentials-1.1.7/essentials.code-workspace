@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.testing.pytestArgs": [
+            "."
+        ],
+        "files.trimTrailingWhitespace": true,
+        "files.trimFinalNewlines": true,
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestEnabled": true,
+        "[python]": {
+            "editor.tabSize": 4,
+            "editor.rulers": [
+                88,
+                100
+            ]
+        }
+    }
+}
