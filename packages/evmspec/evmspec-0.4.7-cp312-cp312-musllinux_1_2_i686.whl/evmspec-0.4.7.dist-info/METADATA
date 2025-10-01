@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: evmspec
+Version: 0.4.7
+Summary: A collection of msgspec.Struct definitions for use with the Ethereum Virtual Machine
+Home-page: https://github.com/BobTheBuidler/evmspec
+Author: BobTheBuidler
+Author-email: bobthebuidlerdefi@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9,<3.14
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cachetools<7,>=4.1.1
+Requires-Dist: cchecksum>=0.0.3
+Requires-Dist: dictstruct>=0.0.1
+Requires-Dist: eth-hash<1,>=0.7.0
+Requires-Dist: eth-typing<6,>=4.4.0
+Requires-Dist: faster-eth-utils<6,>=4
+Requires-Dist: faster-hexbytes<2,>=1.3.2
+Requires-Dist: typing_extensions>=4.0.0
+Requires-Dist: safe-pysha3>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## evmspec
+
+A collection of [msgspec.Struct](https://jcristharif.com/msgspec/structs.html) definitions for use with the Ethereum Virtual Machine
+
+[Why msgspec?](https://jcristharif.com/msgspec/why.html)
+
+Inspired by [snek3](http://github.com/banteg/snek3), I took the structs and extended them with some extra functionality. 
+
+
+#### Modules:
+- [block](https://bobthebuidler.github.io/evmspec/source/evmspec.html#module-evmspec.structs.block)
+- [log](https://bobthebuidler.github.io/evmspec/source/evmspec.html#module-evmspec.log)
+- [receipt](https://bobthebuidler.github.io/evmspec/source/evmspec.html#module-evmspec.receipt)
+- [trace](https://bobthebuidler.github.io/evmspec/source/evmspec.structs.trace.html)
+- [transaction](https://bobthebuidler.github.io/evmspec/source/evmspec.html#module-evmspec.transaction)
+- and more
+  
