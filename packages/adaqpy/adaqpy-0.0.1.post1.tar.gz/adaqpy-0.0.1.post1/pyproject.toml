@@ -1,0 +1,21 @@
+[project]
+name = "adaqpy"
+version = "0.0.1.post1"
+description = "adaqpy package"
+license = { text = "3-Clause BSD License" }
+keywords = ["AVALDATA", "adaqpy"]
+authors = [
+    { name = "AVALDATA" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: Japanese",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11"
+]
+urls = { Homepage = "https://faq-avaldata.dga.jp/faq_list.html?category=35" }
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"

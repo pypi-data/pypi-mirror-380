@@ -1,0 +1,5 @@
+pyproject.toml
+adaqpy.egg-info/PKG-INFO
+adaqpy.egg-info/SOURCES.txt
+adaqpy.egg-info/dependency_links.txt
+adaqpy.egg-info/top_level.txt
