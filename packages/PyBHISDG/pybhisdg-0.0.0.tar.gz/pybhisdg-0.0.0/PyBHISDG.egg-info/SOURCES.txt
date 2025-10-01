@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+PyBHISDG.egg-info/PKG-INFO
+PyBHISDG.egg-info/SOURCES.txt
+PyBHISDG.egg-info/dependency_links.txt
+PyBHISDG.egg-info/requires.txt
+PyBHISDG.egg-info/top_level.txt
+classes/bhi_sdg.py

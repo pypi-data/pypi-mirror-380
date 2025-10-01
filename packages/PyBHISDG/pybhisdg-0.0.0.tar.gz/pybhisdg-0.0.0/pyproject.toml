@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyBHISDG"
+version = "0.0.0"
+authors = [
+  { name="Alexander Borch Kristensen", email="albok@dtu.dk" },
+  { name="Matteo Saibene", email="saima@dtu.dk" }
+]
+description = "Package for estimating Brain-Heart Interplay using the SDG model"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ["numpy>=2.3.3", "scipy>=1.16.2", "joblib>=1.5.2", "numba>=0.62.1"]
+license = { file = "LICENSE" }
+
