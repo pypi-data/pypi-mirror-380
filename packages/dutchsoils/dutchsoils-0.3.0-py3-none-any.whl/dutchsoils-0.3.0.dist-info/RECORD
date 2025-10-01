@@ -1,0 +1,14 @@
+dutchsoils/__init__.py,sha256=kwIZkY50QgBiiskyx4QMSnrHmLaV0rEWQLo00XJyBOA,53
+dutchsoils/data/BofekClusters.csv,sha256=lBC0zd5ukXKn9MDUMZppwpU9o9-lmSlqe4J5LBaBx18,10280
+dutchsoils/data/BofekClustersNames.csv,sha256=CuUpLKRI6jeb3RiXH0jF6bDePnjEzRUsI7dhLDftEoc,4644
+dutchsoils/data/SoilHorizons.csv,sha256=8OGbeQE_T08pUMTGQlOJchQDrUAUXuPmB6k_J_UtZnc,144562
+dutchsoils/data/SoilProfiles.csv,sha256=WYvyj7JeWU6F-L1SiPvJ7LgjwHWyXin4YBGfEx7tJ8w,25070
+dutchsoils/data/soilprofiles_BodemkaartBofek.csv,sha256=9XI44aurYwa6XPtVOjCtIE0oxBRtpS9-CaBe7HLvsXE,456055
+dutchsoils/data/Staringreeks2018.csv,sha256=ozx-kltPPQk6UTiWlv0_rDzKr8L1n6Q1CSehxnLLo7s,2952
+dutchsoils/data/StaringreeksNamen2018.csv,sha256=q9r5EVBh9QoDGD-neDFw7aghnWI-J7M3N5UkdXscTkc,2134
+dutchsoils/plot.py,sha256=kCjYVst5qn-de9QDJrjSX2NnyrS8Syfv0Ke8MflSvo8,9899
+dutchsoils/soilprofile.py,sha256=vib6S59iCcE_cgJni8yd8fkCMcs8xZKh9ABhFCbt-GU,35935
+dutchsoils-0.3.0.dist-info/LICENSE,sha256=pWmAXJR47bjupdS058C1rXLeK6iO2l4VzgJMmJMK8yg,1096
+dutchsoils-0.3.0.dist-info/METADATA,sha256=mVWdzp1-ycHu_hcZR8YLrLqd7dRxc_vCzaf34vRU_Fw,5311
+dutchsoils-0.3.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+dutchsoils-0.3.0.dist-info/RECORD,,
