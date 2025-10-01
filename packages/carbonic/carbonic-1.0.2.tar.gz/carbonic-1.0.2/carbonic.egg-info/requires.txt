@@ -1,0 +1,9 @@
+
+[:platform_system == "Windows"]
+tzdata>=2024.1
+
+[performance]
+ciso8601>=2.3.0
+
+[pydantic]
+pydantic>=2.0.0
