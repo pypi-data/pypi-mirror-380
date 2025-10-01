@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include src/mrn *.py
+include src/mrn/py.typed
