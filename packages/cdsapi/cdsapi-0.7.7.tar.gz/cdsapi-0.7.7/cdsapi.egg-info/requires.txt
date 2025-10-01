@@ -1,0 +1,3 @@
+ecmwf-datastores-client>=0.4.0
+requests>=2.5.0
+tqdm
