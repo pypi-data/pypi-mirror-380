@@ -1,0 +1,2 @@
+[console_scripts]
+amt-augmentor = amt_augmentor.main:main
