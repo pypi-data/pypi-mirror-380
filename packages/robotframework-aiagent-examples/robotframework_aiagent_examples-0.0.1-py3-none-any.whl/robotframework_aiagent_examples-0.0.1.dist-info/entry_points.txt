@@ -1,0 +1,5 @@
+[AIAgent]
+datetime = AIAgent.Examples.DateTimeTools
+image_tool = AIAgent.Examples.ImageTool
+playwright_mcp = AIAgent.Examples.PlaywrightMCP
+weather = AIAgent.Examples.WeatherTools
