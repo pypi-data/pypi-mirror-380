@@ -1,0 +1,2 @@
+core
+swe_tools
