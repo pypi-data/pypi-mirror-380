@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: moebius_aut
+Version: 2
+Summary: Computing Moebius automorphisms of surfaces
+Home-page: http://github.com/niels-lubbes/moebius_aut
+Author: Niels Lubbes
+License: MIT
+Keywords: surfaces automorphisms circles
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+License-File: LICENSE
+
+UNKNOWN
+
