@@ -1,0 +1,39 @@
+[project]
+name = "dualxda_skl"
+version = "1.6.0.dev0"
+description = "A fork of scikit-learn that lets the user reach the dual variables for the LinearSVC class."
+readme = "README.rst"
+maintainers = [
+    {name = "Galip Ümit Yolcu", email="galip.uemit.yolcu@fraunhofer.de"},
+]
+dependencies = [
+  "numpy>=1.19.5",
+  "scipy>=1.6.0",
+  "joblib>=1.2.0",
+  "threadpoolctl>=3.1.0",
+]
+requires-python = ">=3.9"
+license = {file = "COPYING"}
+
+[build-system]
+build-backend = "mesonpy"
+# Minimum requirements for the build system to execute.
+requires = [
+    "meson-python>=0.16.0",
+    "Cython>=3.0.10",
+    "numpy>=2",
+    "scipy>=1.6.0",
+]
+
+[tool.spin]
+package = "sklearn_dual"  # name of your package
+
+[tool.spin.commands]
+"Build" = [
+  "spin.cmds.pip.install",
+  "spin.cmds.meson.test",
+  ".spin/cmds.py:clean",
+]
+"Documentation" = [
+  "spin.cmds.meson.docs"
+]
