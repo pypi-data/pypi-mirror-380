@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: rynaki
+Version: 0.1.2
+Summary: a python api wrapper for akinator's guesssing game api.
+Author-email: mineogo/ryn <venkatesh10year@gmail.com>
+Project-URL: Homepage, https://mineogo.github.io/rynaki
+Project-URL: Repository, https://github.com/mineogo/rynaki
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: cloudscraper>=1.2.71
+Requires-Dist: beautifulsoup4>=4.12.3
