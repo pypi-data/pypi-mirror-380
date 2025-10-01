@@ -1,0 +1,2 @@
+[console_scripts]
+big-text = big_text:main
