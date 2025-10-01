@@ -1,0 +1,17 @@
+filter_faceblur/__init__.py,sha256=iTtMAaq2KzWkKDCoDHIskJGh0TZ4AX6Y3tyuRsbgsdU,125
+filter_faceblur/filter.py,sha256=ModuB9XMueguXwcF4dGpkg7lYSZ-mbCwtjsjNK-eG4c,14959
+filter_faceblur/model/__init__.py,sha256=hvV16LKH4zbaJdjAoyN_OnJ6_cNuXPmjE7K0nQeEtmI,52
+filter_faceblur/model/model.py,sha256=-Za2jc-_TWmn5HKxu6tsTQabkFJ6qflMDWXaAuAGP7w,3207
+filter_faceblur/model/shared.py,sha256=giwiroKF-wKpQFzO2-_GlGxyjXFCl_536V7HJzo3P9s,234
+filter_faceblur/model/blurrers/__init__.py,sha256=b4pXdpxtqsenyZcnTA2zlbMcSDuBPKt2wGJfPpRhfoY,68
+filter_faceblur/model/blurrers/base_blurrer.py,sha256=lzFv5Sk_w5a5ZU47nnkoO4UesaS3VBKbnFAJ07WfnMc,256
+filter_faceblur/model/blurrers/gaussian_blur.py,sha256=9fp1SqoyK78zB5Qa83WhNkULcQ6uEJ8wVHoBUej2URU,1249
+filter_faceblur/model/detectors/__init__.py,sha256=cnrBY9R5Bnukyf7hX7AnIQ4cuFEmBzyqJWi-dZVTPqk,71
+filter_faceblur/model/detectors/base_detector.py,sha256=AFG8sveglEIGkVOJxRpwo2BPnQUYxYi_KRBRToa7FHg,716
+filter_faceblur/model/detectors/yunet_detector.py,sha256=2jVE5k1Zv3RGZvGiQx--jnVx6YtUvK820_AAps5RhFA,3793
+filter_faceblur/model/weights/face_detection_yunet_2023mar.onnx,sha256=jyOD5N08-7RVPqhxgQf8BCMhDclk-fQoBgSATtJVL6Q,232589
+filter_faceblur-1.1.4.dist-info/licenses/LICENSE,sha256=Hun-T5YKdxKbQ1lfbGCu8YiknxeFsTnWAuSWz6CKQAQ,11343
+filter_faceblur-1.1.4.dist-info/METADATA,sha256=WFYNzhTj_6fJx8KqKaxIbctJTbYrBHVW2socS_NtkhI,4255
+filter_faceblur-1.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+filter_faceblur-1.1.4.dist-info/top_level.txt,sha256=uQ1onczDWQ66Ek73xTJk2kstH7ibKbMV2bRNJhEhPdY,16
+filter_faceblur-1.1.4.dist-info/RECORD,,
