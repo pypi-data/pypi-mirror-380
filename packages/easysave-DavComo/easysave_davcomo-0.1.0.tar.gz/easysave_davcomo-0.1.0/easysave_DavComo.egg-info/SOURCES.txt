@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+easysave_DavComo.egg-info/PKG-INFO
+easysave_DavComo.egg-info/SOURCES.txt
+easysave_DavComo.egg-info/dependency_links.txt
+easysave_DavComo.egg-info/top_level.txt

@@ -1,0 +1,18 @@
+[project]
+name = "easysave_DavComo"
+version = "0.1.0"
+authors = [
+  { name="David Comor", email="david.comor@gmail.com" },
+]
+description = "Library for interacting with the EasySave service"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/DavComo/EasySaveModule"
+Issues = "https://github.com/DavComo/EasySaveModule/issues"
