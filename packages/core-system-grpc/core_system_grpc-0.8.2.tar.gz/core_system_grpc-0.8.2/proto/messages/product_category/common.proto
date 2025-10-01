@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package core_system.product_category.v1;
+
+// ProductCategory 정보 메시지
+message ProductCategory {
+    string id = 1;
+    string shop_id = 2;
+    optional string old_category_id = 3;
+    string platform_id = 4;
+    string category_no = 5;
+    string category_name = 6;
+    string category_depth = 7;
+    string parent_category_no = 8;
+    optional string display_type = 9;
+    optional string full_category_name = 10;
+    optional string full_category_no = 11;
+    string root_category_no = 12;
+    string sub_category_product_display = 13;
+    string use_display = 14;
+    optional string product_no = 15;
+    string category_by_product_count = 16;
+    string recommend_common_exclusion = 17;
+    string promotion_common_exclusion = 18;
+    optional string is_deleted = 19;
+    optional string updated_at = 20;
+    optional string parent_category_id = 21;
+}
