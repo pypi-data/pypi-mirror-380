@@ -1,0 +1,2 @@
+[console_scripts]
+llm2slm = llm2slm.cli:main
