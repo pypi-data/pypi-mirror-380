@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: orchestrator-logger
+Version: 1.0.1
+Summary: A simple logger for orchestrator API
+Author-email: Orchestrator Robot Logger <tech-support@kineticstaff.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file
+
+# Orchestrator Logger
+
+A simple Python library for sending logs to the Orchestrator API.
+
+## 📦 Installation
+
+First, build and install the package locally:
+
+```bash
+pip install dist/orchestrator_logger-0.1.0-py3-none-any.whl
