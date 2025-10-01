@@ -1,0 +1,5 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# All project metadata is handled by setup.py to avoid conflicts
