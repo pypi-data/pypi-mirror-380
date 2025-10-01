@@ -1,0 +1,16 @@
+README.md,sha256=TgweHyqABiO3MAEXhBdiFHwKB6csFZM3Rvbyx1asG5s,4583
+gmswitch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gmswitch/generate.py,sha256=wqIFAuYUlyfaDifA3RRy-ORJgOYqurj7eCguCxWWpDY,2004
+gmswitch/measures.py,sha256=Io-uYVRXKnluVmwtxOhPwj_Vfl0o8fMSKw5Q69F0aUU,510
+gmswitch/switch.py,sha256=WEdzFJOQ1TaghziLcnJsZI8bJeUzApK8TjcOb-qhnQs,2514
+images/output.png,sha256=m2CdoDjbb0mVtNrlXoY2kZaqa1T_T56Ps-oLJ2zSkWE,9824
+images/partition1.png,sha256=hamogENnfBG3M0u49ipdbfu6NRR1pEPYyJULaXhfSSw,17909
+images/partition2.png,sha256=zKdvvUHbIZkgld9PPXMd1OBd5cv6Zh7_shtGuKffM34,23009
+images/partition3.png,sha256=Y_mZ-0xkS10znWUdI9-qXM9wjXnAPggVP6dQxxAeamE,13728
+images/switch1.png,sha256=puH3B4a4LTPVxLz2wR2tfubaGpnx2rUprRVXjEPNGbw,10969
+images/switch2.png,sha256=FvPmmlv-5aMkhJGc7YFM2mrgpggaO_n_0WJV8ZMDxjk,9740
+images/switch3.png,sha256=cQbROlZLtOJFLPwRgDS_aFonCsUl3ZmiKvqTc03WNjE,25913
+gmswitch-1.0.2.dist-info/LICENSE.txt,sha256=Z99N1WZhcTC8aARLssK4QSGuX83zAncmtzVbG1l649A,1067
+gmswitch-1.0.2.dist-info/METADATA,sha256=f0xDlfbFHvlKlIhEOCuFkc9was7f-WMzn3UGGQGdXk0,5203
+gmswitch-1.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+gmswitch-1.0.2.dist-info/RECORD,,
