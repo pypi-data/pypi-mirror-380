@@ -1,0 +1,2 @@
+[console_scripts]
+hqitc = hqitc.cli:main
