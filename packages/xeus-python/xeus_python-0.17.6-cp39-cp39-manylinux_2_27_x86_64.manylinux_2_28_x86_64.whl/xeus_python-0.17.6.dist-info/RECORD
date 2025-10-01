@@ -1,0 +1,14 @@
+xpython_launcher.py,sha256=BBo2M_gIQfJGwdz1ybxSUGs11F15_IG-Vvbn0K45DZU,211
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython/kernel.json,sha256=ssP0p0koFo7dfRr_dqKI-cvyKEu3kTt8AOu8dtesCNY,215
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython/logo-32x32.png,sha256=jbE1V2z-E-ol3NzZY_jYKnZyhSrY-Qb8WZgO1tj9Ipk,1379
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython/logo-64x64.png,sha256=L2Wd22HYX7X7dyzLvff7nOZ5gyC2h4OvnViWCN-UIC0,3131
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython-raw/kernel.json,sha256=g_-PYiWRc9cMFNJmb2l2QG-pE11kkmPp4yrT8wGiSwE,235
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython-raw/logo-32x32.png,sha256=jbE1V2z-E-ol3NzZY_jYKnZyhSrY-Qb8WZgO1tj9Ipk,1379
+xeus_python-0.17.6.data/data/share/jupyter/kernels/xpython-raw/logo-64x64.png,sha256=L2Wd22HYX7X7dyzLvff7nOZ5gyC2h4OvnViWCN-UIC0,3131
+xpython/__init__.py,sha256=CbW79f27_ZXHOjNBJEglG4Dn5GBijJvXJwmf5a2SbjI,39
+xpython/xpython_extension.cpython-39-x86_64-linux-gnu.so,sha256=BLVKC9qV-mBIY5tq5NAWmgwRoKJsQONaPkj3LqlxbDM,5917472
+xeus_python-0.17.6.dist-info/LICENSE,sha256=WvdF-7mGwDyzMvBMaZQHGbNiSAlWm1n4fhmQyyvB_MM,1552
+xeus_python-0.17.6.dist-info/METADATA,sha256=DOM0IIE5pcyG1ybPdhtiH9P1mK340Q3x-SDoP84nm58,272
+xeus_python-0.17.6.dist-info/WHEEL,sha256=W9XqxLZI_ty_TyEOg6isnRDSjqYJ7Gv3qLHiTIajmT0,143
+xeus_python-0.17.6.dist-info/top_level.txt,sha256=XtzggjVzmp4R-5T4I4R_gyLydIcRMhatWCkrCrsPDE0,25
+xeus_python-0.17.6.dist-info/RECORD,,
