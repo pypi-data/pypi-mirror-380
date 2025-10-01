@@ -1,0 +1,9 @@
+cachetools<7,>=4.1.1
+cchecksum>=0.0.3
+dictstruct>=0.0.1
+eth-hash<1,>=0.7.0
+eth-typing<6,>=4.4.0
+faster-eth-utils<6,>=4
+faster-hexbytes<2
+typing_extensions>=4.0.0
+safe-pysha3>=1.0.0

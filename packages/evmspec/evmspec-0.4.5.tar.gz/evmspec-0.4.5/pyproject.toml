@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "evmspec"
+version = "0.4.5"
+description = "A collection of msgspec.Struct definitions for use with the Ethereum Virtual Machine"
+authors = ["BobTheBuidler <bobthebuidlerdefi@gmail.com>"]
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "mypy[mypyc]==1.18.2",
+    "types-cachetools",
+    "tomli>=2.0.0; python_version < '3.11'",
+    "cchecksum>=0.3.1",
+    "eth-hash>=0.7.0,<1",
+    "eth-typing>=4.4.0,<6",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+cachetools = ">=4.1.1,<7"
+cchecksum = ">=0.0.3"
+dictstruct = ">=0.0.1"
+eth-hash = ">=0.7.0,<1"
+eth-typing = ">=4.4.0,<6"
+faster-eth-utils = ">=4,<6"
+faster-hexbytes = "<2"
+typing_extensions = ">=4.0.0"
+safe-pysha3 = ">=1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "*"
+sphinx-rtd-theme = "*"
+mypy = "*"
+types-cachetools = "*"
+pytest = "*"
+# we keep this here for sphinx crosslinking
+eth-utils = ">=1.10.0"
+
+[tool.mypy]
+ignore_missing_imports = true
