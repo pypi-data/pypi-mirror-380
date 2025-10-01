@@ -1,0 +1,39 @@
+{
+  "taskParams": {
+    "type": "include",
+    "value": {
+      "record": {
+        "metadata": {},
+        "attachment": "",
+        "attachmentType": "IMAGE"
+      },
+      "version": "1.0.0",
+      "operators": [
+        {
+          "key": "line-[c9474]",
+          "type": "slot",
+          "label": "lane line",
+          "metadata": {},
+          "instanceOption": {},
+          "slotSpecification": {
+            "type": "line",
+            "restrictInsideCanvasBoundary": true
+          }
+        }
+      ]
+    }
+  },
+  "taskResult": {
+    "notes": [],
+    "issues": [],
+    "annotations": [
+      {
+        "key": "line-[c9474]",
+        "label": "lane line",
+        "type": "slot",
+        "slots": []
+      }
+    ]
+  },
+  "algorithms": []
+}
