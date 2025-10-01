@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: bits-auth
+Version: 3.0.1
+Summary: BITS Auth
+License-Expression: BSD-3-Clause
+Keywords: bits,auth
+Author: DevNull
+Author-email: <devnull@broadinstitute.org>
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: bits-secrets (>=2.0.0,<3.0.0)
+Project-URL: Homepage, https://github.com/broadinstitute/bits-auth.git
+Project-URL: Repository, https://github.com/broadinstitute/bits-auth.git
+Description-Content-Type: text/markdown
+
+# bits-auth
+
+BITS Auth Python Package
+
+## Dependencies
+
+bit-auth is asically a collector of connections to other Python libraries. You
+can see the relationship to other repositories in the
+[dependency graph](dependencies.md)
+
