@@ -1,0 +1,355 @@
+Metadata-Version: 2.4
+Name: toucanpy
+Version: 2.0.0
+Summary: Toucan is a tool to track support of the latest versions of applications by your forensic tools.
+Author-Email: Netherlands Forensic Institute <hansken-support@nfi.nl>
+License-Expression: HANSKEN USER LICENSE
+License-File: LICENSE.txt
+Requires-Python: >=3.10
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: adb-pywrapper>=1.0.3
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: packaging>=25.0
+Requires-Dist: numpy>=2.2.6
+Provides-Extra: test
+Requires-Dist: parameterized>=0.9.0; extra == "test"
+Requires-Dist: freezegun>=1.5.1; extra == "test"
+Requires-Dist: gitpython>=3.1.43; extra == "test"
+Provides-Extra: examples
+Requires-Dist: pumapy>=2.10.0; extra == "examples"
+Requires-Dist: requests>=2.32.3; extra == "examples"
+Requires-Dist: beautifulsoup4>=4.13.5; extra == "examples"
+Provides-Extra: build
+Requires-Dist: unittest-xml-reporting>=3.2.0; extra == "build"
+Provides-Extra: check
+Requires-Dist: ruff; extra == "check"
+Description-Content-Type: text/markdown
+
+# Toucan
+_Thorough Observation Utility for Continuous Application Notification_
+
+![Toucan](resources/logo_toucan.svg)
+
+Toucan is a framework to track support for the latest versions of mobile applications by your forensic tools.
+Toucan checks for each of your applications if there is an update. If there is an
+update, Toucan will install the update and generate reference data, and then checks whether your forensic tool still supports
+the newest app version. The result reporting is customizable and can be exported to formats like Markdown.
+
+By running Toucan daily, forensic researchers can easily and automatically stay on top of supporting the very latest
+versions of third party apps.
+
+> 📵 Toucan currently only supports Android apps. Support for other OSes might be added later.
+## Rationale
+Mobile apps update frequently, and each new version can change how data is stored or transmitted. For forensic tools to
+stay reliable, they need to be validated against every new app version. As new app versions are released several times
+a week, it is difficult to manually keep track of the support of the forensic tool for each new app version. Creating
+reference data manually is daunting and time-consuming, and doing this for multiple apps several times a week is not feasible.
+Toucan aims to solve this problem, by automating the process of updating the app on a running emulator when there is a
+new version, creating reference data and running the forensic tool on the reference data, comparing the output to the previous
+version.
+
+Output:
+- A report summarizing the support of the forensic tool for the new version (for example in Markdown, defined in Reporter)
+- reference data: the files in which the data of the application is stored (defined in ToucanFile in ToucanFormat)
+- The recognition and parsing results for the new version
+- The installation file (APK for Android) of the new version
+
+## Running Toucan
+After completing [the setup](#Setup), you can start building your own implementation.
+For this, you need to define a [ToucanFormat](toucan_formats/toucan_format.py), a [Reporter](reporter/reporter.py) and
+a [ToucanConfig](toucan_config.py). Toucan provides a [MarkdownReporter](reporter/markdown_reporter.py) that creates
+a report in Markdown format, and optionally pushes it to a Git repository.
+
+See the [examples folder](examples) for full examples on how to implement these classes. When you have implemented
+them, you can define your main:
+
+```python
+class DummyFormat(ToucanFormat):
+    def __init__(self):
+        super().__init__(app_name='dummy',
+                         package_name='com.dummy',
+                         toucan_files=[...])
+    # Implement abstract methods here
+
+if __name__ == '__main__':
+    # Load default log configuration, or configure logging yourself
+    load_default_log_config()
+    # Run actual Toucan code
+    try:
+        reporter = MarkdownReporter(report_root=Path("/path/to/report/folder"),
+                                    git_pull_and_push=False,
+                                    destination_branch="main")
+        toucan_config = ToucanConfig(...)
+        toucan_runner = ToucanRunner([DummyFormat()], reporter, toucan_config)
+        toucan_runner.run(interactive=True, debug=True)
+    except Exception as e:
+        logger.exception(e)
+```
+This will run Toucan for the app defined in `DummyFormat` and report the results as defined in the `Reporter`.
+
+## Toucan workflow
+### General
+The pseudocode below shows you the way Toucan works:
+```text
+start emulators
+for each ToucanFormat:
+    if no update available: continue with next ToucanFormat
+    if update available:
+        download and install new app version on both emulators
+        execute user actions on emulators
+        for each ToucanFile in toucan format:
+            copy file off of device
+            recognize file type
+            parse file to get tool output
+            verify recognition
+            for each validation rule in ToucanFile:
+                verify validation rule
+report findings
+```
+See also the pydoc of `ToucanRunner.run_toucan_format()` for an overview of the steps.
+
+### WhatsApp
+The workflow above is the generic workflow for the Toucan framework. Below is a workflow specific for WhatsApp as shown in
+[the example](examples/run.py):
+```text
+start emulators
+for the WhatsAppFormat:
+    if no update available: exit
+    scrape the WhatsApp website for the latest version. If update available:
+        download the newest APK install the new WhatsApp version on both emulators
+        execute user actions (open WhatsApp) on emulators
+        for each ToucanFile(wa.db, msgstore.db):
+            pull file from device
+            recognize file type with the file command
+            parse file with sqlite3 to get tool output
+            verify recognition (type is 'SQLite 3.x database')
+            for each validation rule in ToucanFile:
+                verify validation rule (database contains specific tables)
+report findings to a markdown file in the daily summary directory
+```
+
+### ToucanFormat
+In the pseudocode above, we mention ToucanFormats. A ToucanFormat is the definition of an app/file format supported by
+Toucan, and the ToucanFormat is the code that describes everything Toucan needs to know about the format, such as the
+package name, how to update it, and how to check whether there is still support for the newest version. Learn more about
+writing a new ToucanFormat from [the example for WhatsApp](examples/whatsapp/whatsapp_format.py) and
+[the pydoc](toucan_formats/toucan_format.py).
+
+## Current limitations
+As Toucan was originally developed for [Hansken](https://www.hansken.org/), there still are a few specific things
+implemented in the framework, that have not been generalized yet. These limitations listed below. These limitations will
+be addressed by the community, see the issues in GitLab.
+
+- Two emulators are required, even when only one is required for your application. This means you need to set up and
+configure two emulators. Both of these will be started during a Toucan run.
+- Physical devices are not yet supported. Toucan assumes it can boot from snapshots, which is not possible for physical
+devices.
+- A recognition step is required. If you are only interested in the parsing result, you can bypass the recognition step
+when implementing the ToucanFormat:
+
+```python
+def recognize_file(self, path_to_file: Path) -> str:
+    # Determine the file type of the given file (also see the `toucan_files` in the constructor).
+    # This function should return a string containing the file type, e.g. "jpeg".
+    expected_type = "value"
+    return expected_type
+```
+The value of the expected type should be the same as the value defined in your ToucanFile, see the
+[examples folder](examples) for a full example.
+```python
+expected_type = "value"
+ToucanFileBuilder().with_expected_type(expected_type)
+```
+- Currently, it is up to the end user to define how the installation file should be obtained. In the future, we want to
+obtain it from the [Aardwolf database](https://www.aardwolf-project.eu/) This is a database
+that stores installation files for each app version. In the future, Toucan will be able to get the installation file for
+the newest app version via the Aardwolf API.
+
+## Setup
+### Python setup
+
+Toucan has been tested in Python 3.10-3.13, so install any of these, and create
+a [virtual environment](https://docs.python.org/3/library/venv.html), then activate it:
+
+```bash
+python3 -m venv ./venv
+source ./venv/bin/activate
+```
+
+Alternatively, if you use PyCharm or another IDE,
+[you can let this IDE create the virtual environment for you](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html).
+PyCharm will now activate the virtual environment whenever you open an embedded terminal in your project.
+
+After you have activated the virtual environment, you can install the required dependencies:
+
+```bash
+pip install pdm
+pdm install --group test
+```
+
+You can use `pdm` to run all tests:
+```bash
+pdm run test
+```
+
+### Additional requirements
+Toucan uses a few additional tools that you need to install and configure.
+
+#### Android SDK
+Toucan uses ADB (through [adb-pywrapper](https://github.com/NetherlandsForensicInstitute/adb-pywrapper)) and the Android
+emulator. Therefore, ADB needs to be installed, and the environmental value `ANDROID_SDK_ROOT` needs to be set.
+
+You can either install [Android Studio](https://developer.android.com/studio), or manually install ADB and the android
+emulator through [the Android platform tools](https://developer.android.com/tools/releases/platform-tools). We recommend
+using Android Studio.
+
+Next, add the environment variable `ANDROID_SDK_ROOT`:
+
+```bash
+# Add this line to your bashrc
+export ANDROID_SDK_ROOT="path/to/Android/sdk" # Typically /home/<USERNAME>/Android/Sdk
+# Take changes into effect
+source ~/.bashrc
+```
+
+You can test if this works by running:
+
+```bash
+# should print the ADB version
+$ANDROID_SDK_ROOT/platform-tools/adb --version
+# should print the emulator version
+$ANDROID_SDK_ROOT/emulator/emulator --version
+```
+
+For local development, it is convenient to add ADB and the emulator command to your path:
+
+```bash
+# Add this line to your bashrc
+export PATH="~/Android/Sdk/platform-tools:$PATH"
+export PATH="~/Android/Sdk/emulator:$PATH"
+# Take changes into effect
+source ~/.bashrc
+```
+
+⚠️ If you have also installed ADB manually, you could run into problems if the versions differ. Check this:
+
+```bash
+$ANDROID_SDK_ROOT/platform-tools/adb --version
+adb version
+```
+
+If the versions differ, either remove ADB with `sudo apt remove` or manually replace the ADB binary in `/usr/bin/` with
+a symlink to the ADB binary in `ANDROID_SDK_ROOT`.
+
+#### Emulators
+For Toucan you need to set up two emulators: one for Alice and one for Bob. The steps below describe how to create an
+emulator. For more information about Android Emulators, refer to [the Android developer website](https://developer.android.com/studio/run/managing-avds#about).
+Follow these steps to create and start an Android emulator:
+
+1. [Install Android Studio](https://developer.android.com/studio/run/managing-avds#createavd).
+2. [Create an Android Virtual Device (avd)](https://developer.android.com/studio/run/managing-avds) We recommend a Pixel
+   with a recent Android version installed. Make sure the Pixel is rooted (without the playstore icon). Use the default
+configuration.
+3. [Start the emulator](https://developer.android.com/studio/run/managing-avds#emulator).
+
+If you want to run the emulator from the command line, refer
+to [Start the emulator from the command line](https://developer.android.com/studio/run/emulator-commandline).
+
+
+## Configuration
+The configuration for Toucan is typically stored in a [YAML file](config/config.yml):
+
+```yaml
+emulators:
+  alice: "toucan_alice"
+  bob: "toucan_bob"
+  use_snapshots: True
+  wait_time: 60
+  number_of_cores: 2
+daily_report:
+  branch: "master"
+```
+
+* `emulators.alice`: The `avd` name of the Alice emulator. Should match the name printed by `emualtor -list-avds`
+* `emulators.bob` : The `avd` name of the Bob emulator. Should match the name printed by `emualtor -list-avds`
+* `emulators.use_snapshots`: If set to True, Toucan will use snapshots to speed up and improve its run. To do so, Toucan
+will use a snapshot named `toucan_snapshot` to speed up boot times and rollback changes if any error occurs during any
+ToucanFormat
+* `emulators.wait_time`: How long Toucan will wait for an emulator to boot
+* `emulators.number_of_cores`: The number of CPU cores each emulator can use
+* `daily_report`: The branch the daily report changes will be pushed to. This branch needs to exist on the GIT server
+
+## Troubleshooting
+### Platform image is missing when trying to start an emulator
+If running the emulator fails, and the error message mentions that a platform image is missing, you can either fix
+this using Android Studio in the Virtual Device Manager window (this can be found under More Actions after starting Android
+Studio), or the [Android sdkmanager](https://developer.android.com/tools/sdkmanager).
+
+### Starting the Emulator with a Custom Snapshot
+We encountered a specific issue when launching Toucan. After running the script, the original snapshot or state of the
+emulator was lost, causing significant problems during development. This was problematic because in development mode,
+it's essential to revert to the initial state before making code changes or updates to the emulator.
+
+**The solution is to use the `-snapshot <snapshot name>` option**. Before you can utilize this option, you must adjust
+certain settings in your Android Studio; otherwise, this option won't be available, and your emulator won't start with
+the custom snapshot.
+
+The error message you might encounter after using the `-snapshot` parameter is: *
+*`WARNING | ignoring -snapshot option due to the use of -no-snapshot`**
+
+#### To Resolve This Error and Enable the `-snapshot` Parameter:
+Ensure that you create a custom snapshot in the emulator before proceeding with development.
+**Also add your custom snapshot name to the script parameter `--custom-snap <name of the snapshot>`**
+
+1. Navigate to your Android Studio installation directory and run: `~/Desktop/android-studio/bin/studio.sh`
+   Before applying this fix, consider updating Android Studio to the latest version.
+
+2. Next, go to `More Actions` -> `Virtual Device Manager`
+   Select your device, and click on the pencil icon; in our case, it's `toucan_device`. Then, scroll down and click
+   on `Show Advanced Settings`. Choose your custom snapshot from the list under `Choose from snapshot`. **Make sure that
+   the SD card option is set to `Studio-managed` with a value of `512 MB`**.
+
+3. Save these settings by clicking the `Finish` button.
+
+This process will enable you to use the `-snapshot` parameter effectively.
+
+#### If you don't have access to the Android Studio GUI, then do the following steps:
+1. Locate your AVD device folder, **`~/.android/avd/[name of device].avd`** in our case *
+   *`~/.android/avd/toucan_device.avd`**
+2. Look for a file called **`config.ini`** (NOT the ini file in `~/android/avd`!).
+3. Change the following lines:
+
+```ini
+fastboot.chosenSnapshotFile=<name of custom snapshot>
+fastboot.forceChosenSnapshotBoot=yes
+fastboot.forceColdBoot=no
+fastboot.forceFastBoot=no
+hw.sdCard=yes
+sdcard.size=512 MB
+sdcard.path=~/.android/avd/[device folder]/sdcard.img
+```
+
+**_For `fastboot.chosenSnapshotFile` choose the name of your custom snapshot, on our case `snap_2023-10-02_11-09-31`
+And for `sdcard.path` choose `~/.android/avd/toucan_device.avd/sdcard.img`_**
+
+### Running the emulator results in "PANIC: Broken AVD system path."
+The cause of this issue is still unknown, but this means that the system image for the emulator is either missing or
+broken. The system image is the base OS your Android emulator uses, and contains the Android OS and the built-in core
+SDKs, such as the Play Store and Google Play API.
+
+First check whether the environmental value `ANDROID_SDK_ROOT` is set correctly: it should point to `~/Android/Sdk`.
+
+Then, check whether you have the correct System image installed. Open `~/.android/avd/<YOUR AVD>.avd/config.ini`, and
+check the value for `image.sysdir.1`: it should be the path within `ANDROID_SDK_ROOT` where the system image is located.
+Check if this folder exists. If it does: delete it, it is corrupted. If it doesn't: it's missing, continue to the next
+step.
+
+Now reinstall the system image. Open the Android Studio Virtual Device Manager, and click on create a new device (we
+won't create a new device). Select any device type, click on next, and now you can select any system image to download.
+Look again in the `config.ini` file from before to see which Android version and which APIs you need. Please note: "Google
+APIs" is not the same as "Google Play". Download the correct one in this screen, and then press Cancel.
+
+The correct system image is now downloaded and the problem should be mitigated.
+
