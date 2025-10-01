@@ -1,0 +1,7 @@
+include README.md LICENSE
+recursive-include include *.hpp *.h *.hh *.hxx
+recursive-include third-parties *.hpp *.h *.txt *.md
+prune docs
+prune docs/html
+exclude examples/*
+prune examples

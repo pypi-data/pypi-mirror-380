@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+  "scikit-build-core>=0.9.0",
+  "pybind11>=2.12",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pydaasiot"                         # nome unico su PyPI
+version = "0.2.1"                          # allinea alla tua SDK
+description = "Python bindings for DaaS-IoT (Windows + Linux manylinux)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Tuo Nome", email = "you@example.com" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: C++",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "License :: OSI Approved :: MIT License"  # cambia se diverso
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/tuo-org/pydaasiot"
+Issues   = "https://github.com/tuo-org/pydaasiot/issues"
+
+# Niente examples come script; se un domani vuoi una CLI: [project.scripts] qui.
+
+[tool.scikit-build]
+build.verbose = true
+# Se un giorno aggiungi macOS universal2: wheel.expand-macos-universal-tags = true
+
+# Facoltativo: puoi fissare cmake.define.* anche qui se preferisci non usare env CMAKE_ARGS
+# [tool.scikit-build.cmake.define]
+# DAAS_WIN_ROOT = "lib/windows-msvc-x64"
+# DAAS_LINUX_ROOT = "lib/linux-gcc-x86_64"

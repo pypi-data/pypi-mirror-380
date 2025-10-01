@@ -1,0 +1,100 @@
+name: build-and-publish-testpypi
+
+on:
+  push:
+    tags: ["pre*"]      # Esempio: pre0.2.0
+  workflow_dispatch:     # Avvio manuale dalla tab Actions
+
+jobs:
+  build-wheels:
+    name: Build wheels (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, windows-2022]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true  # ok anche se non usi LFS
+
+      - name: Show SDK files (pre-build check)
+        shell: bash
+        run: |
+          echo "== include =="
+          ls -l include || true
+          echo "== lib/windows-msvc-x64 =="
+          ls -l lib/windows-msvc-x64 || true
+          echo "== lib/linux-gcc-x86_64 =="
+          ls -l lib/linux-gcc-x86_64 || true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: python -m pip install --upgrade pip cibuildwheel==2.*
+
+      - name: Build wheels
+        env:
+          CIBW_BUILD: "cp39-* cp310-* cp311-* cp312-* cp313-*"
+          CIBW_SKIP: "*-win32 *-manylinux_i686 pp* *-musllinux_*"
+          CIBW_ARCHS_WINDOWS: "AMD64"
+          CIBW_ARCHS_LINUX: "x86_64"
+          CIBW_MANYLINUX_X86_64_IMAGE: "manylinux2014"
+          CIBW_BUILD_VERBOSITY: "3"
+          CIBW_ENVIRONMENT_WINDOWS: 'CMAKE_ARGS="-DDAAS_WIN_ROOT=lib/windows-msvc-x64 -DCMAKE_VERBOSE_MAKEFILE=ON" SKBUILD_VERBOSE=1'
+          CIBW_ENVIRONMENT_LINUX:  'CMAKE_ARGS="-DDAAS_LINUX_ROOT=lib/linux-gcc-x86_64 -DCMAKE_VERBOSE_MAKEFILE=ON" SKBUILD_VERBOSE=1'
+        run: cibuildwheel --output-dir wheelhouse
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels-${{ matrix.os }}
+          path: wheelhouse/*.whl
+
+  sdist:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: python -m pip install --upgrade pip build
+
+      - name: Build sdist
+        run: python -m build --sdist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdist
+          path: dist/*.tar.gz
+
+  publish-testpypi:
+    needs: [build-wheels, sdist]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheels-ubuntu-22.04
+          path: dist
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheels-windows-2022
+          path: dist
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: sdist
+          path: dist
+
+      - name: Upload to TestPyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        run: |
+          python -m pip install --upgrade pip twine
+          twine upload --repository-url https://test.pypi.org/legacy/ dist/*
