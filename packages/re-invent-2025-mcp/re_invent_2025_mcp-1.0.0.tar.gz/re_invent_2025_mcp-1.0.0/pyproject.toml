@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "re-invent-2025-mcp"
+version = "1.0.0"
+description = "MCP server for AWS re:Invent 2025 session catalog"
+authors = [{name = "AWS"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.15.0",
+    "msgpack>=1.1.0"
+]
+keywords = ["mcp", "aws", "reinvent", "sessions"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0"
+]
+
+[project.scripts]
+re-invent-2025-mcp = "reinvent_2025_mcp.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/reinvent_2025_mcp"]
