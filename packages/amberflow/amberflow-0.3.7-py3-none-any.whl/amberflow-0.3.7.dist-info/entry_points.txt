@@ -1,0 +1,6 @@
+[console_scripts]
+cptool = amberflow.cli.cptool:cptool
+printdag = amberflow.cli.printdag:printdag
+printflow = amberflow.cli.printflow:printflow
+printworknode = amberflow.cli.printworknode:printworknode
+runflow = amberflow.cli.runflow:runflow
