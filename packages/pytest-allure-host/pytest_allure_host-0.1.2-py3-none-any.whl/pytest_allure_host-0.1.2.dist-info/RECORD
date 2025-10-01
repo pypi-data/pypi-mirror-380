@@ -1,0 +1,12 @@
+pytest_allure_host/__init__.py,sha256=Us3L46Kd1Rh1FM9e74PJB7TN4G37WkM12edi8GnGhgc,130
+pytest_allure_host/__main__.py,sha256=1dzo3_74YYjXLo4xf_OjbmayOAzDdTlIgCVX00tHdoU,99
+pytest_allure_host/cli.py,sha256=OLizf1zTZ4yeppg1dcv9QYqJBwoa1FsXUoBgJAmd_o8,4932
+pytest_allure_host/config.py,sha256=QLWhSYemmyI7cu_Y9ToR51hHwdU2lLLGqYT6IG9d1OE,4827
+pytest_allure_host/plugin.py,sha256=t_DzPQAf3Vj8W9Xmt25__iZg7ItRdJzl7tyQu01ZtSI,5079
+pytest_allure_host/publisher.py,sha256=0qTaJW5gFIbjM26uyn5b49gqqTJWbxgWvCt7PCnhQfA,32691
+pytest_allure_host/utils.py,sha256=oZm3RqhTYMsyf-3IN4ugFLK3gEz9jQ_rmdb2BeQoYBU,3329
+pytest_allure_host-0.1.2.dist-info/METADATA,sha256=MyVVqcfrynwG4j4YkztkGRNBRFgq_PNPGGSxF5FJSj8,10387
+pytest_allure_host-0.1.2.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+pytest_allure_host-0.1.2.dist-info/entry_points.txt,sha256=PWnSY4aqAumEX4-dc1TkNHfju5VTKPUHfYPv1SdAlIA,119
+pytest_allure_host-0.1.2.dist-info/licenses/LICENSE,sha256=jcHN7r3njxuM4ilSLkK0fuuQAGMMkqzvYL27CYZGnWs,1084
+pytest_allure_host-0.1.2.dist-info/RECORD,,
