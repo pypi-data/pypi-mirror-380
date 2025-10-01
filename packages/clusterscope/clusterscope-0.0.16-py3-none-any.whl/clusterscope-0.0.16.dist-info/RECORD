@@ -1,0 +1,13 @@
+clusterscope/__init__.py,sha256=UueXQNFFOpEOw6v9JuPWfNa0GopIJx42DXrCPTwAr_M,490
+clusterscope/cache.py,sha256=N6wsbbIj2xwG6PbIzx37oJnLaFT1HhFFl6HSfYgaovA,1772
+clusterscope/cli.py,sha256=WxcS97GjOwDguiLGkVjW9OlP1qOjq_ecp9Mt2mmU0dw,7271
+clusterscope/cluster_info.py,sha256=PxXo-YoS567jU9bIj2bDq0QOpcCFVSm8zz1b_qrNYqI,36801
+clusterscope/job_info.py,sha256=-YG9N9xGfrSf74lmPrTjMhvE4Okk800NcYDQ6vL6UOU,5671
+clusterscope/lib.py,sha256=vMvBtbygYUhnykArODY2hKtvZwYlEnfEOsr1Hyvgzoc,2894
+clusterscope/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clusterscope-0.0.16.dist-info/licenses/LICENSE,sha256=gRKgajAtbKIMcsMQP9hCCsod9YmCuMay2RW1wVT-tDU,1065
+clusterscope-0.0.16.dist-info/METADATA,sha256=xxFCquM-M2FC6VLEvwkjzI-LemQVyEsMVb55bFMecko,3170
+clusterscope-0.0.16.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+clusterscope-0.0.16.dist-info/entry_points.txt,sha256=jZ9BMSfF6rvodnR38WSGb6OrmrOgV9wuY8yspaoTFSY,49
+clusterscope-0.0.16.dist-info/top_level.txt,sha256=Y1pHhG0dJm6nlAz1PSsUgfPTE6SLP7OkH-WwydyLN-8,13
+clusterscope-0.0.16.dist-info/RECORD,,
