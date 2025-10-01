@@ -1,0 +1,2 @@
+[console_scripts]
+pyroids = pyroids.play:main
