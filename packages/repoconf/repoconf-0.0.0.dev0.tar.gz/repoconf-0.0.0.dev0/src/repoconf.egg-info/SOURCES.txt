@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/repoconf/__init__.py
+src/repoconf/py.typed
+src/repoconf.egg-info/PKG-INFO
+src/repoconf.egg-info/SOURCES.txt
+src/repoconf.egg-info/dependency_links.txt
+src/repoconf.egg-info/requires.txt
+src/repoconf.egg-info/top_level.txt
+src/repoconf/cli/__init__.py
+src/repoconf/core/__init__.py
