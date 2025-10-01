@@ -1,0 +1,43 @@
+[project]
+name = "ironflock"
+version = "1.2.0"
+description = "IronFlock Python SDK for connecting to the IronFlock Platform"
+authors = [
+    {name = "Marko Petzold, IronFlock GmbH", email = "info@ironflock.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "autobahn[asyncio,serialization]==24.4.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/RecordEvolution/ironflock-py"
+Repository = "https://github.com/RecordEvolution/ironflock-py"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx (>=7)",
+    "sphinx-book-theme (>=1.1.4)",
+    "sphinx-autodoc-typehints (>=2.0)"
+]
+
+dev = [
+    "pytest",
+    "ruff",
+    "pydantic",
+    "mypy",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "ironflock", from = "src" }]
