@@ -1,0 +1,194 @@
+Metadata-Version: 2.4
+Name: depths
+Version: 0.1.0
+Summary: S3-native observability layer
+Project-URL: Homepage, https://github.com/depths-ai/depths
+Project-URL: Documentation, https://docs.depthsai.com
+Project-URL: Issues, https://github.com/depths-ai/depths/issues
+Author-email: Depths AI <admin@depthsai.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: boto3>=1.40.36
+Requires-Dist: deltalake==1.1.4
+Requires-Dist: fastapi>=0.118.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: polars==1.33.1
+Requires-Dist: psutil>=7.1.0
+Requires-Dist: pyarrow==21.0.0
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: typer>=0.19.2
+Requires-Dist: uvicorn>=0.37.0
+Provides-Extra: proto
+Requires-Dist: opentelemetry-proto>=1.37.0; extra == 'proto'
+Requires-Dist: protobuf>=6.32.1; extra == 'proto'
+Description-Content-Type: text/markdown
+
+# Depths
+
+Unified, OTel-compatible, S3-native telemetry layer. Built by **Depths AI**.
+
+Depths collects traces, logs, and metrics over OTLP HTTP, writes them into Delta Lake tables by UTC day, and can ship sealed days to S3. You get a simple CLI to boot the service, a tiny query API, and a clean Python surface for programmatic ingest and reads.
+
+Docs live at **[https://docs.depthsai.com](https://docs.depthsai.com)**.
+
+---
+
+## Why Depths
+
+* **OTel first** – accept standard OTLP JSON today, add protobuf by installing an extra
+* **Delta Lake tables by default** – predictable schema across six OTel tables
+* **S3 native** – seal a past UTC day, upload, verify rowcounts, then clean local state
+* **Polars inside** – fast typed DataFrames and LazyFrames for compact reads
+* **Simple to start** – `depths init` then `depths start`
+
+---
+
+## Install
+
+```bash
+# core (JSON ingest)
+pip install depths
+
+# optional protobuf ingest (OTLP x-protobuf)
+pip install "depths[proto]"
+```
+
+---
+
+## Quick start
+
+### 1) Initialize an instance
+
+```bash
+depths init
+```
+
+This lays out `./depths_data/default` with `configs`, `index`, and day staging dirs.
+
+### 2) Start the OTLP HTTP server
+
+```bash
+# foreground
+depths start -F
+
+# or background
+depths start
+```
+This triggers a FastAPI+uvicorn server. By default the host address is `0.0.0.0` and port 4318. Moreover, it picks up the `default` instance created during init.
+
+You can also customize that by doing:
+
+```bash
+depths start -F -I default -H 0.0.0.0 -P 4318 
+```
+The server exposes:
+
+* OTLP ingest: `POST /v1/traces`, `POST /v1/logs`, `POST /v1/metrics`
+* Health: `GET /healthz`
+* Simple reads: `GET /api/spans`, `GET /api/logs`, `GET /api/metrics_points`, `GET /api/metrics_hist`
+
+### 3) Point your SDK or Collector
+
+Most OTLP HTTP exporters default to port `4318`. Example cURL for JSON:
+
+```bash
+curl -X POST http://localhost:4318/v1/logs \
+  -H 'content-type: application/json' \
+  -d '{"resourceLogs":[{"resource":{"attributes":[{"key":"service.name","value":{"stringValue":"demo"}}]},"scopeLogs":[{"scope":{},"logRecords":[{"timeUnixNano":"1710000000000000000","body":{"stringValue":"hello depths"}}]}]}]}'
+```
+
+If you installed the protobuf extra, you can send `application/x-protobuf` too.
+
+---
+
+## Reading your data
+
+Depths builds one Delta table per OTel family under a day root:
+
+```
+<instance_root>/staging/days/<YYYY-MM-DD>/otel/
+  spans/
+  span_events/
+  span_links/
+  logs/
+  metrics_points/
+  metrics_hist/
+```
+
+### Quick reads over HTTP
+
+Each endpoint accepts useful filters and returns JSON rows.
+
+```bash
+# last 100 logs with severity >= 9 that contain "error"
+curl 'http://localhost:4318/api/logs?severity_ge=9&body_like=error&limit=100'
+```
+
+```bash
+# spans for a trace
+curl 'http://localhost:4318/api/spans?trace_id=<traceidhex>&limit=100'
+```
+
+### Programmatic reads in Python
+
+```python
+from depths.core.logger import DepthsLogger
+
+lg = DepthsLogger(instance_id="default", instance_dir="./depths_data")
+lf = lg.read_logs(body_like="timeout", limit=50)     # returns a Polars LazyFrame
+rows = lf.collect().to_dicts()
+print(rows[:3])
+```
+
+You can also read spans, metric points, and metric histograms with the matching helpers.
+
+---
+
+## S3 shipping
+
+Turn on shipping and the background worker will seal completed days and upload them to S3, then verify remote rowcounts and clean the local day on a match.
+
+S3 is configured from environment variables. See the docs for the full list and examples. A typical flow is:
+
+1. Run with S3 configured in the environment
+2. Depths rolls over at UTC midnight and enqueues yesterday for shipping
+3. Shipper seals each Delta table, uploads, verifies, and cleans the local day
+
+---
+
+## Architecture at a glance
+
+* **DepthsLogger** – one place that ties everything together. Owns the instance layout, one Producer and one Aggregator per table, rollover at UTC midnight, a small background shipper, and reader helpers.
+* **OTLP Mapper** – shapes decoded OTLP JSON into six row types. Handles timestamp selection, resource and scope attributes, and consistent ID normalization.
+* **Producer** – validates, normalizes, and buffers rows against the table schema. Backpressure policy is configurable.
+* **Aggregator** – drains the producer queue and appends typed DataFrames to Delta tables based on quiet time, age, and near full triggers.
+* **Delta helpers** – predictable create, insert, upsert, delete, optimize, checkpoint, vacuum, and read with Polars and delta-rs.
+* **Shipper** – seal a finished day, upload to S3 in a Delta-safe order, verify rowcounts, and clean up.
+
+Everything is typed with Polars schemas that match OpenTelemetry naming, with stable UTC semantics.
+
+---
+
+## Configuration
+
+* Instance identity and data dir come from `DEPTHS_INSTANCE_ID` and `DEPTHS_INSTANCE_DIR` when launched by the CLI.
+* S3 configuration is read from environment variables.
+* Runtime knobs such as queue sizes, flush triggers, and shipper timeouts live in the options objects.
+
+See **[https://docs.depthsai.com](https://docs.depthsai.com)** for the complete reference and examples.
+
+---
+
+## Development notes
+
+* Package import is `depths` and can be installed with the protobuf extra using `depths[proto]`.
+* The service lives at `depths.cli.app:app` for uvicorn.
+* CLI commands are available as `depths init`, `depths start`, and `depths stop`.
+
+---
+
+## Status
+
+Version `v0.1.0`. Early but already useful for getting OTel data into Delta and S3 with a minimal footprint.
+
+If you try it, tell us what worked and what did not. The best place to start is the docs: **[https://docs.depthsai.com](https://docs.depthsai.com)**.
