@@ -1,0 +1,385 @@
+Metadata-Version: 2.3
+Name: baml-cc
+Version: 0.209.0.2
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: baml-cc-py >=0.208.5.4
+Requires-Dist: anthropic >=0.7.0
+Requires-Dist: pydantic >=2.0.0
+Requires-Dist: cffi >=1.15.0
+Requires-Dist: pytest >=7.0.0 ; extra == 'dev'
+Requires-Dist: pytest-asyncio >=0.21.0 ; extra == 'dev'
+Requires-Dist: black >=23.0.0 ; extra == 'dev'
+Requires-Dist: ruff >=0.1.0 ; extra == 'dev'
+Requires-Dist: mypy >=1.0.0 ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Summary: BAML Claude Code Provider - Advanced Claude Code integration for BAML
+Keywords: baml,claude,ai,llm,anthropic
+Home-Page: https://github.com/ViperJuice/baml-cc
+Author: ViperJuice <your-email@example.com>
+Author-email: ViperJuice <your-email@example.com>
+License: Apache-2.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/ViperJuice/baml-cc
+Project-URL: Repository, https://github.com/ViperJuice/baml-cc
+Project-URL: Documentation, https://github.com/ViperJuice/baml-cc#readme
+Project-URL: Bug Tracker, https://github.com/ViperJuice/baml-cc/issues
+
+# BAML Claude Code Provider
+
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ViperJuice/baml-cc/releases)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
+[![TypeScript](https://img.shields.io/badge/typescript-5.0+-blue.svg)](https://typescriptlang.org)
+
+Advanced Claude Code integration for BAML with support for subagents, hooks, slash commands, memory files, and more.
+
+## 🚀 Features
+
+### Core Features
+- ✅ **Claude Code Integration** - Direct integration with Claude Code CLI
+- ✅ **CloudPlan Authentication** - Default and recommended authentication method
+- ✅ **API Key Authentication** - Alternative authentication with `ANTHROPIC_API_KEY`
+- ✅ **Multiple Models** - Support for Sonnet, Haiku, and custom models
+
+### Advanced Features
+- ✅ **Subagents** - Configure multiple specialized agents
+- ✅ **Hooks** - Pre and post-execution hooks
+- ✅ **Slash Commands** - Custom command shortcuts
+- ✅ **Memory Files** - Persistent context and knowledge
+- ✅ **Real-time Streaming** - Live response streaming
+- ✅ **Enhanced Metadata** - Rich response metadata
+- ✅ **Custom Authentication** - Custom auth tokens and headers
+
+## 📦 Installation
+
+### Quick Install (Recommended)
+
+```bash
+# Linux/macOS
+curl -sSL https://install.baml-claude-code.com | bash
+
+# Windows (PowerShell)
+iwr -useb https://install.baml-claude-code.com | iex
+
+# Windows (Batch)
+curl -sSL https://install.baml-claude-code.com | cmd
+```
+
+### Package Manager Install
+
+```bash
+# Python
+pip install baml-claude-code
+
+# Node.js
+npm install @baml/claude-code
+
+# Or with yarn
+yarn add @baml/claude-code
+```
+
+### Manual Install
+
+1. Download the latest release from [GitHub Releases](https://github.com/ViperJuice/baml-cc/releases)
+2. Extract to `~/.baml/providers/claude-code/`
+3. Add to your PATH: `export PATH="$HOME/.baml/providers/claude-code:$PATH"`
+
+## 🔧 Prerequisites
+
+### Required
+- **Claude Code CLI** - Install from [claude.ai/code](https://claude.ai/code)
+- **BAML** - Install from [baml.ai](https://baml.ai)
+
+### Optional
+- **Node.js 16+** - For TypeScript support
+- **Python 3.8+** - For Python support
+
+## 📖 Usage
+
+### Basic Usage
+
+```baml
+// Basic Claude Code client
+client<llm> MyClient {
+  provider claude-code
+  options {
+    model "sonnet"  // Uses Anthropic alias for latest Sonnet
+  }
+}
+
+// Use in functions
+function<string> GenerateCode {
+  client MyClient
+  prompt #"
+    Generate a Python function that {{description}}
+  "#
+}
+```
+
+### Model Aliases
+
+BAML Claude Code Provider supports Anthropic's model aliases:
+
+| Alias | Description | Behavior |
+|-------|-------------|----------|
+| `default` | Recommended model for your account | Automatically selects best model |
+| `sonnet` | Latest Sonnet model | Daily coding tasks |
+| `opus` | Latest Opus model | Complex reasoning |
+| `haiku` | Latest Haiku model | Simple, fast tasks |
+| `opusplan` | Hybrid approach | Opus for planning, Sonnet for execution |
+| `sonnet[1m]` | Extended context | 1 million token context window |
+
+### Advanced Configuration
+
+```baml
+// Advanced Claude Code client with opusplan
+client<llm> AdvancedClient {
+  provider claude-code
+  options {
+    model "opusplan"  // Triggers CloudPlan + opus/sonnet switching
+    plan_model "opus"  // Maps to ANTHROPIC_DEFAULT_OPUS_MODEL
+    execution_model "sonnet"  // Maps to ANTHROPIC_DEFAULT_SONNET_MODEL
+    haiku_model "haiku"  // Maps to ANTHROPIC_DEFAULT_HAIKU_MODEL
+    
+    // SDK-Specific Features
+    subagents ["code-reviewer", "documentation-writer"]
+    auto_detect_subagents true
+    hooks "pre-execution,post-execution"
+    slash_commands ["/debug", "/test", "/refactor"]
+    memory_files ["project-context.md", "coding-standards.md"]
+    auto_load_memory true
+    
+    // Advanced Streaming
+    realtime_streaming true
+    enhanced_metadata true
+    stream_metadata true
+    
+    // Advanced Authentication
+    auth_token env.ANTHROPIC_AUTH_TOKEN
+    custom_headers '{"X-Custom-Header": "value"}'
+    custom_auth "custom-auth-method"
+  }
+}
+```
+
+### Environment Variables
+
+You can override alias mappings using environment variables:
+
+```bash
+export ANTHROPIC_DEFAULT_OPUS_MODEL="opus"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="sonnet"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="haiku"
+export CLAUDE_CODE_SUBAGENT_MODEL="haiku"
+```
+
+### Authentication Methods
+
+#### CloudPlan (Recommended)
+```baml
+client<llm> CloudPlanClient {
+  provider claude-code
+  options {
+    model "sonnet"  // Uses Anthropic alias
+    // CloudPlan is the default - no additional config needed
+  }
+}
+```
+
+#### API Key
+```baml
+client<llm> APIKeyClient {
+  provider claude-code
+  options {
+    model "sonnet"  // Uses Anthropic alias
+    api_key env.ANTHROPIC_API_KEY
+  }
+}
+```
+
+## 🛠️ Configuration Options
+
+### Model Configuration
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `model` | string | `"sonnet"` | Primary model to use |
+| `plan_model` | string | `null` | Model for planning tasks |
+| `execution_model` | string | `null` | Model for executing tasks |
+| `haiku_model` | string | `"claude-3-5-haiku-20241022"` | Fast model for simple tasks |
+
+### SDK Features
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `subagents` | array | `[]` | List of specialized agents |
+| `auto_detect_subagents` | boolean | `true` | Auto-detect available subagents |
+| `hooks` | string | `null` | Comma-separated hook names |
+| `slash_commands` | array | `[]` | Slash commands (discovered from SDK) |
+| `memory_files` | array | `[]` | Files to load into memory |
+| `auto_load_memory` | boolean | `true` | Auto-load memory files |
+
+### Streaming Options
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `realtime_streaming` | boolean | `false` | Enable real-time streaming |
+| `enhanced_metadata` | boolean | `false` | Include enhanced metadata |
+| `stream_metadata` | boolean | `false` | Stream metadata separately |
+
+### Authentication
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `api_key` | string | `null` | Anthropic API key |
+| `auth_token` | string | `null` | Custom auth token |
+| `custom_headers` | string | `null` | JSON string of custom headers |
+| `custom_auth` | string | `null` | Custom authentication method |
+
+## 🔍 CLI Usage
+
+```bash
+# Check if Claude Code CLI is available
+baml-claude-code check
+
+# Get Claude Code version
+baml-claude-code version
+
+# Test the provider
+baml-claude-code test
+
+# Test with specific model
+baml-claude-code test --model sonnet --prompt "Hello, world!"
+```
+
+## 📚 Examples
+
+### Code Review
+```baml
+function<string> CodeReview {
+  client AdvancedClient
+  prompt #"
+    Please review the following code for:
+    1. Code quality and best practices
+    2. Potential bugs or issues
+    3. Performance improvements
+    4. Security considerations
+    
+    Code: {{code}}
+  "#
+}
+```
+
+### Documentation Generation
+```baml
+function<string> GenerateDocumentation {
+  client AdvancedClient
+  prompt #"
+    Generate comprehensive documentation for the following code:
+    
+    {{code}}
+    
+    Include:
+    - Function/class descriptions
+    - Parameter documentation
+    - Usage examples
+    - Return value descriptions
+  "#
+}
+```
+
+### Debugging
+```baml
+function<string> DebugCode {
+  client AdvancedClient
+  prompt #"
+    Debug the following code and explain:
+    1. What the issue is
+    2. Why it's happening
+    3. How to fix it
+    4. Provide the corrected code
+    
+    Code: {{code}}
+    Error: {{error}}
+  "#
+}
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Claude Code CLI Not Found
+```bash
+# Check if CLI is installed
+claude --version
+
+# Install if missing
+npm install -g @anthropic-ai/claude-code
+```
+
+#### Authentication Errors
+```bash
+# Check CloudPlan status
+claude auth status
+
+# Set API key if using API key auth
+export ANTHROPIC_API_KEY="your-api-key"
+```
+
+#### Permission Errors
+```bash
+# Make scripts executable
+chmod +x ~/.baml/providers/claude-code/install-claude-code.sh
+
+# Check PATH
+echo $PATH | grep -o "~/.baml/providers/claude-code"
+```
+
+### Debug Mode
+
+```bash
+# Enable debug logging
+export BAML_LOG=debug
+baml-claude-code test
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [BAML](https://baml.ai) - The amazing BAML framework
+- [Anthropic](https://anthropic.com) - Claude Code and Claude models
+- [Claude Code](https://claude.ai/code) - The Claude Code CLI
+
+## 📞 Support
+
+- 📖 [Documentation](https://github.com/ViperJuice/baml-cc#readme)
+- 🐛 [Issue Tracker](https://github.com/ViperJuice/baml-cc/issues)
+- 💬 [Discussions](https://github.com/ViperJuice/baml-cc/discussions)
+
+---
+
+Made with ❤️ by [ViperJuice](https://github.com/ViperJuice)
+
+
+
