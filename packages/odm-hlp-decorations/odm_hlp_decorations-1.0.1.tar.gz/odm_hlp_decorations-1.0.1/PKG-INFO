@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: odm-hlp-decorations
+Version: 1.0.1
+Summary: Decorators for ETL functions with logging and error handling
+License-Expression: MIT
+License-File: LICENSE
+Keywords: decorators,etl,logging,error-handling
+Author: Marc Monteys
+Author-email: marcmonteys@gmail.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Requires-Dist: python-dotenv (>=1.0.0)
+Project-URL: Homepage, https://github.com/your-username/odm-hlp-decorations
+Project-URL: Issues, https://github.com/your-username/odm-hlp-decorations/issues
+Project-URL: Repository, https://github.com/your-username/odm-hlp-decorations
+Description-Content-Type: text/markdown
+
+# ODM Helper Decorations
+
+Python decorators for ETL functions with logging and error handling.
+
+## Installation
+
+```bash
+pip install odm-hlp-decorations
+```
+
+## Usage
+
+```python
+from odm_hlp_decorations import task
+
+@task()
+def my_function():
+    # Your code here
+    pass
+```
+
+## Requirements
+
+- Python 3.8+
+- python-dotenv
+
+## Configuration
+
+Create a `.env` file with:
+```
+logs_path=./logs/
+```
+
+## License
+
+MIT

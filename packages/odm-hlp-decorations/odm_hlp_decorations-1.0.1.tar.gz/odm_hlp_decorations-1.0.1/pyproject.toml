@@ -1,0 +1,44 @@
+[project]
+name = "odm-hlp-decorations"
+version = "1.0.1"
+description = "Decorators for ETL functions with logging and error handling"
+authors = [
+    {name = "Marc Monteys", email = "marcmonteys@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+dependencies = [
+    "python-dotenv>=1.0.0"
+]
+keywords = ["decorators", "etl", "logging", "error-handling"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/odm-hlp-decorations"
+Repository = "https://github.com/your-username/odm-hlp-decorations"
+Issues = "https://github.com/your-username/odm-hlp-decorations/issues"
+
+[tool.poetry]
+packages = [{include = "odm_hlp_decorations"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
