@@ -1,0 +1,13 @@
+bkmrk-0.2.0.dist-info/licenses/LICENSE,sha256=jTHS32d2Vi3fJZ0J-v91X0BybUqsgUD71DkBTwSq_5A,1069
+bm/__init__.py,sha256=IRHF22tM40Zx-KTZXagavlnRs4Jyei_0ahN4KkxJjRU,32
+bm/__main__.py,sha256=QVUNGyvR4gx948DfPFiqOOnEXzwM5nouSlQJdrOE2t4,136
+bm/cli.py,sha256=U4_9qk2HziN2a9TJ_cTABXLxxBmHFXifh9RUtJCbT_c,4864
+bm/commands.py,sha256=WSa9JbMt8iMOeICC2t-K7MvwwMaFzRurb5X_COOq5W8,27717
+bm/io.py,sha256=BngUZj_tFtv89wZoicrIc4G7td6iCkjLQ5FzX6t2kvk,4428
+bm/models.py,sha256=2h0govf1c_F5YpGSbH-v2SZiRr2M8KMe1DC3p8-Fabo,966
+bm/utils.py,sha256=cIl_FPWGFHsHDXnUn8q8rp7w1smtrsV6gaFBf7OyvN0,8768
+bkmrk-0.2.0.dist-info/METADATA,sha256=0U0sWmSHaDwzD9YPNPv7w62cKS2Nl-os214AB2RXdrM,11313
+bkmrk-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bkmrk-0.2.0.dist-info/entry_points.txt,sha256=cAzJy_Azj7zmzXFP6yQ44Hli8KE7nd_bf96cwLN_M_M,35
+bkmrk-0.2.0.dist-info/top_level.txt,sha256=iiaL5oApc3BPAF4NCpcmWjqqgzZL1il3pMz2C9Wpkm8,3
+bkmrk-0.2.0.dist-info/RECORD,,
