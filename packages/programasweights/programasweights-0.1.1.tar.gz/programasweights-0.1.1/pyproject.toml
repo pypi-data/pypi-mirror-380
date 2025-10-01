@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "programasweights"
+version = "0.1.1"
+description = "ProgramAsWeights: a minimal runtime where programs are weight blobs run by a fixed interpreter."
+readme = "PYPI_README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "ProgramAsWeights", email = "support@programasweights.com" }
+]
+license = { text = "MIT" }
+keywords = ["nlp", "transformers", "runtime", "prefix-tuning", "neural-programs"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "torch",
+  "transformers",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+]
+data = [
+  "openai>=1.0.0",
+  "tqdm>=4.66.0",
+]
+train = [
+  "datasets>=2.19.0",
+  "accelerate>=0.33.0",
+  "safetensors>=0.4.0",
+  "evaluate>=0.4.2",
+  "rich>=13.7.0",
+]
+
+[project.scripts]
+paw-generate-specs = "training.data_generation.generate_specs:main"
+paw-synthesize-data = "training.data_generation.synthesize_data:main"
+paw-train = "training:train_default"
+paw-eval = "training:evaluate_default"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = [
+  ".",
+] 

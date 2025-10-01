@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: programasweights
+Version: 0.1.1
+Summary: ProgramAsWeights: a minimal runtime where programs are weight blobs run by a fixed interpreter.
+Author-email: ProgramAsWeights <support@programasweights.com>
+License: MIT
+Keywords: neural-programs,nlp,prefix-tuning,runtime,transformers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: torch
+Requires-Dist: transformers
+Provides-Extra: data
+Requires-Dist: openai>=1.0.0; extra == 'data'
+Requires-Dist: tqdm>=4.66.0; extra == 'data'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Provides-Extra: train
+Requires-Dist: accelerate>=0.33.0; extra == 'train'
+Requires-Dist: datasets>=2.19.0; extra == 'train'
+Requires-Dist: evaluate>=0.4.2; extra == 'train'
+Requires-Dist: rich>=13.7.0; extra == 'train'
+Requires-Dist: safetensors>=0.4.0; extra == 'train'
+Description-Content-Type: text/markdown
+
+# ProgramAsWeights
+
+A minimal runtime where programs are weight blobs run by a fixed interpreter.
+
+## Installation
+
+```bash
+pip install programasweights
+```
+
+## Quick Start
+
+```python
+import programasweights as paw
+
+# Load a compiled program
+f = paw.function("path/to/program", interpreter_name="yuntian-deng/paw-interpreter")
+
+# Use the program function
+result = f("Your input string here")
+print(result)
+```
+
+## Example Usage
+
+```python
+import programasweights as paw
+
+# Load a program that processes key-value mappings
+f = paw.function("outputs_1spec/prefix_kv/eval_program", interpreter_name="yuntian-deng/paw-interpreter")
+
+# Process input
+string = "A: b b:a, d:a"
+result = f(string)
+print(result)  # Output: {"A":"b":"a","D":"d":"a"}
+```
+
+## Features
+
+- **Simple API**: Load and run neural programs with just a few lines of code
+- **Flexible Interpreters**: Support for different transformer models as interpreters
+- **Efficient Execution**: Optimized runtime for prefix-tuned neural programs
+- **Easy Integration**: Seamlessly integrate neural programs into your Python applications
+
+## Requirements
+
+- Python >= 3.8
+- PyTorch
+- Transformers
+
+## License
+
+MIT License

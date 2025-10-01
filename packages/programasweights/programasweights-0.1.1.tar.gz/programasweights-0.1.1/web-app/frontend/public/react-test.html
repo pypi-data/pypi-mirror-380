@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .debug {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 ProgramAsWeights - React Debug Test</h1>
+        <p>This page will test React loading step by step.</p>
+        
+        <div id="debug-log" class="debug">Loading...</div>
+        
+        <button onclick="testBasicJS()">Test Basic JavaScript</button>
+        <button onclick="testModuleImport()">Test Module Import</button>
+        
+        <div id="react-container">
+            <p>React will render here...</p>
+        </div>
+    </div>
+
+    <script>
+        const debugLog = document.getElementById('debug-log');
+        
+        function addDebug(message) {
+            console.log(message);
+            debugLog.textContent += message + '\n';
+        }
+        
+        function testBasicJS() {
+            addDebug('✅ Basic JavaScript is working');
+            alert('JavaScript is working!');
+        }
+        
+        async function testModuleImport() {
+            try {
+                addDebug('🔄 Testing module import...');
+                
+                // Try to import React using the same method as main.tsx
+                const reactModule = await import('/node_modules/.vite/deps/react.js?v=b9110cfe');
+                addDebug('✅ React module imported: ' + Object.keys(reactModule).join(', '));
+                
+                const reactDomModule = await import('/node_modules/.vite/deps/react-dom_client.js?v=b9110cfe');
+                addDebug('✅ ReactDOM module imported: ' + Object.keys(reactDomModule).join(', '));
+                
+                // Try to create a simple React element
+                const React = reactModule.default;
+                const { createRoot } = reactDomModule;
+                
+                addDebug('🎨 Creating React element...');
+                const element = React.createElement('div', {
+                    style: { background: 'lightgreen', padding: '20px', borderRadius: '8px' }
+                }, 
+                    React.createElement('h2', null, '🎉 React is working!'),
+                    React.createElement('p', null, 'React was successfully imported and rendered.'),
+                    React.createElement('button', {
+                        onClick: () => alert('React event handling works!')
+                    }, 'Test React Button')
+                );
+                
+                const container = document.getElementById('react-container');
+                const root = createRoot(container);
+                root.render(element);
+                
+                addDebug('✅ React element rendered successfully!');
+                
+            } catch (error) {
+                addDebug('❌ Error: ' + error.message);
+                addDebug('Stack: ' + error.stack);
+            }
+        }
+        
+        // Initial debug info
+        addDebug('🚀 React debug test loaded');
+        addDebug('📍 Browser: ' + navigator.userAgent);
+        addDebug('🔧 Location: ' + window.location.href);
+    </script>
+</body>
+</html>

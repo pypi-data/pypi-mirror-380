@@ -1,0 +1,24 @@
+# Include only README
+include README.md
+include LICENSE*
+
+# Exclude everything else - we only want the programasweights package
+prune training/
+prune web-app/
+prune tests/
+prune outputs*/
+prune data/
+prune __pycache__/
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+exclude .git*
+exclude .gitignore
+exclude .DS_Store
+exclude *.egg-info/
+exclude eval.py
+exclude test_*.py
+exclude train.py
+exclude upload_model.py
+exclude *.pt
+exclude *.safetensors
+exclude *.sqlite3
