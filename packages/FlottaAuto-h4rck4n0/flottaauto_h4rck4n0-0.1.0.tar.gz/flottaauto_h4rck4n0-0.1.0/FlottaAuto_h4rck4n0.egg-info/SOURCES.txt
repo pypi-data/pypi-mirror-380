@@ -1,0 +1,8 @@
+README.md
+setup.py
+FlottaAuto/__init__.py
+FlottaAuto/flotta.py
+FlottaAuto_h4rck4n0.egg-info/PKG-INFO
+FlottaAuto_h4rck4n0.egg-info/SOURCES.txt
+FlottaAuto_h4rck4n0.egg-info/dependency_links.txt
+FlottaAuto_h4rck4n0.egg-info/top_level.txt
