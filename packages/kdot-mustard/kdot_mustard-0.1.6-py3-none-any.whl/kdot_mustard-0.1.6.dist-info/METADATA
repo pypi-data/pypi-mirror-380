@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: kdot-mustard
+Version: 0.1.6
+Summary: The ultimate hotdog condiment
+Project-URL: Repo, https://github.com/KrashKart/kdot
+Author-email: KrashKart <shootandscoot222@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# kdot-mustard
+Blown away by the 2025 Super Bowl Halftime Show? Wondering how you can get more sweet, pungent, yellowish condiment-based goodness?
+
+Simply fire up ```kdot-mustard```,
+```
+pip install kdot
+```
+
+load up one of our three curated commands,
+```python
+from kdot_mustard import kdot, kdot_simple, kdot_example
+
+kdot(src_path, target_path, loop, frames, duration) # for total control over what goes on the beat
+kdot_simple(src_path) # fast and easy results to turn his TV off
+kdot_example() # if you need a demonstration of syrup sandwiches and crime allowances
+```
+
+and you have your very own Mr. Morales jumpscare:
+![boo!](./img/bossman.gif)
