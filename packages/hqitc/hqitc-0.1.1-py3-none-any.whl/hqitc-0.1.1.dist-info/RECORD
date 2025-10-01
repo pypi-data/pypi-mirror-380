@@ -1,0 +1,12 @@
+hqitc/__init__.py,sha256=ytYls38ggv8tCm1fFTuY_Wh702s7wDZ3XuIW5kcZ1_M,709
+hqitc/cli.py,sha256=oajk10Nmc-vtX8O0MTRFB2G_BqWtAriyiPXh4dUuf5g,6645
+hqitc/color.py,sha256=YYyvbA9aYc4ff0PL0E5zNybYztxhLmFpV1wYGGtT9dI,5812
+hqitc/encoder.py,sha256=h4NtnKDjEnBfRsZWUTcEvDahIAf8nOgICc9nvAni5AY,1837
+hqitc/main.py,sha256=XzJK21N9vSDlGcUyOvBFwjDQ4-lqK3zf_mM7J6WCjBY,28789
+hqitc/multiscale.py,sha256=Wgl1U9fhcic7SpO_UDNdys68Hw0ilDwc6dqzUpkyKco,12799
+hqitc/utils.py,sha256=17GhwYPMeiQuYupz3cWzbL4NVXoucbLt0NAkEC3Jan0,7098
+hqitc-0.1.1.dist-info/METADATA,sha256=VPaE_NHxfsy0rznV3Emj8BWeMtclZ_UMLsR22ee5PzU,10813
+hqitc-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hqitc-0.1.1.dist-info/entry_points.txt,sha256=Ua3T_bsFCXpCQSmtqYBm8TvF272rm_JZPUidVhzGQSE,41
+hqitc-0.1.1.dist-info/licenses/LICENSE,sha256=GTVQl3vH6ht70wJXKC0yMT8CmXKHxv_YyO_utAgm7EA,1065
+hqitc-0.1.1.dist-info/RECORD,,

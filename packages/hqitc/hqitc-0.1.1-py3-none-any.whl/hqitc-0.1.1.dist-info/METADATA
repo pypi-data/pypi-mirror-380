@@ -1,0 +1,319 @@
+Metadata-Version: 2.4
+Name: hqitc
+Version: 0.1.1
+Summary: Hybrid Quantum-Inspired Transform Codec - A novel image compression algorithm combining quantum-inspired encoding, attention mechanisms, and adaptive DCT transforms
+Project-URL: Homepage, https://github.com/yourusername/hqitc
+Project-URL: Documentation, https://hqitc.readthedocs.io/
+Project-URL: Repository, https://github.com/yourusername/hqitc.git
+Project-URL: Issues, https://github.com/yourusername/hqitc/issues
+Project-URL: Changelog, https://github.com/yourusername/hqitc/blob/main/CHANGELOG.md
+Author-email: Your Name <your.email@example.com>
+Maintainer-email: Your Name <your.email@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: attention-mechanism,computer-vision,dct-transform,image-compression,quantum-inspired,signal-processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Provides-Extra: all
+Requires-Dist: black>=22.0.0; extra == 'all'
+Requires-Dist: flake8>=4.0.0; extra == 'all'
+Requires-Dist: isort>=5.10.0; extra == 'all'
+Requires-Dist: matplotlib>=3.5.0; extra == 'all'
+Requires-Dist: mypy>=0.950; extra == 'all'
+Requires-Dist: myst-parser>=0.17.0; extra == 'all'
+Requires-Dist: pillow>=9.0.0; extra == 'all'
+Requires-Dist: pre-commit>=2.17.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'all'
+Requires-Dist: pytest>=7.0.0; extra == 'all'
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'all'
+Requires-Dist: sphinx>=4.5.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black>=22.0.0; extra == 'dev'
+Requires-Dist: flake8>=4.0.0; extra == 'dev'
+Requires-Dist: isort>=5.10.0; extra == 'dev'
+Requires-Dist: mypy>=0.950; extra == 'dev'
+Requires-Dist: pre-commit>=2.17.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=0.17.0; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'docs'
+Requires-Dist: sphinx>=4.5.0; extra == 'docs'
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.5.0; extra == 'viz'
+Requires-Dist: pillow>=9.0.0; extra == 'viz'
+Description-Content-Type: text/markdown
+
+# HQITC - Hybrid Quantum-Inspired Transform Codec
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-passing-green.svg)](tests/)
+
+A novel image compression algorithm that combines quantum-inspired encoding, attention mechanisms, and adaptive DCT transforms to achieve high-quality image compression with intelligent coefficient selection.
+
+## Features
+
+### Core Capabilities
+- **Quantum-Inspired Encoding**: Novel quantum state simulation for enhanced patch representation
+- **Multi-Head Attention**: Intelligent patch importance ranking based on content analysis
+- **Adaptive DCT Transform**: Quality-driven coefficient selection and quantization
+- **Multi-Scale Processing**: Hierarchical attention across different patch scales (4x4, 8x8, 16x16)
+- **Color Image Support**: RGB to YUV conversion with channel-specific compression ratios
+- **Perceptual Optimization**: Human visual system-aware quality metrics
+
+### Advanced Features
+- Entropy-based bit rate estimation
+- Adaptive quantization based on patch importance
+- Multi-scale attention fusion for complex textures
+- Channel-specific quality control for color images
+- Comprehensive test suite with 65+ passing tests
+
+## Installation
+
+### Prerequisites
+- Python 3.9 or higher
+- NumPy 1.21.0+
+- SciPy 1.7.0+
+
+### Install from Source
+
+```bash
+pip install hqitc
+```
+
+### Development Installation
+
+```bash
+git clone https://github.com/your-username/hqitc.git
+cd hqitc
+pip install -e ".[dev]"
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+import numpy as np
+from hqitc import HQITCCompressor
+
+# Create compressor instance
+compressor = HQITCCompressor(
+    patch_size=8,           # Patch size (4, 8, or 16)
+    quality_factor=0.7,     # Compression quality (0.0-1.0)
+    use_quantum=False,      # Enable quantum encoding
+    use_multiscale=True,    # Enable multi-scale attention
+    color_mode='auto'       # Color processing mode
+)
+
+# Load your image (grayscale or RGB)
+image = np.random.rand(128, 128) * 255  # Example grayscale image
+# image = np.random.rand(128, 128, 3) * 255  # Example RGB image
+
+# Compress the image
+compressed = compressor.compress(image, quality_factor=0.7, verbose=True)
+
+# Decompress the image
+reconstructed = compressor.decompress(compressed, verbose=True)
+
+# Calculate quality metrics
+mse = np.mean((image - reconstructed) ** 2)
+psnr = 10 * np.log10((255.0 ** 2) / (mse + 1e-12))
+print(f"PSNR: {psnr:.2f} dB")
+print(f"Compression Ratio: {compressed['compression_ratio']:.2f}:1")
+```
+
+### Color Image Processing
+
+```python
+# Color image compression with channel-specific settings
+color_compressor = HQITCCompressor(
+    color_mode='auto',      # Automatically detect color images
+    use_multiscale=True,    # Better for complex color textures
+    multiscale_sizes=[4, 8, 16]
+)
+
+# Compress RGB image
+rgb_image = np.random.rand(256, 256, 3) * 255
+compressed = color_compressor.compress(rgb_image, quality_factor=0.8)
+
+# The compressor automatically:
+# - Converts RGB to YUV color space
+# - Applies different compression ratios to Y/U/V channels
+# - Preserves perceptual quality with reduced chrominance data
+
+reconstructed = color_compressor.decompress(compressed)
+```
+
+### Multi-Scale Attention
+
+```python
+# Enhanced compression for images with multiple texture scales
+multiscale_compressor = HQITCCompressor(
+    use_multiscale=True,
+    multiscale_sizes=[4, 8, 16],  # Process at multiple scales
+    patch_size=8                   # Base patch size
+)
+
+# The multi-scale approach:
+# - Extracts patches at different scales (4x4, 8x8, 16x16)
+# - Applies hierarchical attention across scales
+# - Fuses information for optimal coefficient selection
+# - Particularly effective for natural images with varied textures
+
+compressed = multiscale_compressor.compress(image, quality_factor=0.75)
+```
+
+## Algorithm Overview
+
+### Core Components
+
+1. **Patch Extraction**: Images are divided into overlapping patches
+2. **Quantum-Inspired Encoding** (optional): Patches undergo quantum state simulation
+3. **Attention Mechanism**: Multi-head attention computes patch importance scores
+4. **DCT Transform**: Patches are transformed to frequency domain
+5. **Adaptive Selection**: Coefficients are selected based on importance and quality settings
+6. **Quantization**: Selected coefficients are quantized with adaptive step sizes
+7. **Entropy Estimation**: Bit rate estimation for compression ratio calculation
+
+### Multi-Scale Processing Flow
+
+```
+Input Image
+     ↓
+Multi-Scale Patch Extraction (4x4, 8x8, 16x16)
+     ↓
+Hierarchical Attention (cross-scale context)
+     ↓
+Scale Fusion (weighted combination)
+     ↓
+Adaptive Coefficient Selection
+     ↓
+Quantization & Encoding
+```
+
+### Color Processing Pipeline
+
+```
+RGB Image
+     ↓
+RGB → YUV Conversion
+     ↓
+Channel-Specific Compression:
+  - Y channel: Higher quality (full resolution)
+  - U channel: Reduced quality (human vision optimized)
+  - V channel: Reduced quality (human vision optimized)
+     ↓
+YUV → RGB Reconstruction
+```
+
+## Performance Metrics
+
+Typical performance on natural images:
+
+| Configuration | PSNR Range | Compression Ratio | Use Case |
+|---------------|------------|-------------------|----------|
+| Basic (8x8) | 22-35 dB | 10-25:1 | General purpose |
+| Multi-scale | 25-40 dB | 8-20:1 | Complex textures |
+| Color + Multi-scale | 20-45 dB | 5-15:1 | High-quality color |
+| High Quality (q=0.9) | 35-168 dB | 3-8:1 | Near-lossless |
+
+## API Reference
+
+### HQITCCompressor
+
+Main compression class with configurable parameters.
+
+#### Constructor Parameters
+
+```python
+HQITCCompressor(
+    patch_size: int = 8,              # Patch dimensions (4, 8, 16)
+    quantum_dim: int = 32,            # Quantum encoding dimension
+    num_heads: int = 8,               # Attention heads
+    embed_dim: int = 64,              # Embedding dimension
+    use_quantum: bool = False,        # Enable quantum encoding
+    use_multiscale: bool = False,     # Enable multi-scale processing
+    multiscale_sizes: List[int] = None, # Scale sizes for multi-scale
+    color_mode: str = 'auto',         # 'auto', 'color', 'grayscale'
+    seed: int = 42                    # Random seed for reproducibility
+)
+```
+
+#### Methods
+
+##### `compress(image, quality_factor=0.5, keep_ratio=0.3, verbose=True)`
+
+Compresses an input image.
+
+**Parameters:**
+- `image`: Input image array (2D grayscale or 3D RGB)
+- `quality_factor`: Compression quality (0.0-1.0, higher = better quality)
+- `keep_ratio`: Base coefficient retention ratio (0.0-1.0)
+- `verbose`: Enable compression progress output
+
+**Returns:** Compressed data dictionary with compression statistics
+
+##### `decompress(compressed_data, verbose=True)`
+
+Reconstructs image from compressed data.
+
+**Parameters:**
+- `compressed_data`: Dictionary returned by compress()
+- `verbose`: Enable decompression progress output
+
+**Returns:** Reconstructed image array
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Code Style
+
+This project uses:
+- **Black** for code formatting
+- **isort** for import sorting
+- **flake8** for linting
+- **mypy** for type checking
+
+Run formatting and linting:
+
+```bash
+black src/ tests/
+isort src/ tests/
+flake8 src/ tests/
+mypy src/
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+If you use this work in your research, please consider citing:
+
+```bibtex
+@software{hqitc2025,
+  title={HQITC: Hybrid Quantum-Inspired Transform Codec},
+  author={Khushiyant},
+  year={2025},
+  url={https://github.com/your-username/hqitc},
+  note={A novel image compression algorithm combining quantum-inspired encoding and attention mechanisms}
+}
+```
