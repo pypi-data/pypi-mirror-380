@@ -1,0 +1,5 @@
+tomato>=2.2rc2
+pyserial>=3.5
+
+[testing]
+pytest

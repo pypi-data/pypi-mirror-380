@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/tomato_omega/__init__.py
+src/tomato_omega.egg-info/PKG-INFO
+src/tomato_omega.egg-info/SOURCES.txt
+src/tomato_omega.egg-info/dependency_links.txt
+src/tomato_omega.egg-info/requires.txt
+src/tomato_omega.egg-info/top_level.txt
+tests/test_omega.py
