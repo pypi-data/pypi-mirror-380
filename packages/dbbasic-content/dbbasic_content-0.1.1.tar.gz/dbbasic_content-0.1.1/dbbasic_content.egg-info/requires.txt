@@ -1,0 +1,10 @@
+
+[dev]
+pytest>=7.0
+pytest-cov>=4.0
+
+[tsv]
+dbbasic-tsv>=0.1.0
+
+[wordpress]
+pymysql>=1.0
