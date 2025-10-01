@@ -1,0 +1,9 @@
+litemem/__init__.py,sha256=vb4qDdXZJGO7cKHMCgD9JNO7EQ-3yaSCedb5BKfYaYE,102
+litemem/mem.py,sha256=_xo6WLW9v3r_f-0Y7YoJV3rHv5UPBZ2slIXVOSEETvM,24993
+litemem/model_path.py,sha256=iClt16mfjWkeEB9Z_z1Ho6_CapBft-Yi3yx4O9kPFeA,2608
+litemem/models/all-MiniLM-L6-v2-Q8_0.gguf,sha256=JjIVw8rdbhZ0B0GnYkq0y7bI53doi9UzHs-_VoHC-O0,25008064
+litemem-0.1.3.dist-info/licenses/LICENSE,sha256=RNiiGg1NDXwe1dAx34-AmIAVoFRr83-JvxtyK5Lh8Qg,1061
+litemem-0.1.3.dist-info/METADATA,sha256=VdTMruDnSmnM5Ei4DQzJULkFYfPA5XlQefx7KL2PFmo,6005
+litemem-0.1.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+litemem-0.1.3.dist-info/top_level.txt,sha256=VPNWeSpbhg0WxcTO8yrMI1ZMpmHCVa01j_1v2W9URG0,8
+litemem-0.1.3.dist-info/RECORD,,
