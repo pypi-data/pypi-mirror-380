@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: queuesim
+Version: 0.2.0
+Summary: A Simple Mathematical Queueing Theory Simulator and Calculator (M/M/1 , M/M/c etc)
+Home-page: https://github.com/hrishabhxcode/queuelab
+Author: Hrishabh
+Author-email: hrishabhtest@gmail.com
+License: MIT
+Keywords: queueing,simulation,queueing-theory,operations-research,math,statistics,education,probability,performance-analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# QueueSim 📊
+
+A Python library to **simulate and analyze Queueing Systems** (M/M/1, M/M/c, etc.)
+with both **mathematical formulas** and **discrete-event simulation**.
+
+## Features
+- M/M/1 simulation
+- Theoretical formulas
+- Compare simulation vs theory
+- Visualization (matplotlib)
+
+
+
+
+
+## Install
+```bash
+pip install queuesim
+
+from queuesim import compare_mm1
+
+compare_mm1(arrival_rate=5, service_rate=8, max_customers=5000)
