@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: ap2test
+Version: 0.1.0
+Summary: CLI tool for testing Agent Payments Protocol (AP2) implementations
+Author: Evan Kirtz
+Author-email: Your Name <kirtzevan@gmail.com>
+Maintainer-email: Your Name <kirtzevan@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/ap2test
+Project-URL: Documentation, https://github.com/yourusername/ap2test#readme
+Project-URL: Repository, https://github.com/yourusername/ap2test
+Project-URL: Bug Tracker, https://github.com/yourusername/ap2test/issues
+Project-URL: Official AP2, https://github.com/google-agentic-commerce/AP2
+Project-URL: AP2 Documentation, https://ap2-protocol.org/
+Keywords: ap2,agent-payments,payment-protocol,ai-agents,testing,cli
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0.0
+Provides-Extra: dev
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# AP2Test - Agent Payments Protocol Testing CLI
+
+A command-line tool for testing AP2 (Agent Payments Protocol) payment flows.
+
+## Overview
+
+AP2Test helps developers test their AI agent payment implementations by simulating the complete mandate flow:
+- **Intent Mandates** - Define agent authorization constraints
+- **Cart Mandates** - Capture specific purchase approvals
+- **Payment Mandates** - Execute cryptographically-signed transactions
+
+## Installation
+
+pip install ap2test
+
+## Examples
+
+# View detailed audit trail
+ap2test audit
+
+# Check current status
+ap2test status
+
+# Create a custom intent
+ap2test create-intent --amount 1000 --merchant store_xyz --category electronics
+
+# Create a custom cart
+ap2test create-cart --items "Laptop:899:1,Mouse:49:1" --merchant store_xyz
+
+# Execute with crypto payment
+ap2test execute-payment --method stablecoin
+
+# Export audit as JSON
+ap2test audit --format json
+
+# Clear all data when done testing
+ap2test reset
