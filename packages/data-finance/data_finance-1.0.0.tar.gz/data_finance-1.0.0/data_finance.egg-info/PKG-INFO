@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: data_finance
+Version: 1.0.0
+Summary: Tự học
+Home-page: https://github.com/phamlongvu0205/
+Author: Long Vu
+Author-email: vupham.020502@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: datetime
+Dynamic: license-file
