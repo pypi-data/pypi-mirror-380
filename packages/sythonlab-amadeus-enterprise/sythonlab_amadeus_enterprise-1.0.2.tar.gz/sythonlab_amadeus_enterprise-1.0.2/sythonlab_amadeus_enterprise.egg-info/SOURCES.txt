@@ -1,0 +1,15 @@
+README.md
+setup.py
+core/__init__.py
+core/amadeus_sdk.py
+core/header_generator.py
+flights/__init__.py
+flights/amadeus_flight_sdk.py
+flights/data_classes.py
+flights/queries.py
+flights/test.py
+sythonlab_amadeus_enterprise.egg-info/PKG-INFO
+sythonlab_amadeus_enterprise.egg-info/SOURCES.txt
+sythonlab_amadeus_enterprise.egg-info/dependency_links.txt
+sythonlab_amadeus_enterprise.egg-info/requires.txt
+sythonlab_amadeus_enterprise.egg-info/top_level.txt
