@@ -1,0 +1,16 @@
+gemini_mcp/__init__.py,sha256=84CDNPwphhDKPINHzzDfAwJUOobBn-rwz9xB-DuJReo,121
+gemini_mcp/server.py,sha256=t4RHdZNDP1YKyWYSjVwW-Ot4QG70z4IOF_JWHTNGR3o,2297
+gemini_mcp/config/__init__.py,sha256=K9E624CDaB2V_yK-WTKOd3Bt034t0k_I506Lw8vFD4M,153
+gemini_mcp/config/settings.py,sha256=lrszlhJWYrB7w4piUNMagQlQFZWRXQBK0WwhQcyPD4A,2038
+gemini_mcp/middleware/__init__.py,sha256=V8les5pS9GnTG5pg-GBhzWy-CkUmNe5TTZfC9-YMn-s,237
+gemini_mcp/middleware/error_handling.py,sha256=aJO2LlV1evddTQuxMOKoI4T2I0fEISCnijEO0yhkGqg,2450
+gemini_mcp/middleware/logging.py,sha256=xZQZUHDABEl8yZ22nropGh8DZind0FrxW5pMQhKLrp0,1572
+gemini_mcp/services/__init__.py,sha256=ZmfRHpjuYcbfifP6AXWHkf3YT8-V0IHigLavhJwPX1Q,252
+gemini_mcp/services/gemini_client.py,sha256=CLBSYfhoybr2Sn60TiZBom4L1nWy5uBj5EMPlQNd1fw,9725
+gemini_mcp/tools/__init__.py,sha256=qIu9ZgwjQ___i-L3AjsNI5UcwIm2pxzr9EFIf__3CEM,306
+gemini_mcp/tools/gemini_tools.py,sha256=mdhYU9cXzZanSytMW1DZAHxybqvI4gdXG7TuT0Bq9ns,14678
+gemini_cli_mcp_tool-0.1.1.dist-info/METADATA,sha256=TxjyYiwtExEGGvcWlOc9P8603-P3IT-AW1NmrZAwpx8,8741
+gemini_cli_mcp_tool-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gemini_cli_mcp_tool-0.1.1.dist-info/entry_points.txt,sha256=-JCWRqn3FJeydR6lM8FmZ35_hN3gHIqUHi-ICZOVSgU,54
+gemini_cli_mcp_tool-0.1.1.dist-info/licenses/LICENSE,sha256=rXDIP2kqmegK-LQ7XDxJcHpEkunaqP2YtlYbhK-3Zr8,1073
+gemini_cli_mcp_tool-0.1.1.dist-info/RECORD,,
