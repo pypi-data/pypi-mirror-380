@@ -1,0 +1,10 @@
+README.md
+setup.py
+zenpo/__init__.py
+zenpo/cli.py
+zenpo.egg-info/PKG-INFO
+zenpo.egg-info/SOURCES.txt
+zenpo.egg-info/dependency_links.txt
+zenpo.egg-info/entry_points.txt
+zenpo.egg-info/requires.txt
+zenpo.egg-info/top_level.txt
