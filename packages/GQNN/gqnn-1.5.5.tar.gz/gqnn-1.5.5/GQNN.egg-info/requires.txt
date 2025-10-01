@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+qiskit
+qiskit_ibm_runtime
+qiskit-machine-learning
+qiskit-algorithms
+pylatexenc
+matplotlib
+torch
+tqdm
+
+[linux]
+fireducks
