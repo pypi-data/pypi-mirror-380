@@ -1,0 +1,17 @@
+<article>
+    <header>
+        <button aria-label="Close" rel="prev" onclick="hxModalClose()"></button>
+        <p>
+            <strong>
+                {% block title %}
+                {% endblock title %}
+            </strong>
+        </p>
+        {% block content %}
+        {% endblock content %}
+        <footer>
+            {% block footer %}
+            {% endblock footer %}
+        </footer>
+    </header>
+</article>

@@ -1,0 +1,76 @@
+<dialog id="hxModal">
+    <article>
+        <header>
+            <button
+                aria-label="Close"
+                rel="prev"
+                onclick="hxModalClose()"
+            ></button>
+            <p>
+                <strong>HTMX Modal</strong>
+            </p>
+        </header>
+        <p>This is the main text.</p>
+        <footer>
+            <button class="secondary" onclick="hxModalClose()">Cancel</button>
+            <button>Confirm</button>
+        </footer>
+    </article>
+</dialog>
+<script>
+    // Ensure DOM is loaded before running
+    document.addEventListener("DOMContentLoaded", function () {
+        const html = document.documentElement;
+        const modal = document.getElementById("hxModal");
+
+        let isOpen = false;
+
+        // Function to open the modal
+        function hxModal() {
+            if (isOpen) return;
+
+            html.classList.add("modal-is-open", "modal-is-opening");
+            modal.showModal();
+            isOpen = true;
+
+            // Remove opening animation class after animation completes
+            setTimeout(() => {
+                html.classList.remove("modal-is-opening");
+            }, 300);
+
+            // Add backdrop click listener
+            if (!modal.hasBackdropListener) {
+                modal.addEventListener("click", (event) => {
+                    if (event.target === modal) {
+                        hxModalClose();
+                    }
+                });
+                modal.hasBackdropListener = true;
+            }
+        }
+
+        // Function to close the modal
+        function hxModalClose() {
+            if (!isOpen) return;
+
+            html.classList.add("modal-is-closing");
+            // Wait for animation before closing
+            setTimeout(() => {
+                modal.close();
+                html.classList.remove("modal-is-open", "modal-is-closing");
+                isOpen = false;
+            }, 300);
+        }
+
+        // Close modal ono Escape key
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && isOpen) {
+                hxModalClose;
+            }
+        });
+
+        // Expose functions globally
+        window.hxModal = hxModal;
+        window.hxModalClose = hxModalClose;
+    });
+</script>
