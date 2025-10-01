@@ -1,0 +1,9 @@
+pingdetect/__init__.py,sha256=8zLGg-DfQhnDl2Ky0n-zXpN-8e-g7iR0AcaI4l4Vvpk,32
+pingdetect/detect_spatial.py,sha256=eC25ivZlVkQGgJBf3Z_cRb5BLC8RvvtXsxn5bsIIj7U,6606
+pingdetect/rf_infer_folder.py,sha256=W7DBXf10KqvZJtiWtI6JC7P6J6N-NL8CWYad8LiKf8k,4221
+pingdetect/rf_infer_tracker.py,sha256=4tMs-kz4Dv6ae6esJvqgHeFfURlu9uHNjxBswBGDEms,6192
+pingdetect/version.py,sha256=KXFsg3civ8gnKShbL3G3vugBC94Mte-K3YzvOve1yr8,28
+pingdetect-0.0.1a1.dist-info/METADATA,sha256=wQKosvAlXcV7xMKqZnQLCY2i6I3FdEAv0iz_JOPxx-A,2470
+pingdetect-0.0.1a1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pingdetect-0.0.1a1.dist-info/top_level.txt,sha256=fvRsETAJIpliW-meosMwk8BtLrbOdZIHZEHdKPGfRPE,11
+pingdetect-0.0.1a1.dist-info/RECORD,,
