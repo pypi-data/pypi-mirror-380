@@ -1,0 +1,2 @@
+[console_scripts]
+androidscan = androidscan.cli:main
