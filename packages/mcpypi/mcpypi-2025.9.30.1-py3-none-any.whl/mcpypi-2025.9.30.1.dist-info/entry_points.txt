@@ -1,0 +1,3 @@
+[console_scripts]
+mcpypi = pypi_query_mcp.server:main
+pypi-query-mcp = pypi_query_mcp.server:main
