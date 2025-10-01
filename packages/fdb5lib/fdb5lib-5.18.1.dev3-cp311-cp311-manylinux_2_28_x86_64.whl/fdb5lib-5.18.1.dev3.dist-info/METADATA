@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: fdb5lib
+Version: 5.18.1.dev3
+Summary: "fdb5lib"
+Author: file: AUTHORS
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: eckitlib==1.32.2.dev3
+Requires-Dist: eccodeslib==2.44.1.dev3
+Requires-Dist: metkitlib==1.15.1.dev3
+Dynamic: license-file
+Dynamic: requires-dist
