@@ -1,0 +1,7 @@
+filter_connector_gcs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+filter_connector_gcs/filter.py,sha256=2FkQAhyLZcMjZ8Ds3IKOsvO5mCQD8bPTd-lJ59yPrEw,17419
+filter_connector_gcs-2.0.1.dist-info/licenses/LICENSE,sha256=Hun-T5YKdxKbQ1lfbGCu8YiknxeFsTnWAuSWz6CKQAQ,11343
+filter_connector_gcs-2.0.1.dist-info/METADATA,sha256=-sSzEM0h6Le-554speZyNg5bWuVYcRtrQV65_Fsjp10,6105
+filter_connector_gcs-2.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+filter_connector_gcs-2.0.1.dist-info/top_level.txt,sha256=-Xnz2vZhIv-h-B72-GtLPe-ehWf22t8VJ2M-iuoVr3A,21
+filter_connector_gcs-2.0.1.dist-info/RECORD,,
