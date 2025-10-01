@@ -1,0 +1,2 @@
+[console_scripts]
+tunnel-manager-mcp = tunnel_manager.tunnel_manager_mcp:tunnel_manager_mcp
