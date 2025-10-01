@@ -1,0 +1,140 @@
+Metadata-Version: 2.4
+Name: majorgroove
+Version: 0.2.0
+Summary: Python client for the MajorGroove API
+Author: Tapdance DNA
+License: MIT
+Project-URL: Homepage, https://github.com/tapdance-dna/majorgroove
+Project-URL: Issues, https://github.com/tapdance-dna/majorgroove/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+
+## Major Groove
+
+Lightweight DNA oligo planning toolkit and web UI. Manage sequences and plate layouts, export to vendor-friendly spreadsheets, and validate Watson–Crick constraints against order files. Ships as both a Flask app and a small Python library.
+
+### Highlights
+- **Sequences**: import from CSV/XLSX, quick edit, bulk delete, export to CSV/XLSX (UI and API).
+- **Plates (6/96/384)**: create/edit/bulk-create, source/destination flag, vendor plate types, import from XLS/XLSX, export to XLSX (UI and API).
+- **Order check (Watson–Crick)**: define constraints between named sequences or domains and validate against parsed plate orders.
+- **Utilities**: reverse complement tool, duplex distribution explorer (with JSON API).
+- **Library-first**: `majorgroove` exposes parsers, exporters, and constraint validation for direct Python use.
+
+---
+
+### Quickstart
+1) Create and activate a venv
+```bash
+python3.13 -m venv venv
+source venv/bin/activate
+```
+
+2) Install dependencies
+```bash
+# Optional: nupack (needed for duplex tools)
+cd third_party/nupack-4.0.2.0
+pip install -U nupack -f package
+cd -
+
+# App/library deps
+pip install -r requirements.txt
+```
+Note: Ensure your Python version matches an available wheel in `third_party/nupack-4.0.2.0/package/` (e.g., cp313 for Python 3.13).
+
+3) Run the web app
+```bash
+python app.py
+```
+Open `http://localhost:5002`.
+
+---
+
+### What you can do
+#### Sequences
+- UI: `Sequences` page for list, inline edit, delete, bulk delete, export.
+- Import from CSV/XLSX; export selected to CSV/XLSX.
+- API: `GET/POST/PUT /api/sequences`, `POST /api/sequences/export`.
+
+#### Plates (6/96/384)
+- UI: create/edit single plates, or bulk create from JSON; enforce unique names.
+- Import plate layouts from Excel (XLS/XLSX) — each sheet becomes a plate.
+- Automatic vendor `plate_type` suggestions based on dimensions and role (source/destination).
+- Export selected plates to XLSX.
+- API: `GET/PUT /api/plates`, `GET /api/plates/<id>`, `POST /plates/export`.
+
+#### Order check (Watson–Crick constraints)
+- Define relationships between sequences (or domains) by name and validate against parsed order spreadsheets.
+- UI helper: `Tools → Check Order (WC)` with a Python snippet and sample `ZebraOrder.xlsx`.
+
+---
+
+### Python API (library)
+```python
+from majorgroove import (
+    parse_sequences_from_csv, parse_sequences_from_excel,
+    parse_plates_from_excel,
+    export_sequences_to_csv, export_sequences_to_xlsx, export_plates_to_xlsx,
+    ConstraintType, WatsonCrickConstraint, validate_constraints, reverse_complement,
+)
+
+# Parse plates from an order workbook
+orders = parse_plates_from_excel("app/static/ZebraOrder.xlsx")
+
+# Validate a WC constraint between named sequences (optionally by domain index)
+constraints = [
+    WatsonCrickConstraint(
+        sequence1_plate_name=list(orders)[1],  # pick a sheet/plate
+        sequence1_name="1^*B0", sequence1_domain_ID=2,
+        sequence2_plate_name=list(orders)[1],
+        sequence2_name="0*N1^", sequence2_domain_ID=0,
+        constraint_type=ConstraintType.REVERSE_COMPLEMENT,
+    ),
+]
+validate_constraints(orders, constraints, verbose=True)
+
+# Utilities
+rc = reverse_complement("ACGT NNN /iSp18/ ACGT")  # -> TGCATGC...
+```
+
+Export helpers return in-memory bytes you can write to disk:
+```python
+with open("plates.xlsx", "wb") as f:
+    f.write(export_plates_to_xlsx(list(orders.values())))
+```
+
+---
+
+### Web tools
+- Reverse complement: `/reverse-complement`
+- Duplex distribution: `/duplex-distribution`
+  - JSON APIs: `POST /api/duplex-distribution/get-duplex-distribution`,
+    `POST /api/duplex-distribution/generate-sequences`
+- Order WC checker helper: `/check-order-wc` (includes example code and sample workbook)
+
+### REST API (selected)
+- Sequences: `GET/POST/PUT /api/sequences`
+- Plates: `GET/PUT /api/plates`, `GET /api/plates/<id>`
+
+---
+
+### Deployment
+- Sample configs: `gunicorn_config.py.example`, `majorgroove.nginx.conf.example`, `majorgroove.service.example`.
+- Production deps: `pip install -r requirements-prod.txt`.
+
+### Tests
+```bash
+pytest -q
+```
+
+### Sample data
+- Example order workbook: `app/static/ZebraOrder.xlsx`.
+
+---
+
+### Project structure (abridged)
+```
+app/                # Flask UI & routes (sequences, plates, tools, API)
+majorgroove/        # Library: models, parser, export, constraints
+third_party/        # NUPACK (optional, for duplex tools)
+```

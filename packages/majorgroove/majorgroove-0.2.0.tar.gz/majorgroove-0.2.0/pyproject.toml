@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "majorgroove"
+version = "0.2.0"
+description = "Python client for the MajorGroove API"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Tapdance DNA" }]
+dependencies = ["requests>=2.31.0"]
+
+[project.urls]
+Homepage = "https://github.com/tapdance-dna/majorgroove"
+Issues = "https://github.com/tapdance-dna/majorgroove/issues"
+
+[tool.setuptools]
+packages = ["majorgroove"]
