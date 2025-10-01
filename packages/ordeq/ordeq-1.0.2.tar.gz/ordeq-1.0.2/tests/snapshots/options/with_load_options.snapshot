@@ -1,0 +1,24 @@
+Exception:
+TypeError: got an unexpected keyword argument 'unknown_kwarg'
+
+Output:
+hello.txt@L1: Hi world!
+hello.txt@L1: Hello world!
+<class 'with_load_options.ExampleInputLoadKwarg'>
+hello.txt@L1: Hello world!
+hello.txt@L1: Hello world!
+<class 'with_load_options.ExampleInputLoadKwarg'>
+hello.txt@L1: Hello world!
+<class 'with_load_options.ExampleInputLoadArg'>
+hello.txt@L1: Hello world!
+hello.txt@L1: Hi world!
+<class 'with_load_options.ExampleInputLoadArg'>
+
+Logging:
+INFO	ordeq.framework.io	Loading ExampleInputLoadKwarg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadKwarg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadKwarg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadKwarg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadArg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadArg(path=PosixPath('hello.txt'), attribute='L1')
+INFO	ordeq.framework.io	Loading ExampleInputLoadArg(path=PosixPath('hello.txt'), attribute='L1')

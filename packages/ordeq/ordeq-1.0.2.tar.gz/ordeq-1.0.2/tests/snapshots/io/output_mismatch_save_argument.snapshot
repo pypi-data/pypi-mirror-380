@@ -1,0 +1,2 @@
+Logging:
+INFO	ordeq.framework.io	Saving ExampleOutputsaveArg(path=PosixPath('hello.txt'), attribute='L1')
