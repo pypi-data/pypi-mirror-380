@@ -1,0 +1,64 @@
+{
+  "taskParams": {
+    "type": "include",
+    "value": {
+      "record": {
+        "metadata": {},
+        "attachment": {},
+        "attachmentType": "POINTCLOUD"
+      },
+      "version": "1.0.0",
+      "operators": [
+        {
+          "key": "box3d-[750fb]",
+          "type": "slotChildren",
+          "label": "Point cloud bounding box",
+          "children": [
+            {
+              "key": "box2d-[b274c]",
+              "type": "slot",
+              "label": "Mapped bounding box",
+              "metadata": {},
+              "instanceOption": {},
+              "slotSpecification": {
+                "topLeftMark": "1",
+                "topRightMark": "2",
+                "bottomLeftMark": "4",
+                "bottomRightMark": "3",
+                "type": "box2d",
+                "minWidth": 10,
+                "minHeight": 10,
+                "restrictInsideCanvasBoundary": true
+              }
+            }
+          ],
+          "metadata": {
+            "hint": "Used for mapping，Size based on point cloud，Position based on image"
+          },
+          "instanceOption": {},
+          "slotSpecification": {
+            "type": "box3d",
+            "presetSizes": [],
+            "consistentSize": true,
+            "imageSourceMapping": [
+              "box2d-[b274c]"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "taskResult": {
+    "issues": [],
+    "notes": [],
+    "annotations": [
+      {
+        "key": "box3d-[750fb]",
+        "type": "slotChildren",
+        "label": "Point cloud bounding box",
+        "slotsChildren": []
+      }
+    ]
+  },
+  "algorithms": []
+}
