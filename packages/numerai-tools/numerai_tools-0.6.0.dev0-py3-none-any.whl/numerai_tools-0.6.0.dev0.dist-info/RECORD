@@ -1,0 +1,15 @@
+LICENSE,sha256=5GaPaG8D6JPMIFh32ux8ZcURhf9mUgjcMxriwBgPdZY,1064
+README.md,sha256=jSmmVc0upmK4YIXON90RpevEfBctep_Z08R17OZh1Ew,733
+numerai_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numerai_tools/data.py,sha256=P119t1ugHLL8E3Pmr9NioJvMNYMpVDrTLwo4Vw_48pQ,4185
+numerai_tools/indexing.py,sha256=zNivCR4BZuNoGa4nnx_Ncl5yaA17gvI0FlsMfXMakV4,4080
+numerai_tools/math.py,sha256=fXl4Bo5ynN3HwvlTcn7ATQmbory03cgXIhWMi-MaicI,9170
+numerai_tools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numerai_tools/scoring.py,sha256=r2bjCGnJG96CJGdBopHKtg7XHtF0kzpMfh3zKbp3j6o,11855
+numerai_tools/signals.py,sha256=IVvNU2hp-cP0calr3M-PnWLvB2NbhrFjd4JucoYpSmI,8285
+numerai_tools/submissions.py,sha256=HSLpUhNKTQSxvEWLnB-F8V_Gp9rovThGYx0_2LUrrhM,12998
+numerai_tools/typing.py,sha256=YX0Z-0eHwq3etpwmPt08di5w8tqwjzCEXY8ogspXB0s,170
+numerai_tools-0.6.0.dev0.dist-info/LICENSE,sha256=5GaPaG8D6JPMIFh32ux8ZcURhf9mUgjcMxriwBgPdZY,1064
+numerai_tools-0.6.0.dev0.dist-info/METADATA,sha256=2EeofLBxRA8jxXbUSdQdBEjmmpIZxv3-DRvUjKruNRo,1741
+numerai_tools-0.6.0.dev0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+numerai_tools-0.6.0.dev0.dist-info/RECORD,,
