@@ -1,0 +1,58 @@
+[project]
+name = "sexagesimal-calculator"
+version = "2.0.1"
+description = "Performing calculations in Sexagesimal Coordinate System."
+readme = "README.md"
+authors = [
+    { name = "Hrushikesh Pawar", email = "hrushikesh.vpawar@gmail.com" }
+]
+maintainers = [
+  {name = "Hrushikesh Pawar", email = "hrushikesh.vpawar@gmail.com"}
+]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+keywords = ["sexagesimal", "calculator", "coordinates", "coordinate system"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "rich>=14.1.0",
+    "sympy>=1.14.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/HrushikeshPawar/Sexagesimal-Calculator"
+Documentation = "https://hrushikeshpawar.github.io/Sexagesimal-Calculator/"
+Repository = "https://github.com/HrushikeshPawar/Sexagesimal-Calculator"
+"Issue Tracker" = "https://github.com/HrushikeshPawar/Sexagesimal-Calculator/issues"
+
+[project.scripts]
+sexagesimal-calculator = "sexagesimal_calculator:main"
+
+[build-system]
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "coveralls>=4.0.1",
+    "hypothesis>=6.138.15",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.19",
+    "mkdocstrings[python]>=0.30.0",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.0",
+]
+
+[tool.ruff]
+line-length = 120
