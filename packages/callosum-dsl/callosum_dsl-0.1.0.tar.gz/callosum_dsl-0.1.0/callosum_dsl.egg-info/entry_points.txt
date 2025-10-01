@@ -1,0 +1,2 @@
+[console_scripts]
+callosum-compile = callosum_dsl.core:_cli_main
