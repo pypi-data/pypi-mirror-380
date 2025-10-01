@@ -1,0 +1,58 @@
+{
+  "2e0f7a117cd38685": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:02a33c225ca06d00",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:02a33c225ca06d00",
+      "filehash": "1b23fe0f854edd0b93cbc1c72db67dd4fee89c268d4aca733c76b59f2e492133"
+    }
+  ],
+  "2e0f4c495addaa23": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:02d7e28cee5b2e25",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:02d7e28cee5b2e25",
+      "filehash": "21fccf053a21117cf79158ff672484a8d974d4302b8eb981517de327213a4ffb"
+    }
+  ],
+  "2e0f047a7518d868": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:035c8b06aa3f826d",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:035c8b06aa3f826d",
+      "filehash": "64123f68b35ff2a08a62efac88b4af67fe757da5e7f5d18ab33aa585e1e024ca"
+    }
+  ],
+  "2e0f3b9794655a8e": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "434634",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/434634",
+      "filehash": "1499251b8d621e5f4fe6b4f64ffe95fd99582133f47a207f76f505322b19e730"
+    }
+  ]
+}

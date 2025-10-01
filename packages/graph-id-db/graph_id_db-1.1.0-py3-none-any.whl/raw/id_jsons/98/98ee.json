@@ -1,0 +1,30 @@
+{
+  "98eeb4d1dee4e5ac": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:013f512047dcc0d7",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:013f512047dcc0d7",
+      "filehash": "423c0a5a285c1251f8ec30e4524d02a41136895ad1dcd3ab0d5c7ce1f2ede092"
+    }
+  ],
+  "98ee4758aa6232f0": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:024572fac171b269",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:024572fac171b269",
+      "filehash": "0c02b28131aafae574d7f690e9593455a82675bce2a7e67177020c802c87a766"
+    }
+  ]
+}
