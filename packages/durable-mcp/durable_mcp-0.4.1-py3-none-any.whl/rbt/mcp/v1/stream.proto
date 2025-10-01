@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package rbt.mcp.v1;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+import "rbt/v1alpha1/options.proto";
+
+////////////////////////////////////////////////////////////////////////
+
+message Stream {
+  option (rbt.v1alpha1.state) = {
+  };
+
+  repeated Event events = 1;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+service StreamMethods {
+  rpc Create(google.protobuf.Empty) returns (google.protobuf.Empty) {
+    option (rbt.v1alpha1.method).writer = {
+    };
+  }
+
+  rpc Put(PutRequest) returns (PutResponse) {
+    option (rbt.v1alpha1.method).writer = {
+    };
+  }
+
+  rpc Replay(ReplayRequest) returns (ReplayResponse) {
+    option (rbt.v1alpha1.method).reader = {
+    };
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+
+message Event {
+  string id = 1;
+  google.protobuf.Value message = 2;
+  // This is of type `RequestId` which technically in Python
+  // can be either a `str` or an `int` but in practice the
+  // `related_request_id` appears to be a `str`, even though
+  // request IDs appear to be `int`. *sigh*
+  optional string related_request_id = 3;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+message PutRequest {
+  string event_id = 1;
+  google.protobuf.Value message = 2;
+  // See comment in `Event` above re: using `string` here.
+  optional string related_request_id = 3;
+}
+
+message PutResponse {}
+
+////////////////////////////////////////////////////////////////////////
+
+message ReplayRequest {
+  optional string last_event_id = 1;
+}
+
+message ReplayResponse {
+  repeated Event events = 1;
+}
+
+////////////////////////////////////////////////////////////////////////
