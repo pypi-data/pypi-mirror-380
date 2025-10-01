@@ -1,0 +1,3 @@
+[console_scripts]
+voicebridge = voicebridge.main:main
+whisper-cli = voicebridge.main:main
