@@ -1,0 +1,10 @@
+programasweights/__init__.py,sha256=gT9Cqadosz1i21WemNbhyErwfHqiaqAA1tgNfGeoQzE,194
+programasweights/artifacts.py,sha256=bSRZgYadAYyuH9aIW6P3VocExfGDGAHeDuj8vod5-Bo,1968
+programasweights/compiler/__init__.py,sha256=FxVORGeqB_Zo6cuW5PgnDqPA6gAiVlq_yWIhunyfqHQ,2170
+programasweights/compiler/dummy.py,sha256=MAcT__bO2tANdKzxtHPl1ZGG4-kH3UAweNHP1qRR6QI,719
+programasweights/runtime/__init__.py,sha256=e-cHDd3C7EA7-UQT1YbHlJHFVVbwaDkbt--x5J4omaA,48
+programasweights/runtime/interpreter.py,sha256=qqwWUAoMjsBpGCb2yQzsVVpIMi76rn99c5rGr3GIEAQ,6800
+programasweights-0.1.1.dist-info/METADATA,sha256=BqOGxY8RGJRdsEAK7G2M9gK2z62TEnRyyyPZxLqrIME,2668
+programasweights-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+programasweights-0.1.1.dist-info/entry_points.txt,sha256=WpbQ4FwjNJ62Q91XmBLwLY_HyGbGQ6fdr2YBlmh50us,224
+programasweights-0.1.1.dist-info/RECORD,,
