@@ -1,0 +1,11 @@
+cbrapi/__init__.py,sha256=A3SHGvthjuIW67FWaLg1A8IbpBXxSsWQk1-hGy5DJV4,569
+cbrapi/cbr_settings.py,sha256=83YpJyMQB32qAzIR88nAWKi-TZLRtgHUu-3Ac66nlTY,473
+cbrapi/currency.py,sha256=mcaMTESjidOFzcMW660d7ywyexqqKfRnlG_o1nOyeBI,5664
+cbrapi/helpers.py,sha256=YKCrKPCkuSoZff_Zt6701Abl_BXsvsDdc6qODBGMD1Y,4236
+cbrapi/metals.py,sha256=EIUe2NLzGQrO0TVai4BCxKUneOUgnxK_m2YbhhBgTow,1948
+cbrapi/rates.py,sha256=XG_y8Nxp2_CIvc2e-HIT0h60zEq8-aWFsW5nNaLVzSE,5107
+cbrapi/reserves.py,sha256=GUh1JlaTn9tujHXznxdnK3Vg0bOuJeJ67y8Hg3JAI9o,2395
+cbrapi/ruonia.py,sha256=BPhBgNIQ4KDF5h6c7pTDE8YGxsSsPi_qwyOp3jeLLUg,7840
+cbrapi-0.1.2.dist-info/METADATA,sha256=1XscutGigA_PvbE15h-VONFHZXfyiKuwvcnWiiqwX40,7533
+cbrapi-0.1.2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+cbrapi-0.1.2.dist-info/RECORD,,
