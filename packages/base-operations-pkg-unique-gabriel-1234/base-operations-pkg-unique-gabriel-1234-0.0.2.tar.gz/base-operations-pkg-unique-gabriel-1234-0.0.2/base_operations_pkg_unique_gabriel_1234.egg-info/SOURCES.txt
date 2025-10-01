@@ -1,0 +1,6 @@
+setup.py
+base_operations_pkg/__init__.py
+base_operations_pkg_unique_gabriel_1234.egg-info/PKG-INFO
+base_operations_pkg_unique_gabriel_1234.egg-info/SOURCES.txt
+base_operations_pkg_unique_gabriel_1234.egg-info/dependency_links.txt
+base_operations_pkg_unique_gabriel_1234.egg-info/top_level.txt
