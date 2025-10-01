@@ -1,0 +1,13 @@
+tacozip-0.9.10.dist-info/RECORD,,
+tacozip-0.9.10.dist-info/WHEEL,sha256=xXNQ_HfsBSZ7wvi2Um0M47OltXRNJbVi3OUmBewLZE8,139
+tacozip-0.9.10.dist-info/entry_points.txt,sha256=XECyViX_ifeyJB5kPz-ODa3gq0yaaGEOqXdseJnmMz0,50
+tacozip-0.9.10.dist-info/top_level.txt,sha256=_jHrh4rWu6iYY1ZASQoyexsdsxgw0rbCGphu-yILgg4,8
+tacozip-0.9.10.dist-info/METADATA,sha256=2MtlZVwAi1bwegGwpA_54GHuu1J1HQ_83XXhgBBSfWo,1719
+tacozip/config.py,sha256=WTzF7ap79QkXZlvUCNakqF1TX2pO3yJtLVYwS6hhsTk,1081
+tacozip/version.py,sha256=9D08dkJfZkO2NQ6n7dXRCON3JBWmFNAUHPw8NHnBSqE,635
+tacozip/__init__.py,sha256=63PevwvhMe-ZLXLrwjHFs4nwVPLggrozNOlkC1yTHXM,1232
+tacozip/loader.py,sha256=gYOmh7W5aq6trTj0dofJsYeHcWrCwVM0JUTo0Eqx9fs,1998
+tacozip/bindings.py,sha256=Bd7KhnVxLUiU-FcQh-aF3rW1TAm6Y4pZX0y8VZvH-4w,10474
+tacozip/exceptions.py,sha256=02BUZ1tFZ0cR6SJjz2Eh2PAicKa4F_dkM27GZR4H-RA,679
+tacozip/libtacozip.dylib,sha256=achVlWp6jpHnPj252NamYPFZr1lJqtCJ_TeVckKw48Y,136464
+tacozip/.dylibs/libzip.5.5.dylib,sha256=Sdo2MH08tf8dH1OC8ymMiswH2zfpgmCTMba6tiW-cew,298608
