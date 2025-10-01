@@ -1,0 +1,12 @@
+omninumpy/__init__.py,sha256=xN_ToowcRphmDfJlJa01lc-OpOgjIG3oo6ALkWvSLzo,33677
+omninumpy/backend.py,sha256=0HYl0EVcfctAxDB5fBJCFNbr_X81Pf_1OYwmKqByH5Y,4808
+omninumpy/core.py,sha256=yO_L1bF2eKzIKntLdkoOwM2UDwgJ-LYAMnByX7WqcPY,7395
+omninumpy/interface.py,sha256=nHPlsLFKHUYj_oDnwTDGaEE3q0w-6vufOsoOwHb4DWA,4555
+omninumpy/version.py,sha256=fHv8Va0RRRVnNZr7FGFYV_a9oHrcoOfcNfkyAX29EFs,63
+omninumpy/tests/test_backends.py,sha256=cPFi8KxRIUR5ruVaEeBKdQhvS71fEd34cm7Q2UQtWp0,6112
+omninumpy/tests/test_basic.py,sha256=A-N0FNEvsKwIl05ypYhwcsf9HgF7bvNhTG19hNs96C4,2660
+omninumpy-0.1.0.dist-info/licenses/LICENSE,sha256=q_KXwNPK7wvvxLTzn4I-6IleNU37WvrPXCPrJKb2ZiM,1493
+omninumpy-0.1.0.dist-info/METADATA,sha256=aQsA9hW3jinlTCOTFRpQizWSbZB5H629sJDXxFX3ox8,17511
+omninumpy-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+omninumpy-0.1.0.dist-info/top_level.txt,sha256=S4Hej9cRHrFSRer7wNFYZy3qMfvDXmTdOCxF0calWrs,10
+omninumpy-0.1.0.dist-info/RECORD,,
