@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: tetsuya
+Version: 0.0.1
+Summary: Plotly graph export library
+Author-email: Andrew Pikul <ajpikul@gmail.com>
+Maintainer-email: Andrew Pikul <ajpikul@gmail.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.118.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: logistro>=1.1.0
+Requires-Dist: orjson>=3.11.3
+Requires-Dist: platformdirs>=4.4.0
+Requires-Dist: tomli-w>=1.2.0
+Requires-Dist: typer>=0.19.2
+Requires-Dist: uvicorn>=0.37.0
+Dynamic: license-file
+
+Later todo
+
+  - [ ] Make config typed
+
+  - [ ] Add checking if git dirty or not pushed
+  - [ ] Add some log statistics
+  - [ ] Add some firewall statistics
+  - [ ] Add updates
+  - [ ] Add changelog (linux)
+  - [ ] Add news, linux, hackernews?
+  - [ ] Add website status check
+  - [ ] Add google analytics check
+  - [ ] But also constant ingress and event push (tetsuya)
+  - [ ] Add something that checks on any request
