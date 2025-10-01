@@ -1,0 +1,24 @@
+[project]
+name = "m61"
+version = "0.1.0"
+description = "The name M61 comes from Vulcan, the English name of Vulcanus, the Roman god of fire and blacksmithing. We chose this name to symbolize the massive flow of traffic handled by the project."
+authors = [
+    {name = "andrew.chang(장진우)/kep",email = "andrew.chang@kakaoenterprise.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.poetry.dependencies]
+typer = {extras = ["all"], version = ">=0.12.3"}
+psutil = "^7.1.0"
+typing-extensions = ">=4.12.0"
+
+
+
+[tool.poetry.scripts]
+m61-client = "m61.client:app"
+m61-server = "m61.server:app"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
