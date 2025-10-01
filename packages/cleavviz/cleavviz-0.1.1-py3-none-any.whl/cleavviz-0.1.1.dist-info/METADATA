@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: cleavviz
+Version: 0.1.1
+Summary: 
+License: MIT
+Author: Jonas Krohn
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: bio (>=1.8.0,<2.0.0)
+Requires-Dist: logomaker (>=0.8.7,<0.9.0)
+Requires-Dist: matplotlib (>=3.10.5,<4.0.0)
+Requires-Dist: mysql-connector-python (>=9.4.0,<10.0.0)
+Requires-Dist: pandas (>=2.3.1,<3.0.0)
+Requires-Dist: plotly (>=6.3.0,<7.0.0)
+Requires-Dist: pyteomics (>=4.7.5,<5.0.0)
+Requires-Dist: scipy (>=1.16.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+The readme is still in progress.
