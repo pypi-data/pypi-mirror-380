@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+service.py
+bridge_service.egg-info/PKG-INFO
+bridge_service.egg-info/SOURCES.txt
+bridge_service.egg-info/dependency_links.txt
+bridge_service.egg-info/top_level.txt
