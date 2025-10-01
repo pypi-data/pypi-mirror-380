@@ -1,0 +1,198 @@
+name: Sync Release Branch and Bump Version
+
+on:
+  workflow_dispatch:  # Manual trigger only
+    inputs:
+      bump_type:
+        description: 'Version bump type'
+        required: true
+        type: choice
+        options:
+          - auto
+          - major
+          - minor
+          - patch
+        default: auto
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync_branches:
+    runs-on: ubuntu-latest
+    environment: bump-version
+    outputs:
+      synced: ${{ steps.sync_result.outputs.synced }}
+
+    steps:
+      - name: Create GitHub App Token
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ vars.PUSH_APP_ID }}
+          private-key: ${{ secrets.PUSH_APP_SECRET }}
+
+      - name: Check out repository
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          fetch-depth: 0  # Full history for proper syncing
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Check if release branch exists
+        id: check_branch
+        run: |
+          if git ls-remote --heads origin release | grep -q release; then
+            echo "branch_exists=true" >> $GITHUB_OUTPUT
+            echo "Release branch exists"
+          else
+            echo "branch_exists=false" >> $GITHUB_OUTPUT
+            echo "Release branch does not exist"
+          fi
+
+      - name: Set up Python
+        if: steps.check_branch.outputs.branch_exists == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.check_branch.outputs.branch_exists == 'false'
+        run: pip install tomli
+
+      - name: Create release branch (first time)
+        if: steps.check_branch.outputs.branch_exists == 'false'
+        run: |
+          # Get current version from pyproject.toml
+          CURRENT_VERSION=$(python3 -c 'import sys; exec("try:\n    import tomllib\nexcept ImportError:\n    import tomli as tomllib\nwith open(\"pyproject.toml\", \"rb\") as f:\n    data = tomllib.load(f)\n    print(data.get(\"project\", {}).get(\"version\", \"unknown\"))")')
+
+          echo "## 🎉 Creating Release Branch" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "This is the first time the release branch is being created." >> $GITHUB_STEP_SUMMARY
+          echo "It will be created from the current main branch with version \`$CURRENT_VERSION\`" >> $GITHUB_STEP_SUMMARY
+
+          git checkout -b release
+          git push -u origin release
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Release branch created successfully" >> $GITHUB_STEP_SUMMARY
+
+      - name: Sync release branch with main
+        if: steps.check_branch.outputs.branch_exists == 'true'
+        id: sync_result
+        run: |
+          echo "🔄 Syncing Release Branch"
+          echo "## 🔄 Syncing Release Branch" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Fetch both branches
+          echo "Fetching branches..."
+          git fetch origin release main
+
+          # Checkout release branch
+          echo "Checking out release branch..."
+          git checkout release
+
+          # Get commit info
+          MAIN_COMMIT=$(git rev-parse origin/main)
+          RELEASE_COMMIT=$(git rev-parse release)
+
+          echo "Current Status:"
+          echo "- Main branch: ${MAIN_COMMIT:0:7}"
+          echo "- Release branch: ${RELEASE_COMMIT:0:7}"
+
+          echo "**Current Status:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Main branch: \`${MAIN_COMMIT:0:7}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Release branch: \`${RELEASE_COMMIT:0:7}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Check if release is already up to date
+          echo "Checking if release is up to date with main..."
+          if git merge-base --is-ancestor origin/main release; then
+            echo "✅ Release branch is already up to date with main"
+            echo "No sync needed. To bump version anyway, manually trigger bump_version.yml"
+
+            echo "✅ Release branch is already up to date with main" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**No sync needed.** To bump version anyway, manually trigger:" >> $GITHUB_STEP_SUMMARY
+            echo "- Workflow: \`bump_version.yml\`" >> $GITHUB_STEP_SUMMARY
+            echo "synced=false" >> $GITHUB_OUTPUT
+          else
+            # Try to merge main into release
+            echo "Attempting to merge main into release..."
+            echo "**Attempting to merge main into release...**" >> $GITHUB_STEP_SUMMARY
+
+            if ! git merge origin/main --no-edit; then
+              echo "❌ Merge conflicts detected!"
+              echo "Conflicting files:"
+              git diff --name-only --diff-filter=U
+
+              echo "❌ Merge conflicts detected!" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "**Conflicting files:**" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              git diff --name-only --diff-filter=U >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "⚠️ Manual intervention required." >> $GITHUB_STEP_SUMMARY
+              git merge --abort
+              exit 1
+            fi
+
+            echo "✅ Merge successful"
+            echo "Pushing to origin/release..."
+            git push origin release
+
+            echo "✅ Merge successful" >> $GITHUB_STEP_SUMMARY
+
+            # Show what was merged
+            echo "Commits merged:"
+            git log --oneline ${RELEASE_COMMIT}..origin/main
+
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "<details>" >> $GITHUB_STEP_SUMMARY
+            echo "<summary>📝 Commits merged</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            git log --oneline ${RELEASE_COMMIT}..origin/main >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
+            echo "synced=true" >> $GITHUB_OUTPUT
+
+            echo "Version bump will proceed automatically"
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Next:** Version bump will proceed automatically" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  validate_and_bump:
+    needs: sync_branches
+    if: needs.sync_branches.outputs.synced == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate bump_type input
+        id: validate
+        run: |
+          BUMP_TYPE="${{ github.event.inputs.bump_type }}"
+
+          # Validate bump_type is one of the allowed values
+          if [[ ! "$BUMP_TYPE" =~ ^(auto|major|minor|patch)$ ]]; then
+            echo "❌ Invalid bump_type: $BUMP_TYPE"
+            echo "Valid options: auto, major, minor, patch"
+            exit 1
+          fi
+
+          echo "✅ Validated bump_type: $BUMP_TYPE"
+          echo "bump_type=$BUMP_TYPE" >> $GITHUB_OUTPUT
+
+  bump_version:
+    needs: [sync_branches, validate_and_bump]
+    if: needs.sync_branches.outputs.synced == 'true'
+    uses: ./.github/workflows/bump_version.yml
+    with:
+      bump_type: ${{ needs.validate_and_bump.outputs.bump_type }}
+    secrets: inherit

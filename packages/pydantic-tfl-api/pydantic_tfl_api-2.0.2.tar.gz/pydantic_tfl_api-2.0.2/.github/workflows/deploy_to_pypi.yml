@@ -1,0 +1,67 @@
+name: Publish the completed package to PyPi
+
+on:
+  workflow_call:
+    inputs:
+      package-version:
+        type: string
+        required: true
+        description: 'the version of the package'
+      target-environment:
+        type: string
+        required: true
+        description: 'the target environment to deploy to'
+      artifact-name:
+        type: string
+        required: true
+        description: 'the name of the artifact'
+
+
+jobs:
+  deploy_to_pypi:
+    runs-on: ubuntu-latest
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    environment:
+      name: ${{ inputs.target-environment }}
+    steps:
+      # - name: Checkout actions-oidc-debugger
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: github/actions-oidc-debugger
+      #     ref: main
+      #     token: ${{ github.token }}
+      #     path: ./.github/actions/actions-oidc-debugger
+      # - name: Debug OIDC Claims
+      #   uses: ./.github/actions/actions-oidc-debugger
+      #   with:
+      #     audience: '${{ github.server_url }}/${{ github.repository_owner }}'
+
+      - name: get workspacedir
+        # see https://github.com/actions/runner/issues/2058#issuecomment-1308554566
+        shell: bash
+        run: |
+          echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+      - name: download artifact from previous run
+        id: download-artifact
+        uses: actions/download-artifact@v4 # v4
+        with:
+          name: ${{ inputs.artifact-name }}
+          path: ${{ env.GITHUB_WORKSPACE }}/dist
+      - name: show files
+        run: |
+          find ${{ env.GITHUB_WORKSPACE }}/dist -type f
+      # - name: extract version from pyproject.toml
+      #   run: |
+      #     version=$(grep 'version =' pyproject.toml | awk '{print $3}' | sed 's/"//g')
+      #     echo "VERSION=$version" >> $GITHUB_ENV
+      #     echo "extracted version '{{ $env.VERSION }}' from pyproject.toml"
+      - name: Publish package distributions to ${{ inputs.target-environment }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: ${{ vars.PYPI_URL }}
+          packages-dir: ${{ steps.download-artifact.outputs.download-path }}
+          verbose: true
+          print-hash: true
+          attestations: false  # https://github.com/pypi/warehouse/issues/11096
