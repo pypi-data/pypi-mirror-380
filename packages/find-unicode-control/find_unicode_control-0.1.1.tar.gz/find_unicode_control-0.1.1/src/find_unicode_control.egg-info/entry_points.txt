@@ -1,0 +1,2 @@
+[console_scripts]
+find-unicode-control = find_unicode_control.cli:main

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/find_unicode_control/__init__.py
+src/find_unicode_control/__main__.py
+src/find_unicode_control/cli.py
+src/find_unicode_control/find_unicode_control.py
+src/find_unicode_control.egg-info/PKG-INFO
+src/find_unicode_control.egg-info/SOURCES.txt
+src/find_unicode_control.egg-info/dependency_links.txt
+src/find_unicode_control.egg-info/entry_points.txt
+src/find_unicode_control.egg-info/top_level.txt
+tests/test_simple.py
