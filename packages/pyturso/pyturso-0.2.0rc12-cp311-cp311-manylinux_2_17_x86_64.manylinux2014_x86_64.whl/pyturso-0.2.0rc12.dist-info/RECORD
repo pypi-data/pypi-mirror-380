@@ -1,0 +1,6 @@
+pyturso-0.2.0rc12.dist-info/METADATA,sha256=mDk-MIKrz8NxkFKc0-V2xceHoqOd7Swdp9zgXvaWTMg,1545
+pyturso-0.2.0rc12.dist-info/WHEEL,sha256=QeyYpa1YUpbJRnX7LOfl37sE783fyEKoPr2lUagOT-k,129
+turso/__init__.py,sha256=xXZ01fnUZ6SeCHtoDMrDyDns1gnUUIHvbwb3cAtIexM,499
+turso/_turso.cpython-311-x86_64-linux-gnu.so,sha256=ELzFSrp3J0tPIivPto6mFwBR3_l73jmP_b-WR6BJtyA,24547256
+turso/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyturso-0.2.0rc12.dist-info/RECORD,,
