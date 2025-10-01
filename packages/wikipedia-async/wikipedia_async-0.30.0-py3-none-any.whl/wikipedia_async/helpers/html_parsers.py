@@ -1,0 +1,149 @@
+from typing import Any, Dict, Optional
+from bs4 import BeautifulSoup
+from wikipedia_async.models.section_models import Section, Paragraph, Table, Link
+import re
+from urllib.parse import urlparse
+
+
+# for type checking
+class DemoTag:
+    """A minimal Tag-like class for type hinting purposes."""
+
+    name: Optional[str]
+    attrs: Dict[str, Any]
+
+    def get(self, key: str, default=None) -> Any: ...
+    def find(
+        self, name: Any, attrs: Optional[Dict[str, Any]] = None
+    ) -> Optional["DemoTag"]: ...
+    def find_all(
+        self, name: Any, attrs: Optional[Dict[str, Any]] = None
+    ) -> list["DemoTag"]: ...
+    @property
+    def children(self) -> Any: ...
+
+
+def parse_wiki_html(html: str, url: str) -> list[Section]:
+    soup = BeautifulSoup(html, "html.parser")
+    content_div: DemoTag = soup.find("div", {"class": "mw-parser-output"})  # type: ignore
+    if not content_div:
+        return []
+
+    sections: list[Section] = [
+        Section(title="Introduction", level=1, section_paragraphs=[]),
+    ]
+    prev_section = sections[0]
+    for elem in content_div.children:
+        if not hasattr(elem, "name") or elem.name is None:
+            continue
+
+        name = elem.name.lower()
+        classes = elem.get("class", [])
+        is_heading = any(c.startswith("mw-heading") for c in classes)
+        if name == "div" and is_heading:
+            # It's a heading
+            h_tag = elem.find(re.compile("^h[1-6]$"))
+            if not h_tag:
+                continue
+
+            level = int(h_tag.name[1]) - 1  # h2 -> level 1
+            title = h_tag.get_text(strip=True)
+            # print(f"Found heading: {title} (Level {level})")
+
+            section = Section(title=title, level=level)
+            prev_section = section
+            if level > 1:
+                # Find the nearest parent section with level < current level
+                for prev_sec in reversed(sections):
+                    if prev_sec.level < level:
+                        prev_sec.add_child(section)
+                        break
+            else:
+                sections.append(section)
+
+        elif name == "p":
+            if not sections:
+                continue
+
+            paragraph_text = elem.get_text(separator=" ", strip=True)
+            if not paragraph_text:
+                continue
+
+            links = extract_links(elem, url)
+
+            paragraph = Paragraph(paragraph_text=paragraph_text, links=links)
+            prev_section.section_paragraphs.append(paragraph)
+
+        elif (name == "div" and elem.find("li")) or name == "ol" or name == "ul":
+            lis = elem.find_all("li")
+            if not lis:
+                continue
+
+            paragraph_text = "\n\n".join(
+                li.get_text(separator=" ", strip=True) for li in lis
+            ).strip()
+            if not paragraph_text:
+                continue
+
+            links = extract_links(elem, url)
+
+            paragraph = Paragraph(
+                paragraph_text=paragraph_text,
+                list_items=[li.get_text(separator=" ", strip=True) for li in lis],
+                links=links,
+            )
+            # sections[-1].paragraphs.append(paragraph)
+            prev_section.section_paragraphs.append(paragraph)
+
+        elif name == "table" and "wikitable" in classes:
+            # It's a table
+            table_html = str(elem)
+            caption_tag = elem.find("caption")
+            caption = caption_tag.get_text(strip=True) if caption_tag else None
+            if not caption:
+                caption = prev_section.title
+
+            table = Table(
+                html=table_html, caption=caption, links=extract_links(elem, url)
+            )
+            prev_section.section_tables.append(table)
+
+    return sections
+
+
+def extract_links(elem, url: str) -> list[Link]:
+    links = []
+    if url.endswith("/"):
+        url = url[:-1]
+    url_parts = urlparse(url)
+    for a in elem.find_all("a", href=True):
+        href = a["href"]
+        full_url = None
+        if href.startswith("/"):
+            full_url = f"{url_parts.scheme}://{url_parts.netloc}{href}"
+        elif href.startswith("http"):
+            full_url = href
+        elif href.startswith("#"):
+            full_url = f"{url}{href}"
+        elif href.startswith("//"):
+            full_url = f"https:{href}"
+        else:
+            if ":" in href:
+                full_url = href
+            else:
+                full_url = f"{url}/{href}"
+
+        if full_url:
+            title = a.get("title", "")
+            text = a.get_text(strip=True)
+            is_reference = "#cite_note" in href
+            links.append(
+                Link(
+                    full_url,
+                    title.strip(),
+                    text=text.strip(),
+                    is_reference=is_reference,
+                )
+            )
+
+    return links
