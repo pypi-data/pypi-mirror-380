@@ -1,0 +1,6 @@
+README.md
+setup.py
+bytedvg_infrakits.egg-info/PKG-INFO
+bytedvg_infrakits.egg-info/SOURCES.txt
+bytedvg_infrakits.egg-info/dependency_links.txt
+bytedvg_infrakits.egg-info/top_level.txt
