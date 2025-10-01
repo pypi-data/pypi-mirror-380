@@ -1,0 +1,28 @@
+[project]
+name = "mcp-timeserver-fastmcp"
+version = "0.1.1"
+description = "An MCP server for providing the current date/time to LLMs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+ "mcp>=1.1.2",
+ "tzdata>=2024.2",
+]
+[project.urls]
+Homepage = "https://github.com/fastmcp-me/mcp-timeserver#readme"
+Repository = "https://github.com/fastmcp-me/mcp-timeserver.git"
+Issues = "https://github.com/fastmcp-me/mcp-timeserver/issues"
+
+[[project.authors]]
+name = "TerminalMan"
+email = "84923604+SecretiveShell@users.noreply.github.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-timeserver = "mcp_timeserver:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_timeserver"]
