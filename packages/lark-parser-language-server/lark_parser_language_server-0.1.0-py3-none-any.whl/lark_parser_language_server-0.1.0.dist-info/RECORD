@@ -1,0 +1,10 @@
+lark_parser_language_server/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+lark_parser_language_server/__main__.py,sha256=mys3rlFMmrjEjoUvEo5mSlgPpUs34gB-pO4RQBe24wo,1567
+lark_parser_language_server/document.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lark_parser_language_server/py.typed,sha256=zIXWfFLgqUwdxR_Ii2wUQi1DtnKg0p6g39GMwEyNkCE,77
+lark_parser_language_server/server.py,sha256=7THzKrzvuyGNp2-FSW1T6kmBTE7_IbjZm0k4cPizmPw,17772
+lark_parser_language_server/version.py,sha256=yJMA51Q2YywUO1UAtWKNnlXQEUmW86Moa80Llukj97k,26
+lark_parser_language_server-0.1.0.dist-info/METADATA,sha256=x3O4lB2zlqGpTjQ70EfRjwbqvoBlPKBsYfEa2YntYDs,5324
+lark_parser_language_server-0.1.0.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+lark_parser_language_server-0.1.0.dist-info/licenses/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+lark_parser_language_server-0.1.0.dist-info/RECORD,,
