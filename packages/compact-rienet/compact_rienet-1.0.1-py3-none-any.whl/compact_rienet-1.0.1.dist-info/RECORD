@@ -1,0 +1,9 @@
+compact_rienet/__init__.py,sha256=gpKYTvW8ejZdcUnxVCCm3ORvBgqyRfT2t8EN5jC_LX4,2915
+compact_rienet/custom_layers.py,sha256=3xOU3ltdQ4zytWjRKkyfB3NsLA-yGJMMNmvrcE-rlzI,30765
+compact_rienet/layers.py,sha256=nKTdLDVUFOsgoeLL2gDwQeCl8EwX3cjoaLObA20M4Kw,17323
+compact_rienet/losses.py,sha256=kAj3ED9XW671S6nSkeFvg4J-sJkJpelcYgXGw5qjFAY,2908
+compact_rienet-1.0.1.dist-info/licenses/LICENSE,sha256=pm-xrNcN2pgacVjnncT2wMQMQ_iJ7Qe7Dwg0Izni94k,1067
+compact_rienet-1.0.1.dist-info/METADATA,sha256=d14kv_DfLmYfQ-7_Q1b1MpXCifPSQII29JfgEEzLVmE,8851
+compact_rienet-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+compact_rienet-1.0.1.dist-info/top_level.txt,sha256=5bYSMHEnjKOOjf7CJSs4jA9OMybE6Os-SI7VsxrH5IY,15
+compact_rienet-1.0.1.dist-info/RECORD,,
