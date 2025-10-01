@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: estuaire
+Version: 1.0.3
+Summary: Fast marching estuaire solver with ray tracing
+Author: J.-P. Mercier
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26
+Requires-Dist: scipy>=1.11
+Requires-Dist: tqdm>=4.65
+Provides-Extra: vis
+Requires-Dist: matplotlib>=3.7; extra == "vis"
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: license-file
