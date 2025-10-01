@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: pycex
+Version: 0.0.3
+Home-page: https://github.com/dwdwow/pycex
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: urllib3
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+
+# pybnc
+cex sdk by python
