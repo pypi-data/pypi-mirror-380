@@ -1,0 +1,123 @@
+Metadata-Version: 2.4
+Name: lambda-middleware
+Version: 0.3.0
+Summary: Python client for AWS Lambda middleware functions
+Requires-Python: >=3.13
+Requires-Dist: boto3>=1.40.39
+Requires-Dist: click>=8.3.0
+Requires-Dist: pydantic-settings>=2.11.0
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: ruff>=0.13.2
+Description-Content-Type: text/markdown
+
+# Lambda Middleware
+
+A Python client library for calling AWS Lambda functions. This package simplifies Lambda invocations by providing a clean, typed interface with full AWS integration.
+
+## Features
+
+- **Simple API**: Just instantiate `LambdaMiddleware` and call methods
+- **Flexible Configuration**: Environment variables or programmatic configuration
+- **CLI Interface**: Invoke Lambda functions from the command line
+- **Type Safe**: Full type hints with Pydantic validation
+- **AWS Integration**: Built on boto3 for seamless AWS authentication
+
+## Installation
+
+Install via pip or uv:
+
+```bash
+pip install lambda-middleware
+# OR
+uv add lambda-middleware
+```
+
+## Configuration
+
+Set the Lambda function name via environment variable:
+
+```bash
+export LAMBDA_FUNCTION_NAME=your-lambda-function
+```
+
+Or create a `.env` file:
+
+```env
+LAMBDA_FUNCTION_NAME=your-lambda-function
+```
+
+## Usage
+
+### Programmatic Usage
+
+```python
+import asyncio
+from lambda_middleware import LambdaMiddleware
+
+# Initialize with environment config
+middleware = LambdaMiddleware()
+
+# Or provide custom config
+from lambda_middleware.config import Config
+config = Config(lambda_function_name="my-function")
+middleware = LambdaMiddleware(config=config)
+
+# Call the Lambda function
+async def main():
+    response = await middleware.call_lambda({
+        "action": "your_action",
+        "params": {}
+    })
+    print(response)
+
+asyncio.run(main())
+```
+
+### CLI Usage
+
+Check AWS credentials:
+
+```bash
+lambda-middleware middleware caller-identity
+```
+
+Call the Lambda function:
+
+```bash
+lambda-middleware middleware call --function-name my-lambda-function --message "test payload"
+```
+
+### Dry Run Mode
+
+Test IAM permissions without invoking the function:
+
+```python
+response = await middleware.call_lambda(
+    {"action": "your_action"},
+    dry_run=True
+)
+```
+
+## Requirements
+
+- Python 3.13+
+- AWS credentials configured (via `~/.aws/credentials`, environment variables, or IAM role)
+- Access to the target Lambda function
+
+## Development
+
+Install development dependencies:
+
+```bash
+uv add --dev pytest pytest-mock pytest-asyncio
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+## License
+
+Internal use only - Factored organization.

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lambda-middleware"
+version = "0.3.0"
+description = "Python client for AWS Lambda middleware functions"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.40.39",
+    "click>=8.3.0",
+    "pydantic>=2.11.9",
+    "pydantic-settings>=2.11.0",
+    "ruff>=0.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=0.25.2",
+    "pytest-mock>=3.15.0",
+]
+
+[project.scripts]
+lambda-middleware = "lambda_middleware.cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lambda_middleware"]
+
+[tool.ruff]
+target-version = "py311"         # match the lowest supported Python version
+line-length = 88                # matches Black's default; change if you wish
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90", "B", "I", "N", "UP", "YTT", "ANN", "ASYNC", "BLE", "COM", "DTZ", "EM", "FA", "ISC", "PERF", "PGH", "RUF"]
+ignore = [
+    "COM812",  # Trailing comma missing - conflicts with formatter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "ANN",  # Ignore all annotation rules for test files
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true   # useful when you depend on packages without type stubs
+warn_unused_ignores = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+show_error_codes = true
+pretty = true
+exclude = ["^tests/"]
+
