@@ -1,0 +1,8 @@
+[scancodeio_pipelines]
+mine_alpine=minecode_pipelines.pipelines.mine_alpine:MineAlpine
+mine_cargo=minecode_pipelines.pipelines.mine_cargo:MineCargo
+mine_conan=minecode_pipelines.pipelines.mine_conan:MineConan
+mine_debian=minecode_pipelines.pipelines.mine_debian:MineDebian
+mine_maven=minecode_pipelines.pipelines.mine_maven:MineMaven
+mine_pypi=minecode_pipelines.pipelines.mine_pypi:MinePypi
+
