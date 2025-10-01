@@ -1,0 +1,27 @@
+[CDF-25852]👷‍♂️Selection of data model version (#2037)
+
+# Description
+
+Simple bug.
+
+<img width="985" height="136" alt="image"
+src="https://github.com/user-attachments/assets/dee08577-8404-49c0-a42a-bf211cfe0f97"
+/>
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Skip
+
+## cdf
+
+### Fixed
+
+- When running `cdf dump datamodel` and selecting a model with multiple
+versions, the command no longer fails with `TypeError: unhashable type:
+'DataModel'`.
+
+## templates
+
+No changes.
