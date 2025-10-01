@@ -1,0 +1,59 @@
+[package]
+name = "asic-rs"
+version = "0.1.4"
+edition = "2024"
+license = "Apache-2.0"
+description = "Simple ASIC management in Rust"
+readme = "README.md"
+
+[dependencies]
+diqwest = "3.1"
+futures = "0.3"
+macaddr = { version = "1.0", features = ["serde_std"] }
+measurements = { version = "0.11", features = ["serde"] }
+reqwest = { version = "0.12", features = ["json", "gzip", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.47", features = ["full"] }
+url = "2.5"
+async-trait = "0.1"
+strum = { version = "0.27", features = ["derive"] }
+semver = "1.0"
+anyhow = "1.0"
+ipnet = "2.11"
+rand = "0.9"
+regex = "1.11"
+chrono = "0.4.41"
+tokio-stream = "0.1.17"
+async-stream = "0.3.6"
+sha2 = "0.10.9"
+base64 = "0.22.1"
+aes = "0.8.4"
+hex = "0.4.3"
+ecb = "0.1.2"
+md5crypt = "1.0.0"
+
+pyo3 = { version = "0.26.0", features = [
+    "extension-module",
+    "experimental-async",
+    "experimental-inspect",
+    "multiple-pymethods",
+    "time",
+], optional = true }
+pyo3-async-runtimes = { version = "0.26.0", optional = true, features = ["tokio-runtime"] }
+pyo3-introspection = { version = "0.26.0", optional = true }
+
+[features]
+python = ["dep:pyo3", "dep:pyo3-async-runtimes", "dep:pyo3-introspection"]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+incremental = false
+strip = true
+
+[lib]
+name = "asic_rs"
+crate-type = ["cdylib", "rlib"]
