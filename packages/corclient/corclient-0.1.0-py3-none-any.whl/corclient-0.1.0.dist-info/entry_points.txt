@@ -1,0 +1,2 @@
+[console_scripts]
+cor = corecli.cli:app

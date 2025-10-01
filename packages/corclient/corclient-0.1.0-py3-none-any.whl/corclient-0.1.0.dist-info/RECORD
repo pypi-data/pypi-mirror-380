@@ -1,0 +1,12 @@
+corclient-0.1.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corecli/__init__.py,sha256=YahZFfcGjK3dKwjCDZ9v5ZZ9R6-G3Nr28_3djZUh2kY,138
+corecli/_version.py,sha256=KOV2vc17OypCoLGU5NvcmuqpYxasPtk2grDJBCoULbY,264
+corecli/auth.py,sha256=F7Hq1TiFhsQ0Ai_e6TzlTEyXutbda-aX9_Q7QA6nzv4,13501
+corecli/cli.py,sha256=mwA7pOqr96MtXL0ROIQh2Wy66_3XB_GvtzadXzGX3V0,955
+corecli/pkce.py,sha256=eZkbryW2A74wFSr9ark-fU-wQeC6Qh1LXhHiBj5Wo7g,435
+corecli/utils.py,sha256=9NDqjMEM5rxyZQR7FK3ivg4NLa581AeUEJN8lTBNG_I,1136
+corclient-0.1.0.dist-info/METADATA,sha256=qBQKJST1Id8I3aTxMxFplKVoPRoeLkrlEz5aG-CxY7c,10187
+corclient-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+corclient-0.1.0.dist-info/entry_points.txt,sha256=kVyCipMY9yXvgIMJnwONt8v-_ZfMbUPlRO7MzpuwbfQ,40
+corclient-0.1.0.dist-info/top_level.txt,sha256=JoPv54lgmqVztIG_JrKHt7hDhK8KTGidli2_NfpK-4o,8
+corclient-0.1.0.dist-info/RECORD,,
