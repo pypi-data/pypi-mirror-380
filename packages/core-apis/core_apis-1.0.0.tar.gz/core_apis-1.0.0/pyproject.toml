@@ -1,0 +1,64 @@
+# Other project metadata fields as specified in:
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "core-apis"
+description = "This project/library contains useful elements related to APIs..."
+version = "1.0.0"
+
+authors = [
+    {name = "Alejandro Cora González", email = "alek.cora.glez@gmail.com"}
+]
+
+maintainers = [
+    {name = "Alejandro Cora González"}
+]
+
+requires-python = ">=3.9"
+license = {text = "MIT"}
+readme = "README.md"
+
+classifiers = [
+    # Classifiers -> https://pypi.org/classifiers/
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "core-https>=2.0.1",
+    "core-tests>=2.0.2",
+    "fastapi>=0.115.6; python_version >= '3.8'",
+    "uvicorn>=0.34.0; python_version >= '3.9'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "core-dev-tools>=1.0.1",
+    "httpx>=0.28.1; python_version >= '3.9'",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/bytecode-solutions/core/core-apis"
+Repository = "https://gitlab.com/bytecode-solutions/core/core-apis"
+Documentation = "https://core-apis.readthedocs.io/en/latest/"
+Issues = "https://gitlab.com/bytecode-solutions/core/core-apis/-/issues"
+Changelog = "https://gitlab.com/bytecode-solutions/core/core-apis/-/blob/master/CHANGELOG.md"
+
+[tool.setuptools.package-data]
+"core_apis" = ["py.typed"]

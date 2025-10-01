@@ -1,0 +1,14 @@
+core-https>=2.0.1
+core-tests>=2.0.2
+
+[:python_version >= "3.8"]
+fastapi>=0.115.6
+
+[:python_version >= "3.9"]
+uvicorn>=0.34.0
+
+[dev]
+core-dev-tools>=1.0.1
+
+[dev:python_version >= "3.9"]
+httpx>=0.28.1
