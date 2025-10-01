@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: libcalab_ogre3d
+Version: 0.0.1
+Summary: Library for character animation and rendering based on ogre3d
+Author-email: Taesoo <taesoobear@gmail.com>
+License: MIT
+Requires-Python: ==3.12.*
+Description-Content-Type: text/markdown
+Dynamic: requires-python
+
+todo.
