@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "url-is-in"
+version = "0.1.0"
+description = "A Python package for efficiently checking if a URL is part of large whitelist or blacklist of URLs and domain names."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Malte Ostendorff", email = "malte@commoncrawl.org"},
+]
+keywords = ["url", "matching", "whitelist", "blacklist", "surt", "domain", "filtering", "web-crawling"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Filters",
+    "Typing :: Typed",
+]
+dependencies = [
+    "surt",
+]
+
+[project.urls]
+Homepage = "https://github.com/commoncrawl/url-is-in"
+Repository = "https://github.com/commoncrawl/url-is-in.git"
+Issues = "https://github.com/commoncrawl/url-is-in/issues"
+Documentation = "https://github.com/commoncrawl/url-is-in#readme"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0.0",
+    "twine>=4.0.0",
+]
+
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+line-ending = "auto"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short --cov=src --cov-fail-under=95"
