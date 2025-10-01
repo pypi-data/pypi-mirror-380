@@ -1,0 +1,7 @@
+plink_pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plink_pipelines/make_dataset.py,sha256=V74b3wlh4gJ9u60b5SKaLGBiduyBxPDM6GbPaNS6wYs,15144
+plink_pipelines/validation_functions.py,sha256=GN9xjIdXtXEE3e23yumV3hTMHJVZHl6i9-qon-XjZus,423
+plink_pipelines-0.8.3.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+plink_pipelines-0.8.3.dist-info/entry_points.txt,sha256=BbkK1FWYtNLklXjWHLm1Yev7msHjAoC_4xMilgjjkP0,71
+plink_pipelines-0.8.3.dist-info/METADATA,sha256=vEEdSN_YWKXJXYhVuX4ARTjWYtrMeELCjksLEYVN-qA,419
+plink_pipelines-0.8.3.dist-info/RECORD,,
