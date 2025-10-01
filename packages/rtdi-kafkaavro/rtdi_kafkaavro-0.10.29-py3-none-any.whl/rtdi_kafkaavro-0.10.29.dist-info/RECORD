@@ -1,0 +1,10 @@
+kafkaavro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kafkaavro/avro_datatypes.py,sha256=tcK2zAcBIVCj82ZxoE8uHe2dhelKSXs7lZ2rGpR2DCk,19753
+kafkaavro/data_governance.py,sha256=Wl9pgOP23T5fAstEGooZeIHhDvGhkCofMFHJlabj3BE,2744
+kafkaavro/impact_lineage.py,sha256=dmqRD8yq5YvXi_Wwf9JNhFjyhiFSWTnQ_rvL6sZSJKk,11140
+kafkaavro/rowtype.py,sha256=w-h0iru3LGn_68vIALFTPrnahPmVcSrA_iFg6TJj1Z0,2071
+kafkaavro/schemabuilder.py,sha256=xS7IzwHtcCOQHmu-jkRotQBtPCCKC_a4OYhn3DN7Jis,12474
+rtdi_kafkaavro-0.10.29.dist-info/METADATA,sha256=AmvMx6O_zCFUk5XFksc543kWc7OsR64bnyd80JHHmQs,4005
+rtdi_kafkaavro-0.10.29.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rtdi_kafkaavro-0.10.29.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+rtdi_kafkaavro-0.10.29.dist-info/RECORD,,
