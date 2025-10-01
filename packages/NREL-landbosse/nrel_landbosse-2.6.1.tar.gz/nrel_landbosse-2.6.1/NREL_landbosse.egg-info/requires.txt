@@ -1,0 +1,13 @@
+numpy
+openpyxl
+pandas
+scipy
+xlsxwriter
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[test]
+coveralls
+pytest
