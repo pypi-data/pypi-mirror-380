@@ -1,0 +1,33 @@
+[build-system]
+build-backend = "uv_build"
+requires = ["uv-build>=0.8.22,<0.9.0"]
+
+[project]
+name = "hymns"
+version = "2025.9.2"
+description = "Compile a single PDF containing all the hymns for The Church of Jesus Christ of Latter-day Saints"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "pymupdf>=1.26.1",
+    "pypng>=0.20220715.0",
+    "qrcode>=8.2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/williamjacksn/hymns"
+"Issues" = "https://github.com/williamjacksn/hymns/issues"
+
+[project.scripts]
+gen-all-hymns = "hymns:gen_all"
+hymns = "hymns:main"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+    "uv-build>=0.8.22",
+]
+
+[tool.ruff.lint]
+select = ["ANN", "E", "F", "FURB", "I", "PERF", "RUF", "S", "UP"]
