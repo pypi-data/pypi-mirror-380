@@ -1,0 +1,11 @@
+dinotool/__init__.py,sha256=OfCo0j48GDEuDMawacN69wd267keTYxVA5EjyfKIea8,82
+dinotool/__main__.py,sha256=TAf1HJRBOpmopIzwnyB8QrNVmrrO__jjXCh8mVwDGOI,68
+dinotool/cli.py,sha256=vEkJBIZixupWKOLEjbH_MoY3aphkcr5F5e2UZQsYh_Y,35515
+dinotool/data.py,sha256=e3pZYET5y1VYQhm4Z7fhFiM4pwPEx035ha3_oDfZGcA,28664
+dinotool/model.py,sha256=2FOOvZPtPcZT2EED4hd1Wqv0g-gyQFRBgi_KaQUHb14,11067
+dinotool/utils.py,sha256=awSoJoWLHfs4mbZN47GIdscp5DvVf2ClXV7I4xI9qgE,2541
+dinotool-0.3.0.dist-info/METADATA,sha256=oUMGfeOFqaA9QQcz-2xDUNwd7RA1geqZeJ9IGzXdRxY,13985
+dinotool-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dinotool-0.3.0.dist-info/entry_points.txt,sha256=SUynsVnBhhtDDlVR1LnQqy2-Vus8uMUf6FsSP1RLYAU,46
+dinotool-0.3.0.dist-info/licenses/LICENSE,sha256=J_XzgfBqjdwggOocI2-bfmlZG0xkIip5intXfdaWYG0,11346
+dinotool-0.3.0.dist-info/RECORD,,
