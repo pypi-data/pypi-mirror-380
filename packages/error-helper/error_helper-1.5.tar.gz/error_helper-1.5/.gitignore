@@ -1,0 +1,7 @@
+.vscode/
+.history/
+
+__pycache__/
+dist/
+
+uv.lock
