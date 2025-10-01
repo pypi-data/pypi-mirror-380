@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tasks Dashboard{% endblock %} - Django CFG</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/css/dashboard.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="h-full bg-gray-50 dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo & Title -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="material-icons text-2xl text-primary-600 dark:text-primary-400 mr-3">dashboard</span>
+                        <h1 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            {% block page_title %}Tasks Dashboard{% endblock %}
+                        </h1>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="flex items-center space-x-3">
+                    {% block header_actions %}
+                    <a href="/admin/django_dramatiq/task/" 
+                       class="inline-flex items-center px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="material-icons text-sm mr-2">history</span>
+                        Task History
+                    </a>
+                    <a href="/admin/constance/config/" 
+                       class="inline-flex items-center px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="material-icons text-sm mr-2">admin_panel_settings</span>
+                        Settings
+                    </a>
+                    <button id="theme-toggle" 
+                            class="group inline-flex items-center justify-center px-3 py-2 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+                        <span class="material-icons text-gray-600 dark:text-yellow-400 group-hover:text-primary-600 dark:group-hover:text-yellow-300 transition-colors duration-200">light_mode</span>
+                    </button>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle?.querySelector('.material-icons');
+        const html = document.documentElement;
+        
+        // Update theme icon
+        function updateThemeIcon(isDark) {
+            if (themeIcon) {
+                themeIcon.textContent = isDark ? 'dark_mode' : 'light_mode';
+            }
+        }
+        
+        // Check for saved theme or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        const isDark = currentTheme === 'dark';
+        html.classList.toggle('dark', isDark);
+        updateThemeIcon(isDark);
+        
+        themeToggle?.addEventListener('click', () => {
+            const wasDark = html.classList.contains('dark');
+            html.classList.toggle('dark');
+            const nowDark = html.classList.contains('dark');
+            localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+            updateThemeIcon(nowDark);
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
