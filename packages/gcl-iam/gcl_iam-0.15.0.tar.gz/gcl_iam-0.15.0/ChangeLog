@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.15.0
+------
+
+* NestedPolicyBasedController: basic support for nested models with project\_id
