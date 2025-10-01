@@ -1,0 +1,5 @@
+[console_scripts]
+paw-eval = training:evaluate_default
+paw-generate-specs = training.data_generation.generate_specs:main
+paw-synthesize-data = training.data_generation.synthesize_data:main
+paw-train = training:train_default
