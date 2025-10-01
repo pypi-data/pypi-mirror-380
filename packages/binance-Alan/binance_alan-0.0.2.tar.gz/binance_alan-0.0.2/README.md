@@ -1,0 +1,151 @@
+binance_Alan: 币安(Binance.US)分钟级历史数据SDK
+binance_Alan 是一个轻量、简洁的 Python SDK，旨在帮助开发者和数据分析师轻松地从 Binance.US (币安美国) 的 API 获取分钟级别的加密货币历史 K 线（蜡烛图）数据。
+
+✨ 主要特性
+🚀 简单易用: 只需几行代码即可获取并保存指定日期的分钟级价格数据。
+
+📈 分钟级数据: 提供精确到分钟的历史价格信息（开盘价、最高价、最低价、收盘价）。
+
+💾 多种输出格式: 支持将数据直接保存为 CSV 或 JSON 文件，方便后续处理。
+
+🐼 Pandas 集成: 可以选择将数据直接加载为 Pandas DataFrame，无缝对接数据分析和可视化工作流。
+
+💡 智能名称映射: 内置常用加密货币的别名，无需记住复杂的官方交易对符号（例如，直接使用 'bitcoin' 代替 'BTCUSD'）。
+
+⚙️ 环境要求
+Python 3.8 或更高版本
+
+依赖库: pandas, python-binance (安装本包时会自动安装)
+
+📦 安装指南
+你可以通过 pip 从 PyPI 安装本库。
+
+```Bash
+ pip install binance_Alan
+```
+
+🚀 快速上手
+下面是一个在30秒内获取比特币某一天分钟级数据的示例。
+
+```Python
+
+# 1. 导入主类
+from binance_Alan.fetcher import BinanceDataFetcher
+
+# 2. 创建一个数据获取器实例
+# 数据将保存在名为 'crypto_data' 的文件夹中
+fetcher = BinanceDataFetcher(output_dir='crypto_data')
+
+# 3. 调用方法，获取比特币 2025-09-24 的数据并保存为 CSV 文件
+print("正在获取比特币数据...")
+fetcher.get_daily_klines_as_file(
+    symbol_name='bitcoin',
+    date_str='2025-09-24',
+    output_format='csv'
+)
+
+print("任务完成！请在 'crypto_data' 文件夹中查看 'BTCUSD_2025-09-24.csv' 文件。")
+```
+📚 详细用法 (API)
+初始化 BinanceDataFetcher
+在使用SDK前，首先需要创建一个 BinanceDataFetcher 的实例。
+
+__init__(self, tld: str = 'us', output_dir: str = 'crypto_data')
+
+tld (可选, 字符串): 指定币安的顶级域名，默认为 'us'，代表 Binance.US。
+
+output_dir (可选, 字符串): 指定保存数据文件的默认目录，默认为 'crypto_data'。如果目录不存在，将会被自动创建。
+
+方法一：获取并直接保存文件 (推荐)
+这是最常用、最直接的方法。
+```python
+get_daily_klines_as_file(self, symbol_name: str, date_str: str, output_format: str = 'csv')
+```
+symbol_name (必需, 字符串): 你想查询的加密货币名称。不区分大小写，支持常用名和别名（见下方支持列表）。
+
+date_str (必需, 字符串): 目标日期，格式必须为 "YYYY-MM-DD"。
+
+output_format (可选, 字符串): 保存文件的格式，支持 'csv' (默认) 或 'json'。
+
+方法二：获取数据到 Pandas DataFrame
+如果你想在不保存文件的情况下，直接在内存中对数据进行分析，可以使用此方法。
+```python
+fetch_daily_data(self, symbol_name: str, date_str: str) -> pd.DataFrame | None
+```
+参数与方法一类似。
+
+返回值:
+
+如果成功，返回一个包含时间戳和OHLC价格的 Pandas DataFrame。
+
+如果查询失败或当天没有数据，返回 None。
+
+🪙 支持的加密货币 (symbol_name)
+你可以使用以下任意一个名称来指定加密货币：
+
+官方符号	支持的 symbol_name (不区分大小写)
+BTC	btc, bitcoin
+ETH	eth, ethereum
+SOL	sol, solana
+ADA	ada, cardano
+XRP	xrp, ripple
+DOT	dot, polkadot
+DOGE	doge, dogecoin
+LTC	ltc, litecoin
+LINK	link, chainlink
+BNB	bnb, binancecoin
+USDT	usdt, tether
+USDC	usdc, usd coin
+
+导出到 Google 表格
+📝 代码示例
+示例 1: 获取以太坊数据并保存为 JSON 文件
+```Python
+
+from binance_Alan.fetcher import BinanceDataFetcher
+
+# 指定一个不同的输出目录
+fetcher = BinanceDataFetcher(output_dir='ethereum_prices')
+
+fetcher.get_daily_klines_as_file(
+    symbol_name='eth',
+    date_str='2025-09-25',
+    output_format='json'
+)
+```
+# 这将在 'ethereum_prices' 目录下创建一个名为 'ETHUSD_2025-09-25.json' 的文件
+示例 2: 获取 SOL 数据到 DataFrame 并进行简单分析
+```Python
+
+from binance_Alan.fetcher import BinanceDataFetcher
+import pandas as pd
+
+# 关闭 SettingWithCopyWarning 警告 (可选)
+pd.options.mode.chained_assignment = None
+
+fetcher = BinanceDataFetcher()
+
+# 使用 fetch_daily_data 方法
+sol_df = fetcher.fetch_daily_data(
+    symbol_name='solana',
+    date_str='2025-09-20'
+)
+
+if sol_df is not None:
+    print("成功获取 SOL 数据！")
+    
+    # 查看数据前5行
+    print("数据预览:")
+    print(sol_df.head())
+    
+    # 计算当天的平均收盘价
+    avg_close_price = sol_df['close'].mean()
+    print(f"\n2025-09-20 SOL 的平均收盘价为: ${avg_close_price:.2f}")
+    
+    # 找出当天最高价
+    highest_price = sol_df['high'].max()
+    print(f"2025-09-20 SOL 的最高价为: ${highest_price:.2f}")
+else:
+    print("未能获取 SOL 数据。")
+    
+```
