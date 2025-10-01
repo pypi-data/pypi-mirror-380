@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vendy_bc"
+version = "0.1.2"
+description = "노무현 운지"
+authors = [{ name = "vendy" }]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+
+dependencies = [
+    "aenum==3.1.16",
+    "colored==1.4.4",
+    "PyJWT==2.10.1",
+    "PyYAML==6.0.2",
+    "requests==2.32.4",
+    "beautifulsoup4==4.13.4",
+    "argparse==1.4.0",
+]
+
+[project.scripts]
+vendy = "vendy_bc.__main__:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"vendy_bc.files" = ["**/*"]

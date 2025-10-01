@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: vendy_bc
+Version: 0.1.2
+Summary: 노무현 운지
+Author: vendy
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aenum==3.1.16
+Requires-Dist: colored==1.4.4
+Requires-Dist: PyJWT==2.10.1
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: requests==2.32.4
+Requires-Dist: beautifulsoup4==4.13.4
+Requires-Dist: argparse==1.4.0
