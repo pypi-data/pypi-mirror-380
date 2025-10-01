@@ -1,0 +1,14 @@
+gladiaio_sdk/__init__.py,sha256=P-_vAELYYSFgOfTBOQSBAcyknBHXTLEFI8yWOFLAmuE,854
+gladiaio_sdk/client.py,sha256=ODWuE-72DWzPEJEHUSPn1Ckz7_mpHTSnhgTK6B4NVPc,3362
+gladiaio_sdk/client_options.py,sha256=ntA4yRpGGCGyIL2hXca0CeDcJFCEnDxQEHKC67pnWmc,1813
+gladiaio_sdk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gladiaio_sdk/version.py,sha256=EJqUzbubToAFot4AGpCbHoqoa38br1rN9f-pGmEIGpY,75
+gladiaio_sdk/network/async_http_client.py,sha256=5ZwxrmB9-3znHHGV8MlxpiTBlAOtc7U8iwPCnN9tMk8,6931
+gladiaio_sdk/network/async_websocket_client.py,sha256=McfdKAqMLuobI7ZwKc2lYtFW4LYAVaXZzQi5Iqm2F0o,7067
+gladiaio_sdk/v2/live/async_client.py,sha256=QRCev8tM70y2Bggr3EDRPzOVAoLNEhLYJHjsFP5pBmQ,1583
+gladiaio_sdk/v2/live/async_session.py,sha256=TRSZoYwFh4QW-oij9h__VnrBNbBPOgbhjdn_KGm1Rjw,15715
+gladiaio_sdk/v2/live/generated_types.py,sha256=DPukpC4006Hh9DtmE1I9S6MKOy_33zZlaidrzFDEks0,39823
+gladiaio_sdk/v2/live/types.py,sha256=U3Xqu6xRp3FWC1tguvJElcZm-3gcdG1b-gmJjCtt6Jc,410
+gladiaio_sdk-0.1.1.dist-info/METADATA,sha256=s0PgzpGqrRDEB5EGwtB_mFwmHdLEuGKXVqAZk3dhOb0,757
+gladiaio_sdk-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gladiaio_sdk-0.1.1.dist-info/RECORD,,
