@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibe-binary"
+version = "0.1.3"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+description = "Библиотека бинарных алгоритмов с AI-магией"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "python-dotenv>=1.0.0"
+]
+[project.urls]
+Homepage = "https://github.com/yourusername/vibe-binary"
