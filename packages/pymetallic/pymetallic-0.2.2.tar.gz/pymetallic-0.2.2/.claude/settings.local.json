@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__directory_tree",
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__move_file",
+      "Bash(make test:*)",
+      "mcp__filesystem__read_multiple_files",
+      "mcp__filesystem__read_text_file",
+      "Bash(pip install:*)",
+      "Bash(python -m pytest tests/test_metal_resource_leaks.py::TestMetalResourceLeaks::test_buffer_metal_resource_cleanup -v -s)",
+      "Bash(python -m pytest tests/test_kernel_cache_safety.py::TestKernelCacheThreadSafety::test_concurrent_kernel_compilation -v -s)",
+      "Bash(python -m pytest tests/test_kernel_cache_safety.py::TestKernelCacheThreadSafety::test_different_kernels_concurrent_compilation -v -s)",
+      "Bash(python -m pytest tests/test_kernel_cache_safety.py::TestKernelCacheThreadSafety::test_kernel_execution_thread_safety -v -s)",
+      "Bash(python:*)",
+      "Bash(git add:*)",
+      "Bash(uv build:*)",
+      "Bash(metallic-smoke)",
+      "Bash(git commit:*)",
+      "Bash(git tag:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,8 @@
+# requirements-dev.txt
+# DEPRECATED: Development dependencies are now managed in pyproject.toml
+# This file is kept for backward compatibility only
+# Use: pip install -e .[dev] for development dependencies
+
+-r requirements.txt
+
+# All dev dependencies are now in pyproject.toml [project.optional-dependencies.dev]
