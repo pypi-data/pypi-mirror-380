@@ -1,0 +1,9 @@
+.idea/
+logs/
+
+**/__pycache__/**
+
+.coverage*
+
+**/dist/
+**/build/
