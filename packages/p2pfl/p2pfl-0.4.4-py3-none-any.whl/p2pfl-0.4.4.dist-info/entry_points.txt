@@ -1,0 +1,2 @@
+[console_scripts]
+p2pfl = p2pfl.management.cli:app
