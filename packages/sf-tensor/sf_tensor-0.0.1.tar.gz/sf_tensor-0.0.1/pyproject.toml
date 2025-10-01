@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sf-tensor"
+version = "0.0.1"
+description = "The SF Tensor package"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["example", "packaging", "tutorial"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://sf-tensor.com"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/sf_tensor"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sf_tensor"]
+
+
