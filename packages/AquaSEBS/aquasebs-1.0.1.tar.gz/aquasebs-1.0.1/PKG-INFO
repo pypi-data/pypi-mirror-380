@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: AquaSEBS
+Version: 1.0.1
+Summary: Priestley-Taylor Jet Propulsion Laboratory Evapotranspiration Model
+Author-email: Gregory Halverson <gregory.h.halverson@jpl.nasa.gov>, "Joshua B. Fisher" <jbfisher@chapman.edu>
+Project-URL: Homepage, https://github.com/JPL-Evapotranspiration-Algorithms/AquaSEBS
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: check-distribution
+Requires-Dist: ECOv002-CMR
+Requires-Dist: ECOv002-granules>=1.2.1
+Requires-Dist: GEOS5FP
+Requires-Dist: NASADEM
+Requires-Dist: numpy
+Requires-Dist: priestley-taylor>=1.1.2
+Requires-Dist: rasters
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
+# AquaSEBS
+AquaSEBS Water-Surface Evaporation Python Package
