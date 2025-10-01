@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+RegixTest.egg-info/PKG-INFO
+RegixTest.egg-info/SOURCES.txt
+RegixTest.egg-info/dependency_links.txt
+RegixTest.egg-info/entry_points.txt
+RegixTest.egg-info/requires.txt
+RegixTest.egg-info/top_level.txt
+regixtest/__init__.py
+regixtest/cli.py
+regixtest/data_extensions.py
+regixtest/mi.py
