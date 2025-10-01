@@ -1,0 +1,2 @@
+core
+sythonlab_amadeus_enterprise
