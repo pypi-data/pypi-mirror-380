@@ -1,0 +1,2 @@
+Version: 1.10.1
+Arguments: ['C:\\Users\\GitlabRunner\\scoop\\apps\\python310\\current\\lib\\site-packages\\delvewheel\\__main__.py', 'repair', '-w', 'C:\\Windows\\Temp\\cibw-run-5qrt3d8o\\cp310-win_amd64\\repaired_wheel', 'C:\\Windows\\Temp\\cibw-run-5qrt3d8o\\cp310-win_amd64\\built_wheel\\advssdkpy-1.0.4-cp310-cp310-win_amd64.whl']
