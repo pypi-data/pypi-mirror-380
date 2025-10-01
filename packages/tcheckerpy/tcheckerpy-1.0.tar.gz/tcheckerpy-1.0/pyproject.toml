@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tcheckerpy"
+version = "1.0"
+authors = [
+  { name="Alexander Lieb", email="alexander.lieb@online.de" },
+  { name="Jacob Deuchert", email="jacob.deuchert@stud.tu-darmstadt.de"},
+  { name="Paula Troszt", email="paula.troszt@gmx.de" }
+]
+description = "A Python Interface for TChecker"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["fastapi[standard]", "uvicorn"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/Echtzeitsysteme/tcheckerpy"
+Issues = "https://github.com/Echtzeitsysteme/tcheckerpy/issues"
+
+[tool.setuptools.package-data]
+tcheckerpy = ["*.so"]
