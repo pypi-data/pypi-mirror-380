@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/my_math_package/__init__.py
+src/my_math_package/calculator.py
+src/my_math_package/geometry.py
+src/my_math_package/internal_utils.py
+src/my_math_package_july56.egg-info/PKG-INFO
+src/my_math_package_july56.egg-info/SOURCES.txt
+src/my_math_package_july56.egg-info/dependency_links.txt
+src/my_math_package_july56.egg-info/top_level.txt
+tests/test_calculator.py
