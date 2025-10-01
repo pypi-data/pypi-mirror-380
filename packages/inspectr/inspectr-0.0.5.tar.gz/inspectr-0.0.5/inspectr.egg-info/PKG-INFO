@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: inspectr
+Version: 0.0.5
+Summary: A collection of python tools to inspect code quality. 
+Maintainer-email: Alex Mueller <amueller474@gmail.com>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/ajcm474/inspectr
+Project-URL: Issues, https://github.com/ajcm474/inspectr/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# inspectr
+A collection of python tools to inspect code quality.
+
+## Installation
+```bash
+python -m venv .venv/
+source .venv/bin/activate
+pip install inspectr
+```
+
+## Usage
+Generally, the syntax goes:
+```bash
+inspectr <subtool> [files...]
+```
+where `<subtool>` is one of the following:
+
+- `authenticity`: looks for TODO comments, empty try/except blocks, and stub functions
+- `bare_ratio`: checks for the ratio of bare excepts to meaningful exception usage
+- `count_exceptions`: counts how many of each type of exception there are (including bare except)
+- `duplicates`: looks for occurrences of duplicate code (default: 10+ lines, 3+ occurrences)
+- `size_counts`: various linecount-related code complexity checks
+- `with_open`: checks for `open` in the absense of `with` and manual calls to `close()`
+
+**Please note:** this project is in the early alpha stage, so don't expect the above subtool names 
+to be stable between versions. I might even merge/split them at some point.
