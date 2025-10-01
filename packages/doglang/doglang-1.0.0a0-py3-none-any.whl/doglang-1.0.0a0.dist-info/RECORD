@@ -1,0 +1,14 @@
+doglang/SemanticAnalyser.py,sha256=vO9pTjvGKvZEKgXtztpchKt6V3l7dkh6RYYksFEa8jI,2195
+doglang/SymbolTable.py,sha256=ftFt5svHy6QveaYTLQjzCJdd-D_SI73TF7Ec-_0UjLQ,651
+doglang/SyntaxAnalyser.py,sha256=PVZj2K2YguznxDo9THXG76ZwA6Km-lpnVB1t86w5cqY,4920
+doglang/Tokenizer.py,sha256=pf-erPwHv-1b38-T1FNWzzhim9HLsIpx_v53l-8psmA,2925
+doglang/__init__.py,sha256=3fvZYQBnrtOgHF9qBO1gKMq65NDXOzSE5MDXo-tpxT8,127
+doglang/cli.py,sha256=mpl9S_xJc64puYV1pu-RNyMLjDcTfH4NDkfUBqlSjK4,1321
+doglang/error.py,sha256=CF5KDtlMr2bZjKFY4nRqUM9gIneI2zrLCsTABJynmbs,99
+doglang/main.py,sha256=g0xUrLYhIXpmAgCPH-ihxGNwKjBqqRLlnTnBVtCG7Do,3734
+doglang-1.0.0a0.dist-info/licenses/LICENSE,sha256=xe1aTECM9-oMDhBhPIbvy5166PSD_vDvmcAJ2I1344g,1067
+doglang-1.0.0a0.dist-info/METADATA,sha256=rsHmr_ZIJbCCzxyJs4PpM2p0aMeVun7e4vVKkYVSwU8,4743
+doglang-1.0.0a0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+doglang-1.0.0a0.dist-info/entry_points.txt,sha256=wuUrPVB0lyYdejaPg-xA5RL-wgX6In0PfHvxU9SiXTM,45
+doglang-1.0.0a0.dist-info/top_level.txt,sha256=ZoeMAK3L6IdkRIoKlULQWaR3MZgcQSUZVc-gHdvKYnE,8
+doglang-1.0.0a0.dist-info/RECORD,,
