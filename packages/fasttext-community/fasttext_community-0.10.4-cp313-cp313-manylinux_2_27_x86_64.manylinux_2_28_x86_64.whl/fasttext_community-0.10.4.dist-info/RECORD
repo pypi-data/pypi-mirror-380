@@ -1,0 +1,14 @@
+fasttext_pybind.cpython-313-x86_64-linux-gnu.so,sha256=nSZ6rQ5UpGjHfzwex2fzH0SAzlkAGVPtLvLYimj0kf8,18116320
+fasttext/FastText.py,sha256=LyrOd7uFnXMxiZAfqSA_y4NKmGyvCDmENl56ZA1Jobs,19620
+fasttext/__init__.py,sha256=nFo4GJOcjMRK_V4C2-jBsjmQ_wc4d6XeLfrWvUODTgg,659
+fasttext/tests/__init__.py,sha256=HTovfGlI-FV_glgtBe3hB4BlAEOAp0irr6NChHGwCEQ,426
+fasttext/tests/helpers.py,sha256=GEUsvPfC41Xv3HrU9lykGJU2LDvkmV3i2OAlbl3V2vo,4791
+fasttext/tests/test_configurations.py,sha256=HoYuPWny09g7MsT9BwtdKf2R0P1X8O9Nt-ARNGz3Gjg,7060
+fasttext/tests/test_script.py,sha256=-oaGjtoX2J2XGOjvr6JF7xqTW6gcopaWmDcujfUqg60,17615
+fasttext/util/__init__.py,sha256=U6XiNbgpIfh1pANEup5w6Z-D-vQe4P2RJczc2qSsm6A,472
+fasttext/util/util.py,sha256=kEk7DQLIdlKQr51-_FsMH6WQgFB0l9MVS0voqsj6zDc,7490
+fasttext_community-0.10.4.dist-info/METADATA,sha256=2H5hDOg8BdZ0aK3xLfiEt9_OkFQNSuLU8cE5TQYh_78,16994
+fasttext_community-0.10.4.dist-info/WHEEL,sha256=FGhoiLBD6z3eO88tnYRS0TgLaWveAr5uyXIqBlx6mno,152
+fasttext_community-0.10.4.dist-info/top_level.txt,sha256=S1chSV0wOROsTWzQVPXZXMpLXD_uNS1oz67R-lXI0yo,25
+fasttext_community-0.10.4.dist-info/RECORD,,
+fasttext_community-0.10.4.dist-info/licenses/LICENSE,sha256=2c_f31SMSHEvBcZ-t2x558n0XLp421B5S3gONWS4Xvc,1080
