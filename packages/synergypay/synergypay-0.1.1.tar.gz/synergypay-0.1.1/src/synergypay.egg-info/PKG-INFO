@@ -1,0 +1,256 @@
+Metadata-Version: 2.4
+Name: synergypay
+Version: 0.1.1
+Summary: Web3 payment SDK for Synergetics platform
+Author-email: Synergetics <anurag.s@synergetics.ai>
+Maintainer-email: Synergetics <anurag.s@synergetics.ai>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/synergeticsai/synergypay
+Project-URL: Repository, https://github.com/synergeticsai/synergypay
+Project-URL: Documentation, https://docs.synergetics.ai/synergypay
+Project-URL: Bug Tracker, https://github.com/synergeticsai/synergypay/issues
+Keywords: web3,blockchain,payments,ethereum,synergetics,crypto
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: web3>=6.0.0
+Requires-Dist: eth-account>=0.8.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: license-file
+
+# SynergyPay SDK
+
+A Python SDK for Web3 payments on the Synergetics platform.
+
+## Features
+
+- **Agent Registration**: Generate wallets and register agents with the Synergetics API
+- **Web3 Payments**: Send and verify blockchain payments
+
+## Installation
+
+```bash
+pip install synergypay
+```
+
+## Quick Start
+
+### 1. Configuration Setup
+
+You can configure the SDK in two ways:
+
+#### Option A: Environment File (Recommended for Development)
+
+Create a `.env` file in your project directory:
+
+```env
+# Web3 Configuration
+WEB3_RPC_URL=https://mainnet.infura.io/v3/YOUR_PROJECT_ID
+CHAIN_ID=1
+TOKEN_ADDRESS=0x...
+SERVICE_PRICE_WEI=1000000000000000000
+
+# Agent Registration
+OWNER_PUB_KEY=your_owner_public_key_here
+```
+
+#### Option B: Constructor Parameters (Recommended for Production)
+
+Pass configuration directly to the constructor:
+
+```python
+from synergypay import SynergyPayAgent
+
+agent = SynergyPayAgent(
+    web3_rpc_url="https://mainnet.infura.io/v3/YOUR_PROJECT_ID",
+    chain_id=1,
+    token_address="0x...",
+    service_price_wei=1000000000000000000,
+    owner_pub_key="your_owner_public_key_here"
+)
+```
+
+### 2. Basic Usage
+
+```python
+from synergypay import SynergyPayAgent
+
+# Initialize agent
+agent = SynergyPayAgent()
+
+# Register agent with required device ID
+result = agent.register_agent("MyAgent", "my-device-123")
+print(f"Agent registered: {result}")
+
+# Register agent with custom device ID and metadata
+custom_metadata = {
+    "description": "Payment processing agent",
+    "version": "1.0.0",
+    "capabilities": ["payment", "verification"]
+}
+result = agent.register_agent(
+    agent_name="MyAgent",
+    device_id="custom-device-456",
+    bot_metadata=custom_metadata
+)
+print(f"Agent registered with metadata: {result}")
+
+# Error examples - these will fail
+try:
+    result = agent.register_agent("MyAgent")  # Missing device_id
+    print(result)  # This won't execute
+except TypeError as e:
+    print(f"TypeError: {e}")  # Missing required argument
+
+# Empty device_id will be caught by our validation
+result = agent.register_agent("MyAgent", "")  # Empty device_id
+# Returns: {"status": "error", "message": "device_id is required and must be a non-empty string"}
+
+# Send payment
+payment_result = agent.send_payment(
+    recipient_address="0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6",
+    amount_eth=0.001  # 0.001 ETH
+)
+print(f"Payment sent: {payment_result}")
+
+# Verify payment
+verification_result = agent.verify_payment(
+    tx_hash=payment_result["tx_hash"]
+)
+print(f"Payment verified.")
+
+
+## API Reference
+
+### SynergyPayAgent
+
+#### `__init__(config_path: Optional[str] = None, web3_rpc_url: Optional[str] = None, chain_id: Optional[int] = None, token_address: Optional[str] = None, service_price_wei: Optional[int] = None, owner_pub_key: Optional[str] = None)`
+
+Initialize the SynergyPay agent.
+
+- `config_path`: Optional path to configuration directory (defaults to current directory)
+- `web3_rpc_url`: Web3 RPC endpoint URL (overrides env var)
+- `chain_id`: Blockchain chain ID (overrides env var)
+- `token_address`: Token contract address (overrides env var)
+- `service_price_wei`: Default service price in wei (overrides env var)
+- `owner_pub_key`: Owner's public key (overrides env var)
+
+**Note**: Either `web3_rpc_url` must be provided via constructor or `WEB3_RPC_URL` must be set in environment.
+
+#### `register_agent(agent_name: str, device_id: str, owner_pub_key: Optional[str] = None, bot_metadata: Optional[Dict[str, Any]] = None) -> Dict[str, Any]`
+
+Register agent with wallet generation and Synergetics API registration.
+
+- `agent_name`: Name of the agent (e.g., "Agent_A", "Agent_B")
+- `device_id`: **Required** device ID for the agent
+- `owner_pub_key`: Owner's public key (optional, reads from OWNER_PUB_KEY env var)
+- `bot_metadata`: Custom bot metadata dictionary (optional, empty dict if not provided)
+
+Returns a dictionary with registration status and agent details.
+
+**Note**: `device_id` is now required and must be a non-empty string. The SDK will show an error if not provided.
+
+#### `send_payment(recipient_address: str, amount_eth: Optional[float] = None) -> Dict[str, Any]`
+
+Send Web3 payment to recipient address.
+
+- `recipient_address`: Ethereum address to send payment to
+- `amount_eth`: Amount in ETH (optional, e.g., 0.001). If None, uses SERVICE_PRICE_WEI from config.
+
+Returns a dictionary with payment status and transaction details.
+
+#### `verify_payment(tx_hash: str, expected_recipient: Optional[str] = None, expected_amount_eth: Optional[float] = None, max_retries: int = 5, retry_delay: int = 3) -> Dict[str, Any]`
+
+Verify a Web3 payment transaction on-chain with retry logic.
+
+- `tx_hash`: Transaction hash to verify
+- `expected_recipient`: Expected recipient address (optional)
+- `expected_amount_eth`: Expected amount in ETH (optional, e.g., 0.001)
+- `max_retries`: Maximum number of retries for transaction mining (default: 5)
+- `retry_delay`: Delay between retries in seconds (default: 3)
+
+Returns a dictionary with verification status and transaction details.
+
+#### `verify_payment_async(tx_hash: str, expected_recipient: Optional[str] = None, expected_amount_eth: Optional[float] = None, max_retries: int = 5, retry_delay: int = 3) -> Dict[str, Any]`
+
+Async version of verify_payment with better waiting handling.
+
+Same parameters as `verify_payment` but uses async/await for better performance.
+
+
+
+## Configuration
+
+### Environment Variables
+
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `WEB3_RPC_URL` | Web3 RPC endpoint URL | Yes | - |
+| `CHAIN_ID` | Blockchain chain ID | Yes | 1 |
+| `TOKEN_ADDRESS` | Token contract address | No | - |
+| `SERVICE_PRICE_WEI` | Default service price in wei | No | 1000000000000000000 |
+| `OWNER_PUB_KEY` | Owner's public key for registration | Yes | - |
+
+### Wallet Management
+
+The SDK automatically manages wallet files:
+
+- **Location**: `wallet.json` in the configuration directory
+- **Format**: JSON with private key, address, device ID, and metadata
+- **Security**: Private keys are stored locally and never transmitted
+
+## Error Handling
+
+All methods return dictionaries with status information:
+
+```python
+result = agent.send_payment("0x...")
+
+if result["status"] == "success":
+    print(f"Payment successful: {result['tx_hash']}")
+else:
+    print(f"Payment failed: {result['message']}")
+```
+
+## Development
+
+### Setup
+
+```bash
+git clone https://git.netobjex.com/unifygpt/blockchain/sdks/agent-payment-sdk.git
+cd synergypay
+pip install -e ".[dev]"
+```
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Support
+
+For support and questions:
+
+- GitHub Issues: https://git.netobjex.com/unifygpt/blockchain/sdks/agent-payment-sdk.git/issues
+- Documentation: https://docs.synergetics.ai/synergypay
+- Email: anurag.s@synergetics.ai

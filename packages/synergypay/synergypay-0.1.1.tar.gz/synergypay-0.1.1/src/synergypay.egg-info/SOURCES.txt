@@ -1,0 +1,13 @@
+LICENSE
+README.md
+env.example
+pyproject.toml
+examples/__init__.py
+examples/basic_usage.py
+src/synergypay/__init__.py
+src/synergypay/core.py
+src/synergypay.egg-info/PKG-INFO
+src/synergypay.egg-info/SOURCES.txt
+src/synergypay.egg-info/dependency_links.txt
+src/synergypay.egg-info/requires.txt
+src/synergypay.egg-info/top_level.txt
