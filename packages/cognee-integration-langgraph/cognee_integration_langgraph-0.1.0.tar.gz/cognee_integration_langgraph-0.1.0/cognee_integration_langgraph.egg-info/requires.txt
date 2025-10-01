@@ -1,0 +1,11 @@
+cognee<0.3.4,>=0.2.4
+grandalf>=0.8
+ipykernel>=6.30.1
+ipython>=9.5.0
+langchain
+langchain-community>=0.3.29
+langchain_openai
+langgraph
+mediawikiapi>=1.3
+python-dotenv
+wikibase-rest-api-client>=0.2.5
