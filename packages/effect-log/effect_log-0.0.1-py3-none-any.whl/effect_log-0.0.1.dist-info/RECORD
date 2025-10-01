@@ -1,0 +1,9 @@
+effect_log/__init__.py,sha256=zM5HLmrVUhZo__e0Hk0UBh-upZMCs3gtIpPXUBU7gaw,1073
+effect_log/logger.py,sha256=BjcY8RHql770O1IRfQiDrdFPkTdcte1M78IpqA0p408,4856
+effect_log/middleware.py,sha256=RvjuI5yb-TIepQotnwQ2GhdQsVP_iphtwHus5VF8FFI,7855
+effect_log/types.py,sha256=5kA8mnVo836OIR8zTEhlV7yNQIrlfnLFNVWREK-Iv9Q,3029
+effect_log/writers.py,sha256=CwpiFIkqeFJYMFTj7dHlMOn1eZEQXuQu4Oh_--cb9RE,4858
+effect_log-0.0.1.dist-info/METADATA,sha256=PNkwKxGb0QPb36Q64Woo9o2S1ciJC5w4fWrtPoTf6BM,11592
+effect_log-0.0.1.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+effect_log-0.0.1.dist-info/licenses/LICENSE,sha256=FHh-GMsGPKrVRXFzQDY9XCbkw18ut73oJoEkDtgEwEY,1066
+effect_log-0.0.1.dist-info/RECORD,,
