@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package core_system.shop.v1;
+
+import "messages/common/pagination.proto";
+import "messages/common/search.proto";
+
+message GetShopListRequest {
+    core_system.common.v1.PaginationRequest pagination = 1;
+    optional core_system.common.v1.SearchRequest search = 2;
+    optional string fields = 3;   // 쉼표 구분 선택 필드
+    optional string embed = 4;    // 쉼표 구분 포함 관계
+    optional string order_by = 5; // 쉼표 구분 정렬, -prefix for desc
+    optional string filters = 6;  // 문자열/JSON 혼합 규격 필터
+    optional string filter_type = 7; 
+}
