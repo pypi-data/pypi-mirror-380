@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: pytraverser
+Version: 0.1.5
+Summary: A terminal file tree traverser.
+Author-email: Josh Stillerman <jas@mit.edu>
+Project-URL: Homepage, https://github.com/you/pytraverser
+Project-URL: Repository, https://github.com/you/pytraverser
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: linkify-it-py>=2.0.3
+Requires-Dist: markdown-it-py>=4.0.0
+Requires-Dist: mdit-py-plugins>=0.5.0
+Requires-Dist: mdsthin>=1.6.1
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: numpy>=2.2.6
+Requires-Dist: platformdirs>=4.4.0
+Requires-Dist: Pygments>=2.19.2
+Requires-Dist: rich>=14.1.0
+Requires-Dist: textual>=6.1.0
+Requires-Dist: typing_extensions>=4.15.0
+Requires-Dist: uc-micro-py>=1.0.3
+Dynamic: license-file
+
+# PyTraverser
+
+PyTraverser is a Python library for text based traversing of MDSplus trees. It provides both a command line callable interfaces.
+
+This package uses mdsthin to access MDSplus information.  Define MDS_HOST environment to be the server to use.  For example:
+```
+export MDS_HOST=alcdata
+```
+## Features
+
+- Traverse trees and graphs with customizable strategies
+- Depth-first and breadth-first traversal support
+- Node filtering and transformation utilities
+- Easy integration with existing Python data structures
+
+## Installation
+
+```bash
+pip install pytraverser
+```
+## Key Bindings
+    "[b]click[/b]/[b]⏎[/b] Expand/Collapse + select   "
+    "[b]⇥[/b] Decompile  "
+    "[b]⇧⇥[/b] Show Data  " 
+    "[b]←[/b] Collapse Parent   "
+    "[b]→[/b] Expand   "
+    "[b]↓[/b] Move Down + expand   "
+    "[b]↑[/b] move Up"
+
+## Usage Shell
+```
+usage: pytraverser [-h] [-d | -l] tree [shot]
+
+Tree, optional shot, dark flag
+
+positional arguments:
+  tree         Tree string
+  shot         Optional shot number (default -1)
+
+options:
+  -h, --help   show this help message and exit
+  -d, --dark   Enable dark mode
+  -l, --light  Enable light mode
+```
+
+## Python Usage
+
+```
+$ python
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pytraverser import traverse
+>>> node = traverse("cmod", -1) #type 'q' to exit 
+>>> node
+.EDGE.CRYOPUMP
+>>> 
+```
+
+#
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests on GitHub.
+
+## License
+
+This project is licensed under the MIT License.

@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+pytraverser.py
+pytraverser.egg-info/PKG-INFO
+pytraverser.egg-info/SOURCES.txt
+pytraverser.egg-info/dependency_links.txt
+pytraverser.egg-info/entry_points.txt
+pytraverser.egg-info/requires.txt
+pytraverser.egg-info/top_level.txt
