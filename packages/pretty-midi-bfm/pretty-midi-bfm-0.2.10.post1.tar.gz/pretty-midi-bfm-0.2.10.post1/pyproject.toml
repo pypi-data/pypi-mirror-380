@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pretty-midi-bfm"
+version = "0.2.10.post1"
+description = "PrettyMIDI with Bots for Music patches"
+authors = [
+    {name = "Colin Raffel (original author)"},
+    {name = "Lars Monstad (fork maintainer)"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.7.0",
+    "mido>=1.1.16",
+    "six",
+    "importlib_resources",
+]
+keywords = ["audio", "music", "midi", "mir"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Sound/Audio :: MIDI",
+]
+
+[project.optional-dependencies]
+fluidsynth = ["pyfluidsynth>=1.3.1"]
+
+[project.urls]
+Homepage = "https://github.com/craffel/pretty-midi"
+
+[tool.setuptools]
+packages = ["pretty_midi"]
+
+[tool.setuptools.package-data]
+pretty_midi = ["TimGM6mb.sf2"]
+
