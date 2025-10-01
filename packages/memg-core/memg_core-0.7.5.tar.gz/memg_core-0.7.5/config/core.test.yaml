@@ -1,0 +1,107 @@
+version: v1
+
+id_policy:
+  kind: uuid
+  field: id
+
+defaults:
+  vector:
+    metric: cosine
+    normalize: true
+  timestamps:
+    auto_create: true
+    auto_update: true
+  datetime_format: "%Y-%m-%d %H:%M:%S"  # Default format for test consistency
+
+entities:
+  - name: memo # base entity - all other entities are derived from this
+    description: "Base memory unit"
+    fields:
+      id:          { type: string, required: true, system: true } # uuid
+      user_id:     { type: string, required: true, system: true } # system: true = handled by API, not in user payload
+      statement:   { type: string, required: true, max_length: 8000 }
+      created_at:  { type: datetime, required: true, system: true }
+      updated_at:  { type: datetime, system: true }
+      vector:      { type: vector, anchored_to: statement, system: true }
+    relations:
+      memo:
+        - name: memo_related
+          description: "Generic relation between memos"
+          predicate: RELATED_TO
+          directed: false
+
+  - name: note
+    parent: memo
+    description: "General note or observation to memorize"
+    fields:
+      origin: { type: string }  # Optional origin field for testing
+      project: { type: string }  # Optional project namespace for filtering
+    relations:
+      note:
+        - name: note_related_to_note
+          description: "Generic relation between notes"
+          predicate: RELATED_TO
+          directed: false
+      task:
+        - name: note_annotates_task
+          description: "Note providing context to a task"
+          predicate: ANNOTATES
+          directed: true
+
+  - name: task
+    parent: memo
+    description: "Development task or work item"
+    fields:
+      project: { type: string }  # Optional project namespace for filtering
+      details: { type: string }
+      status: { type: enum, choices: [backlog, todo, in_progress, in_review, done, cancelled], default: backlog }
+      priority: { type: enum, choices: [low, medium, high, critical], default: medium }
+      due_date: { type: datetime }
+      estimated_hours: { type: float }  # Numeric type: estimated hours to complete
+      story_points: { type: int }  # Numeric type: story points for task
+      completed: { type: bool }  # Numeric type: completion flag
+    override:
+      display_field: details  # Display uses details instead of statement
+    relations:
+      task:
+        - name: task_blocks_task
+          description: "Task blocking another task"
+          predicate: BLOCKS
+          directed: true
+
+  # Test entity 1: Document with details-based display and force/exclude rules
+  - name: document
+    parent: memo
+    description: "Document for testing display_field override"
+    fields:
+      title: { type: string, max_length: 200 }
+      details: { type: string, required: true }
+      project: { type: string }
+      draft: { type: string }  # Field to test exclusion
+    override:
+      display_field: title  # Display uses 'title' field instead of 'statement'
+      force_display: [details]  # Always show details field
+      exclude_display: [draft]  # Never show draft field
+    # Note: vectorization still uses 'statement' (inherited anchor field)
+    relations:
+      task:
+        - name: document_supports_task
+          description: "Document providing details or requirements for a task"
+          predicate: SUPPORTS
+          directed: true
+
+  # Test entity 2: Article with comprehensive override testing
+  - name: article
+    parent: memo
+    description: "Article for testing complex override scenarios"
+    fields:
+      title: { type: string, max_length: 200 }
+      summary: { type: string, required: false, max_length: 1000 }
+      author: { type: string }
+      internal_notes: { type: string }  # Field to test exclusion
+      tags: { type: string }
+    override:
+      display_field: title  # Display uses 'title' field
+      force_display: [summary, author]  # Always show these fields
+      exclude_display: [internal_notes]  # Never show internal notes
+    # Note: vectorization still uses 'statement' (inherited anchor field)
