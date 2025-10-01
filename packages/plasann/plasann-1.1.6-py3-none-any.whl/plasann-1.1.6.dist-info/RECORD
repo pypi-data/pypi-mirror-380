@@ -1,0 +1,12 @@
+plasann/__init__.py,sha256=2THNirPZuWSv7X8lpjdW-gKVInye-DvxsCTpQcttRpU,80
+plasann/annotate.py,sha256=teD9SnVvdoK8pbeyc5Wfd0fHs6_JcCtWZjcRN92WcMw,40932
+plasann/blast_search.py,sha256=d7EAMuzcl147y9DIZDXvs7ilHeCv-vwBVxBbzGMy0b8,62020
+plasann/database_download.py,sha256=X8lnNEYvxY7i7V-EoHXa1GCX7hXNZW2rINTN3DbKPS0,12963
+plasann/draw_plasmid.py,sha256=OX7q9rzN-nEtUCVwfbYzVxwNRj8xmRrjcWwSE2aFpuk,18507
+plasann/essential_annotation.py,sha256=hLQO3u2p7ExJL-dtS3mmPlKUn-VclipO8t0VQuyadxU,43035
+plasann-1.1.6.dist-info/licenses/LICENSE,sha256=HujMBs3IN4iN5shBEnP5WPWKBokDUhkONwfI5LXSK2o,1069
+plasann-1.1.6.dist-info/METADATA,sha256=0FCCskAKzgwMojWK1M8bM5vY9FaP_0B3z2Pzl7mXrWU,5231
+plasann-1.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+plasann-1.1.6.dist-info/entry_points.txt,sha256=GD8cdRnFv63sxLh26uVAIQuVP_ZCOh2xNEJxsH3clR4,54
+plasann-1.1.6.dist-info/top_level.txt,sha256=NihKU9FW4q6ipo-aD8OqE-NanghmyeISBHEhnarv5w0,8
+plasann-1.1.6.dist-info/RECORD,,
