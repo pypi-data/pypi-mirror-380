@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: easysave_DavComo
+Version: 0.1.0
+Summary: Library for interacting with the EasySave service
+Home-page: https://github.com/DavComo/EasySaveModule
+Author: David Comor
+Author-email: David Comor <david.comor@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/DavComo/EasySaveModule
+Project-URL: Issues, https://github.com/DavComo/EasySaveModule/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
