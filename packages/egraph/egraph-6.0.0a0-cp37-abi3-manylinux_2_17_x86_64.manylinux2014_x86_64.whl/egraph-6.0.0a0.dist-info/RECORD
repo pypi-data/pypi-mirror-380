@@ -1,0 +1,5 @@
+egraph-6.0.0a0.dist-info/METADATA,sha256=nTZPMe-D_I8Hr9RtEkewe9OtdrgxtvPwiP5OX0DitPg,9183
+egraph-6.0.0a0.dist-info/WHEEL,sha256=i6A8fOeKDbiLWJKJ4CSZ_oMsfL41B4i_w3i76Xh_k5M,127
+egraph/__init__.py,sha256=YBSKN6lOz_JOtBlW0nWSOq6InN6kkxTMOnsjkW1ssPg,107
+egraph/egraph.abi3.so,sha256=wdTVEpjceUAlrjmuMvwbsG5rP5CB6eeaRi6yCXynmro,2245688
+egraph-6.0.0a0.dist-info/RECORD,,
