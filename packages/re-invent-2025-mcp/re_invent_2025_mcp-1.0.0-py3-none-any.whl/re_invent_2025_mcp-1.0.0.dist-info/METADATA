@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: re-invent-2025-mcp
+Version: 1.0.0
+Summary: MCP server for AWS re:Invent 2025 session catalog
+Author: AWS
+License: MIT
+Keywords: aws,mcp,reinvent,sessions
+Requires-Python: >=3.11
+Requires-Dist: mcp>=1.15.0
+Requires-Dist: msgpack>=1.1.0
+Provides-Extra: test
+Requires-Dist: pytest-asyncio>=0.23.0; extra == 'test'
+Requires-Dist: pytest>=8.0.0; extra == 'test'
