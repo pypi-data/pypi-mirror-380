@@ -1,0 +1,2 @@
+[datasette]
+jsonschema_forms = datasette_jsonschema_forms
