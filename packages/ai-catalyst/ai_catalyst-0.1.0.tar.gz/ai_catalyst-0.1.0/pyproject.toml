@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-catalyst"
+version = "0.1.0"
+authors = [
+    {name = "Eric Medlock", email = "your.email@example.com"},
+]
+description = "Production-ready AI components framework with security and resilience"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["ai", "llm", "security", "async", "pii", "resilience"]
+
+dependencies = [
+    "asyncpg>=0.28.0",
+    "aiohttp>=3.8.0",
+    "aiofiles>=23.0.0",
+    "pyyaml>=6.0",
+    "psutil>=5.9.0",
+    "openai>=1.0.0",
+    "regex>=2023.0.0",
+    "pandas>=2.0.0",
+    "cryptography>=41.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ericmedlock/AI_Catalyst"
+Repository = "https://github.com/ericmedlock/AI_Catalyst"
+Documentation = "https://github.com/ericmedlock/AI_Catalyst#readme"
+"Bug Tracker" = "https://github.com/ericmedlock/AI_Catalyst/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai_catalyst*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+asyncio_mode = "auto"

@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include ASYNC_MIGRATION_GUIDE.md
+include requirements.txt
+recursive-include ai_catalyst *.py
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+exclude *.py
+exclude production_example.py
+exclude performance_comparison.py
+exclude test_async_implementation.py
