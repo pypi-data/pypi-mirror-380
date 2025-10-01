@@ -1,0 +1,3 @@
+[console_scripts]
+sexagesimal-calculator = sexagesimal_calculator:main
+
