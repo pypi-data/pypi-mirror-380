@@ -1,0 +1,15 @@
+ebat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebat/sample_authenticator.py,sha256=MGU9yvAWrIbpZuRLP7WdwDYXS3GyjEG2dkZ_9pomBFM,6460
+ebat/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebat/data/suppliers.py,sha256=vf8sdDebNOVfdE9v3Al0cjbUqUj0qwg8eaMg4ulfF_g,48551
+ebat/evaluation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebat/evaluation/evaluator.py,sha256=qczAC-KGVO7LXrZCJK5SuR-RX3AsF-d1vWjxtcw1uNA,11866
+ebat/evaluation/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebat/evaluation/metrics/biometric_information.py,sha256=r5JcO-kv7YyY6Ye9Z8XcebuVoWTaVVQoXVwQajfFo1Y,2628
+ebat/evaluation/metrics/frequency_count_of_scores.py,sha256=sqaXm1lUZ3BBtBHFglYd23CfpwTT5NdXswygL5W4wu8,1375
+ebat/evaluation/metrics/gini_coefficient.py,sha256=RvBommzgPdwuOvnEHx3xksnmyhV7EnY916kQiQdp-C4,1487
+ebat-0.2.5.dist-info/METADATA,sha256=ELmaXuxtnlhboH6GM1G1-47_aXYbduw5uBVfP42dXY8,1247
+ebat-0.2.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ebat-0.2.5.dist-info/licenses/LICENSE,sha256=jxatFCrZZuXcv8Gq-mFepRbvseRHBZpLvp9NDigI1ak,628
+ebat-0.2.5.dist-info/licenses/NOTICE,sha256=9bnqsvcegsWzIWExE3Wa--zq_k-cEMXRIF_MwfbOhM8,70292
+ebat-0.2.5.dist-info/RECORD,,
