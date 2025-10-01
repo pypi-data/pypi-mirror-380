@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: bioql
+Version: 3.0.2
+Summary: Quantum Computing for Bioinformatics - 164 BILLION Natural Language Patterns! True English Programming for Quantum. API Key Required for Billing & Authentication.
+Home-page: https://github.com/yourusername/bioql
+Author: BioQL Development Team - SpectrixRD
+Author-email: SpectrixRD Team <hello@spectrixrd.com>
+License: MIT
+Project-URL: Homepage, https://bioql.com
+Project-URL: Documentation, https://docs.bioql.com
+Project-URL: Repository, https://github.com/bioql/bioql
+Project-URL: Bug Reports, https://github.com/bioql/bioql/issues
+Project-URL: Changelog, https://github.com/bioql/bioql/blob/main/CHANGELOG.md
+Project-URL: Funding, https://bioql.com/pricing
+Keywords: quantum computing,bioinformatics,qiskit,quantum algorithms,computational biology,quantum machine learning,genomics,proteomics,natural language processing,intermediate representation,molecular docking,sequence alignment,devkit
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: qiskit>=0.45.0
+Requires-Dist: qiskit-aer
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: biopython>=1.79
+Requires-Dist: requests>=2.28.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: uuid6>=2023.5.2
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: jsonschema>=4.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=0.991; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: pre-commit>=2.20.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.19.0; extra == "docs"
+Provides-Extra: cloud
+Requires-Dist: boto3>=1.26.0; extra == "cloud"
+Requires-Dist: azure-quantum>=1.0.0; extra == "cloud"
+Requires-Dist: cirq-ionq>=1.0.0; extra == "cloud"
+Provides-Extra: visualization
+Requires-Dist: plotly>=5.0.0; extra == "visualization"
+Requires-Dist: seaborn>=0.11.0; extra == "visualization"
+Requires-Dist: pandas>=1.4.0; extra == "visualization"
+Provides-Extra: vina
+Requires-Dist: meeko>=0.4.0; extra == "vina"
+Requires-Dist: rdkit>=2022.9.1; extra == "vina"
+Requires-Dist: openbabel-wheel>=3.1.1; extra == "vina"
+Provides-Extra: viz
+Requires-Dist: py3Dmol>=2.0.0; extra == "viz"
+Requires-Dist: pillow>=9.0.0; extra == "viz"
+Provides-Extra: openmm
+Requires-Dist: openmm>=8.0.0; extra == "openmm"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: platform
+Dynamic: requires-python
