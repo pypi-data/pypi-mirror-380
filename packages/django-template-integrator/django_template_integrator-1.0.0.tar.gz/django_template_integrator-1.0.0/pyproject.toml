@@ -1,0 +1,11 @@
+[project]
+name = "django-template-integrator"
+version = "1.0.0"
+description = "A CLI tool to automate Django template integration from frontend ZIP files"
+requires-python = ">=3.8"
+dependencies = [
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.scripts]
+django-template-integrator = "django_template_integrator.cli:main"
