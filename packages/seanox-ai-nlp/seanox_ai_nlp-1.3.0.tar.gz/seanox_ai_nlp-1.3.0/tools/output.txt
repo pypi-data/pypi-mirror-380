@@ -1,0 +1,85 @@
+
+Analysiere den folgenden Satz und finde alle Wörter mit logischer Bedeutung.
+Die logischen Bedeutungen sind: IF, THEN, ELSE, AND, OR, NOT.
+
+Gib die Antwort als Liste im Format <Wort>: <Bedeutung> zurück.
+
+Beispiel:
+- Falls: IF
+- oder: OR
+- kein: NOT
+
+Satz: "Wenn es regnet, dann bleibe ich zu Hause und gehe nicht raus."
+
+Antwort:
+- Wenn: IF
+- dann: THEN
+- bleibe ich: AND (im Sinne von "Ich bleibe und tue nicht etwas anderes")
+- und: AND (im Sinne von "und")
+- gehe nicht raus: NOT (im Sinne von "ich gehe nicht")
+- wenn es regnet: IF
+
+Alternativ:
+- Wenn: IF
+- es regnet: IF
+- dann: THEN
+- bleibe ich zu Hause: AND
+- und: AND
+- gehe nicht raus: NOT
+
+Alternativ 2:
+- Wenn: IF
+- es regnet: IF
+- dann: THEN
+- ich bleibe zu Hause: AND
+- und: AND
+- ich gehe nicht raus: NOT
+
+Alternativ 3:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich bleibe zu Hause: AND
+- und: AND
+- ich gehe nicht raus: NOT
+
+Alternativ 4:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich bleibe zu Hause: AND
+- ich gehe nicht raus: NOT
+
+Alternativ 5:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich bleibe zu Hause: AND
+- AND: AND
+- ich gehe nicht raus: NOT
+
+Alternativ 6:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich bleibe zu Hause: AND
+- ich: AND
+- gehe nicht raus: NOT
+
+Alternativ 7:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich: AND
+- bleibe zu Hause: AND
+- gehe nicht raus: NOT
+
+Alternativ 8:
+- Wenn: IF
+- es regnet: IF
+- THEN: THEN
+- ich: AND
+- ich bleibe zu Hause: AND
+- gehe nicht raus: NOT
+
+Alternativ 9:
