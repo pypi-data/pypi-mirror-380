@@ -1,0 +1,12 @@
+xarray
+hydra-zen
+netCDF4
+pyyaml
+scipy
+onnxruntime
+
+[gpu]
+onnxruntime-gpu
+
+[joblib]
+hydra-joblib-launcher
