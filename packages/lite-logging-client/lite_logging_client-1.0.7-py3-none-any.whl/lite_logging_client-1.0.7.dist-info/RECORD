@@ -1,0 +1,8 @@
+lite_logging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lite_logging/client.py,sha256=U2Cy3LTSyMaKACI_qkvVGJCZc_NTUCstk37rPJpW16M,9451
+lite_logging/pubsub/v1.py,sha256=PSikDsSpbiC7rQaPw7CYJILXHBXmDElMvBGFYZuVAHg,3656
+lite_logging/pubsub/v2.py,sha256=P21cvQz9R4E-xBO3z0M_frOUjubboouY4CHGj1ZShy0,1989
+lite_logging_client-1.0.7.dist-info/METADATA,sha256=IM6P5N-5JGA8vcwbYsun7nZTHHQBZLZu18rv0LewmZk,252
+lite_logging_client-1.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lite_logging_client-1.0.7.dist-info/licenses/LICENSE,sha256=mjFMHpNFyXG85CX_mE4-ffmN6igbEx3VD3tbBMqh5ew,1069
+lite_logging_client-1.0.7.dist-info/RECORD,,
