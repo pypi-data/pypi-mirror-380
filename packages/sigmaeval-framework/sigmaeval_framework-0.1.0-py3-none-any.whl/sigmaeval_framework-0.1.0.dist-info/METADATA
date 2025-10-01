@@ -1,0 +1,68 @@
+Metadata-Version: 2.3
+Name: sigmaeval-framework
+Version: 0.1.0
+Summary: A Python library for evaluating Generative AI agents and apps.
+License: Apache-2.0
+Author: Itura AI
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Homepage, https://github.com/Itura-AI/sigmaeval
+Project-URL: Issues, https://github.com/Itura-AI/sigmaeval/issues
+Project-URL: Repository, https://github.com/Itura-AI/sigmaeval
+Description-Content-Type: text/markdown
+
+# SigmaEval
+
+A Python library for evaluating Generative AI agents and apps.
+
+## Installation
+
+```bash
+pip install sigmaeval
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/Itura-AI/sigmaeval.git
+cd sigmaeval
+pip install -e .
+```
+
+## Development
+
+Install development dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+Format code:
+
+```bash
+black sigmaeval tests
+ruff check sigmaeval tests
+```
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+
