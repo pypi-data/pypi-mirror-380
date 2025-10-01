@@ -1,0 +1,13 @@
+roman_cuts/__init__.py,sha256=NP1iqFsEN8eQFXeErIgs_ry2Ea6iu4xcQOzR9Upi-ng,552
+roman_cuts/cube.py,sha256=alB1mVq3JIayzNyp8JB6RaSec3IbwbDKEDzLzgW4KGU,22223
+roman_cuts/data/wcs/Roman_WFI_wcs_field003_sca02_F087.json.bz2,sha256=_u9SYXKmJF_AuCPdlQ6HDd1gpn4Rzh8fGn65M_F3-1s,303
+roman_cuts/data/wcs/Roman_WFI_wcs_field003_sca02_F146.json.bz2,sha256=Zb8c7gS3ybtZqr5RX6BAp2mIYgfeBrHicrE3dZDXa4s,299
+roman_cuts/data/wcs/Roman_WFI_wcs_field003_sca02_F213.json.bz2,sha256=tgAodd1MrnqUf4rMNsxRHYa1225ieKgST6P2tS3rHa0,305
+roman_cuts/data/wcs/Roman_WFI_wcss_field003_sca02_F087.json.bz2,sha256=dfjfaCprBlsmgFW9qSZpzgEMZ0WiLsGPrKJsceANJP4,1968
+roman_cuts/data/wcs/Roman_WFI_wcss_field003_sca02_F146.json.bz2,sha256=PAb_emQNBZOCsoAF3zHV_tiUHXPv_oENt3tkJij781s,63237
+roman_cuts/data/wcs/Roman_WFI_wcss_field003_sca02_F213.json.bz2,sha256=alFmDDCL05gZOuSX6V-hzGajbbKvEoWU115DQK43EEw,1974
+roman_cuts/utils.py,sha256=q6jtRElkw1LcBLU6iC1PTdaGelF-IbrVYNp83Adxi1c,3441
+roman_cuts-0.3.1.dist-info/METADATA,sha256=em3ANQgR2R0oFu3jsh_fFeuvBK-esVgtp2dSEpzrLt4,2594
+roman_cuts-0.3.1.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+roman_cuts-0.3.1.dist-info/licenses/LICENCE,sha256=iekjZUYZjrowS_l5oBfZ9NdKmPJukMdeq0eQDtJHWFA,1068
+roman_cuts-0.3.1.dist-info/RECORD,,
