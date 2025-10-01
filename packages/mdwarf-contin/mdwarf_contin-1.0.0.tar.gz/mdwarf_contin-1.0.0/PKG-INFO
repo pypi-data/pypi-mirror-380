@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: mdwarf-contin
+Version: 1.0.0
+Summary: 
+Author: imedan
+Author-email: ilija.medan@vanderbilt.edu
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: alpha-shapes (>=1.1.0,<2.0.0)
+Requires-Dist: astropy (>=6.0.0,<7.0.0)
+Requires-Dist: localreg (>=0.5.0,<0.6.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: shapely (>=2.0.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Continuum Normalization of M Dwarfs
+
+Code to continuum normalize M dwarfs using alpha hulls and local polynomial regression.
+
+## Installation
+
+Use the following commands to install the code locally.
+
+```
+git clone https://github.com/imedan/mdwarf_contin
+cd mdwarf_contin
+conda create -n "mdwarf_contin_code" python=3.10 ipython
+conda activate mdwarf_contin_code
+pip install poetry
+poetry install --without extras
+```
+
+If you want to install the extra dependencies needed to use features that manipulate model spectra 
+into SDSS-like spectra, then the extra dependencies must also be installed. This can be done by running:
+
+```
+poetry install
+```
+
+## Usage
+
+The notebook in [`tests/example_usage.ipynb`](https://github.com/imedan/mdwarf_contin/blob/main/tests/example_usage.ipynb) provides an overview on how to use the code for doing normalization.
+
