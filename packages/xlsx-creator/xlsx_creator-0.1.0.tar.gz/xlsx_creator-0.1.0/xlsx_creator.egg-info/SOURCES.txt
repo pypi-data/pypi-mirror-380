@@ -1,0 +1,8 @@
+LICENSE
+NOTICE
+pyproject.toml
+xlsx_creator.egg-info/PKG-INFO
+xlsx_creator.egg-info/SOURCES.txt
+xlsx_creator.egg-info/dependency_links.txt
+xlsx_creator.egg-info/requires.txt
+xlsx_creator.egg-info/top_level.txt
