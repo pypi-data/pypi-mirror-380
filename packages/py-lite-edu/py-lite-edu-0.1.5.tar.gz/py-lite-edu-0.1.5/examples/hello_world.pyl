@@ -1,0 +1,7 @@
+# Первая программа на PyLite!
+
+def greet(name):
+    print("Привет, " + name + "!")
+
+greet("Мир")
+print("Добро пожаловать в PyLite!")
