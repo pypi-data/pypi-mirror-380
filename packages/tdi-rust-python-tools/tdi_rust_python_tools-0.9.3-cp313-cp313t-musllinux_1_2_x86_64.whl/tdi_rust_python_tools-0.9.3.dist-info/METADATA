@@ -1,0 +1,233 @@
+Metadata-Version: 2.4
+Name: tdi_rust_python_tools
+Version: 0.9.3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: Rust-based Python tools for faster processing of data.
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# TDI Rust Python Tools
+
+A collection of high-performance Rust-based tools compiled as a Python extension module to speed up common data processing tasks.
+
+## 🚀 What is This?
+
+This project uses **Rust** (a fast, compiled language) to implement performance-critical functions, then makes them available to Python through **PyO3** and **Maturin**. Think of it as writing the slow parts of your code in a faster language, while keeping your familiar Python interface.
+
+**Key Features:**
+- Fast text processing utilities (regex-based transformations)
+- CSV to Excel conversion (`convert_to_xlsx`)
+- High-performance `DictWriter` class (faster drop-in replacement for Python's `csv.DictWriter`)
+- Seamless Python integration with full type hints
+
+## 📋 Prerequisites
+
+### For Development
+
+You'll need to install:
+
+1. **Python 3.13+** - [Download here](https://www.python.org/downloads/)
+2. **Rust** - Install via [rustup](https://rustup.rs/):
+   ```bash
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+3. **uv** - Modern Python package manager ([faster than pip](https://docs.astral.sh/uv/)):
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+### For Users
+
+Just Python 3.13+ is needed to install the pre-built package:
+```bash
+pip install tdi-rust-python-tools
+```
+
+## 🛠️ Development Setup
+
+### 1. Clone and Setup Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/TDI-Data/tdi_rust_python_tools.git
+cd tdi_rust_python_tools
+
+# Create virtual environment and install dependencies
+uv sync
+```
+
+This creates a `.venv/` directory with all dependencies installed.
+
+### 2. Build the Extension Module
+
+```bash
+# Build and install in development mode (fast, includes debug symbols)
+uv run maturin develop
+
+# OR build optimized version (slower to compile, but faster to run)
+uv run maturin develop --release
+```
+
+**Note:** With `uv`, you don't need to activate the virtual environment! The `uv run` command automatically uses the project's `.venv/` environment.
+
+After running `uv run maturin develop`, the Rust code is compiled and installed into your Python environment. You can now import it:
+
+```python
+import tdi_rust_python_tools
+
+# Use the fast DictWriter
+writer = tdi_rust_python_tools.DictWriter(file, fieldnames=['name', 'age'])
+```
+
+### 3. Test Your Changes
+
+```bash
+uv run pytest tests/
+```
+
+## 🔄 Updating Dependencies
+
+### Updating Rust Dependencies
+
+Rust dependencies are defined in `Cargo.toml`. To update them:
+
+```bash
+# Update a specific dependency (e.g., regex)
+cargo update -p regex
+
+# Update all dependencies to their latest compatible versions
+cargo update
+
+# Update to potentially breaking versions (edit Cargo.toml first)
+# For example, change: regex = "1.11.1"
+# To:                  regex = "1.12.0"
+# Then run:
+cargo update
+```
+
+**Common Rust dependencies in this project:**
+- `pyo3` - Python bindings (⚠️ keep in sync with Maturin version)
+- `regex` - Regular expressions
+- `csv` - CSV reading/writing
+- `rust_xlsxwriter` - Excel file generation
+- `lazy_static` - Compile-time regex optimization
+
+After updating, rebuild with `uv run maturin develop` to test your changes.
+
+### Updating Python Dependencies
+
+Python dependencies (managed by `uv`) are in `pyproject.toml`:
+
+```bash
+# Add a new Python dependency
+uv add pytest
+
+# Add a development-only dependency
+uv add --group dev ruff
+
+# Update all Python dependencies
+uv sync -U
+
+# Update a specific package
+uv add pytest@latest
+```
+
+## 📦 Publishing a New Version
+
+### Publishing to PyPI (Automated via GitHub Actions)
+
+The easiest way to publish is through GitHub Actions:
+
+1. **Update the version number** in **both** files:
+   ```toml
+   # Cargo.toml
+   [package]
+   version = "0.8.3"  # Change this
+
+   # pyproject.toml uses dynamic versioning from Cargo.toml
+   # No changes needed there
+   ```
+
+2. **Commit your changes**:
+   ```bash
+   git add Cargo.toml
+   git commit -m "Bump version to 0.8.3"
+   ```
+
+3. **Create and push a git tag**:
+   ```bash
+   git tag v0.8.3
+   git push origin main --tags
+   ```
+
+4. **GitHub Actions takes over**:
+   - Automatically builds wheels for Linux, macOS, and Windows
+   - Publishes to PyPI when the workflow completes
+   - Check progress at: https://github.com/TDI-Data/tdi_rust_python_tools/actions
+
+### Manual Publishing (Advanced)
+
+If you need to publish manually:
+
+```bash
+# Build release wheels for your current platform
+maturin build --release
+
+# Wheels are created in target/wheels/
+# Upload to PyPI (requires API token)
+maturin publish --username __token__ --password $PYPI_TOKEN
+```
+
+**Note:** Manual publishing only creates wheels for your current OS/architecture. The GitHub Actions workflow is recommended as it builds for all platforms.
+
+## 📁 Project Structure
+
+```
+tdi_rust_python_tools/
+├── src/
+│   └── lib.rs                      # All Rust code (functions & classes)
+├── shared/
+│   └── shared.py                   # Pure Python utilities
+├── tests/                          # Python tests (pytest)
+├── tdi_rust_python_tools.pyi       # Type stubs for IDE support
+├── Cargo.toml                      # Rust dependencies & metadata
+├── pyproject.toml                  # Python packaging & dependencies
+├── uv.lock                         # Locked dependency versions
+└── .github/workflows/CI.yml        # Automated testing & publishing
+```
+
+## 🐛 Common Issues
+
+### "Failed to build extension module"
+- Make sure Rust is installed: `rustc --version`
+- Try a clean rebuild: `cargo clean && uv run maturin develop`
+
+### "Module not found" after building
+- Ensure you ran `uv run maturin develop` (not just `cargo build`)
+- Check the build completed successfully
+
+### Version mismatch errors
+- Keep `Cargo.toml` version in sync with git tags
+- Ensure PyO3 version matches Maturin requirements
+
+## 📚 Learn More
+
+- **PyO3 Documentation**: https://pyo3.rs/
+- **Maturin Guide**: https://www.maturin.rs/
+- **Rust Book**: https://doc.rust-lang.org/book/
+- **uv Documentation**: https://docs.astral.sh/uv/
+
+## 📄 License
+
+[Add your license here]
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes and test (`uv run maturin develop && uv run pytest`)
+4. Commit your changes (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
