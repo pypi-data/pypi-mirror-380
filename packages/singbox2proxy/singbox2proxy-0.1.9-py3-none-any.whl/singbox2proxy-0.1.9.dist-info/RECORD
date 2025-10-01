@@ -1,0 +1,12 @@
+singbox2proxy/__init__.py,sha256=3jCAe_hlhX-ZPEXyUplNYvzstGp6T1YB7a8oUIMCO0w,260
+singbox2proxy/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+singbox2proxy/base.py,sha256=KNonWhmvEy5sEUy_ENRfSgYoGXufnsyna80mhbXZk6A,79252
+singbox2proxy/cli.py,sha256=Hmo6Gcmg1Tf-WtE6N5GCqKxa2CrFJ0reFuv3plGC81w,5412
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/core_test.py,sha256=_ipzyRtXaB6dTgE8QwCeuiaRFmCOi01Vk4PvJeOY8tg,259
+tests/proxy_test.py,sha256=dV085tPYiTiSVYCylKBBLKjj0CC2XrsFVEMPiFneNkw,617
+singbox2proxy-0.1.9.dist-info/METADATA,sha256=aZsl37OsfGMIujckLUxYPNSmoPB2s7frxUQrO9NzCjQ,6094
+singbox2proxy-0.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+singbox2proxy-0.1.9.dist-info/entry_points.txt,sha256=X-R7py9bvTueTsAY2sqt23phqUlLGxVDtbbkkoTs9Hk,97
+singbox2proxy-0.1.9.dist-info/top_level.txt,sha256=y_H28Ro8rUoYU12Bke86zsBNr8uOWtRdTf3WuM6v2HQ,20
+singbox2proxy-0.1.9.dist-info/RECORD,,
