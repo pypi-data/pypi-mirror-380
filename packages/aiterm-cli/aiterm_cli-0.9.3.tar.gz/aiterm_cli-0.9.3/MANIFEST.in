@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include alterm_config.json
+recursive-include sounds *.wav *.mp3
