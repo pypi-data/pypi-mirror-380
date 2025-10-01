@@ -1,0 +1,24 @@
+THIS-737 Add Property model (#1301)
+
+# Description
+
+Context: We are changing the internal structure of the neat data models.
+We are replacing flat conceptual data model structure with nested for
+easier manipulation of data model as well conversion of conceptual data
+model to DMS API representation. Also, we are dropping "unverified"
+state of data model, resulting in more simple data model representation.
+
+In this PR we are defining conceptual data model Property model.
+
+Note: most of the code is test and docstring
+
+## Bump
+
+- [X] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Added
+
+- Property (conceptual) pydantic model
