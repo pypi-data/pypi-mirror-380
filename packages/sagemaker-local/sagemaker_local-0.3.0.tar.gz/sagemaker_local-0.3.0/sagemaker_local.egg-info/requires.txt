@@ -1,0 +1,11 @@
+click
+pyawscron
+pydantic
+pydantic-settings
+sagemaker[local]
+setuptools
+toml
+typing_extensions
+
+[local]
+pre-commit
