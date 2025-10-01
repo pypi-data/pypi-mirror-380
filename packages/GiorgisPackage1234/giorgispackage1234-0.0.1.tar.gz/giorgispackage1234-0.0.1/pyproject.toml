@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GiorgisPackage1234"            
+version = "0.0.1"
+description = "Tiny package with Base class"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name="GiorgiKekelidze", email="giorgi.kekelidze.3@iliauni.edu.ge"}]
+license = {text = "MIT"}
