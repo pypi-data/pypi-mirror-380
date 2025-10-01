@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: modchem
+Version: 0.0.4
+Summary: Library for registration chemistry experiment
+Keywords: science,chem,chemistry
+Author: Modestra kirillkarachev04@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: Events (>=0.5)
+Requires-Dist: argpars (>=1.4.0)
+Requires-Dist: requests (>=2.32.5)
+Description-Content-Type: text/markdown
+
+Modchem
+
+Library for Chemistry experiment
+
+Load a project:
+
+```python
+pip install modchem
+
+chem-init <project_name>
+```
