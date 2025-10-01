@@ -1,0 +1,6 @@
+livekit/plugins/openai_sse/__init__.py,sha256=BDQ4l66LPQYqhDg9VYBmPdWcm-_rMB4Y3OFviSBy_rY,1034
+livekit/plugins/openai_sse/tts.py,sha256=hRv-UU-HBkr89KEdlHQUrcveiF08Yg3t1YfMeGdb8B4,20576
+livekit/plugins/openai_sse/version.py,sha256=R4UROQyskLFT4oUDiT1hD_qpN45IQvClGvXP0lOwekg,76
+livekit_plugins_openai_sse-0.1.0.dist-info/METADATA,sha256=OJEIc66UYjAWffNgEqyQfaUIsgM0AowBYe7XJrd6DYs,1853
+livekit_plugins_openai_sse-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_openai_sse-0.1.0.dist-info/RECORD,,
