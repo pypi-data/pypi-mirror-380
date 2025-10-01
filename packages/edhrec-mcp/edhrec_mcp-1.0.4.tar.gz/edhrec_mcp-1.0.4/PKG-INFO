@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: edhrec-mcp
+Version: 1.0.4
+Summary: A Model Context Protocol (MCP) server providing tools to obtain information from edhrec.com using LLMs
+Project-URL: Repository, https://github.com/elliotchun/edhrec-mcp
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.15.0
+Requires-Dist: pyedhrec==0.0.2
+
+# edhrec-mcp
+
+A Model Context Protocol (MCP) server providing tools to obtain information from edhrec.com using LLMs.

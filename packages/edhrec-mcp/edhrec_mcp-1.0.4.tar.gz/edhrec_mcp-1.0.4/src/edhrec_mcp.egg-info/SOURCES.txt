@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/api_provider.py
+src/main.py
+src/parser.py
+src/server.py
+src/edhrec_mcp.egg-info/PKG-INFO
+src/edhrec_mcp.egg-info/SOURCES.txt
+src/edhrec_mcp.egg-info/dependency_links.txt
+src/edhrec_mcp.egg-info/entry_points.txt
+src/edhrec_mcp.egg-info/requires.txt
+src/edhrec_mcp.egg-info/top_level.txt
