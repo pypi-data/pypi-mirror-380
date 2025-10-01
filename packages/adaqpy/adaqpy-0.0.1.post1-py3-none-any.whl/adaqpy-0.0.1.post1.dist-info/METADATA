@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: adaqpy
+Version: 0.0.1.post1
+Summary: adaqpy package
+Author: AVALDATA
+License: 3-Clause BSD License
+Project-URL: Homepage, https://faq-avaldata.dga.jp/faq_list.html?category=35
+Keywords: AVALDATA,adaqpy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
