@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanomqtt"
+version = "0.1.0"
+description = "A lightweight wrapper around Paho MQTT client"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  { name="NanoSievert", email="no@dontcontactme.com" }
+]
+dependencies = [
+  "paho-mqtt>=2.0.0"
+]
+requires-python = ">=3.8"
