@@ -1,0 +1,1 @@
+import{g as a}from"./DgqPUcrR.js";import{r as o}from"./OkSu_lmj.js";import{t as i}from"./CRpwIFV_.js";const l=(r,t)=>[...i(r,t.tracks),"divider",{action:()=>a(o("/artist/[artist]",{artist:t.artists[0].uri})),icon:"artist",label:"Go to artist"},{action:()=>a(o("/album/[album]",{album:t.uri})),icon:"album",label:"Go to album"}];export{l as a};
