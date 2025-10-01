@@ -1,0 +1,11 @@
+oppm/__init__.py,sha256=LY4Z8-bk0VwrIIdUBQjQDaab7tQqmuipN3BCFpmTGrE,489
+oppm/cli.py,sha256=-5vfsK-BrKQ4auj1zxHLMthMkfzJXjaO78O3U6vxDBs,4562
+oppm/commands.py,sha256=NfBfycbhc9Tzc2NJHkOFaXZTBDTCGT5dB7bFsV6g8C4,12140
+oppm/config.py,sha256=lOpvtUFIjcqJh9oqUnzBqEqjv4qgwqu9a4ppWPRR4u4,3195
+oppm/exceptions.py,sha256=aPvuc6KlJCEeulEbVofTtOoOW_fBVvrAMVEG0sSe5kc,794
+oppm/metadata.py,sha256=KpMPgn30pE8wRxcaop7n9Kjhu1zTAjtYuswAwo6uyjM,2724
+oppm/shims.py,sha256=SeqmnhrnAUvlXCQ9figQ4LPfsjQ-FVzhqkH3yg6gEaQ,2511
+oppm-0.1.1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+oppm-0.1.1.dist-info/entry_points.txt,sha256=g70kirxb3qJQiQkq3V-PsKfoSluEcF5rYTju8qlA-RA,40
+oppm-0.1.1.dist-info/METADATA,sha256=Qm2e4TwxHXwI19vc4qg85f3y7_DXRvKgnEp_aJfsSGc,265
+oppm-0.1.1.dist-info/RECORD,,
