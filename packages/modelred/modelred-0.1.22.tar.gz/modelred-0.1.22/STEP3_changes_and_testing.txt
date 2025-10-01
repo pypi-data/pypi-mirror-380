@@ -1,0 +1,113 @@
+ModelRed Python SDK – Step 3 Summary and Testing Guide
+Date: 2025-09-26
+
+Per-file updates (with approach & standards)
+------------------------------------------
+1. src/modelred/http.py
+   • Added a close() helper on the synchronous transport so callers can cleanly dispose of requests.Session instances (aligns with requests best practices for connection pooling).
+   • Normalised optional dependency handling for aiohttp, providing fallback exception types to keep static analysis clean without imposing hard runtime dependencies.
+   • Approach: follow Python packaging norms for optional transports and explicit resource management; ensure retry/backoff behaviour mirrors industry-standard exponential backoff with jitter.
+
+2. src/modelred/resources/base.py (new)
+   • Introduced SyncAPIResource and AsyncAPIResource base classes to consolidate header merging and request execution.
+   • Approach: mirror Stripe/OpenAI SDK patterns where resource clients share a thin base abstraction to reduce duplication while remaining easily testable.
+
+3. src/modelred/resources/models.py
+   • Extended the module with sync/async ModelsClient classes that wrap CRUD endpoints, reuse shared request helpers, and return typed dataclasses.
+   • Added graceful fallback lookup for model identifiers (DB id vs. slug) matching existing behaviour.
+   • Approach: expose minimal, composable service objects similar to modern SDKs (Stripe v3, OpenAI 1.x) to keep the public surface explicit and mock-friendly.
+
+4. src/modelred/resources/assessments.py
+   • Added synchronous and asynchronous clients with wait_for_completion helpers, mapping payloads into typed dataclasses.
+   • Enforced consistent timeout/polling semantics and progress callbacks while preserving server-driven statuses.
+   • Approach: emulate long-running job polling conventions used by AWS/Azure SDKs (configurable poll interval, deadline, callback hook).
+
+5. src/modelred/resources/probes.py
+   • Introduced ProbeIndex dataclass and sync/async clients for listing probes with server-side filters.
+   • Approach: normalise server payloads into typed structures, following API-first SDK style and enabling typed completion in downstream callers.
+
+6. src/modelred/resources/__init__.py
+   • Re-exported dataclasses, parser helpers, and new clients so consumers can import from modelred.resources.* without deep paths.
+   • Approach: maintain a stable, discoverable namespace akin to requests.models / boto3.resources packages.
+
+7. src/modelred/client.py (new entrypoints)
+   • Added ModelRedClient and AsyncModelRedClient that compose transports, authentication headers, and the resource clients from above.
+   • Surface helper accessors (models, assessments, probes) while centralising API key validation and User-Agent construction.
+   • Approach: adopt the “composition over inheritance” pattern seen in contemporary SDKs (OpenAI, Slack) to enable dependency injection and future test harnesses.
+
+8. src/modelred/config.py
+   • Ensured SDKSettings loader honours environment overrides with sanitisation, matching Twelve-Factor App guidelines.
+
+Industry-standard principles applied
+-----------------------------------
+• Dependency injection for transports to support custom sessions and testing.
+• Explicit dataclasses for API payloads to provide type safety and clarity.
+• Exponential backoff with jitter to avoid thundering herds (per AWS architecture guidance).
+• Separation of concerns: authentication, transport, resources, and high-level clients remain modular.
+
+Developer testing instructions
+------------------------------
+A. Frontend (Generate API key via UI)
+   1. cd frontend-better
+   2. pnpm install
+   3. pnpm run dev
+   4. Open http://localhost:3000, sign in with a test account, and navigate to Settings → API Keys.
+   5. Create a new API key; copy it securely (keys are only shown once). This key will be used for SDK testing. Confirm that key management remains UI-only; the SDK intentionally has no key creation helpers.
+
+B. Backend (if you need a local API for end-to-end testing)
+   1. cd backend
+   2. uv sync (or pip install -e .) to install dependencies.
+   3. uv run uvicorn main:app --reload --port 8000
+   4. Populate any required environment variables (DB, queues) per backend/README.md. If the Go or TS backends are preferred, follow their README equivalents instead.
+
+C. Python SDK smoke tests
+   1. cd packages/python
+   2. python -m venv .venv && .venv\Scripts\activate (Windows) or source .venv/bin/activate (POSIX).
+   3. pip install -e .  # installs the SDK locally
+   4. export MODELRED_API_KEY="mr_..." (PowerShell: setx MODELRED_API_KEY "mr_..." and restart shell) or pass the key directly when instantiating clients.
+   5. Run a quick probe listing:
+        python - <<'PY'
+        from modelred.client import ModelRedClient
+        client = ModelRedClient()
+        probes = client.probes.list(tier="free")
+        print(f"Loaded {len(probes.probes)} probes")
+        client.close()
+        PY
+   6. Exercise the async client:
+        python - <<'PY'
+        import asyncio
+        from modelred.client import AsyncModelRedClient
+
+        async def main():
+            async with AsyncModelRedClient() as client:
+                models = await client.models.list()
+                print(f"Loaded {len(models)} models")
+        asyncio.run(main())
+        PY
+
+D. Assessment workflow check (optional)
+   1. Use the synchronous client to kick off an assessment and poll until completion:
+        python - <<'PY'
+        from modelred.client import ModelRedClient
+        from modelred.resources.assessments import AssessmentPriority
+
+        client = ModelRedClient()
+        assessment = client.assessments.create(
+            model="your-model-slug",
+            test_types=["jailbreak"],
+            priority=AssessmentPriority.NORMAL,
+        )
+        final = client.assessments.wait_for_completion(assessment.id, poll_interval=10, timeout_seconds=1800)
+        print("Final status:", final.status.value)
+        client.close()
+        PY
+
+E. Legacy compatibility spot-check
+   1. Run python -m compileall packages/python/src/modelred (already executed, but rerun if modifications continue).
+   2. (Future) Update or add unit tests to cover the new clients; pytest scaffolding can live under packages/python/tests/.
+
+Notes
+-----
+• Always obtain API keys through the dashboard UI; never embed creation logic in scripts.
+• When running long-lived async sessions, use `async with AsyncModelRedClient()` to guarantee transport cleanup.
+• Consider configuring retries/timeouts via environment variables (MODELRED_TIMEOUT, MODELRED_MAX_RETRIES) before integration tests to simulate various network behaviours.
