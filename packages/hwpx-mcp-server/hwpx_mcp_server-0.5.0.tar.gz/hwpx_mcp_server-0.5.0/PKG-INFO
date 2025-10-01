@@ -1,0 +1,168 @@
+Metadata-Version: 2.4
+Name: hwpx-mcp-server
+Version: 0.5.0
+Summary: Model Context Protocol server for local HWPX document automation.
+Author: Kohkyuhyun
+License: MIT License
+        
+        Copyright (c) 2025 HWPX MCP Server
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-hwpx>=1.9
+Requires-Dist: pydantic>=2.7
+Requires-Dist: anyio>=4.0
+Requires-Dist: mcp>=1.14.1
+Requires-Dist: modelcontextprotocol>=0.1.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.0; extra == "test"
+Dynamic: license-file
+
+# 한글 MCP (HWPX) 서버 - 한글 자동화 HWPX 문서 자동 생성·편집·검증mcp #
+
+이 프로젝트는 **한글 MCP(HWPX) 서버**로, HWPX 문서를 한글 워드프로세서 없이 직접 열고 자동화할 수 있도록 설계되었습니다.  
+Gemini CLI, Claude Desktop과 같은 MCP 클라이언트에 연결하여 문서 생성·편집·탐색 기능을 제공합니다.
+
+[](https://www.google.com/search?q=https://pypi.org/project/hwpx-mcp-server/)
+[](https://opensource.org/licenses/MIT)
+[](https://www.google.com/search?q=https://github.com/your-repo/hwpx-mcp-server/actions/workflows/ci.yml)
+
+**순수 파이썬으로 HWPX 문서를 자유롭게 다루는 가장 강력한 방법.**
+
+
+`hwpx-mcp-server`는 [Model Context Protocol](https://github.com/modelcontextprotocol/specification) 표준을 따르는 서버로, 강력한 [`python-hwpx`](https://www.google.com/search?q=%5Bhttps://github.com/airmang/python-hwpx%5D\(https://github.com/airmang/python-hwpx\)) 라이브러리를 기반으로 합니다. Gemini, Claude와 같은 최신 AI 클라이언트와 완벽하게 연동하여 한글 워드 프로세서 로컬 HWPX 문서를 열람, 검색, 편집, 저장하는 풍부한 기능을 제공합니다.
+
+-----
+
+## ✨ 주요 기능
+
+  * **✅ 표준 MCP 서버 구현**: 공식 `mcp` SDK를 사용하여 안정적인 표준 입/출력 기반 서버를 제공합니다.
+  * **📂 제로 설정**: 별도 설정 없이 현재 작업 디렉터리를 기준으로 즉시 경로를 처리합니다.
+  * **📄 강력한 문서 편집**: 텍스트 추출, 페이지네이션부터 스타일, 표, 메모, 개체 편집까지 모두 가능합니다.
+  * **🛡️ 안전한 저장**: 자동 백업(`*.bak`) 옵션으로 예기치 않은 데이터 손실을 방지합니다.
+  * **🚀 즉시 실행**: `uv`만 있으면 `uvx hwpx-mcp-server` 한 줄로 바로 시작할 수 있습니다.
+
+## 🚀 빠른 시작
+
+### 1\. `uv` 설치
+
+가장 먼저 파이썬 패키지 설치 도구인 `uv`를 설치하세요.
+[👉 Astral uv 설치 가이드](https://docs.astral.sh/uv/getting-started/installation/)
+
+
+### 2\. MCP 클라이언트 설정
+
+#### 방법 1: 로컬 설치 (uvx 사용)
+
+사용 중인 MCP 클라이언트 설정에 아래와 같이 서버 정보를 추가하세요.
+
+```json
+{
+  "mcpServers": {
+    "hwpx": {
+      "command": "uvx",
+      "args": ["hwpx-mcp-server"],
+      "env": {
+        "HWPX_MCP_PAGING_PARA_LIMIT": "200",
+        "HWPX_MCP_AUTOBACKUP": "1",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}
+```
+
+터미널에서 직접 실행:
+```bash
+uvx hwpx-mcp-server
+```
+
+> `uvx` 명령은 첫 실행 시 필요한 종속성을 자동으로 설치하며, 반드시 `python-hwpx 1.9` 이상의 버전이 준비되어야 합니다.
+
+#### 방법 2: HTTP 스토리지 모드
+
+원격 문서 서버와 연동하려면 HTTP 백엔드 설정을 추가하세요.
+
+```json
+{
+  "mcpServers": {
+    "hwpx-http": {
+      "command": "uvx",
+      "args": ["hwpx-mcp-server"],
+      "env": {
+        "HWPX_STORAGE_BACKEND": "http",
+        "HWPX_HTTP_BASE_URL": "https://your-server.com/documents",
+        "HWPX_MCP_PAGING_PARA_LIMIT": "200",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}
+```
+
+> HTTP 모드에서는 `uri` 필드를 사용하여 원격 문서를 지정할 수 있습니다.
+> 서버는 실행된 현재 디렉터리를 기준으로 경로를 해석하므로, 별도의 작업 디렉터리 설정 없이 바로 사용할 수 있습니다.
+
+## ⚙️ 환경 변수
+
+| 변수 | 설명 | 기본값 |
+| --- | --- | --- |
+| `HWPX_MCP_PAGING_PARA_LIMIT` | 페이지네이션 최대 문단 수 | `200` |
+| `HWPX_MCP_AUTOBACKUP` | 저장 전 `.bak` 백업 생성 (`1`/`0`) | `0` |
+| `LOG_LEVEL` | 로그 레벨 (INFO/DEBUG 등) | `INFO` |
+| `HWPX_MCP_HARDENING` | 하드닝 파이프라인 활성화 (`1`/`0`) | `0` |
+| `HWPX_STORAGE_BACKEND` | 스토리지 백엔드 (`local`/`http`) | `local` |
+| `HWPX_HTTP_BASE_URL` | HTTP 모드 시 베이스 URL | - |
+
+## 🛠️ 제공 도구
+
+다양한 문서 편집 및 관리 도구를 제공합니다. 주요 도구는 다음과 같습니다:
+
+- **문서 조회**: `open_info`, `read_text`, `read_paragraphs`, `find`
+- **문서 편집**: `replace_text_in_runs`, `add_paragraph`, `add_table`, `set_table_cell_text`
+- **스타일 관리**: `ensure_run_style`, `apply_style_to_text_ranges`
+- **파일 저장**: `save`, `save_as`, `make_blank`
+- **하드닝 모드** *(HWPX_MCP_HARDENING=1)*: `hwpx.plan_edit`, `hwpx.preview_edit`, `hwpx.apply_edit`, `hwpx.search`, `hwpx.get_context`
+
+> 📖 전체 도구 목록과 상세 파라미터는 `ListTools` 응답의 JSON 스키마를 참고하세요.
+
+## 🧪 테스트
+
+```bash
+python -m pip install -e .[test]
+python -m pytest
+```
+
+## 🧑‍💻 개발 참고
+
+- `python-hwpx>=1.9`, `mcp`, `pydantic` 등 순수 파이썬으로 구성
+- 모든 편집 작업은 `dryRun` 플래그 지원
+- 자동 백업(`.bak`) 옵션으로 데이터 보호
+- JSON 스키마는 draft-07 호환 형태로 제공
+
+## 📜 라이선스
+
+이 프로젝트는 [MIT 라이선스](https://www.google.com/search?q=LICENSE)로 배포됩니다. 자세한 내용은 라이선스 파일을 확인하세요.
+
+## 이메일
+
+광교고등학교 교사 고규현 : kokyuhyun@hotmail.com
