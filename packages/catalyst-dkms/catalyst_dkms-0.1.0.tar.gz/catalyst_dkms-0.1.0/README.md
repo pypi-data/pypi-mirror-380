@@ -1,0 +1,290 @@
+# Catalyst DKMS
+
+[![CI](https://github.com/ericmedlock/Catalyst_DKMS/actions/workflows/ci.yml/badge.svg)](https://github.com/ericmedlock/Catalyst_DKMS/actions/workflows/ci.yml)
+
+Domain Knowledge Management System (DKMS) - A production-quality preprocessing toolset for heterogeneous text ingestion, analysis, and storage with PostgreSQL + pgvector.
+
+## Overview
+
+DKMS is a CLI-first tool designed to:
+- Ingest heterogeneous text files (txt, json, jsonl)
+- Perform minimal analysis and domain classification
+- Scrub PII (Privacy Information Identifier) data
+- Generate embeddings for semantic search
+- Store processed documents in PostgreSQL with pgvector
+- Support graceful shutdown and resumable runs
+- Provide structured logging and metrics
+
+## Features
+
+- **Format Detection**: Automatic detection of txt, json, and jsonl formats
+- **PII Scrubbing**: Pattern-based detection and redaction of emails and phone numbers
+- **Embeddings**: Deterministic pseudo-random embedding generation (384-dim vectors)
+- **Classification**: Multi-level classification (domain, category, subcategory)
+- **Deduplication**: Content-hash based duplicate detection
+- **Resumable Runs**: Checkpoint-based recovery from interruptions
+- **Structured Logging**: JSON-formatted logs to stdout
+- **Docker Support**: Fully containerized development environment
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.11+
+- Docker and Docker Compose
+- Make (optional, for convenience)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ericmedlock/Catalyst_DKMS.git
+cd Catalyst_DKMS
+```
+
+2. Set up development environment:
+```bash
+make dev
+source venv/bin/activate
+```
+
+3. Start the database:
+```bash
+make db-up
+```
+
+4. Run migrations:
+```bash
+make migrate
+```
+
+### Basic Usage
+
+Ingest documents from a directory:
+```bash
+python -m src.dkms.cli ingest --input ./unit_test/fixtures --safe true
+```
+
+View statistics:
+```bash
+python -m src.dkms.cli stats
+```
+
+Resume from checkpoint:
+```bash
+python -m src.dkms.cli resume
+```
+
+### Docker Usage
+
+Start all services:
+```bash
+docker-compose up -d
+```
+
+Run ingestion in container:
+```bash
+docker-compose exec app python -m src.dkms.cli ingest --input ./unit_test/fixtures --safe true
+```
+
+## Configuration
+
+Configuration follows precedence: **CLI flags > Environment variables > YAML file**
+
+Default configuration is in `configs/dkms.yaml`. Override via environment variables:
+
+```bash
+export DKMS_DB_URL="postgresql://user:pass@localhost:5432/dkms"
+export DKMS_INGEST_BATCH_SIZE=128
+export DKMS_INGEST_SAFE_MODE=true
+```
+
+### Configuration Reference
+
+```yaml
+database:
+  url: "postgresql://dkms:dkms@localhost:5432/dkms"
+  pool_size: 5
+  max_overflow: 10
+
+ingest:
+  batch_size: 64
+  safe_mode: true
+  supported_extensions:
+    - ".txt"
+    - ".json"
+    - ".jsonl"
+
+resources:
+  min_threads: 1
+  max_threads: 4
+
+embeddings:
+  provider: "local"
+  dimension: 384
+
+classification:
+  provider: "local"
+  levels:
+    - "domain"
+    - "category"
+    - "subcategory"
+
+pii:
+  enabled: true
+  patterns:
+    - "email"
+    - "phone"
+```
+
+## Data Model
+
+### Tables
+
+- **documents**: Core document metadata and content
+- **doc_embeddings**: Vector embeddings (pgvector)
+- **doc_labels**: Multi-level classification labels
+- **runs**: Execution tracking
+- **checkpoints**: Resume state
+
+### Key Features
+
+- Content-hash based deduplication
+- IVFFlat vector index for efficient similarity search
+- JSONB fields for flexible metadata storage
+
+## Development
+
+### Running Tests
+
+```bash
+make test
+```
+
+### Linting and Type Checking
+
+```bash
+make lint        # Check code style
+make format      # Auto-format code
+make type-check  # Run MyPy
+```
+
+### Database Migrations
+
+Create a new migration:
+```bash
+alembic revision --autogenerate -m "description"
+```
+
+Apply migrations:
+```bash
+alembic upgrade head
+```
+
+Rollback:
+```bash
+alembic downgrade -1
+```
+
+## Architecture
+
+### Component Overview
+
+- **cli.py**: Click-based command-line interface
+- **config.py**: Pydantic-based configuration management
+- **ingest.py**: Main ingestion logic with signal handling
+- **io_detect.py**: File format detection
+- **pii.py**: PII scrubbing (regex-based stub)
+- **embeddings.py**: Embedding provider interface
+- **classify.py**: Classification provider interface
+- **db.py**: Database session management
+- **models.py**: SQLAlchemy ORM models
+- **resources.py**: Resource monitoring
+- **util.py**: Utility functions and logging
+
+### Signal Handling
+
+DKMS handles SIGINT (Ctrl-C) and SIGTERM gracefully:
+1. Finishes processing current file
+2. Writes checkpoint
+3. Updates run status
+4. Exits cleanly
+
+Resume from checkpoint with:
+```bash
+python -m src.dkms.cli resume
+```
+
+## Testing
+
+The test suite includes:
+
+- **test_io_detect.py**: Format detection tests
+- **test_models.py**: Database model tests
+- **test_ingest.py**: End-to-end ingestion tests
+
+Run with coverage:
+```bash
+pytest --cov=src.dkms --cov-report=html
+```
+
+## CI/CD
+
+GitHub Actions workflow runs on every push and PR:
+1. Linting (Ruff)
+2. Format check (Black)
+3. Type checking (MyPy)
+4. Unit tests (pytest)
+5. Integration tests with PostgreSQL + pgvector
+
+## Troubleshooting
+
+### Database Connection Issues
+
+Ensure PostgreSQL is running and accessible:
+```bash
+docker-compose ps
+PGPASSWORD=dkms psql -h localhost -U dkms -d dkms -c "SELECT version();"
+```
+
+### Migration Errors
+
+Reset database (development only):
+```bash
+docker-compose down -v
+docker-compose up -d db
+make migrate
+```
+
+### Import Errors
+
+Ensure PYTHONPATH is set:
+```bash
+export PYTHONPATH=/path/to/Catalyst_DKMS
+```
+
+## License
+
+MIT License - See LICENSE file for details
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes with tests
+4. Run linting and tests
+5. Submit a pull request
+
+## Future Enhancements
+
+- [ ] Production embedding providers (OpenAI, Cohere, etc.)
+- [ ] Advanced PII detection (NER-based)
+- [ ] ML-based classification models
+- [ ] Streaming ingestion for large files
+- [ ] Web UI for monitoring
+- [ ] Multi-tenant support
+- [ ] Advanced vector search capabilities
+
+## Contact
+
+For questions or issues, please open a GitHub issue.

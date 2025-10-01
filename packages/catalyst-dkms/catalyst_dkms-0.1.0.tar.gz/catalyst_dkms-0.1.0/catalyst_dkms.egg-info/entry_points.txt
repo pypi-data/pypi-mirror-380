@@ -1,0 +1,2 @@
+[console_scripts]
+dkms = src.dkms.cli:cli
