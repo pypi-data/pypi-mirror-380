@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: typing_speed_test
+Version: 0.1
+Summary: A simple typing speed test game.
+Author: Doaa
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+# Typing Speed Test
+
+A simple typing speed test game in Python.
+
+## How to use
+
+Run the game:

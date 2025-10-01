@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+typing_speed_test.egg-info/PKG-INFO
+typing_speed_test.egg-info/SOURCES.txt
+typing_speed_test.egg-info/dependency_links.txt
+typing_speed_test.egg-info/entry_points.txt
+typing_speed_test.egg-info/top_level.txt
