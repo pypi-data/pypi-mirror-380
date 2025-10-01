@@ -1,0 +1,10 @@
+desmos_studio/__init__.py,sha256=3yv6CCHYUZmRY97yE7LioeGJRxOI5pRyFvB-9PSQuJA,222
+desmos_studio/cli.py,sha256=TjzgiewWOifyxT3rvCCY-tQlOXbXU0neU2BkL5qW9Iw,24381
+desmos_studio-1.2.3.dist-info/licenses/LICENSE,sha256=6KinBiUGev-ZISWAT8gDQc0zpwA1s2YPqZWl28aGgVg,1070
+tests/__init__.py,sha256=8SrL-xibGvb3S0oq6-WzGGT_v_RmhAoG0j5z-I8DZio,29
+tests/test_cli.py,sha256=l5_vNxZ_xQLUEuyCPdRRMUNqInQgQjEu_wldFJ0VLIc,667
+desmos_studio-1.2.3.dist-info/METADATA,sha256=mu7cVCBH5JO7dbykobL4eiJI9aB_3qcCq9NNHixL2U0,9778
+desmos_studio-1.2.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+desmos_studio-1.2.3.dist-info/entry_points.txt,sha256=ye5_nMZk2BvcbO9Pz8sLHFP1auKjSqZyozunhvS-KCg,57
+desmos_studio-1.2.3.dist-info/top_level.txt,sha256=rm6Tmfu_LAbC3dPPSXQlqu20kYFe-q5WjJUKch4Pr5c,20
+desmos_studio-1.2.3.dist-info/RECORD,,
