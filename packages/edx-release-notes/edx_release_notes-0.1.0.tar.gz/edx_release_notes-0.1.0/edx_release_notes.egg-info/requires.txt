@@ -1,0 +1,3 @@
+Django
+django-model-utils
+openedx-atlas
