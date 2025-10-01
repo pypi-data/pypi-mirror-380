@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: odm-hlp-oracle
+Version: 1.0.0
+Summary: Oracle database helper functions and utilities for ETL operations
+License-Expression: MIT
+License-File: LICENSE
+Keywords: oracle,database,etl,sql,utilities
+Author: Marc Monteys
+Author-email: marcmonteys@gmail.com
+Requires-Python: >=3.8
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: odm-hlp-decorations (>=1.0.1)
+Requires-Dist: oracledb (>=3.3.0)
+Requires-Dist: python-dotenv (>=1.0.0)
+Requires-Dist: sqlalchemy (>=2.0.0)
+Project-URL: Homepage, https://github.com/your-username/odm-hlp-oracle
+Project-URL: Issues, https://github.com/your-username/odm-hlp-oracle/issues
+Project-URL: Repository, https://github.com/your-username/odm-hlp-oracle
+Description-Content-Type: text/markdown
+
+# ODM Oracle Helper
+
+Oracle database utilities for ETL operations with decorators.
+
+## Installation
+
+```bash
+pip install odm-hlp-oracle
+```
+
+## Usage
+
+```python
+from odm_hlp_oracle import get_engine, load, call_procedure
+
+# Get Oracle engine
+engine = get_engine('dev', 'stg')
+
+# Load data to table
+load(engine, dataframe, 'table_name', dtype_dict)
+
+# Call stored procedure
+result = call_procedure(engine, 'procedure_name', [param1, param2])
+```
+
+## Requirements
+
+- Python 3.8+
+- oracledb
+- sqlalchemy  
+- odm-hlp-decorations
+
+## Configuration
+
+Create a `.env` file with Oracle connection parameters:
+```
+dev_odm_tns=localhost:1521/XEPDB1
+odm_usr_stg=username
+odm_pass_stg=password
+logs_path=./logs/
+```
+
+## License
+
+MIT
