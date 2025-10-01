@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: quant-greeks-cli
+Version: 1.0.0
+Summary: A CLI tool to calculate Black-Scholes Greeks for options pricing.
+Author: Patience Fuglo
+Requires-Python: >=3.7
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
