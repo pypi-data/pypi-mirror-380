@@ -1,0 +1,14 @@
+tacozip/__init__.py,sha256=GFFTfYZGpgjPA1mG4WkykFd21JrWf_8cMCwLpYsu4ps,1251
+tacozip/bindings.py,sha256=yZNYiod3WNSyqOEhLRrpEJgNbfDXFSvoba8BltjSERY,10370
+tacozip/config.py,sha256=T3yvys_YCKhCv2AKvP25mr0F9jUM0Z1Dt2lPHOSAvdg,1194
+tacozip/exceptions.py,sha256=FcPelvjBzbPyFb8WdB75meeyX77hSjnuca36tFy9OXY,706
+tacozip/loader.py,sha256=QvxWKJB2SFEOUGNjsWe4D_3kyLE2cpsxTpgSwOGOIA4,2038
+tacozip/tacozip.dll,sha256=xlQxbZO7K1gfHOqE8fFJt7Z5wKQj2AOhzLtIBne4HXI,96275
+tacozip/version.py,sha256=hUXL7lIkxvOQDaKQaaNOOMNI73HOEnmAY-XJR5cc0LY,659
+tacozip/zip.dll,sha256=G1RYYOAD3QEocTC4nZDr2Kk2mxnA30bvWGCEucTV86I,105984
+tacozip/zlib1.dll,sha256=52yfs9GH2Go2kITLor1fdr8XW6AKaXjqRaY3baI_GuI,90112
+tacozip-0.10.2.dist-info/METADATA,sha256=RKNpOHiDCBQnB6OBsB71y7fYmAsLNdID16TKsTwWys4,2493
+tacozip-0.10.2.dist-info/WHEEL,sha256=XkFE14KmFh7mutkkb-qn_ueuH2lwfT8rLdfc5xpQ7wE,99
+tacozip-0.10.2.dist-info/entry_points.txt,sha256=XECyViX_ifeyJB5kPz-ODa3gq0yaaGEOqXdseJnmMz0,50
+tacozip-0.10.2.dist-info/top_level.txt,sha256=_jHrh4rWu6iYY1ZASQoyexsdsxgw0rbCGphu-yILgg4,8
+tacozip-0.10.2.dist-info/RECORD,,
