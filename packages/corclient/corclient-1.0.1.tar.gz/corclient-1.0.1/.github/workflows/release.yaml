@@ -1,0 +1,106 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - beta
+    paths:
+      - '**/*'
+      - '.github/workflows/release.yml'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    # Skip running release workflow on forks
+    if: github.repository_owner == 'ProjectCORTeam'
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine ruff black mypy types-requests
+
+      - name: Run linting (Ruff)
+        run: |
+          ruff check corecli/
+
+      - name: Check code formatting (Black)
+        run: |
+          black --check corecli/
+
+      - name: Run type checking (MyPy)
+        run: |
+          mypy corecli/
+
+      - name: Verify package can be built
+        run: |
+          python -m build
+          twine check dist/*
+
+      - name: Clean build artifacts
+        run: |
+          rm -rf dist/ build/ *.egg-info
+
+      - name: Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+        with:
+          branches: |
+            [
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'master',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              }
+            ]
+          semantic_version: 18.0.0
+          extra_plugins: |
+            @semantic-release/changelog@6.0.0
+            @semantic-release/git@10.0.0
+            conventional-changelog-conventionalcommits@4.6.3
+
+      - name: Do something when a new release published
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          echo ${{ steps.semantic.outputs.new_release_version }}
+          echo ${{ steps.semantic.outputs.new_release_major_version }}
+          echo ${{ steps.semantic.outputs.new_release_minor_version }}
+          echo ${{ steps.semantic.outputs.new_release_patch_version }}
+
+      - name: Google Chat Notification
+        uses: nakamuraos/google-chat-notifications@v2.0.1
+        with:
+          title: Release
+          subtitle: ${{ steps.semantic.outputs.new_release_version }}
+          webhookUrl: ${{ secrets.GOOGLE_WEBHOOK }}
+          status: ${{ job.status }}
+        if: always()
+
+  # Publish to PyPI after creating release
+  publish-pypi:
+    name: Publish to PyPI
+    needs: release
+    if: needs.release.outputs.new_release_published == 'true'
+    uses: ./.github/workflows/pypi-release.yaml
+    secrets: inherit

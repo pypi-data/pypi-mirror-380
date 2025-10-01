@@ -1,0 +1,389 @@
+Metadata-Version: 2.4
+Name: corclient
+Version: 1.0.1
+Summary: Internal CLI tool for microservices management, infrastructure administration and monitoring with AWS Cognito authentication
+Author-email: Carlos Ferrer <cferrer@projectcor.com>
+Maintainer-email: Carlos Ferrer <cferrer@projectcor.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ProjectCORTeam/corcli
+Project-URL: Documentation, https://github.com/ProjectCORTeam/corcli#readme
+Project-URL: Repository, https://github.com/ProjectCORTeam/corcli.git
+Project-URL: Bug Tracker, https://github.com/ProjectCORTeam/corcli/issues
+Project-URL: Changelog, https://github.com/ProjectCORTeam/corcli/releases
+Keywords: cli,microservices,infrastructure,devops,monitoring,aws,internal-tools
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer>=0.12
+Requires-Dist: rich>=13
+Requires-Dist: flask>=2.3
+Requires-Dist: requests>=2.31
+Provides-Extra: dev
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: types-requests>=2.31.0; extra == "dev"
+Dynamic: license-file
+
+# CoreCLI
+
+[![PyPI version](https://img.shields.io/pypi/v/corclient.svg)](https://pypi.org/project/corclient/)
+[![Python versions](https://img.shields.io/pypi/pyversions/corclient.svg)](https://pypi.org/project/corclient/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Internal CLI tool for microservices management, infrastructure administration and monitoring with AWS Cognito authentication.
+
+## Features
+
+- 🔐 **AWS Cognito Authentication** - Secure authentication using PKCE (Proof Key for Code Exchange) flow
+- 🚀 **Microservices Management** - Interact with internal microservices infrastructure
+- 📊 **Basic Monitoring** - Monitor and manage microservices health
+- 🔄 **Token Management** - Automatic token refresh and session handling
+- 💻 **CLI-First Design** - Built with modern CLI best practices using Typer
+
+## Requirements
+
+- Python 3.9 or higher
+- AWS Cognito user pool configured with Hosted UI
+- Valid AWS Cognito credentials
+
+## Installation
+
+### Via pip (Recommended)
+
+```bash
+pip install corclient
+```
+
+### Via Homebrew (macOS/Linux)
+
+```bash
+# Add the tap
+brew tap ProjectCORTeam/corcli https://github.com/ProjectCORTeam/corcli.git
+
+# Install
+brew install corclient
+```
+
+To update:
+```bash
+brew update && brew upgrade corclient
+```
+
+### Development Installation
+
+```bash
+git clone https://github.com/ProjectCORTeam/corcli.git
+cd corcli
+pip install -e .
+```
+
+## Quick Start
+
+### 1. Login
+
+Authenticate with AWS Cognito using the Hosted UI:
+
+```bash
+cor login
+```
+
+This will:
+- Open your browser to the Cognito Hosted UI
+- Start a local callback server
+- Complete the PKCE flow
+- Store tokens securely
+
+#### Custom Redirect URI
+
+If you need to redirect to a custom app scheme:
+
+```bash
+cor login --app-redirect myapp://callback
+```
+
+### 2. Check Authentication Status
+
+View your current authentication details:
+
+```bash
+cor whoami
+```
+
+This displays:
+- User information from the ID token
+- Token expiration time
+- Active session details
+
+### 3. Refresh Tokens
+
+Manually refresh your access tokens:
+
+```bash
+cor refresh
+```
+
+The CLI automatically refreshes tokens when needed, but you can manually trigger a refresh if required.
+
+### 4. Logout
+
+Clear local session and revoke tokens:
+
+```bash
+cor logout
+```
+
+This will:
+- Revoke active tokens with Cognito
+- Clear local token storage
+- End your authentication session
+
+## Configuration
+
+CoreCLI requires the following environment variables or configuration:
+
+```bash
+# AWS Cognito Configuration
+COGNITO_DOMAIN=your-domain.auth.region.amazoncognito.com
+COGNITO_CLIENT_ID=your-client-id
+COGNITO_REDIRECT_URI=http://localhost:8080/callback
+```
+
+Configuration can be set via:
+- Environment variables
+- Configuration file (`.corecli/config`)
+- Command-line arguments
+
+## Usage Examples
+
+### Basic Authentication Flow
+
+```bash
+# Login to Cognito
+cor login
+
+# Check who is logged in
+cor whoami
+
+# When done, logout
+cor logout
+```
+
+### Using with Custom Applications
+
+```bash
+# Login and redirect to custom app
+cor login --app-redirect myapp://authenticated
+
+# The CLI will handle authentication and redirect to your app
+```
+
+## Command Reference
+
+| Command | Description | Options |
+|---------|-------------|---------|
+| `cor login` | Authenticate with Cognito | `--app-redirect, -r` - Custom redirect URI |
+| `cor whoami` | Show authenticated user info | None |
+| `cor refresh` | Refresh authentication tokens | None |
+| `cor logout` | End session and revoke tokens | None |
+
+## Development
+
+### Setup Development Environment
+
+```bash
+# Clone repository
+git clone https://github.com/ProjectCORTeam/corcli.git
+cd corcli
+
+# Install in development mode with dev dependencies
+pip install -e ".[dev]"
+
+# Install pre-commit hooks (optional but recommended)
+pip install pre-commit
+pre-commit install
+
+# Run the CLI
+cor --help
+```
+
+### Development Tools
+
+The project uses modern Python development tools:
+
+- **Ruff** - Fast Python linter (replaces flake8, isort, and more)
+- **Black** - Code formatter
+- **MyPy** - Static type checker
+- **Pre-commit** - Git hooks for automated checks
+
+### Running Checks Locally
+
+```bash
+# Run linting
+make lint
+
+# Fix linting issues automatically
+make lint-fix
+
+# Format code
+make format
+
+# Check formatting (without modifying)
+make format-check
+
+# Run type checking
+make type-check
+
+# Build and verify package
+make build
+
+# Run all checks
+make all
+
+# Clean build artifacts
+make clean
+```
+
+Or manually:
+
+```bash
+# Linting
+ruff check corecli/
+
+# Formatting
+black corecli/
+
+# Type checking
+mypy corecli/
+
+# Build
+python -m build
+twine check dist/*
+```
+
+### Project Structure
+
+```
+corecli/
+├── corecli/
+│   ├── __init__.py      # Package initialization
+│   ├── cli.py           # CLI commands and interface
+│   ├── auth.py          # Authentication logic
+│   ├── pkce.py          # PKCE flow implementation
+│   └── utils.py         # Utility functions
+├── pyproject.toml       # Project metadata
+├── setup.py             # Package setup
+└── README.md            # This file
+```
+
+## Security Considerations
+
+- **PKCE Flow**: Uses the industry-standard PKCE flow for secure OAuth 2.0 authentication
+- **Token Storage**: Tokens are stored securely in the local user directory
+- **Automatic Refresh**: Access tokens are automatically refreshed before expiration
+- **Session Management**: Proper logout flow revokes tokens server-side
+
+## Troubleshooting
+
+### Authentication Fails
+
+If authentication fails, check:
+1. Cognito domain and client ID are correct
+2. Redirect URI is whitelisted in Cognito
+3. User pool has Hosted UI enabled
+4. Network connectivity to Cognito endpoints
+
+### Token Refresh Issues
+
+If token refresh fails:
+1. Check that refresh token hasn't expired
+2. Verify Cognito client settings allow refresh tokens
+3. Try logging out and logging in again
+
+### Port Already in Use
+
+If the callback server can't start:
+```bash
+# The default port (8080) might be in use
+# Kill the process or configure a different port
+```
+
+## Contributing
+
+This is an internal tool for ProjectCOR Team. If you're a team member:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes and ensure they pass all checks:
+   ```bash
+   make lint
+   make format
+   make type-check
+   make build
+   ```
+4. Commit your changes using [Conventional Commits](https://www.conventionalcommits.org/):
+   ```bash
+   git commit -m 'feat: add amazing feature'
+   git commit -m 'fix: resolve authentication issue'
+   git commit -m 'docs: update README'
+   ```
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+### Quality Checks
+
+All pull requests must pass:
+- ✅ **Ruff linting** - Code quality and style checks
+- ✅ **Black formatting** - Consistent code formatting
+- ✅ **MyPy type checking** - Static type validation (warnings allowed)
+- ✅ **Package build** - Successful package creation
+- ✅ **Twine validation** - PyPI metadata verification
+
+These checks run automatically on every release.
+
+## Versioning
+
+We use [Semantic Versioning](https://semver.org/) via semantic-release. Versions are automatically generated based on commit messages following [Conventional Commits](https://www.conventionalcommits.org/).
+
+### Commit Message Format
+
+- `feat:` - New feature (minor version bump)
+- `fix:` - Bug fix (patch version bump)
+- `feat!:` or `BREAKING CHANGE:` - Breaking change (major version bump)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For internal support:
+- Report issues: [GitHub Issues](https://github.com/ProjectCORTeam/corcli/issues)
+- Documentation: [GitHub Wiki](https://github.com/ProjectCORTeam/corcli#readme)
+- Releases: [GitHub Releases](https://github.com/ProjectCORTeam/corcli/releases)
+
+## Authors
+
+- **Carlos Ferrer** - *Initial work* - [ProjectCOR Team](https://github.com/ProjectCORTeam)
+
+---
+
+Built with ❤️ by the ProjectCOR Team

@@ -1,0 +1,115 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["corecli"]
+
+[project]
+name = "corclient"
+dynamic = ["version"]
+description = "Internal CLI tool for microservices management, infrastructure administration and monitoring with AWS Cognito authentication"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Carlos Ferrer", email = "cferrer@projectcor.com" }
+]
+maintainers = [
+    { name = "Carlos Ferrer", email = "cferrer@projectcor.com" }
+]
+keywords = [
+    "cli",
+    "microservices",
+    "infrastructure",
+    "devops",
+    "monitoring",
+    "aws",
+    "internal-tools"
+]
+
+# Clasificadores para PyPI - define categorías, versiones Python, licencia, etc.
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Natural Language :: English",
+]
+
+# 👇 Array de strings, no dict
+dependencies = [
+    "typer>=0.12",
+    "rich>=13",
+    "flask>=2.3",
+    "requests>=2.31"
+]
+
+[project.urls]
+Homepage = "https://github.com/ProjectCORTeam/corcli"
+Documentation = "https://github.com/ProjectCORTeam/corcli#readme"
+Repository = "https://github.com/ProjectCORTeam/corcli.git"
+"Bug Tracker" = "https://github.com/ProjectCORTeam/corcli/issues"
+Changelog = "https://github.com/ProjectCORTeam/corcli/releases"
+
+[project.scripts]
+cor = "corecli.cli:app"
+
+[tool.setuptools_scm]
+# Configuración para versiones dinámicas desde Git tags
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+    "types-requests>=2.31.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by black)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["corecli"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+no_implicit_optional = false
