@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paraconsistent"       
+version = "0.1.0"
+description = "Blocos de lógica paraconsistente com engine stateless e API simples (sem grafo/DSL)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "MIT" }
+authors = [{ name = "Diego", email = "diegocruz200711@gmail.com" }]
+keywords = ["logic", "paraconsistent", "LPA2v", "reasoning", "fuzzy"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed"
+]
+
+dependencies = []  # biblioteca padrão apenas
+
+[project.urls]    
+Repository = "https://github.com/dirgogoo/Paraconsistent-Lib"   # idem
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mrn*"]
+
+[tool.setuptools.package-data]
+mrn = ["py.typed"]   # distribui o marcador de tipagem
+
+# Opcional: excluir exemplos do wheel
+[tool.setuptools.exclude-package-data]
+"mrn" = ["examples/*"]
