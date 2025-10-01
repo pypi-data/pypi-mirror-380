@@ -1,0 +1,19 @@
+# pixi environments
+.pixi
+*.egg-info
+assets/*
+.pytest_cache/
+__pycache__/
+htmlcov/
+.coverage
+hydesign/
+hydesignp/
+sandbox.py
+.vscode/
+test_pip_install/
+.mypy_cache
+*.pstats
+*.out
+src/costmodels/_version.py
+dist/
+.coverage.*

@@ -1,0 +1,85 @@
+stages:
+  - format
+  - test
+  - deploy
+
+.dev_ci_rules: &dev_ci_rules
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - when: never
+
+format:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: format
+  script:
+    - pixi global install git
+    - pixi run -e test pre-commit run --all-files
+  tags:
+    - linux
+  <<: *dev_ci_rules
+
+mypy:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: test
+  script:
+    - pixi global install git
+    - pixi run -e test mypy src/
+  tags:
+    - linux
+  <<: *dev_ci_rules
+
+test_linux:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: test
+  script:
+    - pixi global install git
+    - pixi run -e test pytest-cov
+  artifacts:
+    paths:
+      - ./htmlcov
+    when: always
+    expire_in: "2 days"
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  tags:
+    - linux
+  <<: *dev_ci_rules
+
+test_windows:
+  image: registry.windenergy.dtu.dk/dockerimages/windows-pixi:ltsc2019
+  stage: test
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    GIT_CLEAN_FLAGS: -ffdx -e .pixi/
+  script:
+    - pixi run -e test pytest
+  tags:
+    - docker-windows
+  <<: *dev_ci_rules
+
+test_pip_install:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: test
+  script:
+    - pixi global install git
+    - mkdir test_pip_install
+    - cd test_pip_install
+    - pixi init
+    - pixi add python==3.12 pip
+    - pixi run pip install -e ..[test]
+    - pixi run python -c "import costmodels"
+  tags:
+    - linux
+  <<: *dev_ci_rules
+
+pypi_deploy:
+  image: ghcr.io/prefix-dev/pixi:latest
+  stage: deploy
+  only:
+    - tags
+  script:
+    - pixi global install git
+    - pixi run -e build hatch build
+    - pixi run -e build hatch publish -y -u $TWINE_USERNAME -a $TWINE_PASSWORD
+  tags:
+  - linux
