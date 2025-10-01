@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+dualxda/__init__.py
+dualxda/dualda.py
+dualxda/utils.py
+dualxda.egg-info/PKG-INFO
+dualxda.egg-info/SOURCES.txt
+dualxda.egg-info/dependency_links.txt
+dualxda.egg-info/requires.txt
+dualxda.egg-info/top_level.txt

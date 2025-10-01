@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dualxda"
+version = "0.1.0"
+description = "A library for DualXDA: a state-of-the-art data attribution method for classification"
+authors = [{name="Galip Umit Yolcu", email="galip.uemit.yolcu@hhi.fraunhofer.de"}, {name="Moritz Weckbecker",email="moritz.weckbecker@hhi.fraunhofer.de"}]
+requires-python = ">=3.9"
+license = {text = "BSD-3-Clause-Clear"}
+dependencies = [
+    "torch",
+    "numpy",
+    "tqdm",
+    "torchvision",
+    "zennit",
+    "matplotlib",
+    "dualxda_skl"
+]
+
+[project.urls]
+License = "https://spdx.org/licenses/BSD-3-Clause-Clear.html"
+
+[tool.setuptools]
+packages = ["dualxda"] 
