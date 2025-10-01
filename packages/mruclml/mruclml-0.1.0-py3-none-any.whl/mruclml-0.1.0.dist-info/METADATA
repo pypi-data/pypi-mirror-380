@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mruclml
+Version: 0.1.0
+Summary: Print cool ASCII art in terminal with colors
+Author: mruclml
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+MRUCLML :)
