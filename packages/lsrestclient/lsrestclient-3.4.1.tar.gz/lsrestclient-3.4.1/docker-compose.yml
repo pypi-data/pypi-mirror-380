@@ -1,0 +1,11 @@
+services:
+  redis:
+    container_name: pytest-lsoft-redis
+    healthcheck:
+      interval: 1s
+      retries: 5
+      test: [ "CMD-SHELL","redis-cli ping | grep PONG" ]
+      timeout: 3s
+    image: redis:8.0.3
+    ports:
+      - "6379:6379"

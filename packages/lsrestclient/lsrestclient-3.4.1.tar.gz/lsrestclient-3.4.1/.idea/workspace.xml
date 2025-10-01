@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7eeeb2ea-207b-4944-89a1-a1b9e9eb78d0" name="Changes" comment="Bump version to 3.4.0 and update `fastapi-lsoft` to 1.2.0 in `pyproject.toml` and `poetry.lock`">
+      <change afterPath="$PROJECT_DIR$/.idea/ruff.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsrestclient/exceptions/ConnectionError.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsrestclient/exceptions/DownStreamError.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsrestclient/exceptions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsrestclient/exceptions/raise_errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lsrestclient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lsrestclient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/contexts/bearer_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/contexts/bearer_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/lsfastapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/lsfastapi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/mock.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/mock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lsrestclient/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/lsrestclient/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/fixtures/app_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/app_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/fixtures/docker_compose.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/docker_compose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_mock.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_mock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_response.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="cache" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SHOW_RECENT_BRANCHES" value="false" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;MERGED&quot;
+    },
+    {
+      &quot;state&quot;: &quot;OPENED&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/lsoft-oss/lsrestclient.git&quot;,
+    &quot;second&quot;: &quot;bcb3ed7e-94e4-4a02-b785-07e7bd9e4d50&quot;
+  }
+}</component>
+  <component name="GitLabServerManager">
+    <selected>-1</selected>
+    <servers />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="KubernetesSettings">
+    <option name="contextName" value="k12-test" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2T3iG2LW9Ntml0hAix3vuseNFYJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Black Formatter Integration": "Black",
+    "Notification.DoNotAsk-Black Formatter Integration": "true",
+    "Python tests.pytest for test_client.test_get.executor": "Run",
+    "Python tests.pytest for tests.test_cache.test_cache.executor": "Run",
+    "Python tests.pytest for tests.test_cache.test_cache_etag.executor": "Run",
+    "Python tests.pytest for tests.test_cache.test_cache_with_expire_after.executor": "Run",
+    "Python tests.pytest for tests.test_cache.test_cache_without_cache_control.executor": "Run",
+    "Python tests.pytest for tests.test_client.test_bearer_token.executor": "Run",
+    "Python tests.pytest for tests.test_client.test_full_url.executor": "Run",
+    "Python tests.pytest for tests.test_client.test_get.executor": "Run",
+    "Python tests.pytest for tests.test_client.test_headers.executor": "Run",
+    "Python tests.pytest for tests.test_client.test_ignore_bearer_token.executor": "Run",
+    "Python tests.pytest for tests.test_mock.test_fixture_unmock_single.executor": "Run",
+    "Python tests.pytest in test_auth.py.executor": "Run",
+    "Python tests.pytest in test_cache.py.executor": "Run",
+    "Python tests.pytest in test_client.py.executor": "Run",
+    "Python tests.pytest in test_mock.py.executor": "Run",
+    "Python tests.pytest in tests.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.scratch_16.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "data.grip.promo.notification.shown": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/mba/svnwork/lsoft-oss/lsrestclient/lsrestclient/exceptions/__init__.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.koxudaxi.ruff.RuffConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/test_app" />
+      <recent name="$PROJECT_DIR$/tests/fixtures" />
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in tests">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_mock.test_fixture_unmock_single" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="lsrestclient" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_mock.test_fixture_unmock_single&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_cache.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="lsrestclient" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_cache.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_client.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="lsrestclient" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_client.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_mock.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="lsrestclient" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_mock.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="lsrestclient" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in tests" />
+        <item itemvalue="Python tests.pytest in test_mock.py" />
+        <item itemvalue="Python tests.pytest in test_client.py" />
+        <item itemvalue="Python tests.pytest in test_cache.py" />
+        <item itemvalue="Python tests.pytest for tests.test_mock.test_fixture_unmock_single" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PY-252.26199.168" />
+        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7eeeb2ea-207b-4944-89a1-a1b9e9eb78d0" name="Changes" comment="" />
+      <created>1690278066477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690278066477</updated>
+      <workItem from="1690278068100" duration="267000" />
+      <workItem from="1690285600879" duration="11057000" />
+      <workItem from="1690354122234" duration="2111000" />
+      <workItem from="1690465024852" duration="4268000" />
+      <workItem from="1690534003899" duration="891000" />
+      <workItem from="1690534975988" duration="142000" />
+      <workItem from="1690546646806" duration="5178000" />
+      <workItem from="1690552918755" duration="350000" />
+      <workItem from="1690555225048" duration="1701000" />
+      <workItem from="1692710847299" duration="1472000" />
+      <workItem from="1692791924725" duration="2292000" />
+      <workItem from="1692794239867" duration="3360000" />
+      <workItem from="1694609285326" duration="703000" />
+      <workItem from="1696954851645" duration="8868000" />
+      <workItem from="1697008193398" duration="7649000" />
+      <workItem from="1697018527098" duration="679000" />
+      <workItem from="1697032037558" duration="609000" />
+      <workItem from="1697203226164" duration="1243000" />
+      <workItem from="1698934948556" duration="241000" />
+      <workItem from="1698935712073" duration="837000" />
+      <workItem from="1699095490897" duration="621000" />
+      <workItem from="1699258953830" duration="21000" />
+      <workItem from="1699516274716" duration="92000" />
+      <workItem from="1699524077155" duration="1935000" />
+      <workItem from="1699527367384" duration="38000" />
+      <workItem from="1699819702622" duration="1495000" />
+      <workItem from="1700576319678" duration="237000" />
+      <workItem from="1702022795647" duration="1343000" />
+      <workItem from="1712577615847" duration="3159000" />
+      <workItem from="1714030369744" duration="2333000" />
+      <workItem from="1714479850457" duration="1733000" />
+      <workItem from="1714482536053" duration="49000" />
+      <workItem from="1714631301613" duration="605000" />
+      <workItem from="1714633815400" duration="950000" />
+      <workItem from="1723100984070" duration="4408000" />
+      <workItem from="1723184959289" duration="660000" />
+      <workItem from="1723456584192" duration="174000" />
+      <workItem from="1743518538595" duration="1450000" />
+      <workItem from="1743574966026" duration="593000" />
+      <workItem from="1743592441536" duration="1874000" />
+      <workItem from="1743670587822" duration="472000" />
+      <workItem from="1744210189609" duration="1151000" />
+      <workItem from="1744266447961" duration="601000" />
+      <workItem from="1744270089498" duration="2398000" />
+      <workItem from="1744273096168" duration="596000" />
+      <workItem from="1744283664873" duration="628000" />
+      <workItem from="1744351792594" duration="599000" />
+      <workItem from="1744370068367" duration="614000" />
+      <workItem from="1744375624660" duration="75000" />
+      <workItem from="1744379032318" duration="173000" />
+      <workItem from="1744379231561" duration="40000" />
+      <workItem from="1745823895001" duration="6985000" />
+      <workItem from="1745841473438" duration="6766000" />
+      <workItem from="1746014472189" duration="175000" />
+      <workItem from="1753777097898" duration="2680000" />
+      <workItem from="1754484959493" duration="8111000" />
+      <workItem from="1754545869485" duration="26762000" />
+      <workItem from="1754633858269" duration="7345000" />
+      <workItem from="1754651113153" duration="1278000" />
+      <workItem from="1754652405121" duration="7188000" />
+      <workItem from="1754893111951" duration="4835000" />
+      <workItem from="1754910947885" duration="7805000" />
+      <workItem from="1754921821676" duration="3553000" />
+      <workItem from="1754979121154" duration="14205000" />
+      <workItem from="1754999316897" duration="4874000" />
+      <workItem from="1755066091642" duration="199000" />
+      <workItem from="1759300805842" duration="6999000" />
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <option name="closed" value="true" />
+      <created>1690296594801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690296594801</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial">
+      <option name="closed" value="true" />
+      <created>1690296850787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690296850787</updated>
+    </task>
+    <task id="LOCAL-00004" summary="initial">
+      <option name="closed" value="true" />
+      <created>1690354719512</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690354719512</updated>
+    </task>
+    <task id="LOCAL-00005" summary="versions">
+      <option name="closed" value="true" />
+      <created>1690356225709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690356225709</updated>
+    </task>
+    <task id="LOCAL-00006" summary="custom ConnectionError">
+      <option name="closed" value="true" />
+      <created>1690465683314</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690465683314</updated>
+    </task>
+    <task id="LOCAL-00007" summary="client from env">
+      <option name="closed" value="true" />
+      <created>1690467251466</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690467251466</updated>
+    </task>
+    <task id="LOCAL-00008" summary="client from env">
+      <option name="closed" value="true" />
+      <created>1690467328812</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690467328812</updated>
+    </task>
+    <task id="LOCAL-00009" summary="client from env&#10;documentation">
+      <option name="closed" value="true" />
+      <created>1690468312801</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690468312801</updated>
+    </task>
+    <task id="LOCAL-00010" summary="client from env&#10;documentation">
+      <option name="closed" value="true" />
+      <created>1690468679292</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690468679292</updated>
+    </task>
+    <task id="LOCAL-00012" summary="LsRestClientResponse from_dict">
+      <option name="closed" value="true" />
+      <created>1690534750382</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690534750382</updated>
+    </task>
+    <task id="LOCAL-00013" summary="LsRestClientResponse from_dict">
+      <option name="closed" value="true" />
+      <created>1690535075223</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690535075223</updated>
+    </task>
+    <task id="LOCAL-00014" summary="black integration">
+      <option name="closed" value="true" />
+      <created>1690550119969</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690550119969</updated>
+    </task>
+    <task id="LOCAL-00015" summary="black integration">
+      <option name="closed" value="true" />
+      <created>1690552461613</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690552461613</updated>
+    </task>
+    <task id="LOCAL-00016" summary="black integration">
+      <option name="closed" value="true" />
+      <created>1692793815746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692793815746</updated>
+    </task>
+    <task id="LOCAL-00017" summary="black integration">
+      <option name="closed" value="true" />
+      <created>1692796885129</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1692796885129</updated>
+    </task>
+    <task id="LOCAL-00018" summary="black integration">
+      <option name="closed" value="true" />
+      <created>1692799553205</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692799553205</updated>
+    </task>
+    <task id="LOCAL-00019" summary="mocking deluxe">
+      <option name="closed" value="true" />
+      <created>1696975469482</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696975469482</updated>
+    </task>
+    <task id="LOCAL-00020" summary="mocking deluxe">
+      <option name="closed" value="true" />
+      <created>1696975595067</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696975595067</updated>
+    </task>
+    <task id="LOCAL-00021" summary="mocking deluxe">
+      <option name="closed" value="true" />
+      <created>1697014237923</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697014237923</updated>
+    </task>
+    <task id="LOCAL-00022" summary="mocking deluxe">
+      <option name="closed" value="true" />
+      <created>1697016995321</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697016995321</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test-client">
+      <option name="closed" value="true" />
+      <created>1698935142236</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1698935142236</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test-client">
+      <option name="closed" value="true" />
+      <created>1698935183885</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1698935183885</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test-client can now be named">
+      <option name="closed" value="true" />
+      <created>1699516359894</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699516359894</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fixed testing">
+      <option name="closed" value="true" />
+      <created>1699524545568</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699524545568</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixed url parsing for LsRestClientTestClient">
+      <option name="closed" value="true" />
+      <created>1699526554684</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699526554684</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add base_kwargs to client and refactor error handling&#10;&#10;The LsRestClientTestClient now includes base_kwargs as part of keyword arguments. This allows additional parameters to be passed with each request. Error handling has also been enhanced in the exceptions module, allowing it to handle cases where no specific exceptions are provided. This raises errors more effectively depending on the particular situation.">
+      <option name="closed" value="true" />
+      <created>1712587562637</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712587562637</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add base_kwargs to client and refactor error handling&#10;&#10;The LsRestClientTestClient now includes base_kwargs as part of keyword arguments. This allows additional parameters to be passed with each request. Error handling has also been enhanced in the exceptions module, allowing it to handle cases where no specific exceptions are provided. This raises errors more effectively depending on the particular situation.">
+      <option name="closed" value="true" />
+      <created>1712587642850</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712587642850</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add base_kwargs to client and refactor error handling&#10;&#10;The LsRestClientTestClient now includes base_kwargs as part of keyword arguments. This allows additional parameters to be passed with each request. Error handling has also been enhanced in the exceptions module, allowing it to handle cases where no specific exceptions are provided. This raises errors more effectively depending on the particular situation.">
+      <option name="closed" value="true" />
+      <created>1712587722404</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712587722404</updated>
+    </task>
+    <task id="LOCAL-00031" summary="changed requirements down to python 3.9">
+      <option name="closed" value="true" />
+      <created>1714032925319</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714032925319</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add support for PDF content in LsRestClientResponse&#10;&#10;The update extends the LsRestClientResponse class to handle 'application/pdf' content. If the response content type is 'application/pdf', the content is now directly assigned instead of being decoded. Also incremented the package version in pyproject.toml from 2.0.0 to 2.1.0.">
+      <option name="closed" value="true" />
+      <created>1714482058457</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714482058457</updated>
+    </task>
+    <task id="LOCAL-00033" summary="changed version back from 2.0.1 to 1.7.0 because of the gorilla/banana problem">
+      <option name="closed" value="true" />
+      <created>1714634142339</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714634142339</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add __repr__ method to LsRestClient&#10;&#10;Implemented a __repr__ method to provide a clear string representation of the LsRestClient instance, including its name and base_url. Updated the project version in pyproject.toml to 1.7.1 to reflect this addition.">
+      <option name="closed" value="true" />
+      <created>1723101063633</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1723101063633</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Refactor request handling and update tests&#10;&#10;Refactor the request handling to separate real_request method for clarity. Update test base URL to https://httpbin.org/ and adjust test case accordingly. Bump version to 1.7.2 in pyproject.toml.">
+      <option name="closed" value="true" />
+      <created>1723109087706</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1723109087706</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Refactor request handling and update tests&#10;&#10;Refactor the request handling to separate real_request method for clarity. Update test base URL to https://httpbin.org/ and adjust test case accordingly. Bump version to 1.7.2 in pyproject.toml.">
+      <option name="closed" value="true" />
+      <created>1743597739237</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1743597739237</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Add LsFastApiClientBase abstraction for FastAPI clients&#10;&#10;Introduced an abstract base class, `LsFastApiClientBase`, to streamline FastAPI client implementation. It provides methods for client registration, health checks, and enforces base URL definition via an abstract method.">
+      <option name="closed" value="true" />
+      <created>1743597798715</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1743597798715</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add LsFastApiClientBase abstraction for FastAPI clients&#10;&#10;Introduced an abstract base class, `LsFastApiClientBase`, to streamline FastAPI client implementation. It provides methods for client registration, health checks, and enforces base URL definition via an abstract method.">
+      <option name="closed" value="true" />
+      <created>1743597824111</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1743597824111</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add LsFastApiClientBase abstraction for FastAPI clients&#10;&#10;Introduced an abstract base class, `LsFastApiClientBase`, to streamline FastAPI client implementation. It provides methods for client registration, health checks, and enforces base URL definition via an abstract method.">
+      <option name="closed" value="true" />
+      <created>1743670638888</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1743670638888</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Bump version to 3.2.2 and improve registration log clarity&#10;&#10;Updated the `log.debug` statement in the client registration method to include the dynamic client name for better clarity. Also incremented the project version from 3.2.1 to 3.2.2 in `pyproject.toml` to reflect the change.">
+      <option name="closed" value="true" />
+      <created>1746014636290</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1746014636290</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Bump version to 3.2.2 and improve registration log clarity&#10;&#10;Updated the `log.debug` statement in the client registration method to include the dynamic client name for better clarity. Also incremented the project version from 3.2.1 to 3.2.2 in `pyproject.toml` to reflect the change.">
+      <option name="closed" value="true" />
+      <created>1753782799812</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1753782799812</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Replace custom `cache_control` decorator with `fastapi_lsoft.cache_control`  &#10;&#10;Removed the manually implemented `cache_control` decorator in favor of the external `fastapi_lsoft.cache_control` to streamline the code and reduce redundancy. Adjusted imports accordingly.">
+      <option name="closed" value="true" />
+      <created>1754547341956</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1754547341957</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Replace custom `cache_control` decorator with `fastapi_lsoft.cache_control`  &#10;&#10;Removed the manually implemented `cache_control` decorator in favor of the external `fastapi_lsoft.cache_control` to streamline the code and reduce redundancy. Adjusted imports accordingly.">
+      <option name="closed" value="true" />
+      <created>1754553404966</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1754553404966</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Introduce request caching support and refactor test clients&#10;&#10;Added caching support to LsRestClient with configurable backends (SQLite and Redis). Refactored test fixtures by introducing `clients.py` with separate cached and non-cached clients. Updated tests to utilize cached clients where applicable and ensured compatibility.">
+      <option name="closed" value="true" />
+      <created>1754566209754</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1754566209754</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Add Redis caching support and enhance LsRestClient configurations&#10;&#10;Introduced Redis as a caching backend for `LsRestClient` with configurable settings. Updated `docker-compose.yml` to include a Redis service. Enhanced `LsRestClient` with `pydantic-settings` support for managing configurations. Added new test cases for caching scenarios and adjusted dependencies in `pyproject.toml`.">
+      <option name="closed" value="true" />
+      <created>1754576469768</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1754576469768</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Bump version to 3.3.0 and add `redis` extra for optional dependency management">
+      <option name="closed" value="true" />
+      <created>1754577263225</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1754577263225</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Replace echo service in `docker-compose.yml` and enhance middleware, caching, and tests  &#10;&#10;Removed the `echo` service from `docker-compose.yml` and updated FastAPI application with `FastapiLsoftMiddleware`. Refined caching logic using `fastapi_lsoft` dependencies and introduced `etag` support. Enhanced test coverage and updated tests to reflect caching, ETag logic, and expiration policies. Updated dependencies in `pyproject.toml` and `poetry.lock`.">
+      <option name="closed" value="true" />
+      <created>1754918373539</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1754918373539</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Bump version to 3.3.2 in `pyproject.toml` to prepare for release">
+      <option name="closed" value="true" />
+      <created>1754918488534</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1754918488534</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Enhance `/product` endpoint, caching, and ETag logic; update dependencies and tests&#10;&#10;Refined the `/product` endpoint with improved caching and ETag generation using `fastapi_lsoft`. Introduced `stale-while-revalidate` support in `LsRestClient` and enhanced caching configurations. Updated dependencies and added `pytest-asyncio` for asynchronous test execution. Improved test suite for caching, ETag validation, and performance tracking.">
+      <option name="closed" value="true" />
+      <created>1754992272032</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1754992272032</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Bump version to 3.4.0 and update `fastapi-lsoft` to 1.2.0 in `pyproject.toml` and `poetry.lock`">
+      <option name="closed" value="true" />
+      <created>1754992727697</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1754992727697</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Bump version to 3.4.0 and update `fastapi-lsoft` to 1.2.0 in `pyproject.toml` and `poetry.lock`">
+      <option name="closed" value="true" />
+      <created>1755066259354</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1755066259354</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LsRestClientResponse from_dict" />
+    <MESSAGE value="black integration" />
+    <MESSAGE value="mocking deluxe" />
+    <MESSAGE value="test-client" />
+    <MESSAGE value="test-client can now be named" />
+    <MESSAGE value="fixed testing" />
+    <MESSAGE value="fixed url parsing for LsRestClientTestClient" />
+    <MESSAGE value="Add base_kwargs to client and refactor error handling&#10;&#10;The LsRestClientTestClient now includes base_kwargs as part of keyword arguments. This allows additional parameters to be passed with each request. Error handling has also been enhanced in the exceptions module, allowing it to handle cases where no specific exceptions are provided. This raises errors more effectively depending on the particular situation." />
+    <MESSAGE value="changed requirements down to python 3.9" />
+    <MESSAGE value="Add support for PDF content in LsRestClientResponse&#10;&#10;The update extends the LsRestClientResponse class to handle 'application/pdf' content. If the response content type is 'application/pdf', the content is now directly assigned instead of being decoded. Also incremented the package version in pyproject.toml from 2.0.0 to 2.1.0." />
+    <MESSAGE value="changed version back from 2.0.1 to 1.7.0 because of the gorilla/banana problem" />
+    <MESSAGE value="Add __repr__ method to LsRestClient&#10;&#10;Implemented a __repr__ method to provide a clear string representation of the LsRestClient instance, including its name and base_url. Updated the project version in pyproject.toml to 1.7.1 to reflect this addition." />
+    <MESSAGE value="Refactor request handling and update tests&#10;&#10;Refactor the request handling to separate real_request method for clarity. Update test base URL to https://httpbin.org/ and adjust test case accordingly. Bump version to 1.7.2 in pyproject.toml." />
+    <MESSAGE value="Add LsFastApiClientBase abstraction for FastAPI clients&#10;&#10;Introduced an abstract base class, `LsFastApiClientBase`, to streamline FastAPI client implementation. It provides methods for client registration, health checks, and enforces base URL definition via an abstract method." />
+    <MESSAGE value="Bump version to 3.2.2 and improve registration log clarity&#10;&#10;Updated the `log.debug` statement in the client registration method to include the dynamic client name for better clarity. Also incremented the project version from 3.2.1 to 3.2.2 in `pyproject.toml` to reflect the change." />
+    <MESSAGE value="Replace custom `cache_control` decorator with `fastapi_lsoft.cache_control`  &#10;&#10;Removed the manually implemented `cache_control` decorator in favor of the external `fastapi_lsoft.cache_control` to streamline the code and reduce redundancy. Adjusted imports accordingly." />
+    <MESSAGE value="Introduce request caching support and refactor test clients&#10;&#10;Added caching support to LsRestClient with configurable backends (SQLite and Redis). Refactored test fixtures by introducing `clients.py` with separate cached and non-cached clients. Updated tests to utilize cached clients where applicable and ensured compatibility." />
+    <MESSAGE value="Add Redis caching support and extend LsRestClient settings&#10;&#10;Enhanced `LsRestClient` to support Redis as a caching backend with configurable settings. Updated dependencies, tests, and fixtures to reflect the new caching implementation. Introduced additional test cases for Redis integration and adjusted the `docker-compose.yml` to include Redis." />
+    <MESSAGE value="Add Redis caching support and enhance LsRestClient configurations&#10;&#10;Introduced Redis as a caching backend for `LsRestClient` with configurable settings. Updated `docker-compose.yml` to include a Redis service. Enhanced `LsRestClient` with `pydantic-settings` support for managing configurations. Added new test cases for caching scenarios and adjusted dependencies in `pyproject.toml`." />
+    <MESSAGE value="Bump version to 3.3.0 and add `redis` extra for optional dependency management" />
+    <MESSAGE value="Add ETag support, enhance caching tests, and update dependencies&#10;&#10;Introduced support for ETag validation using `fastapi-etag` and updated endpoints with `etag` dependency. Enhanced caching tests with improved scenarios for cache clearing and expiration. Updated `docker-compose.yml`, dependencies in `pyproject.toml`, and `poetry.lock` to include `fastapi-etag`. Simplified test implementations by removing unnecessary delays and redundant code." />
+    <MESSAGE value="Replace echo service in `docker-compose.yml` and enhance middleware, caching, and tests  &#10;&#10;Removed the `echo` service from `docker-compose.yml` and updated FastAPI application with `FastapiLsoftMiddleware`. Refined caching logic using `fastapi_lsoft` dependencies and introduced `etag` support. Enhanced test coverage and updated tests to reflect caching, ETag logic, and expiration policies. Updated dependencies in `pyproject.toml` and `poetry.lock`." />
+    <MESSAGE value="Bump version to 3.3.2 in `pyproject.toml` to prepare for release" />
+    <MESSAGE value="Enhance `/product` endpoint, caching, and ETag logic; update dependencies and tests&#10;&#10;Refined the `/product` endpoint with improved caching and ETag generation using `fastapi_lsoft`. Introduced `stale-while-revalidate` support in `LsRestClient` and enhanced caching configurations. Updated dependencies and added `pytest-asyncio` for asynchronous test execution. Improved test suite for caching, ETag validation, and performance tracking." />
+    <MESSAGE value="Bump version to 3.4.0 and update `fastapi-lsoft` to 1.2.0 in `pyproject.toml` and `poetry.lock`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bump version to 3.4.0 and update `fastapi-lsoft` to 1.2.0 in `pyproject.toml` and `poetry.lock`" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_test_client_test_get.coverage" NAME="pytest for test_client.test_get Coverage Results" MODIFIED="1723108914287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/lsrestclient$scratch_47.coverage" NAME="scratch_47 Coverage Results" MODIFIED="1690355522293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_in_test_mock_py.coverage" NAME="pytest in test_mock.py Coverage Results" MODIFIED="1754489963279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_cache_test_cache_etag.coverage" NAME="pytest for tests.test_cache.test_cache_etag Coverage Results" MODIFIED="1754991216875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_cache_test_cache_without_cache_control.coverage" NAME="pytest for tests.test_cache.test_cache_without_cache_control Coverage Results" MODIFIED="1754917773334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_client_test_headers.coverage" NAME="pytest for tests.test_client.test_headers Coverage Results" MODIFIED="1754557510331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_in_tests.coverage" NAME="pytest in tests Coverage Results" MODIFIED="1759311677376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/lsrestclient$main.coverage" NAME="main Coverage Results" MODIFIED="1754486946567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_app" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_in_test_auth_py.coverage" NAME="pytest in test_auth.py Coverage Results" MODIFIED="1754489893412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_test_client_test_full_url.coverage" NAME="pytest for test_client.test_full_url Coverage Results" MODIFIED="1699525313706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_client_test_ignore_bearer_token.coverage" NAME="pytest for tests.test_client.test_ignore_bearer_token Coverage Results" MODIFIED="1754557994680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_in_test_cache_py.coverage" NAME="pytest in test_cache.py Coverage Results" MODIFIED="1754492535785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$scratch_51.coverage" NAME="scratch_51 Coverage Results" MODIFIED="1692794973340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_mock_test_fixture_unmock_single.coverage" NAME="pytest for tests.test_mock.test_fixture_unmock_single Coverage Results" MODIFIED="1754490044722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_in_test_client_py.coverage" NAME="pytest in test_client.py Coverage Results" MODIFIED="1754558310344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_test_mock_test_fixture_mock.coverage" NAME="pytest for test_mock.test_fixture_mock Coverage Results" MODIFIED="1697014225908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_client_test_bearer_token.coverage" NAME="pytest for tests.test_client.test_bearer_token Coverage Results" MODIFIED="1754557980806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_client_test_full_url.coverage" NAME="pytest for tests.test_client.test_full_url Coverage Results" MODIFIED="1754486152929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_cache_test_cache.coverage" NAME="pytest for tests.test_cache.test_cache Coverage Results" MODIFIED="1754924717089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_cache_test_cache_with_expire_after.coverage" NAME="pytest for tests.test_cache.test_cache_with_expire_after Coverage Results" MODIFIED="1754654582575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_test_mock_test_basic_mock.coverage" NAME="pytest for test_mock.test_basic_mock Coverage Results" MODIFIED="1697016009005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/lsrestclient$pytest_for_tests_test_client_test_get.coverage" NAME="pytest for tests.test_client.test_get Coverage Results" MODIFIED="1754557940615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lsrestclient$scratch_16.coverage" NAME="scratch_16 Coverage Results" MODIFIED="1744270841291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/lsrestclient$.coverage" NAME=" Coverage Results" MODIFIED="1692796848126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
