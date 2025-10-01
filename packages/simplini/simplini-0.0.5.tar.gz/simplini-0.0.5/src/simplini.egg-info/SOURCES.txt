@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/simplini/__init__.py
+src/simplini/core.py
+src/simplini/parser.py
+src/simplini/renderer.py
+src/simplini.egg-info/PKG-INFO
+src/simplini.egg-info/SOURCES.txt
+src/simplini.egg-info/dependency_links.txt
+src/simplini.egg-info/top_level.txt
