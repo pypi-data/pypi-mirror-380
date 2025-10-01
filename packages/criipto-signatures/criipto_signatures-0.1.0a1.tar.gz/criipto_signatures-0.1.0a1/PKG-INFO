@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: criipto-signatures
+Version: 0.1.0a1
+Summary: A library for interacting with the Criipto signatures GraphQL API.
+Author: Jan Aagaard Meier
+Author-email: Jan Aagaard Meier <jan.meier@criipto.com>
+Requires-Dist: gql[httpx]>=4.0.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.11.7
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+:building_construction:
+
+This project is under construction - Check back soon.

@@ -1,0 +1,23 @@
+[project]
+name = "criipto-signatures"
+version = "0.1.0a1"
+description = "A library for interacting with the Criipto signatures GraphQL API."
+readme = "README.md"
+authors = [{ name = "Jan Aagaard Meier", email = "jan.meier@criipto.com" }]
+requires-python = ">=3.13"
+dependencies = ["gql[httpx]>=4.0.0", "httpx>=0.28.1", "pydantic>=2.11.7"]
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=8.4.1", "pytest-asyncio>=1.1.0", "ruff>=0.12.7", "ty>=0.0.1a17"]
+test = []
+
+[tool.ruff]
+indent-width = 2
+
+[tool.ruff.lint.per-file-ignores]
+# operations bulk-import all enums and scalars. So we don't want to worry about unused imports
+"src/criipto_signatures/operations.py" = ["F401"]
