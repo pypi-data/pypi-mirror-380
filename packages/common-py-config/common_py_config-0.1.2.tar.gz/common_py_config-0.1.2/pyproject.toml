@@ -1,0 +1,50 @@
+[project]
+name = "common-py-config"
+version = "0.1.2"
+description = "Shared dev/test/lint configuration for all projects"
+authors = [
+    {name = "Beniamin Kalinowski", email = "beniamin.kalinowski@gmail.com"}
+]
+maintainers = [
+    { name = "Beniamin Kalinowski", email = "beniamin.kalinowski@gmail.com" },
+]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "common_py_config", from = "src" },
+    { include = "pytest.ini", from = "."}
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest_cov = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project.entry-points.pytest11]
+common_config = "common_py_config.pytest_common_plugin"
+
