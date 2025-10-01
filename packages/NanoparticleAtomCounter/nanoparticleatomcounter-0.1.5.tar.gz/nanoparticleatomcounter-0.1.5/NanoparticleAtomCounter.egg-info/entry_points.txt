@@ -1,0 +1,4 @@
+[console_scripts]
+atom-count-benchmark = NanoparticleAtomCounter.cli.benchmark:main
+atom-count-test = NanoparticleAtomCounter.cli.run_tests:main
+nanoparticle-atom-count = NanoparticleAtomCounter.cli.atom_count:main
