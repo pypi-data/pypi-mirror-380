@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0,<77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "investfly-sdk"
+version = "1.9"
+description = "Investfly SDK"
+authors = [
+  { name = "Investfly.com", email = "admin@investfly.com" },
+]
+license = { text = "MIT" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mypy>=1.15.0",
+    "pandas>=2.2.0",
+    "pandas-stubs>=2.2.0.240218",
+    "requests>=2.32.3",
+    "types-requests>=2.32.0.20250602"
+]
+[project.scripts]
+investfly-cli = "investfly.cli.InvestflyCli:main"
+
+[project.urls]
+Homepage = "https://www.investfly.com"
+
+[tool.setuptools.packages.find]
+include = ["investfly*", "talib*"]
+
+
