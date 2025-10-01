@@ -1,0 +1,14 @@
+spacy<3.9.0,>=3.7.0
+scipy
+requests<3.0.0,>=2.0.0
+conllu
+numpy<2.0
+joblib
+scikit-learn>=0.20.3
+pysbd
+
+[:python_version < "3.10"]
+nmslib>=1.7.3.6
+
+[:python_version >= "3.10"]
+nmslib-metabrainz==2.1.3
