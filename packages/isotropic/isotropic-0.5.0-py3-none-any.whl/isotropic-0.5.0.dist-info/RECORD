@@ -1,0 +1,17 @@
+isotropic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isotropic/e2.py,sha256=_iZzqq3_WAZ7JRJFPDFinVMK_jBPdh8Nztc-mVDAKck,4615
+isotropic/orthonormal.py,sha256=-83j1YRVWqj2HbL2NB22PzGYsBCrWjPl8eAsnCTJY8U,1565
+isotropic/thetazero.py,sha256=LO4l3mr_hqFhdnryF7xGxjjmJ24E-r3BUgh_VglO1zo,1333
+isotropic/algos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isotropic/algos/grover.py,sha256=4XhT8dQ7OQEcIegz55KwIz0yvhpL_RkB1Rs7P9MNk7E,2947
+isotropic/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isotropic/utils/bisection.py,sha256=dPt-bJndWH9L2kNj-H3MVkRqvzZUMLq6-2HDF8wXzv8,1198
+isotropic/utils/distribution.py,sha256=WRggLr07UwjNQABbsmjqzqLkeqUJR3lOwtA6xy25lLw,4365
+isotropic/utils/linalg.py,sha256=Wf7gc09ARVBiBtroVEWEvdUVgGrFCwITKL4p4mmHI3A,904
+isotropic/utils/simpsons.py,sha256=-oPjRYGCZ4pYOJNf720IaNw7QP7W5coZcNXww7Whr3o,1134
+isotropic/utils/state_transforms.py,sha256=Rn-vySUigBt3nmeioW57Y4Yq9vqPiIPeM625--itmtw,3524
+isotropic-0.5.0.dist-info/licenses/LICENSE,sha256=l-UfJ1D8IaHoHQ6A5fxB7WORvA_oUukrOkKvCiXTwI8,11349
+isotropic-0.5.0.dist-info/METADATA,sha256=9UXnTWOSc3Abk2FNV2e2p_7qSHuk9x-XNAnby9dyn5w,5241
+isotropic-0.5.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+isotropic-0.5.0.dist-info/top_level.txt,sha256=EWJ8wMd3ffctVfw3cWy7ckl4JJf3ld_MMpXlbxIOptY,10
+isotropic-0.5.0.dist-info/RECORD,,
