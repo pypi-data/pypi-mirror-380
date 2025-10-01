@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.24.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "onellmclient"
+version = "0.1.1"
+description = "A unified Python client to normalize interfaces across major LLM providers (OpenAI, Anthropic, Gemini)."
+authors = [{ name = "Elevioux", email = "elevioux@live.com" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["llm", "openai", "anthropic", "gemini", "client", "sdk"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# 运行时硬依赖尽量为空；第三方SDK由用户按需安装（extras）
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.109.1,<2.0.0"]
+anthropic = ["anthropic>=0.68.0,<1.0.0"]
+gemini = ["google-genai>=1.38.0,<2.0.0"]
+all = [
+    "openai>=1.109.1,<2.0.0",
+    "anthropic>=0.68.0,<1.0.0",
+    "google-genai>=1.38.0,<2.0.0",
+]
+
+# 开发测试依赖
+test = [
+    "openai>=1.109.1,<2.0.0",
+    "anthropic>=0.68.0,<1.0.0",
+    "google-genai>=1.38.0,<2.0.0",
+    "pytest>=8.4.2,<9.0.0",
+    "python-dotenv>=1.1.1,<2.0",
+]
+
+[project.urls]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/onellmclient"]
+
+[tool.hatch.version]
+path = "src/onellmclient/__init__.py"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+pythonpath = ["src"]
