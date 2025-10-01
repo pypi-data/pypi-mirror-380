@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+results/
+sikuli_captured/
+Sikuli_java**
+dist/
+sikuliplus.egg-info
+SikuliPlusLibrary.egg-info
+logs/
+.github/
+.env
