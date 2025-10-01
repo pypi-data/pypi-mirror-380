@@ -1,0 +1,10 @@
+find_unicode_control/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+find_unicode_control/__main__.py,sha256=TG20GY8jPnKOv-8rt7J58f7TiZhxxYTqQQbXYmQin1s,125
+find_unicode_control/cli.py,sha256=sm1-cMWaOGBezhlxbUEp8vw607oJkWuECHVhB6Ro9Tk,1129
+find_unicode_control/find_unicode_control.py,sha256=CI7Nt3hE0ypPlqa0AOVR_NJSfbWLeADpjDUsQe8o-vQ,8189
+find_unicode_control-0.1.1.dist-info/licenses/LICENSE,sha256=NSPqjIn9hsMggs_Uh_04oGZb0DSovzn6IfL5QEklLLQ,1482
+find_unicode_control-0.1.1.dist-info/METADATA,sha256=eeq-kixzHuwSc83MqhWdIaRWhbgnc1J1PiCre4DEmjM,3766
+find_unicode_control-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+find_unicode_control-0.1.1.dist-info/entry_points.txt,sha256=YWVtjwrpQZMsSHvO3tFFIIRCsmQpM_woMjKt1bLViV8,71
+find_unicode_control-0.1.1.dist-info/top_level.txt,sha256=-CTVIMY-PcNxFaIJnhGU0DACKgL-mNdfFveH1BcDsow,21
+find_unicode_control-0.1.1.dist-info/RECORD,,
