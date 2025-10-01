@@ -1,0 +1,15 @@
+dochooks/__init__.py,sha256=yVPQUtWssNgTykAA4aI06l2rSz1MQEevtDw6Z5thA8U,287
+dochooks/check_case_conflict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dochooks/check_case_conflict/check.py,sha256=_gHYS_LbfwqIfHvc4cilZsmPaS_-Ff6VD9Q1UTqMKk0,5192
+dochooks/insert_whitespace_between_cn_and_en_char/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dochooks/insert_whitespace_between_cn_and_en_char/check.py,sha256=A7rRCS-nSnCUsqyFgJYyk53c08TUM9VbhHwVPZf7JPw,1826
+dochooks/insert_whitespace_between_cn_and_en_char/format.py,sha256=0nEFp7EyW2kX1Sqf6QyicmH6kRbj193mz8e_c28PLBU,2553
+dochooks/insert_whitespace_between_cn_and_en_char/pragma.py,sha256=uiTR3R2hJTaD-dMe5nEww7cRmvQEhlknkFFJ9b3uxK4,553
+dochooks/insert_whitespace_between_cn_and_en_char/regex.py,sha256=lg4V3JkeU2dFCmUkMPEBPygcKJR_gGjlRPFF2wUjiaY,400
+dochooks/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dochooks/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dochooks/utils/return_code.py,sha256=a_baZQuTt7y8QKCKBn9Hbl_F9l0RQofJKV8sH9H9970,72
+dochooks-0.6.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+dochooks-0.6.0.dist-info/entry_points.txt,sha256=z0nZ1iZC_tevZ0tbWbv70UJy-Pt5PD_kfKfKuEUyg5s,289
+dochooks-0.6.0.dist-info/METADATA,sha256=z5pll13pW9-BTmacO9nsVmBDoi3FZfUTDdPr_k-lCxk,3437
+dochooks-0.6.0.dist-info/RECORD,,
