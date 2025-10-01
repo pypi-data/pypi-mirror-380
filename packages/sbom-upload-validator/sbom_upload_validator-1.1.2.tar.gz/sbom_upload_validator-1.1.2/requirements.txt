@@ -1,0 +1,6 @@
+Flask==3.1.2
+requests==2.32.5
+python-dotenv==1.1.1
+PyYAML==6.0.3
+debugpy # Required for debugging.
+Werkzeug>=3.1.3
