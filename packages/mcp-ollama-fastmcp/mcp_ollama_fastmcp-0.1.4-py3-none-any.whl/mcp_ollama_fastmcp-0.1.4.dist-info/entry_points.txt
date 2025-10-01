@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-ollama = mcp_ollama.__main__:main
