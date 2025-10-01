@@ -1,0 +1,7 @@
+bleach
+Django
+django-filter
+django-reversion
+djangorestframework
+requests
+segno
