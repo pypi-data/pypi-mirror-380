@@ -1,0 +1,72 @@
+{
+  "b997634aa82d9fa0": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:01471e00faafceda",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:01471e00faafceda",
+      "filehash": "8e2bea619e386a48cef4d9faf767b53a1e3c581deafc7cbfe9f1639664f42996"
+    },
+    {
+      "graph_id_type": "md_id",
+      "proprietary_id": "16720",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/16720",
+      "filehash": "fd0da913ddb02c8413638f163f2e57f66e0655d95d48637db7b88d3a8dc43a2a"
+    },
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "16720",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/16720",
+      "filehash": "fd0da913ddb02c8413638f163f2e57f66e0655d95d48637db7b88d3a8dc43a2a"
+    },
+    {
+      "graph_id_type": "md_id",
+      "proprietary_id": "20540",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/20540",
+      "filehash": "464f25af701fbeb8867ce51a1efd329d4adc8bcfd0b276bc3ddbbf85526538bc"
+    },
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "20540",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/20540",
+      "filehash": "464f25af701fbeb8867ce51a1efd329d4adc8bcfd0b276bc3ddbbf85526538bc"
+    },
+    {
+      "graph_id_type": "md_id",
+      "proprietary_id": "20541",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/20541",
+      "filehash": "464f25af701fbeb8867ce51a1efd329d4adc8bcfd0b276bc3ddbbf85526538bc"
+    },
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "20541",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/20541",
+      "filehash": "464f25af701fbeb8867ce51a1efd329d4adc8bcfd0b276bc3ddbbf85526538bc"
+    }
+  ],
+  "b9973bcdf81b48a5": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "386651",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/386651",
+      "filehash": "973fa1873b7f5d9d3ce5d9d49224d1d109269b542f2b5acad111834287ff870d"
+    }
+  ]
+}

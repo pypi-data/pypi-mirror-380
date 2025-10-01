@@ -1,0 +1,72 @@
+{
+  "f7b3210198a20a42": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:01b2d7238e7264ba",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:01b2d7238e7264ba",
+      "filehash": "64f96db50c6a0f5b92d9827ab2398ac990c658203d1b63e4b67f622383b2e136"
+    }
+  ],
+  "f7b31118ca457537": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:03f0c46a5391f192",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:03f0c46a5391f192",
+      "filehash": "b28ed78c030aa39aa8475dd1b02dc13c665da076d7c5153d871878b361c2eb34"
+    }
+  ],
+  "f7b381fb04ff6f3e": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "67636",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/67636",
+      "filehash": "ced2ff35534228d61b630d17802628814bcc5a7a5cc9ba7e957980dd1edcff00"
+    },
+    {
+      "graph_id_type": "md_id",
+      "proprietary_id": "291022",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/291022",
+      "filehash": "a7e66f3219a325ef5ac64e786d7a42d1604801094fbcc6a0b9f3a8d5bd0b2fd3"
+    },
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "291022",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/291022",
+      "filehash": "a7e66f3219a325ef5ac64e786d7a42d1604801094fbcc6a0b9f3a8d5bd0b2fd3"
+    }
+  ],
+  "f7b349cf5167c5b3": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "405441",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/405441",
+      "filehash": "cb57a4c1fbe39ea52182616adafe83e4a586fadda1493c5c5c42e16f5e9c3e48"
+    }
+  ]
+}

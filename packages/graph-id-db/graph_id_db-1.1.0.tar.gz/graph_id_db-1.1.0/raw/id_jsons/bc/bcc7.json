@@ -1,0 +1,30 @@
+{
+  "bcc780ed3229f957": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "401690",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/401690",
+      "filehash": "1002ed97a675d1599a77394abdd196e1876a508712fc4e2f3db98c87dd54f16c"
+    }
+  ],
+  "bcc784cea18b323f": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "402966",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/402966",
+      "filehash": "d8794a0d6d50aa5f195fa894cd883f62605c7094678ff9a68e8d9eae5679ff1e"
+    }
+  ]
+}

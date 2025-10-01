@@ -1,0 +1,44 @@
+{
+  "3fcbe95742038b4d": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:01c8dd17f2ed890a",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:01c8dd17f2ed890a",
+      "filehash": "e9c100fb31b5b11c47135fec873a2e573cf98f3e5ebd9fdb85296819bb7c60c3"
+    }
+  ],
+  "3fcb8bc48e8942bf": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "393018",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/393018",
+      "filehash": "ea041d12808bdcf7ae34b1bd5d3568e74accc4d73c518135d4a34903d55ca8ad"
+    }
+  ],
+  "3fcb83d317e9629b": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "396736",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/396736",
+      "filehash": "2d0afef2e05adef104ba30ebbe541dfc63e727acb7c66c26050ea34b2aa60670"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "c859ec853957d007": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "311685",
+      "datasource": "OQMD",
+      "url": "https://oqmd.org/materials/entry/311685",
+      "filehash": "63b1a50ad1fa005987d01883deff3dc032a417134843289364d39c0cda7d61bd"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "885123e13d58d144": [
+    "graph_id_type",
+    "proprietary_id",
+    "datasource",
+    "url",
+    "filehash",
+    {
+      "graph_id_type": "dc_id",
+      "proprietary_id": "aflow:0179abe0c0b60efd",
+      "datasource": "AFLOW",
+      "url": "https://aflow.org/material/?id=aflow:0179abe0c0b60efd",
+      "filehash": "bd30bb0bbbc11a9f9bca812b1ad637e71fbfa8da5d769bae6c1fc807b4e4b4b0"
+    }
+  ]
+}
