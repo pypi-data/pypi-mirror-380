@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "currency-rates-cbr"
+version = "1.0.0"
+description = "A Python library for fetching currency rates from Central Bank of Russia"
+authors = [
+    {name = "Dasha Tarasova", email = "tarasova_dasha5@mail.ru"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.7"
+keywords = ["currency", "rates", "cbr", "russia", "finance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/tarass1ky/currency-rates-cbr"
+
+[project.scripts]
+currency-rates = "currency_rates_cbr.cli:main"
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
