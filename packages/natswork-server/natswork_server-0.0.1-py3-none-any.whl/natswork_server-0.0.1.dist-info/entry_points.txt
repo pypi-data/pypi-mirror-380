@@ -1,0 +1,2 @@
+[console_scripts]
+natswork-server = natswork_server.cli:main
