@@ -1,0 +1,11 @@
+pys/__init__.py,sha256=dNqb2-9BivD4ub9sMZTgAiV1I5OtYi5qD13g881-Ku0,8658
+pys/base.py,sha256=wVPhuGrZZ-Y2yUEYJKIbV2WoWnytuaYKzB3HxUvvUqY,1932
+pys/file.py,sha256=RCUJHNHhpJYc069HGt4ofvHM9bRstQQzHV5k36tKDTM,3211
+pys/pydantic.py,sha256=UCWzCCB60eSrPJK7DCEglD6JfpEOIIYpGibg4SJreu4,239
+pys/sqlite.py,sha256=liZkMcki6kGt3YbbL7c8-_k0GryVMlIVip8yyL1d6ao,4672
+pys/zipfile.py,sha256=xPedQYcQ4X-e8ARWRJ9ApI1D04sczooMYSvC5DSLsz8,2122
+pysdato-0.0.14.dist-info/licenses/LICENSE,sha256=nmTFrw8luK3wj74svQAQ4SlEHs9PK1SqoFwpWHu7N4w,1069
+pysdato-0.0.14.dist-info/METADATA,sha256=Efmz-i2uLeKrUQFQ9LW-2UcToTX7r-GzUIoq1qwAsf4,9204
+pysdato-0.0.14.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pysdato-0.0.14.dist-info/top_level.txt,sha256=Q7MnbveoEAd8c2c1Vha90L7bIuSNteX1GMa2fFAGxp4,4
+pysdato-0.0.14.dist-info/RECORD,,
