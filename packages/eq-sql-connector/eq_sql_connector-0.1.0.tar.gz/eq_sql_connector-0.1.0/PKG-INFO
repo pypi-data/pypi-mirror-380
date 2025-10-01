@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: eq-sql-connector
+Version: 0.1.0
+Summary: SQL Database connector to connect to public client app registrations using delegated permissions (MSAL).
+License: MIT
+Author: Åsmund Våge Fannemel
+Author-email: asmf@equinor.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: msal-bearer (>=1.4.3,<2.0.0)
+Requires-Dist: pandas (>=2.3.2,<3.0.0)
+Requires-Dist: pyodbc (>=5.2.0,<6.0.0)
+Requires-Dist: sqlalchemy (>=2.0.43,<3.0.0)
+Description-Content-Type: text/markdown
+
+# eq-sql-connector
+A small python package to handle authentication and act as a generic database connector.
+
+It supports multiple authentication flows using [msal-bearer](https://github.com/equinor/msal-bearer) and contains a few basic database functions including a simple function including parameterized querying. 
+
+# Install
+Install from pypi ```pip install eq-sql-connector``` or clone and use ```poetry install``` as a developer.
+
+# Usage
+Dummy example to come
+
+```
+
+````
+
+
+
