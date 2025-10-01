@@ -1,0 +1,6 @@
+pysyringe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysyringe/container.py,sha256=kOlGP7CnXM8JEGepyBByGLFCJUM_akL-PSbi67o3_6o,7681
+pysyringe/singleton.py,sha256=g7AcJoBF7-wFxF6rHTAhMtoVNvz4Ye40vK7xlzV3O08,761
+pysyringe-1.1.1.dist-info/METADATA,sha256=2uQNsBDrmOtg0M5l0Ef7hbgfnO0czGXqN609ekuqHjA,8456
+pysyringe-1.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pysyringe-1.1.1.dist-info/RECORD,,
