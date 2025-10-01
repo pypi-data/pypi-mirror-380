@@ -1,0 +1,4 @@
+[console_scripts]
+build-priors = mixedassembly.cli:build_priors_cli
+remove-frameshifts = mixedassembly.cli:remove_frameshifts_cli
+run-mixed-assembly = mixedassembly.cli:run_mixed_assembly_cli
