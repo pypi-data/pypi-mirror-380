@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "polyglot-cli"
+version = "0.1.0"
+description = "AI-powered code translator using Claude Sonnet 4.5's extended thinking"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Samar", email = "samar@example.com" }
+]
+keywords = ["ai", "code-translation", "claude", "cli", "polyglot", "transpiler"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Code Generators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "anthropic>=0.18.0",
+    "pygments>=2.15.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/samar/polyglot-cli"
+Issues = "https://github.com/samar/polyglot-cli/issues"
+
+[project.scripts]
+polyglot = "polyglot_cli.__main__:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["polyglot_cli"]
