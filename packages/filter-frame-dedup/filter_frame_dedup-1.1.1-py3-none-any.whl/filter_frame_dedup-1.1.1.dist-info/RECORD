@@ -1,0 +1,9 @@
+filter_frame_dedup/__init__.py,sha256=5nGHWwb-mYLO_8Ek6bXp6KPgxo2lOABOhfAPs_NkUJU,137
+filter_frame_dedup/filter.py,sha256=z2y6KAl_oOIzzWrXxEPH0X9iF_xUc2fczoNG-a6nxZA,12759
+filter_frame_dedup/hash_processor.py,sha256=rsRWrpXamE4rW1J6L9SnnT8_681xj4fq2lCW5RLmIDM,6299
+filter_frame_dedup/ssim_processor.py,sha256=Q8W6V_xKs0jfaYaDHSne9igY9BrAdtnkE7COQv4dRBk,1421
+filter_frame_dedup-1.1.1.dist-info/licenses/LICENSE,sha256=Hun-T5YKdxKbQ1lfbGCu8YiknxeFsTnWAuSWz6CKQAQ,11343
+filter_frame_dedup-1.1.1.dist-info/METADATA,sha256=--ECaRVWMj8oy0KhJiiqNtBpuG4CeqkRPVOVWJLr6_k,11882
+filter_frame_dedup-1.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+filter_frame_dedup-1.1.1.dist-info/top_level.txt,sha256=i5zhda0eEhLy1waCqjsILVaIXWtLtAlblt_Wx_-vAN4,19
+filter_frame_dedup-1.1.1.dist-info/RECORD,,
