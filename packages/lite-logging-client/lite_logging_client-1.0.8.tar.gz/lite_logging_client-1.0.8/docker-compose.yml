@@ -1,0 +1,15 @@
+services:
+  lite-logging-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lite-logging-server
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - lite-logging
+
+networks:
+  lite-logging:
+    external: true
