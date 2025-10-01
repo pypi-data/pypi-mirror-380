@@ -1,0 +1,22 @@
+[package]
+name = "bm25-rs"
+version = "1.0.4"
+edition = "2021"
+description = "High-performance BM25 implementation in Rust with Python bindings"
+license = "MIT"
+repository = "https://github.com/dorianbrown/rank_bm25"
+homepage = "https://github.com/dorianbrown/rank_bm25"
+keywords = ["bm25", "search", "information-retrieval", "rust", "performance"]
+categories = ["algorithms", "text-processing"]
+authors = ["BM25-RS Contributors <amiya19mandal@pm.me>"]
+
+[lib]
+name = "bm25_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+rayon = "1.1"
+ahash = "0.8"
+smallvec = "1.11"
+string-interner = "0.19"
