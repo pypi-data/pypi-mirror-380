@@ -1,0 +1,6 @@
+[console_scripts]
+coval = coval.cli:main
+coval-generate = coval.cli:generate_command
+coval-iterate = coval.cli:iterate_command
+coval-repair = coval.cli:repair_command
+coval-run = coval.cli:run_command
