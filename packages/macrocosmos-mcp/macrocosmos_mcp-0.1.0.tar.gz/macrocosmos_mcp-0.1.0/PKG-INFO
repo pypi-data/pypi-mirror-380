@@ -1,0 +1,94 @@
+Metadata-Version: 2.4
+Name: macrocosmos-mcp
+Version: 0.1.0
+Summary: MCP server for integrating Macrocosmos SN13 social media data into Claude Desktop and Cursor
+Author: Macrocosmos AI
+License: MIT
+Project-URL: Homepage, https://github.com/macrocosm-os/macrocosmos-mcp
+Project-URL: Repository, https://github.com/macrocosm-os/macrocosmos-mcp
+Keywords: mcp,claude,cursor,api,social-data,huggingface
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]
+Requires-Dist: httpx
+Requires-Dist: macrocosmos
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# 🌌 Macrocosmos MCP
+
+**Macrocosmos MCP** lets you integrate **SN13** and **SN1** APIs directly into **Claude for Desktop** or **Cursor**. Instantly tap into social data, perform live web searches, and explore Hugging Face models — all from within your AI environment.
+
+---
+
+## ⚡ Features
+
+- 🔍 Query **X** (Twitter) and **Reddit** data on demand
+- 📚 Explore **SN13 Hugging Face** repositories and datasets
+
+---
+
+## 🚀 Quick Setup
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/macrocosm-os/macrocosmos-mcp.git
+cd macrocosmos-mcp/src
+```
+
+### 2. Install Requirements (requires [uv](https://astral.sh/blog/uv/))
+
+```bash
+uv venv
+source .venv/bin/activate
+uv add "mcp[cli]" httpx macrocosmos
+```
+
+### 3. Configure Claude or Cursor
+
+Open the MCP config file:
+
+- **Claude:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Cursor:** `~/Library/Application Support/Cursor/cursor_mcp_config.json`
+
+Add this entry:
+
+```json
+"macrocosmos": {
+    "command": "uv",
+    "args": [
+        "--directory",
+        "/full_path_to_repo/macrocosmos_mcp/src/",
+        "run",
+        "macrocosmos_mcp.py"
+    ],
+    "env": {
+        "MC_API": "",
+    }
+}
+```
+
+Replace `/full_path_to_repo/` with your full local path and insert your API keys.
+
+---
+
+## 🔮 Upcoming
+
+- 🧠 All the power of **Subnets** in your AI environment — coming soon.
+
+---
+
+MIT License
+Made with ❤️ by the Macrocosm OS team
