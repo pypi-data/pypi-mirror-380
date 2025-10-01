@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: liminity
+Version: 0.1.6
+Summary: AI todo list demo for luciditycli's features
+License-Expression: GPL-3.0-only
+License-File: LICENSE
+Requires-Dist: luciditycli>=0.1.4
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# liminity
+A CLI todo list demoing the Lucidity Python module.
+> [!IMPORTANT]
+> THIS DEMO IS AI GENERATED!!! I ran out of time because I was at daydream making https://github.com/qwikster/oneslot. DO NOT JUDGE THIS CODE!! USE THE MAIN REPO!
+
+## dependencies
+`pip install lucidity`
+(use pipx if your terminal says to)
+## usage
+`pip install liminity`
+shell: `liminity`
+Uhhhh follow the instructions on screen
+## features
+custom theme support with easy switching. LIST DATA IS NOT PERSISTENT. uhhhh otherwise just look at the main lucidity repo
