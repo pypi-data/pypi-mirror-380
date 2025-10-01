@@ -1,0 +1,9 @@
+m61/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+m61/client.py,sha256=4DJjS413-tz2nIL-pFGyVtBP85NXF_9AKPDk50sbB5A,2942
+m61/common.py,sha256=Sy72E9J3QeO-OQlINcu2FWhKQS1YaGDmyicArPfa-Wk,993
+m61/exceptions.py,sha256=94wmQRoob71Ki7FM8QHDu5jRqJHBn6-Eg-Yf7SplzpU,93
+m61/server.py,sha256=Q4qOFXpmNVRB1mxA5fo-q6O_YlhoM2aG3hPng3edXf0,3285
+m61-0.1.0.dist-info/METADATA,sha256=F1csNphLMFbFikoU5qDhVhAO6CKgK0LYEHfMMwUCcCI,2735
+m61-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+m61-0.1.0.dist-info/entry_points.txt,sha256=B-TtqB8dwzYdhFIrU9N6J8Qfp_N4ygo9xiM7b7CuAFg,71
+m61-0.1.0.dist-info/RECORD,,

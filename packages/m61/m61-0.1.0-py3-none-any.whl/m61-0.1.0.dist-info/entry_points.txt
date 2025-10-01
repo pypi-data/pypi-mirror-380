@@ -1,0 +1,4 @@
+[console_scripts]
+m61-client=m61.client:app
+m61-server=m61.server:app
+
