@@ -1,0 +1,2 @@
+[console_scripts]
+django-template-integrator = django_template_integrator.cli:main

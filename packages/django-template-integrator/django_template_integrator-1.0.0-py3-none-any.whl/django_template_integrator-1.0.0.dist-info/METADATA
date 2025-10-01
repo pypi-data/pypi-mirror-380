@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: django-template-integrator
+Version: 1.0.0
+Summary: A CLI tool to automate Django template integration from frontend ZIP files
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4>=4.12.0
