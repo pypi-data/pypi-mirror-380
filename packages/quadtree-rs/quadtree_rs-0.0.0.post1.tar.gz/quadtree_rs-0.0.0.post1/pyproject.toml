@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quadtree-rs"                      # the OLD PyPI project name
+version = "0.0.0.post1"                   # new filename -> OK to upload
+description = "This project was renamed. Install fastquadtree."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 7 - Inactive",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
