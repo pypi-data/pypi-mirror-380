@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: ma-plus-h-math
+Version: 0.1.1
+Summary: meth - A simple Python library for mathematical functions
+Home-page: https://github.com/yourusername/ma-plus-h
+Author: jhon
+Author-email: jhon <adghb@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/ma-plus-h
+Project-URL: Repository, https://github.com/yourusername/ma-plus-h
+Project-URL: Issues, https://github.com/yourusername/ma-plus-h/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# ma+h
+
+A simple Python library for mathematical functions.
+
+## Installation
+
+```bash
+pip install ma-plus-h-math
+```
+
+## Usage
+
+```python
+from ma+h import sine
+import math
+
+# Calculate sine of 0
+result = sine(0)
+print(result)  # 0.0
+
+# Calculate sine of π/2
+result = sine(math.pi/2)
+print(result)  # 1.0
+
+# Calculate sine of π
+result = sine(math.pi)
+print(result)  # 0.0
+```
+
+## Functions
+
+### sine(x)
+
+Calculate the sine of an input value.
+
+**Parameters:**
+- `x` (int or float): Input value in radians
+
+**Returns:**
+- `float`: The sine value of the input
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
