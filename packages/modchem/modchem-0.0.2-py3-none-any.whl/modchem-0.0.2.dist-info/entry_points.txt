@@ -1,0 +1,2 @@
+[console_scripts]
+chem = modchem.commands:execute_experiment_environment

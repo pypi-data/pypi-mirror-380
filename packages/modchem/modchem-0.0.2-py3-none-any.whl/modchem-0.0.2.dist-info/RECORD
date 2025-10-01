@@ -1,0 +1,14 @@
+modchem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modchem/catalogs/elements.py,sha256=v-QdRIpWbXSTPS_r_AFEeQU1DiAhb4YH4N3HM1XqvzM,2704
+modchem/commands/__init__.py,sha256=AYmQP1VDjQqFtjYsPij0LKwmCQ9XUFYnkV1wUDuFbyE,1512
+modchem/commands/command.py,sha256=IQDwrrtswApLQEFt0JsGn3h4NC7qiuDVfkTBp3Tuhyw,374
+modchem/database/datasets.py,sha256=8jurGbr8nlw0ARz5tMj_21xyw5RIl4KZtEm_h0kdq5o,126
+modchem/entities/atom.py,sha256=aU9Ut51n13spIoqfyM5JocS8GNJrqknJhwwxxkavRt0,1054
+modchem/entities/ion.py,sha256=hpcSFMiFli5SBFKvrdJt9lZ_ReNQZHs87F3VeaUTQwA,731
+modchem/entities/molecula.py,sha256=VB8UWGFIBc5ARZe9n7viSvQI_Zi1dD1CxibFPK2Dqn8,54
+modchem/experiment/experimental.py,sha256=VLEsxyVxky551kMA6hQ6U6OPWI0ho-8hoEWXWaq5_U4,295
+modchem/seccion/seccion.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modchem-0.0.2.dist-info/METADATA,sha256=W4WburhZ5YAAdvjhpi6MyWcLtBfqL2Y5D47QzS5LK8M,407
+modchem-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+modchem-0.0.2.dist-info/entry_points.txt,sha256=8IDUstU58MKI53WS-1BGdrzRKdzncQSjN4ymu_V8x_Q,73
+modchem-0.0.2.dist-info/RECORD,,
