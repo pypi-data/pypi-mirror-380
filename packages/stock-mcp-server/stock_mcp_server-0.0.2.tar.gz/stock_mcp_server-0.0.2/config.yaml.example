@@ -1,0 +1,49 @@
+# Stock MCP Server Configuration Example
+# Copy this file to config.yaml and customize as needed
+
+# Server settings
+server_name: "stock-mcp-server"
+log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+
+# Data refresh intervals (in seconds)
+refresh_intervals:
+  realtime: 300      # Real-time market data (5 minutes)
+  news: 1800         # News articles (30 minutes)
+  historical: 86400  # Historical data (24 hours)
+  indicators: 1800   # Technical indicators (30 minutes)
+  sentiment: 3600    # Sentiment analysis (1 hour)
+
+# News sources configuration
+news_sources:
+  dongfang_fortune:
+    enabled: true
+    rate_limit_seconds: 2.0
+    timeout_seconds: 10
+  sina_finance:
+    enabled: true
+    rate_limit_seconds: 2.0
+    timeout_seconds: 10
+  securities_times:
+    enabled: false  # Disable if needed
+    rate_limit_seconds: 3.0
+    timeout_seconds: 10
+
+# Sentiment calculation weights (must sum to 1.0)
+sentiment_weights:
+  volume: 0.25       # Volume-based sentiment
+  price: 0.35        # Price movement sentiment
+  volatility: 0.15   # Volatility sentiment
+  capital: 0.15      # Capital flow sentiment
+  news: 0.10         # News sentiment
+
+# Cache configuration
+cache:
+  max_size_mb: 500              # Maximum cache database size
+  cleanup_interval: 86400       # Cleanup old entries daily
+  in_memory_max_items: 1000     # Max items in memory cache
+
+# Data storage paths (optional, defaults to ~/.stock-mcp-server/)
+# data_dir: "/path/to/data"
+# cache_db_path: "/path/to/cache.db"
+# log_dir: "/path/to/logs"
+

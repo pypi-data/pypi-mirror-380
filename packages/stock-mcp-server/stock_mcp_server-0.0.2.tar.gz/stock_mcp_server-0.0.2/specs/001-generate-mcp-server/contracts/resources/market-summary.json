@@ -1,0 +1,220 @@
+{
+  "uri_template": "market://summary/{date}",
+  "name": "market-summary",
+  "description": "Market summary resource providing comprehensive overview of index quotes, market breadth, trading volume, and key statistics for a specific date",
+  "mimeType": "application/json",
+  "parameters": {
+    "path": {
+      "date": {
+        "type": "string",
+        "description": "Trading date in YYYY-MM-DD format. Use 'latest' for most recent trading day",
+        "pattern": "^([0-9]{4}-[0-9]{2}-[0-9]{2}|latest)$",
+        "required": true,
+        "examples": ["2025-09-30", "latest"]
+      }
+    },
+    "query": {
+      "include_breadth": {
+        "type": "boolean",
+        "description": "Include detailed market breadth statistics",
+        "default": true
+      },
+      "include_valuation": {
+        "type": "boolean",
+        "description": "Include market valuation metrics",
+        "default": false
+      }
+    }
+  },
+  "responseSchema": {
+    "type": "object",
+    "properties": {
+      "uri": {
+        "type": "string",
+        "description": "Resource URI"
+      },
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "Trading date for this summary"
+      },
+      "index": {
+        "type": "object",
+        "description": "Shanghai Composite Index summary",
+        "properties": {
+          "code": { "type": "string" },
+          "name": { "type": "string" },
+          "close": { "type": "number" },
+          "change": { "type": "number" },
+          "change_pct": { "type": "number" },
+          "high": { "type": "number" },
+          "low": { "type": "number" },
+          "volume": { "type": "integer" },
+          "amount": { "type": "number" }
+        },
+        "required": ["code", "name", "close", "change_pct", "volume"]
+      },
+      "breadth": {
+        "type": ["object", "null"],
+        "description": "Market breadth statistics (if include_breadth=true)",
+        "properties": {
+          "total_stocks": { "type": "integer" },
+          "advancing": { "type": "integer" },
+          "declining": { "type": "integer" },
+          "unchanged": { "type": "integer" },
+          "limit_up": { "type": "integer" },
+          "limit_down": { "type": "integer" },
+          "advance_pct": { "type": "number" },
+          "decline_pct": { "type": "number" }
+        }
+      },
+      "valuation": {
+        "type": ["object", "null"],
+        "description": "Market valuation metrics (if include_valuation=true)",
+        "properties": {
+          "weighted_pe": { "type": "number", "description": "Weighted average P/E ratio" },
+          "median_pe": { "type": "number", "description": "Median P/E ratio" },
+          "weighted_pb": { "type": "number", "description": "Weighted average P/B ratio" },
+          "total_market_cap": { "type": "number", "description": "Total market capitalization (CNY)" }
+        }
+      },
+      "summary_text": {
+        "type": "string",
+        "description": "Human-readable summary in Chinese"
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "generated_at": { "type": "string", "format": "date-time" },
+          "data_source": { "type": "string" },
+          "cache_age_seconds": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "required": ["uri", "date", "index", "summary_text", "metadata"]
+  },
+  "examples": [
+    {
+      "description": "Get latest market summary",
+      "uri": "market://summary/latest",
+      "response": {
+        "uri": "market://summary/2025-09-30",
+        "date": "2025-09-30",
+        "index": {
+          "code": "000001",
+          "name": "上证指数",
+          "close": 3245.67,
+          "change": 10.67,
+          "change_pct": 0.33,
+          "high": 3250.00,
+          "low": 3228.00,
+          "volume": 28500000,
+          "amount": 345000000000
+        },
+        "breadth": {
+          "total_stocks": 5000,
+          "advancing": 2800,
+          "declining": 2100,
+          "unchanged": 100,
+          "limit_up": 45,
+          "limit_down": 12,
+          "advance_pct": 56.0,
+          "decline_pct": 42.0
+        },
+        "valuation": null,
+        "summary_text": "2025年9月30日，上证指数收于3245.67点，上涨0.33%。市场活跃，涨跌家数比56:42，涨停45家。成交额3450亿元，市场情绪偏乐观。",
+        "metadata": {
+          "generated_at": "2025-09-30T15:30:00+08:00",
+          "data_source": "akshare",
+          "cache_age_seconds": 300
+        }
+      }
+    },
+    {
+      "description": "Get specific date with valuation",
+      "uri": "market://summary/2025-09-15?include_valuation=true",
+      "response": {
+        "uri": "market://summary/2025-09-15",
+        "date": "2025-09-15",
+        "index": {
+          "code": "000001",
+          "name": "上证指数",
+          "close": 3180.25,
+          "change": -15.42,
+          "change_pct": -0.48,
+          "high": 3195.00,
+          "low": 3175.50,
+          "volume": 26800000,
+          "amount": 325000000000
+        },
+        "breadth": {
+          "total_stocks": 5000,
+          "advancing": 2100,
+          "declining": 2750,
+          "unchanged": 150,
+          "limit_up": 18,
+          "limit_down": 32,
+          "advance_pct": 42.0,
+          "decline_pct": 55.0
+        },
+        "valuation": {
+          "weighted_pe": 14.85,
+          "median_pe": 22.30,
+          "weighted_pb": 1.52,
+          "total_market_cap": 58500000000000
+        },
+        "summary_text": "2025年9月15日，上证指数收于3180.25点，下跌0.48%。市场偏弱，跌多涨少，跌停32家。估值合理，PE 14.85倍。",
+        "metadata": {
+          "generated_at": "2025-09-30T15:30:00+08:00",
+          "data_source": "cache",
+          "cache_age_seconds": 1296000
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": "INVALID_DATE",
+      "message": "Invalid date format or date in future",
+      "example": {
+        "uri": "market://summary/2026-01-01",
+        "response": {
+          "error": {
+            "code": "INVALID_DATE",
+            "message": "Date 2026-01-01 is in the future or invalid",
+            "details": "Market summary only available for past and present trading days"
+          }
+        }
+      }
+    },
+    {
+      "code": "NO_TRADING_DATA",
+      "message": "No trading data for specified date",
+      "example": {
+        "uri": "market://summary/2025-10-01",
+        "response": {
+          "error": {
+            "code": "NO_TRADING_DATA",
+            "message": "No trading data for 2025-10-01",
+            "details": "Market holiday or non-trading day. Try previous trading day."
+          }
+        }
+      }
+    }
+  ],
+  "caching": {
+    "ttl_seconds": 86400,
+    "cache_strategy": "Historical dates cached permanently, today cached for 5 minutes during trading, 24 hours after close"
+  },
+  "related_resources": [
+    "market://analysis/technical/{date}",
+    "market://sentiment/{date}",
+    "market://moneyflow/{date}"
+  ],
+  "notes": [
+    "Resources are read-only, use tools for queries with parameters",
+    "The 'latest' keyword always resolves to most recent trading day",
+    "Summary text is in Chinese for domestic market context",
+    "Valuation metrics updated weekly, may not reflect intraday changes"
+  ]
+}
