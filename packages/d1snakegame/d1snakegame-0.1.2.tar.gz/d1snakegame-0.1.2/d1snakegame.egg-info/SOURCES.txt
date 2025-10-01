@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+d1snake/__init__.py
+d1snake/__main__.py
+d1snake/game.py
+d1snakegame.egg-info/PKG-INFO
+d1snakegame.egg-info/SOURCES.txt
+d1snakegame.egg-info/dependency_links.txt
+d1snakegame.egg-info/entry_points.txt
+d1snakegame.egg-info/requires.txt
+d1snakegame.egg-info/top_level.txt
