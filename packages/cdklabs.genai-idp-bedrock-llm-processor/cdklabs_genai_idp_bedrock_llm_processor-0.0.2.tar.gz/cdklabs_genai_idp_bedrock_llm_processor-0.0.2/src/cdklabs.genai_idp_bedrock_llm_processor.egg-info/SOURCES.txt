@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdklabs.genai_idp_bedrock_llm_processor.egg-info/PKG-INFO
+src/cdklabs.genai_idp_bedrock_llm_processor.egg-info/SOURCES.txt
+src/cdklabs.genai_idp_bedrock_llm_processor.egg-info/dependency_links.txt
+src/cdklabs.genai_idp_bedrock_llm_processor.egg-info/requires.txt
+src/cdklabs.genai_idp_bedrock_llm_processor.egg-info/top_level.txt
+src/cdklabs/genai_idp_bedrock_llm_processor/__init__.py
+src/cdklabs/genai_idp_bedrock_llm_processor/py.typed
+src/cdklabs/genai_idp_bedrock_llm_processor/_jsii/__init__.py
+src/cdklabs/genai_idp_bedrock_llm_processor/_jsii/genai-idp-bedrock-llm-processor@0.0.2.jsii.tgz

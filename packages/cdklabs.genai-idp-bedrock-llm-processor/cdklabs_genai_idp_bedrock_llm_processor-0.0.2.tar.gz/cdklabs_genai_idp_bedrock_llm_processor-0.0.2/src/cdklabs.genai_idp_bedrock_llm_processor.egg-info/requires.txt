@@ -1,0 +1,10 @@
+aws-cdk-lib<3.0.0,>=2.214.0
+aws-cdk.aws-glue-alpha<3.0.0,>=2.214.0.a0
+aws-cdk.aws-lambda-python-alpha<3.0.0,>=2.214.0.a0
+aws-cdk.aws-sagemaker-alpha<3.0.0,>=2.214.0.a0
+cdklabs.genai-idp<0.0.2,>=0.0.1
+cdklabs.generative-ai-cdk-constructs<0.2.0,>=0.1.309
+constructs<11.0.0,>=10.4.2
+jsii<2.0.0,>=1.114.1
+publication>=0.0.3
+typeguard<4.3.0,>=2.13.3
