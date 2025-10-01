@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: nb_execute
+Version: 1.0.0
+Summary: Notebook Execution with Disconnected Outputs for Jupyter Notebooks
+Author: Zubin Kane
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Sclamy/NotebookExecute
+Project-URL: Issues, https://github.com/Sclamy/NotebookExecute/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: nbclient>=0.10.2
+Requires-Dist: jupyter_client>=8.6.3
+Requires-Dist: ipykernel>=6.30.1
+
+# Notebook Execute for Jupyter Notebooks
+  - Ensures outputs when running notebooks remotely, disconnecting, and reconnecting
+  - Optional live execute so changes are visible during partial execution
