@@ -1,0 +1,10 @@
+colablink/__init__.py,sha256=AHZ_Bb9PTsvGamQCc8D5fTv7VGQR1KLueZElFQYQpsc,290
+colablink/cli.py,sha256=B7VCAu5Cvq3jTgqZjWBFLo5OsaUMcP-TchxYksCDewU,3234
+colablink/client.py,sha256=wf2hplxpfh5SXhXNX6EdtQYagDMAy4IG-ohM5P_uxN0,12290
+colablink/runtime.py,sha256=v6fkOv20h3ImvhKdkV0ygISzLDWGxQsRITsnlDsHHyo,11881
+colablink-1.0.0.dist-info/licenses/LICENSE,sha256=YHopPdWHcAkHhB9XnSBjZmghefw3-T8rKhF2e6pdAd8,1072
+colablink-1.0.0.dist-info/METADATA,sha256=Q2nJUvW0G7V-n3aRO7aQZshhK_pgYq0NeJs-A2tfzto,21468
+colablink-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+colablink-1.0.0.dist-info/entry_points.txt,sha256=lx1FFdo0NV7eok2W7K_fpOZmcMNkbsrFKQZdGQOCGF0,49
+colablink-1.0.0.dist-info/top_level.txt,sha256=gYGuzfsZhf0Hyk6yboBR6gCYvXORsos-IpN0QRL8Tpg,10
+colablink-1.0.0.dist-info/RECORD,,

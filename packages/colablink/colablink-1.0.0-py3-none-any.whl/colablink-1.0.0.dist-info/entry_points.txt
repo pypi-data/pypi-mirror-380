@@ -1,0 +1,2 @@
+[console_scripts]
+colablink = colablink.cli:main
