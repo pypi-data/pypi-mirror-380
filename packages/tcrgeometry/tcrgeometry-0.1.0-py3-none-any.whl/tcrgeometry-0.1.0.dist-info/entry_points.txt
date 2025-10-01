@@ -1,0 +1,5 @@
+[console_scripts]
+trangle-calc = trangle.calc_geometry:main
+trangle-calc-md = trangle.calc_geometry_MD:main
+trangle-change = trangle.change_geometry:main
+trangle-extract = trangle.get_anchor_coords:main
