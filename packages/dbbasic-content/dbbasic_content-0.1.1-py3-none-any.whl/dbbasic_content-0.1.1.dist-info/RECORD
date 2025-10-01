@@ -1,0 +1,11 @@
+dbbasic_content/__init__.py,sha256=PVQnMzpjxX_pPc7X09cYXQ06d2FzfB4oip52S9M9XBY,307
+dbbasic_content/blocks.py,sha256=TOw0vsWznP1NIuefDFmpdixyTHkWrl-NZ-sXG-GuckI,3629
+dbbasic_content/cli.py,sha256=UE74QJfCSPPpikNmrmLtwYNI1P80GMQmk1hXiz7v2gA,9075
+dbbasic_content/content.py,sha256=Bt72H1amPRFZ0LswxyMMK4j3dYpW3mU79RLb6d1UKTc,8833
+dbbasic_content/wordpress_importer.py,sha256=9rrRqc09lqiQpAJU8cSrC5JrYX3hvxxyBpXHiN3jSPg,11526
+dbbasic_content-0.1.1.dist-info/licenses/LICENSE,sha256=t4Z-ptXmxGJOyG31Oyfks0-vGYDnrKfX5dNHAIFOuyw,1071
+dbbasic_content-0.1.1.dist-info/METADATA,sha256=3DNCo85Y30nFSc8GK3_shLqbmgQZj3OZFzlbiP4hdRs,7452
+dbbasic_content-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dbbasic_content-0.1.1.dist-info/entry_points.txt,sha256=wYr-Sigf2yfCDycoy0VthgHAIiioTWGcLHOCsd7Q5_Q,55
+dbbasic_content-0.1.1.dist-info/top_level.txt,sha256=W-D3OKHuxCR-S1x8y7RPAHTevWHtZhBoZcJRriI3zxs,16
+dbbasic_content-0.1.1.dist-info/RECORD,,
