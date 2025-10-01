@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-timeserver = mcp_timeserver:main
