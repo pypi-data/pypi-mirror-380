@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: tkr_pytket_worker
+Version: 0.1.4
+Summary: A tierkreis worker for pytket.
+Requires-Python: >=3.12
+Requires-Dist: pytket
+Requires-Dist: pytket-qir
+Requires-Dist: pytket-qirpass
+Requires-Dist: pytket-qiskit
+Requires-Dist: pytket-quantinuum
+Requires-Dist: tierkreis
+Description-Content-Type: text/markdown
+
+# pytket_worker
