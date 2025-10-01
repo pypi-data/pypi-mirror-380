@@ -1,0 +1,6 @@
+loguru>=0.7
+colorama>=0.4.6
+loguru>=0.7.3
+setuptools>=78.1.1
+wheel>=0.45.1
+win32_setctime>=1.2.0
