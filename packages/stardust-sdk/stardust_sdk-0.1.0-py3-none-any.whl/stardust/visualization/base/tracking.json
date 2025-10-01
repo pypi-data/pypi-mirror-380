@@ -1,0 +1,82 @@
+{
+  "taskParams": {
+    "type": "include",
+    "value": {
+      "record": {
+        "metadata": {},
+        "attachment": [],
+        "attachmentType": "POINTCLOUD_SEQUENCE"
+      },
+      "version": "1.0.0",
+      "operators": [
+        {
+          "label": "Point cloud bounding box",
+          "slotSpecification": {
+            "presetSizes": [],
+            "imageSourceMapping": [
+              "box2d-[b274c]"
+            ],
+            "consistentSize": true,
+            "type": "box3d"
+          },
+          "metadata": {},
+          "instanceOption": {},
+          "key": "box3d-[750fb]",
+          "type": "slotChildren",
+          "children": [
+            {
+              "label": "Mapped bounding box",
+              "slotSpecification": {
+                "topLeftMark": "1",
+                "topRightMark": "2",
+                "bottomLeftMark": "4",
+                "bottomRightMark": "3",
+                "restrictInsideCanvasBoundary": true,
+                "type": "box2d"
+              },
+              "metadata": {},
+              "instanceOption": {},
+              "key": "box2d-[b274c]",
+              "type": "slot"
+            }
+          ]
+        },
+        {
+          "label": "Standalone bounding box",
+          "slotSpecification": {
+            "sizeCheckSwitch": false,
+            "topLeftMark": "1",
+            "topRightMark": "2",
+            "bottomLeftMark": "4",
+            "bottomRightMark": "3",
+            "restrictInsideCanvasBoundary": true,
+            "type": "box2d"
+          },
+          "metadata": {},
+          "instanceOption": {},
+          "key": "box2d-[0d3ed]",
+          "type": "slot"
+        }
+      ]
+    }
+  },
+  "taskResult": {
+    "notes": [],
+    "issues": [],
+    "annotations": [
+      {
+        "key": "box3d-[750fb]",
+        "type": "slotChildren",
+        "label": "Point cloud bounding box",
+        "slotsChildren": []
+      },
+      {
+        "key": "box2d-[0d3ed]",
+        "type": "slot",
+        "label": "Standalone bounding box",
+        "slots": []
+      }
+    ]
+  },
+  "algorithms": []
+}
