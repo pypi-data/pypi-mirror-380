@@ -1,0 +1,190 @@
+# YouTube Short Search
+
+A Python library for searching YouTube shorts and retrieving metadata including title, views, and URL.
+
+## Features
+
+- Search for YouTube shorts using query strings
+- Retrieve video metadata (title, views, URL, channel, etc.)
+- Support for both YouTube Data API v3 and web scraping fallback
+- Type hints and comprehensive error handling
+- Easy to use and integrate
+
+## Installation
+
+```bash
+pip install youtube-short-search
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+from youtube_short_search import YouTubeShortSearcher
+
+# Initialize searcher (with API key - recommended)
+searcher = YouTubeShortSearcher(api_key="YOUR_YOUTUBE_API_KEY")
+
+# Search for shorts
+results = searcher.search_shorts("funny cats", max_results=5)
+
+for video in results:
+    print(f"Title: {video['title']}")
+    print(f"Views: {video['views']}")
+    print(f"URL: {video['url']}")
+    print(f"Channel: {video['channel']}")
+    print("-" * 50)
+```
+
+### Without API Key (Web Scraping)
+
+```python
+from youtube_short_search import YouTubeShortSearcher
+
+# Initialize searcher without API key (less reliable)
+searcher = YouTubeShortSearcher()
+
+try:
+    results = searcher.search_shorts("cooking tips", max_results=3)
+    for video in results:
+        print(f"{video['title']} - {video['views']}")
+except Exception as e:
+    print(f"Error: {e}")
+```
+
+### Get Video Details
+
+```python
+from youtube_short_search import YouTubeShortSearcher
+
+searcher = YouTubeShortSearcher(api_key="YOUR_YOUTUBE_API_KEY")
+
+# Get details for a specific video
+video_url = "https://www.youtube.com/watch?v=VIDEO_ID"
+details = searcher.get_video_details(video_url)
+
+print(f"Title: {details['title']}")
+print(f"Views: {details['views']}")
+print(f"Likes: {details['likes']}")
+```
+
+## API Key Setup
+
+To use the YouTube Data API v3 (recommended for reliability):
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the YouTube Data API v3
+4. Create credentials (API Key)
+5. Use the API key in your code
+
+```python
+searcher = YouTubeShortSearcher(api_key="YOUR_API_KEY_HERE")
+```
+
+## Response Format
+
+Each video result contains the following information:
+
+```python
+{
+    'title': 'Video Title',
+    'views': '1.2M views',
+    'url': 'https://www.youtube.com/watch?v=VIDEO_ID',
+    'channel': 'Channel Name',
+    'published': '2023-01-01T00:00:00Z',
+    'description': 'Video description...'
+}
+```
+
+## Error Handling
+
+The library provides custom exceptions for different error cases:
+
+```python
+from youtube_short_search import (
+    YouTubeShortSearcher,
+    YouTubeSearchError,
+    InvalidSearchQueryError,
+    APIKeyError,
+    NetworkError,
+    NoResultsFoundError
+)
+
+searcher = YouTubeShortSearcher(api_key="YOUR_API_KEY")
+
+try:
+    results = searcher.search_shorts("python tutorials")
+except InvalidSearchQueryError:
+    print("Search query is invalid")
+except APIKeyError:
+    print("API key is invalid or missing")
+except NetworkError:
+    print("Network connection error")
+except NoResultsFoundError:
+    print("No shorts found for this query")
+except YouTubeSearchError as e:
+    print(f"General error: {e}")
+```
+
+## Requirements
+
+- Python 3.7+
+- requests library
+
+## Development
+
+### Setting up for development
+
+```bash
+git clone https://github.com/yourusername/youtube-short-search.git
+cd youtube-short-search
+
+# Install in development mode
+pip install -e .[dev]
+
+# Run tests
+pytest
+
+# Format code
+black .
+
+# Type checking
+mypy youtube_short_search/
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=youtube_short_search
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This library is for educational and research purposes. Please respect YouTube's Terms of Service and rate limits when using this library. The web scraping functionality is provided as a fallback but using the official YouTube Data API is strongly recommended.
+
+## Changelog
+
+### 0.1.0 (2024-01-01)
+- Initial release
+- Support for YouTube shorts search
+- API and web scraping methods
+- Comprehensive error handling
+- Type hints support
