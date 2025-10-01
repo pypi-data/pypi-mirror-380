@@ -1,0 +1,32 @@
+Apache License
+================
+NOTICE file corresponding to modifications made to oneTBB
+
+Modified Files:
+----------------
+1. CMakeLists.txt
+   - Added/modified build configuration settings
+   - Date of modification: 2025-02-18
+   - Modified by: AdvaScope s.r.o.
+
+2. profiling.h
+   - Fixed mingw build
+   - Date of modification: 2025-02-18
+   - Modified by: AdvaScope s.r.o.
+
+Original Library Information:
+---------------------------
+oneTBB
+Copyright 2024 Intel Corporation
+All rights reserved.
+
+Modified Library Information:
+---------------------------
+Copyright 2025 AdvaScope s.r.o.
+All rights reserved.
+
+Additional Notes:
+----------------
+This distribution contains modifications made to the original Apache-licensed source code.
+The original library remains under the Apache License, Version 2.0, and these modifications
+are also distributed under the same license terms.
