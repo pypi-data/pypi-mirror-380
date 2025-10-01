@@ -1,0 +1,12 @@
+rexa/__init__.py,sha256=E0aZJvzwk__Yj7NJlxqfNzSUKItdRHm70h9DR3MC_dc,1878
+rexa/conversion.py,sha256=vmPx7VY1yDXsIqv4WuDMKzFOiJD3uQTsXdybnua0SnI,2573
+rexa/extraction.py,sha256=tV7C3RkDD41E49SwtJHpV1DsidmE0Ava3EAulIWMHSw,2523
+rexa/formatting.py,sha256=MeiFfKyvR7-_VT-W5kCRP0gntrV5kmLyOXH5nVnM7WU,1823
+rexa/regex_mapper.py,sha256=1ZpmRBoE-DWVYOmN-7GeL3bT3mAa5XpjCluWnZ2WfNs,14772
+rexa/texttools.py,sha256=CtNJX6OS51R9_HPg_NFbPo12Uo7e--xn9D14_X5ZRsc,3312
+rexa/validation.py,sha256=yfME_ASht3lKFsnGIc0s5y1NgjQUiGI-8BtoO-AeF9g,16350
+rexa-1.0.4.dist-info/licenses/LICENSE.txt,sha256=kKF1yc6HM58tPyEwIhco1RBcYj9i5asjbupPPwNPepM,1071
+rexa-1.0.4.dist-info/METADATA,sha256=bo25lskGBQxcy7-IAUMRJDKB7aFLXLyx9GXDzWTslCA,11539
+rexa-1.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+rexa-1.0.4.dist-info/top_level.txt,sha256=cEA2UMVanfGGF-xEmuqoogn-wtnTTuDk9izzm2Eea3g,5
+rexa-1.0.4.dist-info/RECORD,,
