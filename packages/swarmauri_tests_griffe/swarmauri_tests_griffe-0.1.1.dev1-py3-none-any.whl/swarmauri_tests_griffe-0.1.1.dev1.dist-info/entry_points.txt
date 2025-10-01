@@ -1,0 +1,3 @@
+[pytest11]
+swarmauri_tests_griffe=swarmauri_tests_griffe
+
