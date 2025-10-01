@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: cerb-code
+Version: 0.1.5
+Summary: Terminal UI for managing multiple Claude sessions with tmux
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: textual>=5.3.0
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: fastapi>=0.117.1
+Requires-Dist: uvicorn>=0.37.0
+Requires-Dist: requests==2.30.0
+Requires-Dist: claude-agent-sdk>=0.1.0
