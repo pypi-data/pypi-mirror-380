@@ -1,0 +1,2 @@
+[console_scripts]
+typing-speed-test = typing_speed_test.main:typing_speed_test
