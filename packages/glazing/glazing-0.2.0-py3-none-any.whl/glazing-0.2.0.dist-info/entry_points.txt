@@ -1,0 +1,2 @@
+[console_scripts]
+glazing = glazing.cli:cli
