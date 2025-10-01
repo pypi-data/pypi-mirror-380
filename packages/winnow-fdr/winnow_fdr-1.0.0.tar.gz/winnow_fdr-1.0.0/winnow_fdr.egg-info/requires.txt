@@ -1,0 +1,5 @@
+jax>=0.5.2
+koinapy>=0.0.10
+tomli>=2.2.1
+typer>=0.15.2
+instanovo>=1.1.4
