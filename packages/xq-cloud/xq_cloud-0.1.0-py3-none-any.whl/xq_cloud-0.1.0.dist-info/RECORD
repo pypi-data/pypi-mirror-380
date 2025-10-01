@@ -1,0 +1,15 @@
+xq_cloud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xq_cloud/backend.py,sha256=iPAIvp1GzEvPELLhcA5av4CIYu2sQTl-pkXyaT-a968,6428
+xq_cloud/client.py,sha256=uhwmUROPMHVQe2f2PZRqWiXodVlNh_Cm_N4Ftu3J8JE,6234
+xq_cloud/estimator.py,sha256=xHQskDP3iS0UAlhiydnXZa6f5CGGhYpBJCc7b_V-0JM,11011
+xq_cloud/gates.py,sha256=Qb00b-70hwrXsZn1bk5NMaODO3f5mJU2oTnrGUaojnk,1292
+xq_cloud/passes.py,sha256=N3Rndp06pEQjHUKQgia31tGRP0m8QwbAsJO8ZfZx9no,4039
+xq_cloud/provider.py,sha256=Eg7j7HxhDqecwLivG1Ngibk1tLy_dlxlWG7DZ00bec8,1609
+xq_cloud/schemas.py,sha256=9Z8SD2gAVvr6R2_t6h7c1SEWeV8t3hWKAFzEx5ooXqk,1237
+xq_cloud/target.py,sha256=BCdo0uvFj-Z_rskGrkbgYDJ1D624DlHy4lhJSo6ey5k,2985
+xq_cloud/transpiler.py,sha256=vrKUleyq8_zFlLauoMjbRI-GgKpmzUdMiYItIQ90LBY,3504
+xq_cloud/util.py,sha256=W7ad93aaInkj_D_Sb3BnVfUGNnqZggFAVgBrPDxCkjQ,5815
+xq_cloud-0.1.0.dist-info/WHEEL,sha256=Pi5uDq5Fdo_Rr-HD5h9BiPn9Et29Y9Sh8NhcJNnFU1c,79
+xq_cloud-0.1.0.dist-info/entry_points.txt,sha256=oMHVAsgpvrOXETFaKfShGUjvYVMoFuxxy6hzNhwpZQM,44
+xq_cloud-0.1.0.dist-info/METADATA,sha256=NCj_HTjPvS5Ud3v4jbhJca5BBPD3RIQROtdMciCBsO4,381
+xq_cloud-0.1.0.dist-info/RECORD,,
