@@ -1,0 +1,10 @@
+haystack_test_package/__init__.py,sha256=_XV9uYskJeiiu8Gj8k2Bxp2IWVgE3iJULbis-28n8D8,75
+haystack_test_package/app.py,sha256=xP3YufxkbLtqLBB-TfbBcKcgkxDdKvK1BCtSwwfXm5k,4719
+haystack_test_package/cache.py,sha256=splvWqEvX4wi_vAUXUKe09W78L5mMjrushPOX9GvJ2k,505
+haystack_test_package/dynamo.py,sha256=1WeQReIZHX3YvjC6abwznqN67-Lax_YEMJ9z_xqw0Z4,3312
+haystack_test_package/model_store.py,sha256=43JpsJBKloCfqV0Cq4jREcsBCbWmfO5QqXOKaHzB5i4,1189
+haystack_test_package/settings.py,sha256=2JH-H7NtKaVbc11jq4Yl3h5TjCve98g--8pqNvQjfj4,574
+haystack_test_package-0.1.2.dist-info/METADATA,sha256=3_1bd5qHUqAVF7xdX3hXhiymiDbVcuoQiZBRbVkCa2g,456
+haystack_test_package-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+haystack_test_package-0.1.2.dist-info/top_level.txt,sha256=SupzQ0F2ZJsSu5HA1JXdfEvkiO8aX1w-Jom-kw-xpVA,22
+haystack_test_package-0.1.2.dist-info/RECORD,,
