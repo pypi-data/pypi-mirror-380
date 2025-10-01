@@ -1,0 +1,14 @@
+TeLLMgramBot/TeLLMgramBot.py,sha256=7mwqVm6w59OlUQ1yQ76eXkI8NJO7Tws7HnAgyn3wYC8,16132
+TeLLMgramBot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TeLLMgramBot/conversation.py,sha256=aKTNp2NQxCmK6dUSvhr4aEOGLXU8gxjxAG3HU_nRXC0,8384
+TeLLMgramBot/initialize.py,sha256=f7PYD_iNvLkeVihsLYf4fn0dRey0M3o9_x8pmrp-UKE,7889
+TeLLMgramBot/message_handlers.py,sha256=LdvdLNtuy5pkr0-2AIOO6Oe5lsbMVcCxLP3Etz-yydo,5366
+TeLLMgramBot/openai_singleton.py,sha256=ohn63jfU0axA9z_bEqn2NwY_DdlozL2fBGVYyQ4IkRw,292
+TeLLMgramBot/tokenGPT.py,sha256=4Sa_f3MD8NU9XQWXjGrc19684xH-aXKfOgouicX6t_I,3550
+TeLLMgramBot/utils.py,sha256=Opzt420x6vcxE0g4uhcg5IEEqnesTmtWW8_w7Bzh3s4,2169
+TeLLMgramBot/web_utils.py,sha256=UVR-To2ndPQt6nzKBPUPW0UUoIXhwvrUEPsFIFcLN8k,5902
+tellmgrambot-2.0.0.dist-info/licenses/LICENSE,sha256=uBF1zrKj8sOR71tYik8nMKb7NmMQNbmoCSTOgtpOILY,1071
+tellmgrambot-2.0.0.dist-info/METADATA,sha256=vOfPv5vLI24VZ0JcdWoQVQUEaiSuZmLs9lVWu2fzDag,8306
+tellmgrambot-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tellmgrambot-2.0.0.dist-info/top_level.txt,sha256=m3ZBau_GeJPbVnUePrycto4GCCt1qum0hunIOKqMg4s,13
+tellmgrambot-2.0.0.dist-info/RECORD,,
