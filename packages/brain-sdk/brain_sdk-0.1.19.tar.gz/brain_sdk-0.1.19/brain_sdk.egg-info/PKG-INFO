@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: brain_sdk
+Version: 0.1.19
+Summary: Python SDK for authorized users
+Author: SDK Team
+License: Proprietary
+Keywords: sdk,authorized
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: requests>=2.28
+Requires-Dist: pydantic>=2.0
+Requires-Dist: litellm
+Requires-Dist: psutil
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: aiohttp>=3.8
+Requires-Dist: websockets
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=7.4; extra == "dev"
+Requires-Dist: pytest-asyncio<0.24,>=0.21; extra == "dev"
+Requires-Dist: pytest-cov<5,>=4.1; extra == "dev"
+Requires-Dist: responses<0.26,>=0.23; extra == "dev"
+Requires-Dist: respx<0.22,>=0.20; extra == "dev"
+Requires-Dist: freezegun<2,>=1.2; extra == "dev"
+Requires-Dist: syrupy<5,>=4; extra == "dev"
+Requires-Dist: hypothesis<7,>=6.88; extra == "dev"
+Requires-Dist: pytest-socket<0.8,>=0.6; extra == "dev"
+Dynamic: license-file
+
+# Brain SDK
+
+![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen.svg)
+
+A Python SDK for authorized users.
+
+## Installation
+
+```bash
+pip install brain_sdk
+```
+
+## Usage
+
+For authorized users only. Contact support for documentation
+
+## Testing
+
+```bash
+python -m pip install -e '.[dev]'
+coverage run -m pytest \
+  tests/test_agent_helpers.py \
+  tests/test_agent_networking.py \
+  tests/test_agent_brain.py \
+  tests/test_agent_core.py \
+  tests/test_agent_call.py \
+  tests/test_agent_integration.py \
+  tests/test_memory_client_core.py \
+  tests/test_rate_limiter_core.py \
+  tests/test_result_cache.py \
+  tests/test_execution_context_core.py \
+  tests/test_execution_state.py \
+  tests/test_client.py \
+  tests/test_memory_events.py \
+  tests/test_memory_flow_core.py
+coverage report --skip-covered --omit='.venv/*'
+```
+
+The curated test set above keeps `brain_sdk.client`, `brain_sdk.agent_brain`, execution context/state primitives, and memory/rate-limiter utilities above the 80% coverage threshold required for public releases.
