@@ -1,0 +1,20 @@
+# Exclude virtual environment and cache files
+exclude env/*
+exclude venv/*
+exclude test/*
+exclude tests/*
+exclude doc/*
+exclude *.ipynb
+exclude *.pyc
+exclude __pycache__/*
+
+# Exclude Git-related files and folders
+exclude .gitignore
+exclude .gitattributes
+exclude .git/*
+
+
+# Exclude CI/CD & workflow files
+recursive-exclude .github *
+recursive-exclude .vscode *
+recursive-exclude .idea *
