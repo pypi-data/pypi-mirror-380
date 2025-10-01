@@ -1,0 +1,8 @@
+dill
+globus_sdk
+pyyaml
+colorama
+omas
+
+[test]
+pytest
