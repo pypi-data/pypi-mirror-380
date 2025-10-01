@@ -1,0 +1,332 @@
+# SweetiePy - Type 1 Diabetes Data Analysis
+
+[![PyPI version](https://badge.fury.io/py/sweetiepy.svg)](https://badge.fury.io/py/sweetiepy)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+
+A Python package for accessing and analyzing Type 1 diabetes data from a DIY Loop system stored in MongoDB Atlas. Get insights from your CGM data, correlate pump settings with glucose outcomes, and optimize your diabetes management with data-driven analysis.
+
+## ⚡ Quick Start (5 minutes)
+
+### 1. Install SweetiePy
+
+**Option A: Using uv (recommended)**
+```bash
+# Install uv if you don't have it
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create project and install sweetiepy
+mkdir my-diabetes-analysis && cd my-diabetes-analysis
+uv init --name my-diabetes-analysis
+uv add sweetiepy
+```
+
+**Option B: Using pip**
+```bash
+mkdir my-diabetes-analysis && cd my-diabetes-analysis
+pip install sweetiepy
+```
+
+### 2. Configure Database
+
+Create a `.env` file with your MongoDB Atlas credentials:
+
+```bash
+# Get these from your MongoDB Atlas dashboard
+MONGODB_USERNAME=your_username
+MONGODB_PW=your_password
+
+# Change 'yourcluster' to your actual cluster name
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.yourcluster.mongodb.net/?retryWrites=true&w=majority
+
+# Database name (usually this for Loop systems)
+MONGODB_DATABASE=myCGMitc
+```
+
+**⚠️ Important**: Keep `<username>` and `<password>` in the URI exactly as shown!
+
+### 3. Test & Analyze
+
+```python
+from sweetiepy.data.cgm import CGMDataAccess
+
+# Test connection and get glucose data
+with CGMDataAccess() as cgm:
+    df = cgm.get_dataframe_for_period('last_week')
+    
+    print(f"📊 {len(df)} glucose readings analyzed")
+    print(f"📅 Date range: {df['datetime'].min()} to {df['datetime'].max()}")
+    print(f"🩸 Average glucose: {df['sgv'].mean():.1f} mg/dL")
+    
+    # Calculate time in range manually (safe approach)
+    total_readings = len(df)
+    in_range = ((df['sgv'] >= 70) & (df['sgv'] <= 180)).sum()
+    high = (df['sgv'] > 180).sum() 
+    low = (df['sgv'] < 70).sum()
+    
+    print(f"🎯 Time in range (70-180): {in_range/total_readings*100:.1f}%")
+    print(f"📈 Time high (>180): {high/total_readings*100:.1f}%")
+    print(f"📉 Time low (<70): {low/total_readings*100:.1f}%")
+```
+
+### 4. Advanced: Correlate CGM + Pump Settings
+
+```python
+from sweetiepy.data.merged import MergedDataAccess
+
+# Analyze how pump settings affect glucose outcomes
+with MergedDataAccess() as merged:
+    df = merged.get_merged_cgm_and_settings(days=7)
+    correlations = merged.analyze_settings_correlation(df)
+    
+    print("🔗 How settings correlate with glucose:")
+    for setting, correlation in correlations['correlations'].items():
+        direction = "higher" if correlation > 0 else "lower"
+        print(f"   {setting}: {correlation:+.3f} ({direction} setting → higher glucose)")
+```
+
+**🎉 That's it!** You're now analyzing your diabetes data with Python.
+
+---
+
+## Features
+
+- 📊 **CGM Data Analysis** - Access and analyze continuous glucose monitor data
+- 💉 **Pump Data Integration** - Query insulin doses, basal rates, and treatment data  
+- 🔗 **Merged Data Analysis** - **Key Innovation**: Synchronize CGM readings with active pump settings at each timestamp
+- 📈 **Time-Series Analysis** - Built-in time-in-range calculations and statistics
+- 🎯 **Settings Correlation** - Analyze how basal rates, carb ratios, and ISF affect glucose outcomes
+- 🔍 **Flexible Queries** - Predefined periods or custom date ranges
+- 🚀 **High Performance** - PyArrow-backed DataFrames for efficient processing
+- 🔐 **Secure** - Environment-based configuration for credentials
+
+## 🔧 Troubleshooting
+
+### Connection Issues
+**"Connection failed" or "Authentication failed"**
+1. **Double-check credentials**: Verify username/password in MongoDB Atlas dashboard
+2. **Check cluster name**: Make sure cluster name in `MONGODB_URI` matches your Atlas cluster
+3. **Test with MongoDB Compass**: Try connecting with the GUI first to verify credentials
+4. **Database permissions**: Ensure your user has read access to `myCGMitc` database
+
+### Import Errors
+**"Module not found" errors**
+- Make sure you installed: `pip install sweetiepy` or `uv add sweetiepy`
+- Try in a fresh virtual environment
+- Check Python version: requires 3.12+
+
+### No Data Found
+**"No recent readings" or empty DataFrames**
+- This is normal if your CGM hasn't uploaded data recently
+- Try a longer time period: `get_dataframe_for_period('last_month')`
+- Check your database name matches your Loop system
+
+### Code/Formatting Errors
+**"Format specifier missing precision" or syntax errors**
+- When copying from README, watch for line breaks in f-strings
+- Use the safe manual calculation approach if `analyze_dataframe` has issues:
+  ```python
+  # Safe approach - always works
+  total = len(df)
+  in_range = ((df['sgv'] >= 70) & (df['sgv'] <= 180)).sum()
+  print(f"Time in range: {in_range/total*100:.1f}%")
+  ```
+
+### Still having issues?
+Run the connection test:
+```bash
+python -m sweetiepy.connection.mongodb
+```
+
+Expected output:
+```
+✓ Connected to MongoDB database: myCGMitc
+Available databases: ['myCGMitc', ...]
+Collections in myCGMitc: ['entries', 'treatments', ...]
+```
+
+---
+
+## 📚 Complete Usage Examples
+
+### Basic CGM Analysis
+
+```python
+from sweetiepy.data.cgm import CGMDataAccess
+
+# Context manager handles connection automatically
+with CGMDataAccess() as cgm:
+    # Get last week's data
+    df = cgm.get_dataframe_for_period('last_week')
+    analysis = cgm.analyze_dataframe(df)
+    
+    print(f"📊 Analyzed {len(df)} glucose readings")
+    print(f"📅 Date range: {df['datetime'].min()} to {df['datetime'].max()}")
+    print(f"🩸 Average: {analysis['basic_stats']['avg_glucose']:.1f} mg/dL")
+    print(f"🎯 Time in range (70-180): {analysis['time_in_range']['normal_percent']:.1f}%")
+    print(f"📈 Time high (>180): {analysis['time_in_range']['high_percent']:.1f}%")
+    print(f"📉 Time low (<70): {analysis['time_in_range']['low_percent']:.1f}%")
+```
+
+### Advanced: Settings Correlation Analysis
+
+```python
+from sweetiepy.data.merged import MergedDataAccess
+
+# Correlate CGM readings with active pump settings
+with MergedDataAccess() as merged:
+    # Get CGM data with pump settings active at each timestamp
+    df = merged.get_merged_cgm_and_settings(days=7)
+    
+    # Analyze how settings affect glucose outcomes  
+    correlations = merged.analyze_settings_correlation(df)
+    
+    print("🔗 Settings impact on glucose:")
+    for setting, correlation in correlations['correlations'].items():
+        impact = "raises" if correlation > 0 else "lowers"
+        strength = "strong" if abs(correlation) > 0.5 else "moderate" if abs(correlation) > 0.3 else "weak"
+        print(f"   📈 {setting}: {correlation:+.3f} ({strength} - higher setting {impact} glucose)")
+```
+
+### Time Pattern Analysis
+
+```python
+from sweetiepy.data.cgm import CGMDataAccess
+import matplotlib.pyplot as plt
+
+with CGMDataAccess() as cgm:
+    df = cgm.get_dataframe_for_period('last_month')
+    
+    # Hourly patterns
+    hourly_avg = df.groupby(df['datetime'].dt.hour)['sgv'].mean()
+    
+    # Find problematic hours
+    high_hours = hourly_avg[hourly_avg > 180]
+    print(f"⚠️  Hours with average glucose > 180: {list(high_hours.index)}")
+    
+    # Daily patterns
+    daily_avg = df.groupby(df['datetime'].dt.day_name())['sgv'].mean()
+    print(f"📅 Average glucose by day:\n{daily_avg.round(1)}")
+```
+
+## 🗃️ Data Overview
+
+SweetiePy works with DIY Loop diabetes data stored in MongoDB Atlas. Your database typically contains:
+
+- **📊 `entries`** - CGM glucose readings (primary data - usually 200K+ readings)
+- **💉 `treatments`** - Insulin doses, carbs, basal changes
+- **⚙️ `profile`** - Pump settings (basal rates, carb ratios, ISF)
+- **📱 `devicestatus`** - Loop system status and connectivity
+- **🍎 `food`** - Food logs and carbohydrate entries
+- **🏃 `activity`** - Exercise and activity logs
+
+### Key Data Points
+- **Glucose readings**: Every 1-5 minutes from your CGM
+- **Insulin treatments**: Bolus doses, temporary basals
+- **Pump settings**: Time-scheduled basal rates, carb ratios, insulin sensitivity factors
+- **Treatment context**: Recent insulin/carbs for each glucose reading
+
+## 📊 Available Analysis Types
+
+- **Time-in-Range Analysis**: Calculate % time in target, high, low ranges
+- **Time Pattern Analysis**: Identify hourly/daily glucose patterns
+- **Settings Correlation**: How basal rates, carb ratios, ISF affect glucose
+- **Treatment Analysis**: Insulin doses, carb entries, pump adjustments
+- **Custom Queries**: Flexible date ranges and time periods
+
+## 📋 Installation Options
+
+### For End Users
+
+**Option A: Using uv (recommended)**
+```bash
+# Install uv if you don't have it
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create project and install sweetiepy
+mkdir my-diabetes-analysis && cd my-diabetes-analysis
+uv init --name my-diabetes-analysis
+uv add sweetiepy
+```
+
+**Option B: Using pip**
+```bash
+pip install sweetiepy
+```
+
+### For Developers
+```bash
+# Clone and install from source
+git clone <repository-url>
+cd sweetiepy
+uv sync
+uv pip install -e .
+```
+
+## 📚 API Reference
+
+### CGMDataAccess - Glucose Data
+```python
+from sweetiepy.data.cgm import CGMDataAccess
+
+with CGMDataAccess() as cgm:
+    # Standard periods: 'last_24h', 'last_week', 'last_month', 'last_3_months'
+    df = cgm.get_dataframe_for_period('last_week')
+    analysis = cgm.analyze_dataframe(df)
+```
+
+### PumpDataAccess - Treatment Data  
+```python
+from sweetiepy.data.pump import PumpDataAccess
+
+with PumpDataAccess() as pump:
+    boluses = pump.get_bolus_data(days=7)      # Insulin doses
+    carbs = pump.get_carb_data(days=7)         # Carb entries  
+    basals = pump.get_basal_data(days=7)       # Temp basals
+    profile = pump.get_basal_profile()         # Basal schedule
+```
+
+### MergedDataAccess - Settings Correlation
+```python
+from sweetiepy.data.merged import MergedDataAccess
+
+with MergedDataAccess() as merged:
+    # CGM data + active pump settings at each timestamp
+    df = merged.get_merged_cgm_and_settings(days=7)
+    correlations = merged.analyze_settings_correlation(df)
+```
+---
+
+## 💼 Package Information
+
+- **📦 PyPI**: [sweetiepy](https://pypi.org/project/sweetiepy/)
+- **📜 License**: MIT  
+- **🐍 Python**: 3.12+
+- **📦 Dependencies**: pymongo, pandas, pyarrow, python-dotenv, python-dateutil, matplotlib, plotly
+
+## 🔒 Security & Privacy
+
+- **🔐 Secure**: Never commit `.env` files to version control
+- **📝 Read-only**: Package only reads your data, never modifies it
+- **🏠 Local**: All analysis runs on your computer - no data transmitted
+- **🔒 Encrypted**: Uses MongoDB Atlas encrypted connections
+
+## 🤝 Contributing
+
+SweetiePy is open source and community-driven! We welcome:
+- 🐛 **Bug reports** and feature requests
+- 📝 **Documentation** improvements  
+- 📊 **Analysis examples** and tutorials
+- 🧠 **Ideas** for new analysis types
+
+This project exists to help the Type 1 diabetes community make data-driven decisions about their health.
+
+## 🎆 What's Next?
+
+Once you're up and running with SweetiePy:
+
+1. **🔍 Explore patterns** - Find your optimal times and settings
+2. **📈 Create visualizations** - Use matplotlib/plotly for charts
+3. **📊 Share insights** - Help others in the diabetes community
+4. **🚀 Build more** - Contribute new analysis features
+
+**Happy analyzing! 🩸📊**
