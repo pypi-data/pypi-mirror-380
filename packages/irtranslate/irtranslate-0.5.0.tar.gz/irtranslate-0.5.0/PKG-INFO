@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: irtranslate
+Version: 0.5.0
+Summary: یک کتابخانه ترجمه ساده با تشخیص زبان
+Home-page: https://github.com/alishirgol
+Author: Ali Shirgol
+Author-email: ali.shirgol.coder@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# irtranslate
+
+irtranslate یک کتابخانه ترجمه ساده است که بدون نیاز به API key کار می‌کند،  
+از Google Translate web endpoint استفاده می‌کند و امکانات زیر را دارد:
+
+- ترجمه چند خط، چند متن و چند زبان مقصد
+- تشخیص زبان مبدا
+- Retry هوشمند و مدیریت خطاهای شبکه
+- Cache داخلی برای ترجمه‌های تکراری
+
+## نصب
+
+```bash
+pip install irtranslate
