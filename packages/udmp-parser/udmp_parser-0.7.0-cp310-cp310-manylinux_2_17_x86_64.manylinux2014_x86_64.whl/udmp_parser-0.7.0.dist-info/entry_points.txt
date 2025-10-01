@@ -1,0 +1,3 @@
+[console_scripts]
+generate_minidump = udmp_parser.utils:generate_minidump_from_command_line
+
