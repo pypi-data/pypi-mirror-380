@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/eegproc/__init__.py
+src/eegproc/featurization.py
+src/eegproc/preprocessing.py
+src/eegproc.egg-info/PKG-INFO
+src/eegproc.egg-info/SOURCES.txt
+src/eegproc.egg-info/dependency_links.txt
+src/eegproc.egg-info/requires.txt
+src/eegproc.egg-info/top_level.txt
