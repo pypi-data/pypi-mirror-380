@@ -1,0 +1,11 @@
+snake_game/__init__.py,sha256=Q75ZQgdwKgeQYCMMlhi0UZv4YRxOixAnBZzeHBClXWs,20
+snake_game/game.py,sha256=NeoY90hLzewJarnEqxI1kSBtbDe_scLqazdgcGH2Hp4,11243
+snake_game/assets/sounds/som_comer.wav,sha256=ahh4aCvQdMNyvRJzRncyEwWdhDzyDko0E0ZZEJnKtQo,23722
+snake_game/assets/sounds/som_fim_jogo.wav,sha256=IKnpP0J1lzHiwe5FApDj3yS6tcZzHKXhP-i-epFuM8A,43676
+snake_game/assets/sounds/som_fundo.wav,sha256=z3InIH3TnNRNt_-TreE59GaakeMyTSzTCYKIMByuUlk,3840078
+snake_game/assets/sounds/som_passo.wav,sha256=Ne8OQQuIMmql7FnthgoQm72ljNVrKP1g06f0TQ3VwMc,76628
+snake_game_package_dio-1.0.2.dist-info/METADATA,sha256=pEQ0qnOTLtt1qLisTK2y-SCxl_vE9j434yk9GUxAl_M,4109
+snake_game_package_dio-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+snake_game_package_dio-1.0.2.dist-info/entry_points.txt,sha256=_jOrm16ilq2J06yBsV8juhWeOaqq8h2rw9bk146j4ng,52
+snake_game_package_dio-1.0.2.dist-info/top_level.txt,sha256=WoJpN_uBSVpEUWcvjkJHXwboBJ-mid9MY4nmgkpLDGs,11
+snake_game_package_dio-1.0.2.dist-info/RECORD,,
