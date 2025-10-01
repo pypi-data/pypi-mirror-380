@@ -1,0 +1,4 @@
+duckdb==1.4.0
+typer==0.19.2
+rich==14.1.0
+pydantic-settings==2.11.0
