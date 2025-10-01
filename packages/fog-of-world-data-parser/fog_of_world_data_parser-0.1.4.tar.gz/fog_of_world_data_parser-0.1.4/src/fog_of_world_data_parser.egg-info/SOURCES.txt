@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/parser.py
+src/fog_of_world_data_parser.egg-info/PKG-INFO
+src/fog_of_world_data_parser.egg-info/SOURCES.txt
+src/fog_of_world_data_parser.egg-info/dependency_links.txt
+src/fog_of_world_data_parser.egg-info/entry_points.txt
+src/fog_of_world_data_parser.egg-info/top_level.txt
+tests/test_parser.py
