@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+aiterm/AITerm.py
+aiterm/__init__.py
+aiterm_cli.egg-info/PKG-INFO
+aiterm_cli.egg-info/SOURCES.txt
+aiterm_cli.egg-info/dependency_links.txt
+aiterm_cli.egg-info/top_level.txt
+sounds/beep-02.wav
