@@ -1,0 +1,104 @@
+# Git Deployer
+
+A utility for automated deployment of generated static websites (documentation, help guides, etc.) using Git.
+
+## Advantages
+
+- **Simplicity**: Deploy with a single command.
+- **Reliability**: Uses proven Git mechanisms.
+- **Versatility**: Suitable for any hosting service that supports Git repositories (GitHub Pages, GitLab Pages, your own server, etc.).
+- **Incremental Deployment**: Only modified files are transferred.
+
+## Installation
+
+```bash
+python -m pip install git+https://github.com/optinsoft/git-deployer.git
+```
+
+## Usage
+
+### Initialization (first run)
+
+1. You generate a static site (for example, using Docusaurus, Sphinx, Jekyll, MkDocs).
+2. Initialize a Git repository in the directory containing the generated site (e.g., `_build/html`).
+
+Example:
+
+```bash
+cd _build/html
+git init
+```
+
+3. Using Git, add a new remote repository and specify which remote branch your local branch should track.
+
+Example:
+
+```bash
+git remote add origin https://github.com/owner/repository.git 
+git branch --set-upstream-to origin/main main
+```
+
+4. Run `deploy`.
+
+```bash
+deploy .
+```
+
+5. The utility publishes the files to the remote repository.
+
+To publish, Git Deployer executes the following commands:
+
+```bash
+git add .
+git commit -m "Site updated: %Y-%m-%d %H:%M:%S"
+git push
+```
+
+`%Y-%m-%d %H:%M:%S` will be replaced by the current date and time, ex.: `2025-09-29 10:44:15`
+
+### Configuring with deploy_config.yml (alternative initialization)
+
+An alternative initialization method involves creating a `deploy_config.yml` configuration file in the root directory of your project and then running the `deploy _build/html` command. If the `_build/html` directory does not already contain a Git repository and the `git_init` option has been set in `deploy_config.yml`, Git Deployer will automatically execute `git init`. It will then configure the remote repository, branch, and (optionally) the username and email according to the configuration file.
+
+Configuration example:
+
+```yaml
+deploy:
+  remote:
+    name: 'origin' 
+    url: 'https://github.com/owner/repository.git'
+  branch: 'master'
+  name: owner_name
+  email: owner@email
+  message: 'new commit at %Y-%m-%d %H:%M:%S'
+  git_init: True
+  force_push: True
+```
+
+The `force_push` option allows you to deploy the site to a remote repository using `git push --force`. This command bypasses the standard safety checks that prevent pushing when the remote history diverges from the local history. If, even with the `force_push`, you get the error message "remote: error: denying non-fast-forward refs/heads/master (you should pull first)", you need to disable `receive.denyNonFastForwards` in remote repo. Find the [receive] section within the config file. If `denyNonFastForwards` is set to true, change it to false. If the setting doesn't exist, you can add it.
+
+```
+[receive]
+    denyNonFastForwards = false
+```
+
+You can configure the git commit message. It can contain date and time format specifiers, for example: `%Y-%m-%d %H:%M:%S`, which will be replaced by the current date and time.
+
+If the project contains multiple sites, each with its own individual deployment settings (remote repository, branch, etc.), you can specify them in the `sites` section, for example:
+
+```yaml
+deploy:
+  sites:
+    -
+      path: site_to_deploy
+      deploy:
+        remote:
+          name: 'github'
+          url: 'https://github.com/owner/site_to_deploy.git'
+```
+
+### Everyday deployments
+
+```bash
+deploy _build/html
+```

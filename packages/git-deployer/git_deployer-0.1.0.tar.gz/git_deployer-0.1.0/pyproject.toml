@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-deployer"
+version = "0.1.0"
+description = "Deploy your local folder to Git with one command"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["git", "deploy", "python"]
+authors = [
+    { name = "Vitaly", email = "optinsoft@gmail.com"},
+]
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyYAML >= 6.0.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/optinsoft/git-deployer"
+Tracker = "https://github.com/optinsoft/git-deployer/issues"
+Source = "https://github.com/optinsoft/git-deployer"
+
+[project.scripts]
+deploy = "git_deployer:main"

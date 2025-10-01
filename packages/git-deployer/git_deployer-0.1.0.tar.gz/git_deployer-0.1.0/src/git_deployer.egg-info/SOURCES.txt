@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/git_deployer/__init__.py
+src/git_deployer/__main__.py
+src/git_deployer/configutils.py
+src/git_deployer/gitdeploy.py
+src/git_deployer/gitutils.py
+src/git_deployer/pathutils.py
+src/git_deployer.egg-info/PKG-INFO
+src/git_deployer.egg-info/SOURCES.txt
+src/git_deployer.egg-info/dependency_links.txt
+src/git_deployer.egg-info/entry_points.txt
+src/git_deployer.egg-info/requires.txt
+src/git_deployer.egg-info/top_level.txt
+tests/test_git_deployer.py
