@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+scooters_data_uploader.egg-info/PKG-INFO
+scooters_data_uploader.egg-info/SOURCES.txt
+scooters_data_uploader.egg-info/dependency_links.txt
+scooters_data_uploader.egg-info/entry_points.txt
+scooters_data_uploader.egg-info/requires.txt
+scooters_data_uploader.egg-info/top_level.txt
+src/__init__.py
+src/cli.py
+src/data_ingestor.py
