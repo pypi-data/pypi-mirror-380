@@ -1,0 +1,10 @@
+common_py_config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+common_py_config/configs/mypy.ini,sha256=pCjEL1pvTVMTtsxYo7rTNuKg5Cfk9YTas5rM6LoouEY,73
+common_py_config/configs/noxfile.py,sha256=EPk90ZXFoKDGgms_JzQLGnNs03NxM_QYl9KyRtWitqw,295
+common_py_config/configs/ruff.toml,sha256=Av4o2NpwB3otNUl9Ur0m3l1v-_XlzspKkbmDSU5p6bo,1341
+common_py_config/pytest.ini,sha256=hyuYhVs1SQStoi7ME1DpIHHH0t33ornnTUJeGqGqfjk,246
+common_py_config/pytest_common_plugin.py,sha256=fE3SNJ4vIM4RvexdsYpUW2cP_CsC9nCs2sa8Zn9pnEc,833
+common_py_config-0.1.1.dist-info/METADATA,sha256=yHNWp6nP7HOhH-XhBI1lNw2dm48rIxPVFIYundnfH4Q,672
+common_py_config-0.1.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+common_py_config-0.1.1.dist-info/entry_points.txt,sha256=Xtsm6m0r5W2jHOEgPdsUYUb1mIRto7yl20HTTFbmmHA,64
+common_py_config-0.1.1.dist-info/RECORD,,
