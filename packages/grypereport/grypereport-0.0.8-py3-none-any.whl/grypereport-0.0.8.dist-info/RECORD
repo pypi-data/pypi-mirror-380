@@ -1,0 +1,8 @@
+grypereport/__init__.py,sha256=skLthET2-1HM9xfHPBXGX-5l35ByM7xG8riWdLAUZ80,201
+grypereport/__main__.py,sha256=K5y-bx2Zz8vLY3tucnGUP0oRZBEfMHMTQTku0xloLDo,4120
+grypereport/__version__.py,sha256=sGHwt05GanWNQ6jr-jdIYX3aytoRXPDVUslPT8TffHE,18
+grypereport/report.py,sha256=_sxL8SpYoyCjGjPtoLZIIOMYpLilqcpZN-0mhWTtwIQ,11247
+grypereport-0.0.8.dist-info/METADATA,sha256=3DQ_TqupZxO2f58hkM5ZABx53jeUkEPsYajFuJZygSg,2609
+grypereport-0.0.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+grypereport-0.0.8.dist-info/licenses/LICENSE,sha256=rOF1mZqO1T5gyEKfn3L8qZw-YUg_Q-Gqd1yJq44ajV0,1070
+grypereport-0.0.8.dist-info/RECORD,,
