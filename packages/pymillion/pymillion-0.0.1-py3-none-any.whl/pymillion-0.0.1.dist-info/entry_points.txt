@@ -1,0 +1,2 @@
+[console_scripts]
+pymillion = pymillion.cli:main
