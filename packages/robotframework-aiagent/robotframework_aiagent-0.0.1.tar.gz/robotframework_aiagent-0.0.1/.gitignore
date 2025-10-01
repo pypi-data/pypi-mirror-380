@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv*/
+
+# IDE settings
+.vscode/
+
+# Robot Framework results
+results/
+
+# playground
+playground/
+
+# macOS
+.DS_Store
+
+# robotcode
+.robot.toml
