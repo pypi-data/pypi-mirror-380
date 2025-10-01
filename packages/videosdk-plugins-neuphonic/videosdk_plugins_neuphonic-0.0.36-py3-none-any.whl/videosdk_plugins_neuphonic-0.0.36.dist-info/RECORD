@@ -1,0 +1,6 @@
+videosdk/plugins/neuphonic/__init__.py,sha256=sLISGppzK_1u3vvoPFtzrB_KpJu0VaXH1mCeUoqV734,65
+videosdk/plugins/neuphonic/tts.py,sha256=2MYP4V21L7p3-9DMs420hGob2_4iPaTdXraYnayl2BE,12001
+videosdk/plugins/neuphonic/version.py,sha256=oSKhQHo_8dYEVv3A19nCmQysoh4TbOzHl508xX9iHoo,23
+videosdk_plugins_neuphonic-0.0.36.dist-info/METADATA,sha256=55dptaiOKZjq_ZBsC0_zSgaOpgGHjs45ndP24Yt0D9E,780
+videosdk_plugins_neuphonic-0.0.36.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+videosdk_plugins_neuphonic-0.0.36.dist-info/RECORD,,
