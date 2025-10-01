@@ -1,0 +1,11 @@
+pyxdameraulevenshtein/__init__.py,sha256=urw3mYMPb42QM8CqJYD9ah7oHnxJiqHKYH_eGnOsli0,49
+pyxdameraulevenshtein/__init__.pyi,sha256=BtltUW7CptuiMH4S6asgTI6LAVfiHj-kJl-K07FgX2E,460
+pyxdameraulevenshtein/_initialize.cp314-win_amd64.pyd,sha256=P8qoQFp0E1ot8oOKsD38QbyRjm-6GQwUaYX0ssFNv10,54272
+pyxdameraulevenshtein/_initialize.pyx,sha256=Kx17yr2HdpVLzpdoH57oCkdwIo6CmM6tiatMveymq-I,8287
+pyxdameraulevenshtein/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyxdameraulevenshtein-1.9.0.dist-info/licenses/AUTHORS.md,sha256=i6xsLfg1B_mH-m8kkRHO9uFhbCVFvUZlFV8Fw0m5F4U,798
+pyxdameraulevenshtein-1.9.0.dist-info/licenses/LICENSE,sha256=-1J9h716_5lCOhMVVZHxgm1IbBVpyJ-c2_APn-jFwGk,1528
+pyxdameraulevenshtein-1.9.0.dist-info/METADATA,sha256=NuQmfubHD8ej2YHwe_dgfL_waerImMtUBM0RQWyZ-6U,2842
+pyxdameraulevenshtein-1.9.0.dist-info/WHEEL,sha256=7k6Wcy588iJYe5lf5K095NLg-uoBTnE-T8eHJ92G4_4,101
+pyxdameraulevenshtein-1.9.0.dist-info/top_level.txt,sha256=WIzMbgpCKZ0cwQCYzHlPEnaA_sPYvT0BtwcP-vVLX0E,22
+pyxdameraulevenshtein-1.9.0.dist-info/RECORD,,
