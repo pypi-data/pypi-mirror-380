@@ -1,0 +1,355 @@
+Metadata-Version: 2.1
+Name: dsf-api-sdk
+Version: 1.0.0
+Summary: SDK for DSF API Validation
+Home-page: https://github.com/jaimeajl/dsf-api-sdk
+Author: Jaime Alexander Jimenez
+Author-email: contacto@softwarefinanzas.com.co
+License: UNKNOWN
+Keywords: dsf api validation request evaluation sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+
+# API Validator SDK
+
+Enterprise-grade API request validation using adaptive scoring algorithms. Replace complex if/else chains with intelligent, maintainable validation rules.
+
+## Installation
+
+```bash
+pip install dsf-api-sdk
+
+# For optimized performance (requires C++ compiler)
+pip install dsf-api-sdk[optimized]
+```
+
+## Quick Start
+
+### Community Edition (Free)
+```python
+from api_validator import APIValidator
+
+validator = APIValidator()
+
+request = {
+    'auth_token_present': True,
+    'token_age_minutes': 10,
+    'user_verified': True,
+    'requests_per_minute': 25,
+    'payload_size_kb': 800,
+    'ip_reputation_score': 85
+}
+
+result = validator.validate_request(request)
+print(f"Valid: {result.is_valid} | Score: {result.score:.3f}")
+```
+
+### Professional Edition
+```python
+validator = APIValidator(
+    tier='professional',
+    license_key='PRO-2026-12-31-XXXX-XXXX'
+)
+
+# Batch validation
+results = validator.validate_batch(requests)
+
+# DataFrame support
+results = validator.validate_dataframe(df)
+
+# Access metrics
+metrics = validator.get_metrics()
+print(f"Adaptive threshold: {metrics.current_threshold:.3f}")
+```
+
+### Enterprise Edition
+```python
+validator = APIValidator(
+    tier='enterprise', 
+    license_key='ENT-2026-12-31-XXXX-XXXX'
+)
+
+# Adjust weight optimization
+validator.set_adjustment_factor(0.4)  # 60% expert, 40% algorithm
+
+# Get weight evolution metrics
+metrics = validator.get_metrics()
+print(f"Weight changes: {metrics.weight_changes}")
+```
+
+---
+
+## Hybrid Model Integration
+
+The SDK accepts **any predictive model** as an additional validation factor, creating powerful ensemble systems that combine expert rules, ML models, threat intelligence, and external security services.
+
+### ML Model Integration
+
+```python
+import joblib
+import requests
+from sklearn.ensemble import IsolationForest
+
+# Load security models
+anomaly_detector = joblib.load('request_anomaly_detector.pkl')
+fraud_model = joblib.load('api_fraud_classifier.pkl')
+
+# Define hybrid validation factors combining rules + ML models
+security_fields = [
+    # Traditional expert rules
+    Field('auth_token_present', True, importance=5.0, sensitivity=5.0),
+    Field('requests_per_minute', 30, importance=4.0, sensitivity=3.0),
+
+    # ML models as validation factors
+    Field('request_anomaly_score', 0.2, importance=4.0, sensitivity=4.0),
+    Field('fraud_probability', 0.1, importance=4.5, sensitivity=4.5)
+]
+
+# Process API request with hybrid ensemble
+def validate_api_request(request_data, user_history):
+    # Extract features for ML models
+    request_features = extract_request_features(request_data, user_history)
+
+    # Get ML model predictions
+    anomaly_score = anomaly_detector.decision_function([request_features])[0]
+    anomaly_score = max(0, min(1, (anomaly_score + 0.5) / 1.0))  # Normalize to 0-1
+
+    fraud_prob = fraud_model.predict_proba([request_features])[0][1]
+
+    # Combine with traditional validation factors
+    hybrid_data = {
+        'auth_token_present': 'Authorization' in request_data.get('headers', {}),
+        'requests_per_minute': get_user_request_rate(request_data['user_id']),
+        'request_anomaly_score': anomaly_score,
+        'fraud_probability': fraud_prob
+    }
+
+    return validator.validate_request(hybrid_data)
+```
+
+### External Security Services Integration
+
+```python
+import hashlib
+from datetime import datetime, timedelta
+
+# External APIs and threat intelligence as validation factors
+enterprise_fields = [
+    # Core validation rules
+    Field('payload_size_kb', 1024, importance=3.0, sensitivity=2.0),
+    Field('endpoint_allowed', True, importance=5.0, sensitivity=5.0),
+
+    # External security services
+    Field('ip_reputation_score', 0.8, importance=4.0, sensitivity=3.5),
+    Field('threat_intelligence_score', 0.9, importance=4.5, sensitivity=4.0),
+
+    # Statistical pattern analysis
+    Field('usage_pattern_zscore', 0.3, importance=3.0, sensitivity=2.5)
+]
+
+def advanced_api_validation(request, client_ip, user_agent):
+    # Call IP reputation service
+    ip_response = requests.get(f'https://reputation-api.com/check/{client_ip}')
+    ip_reputation = ip_response.json().get('reputation_score', 0.0) / 100
+
+    # Threat intelligence lookup
+    request_hash = hashlib.md5(f"{request['endpoint']}{user_agent}".encode()).hexdigest()
+    threat_response = requests.post('https://threat-intel.com/lookup', 
+                                   json={'hash': request_hash})
+    threat_score = 1.0 - threat_response.json().get('threat_level', 0.0)
+
+    # Statistical analysis of usage patterns
+    user_requests = get_user_request_history(request['user_id'], hours=24)
+    pattern_zscore = calculate_usage_pattern_anomaly(user_requests, request)
+
+    # Combine all validation signals
+    hybrid_data = {
+        'payload_size_kb': len(request.get('body', '')) / 1024,
+        'endpoint_allowed': is_endpoint_in_whitelist(request['endpoint']),
+        'ip_reputation_score': ip_reputation,
+        'threat_intelligence_score': threat_score,
+        'usage_pattern_zscore': max(0, min(1, (pattern_zscore + 3) / 6))  # Normalize
+    }
+
+    return validator.validate_request(hybrid_data)
+```
+
+### Benefits of Hybrid API Validation
+
+- **Multi-layered defense**: Combines static rules with dynamic threat detection
+- **Configurable weighting**: Control how much each validation layer contributes
+- **Transparent scoring**: Each factor's contribution is auditable and explainable
+- **Real-time adaptation**: ML models learn from request patterns automatically
+- **Graceful degradation**: If external services fail, core validation continues
+
+---
+
+## Tier Comparison
+
+| Feature                 | Community  |      Professional       |        Enterprise       |
+|-------------------------|------------|-------------------------|-------------------------|
+| **Validations/month**   | Unlimited* |       Unlimited         |         Unlimited       |
+| **Data formats**        | Dict only  | Dict, DataFrame, Series | Dict, DataFrame, Series |
+| **Batch processing**    |     ❌     |          ✅            |           ✅            |
+| **Adaptive threshold**  |     ❌     |          ✅            |           ✅            |
+| **Weight optimization** |     ❌     |          ❌            |           ✅            |
+| **Performance metrics** |     ❌     |          ✅            |           ✅ Enhanced   |
+| **Adjustment factor**   |     ❌     |          ❌            |           ✅            |
+| **Rate limits**         |    60/min  |        200/min          |        1000/min         |
+| **Support**             |  Community |         Email           |        Priority         |
+| **Price**               |    Free    |       $299/month        |      Contact sales      |
+
+*Community tier free for evaluation. Production use requires registration.
+
+## Core Features
+
+### Authentication Validation
+```python
+auth_valid, score = validator.check_auth({
+    'token_present': True,
+    'token_age_minutes': 5,
+    'user_verified': True
+})
+```
+
+### Rate Limiting
+```python
+within_limits, score = validator.check_rate_limit({
+    'requests_per_minute': 45,
+    'daily_requests': 2000
+})
+```
+
+### Risk Assessment
+```python
+risk_score = validator.calculate_risk_score({
+    'ip_reputation_score': 30,
+    'failed_attempts': 5,
+    'suspicious_patterns': True
+})
+```
+
+### Security Modes
+```python
+validator.set_confidence_level(0.85)  # strict mode
+validator.set_confidence_level(0.45)  # relaxed mode
+```
+
+## Custom Validation Rules
+
+```python
+from api_validator import Field
+
+custom_fields = [
+    Field('api_version', '2.0', importance=3.0, sensitivity=4.0),
+    Field('client_id', 'valid_client', importance=5.0, sensitivity=5.0)
+]
+
+validator = APIValidator(
+    custom_fields=custom_fields,
+    tier='professional',
+    license_key='your-license-key'
+)
+```
+
+## Predefined Configurations
+
+```python
+from api_validator import FieldPresets
+
+# Public API endpoints
+validator = APIValidator(
+    custom_fields=FieldPresets.public_api()
+)
+
+# Webhook validation
+validator = APIValidator(
+    custom_fields=FieldPresets.webhook()
+)
+
+# GraphQL endpoints
+validator = APIValidator(
+    custom_fields=FieldPresets.graphql()
+)
+```
+
+## Performance
+
+| Metric           |  Community   | Professional |  Enterprise  |
+|------------------|--------------|--------------|--------------|
+| Validations/sec  |   ~20,000    |    ~50,000   |   ~100,000   |
+| Memory usage     |    <10MB     |     <15MB    |    <20MB     |
+| Latency          |   ~0.05ms    |     ~0.02ms  |   ~0.01ms    |
+
+## API Reference
+
+### APIValidator
+
+**Initialization:**
+```python
+APIValidator(
+    custom_fields=None,
+    use_standard_fields=True,
+    confidence_level=0.65,
+    tier='community',
+    license_key=None
+)
+```
+
+**Methods:**
+- `validate_request(request)` - Single validation
+- `validate_batch(requests)` - Batch validation (Pro/Ent)
+- `validate_dataframe(df)` - DataFrame rows (Pro/Ent)
+- `check_auth(token_data)` - Authentication check
+- `check_rate_limit(usage_data)` - Rate limit check
+- `validate_payload(payload_data)` - Payload validation
+- `check_permissions(user_role, endpoint, method)` - Authorization
+- `calculate_risk_score(metadata)` - Risk assessment
+- `set_confidence_level(level)` - Change strictness
+- `set_adjustment_factor(factor)` - Weight calibration (Ent)
+- `get_metrics()` - Performance stats (Pro/Ent)
+- `get_tier_info()` - Current tier features
+
+### Field
+
+```python
+Field(
+    name='field_name',
+    reference=expected_value,
+    importance=1.0,  # 1.0-5.0
+    sensitivity=1.5   # 1.0-5.0
+)
+```
+
+## Licensing
+
+**Professional:** $299/month or $2,999/year
+**Enterprise:** jaimeajl@hotmail.com
+
+**License format:**
+- Professional: `PRO-YYYY-MM-DD-XXXX-XXXX`
+- Enterprise: `ENT-YYYY-MM-DD-XXXX-XXXX`
+
+## Support
+
+- **Community:** jaimeajl@hotmail.com
+- **Professional:** jaimeajl@hotmail.com (48h response)
+- **Enterprise:** jaimeajl@hotmail.com (4h response)
+
+## License
+
+MIT for Community Edition. Commercial license for Professional/Enterprise.
+
+© 2025 API Validator. Powered by Adaptive Formula technology.
+
