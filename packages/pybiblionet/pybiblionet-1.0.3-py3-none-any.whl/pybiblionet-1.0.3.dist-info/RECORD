@@ -1,0 +1,15 @@
+pybiblionet/bibliometric_analysis/charts.py,sha256=nMNcLwEhGBS9hYCdmVygj6YvWXBPz4DIomjzwX7EAg4,38167
+pybiblionet/bibliometric_analysis/charts_network.py,sha256=Z3OWgGc6_fB5E4b_wXKWIfzXJTJQCcW-44UaOqQRMD0,29625
+pybiblionet/bibliometric_analysis/core.py,sha256=vTZY-67vLI5AuB7Y79VfxWgy5aDDsnSIajEGIx4687g,12014
+pybiblionet/openalex/core.py,sha256=rY_tIXqCFO7-W_ge_b6wb-afUuy4RwJmZwrYuSj9yd0,49743
+pybiblionet/openalex/utils.py,sha256=hHqeYmFnP_mY9nXdE0SJPbDG44ySZjpmw0s5hMGxk5Q,9866
+pybiblionet/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybiblionet/tests/test_charts.py,sha256=OBZqkaNEH0_vCNlPEZWWlUYp2L5N675VzxgTtkxMdyg,2412
+pybiblionet/tests/test_network_analysis.py,sha256=sk8gePZm4z4gA-adkB97P6yZCy26hgg-ZzBpsUnCMi0,3247
+pybiblionet/tests/test_openalex.py,sha256=CYg8R9gkswy3hyb_aFNKI9mnoHKHFbQ8B6uSprivYDU,2305
+pybiblionet/tests/text_pybibx.py,sha256=5mtWnS3AC_ch4MfDifvUc8jQP0aJ5WRfQGj-12CB4t8,614
+pybiblionet-1.0.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pybiblionet-1.0.3.dist-info/METADATA,sha256=8RsZwxAum_VH7Bokz9kbBrSzb17FBs48fol8-qOs4PU,43436
+pybiblionet-1.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pybiblionet-1.0.3.dist-info/top_level.txt,sha256=68jfV8AmAiOUe-gR62eeyybvx3w0YW5XnATnG38zO8A,12
+pybiblionet-1.0.3.dist-info/RECORD,,
