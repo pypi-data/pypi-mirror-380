@@ -1,0 +1,7 @@
+numpy>=1.17
+pandas>=1.0.0
+gurobipy
+SPARQLWrapper
+networkx
+pyyaml
+sortedcontainers
