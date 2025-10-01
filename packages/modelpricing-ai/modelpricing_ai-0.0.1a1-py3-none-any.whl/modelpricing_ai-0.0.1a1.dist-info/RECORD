@@ -1,0 +1,11 @@
+modelpricing_ai/__init__.py,sha256=Gz8QAex4oCjFX2Ir2hTVtdf26EhAYsAuxHes-uh1rLs,227
+modelpricing_ai/async_client.py,sha256=49unS56wR-G0ys4HrgXwPWGFVocXhcvqTpEWjovNDXQ,4627
+modelpricing_ai/client.py,sha256=VtBltlqe7R6RqYLfw78mYphDhDth9XLwk1Aaj3y5Oy4,4497
+modelpricing_ai/errors.py,sha256=DlnO5x4D4Qk2ANtsWHW9xAg4q1gGJSSCk-OL6-Bmwhg,551
+modelpricing_ai/models.py,sha256=sMG2xQHbGCjuUDJj18K_1CRv7owP8txdRD-i9nulGKw,466
+modelpricing_ai/test_async_client.py,sha256=qewW3gRwSrgrUjrSS8aGVUqpf1eWxrs_TMqa9RERP18,5942
+modelpricing_ai/test_client.py,sha256=kP-Jah8geeOXo4go7PpmaGkOLjcagDFRD_oNfVr7Xy8,5382
+modelpricing_ai-0.0.1a1.dist-info/METADATA,sha256=GQ7IAcdOtO2Y-9-hp365yatT7DiAO62q4SMw_dStNYQ,3175
+modelpricing_ai-0.0.1a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+modelpricing_ai-0.0.1a1.dist-info/licenses/LICENSE,sha256=rfcQrBGtrHaODp7tLX9_LsRZYfehUuvGhFDQkgITAa4,1074
+modelpricing_ai-0.0.1a1.dist-info/RECORD,,
