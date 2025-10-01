@@ -1,0 +1,15 @@
+data_scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+steer_materials/Base.py,sha256=_Ri4VLICl8XOie8cP2p__fZG2wA_LuEKo_F6t3Lw82U,3244
+steer_materials/__init__.py,sha256=LcIlFjHZFfiF9Rd4UHoakmombOFkxIYk00I181frGBM,23
+steer_materials/CellMaterials/Base.py,sha256=Kb1C420CaaB5asT0Quh4d8ThfX8z8lWnzqU_xGmP4Xc,5674
+steer_materials/CellMaterials/Electrode.py,sha256=QvhDLlxMTSeqNxJrfpx2Qp8f6ZqakrNVWVOy2YS7UVY,45579
+steer_materials/CellMaterials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+steer_materials/Electrolytes/Electrolytes.py,sha256=kNZptqOXCSJwp27e0LpbegbnyyQI30XZijBiq6MGHOI,1525
+steer_materials/Electrolytes/Ions.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+steer_materials/Electrolytes/Salts.py,sha256=HpyXL__3rZ1W8aqGaro0B1FweK0ReoeafjJtMbiDsC4,889
+steer_materials/Electrolytes/Solvents.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+steer_materials/Electrolytes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+steer_materials-0.1.12.dist-info/METADATA,sha256=Hkf_3Og8BiEziiP5o_ZcB0pgXtGU9YzJK4po5oP4S44,752
+steer_materials-0.1.12.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+steer_materials-0.1.12.dist-info/top_level.txt,sha256=KY6YPTcgpQ6A55y83JjGZlE-VcUHU6dQHOj18KNUkTA,29
+steer_materials-0.1.12.dist-info/RECORD,,
