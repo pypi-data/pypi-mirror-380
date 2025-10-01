@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+androidscan/__init__.py
+androidscan/cli.py
+androidscan.egg-info/PKG-INFO
+androidscan.egg-info/SOURCES.txt
+androidscan.egg-info/dependency_links.txt
+androidscan.egg-info/entry_points.txt
+androidscan.egg-info/top_level.txt
