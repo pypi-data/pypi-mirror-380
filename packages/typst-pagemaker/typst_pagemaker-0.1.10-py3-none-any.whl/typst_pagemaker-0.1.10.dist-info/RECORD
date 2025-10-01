@@ -1,0 +1,15 @@
+pagemaker/__init__.py,sha256=IiM2i8bJD_axmS6SUEU79KaIG6CDC46n48wigAmwBcY,497
+pagemaker/cli.py,sha256=-A8QwZrm903G57lOHdG8bjaMmBJ-jDoKhpo0qvqPst8,66789
+pagemaker/generator.py,sha256=CWJ3y6555AeMijTStyn0B5OYnwQqENMC9i8Advjd31Q,62970
+pagemaker/parser.py,sha256=tuKjZTdz4cH-zSv3VkFwKTsytE3IdOD0VStqfXGDRl4,27627
+pagemaker/validation.py,sha256=Zws0rANYSTV5SLmp-Z68aiOtwdni1K6y_PRxava0S6o,11422
+pagemaker/fonts/Crimson_Pro/CrimsonPro-Italic-VariableFont_wght.ttf,sha256=p03BHc8vuxRSBk5COVpAqQfKYwtJz_hgEiI3heUrJVk,253176
+pagemaker/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf,sha256=FqqftzAKk2N9pR-sA6Bxsv8Itrv2X5nHlMJfBAtYr2o,246324
+pagemaker/fonts/Inter/Inter-VariableFont_slnt_wght.ttf,sha256=R4LM2qcMUF4OC1RPMYgOSAL5Uu-kNFO9ELEnEYXcMuw,293167
+pagemaker/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf,sha256=ZioZbVjxGDvy13QottUoP-P0UWGrAhvqQDa8mOXKwBY,303144
+typst_pagemaker-0.1.10.dist-info/licenses/LICENSE,sha256=brRZlZmUL4H1cPs7L4mk_6_iFYUsSlSOnGMMbSOJoJc,1078
+typst_pagemaker-0.1.10.dist-info/METADATA,sha256=5lfp9RNI_i8ZtO90FGIHL6DlIa-zlf5JA5chGPaNO0c,32187
+typst_pagemaker-0.1.10.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+typst_pagemaker-0.1.10.dist-info/entry_points.txt,sha256=HmV9q5BKZBOYuSWwujzBbTIZ0maP_8KAixc900BZgIE,49
+typst_pagemaker-0.1.10.dist-info/top_level.txt,sha256=1uRqMSQvf6jz8PcKoCZZieVKn31PiuV5wv47SzhkMAQ,10
+typst_pagemaker-0.1.10.dist-info/RECORD,,
