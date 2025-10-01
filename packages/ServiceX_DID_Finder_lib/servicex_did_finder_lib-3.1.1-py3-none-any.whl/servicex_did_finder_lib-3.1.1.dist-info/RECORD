@@ -1,0 +1,13 @@
+servicex_did_finder_lib/__init__.py,sha256=d84GE9EWFIIY-lU0nlsEYH0SXWOxB00d0C5dtDtoXi8,54
+servicex_did_finder_lib/accumulator.py,sha256=A0OfWLwgTH6Yq8RMOlcDT7DVIVPCW7Egfe_19noztyE,3293
+servicex_did_finder_lib/communication.py,sha256=rk_cJeb9Lu_JOM4xLlnh1HQ8xc-CcQXhzNvrj6SMmj4,11231
+servicex_did_finder_lib/did_finder_app.py,sha256=_TfzWwQ6gqiy5FvloDumAZnWpM4U-lrSlPMRB1eFzaU,7404
+servicex_did_finder_lib/did_logging.py,sha256=9ynC3RkfPEHHQLNt6gIkMSa2pZXIupV9MbMrJAhjuMo,1537
+servicex_did_finder_lib/did_summary.py,sha256=Rs3HGaarhMbgMa8VmHLgbucm1V7SqXNKm6iuAQlBub8,3558
+servicex_did_finder_lib/exceptions.py,sha256=Uw7fMSmbZXUZMOLONSNPXgCH2odOjeen0gT0n0ZQmjo,2241
+servicex_did_finder_lib/servicex_adaptor.py,sha256=LDJANgr35k8ljs6BQIahZ3rABsjQaEwwMwwQ_x9Gr5Y,4952
+servicex_did_finder_lib/util_uri.py,sha256=an8YTo20yxhQfqBjVhk6eqwUXhZVrm3hBxjczUhZvZY,1817
+servicex_did_finder_lib-3.1.1.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+servicex_did_finder_lib-3.1.1.dist-info/METADATA,sha256=pWtAgZxmjOEnHdF7FhZ3c7iKaVD4QYW-6ian9VpF44A,611
+servicex_did_finder_lib-3.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+servicex_did_finder_lib-3.1.1.dist-info/RECORD,,
