@@ -1,0 +1,10 @@
+{
+  "input": {
+    "demo_mode": true,
+    "ecg_encoder": "PKUDigitalHealth/ECGFounder",
+    "language_model": "sshleifer/tiny-gpt2",
+    "connector": null
+  }
+}
+
+

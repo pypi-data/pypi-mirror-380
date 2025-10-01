@@ -1,0 +1,19 @@
+[project]
+name = "smb-pipe"
+version = "0.0.1"
+description = "Name reserved - package under development"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Standard Model Bio", email = "info@standardmodelbio.com"}
+]
+license = "MIT"
+keywords = ["placeholder"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+]
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,70 @@
+[project]
+name = "smb-pipe"
+version = "0.0.1"
+description = "MEDS-based multimodal medical inference pipeline (placeholder release)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [
+    {name = "Standard Model Bio", email = "info@standardmodelbio.com"}
+]
+license = "MIT"
+keywords = ["medical", "multimodal", "MEDS", "inference", "embeddings"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "boto3>=1.35.0",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.3",
+    "mat73>=0.65",
+    "numpy>=1.24.0",
+    "pyyaml>=6.0.2",
+    "runpod>=1.7.0",
+    "scipy>=1.10.0",
+    "torch>=2.5.0,<2.6.0",
+    "torchvision>=0.20.0,<0.21.0",
+    "transformers>=4.54.0",
+    "huggingface_hub>=0.23.0",
+    "h5py>=3.10.0",
+    "wfdb>=4.1.2",
+    "safetensors>=0.4.3",
+    "tokenizers>=0.21",
+    "requests>=2.32.3",
+    "accelerate>=0.27.0",
+    "datasets>=2.14.0",
+    "peft>=0.11.0",
+    "trl>=0.8.0",
+    "einops>=0.8.0",
+    "scikit-learn>=1.7.1",
+    "pandas>=2.3.2",
+    "duckdb>=1.4.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+]
+data-processing = [
+    "duckdb>=1.4.0",
+    "pyarrow>=21.0.0",
+    "python-dotenv>=1.1.1",
+    "tqdm>=4.67.1",
+]
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+extra-index-url = ["https://download.pytorch.org/whl/cu121"]
+
+
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "hf_integration: marks tests that use real Hugging Face models (opt-in)",
+]

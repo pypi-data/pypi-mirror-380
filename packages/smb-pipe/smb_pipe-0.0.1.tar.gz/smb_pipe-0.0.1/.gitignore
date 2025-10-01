@@ -1,0 +1,82 @@
+.env
+.env.local
+.env.*.local
+*.pyc
+__pycache__/
+.DS_Store
+*.log
+node_modules/
+venv/
+.venv/
+env/
+ENV/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+ 
+# Python bytecode and caches
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.pyre/
+.cache/
+
+# Local cache (generated in run directory)
+.cache/
+
+# Coverage and test artifacts
+.coverage
+.coverage.*
+htmlcov/
+
+# Build and distribution artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Local data and run outputs
+predictions*.json
+predictions/
+tests/outputs/
+ecg_data/
+checkpoints/
+models/
+!models/**/README.md
+!src/models/**
+src/models/__pycache__/
+wandb/
+logs/
+tmp/
+*.tmp
+
+# Validation and inference outputs
+*.jsonl
+validation_*.csv
+mimic_validation_*.csv
+test_*.csv
+outputs/
+results/
+
+# Test data directories
+test_ecg_data/
+simdata/
+ecgfounder_data/
+
+# Lock files (opt-out; keep if you want reproducible builds)
+uv.lock
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+CLAUDE.md
+
+smb-to-go/
+.claude/
+data/
