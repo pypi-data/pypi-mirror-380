@@ -1,0 +1,12 @@
+criipto_signatures/__init__.py,sha256=uMKN4BVXyOWq150B1QGUoYv3lncJxHb5vq413I0ba2k,212
+criipto_signatures/models.py,sha256=e08Rs80ZXrJo_VxW5Yl-L13cBq2l_hI7v19YWKaNg24,48303
+criipto_signatures/operations.py,sha256=rRxkNFW2YxfqwLx3vU_xxjqEhSIOepsP66DM1NueqSA,105172
+criipto_signatures/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+criipto_signatures/sample-form.pdf,sha256=SkdyJkKYAOifwWy_bVJJ3PzxtE5dURah0SpO_e5S3To,556045
+criipto_signatures/sample.pdf,sha256=8iPf-X1OhGRYneuCQZqGHfV3ZgzNfvnUgO-TSJjQZ3c,2830
+criipto_signatures/test_models.py,sha256=jaACtSW5UbS7KtQ2FkVWcr8H4qqkoTAEpHnFjlZs6tE,502
+criipto_signatures/test_operations.py,sha256=FducrVqVnF67uBQWjtKWZm1kucbAncuz0Sk_-lArnXI,5960
+criipto_signatures/utils.py,sha256=DvcYZ2QzY2VdQ0dJVzrLsH96HA-bfZq3m7wnnfq5tuI,378
+criipto_signatures-0.1.0a1.dist-info/WHEEL,sha256=Pi5uDq5Fdo_Rr-HD5h9BiPn9Et29Y9Sh8NhcJNnFU1c,79
+criipto_signatures-0.1.0a1.dist-info/METADATA,sha256=BCT0kvfX0R-wuDfHeK8HI2xVFG-mOlcwm4XNWsMwk4A,460
+criipto_signatures-0.1.0a1.dist-info/RECORD,,
