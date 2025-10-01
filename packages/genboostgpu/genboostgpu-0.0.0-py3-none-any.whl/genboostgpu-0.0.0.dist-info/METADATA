@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: genboostgpu
+Version: 0.0.0
+Summary: GENBoostGPU provides a scalable framework for running elastic net regression with boosting across thousands of CpG sites, leveraging GPU acceleration with RAPIDS cuML, CuPy, and cuDF.
+License: GPL-3.0-or-later
+Keywords: genomics,epigenomics,dna-methylation,elastic-net,boosting,gpu,snp-heritability
+Author: Kynon J Benjamin
+Author-email: kj.benjamin90@gmail.com
+Maintainer: Kynon J Benjamin
+Maintainer-email: kj.benjamin90@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: cudf-cu12 (>=25.8.0,<26.0.0)
+Requires-Dist: cuml-cu12 (>=25.8.0,<26.0.0)
+Requires-Dist: cupy-cuda12x (>=13.3.0,<14.0.0)
+Requires-Dist: dask-cuda (>=25.8.0,<26.0.0)
+Requires-Dist: numba (<0.62)
+Requires-Dist: numpy (<2.3.0)
+Requires-Dist: optuna (>=4.5.0,<5.0.0)
+Requires-Dist: pandas (>=2.3.2,<3.0.0)
+Requires-Dist: pandas-plink (>=2.3.2,<3.0.0)
+Requires-Dist: scikit-learn (>=1.7.2,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/heart-gen/GENBoostGPU/issues
+Project-URL: Homepage, https://github.com/heart-gen/GENBoostGPU
+Project-URL: Repository, https://github.com/heart-gen/GENBoostGPU
+Description-Content-Type: text/markdown
+
+# GENBoostGPU
+
+**Genomic Elastic Net Boosting on GPU (GENBoostGPU)**
+
+GENBoostGPU provides a scalable framework for running elastic net regression with 
+boosting across thousands of CpG sites, leveraging GPU acceleration with RAPIDS cuML, 
+CuPy, and cuDF. It supports SNP preprocessing, cis-window filtering, LD clumping, 
+missing data imputation, and phenotype integration — all optimized for large-scale 
+epigenomics.
+
+---
+
+## Features
+- GPU-accelerated **elastic net regression** with optional boosting
+- SNP-level preprocessing:
+  - Zero-variance SNP filtering
+  - Missing genotype imputation
+  - LD clumping (PLINK-like) on GPU
+- Cis-window filtering for CpGs
+- Integration of genotype (PLINK) and phenotype (CpG/VMR methylation) data
+- Batch execution across **thousands of CpGs on a single GPU**
+- Flexible output: betas, heritability estimates, cross-validation results
+
+---
+
+
