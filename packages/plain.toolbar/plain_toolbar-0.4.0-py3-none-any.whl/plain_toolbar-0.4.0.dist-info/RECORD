@@ -1,0 +1,15 @@
+plain/toolbar/CHANGELOG.md,sha256=MYma3w3b5yBFOOmgbgsPZ_uf-1c7Q2oTfOxkRD2sOpE,2768
+plain/toolbar/__init__.py,sha256=njMQ7fsGF75q_etgkUi8zEDf0zXwTf_RnoZU0kbX9DM,129
+plain/toolbar/config.py,sha256=ySzTMobiGIyrDmuMcEw04iBXT75Zq1fXOxD3M5ltFgk,296
+plain/toolbar/registry.py,sha256=teGiUenMH0gU5MGa5in05loQGae4eH08st1T7OfqxZY,442
+plain/toolbar/templates.py,sha256=qmTm-T2_a35cZPwLA8eVHRRMgSh8x6tskG0g9iPjzCw,433
+plain/toolbar/toolbar.py,sha256=7S1UQaz3LTHx3bWLAznEJXbA0vQcPv7xKvYHZXKH_Og,2793
+plain/toolbar/assets/toolbar/toolbar.js,sha256=qlx5ecLqqT0dUntCi4nEKImJsI5xEVEkL9zo4fCqx9I,6531
+plain/toolbar/templates/toolbar/exception.html,sha256=__bO0QNMvuCpJGvzwIrYOE4deHWVi4Ncc_yIwLmEElI,3294
+plain/toolbar/templates/toolbar/exception_button.html,sha256=6yIQa28z2DZciNeSHW9cfj35Gs7WvSp94oJ-rpYYdKU,547
+plain/toolbar/templates/toolbar/request.html,sha256=_fQa4rrIQJfEPbdKM6tCcidEn6AZ-cpCmVOJk4Z_has,1566
+plain/toolbar/templates/toolbar/toolbar.html,sha256=fIbYXJ52-f4Zr4nBxxpxrySzMGM4FeFNRqIFUCNu0PE,5269
+plain_toolbar-0.4.0.dist-info/METADATA,sha256=vPcAc6pAL_xkM2YugKuwHiXheszdXsYhcvPORLQzETU,887
+plain_toolbar-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plain_toolbar-0.4.0.dist-info/licenses/LICENSE,sha256=cvKM3OlqHx3ijD6e34zsSUkPvzl-ya3Dd63A6EHL94U,1500
+plain_toolbar-0.4.0.dist-info/RECORD,,
