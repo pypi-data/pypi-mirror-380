@@ -1,0 +1,15 @@
+internals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+internals/chat.py,sha256=OTDF4R72fnnWVP1vFrG1FLDzdg4e3r6cLuURLpPLI6I,1422
+internals/chat_completer.py,sha256=aExvWKycSpfzgzm-iA7fTXJZKcAZl6NCxCTi7_zfAfQ,696
+internals/message.py,sha256=LwjcJL0a-BGHpsAO2eyBOvrT7xFRiL5PpJlixcAtO6U,256
+internals/prompt_loader.py,sha256=10JSFsNePkjWDjOGuq1t1WppX2QhVPUgybl6Nkpc8ek,689
+internals/status.py,sha256=w-a9HrWdyHAG3KGDCLUcz-D1_k6Wn-hvQ_atYsuH_ic,180
+internals/system.py,sha256=wvw7dGoqN2o9SnvqB4csWNCIM-CRo-SSD1FX8FFIFSs,2627
+internals/user.py,sha256=_B1o-56XRRwmcAhA4CmQUArgTx72nkpBEaGDy6-hTj0,1865
+philosopher_chat-0.0.1.dist-info/licenses/LICENSE,sha256=Hb2YOBKy2MJQLnyLrX37B4ZVuac8eaIcE71SvVIMOLg,1082
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/globals.py,sha256=9P6PJSbnvswI6RgcpNvlejSrHDpCBCeBOLWBI4vE6GQ,168
+philosopher_chat-0.0.1.dist-info/METADATA,sha256=dFEwA6EXG9SsJeYzu5e3-GZhAq1je2GQvUvSfxHn_QI,3738
+philosopher_chat-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+philosopher_chat-0.0.1.dist-info/top_level.txt,sha256=6U4gTt8l2bxH0lsjLM7D6O4JVyvPjbp7LQ3PXWrZieE,16
+philosopher_chat-0.0.1.dist-info/RECORD,,
