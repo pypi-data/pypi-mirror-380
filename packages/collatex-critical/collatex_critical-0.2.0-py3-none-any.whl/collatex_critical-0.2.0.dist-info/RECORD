@@ -1,0 +1,15 @@
+collatex_critical/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+collatex_critical/cli.py,sha256=WNkqimKpbAeGupDrRY9EizNEEga4PbSz1wEBANmwoYU,900
+collatex_critical/collatex_critical.py,sha256=fBYmrzpZ200x8hceBUkw3iKJouMbif0zrI1efn2H2fk,4498
+collatex_critical/generate.py,sha256=4SgEDrtB1aNhgii6yZ0kb5fbV_LlOmaA-l_9nPujj-g,4955
+collatex_critical/utils.py,sha256=q9AgKRfpn-4lnbruAjQenrnxdyDLL6uvj4IcZuS0g0s,2442
+collatex_critical/resources/fontlist.json,sha256=2W9IOz-T_DypSgNCr-3cqJAh3VzWUZNEt2XCbcQs4B4,2062
+collatex_critical/resources/footnotes-to-titles.js,sha256=yslRhw9qKiEymsVjVfPVCyW1AH1aisurU7POufzCcnU,2400
+collatex_critical/resources/header.tex,sha256=wzZrnBnjHLcHqFZcjnqQa1Sk3pVY-nYuL8ZJftxQSVU,50
+collatex_critical/resources/header_script.html,sha256=Ca_ulSrRKo4derkGEkQmq3_nraxUm-eu5RRPqr3MigU,84
+collatex_critical-0.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+collatex_critical-0.2.0.dist-info/METADATA,sha256=JJDHMdCAed8ggHUuoFvJLnTcpAacaGcZHRoDdJtJX8I,4958
+collatex_critical-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+collatex_critical-0.2.0.dist-info/entry_points.txt,sha256=AjG_txdiu8vOoc2ihNkU7cQZjsQMnVLG94HzXgS6FaU,65
+collatex_critical-0.2.0.dist-info/top_level.txt,sha256=eKpljU3wIiqYSwIzGYJ3Knyio6YS1EwNXmLdyTspQ8A,18
+collatex_critical-0.2.0.dist-info/RECORD,,
