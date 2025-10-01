@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: tkr_nexus_worker
+Version: 0.1.4
+Summary: A tierkreis worker for interacting with Nexus.
+Requires-Python: >=3.12
+Requires-Dist: qnexus==0.18.2
+Requires-Dist: tierkreis
+Description-Content-Type: text/markdown
+
+# Nexus worker
+
+## Authentication
+
+The Nexus API requires re-authentication every 30 days.
+
+```bash
+uv run python -c "from qnexus.client.auth import login; login()"
+```
