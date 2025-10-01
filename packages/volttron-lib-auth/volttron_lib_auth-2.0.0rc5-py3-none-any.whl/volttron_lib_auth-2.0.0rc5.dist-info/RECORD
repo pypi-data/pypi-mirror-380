@@ -1,0 +1,9 @@
+volttron/auth/auth_service.py,sha256=GB1KT-XbaUqSo_jHXCIKYCaNhmPyLP0EuJtCBLVnXFw,23377
+volttron/auth/authz_manager.py,sha256=OxqCMb6KpfMzrS9AvxuZ62OnsEZNbRVYQRl5VGJxQbQ,15151
+volttron/auth/commands.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+volttron/auth/credential_manager.py,sha256=bdHihlgRz6V7h5NFcMsbq_22MglyVo6UKZB648Qq1Ys,1302
+volttron/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+volttron_lib_auth-2.0.0rc5.dist-info/LICENSE,sha256=ci7QuV8QsawS9BmtbHRtqf5PbTsCAbMWFVanXhO6ANM,329588
+volttron_lib_auth-2.0.0rc5.dist-info/METADATA,sha256=_fEyv9ztmyVrpy7WiGPUeYsHZA6iOzsg_yL2Q2f6UaA,4586
+volttron_lib_auth-2.0.0rc5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+volttron_lib_auth-2.0.0rc5.dist-info/RECORD,,
