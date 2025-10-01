@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: androidscan
+Version: 0.1.2
+Summary: A simple android vuln cli scanner
+Home-page: https://github.com/edoggy777/bugbounty
+Author: Evan Kirtz
+Author-email: kirtzevan@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+Android Security Scanner – Decompiled App Vulnerability Scanner
+===============================================================
+
+**Android Security Scanner** is a command-line tool for analyzing decompiled Android applications for high-confidence security vulnerabilities. It focuses on detecting critical issues such as remote code execution, unsafe reflection, and SQL injection risks while minimizing false positives.
+
+Features
+--------
+
+* Scan individual files or entire decompiled app directories recursively
+* Detects **HIGH** and **MODERATE** risk vulnerabilities with confidence scoring
+* Generates professional text or JSON reports
+* CLI flags for custom confidence thresholds, output format, and saved reports
+* Supports verbose debug output
+
+Installation
+------------
+
+Install via PyPI:
+
+pip install androidscan
+
+Usage
+-----
+
+Scan a decompiled Android app:
+
+androidscan /path/to/decompiled/app
+
+Save results in JSON format:
+
+androidscan /path/to/app --output-format json --save-report report.json
+
+Output
+------
+
+* Prints vulnerabilities to the terminal, grouped by severity
+* Generates JSON report (if `--save-report` specified) with:
+
+  * Metadata (files analyzed, findings count, risk breakdown)
+  * Detailed per-vulnerability information
+  * Summary statistics by severity and type
+
+Example
+-------
+
+HIGH RISK VULNERABILITIES (1 finding):
+
+[Dynamic Command Execution] MainActivity.java:84
+Method: runCommand
+Confidence: 95%
+Description: Runtime.exec() called with external input
+Impact: Arbitrary command execution (potential RCE)
+Recommendation: Validate and sanitize all inputs before use
+
+MODERATE RISK VULNERABILITIES (1 finding):
+
+[SQL Injection Risk] DatabaseHelper.java:142
+Method: queryData
+Confidence: 78%
+Description: SQL query constructed with string concatenation
+Impact: Possible SQL injection attack
+Recommendation: Use parameterized queries or prepared statements
+
+License
+-------
+
+MIT License © 2025 Evan Kirtz
+
