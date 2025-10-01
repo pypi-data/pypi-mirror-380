@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: pyMillion
+Version: 0.0.0
+Summary: Una herramienta CLI para manejar JSON con estilo
+Author-email: Galileo Zoe <tu_email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/galileozoe/pyjson
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=13.0.0
+Requires-Dist: flask>=2.0.0

@@ -1,0 +1,8 @@
+README.txt
+pyproject.toml
+setup.py
+pyMillion.egg-info/PKG-INFO
+pyMillion.egg-info/SOURCES.txt
+pyMillion.egg-info/dependency_links.txt
+pyMillion.egg-info/requires.txt
+pyMillion.egg-info/top_level.txt
