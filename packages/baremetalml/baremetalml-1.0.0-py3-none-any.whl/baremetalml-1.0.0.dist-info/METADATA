@@ -1,0 +1,114 @@
+Metadata-Version: 2.4
+Name: baremetalml
+Version: 1.0.0
+Summary: Lightweight modular ML library from scratch in Python
+Home-page: https://github.com/AskariAbidi18/ML_from_Scratch
+Author: Askari Abidi
+Author-email: askari.abidi.2005@gmail.com
+License: MIT
+Keywords: machine learning,ML,numpy,educational,baremetalml
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# BareMetalML
+
+**BareMetalML** is a lightweight, modular machine learning library built from scratch in Python by **Askari Abidi**.  
+It is designed for **learning, experimentation, and educational purposes**, providing a clear and simple interface for core machine learning algorithms and preprocessing tools.  
+All models and transformers are implemented using **pure NumPy**, making the library easy to understand and extend.
+
+---
+
+## Features
+
+### Easy and Modular Imports
+BareMetalML allows **modular imports**, so you don’t need to worry about the internal file structure.  
+For example, you can import any model or transformer like this:
+
+```python
+from baremetalml import LinearRegression, StandardScaler
+```
+
+No need to know which file the class is defined in — everything is ready to use.
+
+## Core Models
+
+**Linear Regression** – Ordinary Least Squares (Normal Equation) and Gradient Descent methods
+
+**Logistic Regression** – Binary classification with Gradient Descent optimization
+
+**K-Nearest Neighbors (KNN)** – Classification and Regression with multiple distance metrics
+
+## Preprocessing & Transformers
+
+**StandardScaler** – Standardizes features to mean=0, standard deviation=1
+
+**NormalScaler** – Min-max scaling to [0,1]
+
+**LabelEncoder** – Converts categorical labels to integers
+
+**OneHotEncoder** – Converts categorical features into one-hot encoded vectors
+
+**PolynomialFeatures** – Generates polynomial and interaction features up to a given degree
+
+## Base Classes
+
+**BaseModel** – Abstract base class for all models with input validation
+
+**BaseTransformer** – Abstract base class for all transformers with fit, transform, and fit_transform interface
+
+## What’s Inside
+
+**BareMetalML includes**:
+
+All basic regression and classification models to start learning ML from scratch
+
+Preprocessing tools for handling numerical and categorical data
+
+Feature engineering utilities like polynomial feature generation
+
+Modular structure for easy imports and extensibility
+
+## Installation
+
+BareMetalML is available on PyPI. Install it with:
+
+```bash
+pip install baremetalml
+```
+Then import the modules you need:
+
+```python
+from baremetalml import LinearRegression, StandardScaler, KNNClassifier
+```
+
+## Author 
+
+Askari Abidi
+
+## Contribute & Support
+
+BareMetalML is an open-source educational project.
+
+Feel free to contribute, suggest improvements, or report issues on the repository.
+
+If you find it useful, you can support the project via donations or by sharing it with others.
+Every contribution helps make learning ML from scratch easier and more accessible!
