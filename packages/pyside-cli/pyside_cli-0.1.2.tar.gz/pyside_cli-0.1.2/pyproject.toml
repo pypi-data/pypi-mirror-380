@@ -1,0 +1,19 @@
+[project]
+name = "pyside-cli"
+version = "0.1.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "glom>=24.11.0",
+    "nuitka>=2.7.16",
+    "pyside6>=6.6.3.1",
+    "toml>=0.10.2",
+]
+
+[project.scripts]
+pyside-cli = "cli.__main__:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
