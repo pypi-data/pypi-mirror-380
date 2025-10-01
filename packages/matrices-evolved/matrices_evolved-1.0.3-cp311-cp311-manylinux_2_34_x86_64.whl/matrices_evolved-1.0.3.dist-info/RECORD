@@ -1,0 +1,9 @@
+matrices_evolved/__init__.py,sha256=cIeFGnKW20SdTD5zoRDw1AyNZaoz-lQq_wlc1M8WGYA,2330
+matrices_evolved/_event_signing_impl.cpython-311-x86_64-linux-gnu.so,sha256=dtzCAT62e0OO2bBQexw3NWVOALswWRMvwIG-ngWSD-U,4403504
+matrices_evolved/cpp.py,sha256=Ewp__yvahWPVlR8xbJYAXG-QcTjJpUOO6lgjVdKeL9s,63
+matrices_evolved/matrices_evolved_rust.so,sha256=jTEaHI02w1Ql22jVazl5xraIBV_nwPsJZ7FJnzdyo7w,3450048
+matrices_evolved/rust.py,sha256=I-kiUNuXMDqKNaJt5OWvefiWMev_uH8EGC6MvttMfNs,66
+matrices_evolved-1.0.3.dist-info/METADATA,sha256=FEqFmDr1E_vw5jX-uHbLAQB3do3-BrfIJA-GMTN_xUA,22561
+matrices_evolved-1.0.3.dist-info/WHEEL,sha256=vOgah-mGdOycIRGMVlDo2kbzQf-9lKM-1u5R5I5xdLc,118
+matrices_evolved-1.0.3.dist-info/RECORD,,
+matrices_evolved-1.0.3.dist-info/licenses/LICENSE,sha256=OIQXwwuy-__iRZu8QDJYOituiBVHe0uVRQt5hUJ1V-c,10538
