@@ -1,0 +1,10 @@
+{% extends "base-root.htm" %}
+{% load i18n %}
+
+{% block title %}
+{{ app_settings.APP_NAME }} - {% trans "Lingo" %}
+{% endblock title %}
+
+{% block body %}
+<div id="lingo-mounting-point"></div>
+{% endblock body %}
