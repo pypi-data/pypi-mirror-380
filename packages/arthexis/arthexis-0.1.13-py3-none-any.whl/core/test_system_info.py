@@ -1,0 +1,139 @@
+import json
+import os
+from pathlib import Path
+from subprocess import CompletedProcess
+from unittest.mock import patch
+
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+
+import django
+
+django.setup()
+
+from django.conf import settings
+from django.test import SimpleTestCase, override_settings
+from nodes.models import Node, NodeFeature, NodeRole
+from core.system import _gather_info, get_system_sigil_values
+
+
+class SystemInfoRoleTests(SimpleTestCase):
+    @override_settings(NODE_ROLE="Terminal")
+    def test_defaults_to_terminal(self):
+        info = _gather_info()
+        self.assertEqual(info["role"], "Terminal")
+
+    @override_settings(NODE_ROLE="Satellite")
+    def test_uses_settings_role(self):
+        info = _gather_info()
+        self.assertEqual(info["role"], "Satellite")
+
+
+class SystemInfoScreenModeTests(SimpleTestCase):
+    def test_without_lockfile(self):
+        info = _gather_info()
+        self.assertEqual(info["screen_mode"], "")
+
+    def test_with_lockfile(self):
+        lock_dir = Path(settings.BASE_DIR) / "locks"
+        lock_dir.mkdir(exist_ok=True)
+        lock_file = lock_dir / "screen_mode.lck"
+        lock_file.write_text("tft")
+        try:
+            info = _gather_info()
+            self.assertEqual(info["screen_mode"], "tft")
+        finally:
+            lock_file.unlink()
+            if not any(lock_dir.iterdir()):
+                lock_dir.rmdir()
+
+
+class SystemInfoRevisionTests(SimpleTestCase):
+    @patch("core.system.revision.get_revision", return_value="abcdef1234567890")
+    def test_includes_full_revision(self, mock_revision):
+        info = _gather_info()
+        self.assertEqual(info["revision"], "abcdef1234567890")
+        mock_revision.assert_called_once()
+
+
+class SystemInfoDatabaseTests(SimpleTestCase):
+    def test_collects_database_definitions(self):
+        info = _gather_info()
+        self.assertIn("databases", info)
+        aliases = {entry["alias"] for entry in info["databases"]}
+        self.assertIn("default", aliases)
+
+    @override_settings(
+        DATABASES={
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
+                "NAME": Path("/tmp/db.sqlite3"),
+            }
+        }
+    )
+    def test_serializes_path_database_names(self):
+        info = _gather_info()
+        databases = info["databases"]
+        self.assertEqual(databases[0]["name"], "/tmp/db.sqlite3")
+
+
+class SystemInfoRunserverDetectionTests(SimpleTestCase):
+    @patch("core.system.subprocess.run")
+    def test_detects_runserver_process_port(self, mock_run):
+        mock_run.return_value = CompletedProcess(
+            args=["pgrep"],
+            returncode=0,
+            stdout="123 python manage.py runserver 0.0.0.0:8000 --noreload\n",
+        )
+
+        info = _gather_info()
+
+        self.assertTrue(info["running"])
+        self.assertEqual(info["port"], 8000)
+
+    @patch("core.system._probe_ports", return_value=(True, 8000))
+    @patch("core.system.subprocess.run", side_effect=FileNotFoundError)
+    def test_falls_back_to_port_probe_when_pgrep_missing(self, mock_run, mock_probe):
+        info = _gather_info()
+
+        self.assertTrue(info["running"])
+        self.assertEqual(info["port"], 8000)
+
+
+class SystemSigilValueTests(SimpleTestCase):
+    def test_exports_values_for_sigil_resolution(self):
+        sample_info = {
+            "installed": True,
+            "revision": "abcdef",
+            "service": "gunicorn",
+            "mode": "internal",
+            "port": 8888,
+            "role": "Terminal",
+            "screen_mode": "",
+            "features": [
+                {"display": "Feature", "expected": True, "actual": False, "slug": "feature"}
+            ],
+            "running": True,
+            "service_status": "active",
+            "hostname": "example.local",
+            "ip_addresses": ["127.0.0.1"],
+            "databases": [
+                {
+                    "alias": "default",
+                    "engine": "django.db.backends.sqlite3",
+                    "name": "db.sqlite3",
+                }
+            ],
+        }
+        with patch("core.system._gather_info", return_value=sample_info):
+            values = get_system_sigil_values()
+
+        self.assertEqual(values["REVISION"], "abcdef")
+        self.assertEqual(values["RUNNING"], "True")
+        self.assertEqual(values["NGINX_MODE"], "internal (8888)")
+        self.assertEqual(values["IP_ADDRESSES"], "127.0.0.1")
+        features = json.loads(values["FEATURES"])
+        self.assertEqual(features[0]["display"], "Feature")
+        databases = json.loads(values["DATABASES"])
+        self.assertEqual(databases[0]["alias"], "default")
+
