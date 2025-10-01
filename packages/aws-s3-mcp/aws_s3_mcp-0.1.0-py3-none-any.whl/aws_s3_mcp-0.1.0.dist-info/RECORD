@@ -1,0 +1,12 @@
+aws_s3_mcp/__init__.py,sha256=9RcZ0km31LWxnvF1KBYACNOWIfHX7qCingbD8jMz81I,237
+aws_s3_mcp/__main__.py,sha256=N_UnoGW45UaFPcm_vIKkz1xeui2A2Awx5QdhNOSwVw0,1078
+aws_s3_mcp/app.py,sha256=retMkubSzmzqjefqhVxpSEwyJBpZwizw-_7afUNjQew,150
+aws_s3_mcp/config.py,sha256=HtSx0-U1b1rcXIhmutu5huZ215FOPhMfanF1HEU_Mng,2201
+aws_s3_mcp/services/__init__.py,sha256=sQ5YjvEX9rdo6H0miVD1f4U8kg-zdQ54E4oHn2RE3j0,120
+aws_s3_mcp/services/s3_service.py,sha256=HF68JCN3lb-0geSgrDWzwu7DCzkC9523xUjVIP3wMHQ,22270
+aws_s3_mcp/tools/__init__.py,sha256=qcdVCYSbANizRs4zOQW1moBnQpw1hSCBKweQb6hvf1s,166
+aws_s3_mcp/tools/s3_tools.py,sha256=K9VskVeYpt-cMtUCtgKeXN1KVpY0LJuYSn2iOd8hobY,8986
+aws_s3_mcp-0.1.0.dist-info/METADATA,sha256=yeJvZXs76e75gbimAzM-5aXakQPpvVn1M_KsX0C4PHo,9430
+aws_s3_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aws_s3_mcp-0.1.0.dist-info/entry_points.txt,sha256=vObaXCqG-WQNu4trLK2WzO1yV2dVMZ2J2MpZji4kNsM,56
+aws_s3_mcp-0.1.0.dist-info/RECORD,,
