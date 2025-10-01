@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: deepwiki-to-md
+Version: 2.0.0
+Summary: Extensible Next.js/DeepWiki content extractor with zero external dependencies
+Author-email: DeepWiki Extractor Team <contact@example.com>
+Maintainer-email: DeepWiki Extractor Team <contact@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yuyu1815/deepwiki_to_md
+Project-URL: Repository, https://github.com/yuyu1815/deepwiki_to_md
+Project-URL: Bug Tracker, https://github.com/yuyu1815/deepwiki_to_md/issues
+Project-URL: Documentation, https://github.com/yuyu1815/deepwiki_to_md/blob/main/docs/
+Project-URL: Changelog, https://github.com/yuyu1815/deepwiki_to_md/blob/main/docs/CHANGELOG.md
+Keywords: scraping,nextjs,deepwiki,markdown,extraction,content,zero-dependency
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: pytest-mock>=3.10.0; extra == "test"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.4.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "docs"
+Requires-Dist: mkdocstrings[python]>=0.20.0; extra == "docs"
+Dynamic: license-file
+
+# deepwiki-to-md
+
+Next.js/DeepWiki 由来のHTMLからMarkdownテキストを抽出するゼロ依存のCLIツール。
+
+- CLI: `deepwiki-to-md`
+- 必要要件: Python 3.7+
+- 依存関係: 標準ライブラリのみ（オプション機能は extras）
+
+## インストール
+
+```bash
+pip install deepwiki-to-md
+```
+
+## 使い方
+
+- ローカルHTMLから:
+```bash
+echo "<html>...</html>" | deepwiki-to-md
+```
+
+- URLから:
+```bash
+deepwiki-to-md https://example.com/page --path ./.deepwiki
+```
+
+## ライセンス
+
+MIT License
