@@ -1,0 +1,3 @@
+[console_scripts]
+scooters-data-uploader = src.cli:app
+uploader = src.cli:app
