@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: sample_generator
+Version: 0.1.0
+Summary: Generate sample data from JSON schema or OAS models
+Project-URL: Homepage, https://github.com/bartoszm/sample_generator
+Project-URL: Repository, https://github.com/bartoszm/sample_generator
+Project-URL: Issues, https://github.com/bartoszm/sample_generator/issues
+Project-URL: Documentation, https://github.com/bartoszm/sample_generator#readme
+Author-email: Bartosz Michalik <bartosz.michalik@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: fixtures,generator,json,jsonschema,oas,openapi,testing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Testing
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Requires-Dist: faker==37.1.0
+Requires-Dist: jsonref~=1.1
+Requires-Dist: jsonschema~=4.23
+Requires-Dist: pydantic==2.11.3
+Requires-Dist: pyyaml~=6.0
+Requires-Dist: rstr==3.2.2
+Provides-Extra: dev
+Requires-Dist: black>=24.4; extra == 'dev'
+Requires-Dist: ipykernel>=6.29; extra == 'dev'
+Requires-Dist: isort>=5.13; extra == 'dev'
+Requires-Dist: mypy>=1.10; extra == 'dev'
+Requires-Dist: pre-commit>=3.7; extra == 'dev'
+Requires-Dist: pytest>=8.3; extra == 'dev'
+Requires-Dist: ruff>=0.5; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# json_sample_generator
+
+Generate sample data from JSON Schema or OpenAPI (OAS) schemas. Create realistic samples for tests, examples, and fixtures.
+
+Badges (optional):
+
+- CI: GitHub Actions status
+- PyPI: version, downloads
+- License: MIT
+
+## Installation
+
+From PyPI:
+
+```bash
+pip install json_sample_generator
+```
+
+Or with uv:
+
+```bash
+uv add json_sample_generator
+```
+
+## Quickstart
+
+Prerequisites:
+- Python 3.12+
+- uv installed
+
+Install uv (Linux/macOS):
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Set up the project:
+```bash
+# Clone the repo
+git clone https://github.com/<your-username>/json_sample_generator.git
+cd json_sample_generator
+
+# (Optional) create a virtualenv managed by uv
+uv venv  # creates .venv/
+
+# Install runtime deps
+uv sync
+
+# For development (tests, tools, etc.)
+uv sync --group dev
+```
+
+Run tests:
+```bash
+uv run pytest -q
+```
+
+Run examples:
+```bash
+uv run python examples/simple_value_example.py
+```
+
+## Developer guide
+
+Code style:
+- PEP 8; line length 79
+- Type hints everywhere
+
+Common tasks:
+```bash
+# Lint
+uvx ruff check .
+
+# Format
+uvx black .
+uvx isort .
+
+# Type-check
+uvx mypy .
+
+# Test
+uv run pytest -q
+```
+
+Build and publish:
+```bash
+# Build sdist + wheel
+uv build
+
+# Dry-run publish (uses ~/.pypirc or env vars)
+uv publish --dry-run
+```
+
+Release to PyPI:
+
+- Bump `__version__` in `src/json_sample_generator/__init__.py`
+- Create a GitHub release (tag must match version)
+- The publish workflow will build and upload to PyPI via trusted publishing
+
+Pre-commit (recommended):
+```bash
+uvx pre-commit install
+uvx pre-commit run --all-files
+```
+
+## User guide: Scenarios
+
+Scenarios let you override generated values per field path with simple values or callables, and optionally with pattern-based rules. They accept a Context so overrides can depend on other fields.
+
+See the full guide (including `default_data`) in `docs/SCENARIOS.md`.
+
+## Contributing
+
+See `CONTRIBUTING.md`.
+
+## License
+
+MIT. See `LICENSE`.
