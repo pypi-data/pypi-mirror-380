@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: d1snakegame
+Version: 0.1.1
+Summary: A simple snake game in Python using pygame
+Author: Drifys1
+Requires-Dist: pygame
