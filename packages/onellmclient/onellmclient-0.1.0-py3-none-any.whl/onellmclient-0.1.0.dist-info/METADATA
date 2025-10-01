@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: onellmclient
+Version: 0.1.0
+Summary: A unified Python client to normalize interfaces across major LLM providers (OpenAI, Anthropic, Gemini).
+Author-email: Your Name <you@example.com>
+License: MIT License
+        
+        Copyright (c) 2025
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: anthropic,client,gemini,llm,openai,sdk
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Provides-Extra: all
+Requires-Dist: anthropic<1.0.0,>=0.68.0; extra == 'all'
+Requires-Dist: google-genai<2.0.0,>=1.38.0; extra == 'all'
+Requires-Dist: openai<2.0.0,>=1.109.1; extra == 'all'
+Provides-Extra: anthropic
+Requires-Dist: anthropic<1.0.0,>=0.68.0; extra == 'anthropic'
+Provides-Extra: gemini
+Requires-Dist: google-genai<2.0.0,>=1.38.0; extra == 'gemini'
+Provides-Extra: openai
+Requires-Dist: openai<2.0.0,>=1.109.1; extra == 'openai'
+Provides-Extra: test
+Requires-Dist: anthropic<1.0.0,>=0.68.0; extra == 'test'
+Requires-Dist: google-genai<2.0.0,>=1.38.0; extra == 'test'
+Requires-Dist: openai<2.0.0,>=1.109.1; extra == 'test'
+Requires-Dist: pytest<9.0.0,>=8.4.2; extra == 'test'
+Requires-Dist: python-dotenv<2.0,>=1.1.1; extra == 'test'
+Description-Content-Type: text/markdown
+
+# onellmclient
+
+统一主要 LLM 提供商（OpenAI、Anthropic、Gemini）接口格式的 Python 客户端。
+
+- 运行时零强制依赖；通过 extras 按需安装各家 SDK。
+- 提供统一的 `Client` 接口以便上层应用透明切换供应商。
+
+## 安装
+
+使用 uv（推荐）：
+
+```bash
+uv venv
+uv pip install -e .
+# 或安装某家 SDK：
+uv pip install -e .[openai]
+uv pip install -e .[anthropic]
+uv pip install -e .[gemini]
+uv pip install -e .[all]
+```
+
+## 构建与发布
+
+使用 uv 构建 sdist 与 wheel：
+
+```bash
+uv build
+ls dist/
+```
+
+发布到 TestPyPI：
+
+```bash
+uv tool install twine  # 首次需要安装
+uv run twine upload --repository testpypi dist/*
+# 安装测试：
+uv pip install -i https://test.pypi.org/simple/ onellmclient==0.1.0
+```
+
+发布到 PyPI（确认版本号已递增且能在 TestPyPI 正常安装后）：
+
+```bash
+uv run twine upload dist/*
+```
+
+## 使用
+
+```python
+from onellmclient import Client
+
+client = Client(openai={"api_key": "..."})
+resp = client.completion(
+    provider="openai", model="gpt-4o-mini", messages=[{"role":"user","content":"hi"}]
+)
+print(resp)
+```
+
+## 开源协议
+
+MIT
