@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "748e814b48ae0d02",
+    "type": "split",
+    "children": [
+      {
+        "id": "8495814dacfea01d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06ce21532119d463",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "47b408fb2ed206fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "67d0e1659fa65a92",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53bf93132c6a1c6e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4ba67b2725691780",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e817f8fc6496149f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ad86623438a9bdcc",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e5dd1e95a76e4dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3199e2066a584bcd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6bc2e96a3c7d92d3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "644fe7b6be2a1e5e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ed0d8abcaf6cbba4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "06ce21532119d463",
+  "lastOpenFiles": [
+    "dist/navam-1.1.3-py3-none-any.whl",
+    "dist/navam-1.1.3.tar.gz",
+    "navam-1.1.3/src/navam/commands/invest/screen-opportunities.md",
+    "navam-1.1.3/src/navam/commands/invest/review-portfolio.md",
+    "navam-1.1.3/src/navam/commands/invest/research-stock.md",
+    "navam-1.1.3/src/navam/commands/invest/plan-goals.md",
+    "navam-1.1.3/src/navam/commands/invest/optimize-taxes.md",
+    "navam-1.1.3/src/navam/commands/invest/monitor-holdings.md",
+    "navam-1.1.3/src/navam/commands/invest/execute-rebalance.md",
+    "navam-1.1.3/src/navam/commands/invest/README.md",
+    "navam-1.1.3/src/navam/commands/invest",
+    "navam-1.1.3/artifacts/refer/nextjs/styling.md",
+    "navam-1.1.3/artifacts/refer/nextjs/project-structure.md",
+    "navam-1.1.3/artifacts/refer/nextjs/components.md",
+    "navam-1.1.3/artifacts/refer/mcp/llms-full.txt",
+    "navam-1.1.3/artifacts/refer/mcp/Python-SDK-README.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/todo-tracking.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/subagents.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/streaming-vs-single-mode.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-slash-commands.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-sessions.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-python.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-python-README.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-permissions.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-mcp.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/sdk-cost-tracking.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/modifying-system-prompts.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/overview.md",
+    "navam-1.1.3/artifacts/refer/claude-code-sdk/custom-tools.md",
+    "navam-1.1.3/src/stock_mcp/tools.py",
+    "navam-1.1.3/src/stock_mcp/server.py",
+    "navam-1.1.3/src/stock_mcp/prompts.py",
+    "navam-1.1.3/src/stock_mcp/resources.py",
+    "navam-1.1.3/src/stock_mcp/models.py",
+    "navam-1.1.3/src/stock_mcp/cache.py",
+    "navam-1.1.3/src/stock_mcp/api_clients.py"
+  ]
+}
