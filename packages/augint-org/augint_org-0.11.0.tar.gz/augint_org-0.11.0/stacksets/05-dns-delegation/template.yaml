@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: DNS delegation zone for subdomain management
+
+Parameters:
+  SubdomainPrefix:
+    Type: String
+    Description: Subdomain prefix (e.g., 'org', 'lls', 'woxom')
+    Default: placeholder  # Default for manual StackSet creation
+    AllowedPattern: '^[a-z0-9-]+$'
+    ConstraintDescription: Must be lowercase alphanumeric with hyphens
+
+  RootDomain:
+    Type: String
+    Default: aillc.link
+    Description: Root domain for delegation
+
+Resources:
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: !Sub '${SubdomainPrefix}.${RootDomain}'
+      HostedZoneConfig:
+        Comment: !Sub 'Delegated zone for ${SubdomainPrefix} - managed by ai-org'
+      Tags:
+        - Key: ManagedBy
+          Value: ai-org
+        - Key: Prefix
+          Value: !Ref SubdomainPrefix
+
+Outputs:
+  HostedZoneId:
+    Description: The hosted zone ID
+    Value: !Ref HostedZone
+    Export:
+      Name: AccountHostedZone
+
+  NameServers:
+    Description: Name servers for the hosted zone (comma-separated)
+    Value: !Join [',', !GetAtt HostedZone.NameServers]
+    Export:
+      Name: AccountNameServers
+
+  FullDomain:
+    Description: The full domain name
+    Value: !Sub '${SubdomainPrefix}.${RootDomain}'
+    Export:
+      Name: AccountDomain
