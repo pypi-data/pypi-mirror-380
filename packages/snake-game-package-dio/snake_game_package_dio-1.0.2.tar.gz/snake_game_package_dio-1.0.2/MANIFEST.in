@@ -1,0 +1,2 @@
+recursive-include docs *.gif
+recursive-include snake_game/assets/sounds *.wav

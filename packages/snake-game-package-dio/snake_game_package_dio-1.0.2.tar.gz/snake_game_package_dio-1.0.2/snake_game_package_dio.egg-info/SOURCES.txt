@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+docs/snake_gameplay.gif
+snake_game/__init__.py
+snake_game/game.py
+snake_game/assets/sounds/som_comer.wav
+snake_game/assets/sounds/som_fim_jogo.wav
+snake_game/assets/sounds/som_fundo.wav
+snake_game/assets/sounds/som_passo.wav
+snake_game_package_dio.egg-info/PKG-INFO
+snake_game_package_dio.egg-info/SOURCES.txt
+snake_game_package_dio.egg-info/dependency_links.txt
+snake_game_package_dio.egg-info/entry_points.txt
+snake_game_package_dio.egg-info/requires.txt
+snake_game_package_dio.egg-info/top_level.txt
+tests/test_game.py

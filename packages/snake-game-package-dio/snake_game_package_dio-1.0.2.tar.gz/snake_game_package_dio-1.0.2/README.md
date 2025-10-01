@@ -1,0 +1,112 @@
+# 🐍🎮 Jogo da Cobrinha em Python
+
+Este pacote foi desenvolvido como parte do desafio "Descomplicando a Criação de Pacotes de Processamento de Imagens em Python" do curso da DIO.
+
+Como aplicação prática, o clássico Jogo da Cobrinha foi recriado em estilo Synthwave Cyberpunk, com visual retrô-futurista dos anos 80, efeitos neon, estrada 3D animada e sol ao pôr do sol atrás das montanhas.
+
+## 💡 Funcionalidades
+
+- Menu inicial com seleção de dificuldade (Fácil, Médio, Difícil).
+- Cobra neon pulsante.
+- Comida roxa pulsante.
+- Pontuação em tempo real.
+- Tela de Game Over com opção de jogar novamente.
+- Cenário Synthwave retrô:
+  - Estrada em perspectiva animada.
+  - Sol redondo atrás das montanhas.
+  - Montanhas poligonais estilizadas.
+  - Partículas neon flutuando.
+
+## ⚙️ Regras do Jogo
+
+- Comer a comida faz a cobra crescer e aumenta a pontuação.
+- O jogo termina se a cobra colidir com:
+  - As bordas da tela.
+  - O próprio corpo.
+- Cada comida vale 10 pontos.
+
+## 🛠 Tecnologias Utilizadas
+
+- VSCode
+- Python 3.x
+- Biblioteca Pygame
+
+## 🚀 Como Executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/snake_game_package.git
+cd snake_game_package
+```
+
+(Opcional, recomendado) Crie e ative um ambiente virtual:
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux / macOS
+venv\Scripts\activate      # Windows
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Ou instale diretamente o Pygame:
+
+```bash
+pip install pygame
+```
+
+Execute o jogo:
+
+```bash
+python -m snake_game.game
+```
+
+Caso queira testar funções básicas do jogo (opcional):
+
+```bash
+python -m unittest discover -s tests
+```
+
+## 📌 Estrutura do Projeto
+
+```
+snake_game_package_dio/           # Pasta raiz do projeto
+├── docs/                         # Arquivos de screenshots
+│   └── snake_gameplay.gif        # Screenshots (Gameplay)
+├── README.md                     # Documentação principal do projeto
+├── setup.py                      # Script de configuração (empacotamento/instalação)
+├── requirements.txt              # Lista de dependências (ex.: pygame)
+├── MANIFEST.in                   # (Opcional) garante que assets sejam incluídos no pacote
+├── snake_game/                   # Pacote principal do jogo
+│   ├── __init__.py               # Marca a pasta como pacote Python
+│   ├── game.py                   # Script principal (entrypoint do jogo)
+│   ├── utils.py                  # Funções auxiliares (ex.: gerar comida, pontuação, etc.)
+│   └── assets/                   # Recursos do jogo
+│       └── sounds/               # Arquivos de áudio
+│           ├── comer.wav         # Som ao comer
+│           ├── fundo.wav         # Música de fundo
+│           ├── fim_jogo.wav      # Som de game over
+│           └── passo.wav         # Som de movimento
+└── tests/                        # (Opcional) testes automáticos do jogo
+    └── test_game.py              # Testa o jogo
+```
+
+## 📷 Screenshots (Gameplay)
+
+![GIF do jogo](docs/snake_gameplay.gif)
+
+## 👨‍💻 Autor
+**Isaias Oliveira**  
+📧 E-mail: isaiaswebnet@gmail.com
+
+## ✨ Créditos
+
+Desenvolvido como entrega do desafio "Descomplicando a Criação de Pacotes de Processamento de Imagens em Python" — DIO (Digital Innovation One).
+
+
+
