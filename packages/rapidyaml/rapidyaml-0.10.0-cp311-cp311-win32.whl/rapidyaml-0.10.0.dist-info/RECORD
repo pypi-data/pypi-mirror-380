@@ -1,0 +1,11 @@
+rapidyaml-0.10.0.dist-info/licenses/LICENSE.txt,sha256=ZBYGAiaDLaKpIEnblhJ6Ka9Y12ZLh31TqHaWvTPIeSM,1101
+ryml/__init__.py,sha256=TUDZ9gH93CkgXl7egV7d--UlgWJ-HCSdPTlqG3PYq4s,49
+ryml/_ryml.pyd,sha256=kur9gy0-5_ttsAMLSIzeXynrc3pvdFFGj75SKReMINY,344064
+ryml/ryml.py,sha256=0atoRYaYBAyLlPi28hVO3OSJfl-qmyVSUgAZum6nJWI,25475
+ryml/version.py,sha256=DSnM352NqNjVX6xj2oRtUOYuYntUwIVgreQGZ5GkBuw,748
+ryml/bin/c4core.dll,sha256=iK8Bk0ThD_LfBpBU26p7oRlD9CSOoE9heNVr3ztwHIU,19456
+ryml/bin/ryml.dll,sha256=WwC9EUkKab44H0cK9nnMJvKiNA0235xJi1yV4hnEdeA,474624
+rapidyaml-0.10.0.dist-info/METADATA,sha256=PhUiUUrkpA2a5fQvfb1DlEAzjQuq3L_a5CODZ1R8jks,4527
+rapidyaml-0.10.0.dist-info/WHEEL,sha256=Ri8zddKrjGdgjlj1OpSsvpDnvHfnQhMQWi3E_v2pqng,97
+rapidyaml-0.10.0.dist-info/top_level.txt,sha256=UwmjsiDW_yr07GX2TVIu-U97LVeE7VB39o6O8JkxTxw,5
+rapidyaml-0.10.0.dist-info/RECORD,,
