@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "stock-analyzer": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.stock_mcp.server", "stdio"]
+    },
+    "company-research": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.company_mcp.server", "stdio"]
+    },
+    "news-analyzer": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "src.news_mcp.server", "stdio"]
+    }
+  }
+}
