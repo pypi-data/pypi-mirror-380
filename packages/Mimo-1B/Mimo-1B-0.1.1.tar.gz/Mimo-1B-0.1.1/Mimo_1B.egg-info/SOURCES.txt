@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+Mimo_1B.egg-info/PKG-INFO
+Mimo_1B.egg-info/SOURCES.txt
+Mimo_1B.egg-info/dependency_links.txt
+Mimo_1B.egg-info/requires.txt
+Mimo_1B.egg-info/top_level.txt
