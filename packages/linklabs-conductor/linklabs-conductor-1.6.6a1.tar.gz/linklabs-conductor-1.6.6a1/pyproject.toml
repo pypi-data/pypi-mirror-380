@@ -1,0 +1,49 @@
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(\
+    \.git\
+  | venv\
+)/
+'''
+
+[build-system]
+requires = [
+  "setuptools>=67",
+  "wheel",
+  "build"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linklabs-conductor"
+dynamic = ["version"]
+description = "Linklabs Conductor API Wrapper"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { text = "MIT" }
+authors = [{ name = "Linklabs, LLC", email = "support@link-labs.com" }]
+requires-python = ">=3.7"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+]
+keywords = ["linklabs", "symphony", "conductor", "api"]
+dependencies = [
+  "requests",
+  "python-dateutil",
+]
+
+[tool.setuptools.dynamic]
+version = { file = "conductor/_version.txt" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+conductor = ["_version.txt"]
