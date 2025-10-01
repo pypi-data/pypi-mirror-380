@@ -1,0 +1,15 @@
+litmus_rm/ICCF_working.py,sha256=p79uf7NHYET7QYEaB8w4dz9kQNv7cXiFyS1wSrjxbrA,6245
+litmus_rm/__init__.py,sha256=PBzBwP_xa8T6E97FxEZNl3ulayF1sXxOGNB7wwIyt6w,631
+litmus_rm/_types.py,sha256=6UPzfWR5T2nET4P59nckpXIdGaBghzl-w-oxGbvYjOc,1112
+litmus_rm/_utils.py,sha256=eOsn_or6DRMOyj6g1ZuW4h0xjZHRNyheJJ59GsUI27A,9246
+litmus_rm/fitting_methods.py,sha256=5Aoy1YLp78oS4UpJy453p0ubAqvzzQ9SFd496V37Rbg,93462
+litmus_rm/gp_working.py,sha256=Tq5cB0GJvSY_yw5-MRZqh5u_LNlCCoywGQfGXt5-NTE,2840
+litmus_rm/lightcurve.py,sha256=K5dLcKt_26QWU26TB1vRUpTNSVPo_lCAukUT0sz8jE0,9198
+litmus_rm/lin_scatter.py,sha256=4hJyb9VF6bw8QlshwXZP63PVGvVWuiMzuG7ehblhLno,2382
+litmus_rm/litmusclass.py,sha256=HNxpORLqCKIZ0lWfQz5Am21tWqspI7kWTnKYiL1b_sA,13108
+litmus_rm/logging.py,sha256=ezzuA0iuF29aPDY9cm279_cS0U9BjBOazKxpDS-OK_4,3040
+litmus_rm/mocks.py,sha256=4fi7x3TZsMfR0TO-dyR-gekzKuulzbW1kSPiT89aHIY,15215
+litmus_rm/models.py,sha256=iX9ele6iBYGGF7hnH6FG52wHFvjGFcYXNn2MdzjuSM4,66678
+litmus_rm-0.9.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+litmus_rm-0.9.0.dist-info/METADATA,sha256=lITXqdTypLdv2eBF0medf2jhJ72gU8KXpKtjGD-aq7c,5005
+litmus_rm-0.9.0.dist-info/RECORD,,
