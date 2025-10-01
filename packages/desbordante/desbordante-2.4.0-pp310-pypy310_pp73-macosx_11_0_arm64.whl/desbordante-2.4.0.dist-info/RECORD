@@ -1,0 +1,9 @@
+desbordante.pypy310-pp73-darwin.so,sha256=M7C3w4KPhVcqDtettJi9QeudiwJhwCP_hye0mvTI7vk,6326448
+desbordante-2.4.0.dist-info/RECORD,,
+desbordante-2.4.0.dist-info/WHEEL,sha256=zH33mZxxhANlwyT8beDoF0A_8rYfCL6G3PmJKb8FPMQ,121
+desbordante-2.4.0.dist-info/METADATA,sha256=EYaj5Rvnap8sjDYAFVXqXkseyUcCbGZJ3ZhcvUNLCNg,26955
+desbordante-2.4.0.dist-info/licenses/COPYING,sha256=ZmMRi-50dBE-vEhQod_JEscwf9JG6F_ENCxqKQPj4io,34502
+desbordante.dylibs/libboost_thread.dylib,sha256=M3GuXAhBWPwH6pNi1RcdFLA37pku6See2Xlpw_ea6Lg,136656
+desbordante.dylibs/libboost_graph.dylib,sha256=vPpEv1iwP-mp9_2kLrGnReTK1Kze_2IC5IGH9K8SLL0,480832
+desbordante.dylibs/libboost_container.dylib,sha256=mhXsgORPmNvuxaCwcOtQ5Dkii_UxUjnPBQ1Q9YRBWKk,124560
+desbordante.dylibs/libboost_regex.dylib,sha256=XrUe6cyXlNCm9lpJXJj5DkHP7oBGxZkZ7GVO5m5g3_8,355536
