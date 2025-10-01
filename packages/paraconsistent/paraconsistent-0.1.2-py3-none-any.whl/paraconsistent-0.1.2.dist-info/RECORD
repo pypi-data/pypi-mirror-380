@@ -1,0 +1,14 @@
+paraconsistent/__init__.py,sha256=QuOA1IPw2aqTmAiyM0w7ze-lYmvhZM1dIz6Pax85ccs,364
+paraconsistent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paraconsistent/blocks/__init__.py,sha256=YJSCKKmoF-ns-mcTNXoINmsJqEdP9eITJOoFCn1-rE8,72
+paraconsistent/blocks/block.py,sha256=CfylJqGH0d0UMzd1ceFD5-sRsZUe-pIRuxFkjsr5pf4,3406
+paraconsistent/core/__init__.py,sha256=HX0QhbFTUdWHbVj8JdN0YpX2UMBuzP2R8Hbg_50Fr38,314
+paraconsistent/core/config.py,sha256=wAjHf65Hrv2Zs8ndZtx-bRvaDpqBAvZAVxKLzJ0iNHM,2690
+paraconsistent/core/engine.py,sha256=P_t_SY9UjTTNJkwPw2JCMMZ6wYUJ2CrLxgQaBSPKcGI,2581
+paraconsistent/core/metrics.py,sha256=222mEUFR7ljx3Zz09TXVIKvubZoGbT-k6tDhMfo69xk,431
+paraconsistent/core/types.py,sha256=jVjIxf0Ml5_1bNs5CsLmoUG-T6Q3sBdXngguedwBnJA,534
+paraconsistent/examples/demo_wiring.py,sha256=z5B1XkuTorN_bd6IdF-tDum76ATMWUTO0enSkPQz6eM,390
+paraconsistent-0.1.2.dist-info/METADATA,sha256=KTAwu9ZiV1s3qOg2urcO-Puj20p66P5mP1DqQJD9kFA,8551
+paraconsistent-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+paraconsistent-0.1.2.dist-info/top_level.txt,sha256=mB85sOt9hPBDkSYmFvMQoQgouGxliT_dPffxP9Kds4Q,15
+paraconsistent-0.1.2.dist-info/RECORD,,
