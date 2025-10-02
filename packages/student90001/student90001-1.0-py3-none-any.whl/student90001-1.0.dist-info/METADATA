@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: student90001
+Version: 1.0
+Summary: This is just a test package
+Author: Zaheen Iqbal
+Author-email: zaheen6iqbal@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
