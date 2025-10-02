@@ -1,0 +1,12 @@
+flyplotlib/__init__.py,sha256=XFZElNJY_vJjF5CHa-BZErANYHhq4VqssznNPigZ1mM,382
+flyplotlib/core.py,sha256=7R4egiTP8ZH9O8uIiNTCB2-nI1VCoLqCsPyNd9YvaOo,11802
+flyplotlib/leg.py,sha256=gEweBpUXIBLgVscKZPJoo_dx0BTM_SQfsF35jQ-HJ1k,10083
+flyplotlib/data/fly.svg,sha256=vhEgE_wmUJLlI41qQheWqCjUDeMwlAYp1UU4Gj36BPA,13842
+flyplotlib/data/leg.svg,sha256=TNluL54vIx6IZ-5u_P3XFhCLvIKnRe7DJpOV4oDoicQ,14177
+flyplotlib/data/pushing.svg,sha256=uAs8sfZJXf_a55WQTR_-iLypa6MFIpvPgSGrYmNjWBg,8421
+flyplotlib/tests/__init__.py,sha256=TsXev0aILrfBqrZBBIin8niw7icNcyHLlEuKS2WGFXo,35
+flyplotlib/tests/test_core.py,sha256=3dWp0U_YDaD_dGm03pcDP6uYIn-x-DMHexM4gbYL3kE,1480
+flyplotlib-0.5.1.dist-info/METADATA,sha256=NxnDCi3L2SLSBcnvnAu3wrdlDLA-fprPR79qcWC9dyk,1164
+flyplotlib-0.5.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flyplotlib-0.5.1.dist-info/licenses/LICENSE,sha256=7Zps5gaxLS2A4vIbeGgcxMmmOT3ffEl0w6EE0DQUCLk,1062
+flyplotlib-0.5.1.dist-info/RECORD,,
