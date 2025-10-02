@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: torchstore
+Version: 0.0.0
+Summary: setting up pypi for torchstore
+Author-email: Lucas Pasqualin <lpasqualin@meta.com>
+Project-URL: Homepage, https://github.com/meta-pytorch/torchstore
+Project-URL: Issues, https://github.com/meta-pytorch/torchstore/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+initial pypo setyp

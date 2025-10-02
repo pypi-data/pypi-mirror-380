@@ -1,0 +1,24 @@
+[project]
+name = "torchstore"
+version = "0.0.0"
+authors = [
+  { name="Lucas Pasqualin", email="lpasqualin@meta.com" },
+  ]
+description = "setting up pypi for torchstore"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+     "Programming Language :: Python :: 3",
+     "Operating System :: OS Independent",
+]
+[build_system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/meta-pytorch/torchstore"
+Issues = "https://github.com/meta-pytorch/torchstore/issues"

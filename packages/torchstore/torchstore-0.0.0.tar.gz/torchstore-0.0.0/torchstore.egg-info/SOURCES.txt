@@ -1,0 +1,7 @@
+README.md
+playground.py
+pyproject.toml
+torchstore.egg-info/PKG-INFO
+torchstore.egg-info/SOURCES.txt
+torchstore.egg-info/dependency_links.txt
+torchstore.egg-info/top_level.txt
