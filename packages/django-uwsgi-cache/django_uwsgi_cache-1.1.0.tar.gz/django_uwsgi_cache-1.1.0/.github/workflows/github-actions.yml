@@ -1,0 +1,98 @@
+name: build
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: 'check'
+            python: '3.13'
+            tox_env: 'check'
+            os: 'ubuntu-latest'
+          - name: 'docs'
+            python: '3.13'
+            tox_env: 'docs'
+            os: 'ubuntu-latest'
+          - name: 'py39-dj42 (ubuntu)'
+            python: '3.9'
+            python_arch: 'x64'
+            tox_env: 'py39-dj42'
+            os: 'ubuntu-latest'
+          - name: 'py310-dj42 (ubuntu)'
+            python: '3.10'
+            python_arch: 'x64'
+            tox_env: 'py310-dj42'
+            os: 'ubuntu-latest'
+          - name: 'py311-dj42 (ubuntu)'
+            python: '3.11'
+            python_arch: 'x64'
+            tox_env: 'py311-dj42'
+            os: 'ubuntu-latest'
+          - name: 'py312-dj42 (ubuntu)'
+            python: '3.12'
+            python_arch: 'x64'
+            tox_env: 'py312-dj42'
+            os: 'ubuntu-latest'
+          - name: 'py313-dj42 (ubuntu)'
+            python: '3.13'
+            python_arch: 'x64'
+            tox_env: 'py313-dj42'
+            os: 'ubuntu-latest'
+          - name: 'py310-dj52 (ubuntu)'
+            python: '3.10'
+            python_arch: 'x64'
+            tox_env: 'py310-dj52'
+            os: 'ubuntu-latest'
+          - name: 'py311-dj52 (ubuntu)'
+            python: '3.11'
+            python_arch: 'x64'
+            tox_env: 'py311-dj52'
+            os: 'ubuntu-latest'
+          - name: 'py312-dj52 (ubuntu)'
+            python: '3.12'
+            python_arch: 'x64'
+            tox_env: 'py312-dj52'
+            os: 'ubuntu-latest'
+          - name: 'py313-dj52 (ubuntu)'
+            python: '3.13'
+            python_arch: 'x64'
+            tox_env: 'py313-dj52'
+            os: 'ubuntu-latest'
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python }}
+        architecture: ${{ matrix.python_arch }}
+    - name: install dependencies
+      run: |
+        python -mpip install --progress-bar=off -r ci/requirements.txt
+        virtualenv --version
+        pip --version
+        tox --version
+        pip list --format=freeze
+    - name: test
+      run: >
+        tox -e ${{ matrix.tox_env }} -v
+    - uses: coverallsapp/github-action@v2
+      with:
+        flag-name: ${{ matrix.name }}
+        parallel: true
+    - uses: codecov/codecov-action@v5
+      with:
+        verbose: true
+        token: ${{ secrets.CODECOV_TOKEN }}
+  finish:
+    needs: test
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: coverallsapp/github-action@v2
+      with:
+        parallel-finished: true
