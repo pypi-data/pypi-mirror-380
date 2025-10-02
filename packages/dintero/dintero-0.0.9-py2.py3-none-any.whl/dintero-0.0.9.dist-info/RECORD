@@ -1,0 +1,11 @@
+dintero/__init__.py,sha256=21Sd9wOU2F4bcu17L5G_SnA_Z2FGTQ0QNEo-YwAJN3s,1071
+dintero/checkout.py,sha256=X1ug1Lo6l6u9BMT0Q_7hfYuDnrYVntSbCCysK1GjPcQ,9495
+dintero/error.py,sha256=Gxxjq44wtF8A5qb-McBrwh-Tmkk-7X7QFjbIItbgogg,744
+dintero/types.py,sha256=c-xaTqveSIFLI5qec0oh6QFOQPuccXXQ_m_hQfoL53Y,182
+dintero/validator.py,sha256=ICNgKhKQ0CJfNzE-NeuJnaAeveFuL55bzozErUFx4_g,626
+dintero/version.py,sha256=nJdWwpVclICRdH650zxIHQO4xrA4yyWyGJJs1mHlDvU,18
+dintero-0.0.9.dist-info/licenses/LICENSE,sha256=Cy-ngU3cXArSA5XBKNumLM75KwMPOsIbY1ljGNhkU3w,1064
+dintero-0.0.9.dist-info/METADATA,sha256=-JKAMJ2Ep1LGgyV3mOdHj7YUBrieu_qbfeEz-4nUTsM,3601
+dintero-0.0.9.dist-info/WHEEL,sha256=JNWh1Fm1UdwIQV075glCn4MVuCRs0sotJIq-J6rbxCU,109
+dintero-0.0.9.dist-info/top_level.txt,sha256=CUtGq8t1W7XUa3yDhUyAggrWqifgb9hCx4kh5jquHu4,8
+dintero-0.0.9.dist-info/RECORD,,
