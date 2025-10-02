@@ -1,0 +1,14 @@
+[oslo.config.opts]
+aetos = aetos.opts:list_opts
+
+[oslo.config.opts.defaults]
+aetos = aetos.conf.defaults:set_lib_defaults
+
+[oslo.policy.enforcer]
+aetos = aetos.policies:get_enforcer
+
+[oslo.policy.policies]
+aetos = aetos.policies:list_rules
+
+[wsgi_scripts]
+aetos = aetos.app:build_wsgi_app
