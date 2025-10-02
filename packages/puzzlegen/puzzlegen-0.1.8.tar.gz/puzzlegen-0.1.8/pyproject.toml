@@ -1,0 +1,21 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "puzzlegen"
+version = "0.1.8"
+authors = [{name = "Caroline DAKOURE", email = "caroline.dakoure@umontreal.ca"}]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+description = "Procedural Match-3 Puzzle Generator and Solver"
+requires-python = ">=3.8"
+dependencies = [
+    "matplotlib==3.10.3",
+    "tqdm==4.67.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/carodak/puzzlegen"
+Issues = "https://github.com/carodak/puzzlegen/issues"
