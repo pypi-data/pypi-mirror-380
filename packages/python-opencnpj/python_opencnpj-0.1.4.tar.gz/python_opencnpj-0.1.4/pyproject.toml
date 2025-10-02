@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-opencnpj"
+version = "0.1.4"
+authors = [
+  {name = "Gustavo Gomes Nogueira da Silva", email = "gustavogonosi@gmail.com"}
+]
+description = "Python library to fetch CNPJ data from OpenCNPJ API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.32", 
+  "urllib3"
+]
+
+[project.urls]
+Repository = "https://github.com/gustavogomesn/python-opencnpj"
