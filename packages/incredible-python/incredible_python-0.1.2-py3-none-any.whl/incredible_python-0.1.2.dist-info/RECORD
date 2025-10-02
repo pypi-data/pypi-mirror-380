@@ -1,0 +1,16 @@
+incredible_python/__init__.py,sha256=ys_RZFcJ7c1WAhpEMiib3LbW3DSStygHys1pKSKjyWA,173
+incredible_python/_base_client.py,sha256=8vnW6GNpT1Ot96oxfS8pjToPZeyj4BT8mMYyD89tPfs,4215
+incredible_python/_exceptions.py,sha256=X9NUsG-Tmd65k_qoG6xCDXgJi917u-rbiSNmwd013l0,788
+incredible_python/client.py,sha256=R6-4O7FCrlSveH1fxr1k4yxAhiD6hSnQ7SP_hEzUdTM,1687
+incredible_python/helpers.py,sha256=-Mbm3zGtchfuNoCfZuXI4czUWghIsrUpWwNoVAlvi28,4436
+incredible_python/transport.py,sha256=fKXlLwJf3CEax8j3jbSBPMeslGgs5RG59VZuocb5d5k,1623
+incredible_python/resources/__init__.py,sha256=kNyu0-HZJuzaiB8oemRMAxgfoB0fel3Ddm2EaYo2FN0,252
+incredible_python/resources/integrations.py,sha256=ewACEVLjzbRro32H7-TXmydopZcn-i8iTvPKFG-xkO8,2998
+incredible_python/resources/messages.py,sha256=pOeDhlj7W-iriEGsov8R0e63yf31mubX3TgFoBW28PM,3958
+incredible_python/resources/models.py,sha256=bAATZy55DkiDrztptGM22YHK5-m37PAN6F1ZwC8aG5k,369
+incredible_python/types/__init__.py,sha256=Q_RE3Vx9C5hpUpAmapX7dpcOzbYFveRLV292OFE-jEw,141
+incredible_python/types/messages.py,sha256=zjzNcx2K8yYRk83jBQthvNmb0hcmYRVpXcjoU7equa0,5814
+incredible_python-0.1.2.dist-info/METADATA,sha256=PrnX5di8kSrk3cG3ImWgKVBEdtOoTx5uxUl5RdrcN5Q,12430
+incredible_python-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+incredible_python-0.1.2.dist-info/top_level.txt,sha256=DBkzntSlpgopJEsQ3zRCm-2UuaqvEYswCBWuLhkSiDQ,18
+incredible_python-0.1.2.dist-info/RECORD,,
