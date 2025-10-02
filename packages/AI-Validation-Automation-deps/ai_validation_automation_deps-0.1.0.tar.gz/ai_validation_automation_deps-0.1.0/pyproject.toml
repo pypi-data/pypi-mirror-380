@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AI-Validation-Automation-deps"
+version = "0.1.0"
+description = "Dependency bundle for testing AI Agents"
+authors = [{name="Siva Arumugam"}]
+
+dependencies =[
+    "pytest",
+    "playwright",
+    "allure-pytest",
+    "sentence-transformers",
+    "scikit-learn",
+    "bert-score",
+    "pyyaml",
+    "requests"
+]

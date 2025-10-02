@@ -1,0 +1,8 @@
+pytest
+playwright
+allure-pytest
+sentence-transformers
+scikit-learn
+bert-score
+pyyaml
+requests
