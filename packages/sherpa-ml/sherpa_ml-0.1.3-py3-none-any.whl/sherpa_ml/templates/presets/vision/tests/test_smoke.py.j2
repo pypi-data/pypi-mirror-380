@@ -1,0 +1,37 @@
+import importlib
+import importlib.util
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+# Dotted module path that matches src/work/demo_vision/*
+PKG = "work.demo_vision"
+
+
+def project_root() -> Path:
+    # Project root (one level up from this tests/ dir)
+    return Path(__file__).resolve().parents[1]
+
+
+def _has_module(name: str) -> bool:
+    return importlib.util.find_spec(name) is not None
+
+
+def test_import():
+    importlib.import_module(PKG)
+
+
+def test_train_fast():
+    # Skip if optional heavy deps (like torch) are not present in CI
+    if not _has_module("torch"):
+        pytest.skip("PyTorch not installed; skipping fast train smoke test.")
+    root = project_root()
+    proc = subprocess.run(
+        [sys.executable, "-m", f"{PKG}.train"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
