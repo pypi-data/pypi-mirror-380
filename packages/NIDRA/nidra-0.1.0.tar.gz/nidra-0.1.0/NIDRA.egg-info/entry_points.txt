@@ -1,0 +1,3 @@
+[console_scripts]
+nid = NIDRA.cli:run_cli
+nidra = NIDRA.nidra_gui.launcher:main
