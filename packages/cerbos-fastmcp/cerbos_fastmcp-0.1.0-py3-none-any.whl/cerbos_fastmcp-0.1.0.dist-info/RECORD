@@ -1,0 +1,10 @@
+cerbos_fastmcp/__init__.py,sha256=2Wbswxa4bIxyK2wzyYgsf-D8HQfK4iosrzNMvWKeQ8g,494
+cerbos_fastmcp/middleware.py,sha256=kTE4I4k2RpT0zZmxS9DcJW2hD7c29tIwYxqSqsZ7m_E,12533
+cerbos_fastmcp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cerbos_fastmcp/examples/__init__.py,sha256=BMZPtHn5vmB7OY9fQlJZkUerjhz7YJdCjOOrUeNtyKM,155
+cerbos_fastmcp/examples/server.py,sha256=Yd4iLG2ZNvxwrsyoJf7r2EU_OL7y72TasKglBWSAlxA,3590
+cerbos_fastmcp-0.1.0.dist-info/licenses/LICENSE,sha256=o78D0tr9ce_VFuStZsq08WXnLkmVYy5l3jYu57xqoU8,10838
+cerbos_fastmcp-0.1.0.dist-info/METADATA,sha256=iDJ2MnFpa8fEYaJC22xDf-ndi7G7xzuRAJsEHxJBqxs,5547
+cerbos_fastmcp-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cerbos_fastmcp-0.1.0.dist-info/top_level.txt,sha256=ZX4gu5mdGO2IPWu5D6H46SFPJbUSPv92oFDHP1FKlDg,15
+cerbos_fastmcp-0.1.0.dist-info/RECORD,,
