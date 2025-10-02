@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: django-uwsgi-cache
+Version: 1.1.0
+Summary: uWSGI Django cache backend.
+Author-email: Ionel Cristian Mărieș <contact@ionelmc.ro>
+License-Expression: BSD-2-Clause
+Project-URL: Sources, https://github.com/ionelmc/django-uwsgi-cache
+Project-URL: Documentation, https://django-uwsgi-cache.readthedocs.io/
+Project-URL: Changelog, https://django-uwsgi-cache.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/ionelmc/django-uwsgi-cache/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: django>=4.2
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+
+========
+Overview
+========
+
+
+
+uWSGI Django cache backend.
+
+* Free software: BSD 2-Clause License
+
+Installation
+============
+
+``pip install django-uwsgi-cache`` and change settings to::
+
+    CACHES = {
+        'default': {
+            'BACKEND': 'uwsgicache.UWSGICache',
+
+            # and optionally, if you use a different cache name
+            'LOCATION': 'foobar'
+        }
+    }
+
+Requirements
+============
+
+* Django 4.2 or later.
+* Python 3.9 or later.
+
+Settings
+========
+
+``UWSGI_CACHE_FALLBACK``
+
+- ``False`` - raises Exception if ``uwsgi`` cannot be imported.
+- ``True`` (default) - if ``uwsgi`` is not importable this cache backend will alias to LocMemCache.
+  Note that mangement commands might try to load the cache backend so this is why it's the default.
+
+Changelog
+=========
+
+1.1.0 (2025-10-01)
+------------------
+
+* Fixed bug that occurs when timeout=DEFAULT_TIMEOUT is used.
+  Contributed by György Kiss in `#12 <https://github.com/ionelmc/django-uwsgi-cache/pull/12>`_.
+* Added pickle_protocol class property (defaults to ``pickle.HIGHEST_PROTOCOL``).
+* Django 4.2 or later is required now.
+* Python 3.9 or later is required now.
+
+1.0.1 (2015-07-01)
+------------------
+
+* Stop depending explicitly on ``uwsgi`` in ``setup.py`` (helps with development and such).
+
+1.0.0 (2014-12-10)
+------------------
+
+* Support for special timeout values in Django 1.6 and 1.7 (contributed by Laurent Payot)
+
+0.3.0 (2014-07-25)
+------------------
+
+* Python 3 support (contributed by Laurent Payot)
+* Support for ``cache.clear`` (contributed by Omer Katz)
+
+0.? (?)
+-------
+
+* N/A (contributed by Riccardo Magliocchetti)
