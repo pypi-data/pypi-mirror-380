@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tufteplotlib"
+version = "1.0.0"
+description = "An extension to matplotlib for creating graphs in the style of Edward Tufte."
+readme = "README.md"
+authors = [
+    { name = "Jon Woolfrey", email = "jonathan.woolfrey@gmail.com" }
+]
+license = { text = "GPLv3" }
+requires-python = ">=3.10"
+keywords = ["matplotlib", "tufte", "visualization", "plotting", "minimalistic", "graph"]
+dependencies = [
+    "matplotlib>=3.0",
+    "numpy>=1.21",
+    "pandas>=1.4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Woolfrey/software_tufte_plot"
+"Source" = "https://github.com/Woolfrey/software_tufte_plot"
+"Bug Reports" = "https://github.com/Woolfrey/software_tufte_plot/issues"
+
+[project.scripts]
+tufte-bar       = "tufteplotlib.plots.bar:main"
+tufte-barcode   = "tufteplotlib.plots.barcode:main"
+tufte-density   = "tufteplotlib.plots.density:main"
+tufte-galaxy    = "tufteplotlib.plots.galaxy:main"
+tufte-histogram = "tufteplotlib.plots.histogram:main"
+tufte-line      = "tufteplotlib.plots.line:main"
+tufte-pareto    = "tufteplotlib.plots.pareto:main"
+tufte-quartile  = "tufteplotlib.plots.quartile:main"
+tufte-rug       = "tufteplotlib.plots.rug:main"
+tufte-scatter   = "tufteplotlib.plots.scatter:main"
+tufte-sparkline = "tufteplotlib.plots.sparkline:main"
+tufte-stem      = "tufteplotlib.plots.stem_and_leaf:main"
+tufte-time      = "tufteplotlib.plots.time:main"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "examples*"]
