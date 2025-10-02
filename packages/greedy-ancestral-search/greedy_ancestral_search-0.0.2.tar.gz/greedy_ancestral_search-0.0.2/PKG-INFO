@@ -1,0 +1,122 @@
+Metadata-Version: 2.4
+Name: greedy-ancestral-search
+Version: 0.0.2
+Summary: Python implementation of the Greedy Ancestral Seach (GAS) algorithm from the paper 'On the Number of Conditional Independence Tests in Constraint-based Causal Discovery'.
+Project-URL: Repository, https://github.com/uhlerlab/greedy-ancestral-search
+Project-URL: Issues, https://github.com/uhlerlab/greedy-ancestral-search/issues
+Author: Marc Franquesa Monés, Jiaqi Zhang, Caroline Uhler
+License-Expression: MIT
+License-File: LICENSE.md
+Keywords: causal discovery,constraint-based causal discovery
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: networkx>=3.4.2
+Description-Content-Type: text/markdown
+
+# Greedy Ancestral Search
+
+[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-red.svg)]()
+
+This repository contains the official source code for the Greedy Ancestral Search (GAS) algorithm, as presented in the paper: **"On the Number of Conditional Independence Tests in Constraint-based Causal Discovery"**.
+GAS is a constraint-based algorithm designed to efficiently learn the essential graph representing a causal structure by using a minimal number of required conditional independence tests.
+
+## Installation
+
+To get started, you'll need Python 3.10 or newer.
+You can install the package directly from PyPI:
+
+```sh
+pip install greedy_ancestral_search
+```
+
+
+## Usage
+
+Here's a quick example of how to use GAS.
+In this example, we'll generate a random Directed Acyclic Graph and use an oracle d-separation tester to discover its essential graph.
+
+```python
+import random
+import networkx as nx
+from greedy_ancestral_search import greedy_ancestral_search
+
+# 1. Define the set of nodes
+number_of_nodes = 10
+nodes = set(range(number_of_nodes))
+
+# 2. Create a random ground-truth DAG to simulate data
+edge_probability = 0.5
+G = nx.DiGraph()
+G.add_nodes_from(nodes)
+for u in nodes:
+    for v in nodes:
+        if u < v and random.random() < edge_probability:
+            G.add_edge(u, v)
+
+# 3. Define a conditional independence tester function
+#    This function queries the ground-truth graph for d-separation.
+#    In a real-world scenario, this would be a statistical test on data.
+def oracle_tester(X, Y, condition_set):
+    """Returns True if X and Y are d-separated by condition_set in G."""
+    return nx.is_d_separator(G, X, Y, condition_set)
+
+# 4. Run the GAS algorithm
+#    The function takes the set of nodes and the CI tester as input.
+undirected_edges, directed_edges = greedy_ancestral_search(nodes, oracle_tester)
+
+# The algorithm returns the edges of the learned essential graph
+print("Undirected Edges:", undirected_edges)
+print("Directed Edges:", directed_edges)
+```
+
+## Developing
+
+First, clone the project:
+
+```
+git glone https://github.com/uhlerlab/greedy-ancestral-search.git
+```
+
+### Dependencies
+
+This project uses `uv` for dependency management.
+Read [here](https://docs.astral.sh/uv/) for more information.
+
+If you don't have it, run the official installer:
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Install all required development and runtime dependencies:
+```
+uv sync --all-groups
+```
+
+### Benchmarks
+
+To run the benchmark scripts located in the `benchmarks/` directory, use the following command:
+```
+uv run benchmarks/<script>.py
+```
+
+Available benchmark scripts include:
+- `benchmarks/airfoil.py`
+- `benchmarks/neighborhood-comparison.py`
+- `benchmarks/nodes-comparison.py`
+- `benchmarks/sample-size.py`
+- `benchmarks/scale-free-graphs.py`
+- `benchmarks/sergio.py`
+
+> [!IMPORTANT]
+> To run the `sergio.py` benchmark, you must first clone the [SERGIO](https://github.com/PayamDiba/SERGIO) repository into the `benchmarks/` directory.
+
+## Citation
+
+If you use this algorithm or code in your research, please cite our paper:
+```
+@article
+```
+
+
