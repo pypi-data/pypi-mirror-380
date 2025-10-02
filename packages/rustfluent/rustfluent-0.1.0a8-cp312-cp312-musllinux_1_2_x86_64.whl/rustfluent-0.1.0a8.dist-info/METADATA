@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: rustfluent
+Version: 0.1.0a8
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Rust
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: nox ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: bump-my-version ; extra == 'dev'
+Requires-Dist: pip ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: maturin ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Requires-Python: >=3.11
+Project-URL: repository, https://github.com/kraken-tech/python-rustfluent/
+Project-URL: changelog, https://github.com/kraken-tech/python-rustfluent/blob/main/CHANGELOG.md
