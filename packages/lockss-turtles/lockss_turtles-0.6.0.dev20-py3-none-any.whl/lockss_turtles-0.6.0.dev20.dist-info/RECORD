@@ -1,0 +1,15 @@
+lockss/turtles/__init__.py,sha256=6c7aKfAeWBtkUI7Wkxha25Uo07VDn4hinKMzDi_Z47Q,1744
+lockss/turtles/__main__.py,sha256=BqRTG3dejCgLh87UJ1Os9DD9unxnQkOdUQM6eqWS3Sg,1680
+lockss/turtles/app.py,sha256=Rxbsq10A830D1r99a5tqLVYWM3bJZ2Org-JKjXD-2Mk,16689
+lockss/turtles/cli.py,sha256=ZijrjwW1VXtmRvTDpfLnLvq9aL0CfK-F6mglk04RihI,20887
+lockss/turtles/plugin.py,sha256=re44YVlzXVU8azDshxn7oHw1GdTQLLQgYwkvZlur-60,5384
+lockss/turtles/plugin_registry.py,sha256=yyfTtB0yvWpBXYTSklroo0igdcLrUojjlpzPGxielAQ,11930
+lockss/turtles/plugin_set.py,sha256=pYggWJ6JakL3NYCvdmbxFAaZ-1pWJTZ_CRW-tUxPVQk,15828
+lockss/turtles/util.py,sha256=8EyWvzTLNycQM_ZKCtWm8FpKJSrwaCSWh8006UYq6vU,2498
+unittest/lockss/turtles/__init__.py,sha256=hrgWx4GaP-hhPBuRlbLndJnOQmZicKCLaP-dQTCu1sQ,3162
+unittest/lockss/turtles/test_plugin_set.py,sha256=q6JmooDR-wijAQ8x9DWKTNB6Of4EOr3Dgq8oaX0LTpQ,4179
+lockss_turtles-0.6.0.dev20.dist-info/LICENSE,sha256=O9ONND4uDxY_jucI4jZDf2liAk05ScEJaYu-Al7EOdQ,1506
+lockss_turtles-0.6.0.dev20.dist-info/METADATA,sha256=egDTHpN4pmE9U6o8wmwaguwAMn9IwOp3ozofufZxgEk,39692
+lockss_turtles-0.6.0.dev20.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+lockss_turtles-0.6.0.dev20.dist-info/entry_points.txt,sha256=25BAVFSBRKWAWiXIGZgcr1ypt2mV7nj31Jl8WcNZZOk,51
+lockss_turtles-0.6.0.dev20.dist-info/RECORD,,
