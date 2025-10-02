@@ -1,0 +1,15 @@
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/RECORD,,
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/WHEEL,sha256=kFn0Fg1gyV9Pk02-Hr4CbqbhAvYPyosBpF5pwZB07jU,135
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/top_level.txt,sha256=9CpwV-zn8UlwS2vmLsKX_y20T2sHblQyCB9UWJhvyPU,23
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/METADATA,sha256=WsxlEDC2860tLSkqHsCx9KL6aJU8XtSDWDnslT4IOxQ,3893
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/licenses/LICENSE-LGPL,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+nonebot_plugin_htmlkit-0.1.0rc1.dist-info/licenses/LICENSE,sha256=dJPMFVfqrz4lamMmURKiJykh3uPUNTS_N4IWQE1Df30,1064
+nonebot_plugin_htmlkit/config.py,sha256=FAbWtdrp3jOCMQZEOjWd3o8AgVc02SNDv41rqFK3MVs,1618
+nonebot_plugin_htmlkit/core.pyi,sha256=Wv3Az0qYcxj-Mnxe0VaOiWN_LsPIPMToUzO3i28CQTM,2468
+nonebot_plugin_htmlkit/__init__.py,sha256=pnRq1UI46Ia1HYRE0F-C1_8TEse4tgWI5SF0ICVByYE,14870
+nonebot_plugin_htmlkit/core.abi3.so,sha256=ECZwyJPLSLoS2woppzqMHjgjxTmeZiLPIOZCGmmdszY,9519208
+nonebot_plugin_htmlkit/templates/text.html,sha256=xioQyZAwS_KUovxLyl97BaKDRIcgG_1fnfEdVGbyBzE,219
+nonebot_plugin_htmlkit/templates/markdown.html,sha256=ezDlFgKl-N2Mehl4vAAsYYYdK9n8rbgDDXSyeuyqkBc,629
+nonebot_plugin_htmlkit/templates/text.css,sha256=zhb6Yd3zndvojU4-qQR46dRg9CsCRvmyWU1-Uhm-2LQ,117
+nonebot_plugin_htmlkit/templates/pygments-default.css,sha256=tOLNzFM7dpj8GHh4WkvwapFD0mgmoWTNFl_tXw69gCQ,4888
+nonebot_plugin_htmlkit/templates/github-markdown-light.css,sha256=INvPYrK0J9Boc9qMBiP-xSD1LIhu2-CUK5wl4kd9KTw,17296
