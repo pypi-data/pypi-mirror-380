@@ -1,0 +1,46 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyTOPSScrape"
+version = "1.1"
+authors = [
+  { name="Emily M. Boudreaux", email="emily@boudreauxmail.com" },
+]
+description = "Python bindings around TOPS webform for OPLIB opacities"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+dependencies = [
+    'mechanize>=0.4.5',
+    'numpy>=1.19.2',
+    'scipy>=1.5.2',
+    'importlib_resources>=5.2.0',
+    'tqdm>=4.50.2',
+    'beautifulsoup4>=4.9.3',
+    'pip-system-certs'
+]
+
+[project.urls]
+Homepage = "https://github.com/tboudreaux/pytopsscrape"
+
+[project.scripts]
+generateTOPStables = "pyTOPSScrape.scripts.generateTOPStables:main" # Assuming your script has a main() function
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"pyTOPSScrape.misc.dataFiles" = ["*.npy"]

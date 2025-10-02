@@ -1,0 +1,2 @@
+[console_scripts]
+generateTOPStables = pyTOPSScrape.scripts.generateTOPStables:main
