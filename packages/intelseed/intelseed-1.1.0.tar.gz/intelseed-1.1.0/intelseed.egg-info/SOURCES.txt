@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+intel_seed/__init__.py
+intel_seed/intel_seed.py
+intel_seed/librdseed.dll
+intel_seed/librdseed.so
+intel_seed/rdseed_bytes.c
+intelseed.egg-info/PKG-INFO
+intelseed.egg-info/SOURCES.txt
+intelseed.egg-info/dependency_links.txt
+intelseed.egg-info/requires.txt
+intelseed.egg-info/top_level.txt
+tests/test.py
+tests/test2.py
