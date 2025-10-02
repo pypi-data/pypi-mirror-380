@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+libpyvivotek/__init__.py
+libpyvivotek/py.typed
+libpyvivotek/vivotek.py
+libpyvivotek.egg-info/PKG-INFO
+libpyvivotek.egg-info/SOURCES.txt
+libpyvivotek.egg-info/dependency_links.txt
+libpyvivotek.egg-info/requires.txt
+libpyvivotek.egg-info/top_level.txt
+tests/__init__.py
+tests/test_vivotek_camera.py
