@@ -1,0 +1,11 @@
+event_journal/__init__.py,sha256=aytjdyxe-bzUeOPXLrJc6GvoJmKN_Cxe6xlcp9qfPek,714
+event_journal/database.py,sha256=C2iScAKfBlocd_Yu87MKry-NpU3OlKfG5kGidOduJ4o,11110
+event_journal/models.py,sha256=xbseKF6_mQT9vlsTsfvxigQJ22QCx4qlUKb5pMCF78A,7304
+event_journal/standalone.py,sha256=05FekIDDXpzzSa6L1EnBzeQxc5dVg0j3fDYXCa7Cq-I,8794
+event_journal/utils.py,sha256=uidQa4oSN2_GbA1qHiTW1qc6X69gLNXyG_54JFMzFtk,6437
+event_journal-1.1.0.dist-info/licenses/LICENSE,sha256=BRkhMJLIO12FkjWXp_iSpdgsh9alFhG_LeXInQp8mXg,1076
+event_journal-1.1.0.dist-info/METADATA,sha256=I_4Vj7wYC_NiIJqqeKiwQdRw3MJpbwUSUrhFmr0zNuw,9536
+event_journal-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+event_journal-1.1.0.dist-info/entry_points.txt,sha256=vYLzpd8X6GVfwHJaJhEjL2Y16s0-bkNtPQg4_NWL6jM,80
+event_journal-1.1.0.dist-info/top_level.txt,sha256=qeX6nCpqHYE8ZNw4wZoeQ2xvGV1goNQlVMeKiuhfChM,14
+event_journal-1.1.0.dist-info/RECORD,,
