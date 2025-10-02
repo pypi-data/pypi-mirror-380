@@ -1,0 +1,15 @@
+Valoria/__init__.py,sha256=95oKGFXHd93qNnPRnbxuCXlVfKAyttpM-ivsRkaOPH8,242
+Valoria/chmod.py,sha256=P-tV7bJ0sx_g7gVpClqw0rYFE1Hw7AuWlt7UVapMIqs,3469
+Valoria/clean.py,sha256=SFZ6x8yLsNaTnfixH0gA1yfzaaHmTkoA_kvvLFcGwYo,10154
+Valoria/cli.py,sha256=-4MilEfQbutkDmw6cg2XsG2iyq-x57Q9Y4odtwhLzrI,2078
+Valoria/dependencies.py,sha256=anQmp-jGwRunFEvcHz_SljZpbAVmgmVa3gOhCYzeDDA,3496
+Valoria/license.py,sha256=d1uoU2EsARvHXSPv6pIOSdQcx1kwO-L8iQ98pBYqFCI,2259
+Valoria/perm.py,sha256=z5p-5z3Fdyw67iy2p7JlD0Jc_wg0y4HxsnhkBKayrdM,1884
+Valoria/structure.py,sha256=dvBAVEqBJf2EaWfTS6yaiu8ritHAHrO95GJDKc-V2PY,585
+Valoria/tmp.py,sha256=BkCzU1H650xGIyHHEuMKN1cVNlG7gTFPCIbP99s1Nbg,644
+valoria-0.0.1.dist-info/licenses/LICENSE,sha256=ge_opE3JUCotWum6O7RbhgpstjVHqrTmEmVvYjJrtRI,1119
+valoria-0.0.1.dist-info/METADATA,sha256=msfZwggV3vuFhatJqqM5p1sIZG8lAVVet1VeGVLMkqE,1261
+valoria-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+valoria-0.0.1.dist-info/entry_points.txt,sha256=bjAYibQO1Z3xE8pjoeIXKjoaocPabB0vNN3YQlOTe4k,45
+valoria-0.0.1.dist-info/top_level.txt,sha256=KMPfvM_5NqDFFr0nPztaqmK87_rF3GiCXlz-jyr_8D4,8
+valoria-0.0.1.dist-info/RECORD,,

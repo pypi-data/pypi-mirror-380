@@ -1,0 +1,2 @@
+[console_scripts]
+fichier = valoria.cli:main
