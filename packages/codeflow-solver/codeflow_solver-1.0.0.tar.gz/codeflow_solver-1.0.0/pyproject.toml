@@ -1,0 +1,143 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codeflow-solver"
+version = "1.0.0"
+description = "A tool that finds the minimum number of code fixes needed to eliminate vulnerabilities from SARIF output"
+authors = [
+    {name = "Amine Boudraa"},
+    {name = "Gianfranco Romani"},
+    {name = "Yassine Ilmi"}
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+dependencies = [
+    "ortools>=9.0.0",
+    
+    
+]
+
+
+[dependency-groups]
+# Complete development environment (includes main dependencies)
+dev = [
+    # Testing
+    "pytest>=6.0.0",
+    "pytest-cov>=2.0.0",
+    "pytest-asyncio>=0.26.0",
+    # Linting and code quality (always needed by developers)
+    "mypy>=1.0.0",
+    "ruff>=0.0.280",
+    "pre-commit>=4.3.0",
+]
+
+# Minimal linting tools for CI workflows only
+lint = [
+    "mypy>=1.0.0",
+    "ruff>=0.0.280",
+    "pre-commit>=4.3.0",
+]
+
+# Build and packaging tools (includes main dependencies)
+build = [
+    "hatch>=1.14.0",
+]
+
+
+# Documentation tools
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=0.5.0",
+]
+
+
+# Full development environment (includes all groups)
+all = [
+    {include-group = "dev"},
+    {include-group = "lint"},
+    {include-group = "build"},
+    {include-group = "docs"},
+]
+
+[tool.hatch.envs.default]
+dependencies = []
+
+[tool.hatch.envs.default.scripts]
+format = "ruff format ."
+lint = "ruff check ."
+typecheck = "mypy ."
+test = "pytest"
+cov = "pytest --cov --cov-report=term-missing"
+pre-commit-install = "pre-commit install"
+pre-commit-run = "pre-commit run --all-files"
+pre-commit-update = "pre-commit autoupdate"
+validate = [
+    "format",
+    "lint",
+    "typecheck",
+    "cov"
+]
+
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codeflow_solver"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [".test", ".venv", "*.json"]
+
+[project.scripts]
+codeflow-solver = "codeflow_solver.cli.main:main"
+
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+# Enable autofix to remove unused imports
+fix = true
+
+[tool.ruff.lint]
+# E: Pycodestyle errors
+# F: Pyflakes (detects logical errors)
+# I: Isort (import sorting)
+# N: PEP8 naming conventions
+# W: Pycodestyle warnings
+# B: Flake8-bugbear (detecting potential bugs/design problems)
+# A: Flake8-builtins (detects shadowing of Python builtins)
+select = ["E", "F", "I", "N", "W", "B", "A"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.run]
+source = ["src/codeflow_solver"]
+relative_files = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise NotImplementedError"
+]
+fail_under = 80
