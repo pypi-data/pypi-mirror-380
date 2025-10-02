@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyshipproto
+Version: 2.7.0
+Summary: PyShipProto Package
+Home-page: https://github.com/shipthisco/gRPC-protobuf
+Author: PyShipProto
+Author-email: <pyshipproto@gmail.com>
+Keywords: python,gRPC,protobuf,pyshipproto
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Pyshipproto package with generated gRPC services.
