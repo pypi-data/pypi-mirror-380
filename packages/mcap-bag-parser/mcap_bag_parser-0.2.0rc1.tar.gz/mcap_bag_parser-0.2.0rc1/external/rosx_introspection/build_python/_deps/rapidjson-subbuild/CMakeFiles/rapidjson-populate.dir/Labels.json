@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/CMakeFiles/rapidjson-populate"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/CMakeFiles/rapidjson-populate.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/CMakeFiles/rapidjson-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-build.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-download.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-install.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-test.rule"
+		},
+		{
+			"file" : "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/rapidjson-subbuild/rapidjson-populate-prefix/src/rapidjson-populate-stamp/rapidjson-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"rapidjson-populate"
+		],
+		"name" : "rapidjson-populate"
+	}
+}

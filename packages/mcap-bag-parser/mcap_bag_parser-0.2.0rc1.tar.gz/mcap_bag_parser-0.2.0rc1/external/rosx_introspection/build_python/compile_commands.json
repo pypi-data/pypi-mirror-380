@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/ros_type.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_type.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_type.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/ros_type.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/ros_field.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_field.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_field.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/ros_field.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/stringtree_leaf.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/stringtree_leaf.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/stringtree_leaf.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/stringtree_leaf.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/ros_message.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_message.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_message.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/ros_message.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_parser.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/ros_parser.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/deserializer.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/deserializer.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/deserializer.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/deserializer.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DROSX_HAS_JSON -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -o CMakeFiles/rosx_introspection.dir/src/serializer.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/serializer.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/src/serializer.cpp",
+  "output": "CMakeFiles/rosx_introspection.dir/src/serializer.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_internals.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_internals.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_internals.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_internals.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_func.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_func.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_func.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_func.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_type.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_type.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_type.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_type.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_enum.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_enum.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_enum.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_enum.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_ndarray.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_ndarray.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_ndarray.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_ndarray.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_static_property.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_static_property.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_static_property.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_static_property.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_ft.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_ft.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/nb_ft.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/nb_ft.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/common.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/common.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/common.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/common.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/error.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/error.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/error.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/error.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/trampoline.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/trampoline.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/trampoline.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/trampoline.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DNB_COMPACT_ASSERTIONS -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/ext/robin_map/include -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-strict-aliasing -o CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/implicit.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/implicit.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/src/implicit.cpp",
+  "output": "python/CMakeFiles/nanobind-static.dir/__/_deps/nanobind-src/src/implicit.cpp.o"
+},
+{
+  "directory": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/python",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -Drosx_introspection_py_EXPORTS -I/Users/neal/anaconda3/include/python3.10 -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/build_python/_deps/nanobind-src/include -I/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fPIC -fvisibility=hidden -fno-stack-protector -Os -o CMakeFiles/rosx_introspection_py.dir/rosx_introspection_py.cpp.o -c /Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/python/rosx_introspection_py.cpp",
+  "file": "/Users/neal/dev/personal/mcap-bag-parser/external/rosx_introspection/python/rosx_introspection_py.cpp",
+  "output": "python/CMakeFiles/rosx_introspection_py.dir/rosx_introspection_py.cpp.o"
+}
+]
