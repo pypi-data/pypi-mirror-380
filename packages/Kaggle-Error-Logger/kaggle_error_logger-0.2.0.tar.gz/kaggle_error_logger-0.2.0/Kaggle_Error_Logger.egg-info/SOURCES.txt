@@ -1,0 +1,6 @@
+README.md
+setup.py
+Kaggle_Error_Logger.egg-info/PKG-INFO
+Kaggle_Error_Logger.egg-info/SOURCES.txt
+Kaggle_Error_Logger.egg-info/dependency_links.txt
+Kaggle_Error_Logger.egg-info/top_level.txt
