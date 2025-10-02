@@ -1,0 +1,44 @@
+[project]
+name = "scrapling-fetch-mcp"
+version = "0.2.0"
+description = "Helps AI assistants access text content from bot-protected websites. MCP server that fetches HTML/markdown from sites with anti-automation measures using Scrapling."
+readme = "README.md"
+authors = [
+    { name = "restlessronin", email = "88921269+restlessronin@users.noreply.github.com" },
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "browserforge>=1.2.3",
+    "camoufox>=0.4.11",
+    "curl-cffi>=0.13.0",
+    "lxml>=6.0.2",
+    "markdownify>=1.2.0",
+    "mcp>=1.15.0",
+    "msgspec>=0.19.0",
+    "packaging>=24.1, <25.0",
+    "playwright>=1.55.0",
+    "scrapling>=0.3.6",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cyberchitta/scrapling-fetch-mcp"
+"Bug Tracker" = "https://github.com/cyberchitta/scrapling-fetch-mcp/issues"
+
+[project.scripts]
+scrapling-fetch-mcp = "scrapling_fetch_mcp.mcp:run_server"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["src/**"]
+
+[tool.hatch.build.targets.wheel]
+sources = ["src"]
