@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: kelogger
+Version: 0.5.0
+Summary: Automatic error logging for Kaggle kernels
+Author: Brij Patel
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary
