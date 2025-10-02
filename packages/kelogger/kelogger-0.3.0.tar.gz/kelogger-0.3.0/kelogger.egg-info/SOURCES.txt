@@ -1,0 +1,8 @@
+README.md
+setup.py
+kaggle_error_logger/__init__.py
+kaggle_error_logger/logger.py
+kelogger.egg-info/PKG-INFO
+kelogger.egg-info/SOURCES.txt
+kelogger.egg-info/dependency_links.txt
+kelogger.egg-info/top_level.txt
