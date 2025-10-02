@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: classifierPratik
+Version: 0.0.3
+Summary: Zero-shot classification package using Transformers
+Home-page: https://github.com/PratikChrs/classifierPratik
+Author: Pratik Chourasia
+Author-email: pratikchourasia1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.1.0
+Requires-Dist: transformers>=4.40.0
+Requires-Dist: huggingface_hub>=0.16.0
+Requires-Dist: pytest>=8.0.0
+Requires-Dist: numpy>=1.24.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+from classifierPratik import ZeroShotClassifier
+
+# Initialize the classifier
+clf = ZeroShotClassifier()
+
+# Define your text and candidate labels
+text = "Book me a flight to Paris"
+labels = ["healthcare", "travel", "not_answerable"]
+
+# Predict the best label
+best_label = clf.predict(text, labels)
+print(best_label)  # Output: "travel"
