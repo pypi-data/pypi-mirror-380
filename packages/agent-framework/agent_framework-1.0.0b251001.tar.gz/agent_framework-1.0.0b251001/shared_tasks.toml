@@ -1,0 +1,8 @@
+[tool.poe.tasks]
+fmt = "ruff format"
+format.ref = "fmt"
+lint = "ruff check"
+pyright = "pyright"
+build = "python -m flit build"
+publish = "uv publish"
+clean-dist = "rm -rf dist"
