@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: cm-cluster-on-demand-azure
+Version: 11.0.2.1
+Summary: NVIDIA Base Command Manager Cluster on Demand Azure
+Home-page: https://docs.nvidia.com/base-command-manager/
+Author: Base Command Manager Cloud Team
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Clustering
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Cluster on Demand - Azure
+
+This guide explains how to set up and use Cluster on Demand (COD) with Microsoft Azure.
+
+## Setting up your Azure account
+Before you can access the portal, you need to be invited to access it.
+
+### Invite process - User
+* Ask one of the Azure admins Teun Docter, Piotr Wachowicz or Martijn de Vries for an invite. If needed, point to the [next section](#invite-process---admin).
+* Wait for invitation email and click on the link in the email.
+* You will be forwarded to the Microsoft Apps dashboard. Note that this is not the Azure portal.
+* Once your email address has been invited to access the portal, you can sign in via NVIDIA SSO to the Azure portal here: https://portal.azure.com
+* There are multiple directories in the Azure portal. The directory you choose will impact the subscription, resource group, and region filters that are available in the portal. Per default, most likely "NVIDIA Corporation" will be selected. But our resources (VMs, etc.) are visible only under the `azure@bright directory`. To change it, click on your user icon on the top right and select `Switch Directory`. On the next page, you will be able to switch to a different directory.
+* In case you don't have access to `azure@bright directory`, inform the admin.
+
+### Invite process - Admin
+* Sign in to the Azure portal using the admin account `azure@brightcomputing.com`.
+* Make sure you're under the `azure@bright` directory (top right).
+* Navigate to `Users | All Users` [here](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All).
+* Click on `New user | Invite external user`
+* Fill out the user's email address and add an invite message, you can copy the text below:
+   > You've been invited to BCM's Azure web portal.
+   > This web portal is used to access our VMs etc present in the Azure cloud.
+   > Click link in this email, and set up your password.
+   > When done, navigate to https://portal.azure.com to confirm everything works.
+* After the user has accepted the invitation, they need to be given access to the `Bright Engineering` subscription. This is done by adding the user to the respective groups below.
+* Click on the new user, select `Groups` and add them to the following groups:
+   * `All Engineers`
+   * `Cloud Team`
+* The user should be ready to log in now.
+
+## Setting up `cm-cod-azure`
+Add the section below to your configuration ini file (in addition to the [general config file settings](/README.md#creating-a-minimal-config-file)).
+* You can get the corresponding IDs and password by logging in to [krusty](http://krusty.nvidia.com/docs/) and checking out `/cm-setup-configs/trunk.conf`.
+* Please be mindful when using the credentials, as those are shared between all BCM engineering team members.
+```ini
+[azure.credentials]
+azure_subscription_id = XYZ
+azure_tenant_id = XYZ
+azure_client_id = XYZ
+azure_client_secret = XYZ
+azure_location=westeurope
+```
+
+You should now be good to go. Try creating an Azure cluster with `cm-cod-azure cc --name test`.
+
+## Accessing the serial console
+To obtain access to the serial console, follow the steps described in [this BCM knowledge base article](https://kb.brightcomputing.com/knowledge-base/how-do-i-access-the-serial-console-and-the-serial-console-logs-from-the-azure-portal-for-a-cod-vm-virtual-machine/).
+
+## Additional Resources
+
+- [Azure CLI Documentation](https://docs.microsoft.com/en-us/cli/azure/)
+
+
