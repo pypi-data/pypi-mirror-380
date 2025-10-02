@@ -1,0 +1,2 @@
+[console_scripts]
+whatdidyoudo = whatdidyoudo:main
