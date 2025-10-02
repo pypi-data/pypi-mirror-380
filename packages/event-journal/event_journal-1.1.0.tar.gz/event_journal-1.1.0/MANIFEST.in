@@ -1,0 +1,12 @@
+include README.md
+include requirements.txt
+include LICENSE
+include example_usage.py
+include quick_start.py
+include create_table.sql
+recursive-include django_event_journal *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.pyo
+global-exclude .DS_Store
+global-exclude .git*

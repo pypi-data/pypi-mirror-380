@@ -1,0 +1,286 @@
+# Event Journal
+
+[![PyPI version](https://badge.fury.io/py/event-journal.svg)](https://badge.fury.io/py/event-journal)
+[![Python Support](https://img.shields.io/pypi/pyversions/event-journal.svg)](https://pypi.org/project/event-journal/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A simple Python library for logging events to PostgreSQL database with a clean API. Perfect for audit trails, user activity tracking, and system event logging. No Django or web framework required!
+
+## 🚀 Features
+
+- **Zero Configuration** - Pre-configured database connection
+- **Simple API** - Just import and log events
+- **No Framework Required** - Works with any Python application
+- **No Migrations** - Assumes table already exists
+- **Utility Functions** - Extract IP addresses and user agents
+- **Production Ready** - Optimized for performance and reliability
+- **Context Manager Support** - Automatic connection management
+
+## Installation
+
+```bash
+pip install event-journal
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/amolsr/event_journal.git
+cd event_journal
+pip install -e .
+```
+
+## Database Configuration
+
+The library comes with **pre-configured database settings** for immediate use. No additional configuration is required - the library will automatically connect to the database.
+
+## Setup
+
+### Quick Start
+
+**No setup required!** Just install and use:
+
+```bash
+pip install event-journal
+```
+
+```python
+from event_journal import log_event
+log_event('your_event_type', event_info={...})
+```
+
+### Database Setup
+
+1. Create the event journal table in your PostgreSQL database:
+
+```sql
+-- Run this SQL script in your database
+\i create_event_journal_table.sql
+```
+
+2. Test the connection:
+
+```bash
+python quick_start.py
+```
+
+## Usage
+
+### Basic Usage
+
+The library comes with pre-configured database settings, so you can use it in any Python script without any setup:
+
+```python
+from event_journal import log_event
+
+# Just log events - assumes EventJournal table already exists!
+log_event(
+    event_type='user_login',
+    user_id=123,
+    event_info={
+        'login_method': 'email',
+        'success': True
+    },
+    ip_address='192.168.1.1',
+    user_agent='Mozilla/5.0...'
+)
+```
+
+**Prerequisites:** The EventJournal table must already exist in your database.
+
+### Advanced Usage with Database Handler
+
+For more control over database connections:
+
+```python
+from event_journal import DatabaseHandler, EventJournal
+
+# Create a custom database handler
+db_handler = DatabaseHandler(
+    host='your-host',
+    port=5432,
+    database='your-database',
+    user='your-user',
+    password='your-password'
+)
+
+# Use context manager for automatic connection management
+with db_handler:
+    # Log an event
+    event = EventJournal.log_event(
+        event_type='user_login',
+        user_id=123,
+        event_info={'login_method': 'email'},
+        db_handler=db_handler
+    )
+```
+
+### Convenience Functions
+
+The library provides convenience functions for common event types:
+
+```python
+from event_journal import log_user_login, log_file_upload, log_api_request
+
+# Log user login
+log_user_login(
+    user_id=123,
+    login_method='email',
+    ip_address='192.168.1.1',
+    user_agent='Mozilla/5.0...'
+)
+
+# Log file upload
+log_file_upload(
+    user_id=123,
+    file_id='file_456',
+    filename='document.pdf',
+    file_type='application/pdf',
+    file_size=2048000,
+    ip_address='192.168.1.1'
+)
+
+# Log API request
+log_api_request(
+    endpoint='/api/upload',
+    method='POST',
+    status_code=200,
+    user_id=123,
+    response_time_ms=150
+)
+```
+
+### Utility Functions
+
+The library provides utility functions for extracting client information:
+
+```python
+from event_journal.utils import get_client_ip, get_user_agent
+
+# With Flask request headers
+ip_address = get_client_ip(dict(request.headers))
+user_agent = get_user_agent(dict(request.headers))
+
+# With custom headers dictionary
+headers = {'X-Forwarded-For': '192.168.1.1', 'User-Agent': 'Mozilla/5.0...'}
+ip_address = get_client_ip(headers)
+user_agent = get_user_agent(headers)
+```
+
+## API Reference
+
+### log_event()
+
+Log an event to the database.
+
+**Parameters:**
+- `event_type` (str): Type of event being logged
+- `user_id` (int, optional): ID of the user associated with this event
+- `event_info` (dict, optional): Additional event information
+- `ip_address` (str, optional): Client IP address
+- `user_agent` (str, optional): Client user agent string
+- `timestamp` (datetime, optional): Event timestamp (defaults to now)
+
+**Returns:**
+- `EventJournal`: The created EventJournal instance
+
+### DatabaseHandler
+
+Manage database connections and operations.
+
+**Parameters:**
+- `host` (str): Database host
+- `port` (int): Database port
+- `database` (str): Database name
+- `user` (str): Database username
+- `password` (str): Database password
+- `sslmode` (str): SSL mode for connection
+
+**Methods:**
+- `test_connection()`: Test database connection
+- `check_table_exists()`: Check if event journal table exists
+- `create_event()`: Create a new event
+- `get_event(event_id)`: Get event by ID
+- `get_events()`: Get events with filtering
+- `count_events()`: Count events with filtering
+- `delete_event(event_id)`: Delete event by ID
+
+### EventJournal
+
+Model for event journal entries.
+
+**Attributes:**
+- `id`: Database ID
+- `event_type`: Type of event
+- `user_id`: User ID (optional)
+- `event_info`: Event information dictionary
+- `ip_address`: Client IP address
+- `user_agent`: Client user agent
+- `timestamp`: Event timestamp
+- `created_at`: Creation timestamp
+
+**Methods:**
+- `to_dict()`: Convert to dictionary
+- `from_dict(data)`: Create from dictionary
+- `log_event()`: Class method to log events
+
+## Database Schema
+
+The library uses a PostgreSQL table with the following structure:
+
+```sql
+CREATE TABLE event_journal (
+    id SERIAL PRIMARY KEY,
+    event_type VARCHAR(100) NOT NULL,
+    user_id INTEGER NULL,
+    event_info JSONB DEFAULT '{}',
+    ip_address INET NULL,
+    user_agent TEXT DEFAULT '',
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+**Fields:**
+- `id`: Primary key (auto-incrementing)
+- `event_type`: Type of event (VARCHAR, max 100 chars)
+- `user_id`: User ID (INTEGER, nullable)
+- `event_info`: JSON field containing event data (JSONB)
+- `ip_address`: Client IP address (INET type)
+- `user_agent`: Client user agent (TEXT)
+- `timestamp`: Event timestamp (TIMESTAMP WITH TIME ZONE)
+- `created_at`: Record creation timestamp (TIMESTAMP WITH TIME ZONE)
+
+**Indexes:**
+- Primary key on `id`
+- Index on `event_type`
+- Index on `user_id`
+- Index on `timestamp`
+- Composite index on `event_type, timestamp`
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- **Repository**: [https://github.com/amolsr/event_journal](https://github.com/amolsr/event_journal)
+- **PyPI Package**: [https://pypi.org/project/event-journal/](https://pypi.org/project/event-journal/)
+- **Issues**: [https://github.com/amolsr/event_journal/issues](https://github.com/amolsr/event_journal/issues)
+
+## 📊 Stats
+
+![GitHub stars](https://img.shields.io/github/stars/amolsr/event_journal?style=social)
+![GitHub forks](https://img.shields.io/github/forks/amolsr/event_journal?style=social)
+![GitHub issues](https://img.shields.io/github/issues/amolsr/event_journal)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/amolsr/event_journal)

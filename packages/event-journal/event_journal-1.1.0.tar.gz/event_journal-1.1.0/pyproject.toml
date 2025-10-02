@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-journal"
+version = "1.1.0"
+authors = [
+    {name = "Amol Saini", email = "amol.saini567@gmail.com"},  # Update with your actual email
+]
+description = "A simple Python library for logging events to PostgreSQL database"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Topic :: Database",
+]
+keywords = ["python", "logging", "events", "postgresql", "supabase", "database", "audit"]
+dependencies = [
+    "psycopg2-binary>=2.8.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "twine>=4.0",
+    "build>=0.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/amolsr/event_journal"
+Documentation = "https://github.com/amolsr/event_journal#readme"
+Repository = "https://github.com/amolsr/event_journal"
+"Bug Tracker" = "https://github.com/amolsr/event_journal/issues"
+
+[project.scripts]
+event-journal-test = "event_journal.standalone:test_connection"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["event_journal*"]
+
+[tool.setuptools.package-data]
+event_journal = ["*.sql"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
