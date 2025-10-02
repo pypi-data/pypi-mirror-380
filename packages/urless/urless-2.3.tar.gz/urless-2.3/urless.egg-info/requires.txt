@@ -1,0 +1,6 @@
+argparse
+pyyaml
+termcolor
+urlparse3
+chardet
+requests

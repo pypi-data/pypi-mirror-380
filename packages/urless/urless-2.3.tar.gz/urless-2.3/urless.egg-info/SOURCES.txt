@@ -1,0 +1,11 @@
+README.md
+setup.py
+urless/__init__.py
+urless/urless.py
+urless.egg-info/PKG-INFO
+urless.egg-info/SOURCES.txt
+urless.egg-info/dependency_links.txt
+urless.egg-info/entry_points.txt
+urless.egg-info/not-zip-safe
+urless.egg-info/requires.txt
+urless.egg-info/top_level.txt
