@@ -1,0 +1,8 @@
+pystencils
+numba
+ipython
+matplotlib
+pyevtk
+
+[gpu]
+cupy-cuda

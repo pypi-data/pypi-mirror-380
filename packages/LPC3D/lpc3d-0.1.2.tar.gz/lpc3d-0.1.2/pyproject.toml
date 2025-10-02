@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LPC3D"
+version = "0.1.2"
+description = "A package for LPC3D mesoscopic simulations"
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+    { name = "El Hassane Lahrar", email = "lahrar.el@gmail.com" },
+    { name = "Céline Merlet", email = "celine.merlet.fr@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
+]
+license = { text = "AGPL-3.0-or-later" }
+
+
+keywords = ["LPC3D", "simulation", "OpenMP", "GPU", "computational science"]
+
+dependencies = [
+    'pystencils',
+    'numba',
+    'ipython',
+    'matplotlib',
+    'pyevtk',
+]
+
+[project.scripts]
+lpc3d = "lpc3d.LPC3D:main" 
+
+[project.optional-dependencies]
+gpu = ["cupy-cuda"]
+
