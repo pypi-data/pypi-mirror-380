@@ -1,0 +1,10 @@
+rosdomofon/__init__.py,sha256=K4TbFUrx3KYm3gHkxjHjE6N5LCUpQs08rBHVJYFYXxE,37
+rosdomofon/bitrixWork.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosdomofon/kafka_client.py,sha256=jqEkzmGI6ugjPclgf0BMRPwb8ET5tnA_9klHFA_GjwI,22012
+rosdomofon/kafka_example.py,sha256=8Tvy1hFNvtFTOHFETlsbbIv352KXxrL0cnlVTLUXm2U,5354
+rosdomofon/models.py,sha256=dq2vJVHZw3lv_JSfz0ByDf-d_m9dxn7zRvQbWW35Jv4,7810
+rosdomofon/rosdomofon.py,sha256=cX-JxmFkdvZaQUYnEfDxQ13GGIUr9kYElbr5JPfHARM,27599
+rosdomofon-0.1.2.dist-info/METADATA,sha256=hhqEOEUeJqa8Mv5U1zzDGJBxvIOnyr88KxWCGhPHvL8,6091
+rosdomofon-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+rosdomofon-0.1.2.dist-info/top_level.txt,sha256=ybs615KT-qkHOpXWK0GG_E17nDdX0FMX3N3joEUuq2w,11
+rosdomofon-0.1.2.dist-info/RECORD,,
