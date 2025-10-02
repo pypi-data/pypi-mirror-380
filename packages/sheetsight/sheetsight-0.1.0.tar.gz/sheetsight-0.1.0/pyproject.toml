@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sheetsight"
+version = "0.1.0"
+description = "Simple Python client for the Sheetsight search API"
+authors = [{ name = "Zach Grimaldi" }]
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "sheetsight",
+    "search",
+    "api",
+    "client",
+    "datasheet",
+    "electronics",
+    "parts",
+    "semiconductor"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12", 
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.25.0"]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2.2.post1",
+    "pytest>=6.0",
+    "pytest-asyncio>=0.18.0",
+    "pytest-cov>=2.0",
+    "pytest-mock>=3.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+    "python-dotenv>=0.19.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sheetsight/sheetsight-py"
+Repository = "https://github.com/sheetsight/sheetsight-py.git"
+Issues = "https://github.com/sheetsight/sheetsight-py/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.exclude-package-data]
+"*" = [".env", "*.env"]
+
+[tool.setuptools.packages.find]
+include = ["sheetsight_py*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+

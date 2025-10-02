@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+sheetsight.egg-info/PKG-INFO
+sheetsight.egg-info/SOURCES.txt
+sheetsight.egg-info/dependency_links.txt
+sheetsight.egg-info/requires.txt
+sheetsight.egg-info/top_level.txt
+sheetsight_py/__init__.py
+sheetsight_py/client.py
+sheetsight_py/exceptions.py
+sheetsight_py/types.py
+tests/test_client.py
