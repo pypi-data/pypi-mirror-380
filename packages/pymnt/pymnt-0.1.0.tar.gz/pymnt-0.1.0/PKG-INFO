@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: pymnt
+Version: 0.1.0
+Summary: Ultra-fast package manager (Mint)
+Author: ninja
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
