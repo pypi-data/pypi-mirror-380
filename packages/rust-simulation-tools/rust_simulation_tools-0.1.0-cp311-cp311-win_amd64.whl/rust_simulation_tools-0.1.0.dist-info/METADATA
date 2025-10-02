@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: rust_simulation_tools
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: numpy>=1.20
+Summary: Fast algorithms for MD trajectories
+Requires-Python: >=3.8
