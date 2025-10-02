@@ -1,0 +1,11 @@
+sqlai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlai/cli.py,sha256=fHxtjNDCUcXg7bp35I8WXZkHpeqWR_tftvnQpKRBRLk,1596
+sqlai/config.py,sha256=V_XCyl4T4voSamRrDqtWMoUq7G8QYSXUtO94RDndTVA,2504
+sqlai/helpers.py,sha256=xFcQrbmaFuMcaIIldvikqxhNBc1sE4sig1v4DJd802M,5811
+sqlai/linting.py,sha256=fVxQ-SPDR0cWNHfhxsOR-548Y4qVUHee-nj756Vkhkc,696
+sqlai/violations.py,sha256=xEHj-l1ndWlHGQUO98-WjGZLBV5w50-wfc5Tu-04VQU,1031
+sqlai-0.1.4.dist-info/METADATA,sha256=S7krPIIq1XTJPlmHBnUF6ncO4h6qLWKXix1ilEbcPgo,4186
+sqlai-0.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sqlai-0.1.4.dist-info/entry_points.txt,sha256=k-WZqMAXn024g4sjYOHgE5ULJrs2tcjuskloOd4sgyI,41
+sqlai-0.1.4.dist-info/top_level.txt,sha256=ZYAYVYQkJFTUm6ZnjytTO37HcHFv6uXQ01hg-IqF7fs,6
+sqlai-0.1.4.dist-info/RECORD,,
