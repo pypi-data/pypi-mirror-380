@@ -1,0 +1,2 @@
+[console_scripts]
+clouddojo = clouddojo.cli:cli
