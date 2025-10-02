@@ -1,0 +1,301 @@
+{
+  "name": "generate_advice",
+  "description": "Generate comprehensive investment recommendations based on multi-dimensional market analysis including technical, fundamental, sentiment, capital flow, and news factors",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "analysis_depth": {
+        "type": "string",
+        "enum": ["simple", "normal", "detailed"],
+        "description": "Analysis depth level",
+        "default": "normal"
+      },
+      "focus_area": {
+        "type": "string",
+        "enum": ["technical", "fundamental", "sentiment", "capital", "news", "all"],
+        "description": "Primary analysis focus area",
+        "default": "all"
+      },
+      "date": {
+        "type": "string",
+        "description": "Analysis date (YYYY-MM-DD), defaults to today",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      },
+      "include_risk": {
+        "type": "boolean",
+        "description": "Include detailed risk assessment",
+        "default": true
+      },
+      "include_backtest": {
+        "type": "boolean",
+        "description": "Include strategy backtesting results",
+        "default": false
+      },
+      "strategy_params": {
+        "type": "object",
+        "description": "Custom strategy parameters for backtesting",
+        "properties": {
+          "entry_threshold": { "type": "number", "description": "Entry signal threshold" },
+          "exit_threshold": { "type": "number", "description": "Exit signal threshold" },
+          "stop_loss_pct": { "type": "number", "description": "Stop loss percentage" },
+          "take_profit_pct": { "type": "number", "description": "Take profit percentage" }
+        }
+      }
+    },
+    "required": []
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "success": { "type": "boolean" },
+      "recommendation": {
+        "type": "object",
+        "properties": {
+          "market_outlook": {
+            "type": "string",
+            "enum": ["bullish", "bearish", "sideways"],
+            "description": "Overall market view"
+          },
+          "operation_suggestion": {
+            "type": "string",
+            "enum": ["aggressive", "cautious", "wait"],
+            "description": "Suggested trading approach"
+          },
+          "position_recommendation": {
+            "type": "string",
+            "enum": ["heavy", "half", "light", "empty"],
+            "description": "Position sizing: heavy(70-100%), half(40-70%), light(10-40%), empty(0-10%)"
+          },
+          "analysis": {
+            "type": "object",
+            "properties": {
+              "technical_analysis": { "type": "string", "description": "Technical analysis summary" },
+              "fundamental_analysis": { "type": "string", "description": "Fundamental/breadth analysis" },
+              "sentiment_analysis": { "type": "string", "description": "Sentiment analysis summary" },
+              "capital_analysis": { "type": "string", "description": "Capital flow analysis" },
+              "news_analysis": { "type": ["string", "null"], "description": "News impact analysis" }
+            },
+            "required": ["technical_analysis", "fundamental_analysis", "sentiment_analysis", "capital_analysis"]
+          },
+          "risk_assessment": {
+            "type": ["object", "null"],
+            "properties": {
+              "risk_level": {
+                "type": "string",
+                "enum": ["低风险", "中等风险", "高风险", "极高风险"]
+              },
+              "risk_factors": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "List of key risk factors"
+              },
+              "risk_warning": {
+                "type": "string",
+                "description": "Specific risk warning statement"
+              }
+            }
+          },
+          "actionable_insights": {
+            "type": "object",
+            "properties": {
+              "key_focus_points": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Key market factors to monitor"
+              },
+              "operational_strategy": {
+                "type": "string",
+                "description": "Specific operational strategy and tactics"
+              },
+              "entry_points": {
+                "type": "array",
+                "items": { "type": "number" },
+                "description": "Suggested entry price levels"
+              },
+              "exit_points": {
+                "type": "array",
+                "items": { "type": "number" },
+                "description": "Suggested exit price levels"
+              }
+            },
+            "required": ["key_focus_points", "operational_strategy"]
+          },
+          "backtest_results": {
+            "type": ["object", "null"],
+            "properties": {
+              "win_rate": { "type": "number", "description": "Historical win rate %" },
+              "avg_return": { "type": "number", "description": "Average return %" },
+              "max_drawdown": { "type": "number", "description": "Maximum drawdown %" },
+              "sharpe_ratio": { "type": "number", "description": "Risk-adjusted return metric" },
+              "sample_size": { "type": "integer", "description": "Number of historical trades tested" }
+            }
+          },
+          "confidence_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Recommendation confidence (0-100)"
+          },
+          "disclaimer": {
+            "type": "string",
+            "description": "Investment disclaimer"
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "analysis_depth": { "type": "string" },
+              "generated_at": { "type": "string", "format": "date-time" },
+              "valid_until": { "type": ["string", "null"], "format": "date-time" },
+              "data_sources": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "required": ["analysis_depth", "generated_at"]
+          }
+        },
+        "required": ["market_outlook", "operation_suggestion", "position_recommendation", "analysis", "actionable_insights", "confidence_score", "disclaimer", "metadata"]
+      },
+      "error": {
+        "type": ["object", "null"],
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": "string" }
+        }
+      }
+    },
+    "required": ["success"]
+  },
+  "examples": [
+    {
+      "description": "Generate normal depth investment advice",
+      "input": {
+        "analysis_depth": "normal",
+        "focus_area": "all",
+        "include_risk": true
+      },
+      "output": {
+        "success": true,
+        "recommendation": {
+          "market_outlook": "bullish",
+          "operation_suggestion": "cautious",
+          "position_recommendation": "half",
+          "analysis": {
+            "technical_analysis": "短期均线多头排列，MACD金叉，RSI处于正常区间。技术面偏多，但需注意短期涨幅较大，可能面临回调。",
+            "fundamental_analysis": "涨跌家数比2:1，市场宽度良好。成交量放大，市场参与度较高。估值水平合理，PE约15倍。",
+            "sentiment_analysis": "市场情绪指数62.5，处于偏乐观区间。需注意情绪是否过热，警惕追高风险。",
+            "capital_analysis": "北向资金净流入16亿，外资态度积极。主力资金小幅流出12亿，观望情绪浓厚。融资余额上升，杠杆资金活跃。",
+            "news_analysis": "央行降准利好，释放流动性1.2万亿。短期提振市场信心，中期有利于估值修复。"
+          },
+          "risk_assessment": {
+            "risk_level": "中等风险",
+            "risk_factors": [
+              "市场情绪偏高，需警惕回调风险",
+              "主力资金流出，缺乏持续性支撑",
+              "外部环境仍有不确定性"
+            ],
+            "risk_warning": "市场短期波动可能加大，建议控制仓位，设置止损"
+          },
+          "actionable_insights": {
+            "key_focus_points": [
+              "关注北向资金动向，持续流入则多头延续",
+              "留意主力资金是否回流，资金面是关键",
+              "关注量能是否持续放大，缩量上涨不可持续"
+            ],
+            "operational_strategy": "建议半仓操作（40-70%），可逢低适当加仓。重点关注政策受益板块：银行、地产、基建。短线关注强势板块，波段操作控制风险。严格止损，破3200点减仓观望。",
+            "entry_points": [3200, 3220, 3240],
+            "exit_points": [3280, 3300, 3320]
+          },
+          "confidence_score": 72.5,
+          "disclaimer": "本建议仅供参考，不构成投资建议。投资有风险，入市需谨慎。",
+          "metadata": {
+            "analysis_depth": "normal",
+            "generated_at": "2025-09-30T16:00:00+08:00",
+            "valid_until": "2025-10-01T09:30:00+08:00",
+            "data_sources": ["market_data", "technical_indicators", "sentiment_analysis", "capital_flow", "news_analysis"]
+          }
+        }
+      }
+    },
+    {
+      "description": "Simple advice with technical focus only",
+      "input": {
+        "analysis_depth": "simple",
+        "focus_area": "technical",
+        "include_risk": false
+      },
+      "output": {
+        "success": true,
+        "recommendation": {
+          "market_outlook": "bullish",
+          "operation_suggestion": "aggressive",
+          "position_recommendation": "half",
+          "analysis": {
+            "technical_analysis": "MACD金叉，均线多头排列，技术面偏多",
+            "fundamental_analysis": "市场参与度较高",
+            "sentiment_analysis": "情绪偏乐观",
+            "capital_analysis": "资金面中性"
+          },
+          "actionable_insights": {
+            "key_focus_points": ["关注技术指标信号变化"],
+            "operational_strategy": "半仓操作，顺势而为",
+            "entry_points": [3220],
+            "exit_points": [3280]
+          },
+          "confidence_score": 65.0,
+          "disclaimer": "本建议仅供参考，不构成投资建议。投资有风险，入市需谨慎。",
+          "metadata": {
+            "analysis_depth": "simple",
+            "generated_at": "2025-09-30T16:00:00+08:00",
+            "data_sources": ["technical_indicators"]
+          }
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": "INSUFFICIENT_DATA",
+      "message": "Insufficient data for analysis",
+      "example": {
+        "input": { "date": "2025-01-01" },
+        "output": {
+          "success": false,
+          "error": {
+            "code": "INSUFFICIENT_DATA",
+            "message": "Insufficient historical data for date 2025-01-01",
+            "details": "Market holiday or non-trading day. Unable to generate recommendation."
+          }
+        }
+      }
+    },
+    {
+      "code": "ANALYSIS_FAILED",
+      "message": "Analysis generation failed",
+      "example": {
+        "input": {},
+        "output": {
+          "success": false,
+          "error": {
+            "code": "ANALYSIS_FAILED",
+            "message": "Failed to generate investment recommendation",
+            "details": "Multiple data sources unavailable. Recommendation would be unreliable."
+          }
+        }
+      }
+    }
+  ],
+  "performance": {
+    "target_response_time_ms": 5000,
+    "typical_response_time_ms": 3000,
+    "detailed_analysis_time_ms": 7000
+  },
+  "notes": [
+    "Recommendations are for reference only and do not constitute investment advice",
+    "All advice includes mandatory disclaimer",
+    "Confidence score reflects data quality and model certainty",
+    "Valid_until indicates when recommendation should be refreshed (typically next trading session)",
+    "Backtesting results are historical and do not guarantee future performance"
+  ]
+}
