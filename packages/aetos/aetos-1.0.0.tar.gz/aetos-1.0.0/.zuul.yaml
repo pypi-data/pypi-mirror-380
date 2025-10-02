@@ -1,0 +1,22 @@
+- project:
+    queue: telemetry
+    templates:
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      # TODO(tkajinm): Enable this once ready
+      #- release-notes-jobs-python3
+      - check-requirements
+    check:
+      jobs:
+        - watcher-aetos-integration
+        - telemetry-dsvm-integration-aetos:
+            voting: True
+        - telemetry-dsvm-integration-aetos-ipv6-only:
+            voting: True
+    gate:
+      jobs:
+        - watcher-aetos-integration
+        - telemetry-dsvm-integration-aetos:
+            voting: True
+        - telemetry-dsvm-integration-aetos-ipv6-only:
+            voting: True

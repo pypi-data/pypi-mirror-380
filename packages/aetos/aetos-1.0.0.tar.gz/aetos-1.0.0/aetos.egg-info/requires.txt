@@ -1,0 +1,14 @@
+pbr>=6.0.0
+keystonemiddleware>=5.1.0
+lxml>=2.3
+oslo.config>=6.8.0
+oslo.i18n>=1.5.0
+oslo.log>=4.3.0
+oslo.policy>=4.5.0
+PasteDeploy>=1.5.0
+Paste>=3.10
+pecan>=0.8.0
+oslo.middleware>=3.22.0
+oslo.utils>=4.7.0
+WSME>=0.12.1
+python-observabilityclient>=1.1.0

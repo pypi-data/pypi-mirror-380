@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: aetos
+Version: 1.0.0
+Summary: Aetos is a reverse proxy for enforcing openstack multi-tenancy for Prometheus.
+Home-page: https://www.openstack.org/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: System :: Monitoring
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pbr>=6.0.0
+Requires-Dist: keystonemiddleware>=5.1.0
+Requires-Dist: lxml>=2.3
+Requires-Dist: oslo.config>=6.8.0
+Requires-Dist: oslo.i18n>=1.5.0
+Requires-Dist: oslo.log>=4.3.0
+Requires-Dist: oslo.policy>=4.5.0
+Requires-Dist: PasteDeploy>=1.5.0
+Requires-Dist: Paste>=3.10
+Requires-Dist: pecan>=0.8.0
+Requires-Dist: oslo.middleware>=3.22.0
+Requires-Dist: oslo.utils>=4.7.0
+Requires-Dist: WSME>=0.12.1
+Requires-Dist: python-observabilityclient>=1.1.0
+
+===============================
+Aetos
+===============================
+
+--------
+Overview
+--------
+Aetos is a reverse-proxy for enforcing openstack multi-tenancy for Prometheus.
+
+Aetos is a reverse-proxy, which when placed in front of Prometheus will
+enforce openstack multi-tenancy and keystone authentication for every
+Prometheus query.
+
+Aetos is distributed under the terms of the Apache
+License, Version 2.0. The full terms and conditions of this
+license are detailed in the LICENSE file.
+
+-------------
+Documentation
+-------------
+
+Release notes are available at
+https://releases.openstack.org/teams/telemetry.html
+
+Developer documentation is available at
+https://docs.openstack.org/aetos/latest/
+
+Code Repository
+---------------
+- Server: https://opendev.org/openstack/aetos
+
+Bug Tracking
+------------
+- Bugs: https://bugs.launchpad.net/aetos/
+
+IRC
+---
+IRC Channel: #openstack-telemetry on `OFTC`_.
+
+.. _OFTC: https://oftc.net/
+

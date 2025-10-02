@@ -1,0 +1,49 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Execute the watcher-aetos-integration job
+* Enable a few common hacking checks
+* Reduce Prometheus requests for modify\_query calls
+* Validate input of [DEFAULT] auth\_mode
+* Add Prometheus TLS support
+* Switch Aetos service type to 'metric-storage'
+* setup.cfg: Replace dashes with underscores
+* Run telemetry zuul jobs with Aetos
+* Refactor match[] parameter handling
+* Allow match[] parameter in label and labels
+* Add first iteration of documentation
+* Add bashate
+* Add tenancy enforcement for all endpoints
+* Remove unused python-memcached
+* Drop explicit dependency on python-subunit
+* Drop override of [oslo\_policy] policy\_file
+* Exclude test code from coverage report
+* Add policy and tenancy for query endpoint
+* Add policy handling for admin endpoints
+* Move unit tests to functional tests
+* Update installation guide
+* Remove hacking from explicit test requirements
+* Replace old OS version
+* Remove installation guide for openSUSE/SLES
+* Add unit tests
+* Drop support for Python 3.9
+* Bump packages version
+* Remove duplicate package
+* Remove db options
+* Add http status handling
+* Rename delete endpoint
+* Add admin endpoints
+* tox: Bump minimum version and remove ignore\_basepython\_conflict
+* Add pyproject.toml to support pip 23.1
+* Add genconfig/policy target
+* Fix missing requirements
+* Drop service\_credential options
+* No-op implementation of Aetos endpoints
+* Add devstack plugin
+* Replace UPPER\_CONSTRAINTS\_FILE
+* Use pre-commit to run format check
+* Initial structure created by cookiecutter
+* Added .gitreview and .zuul.yaml
