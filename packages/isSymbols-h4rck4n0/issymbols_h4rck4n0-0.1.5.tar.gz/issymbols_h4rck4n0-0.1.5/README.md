@@ -1,0 +1,39 @@
+## Realizzato da Biagio Costigliola alias h4rck4n0
+
+# script che controlla se ci sono simboli nella stringa
+
+- .isSymbols     True se nella stringa trova almeno 1 simbolo
+- .isonlySybols  True se la stringa è composta solo da simboli
+
+- myStringa è la class che passiamo la stringa da lavorare
+
+- sintassi: print(myStringa("lanostrastringa").isSymbols) 
+- ci stampa True se nella stringa è presente almeno un simbolo
+
+- sintassi: print(myStringa("lanostrastringa").isonlySybols)
+- ci stampa True se nella stringa contiene solamente simboli
+
+#  .isSymbols  
+
+- print(myStringa("Hello+").isSymbols) # True contiene simboli '+'
+
+- print(myStringa("New York").isSymbols) # False NON contiene simboli
+
+
+# .isonlySymbols
+
+- print(myStringa("/&%!^^").isonlySymbols) # True contiene solo simboli
+
+- print(myStringa("Ciao!!!").isonlySymbols) # False non contiene solo symboli
+
+
+# Altri esempi
+
+- stringa = "Ciao!"
+
+- risultato = myStringa(stringa).isSymbols
+
+- print(risultato)  # True
+
+# Attenzione lo spazio NON è considerato come un simbolo
+
