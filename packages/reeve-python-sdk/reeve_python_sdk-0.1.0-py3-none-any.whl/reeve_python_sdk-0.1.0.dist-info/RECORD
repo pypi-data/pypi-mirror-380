@@ -1,0 +1,13 @@
+reeve_python_sdk/__init__.py,sha256=SQX0TzokHSG8JB78pfMzoXaGT0Kv_LBUN92Z3V7TGhQ,2441
+reeve_python_sdk/auth.py,sha256=hnGBqVG6Ddsjfb4wbN92pfj-ATnluKHyjRlhUlmQ81I,767
+reeve_python_sdk/client.py,sha256=hzgjrD0AO4-P4tymUF9IQDZY5n4MTKyxM1BgdPugkgw,8215
+reeve_python_sdk/exceptions.py,sha256=YBQnKmzAMrnk2VkuvV7NDqNwiHanWhzURpCOl0aSsN8,1578
+reeve_python_sdk/face.py,sha256=iavPQG5r9pxvG42BWuNnbIvKz6Lcl7VE-aL-tuypNsw,4956
+reeve_python_sdk/models.py,sha256=xZ2fxeioejST8QN7dnWt7vCV1fFa574N3binA6cu-qw,1998
+reeve_python_sdk/person.py,sha256=2VYaODtTc8lpPgdKt7faZFsgl8LUG7Q9jueVwA21YJE,3492
+reeve_python_sdk/subject.py,sha256=8hASD7ugv_vtP0Vp3hYZWOr_WoCcBwUTRq6b35t8Xio,2114
+reeve_python_sdk-0.1.0.dist-info/licenses/LICENSE.txt,sha256=9GgcyoRSxUvXFgCoG2DsAMvHz4uixCa9lh5xYI-DQ5c,1082
+reeve_python_sdk-0.1.0.dist-info/METADATA,sha256=g4w73XlQnwUA9ILmaQYdsBNNyh5n55wuI7jjUP0mgKE,4899
+reeve_python_sdk-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+reeve_python_sdk-0.1.0.dist-info/top_level.txt,sha256=x14a2C08ynZ56igp338QvqGNEBmX3cI8QKWLW4TtLtg,17
+reeve_python_sdk-0.1.0.dist-info/RECORD,,
