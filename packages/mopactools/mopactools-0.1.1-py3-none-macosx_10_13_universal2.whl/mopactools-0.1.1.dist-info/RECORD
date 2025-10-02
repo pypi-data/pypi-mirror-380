@@ -1,0 +1,11 @@
+mopactools/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mopactools/api.py,sha256=U0iX33GaJjvVBDdkuc35w82xeVW6eDH1a5ZpjRx6SM8,33260
+mopactools/binding.py,sha256=JS-MklDYgd3inQM65CepwG_3fJS5ndWhAj_OuTxjW7w,4963
+mopactools/lib/libiomp5.dylib,sha256=Gf1VnakIuyfZ2Mt1f3EWJ3Hecvq_U8u9Xuc7zBW3Q9U,1841056
+mopactools/lib/libmopac.2.dylib,sha256=v2isJ9aBLq0l4VIsBdlJJApEM9TiSMhmRMH4wd4Q3zg,20079568
+mopactools/lib/libmopac.dylib,sha256=v2isJ9aBLq0l4VIsBdlJJApEM9TiSMhmRMH4wd4Q3zg,20079568
+mopactools-0.1.1.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+mopactools-0.1.1.dist-info/METADATA,sha256=pO4xPqnRj4uDCLSyWxIPtorgEo1UFdWUV5RQiH3MS5o,1829
+mopactools-0.1.1.dist-info/WHEEL,sha256=HM_AmiwIv3elVr2ZP79pzInpctgG1oSt1hK2IKJ44e4,111
+mopactools-0.1.1.dist-info/top_level.txt,sha256=2UXKmL4VhoQEM5zt4tGv5OMJOqy0Vgg_og6wTbKEBiQ,11
+mopactools-0.1.1.dist-info/RECORD,,
