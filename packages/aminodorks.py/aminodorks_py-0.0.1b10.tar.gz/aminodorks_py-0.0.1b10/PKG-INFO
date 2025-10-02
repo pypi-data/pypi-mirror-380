@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: aminodorks.py
+Version: 0.0.1b10
+Summary: Amino API wrapper and tools
+Author: Nullable-developer
+Author-email: nulllable@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: aiofiles>=23.0.0
+Requires-Dist: msgspec>=0.17.0
+Requires-Dist: orjson>=3.10.16
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
