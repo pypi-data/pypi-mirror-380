@@ -1,0 +1,10 @@
+libpyvivotek/__init__.py,sha256=iRNOt4txWMEBAFIvGZ2sCKd0grjj4EWpYEy8G2k0MF0,119
+libpyvivotek/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libpyvivotek/vivotek.py,sha256=hHb19xT-Oley_Ca1MqIYzM9aSlHuDJYeuKovXWfVxrY,5815
+libpyvivotek-0.5.1.dist-info/licenses/LICENSE,sha256=GY-iKw8nbIgQRw-7POx_rG-0hHMJLa6xUGaMFhCn9S8,34494
+tests/__init__.py,sha256=O3HLGgvR6nVAnRLpqSCuyaB3nhom3LdMN1ZKfCoR4M4,29
+tests/test_vivotek_camera.py,sha256=fJVzPImaSrE-UTSC8lbB6Aq-BFnqQ4fIXd9k4ihsOs0,5352
+libpyvivotek-0.5.1.dist-info/METADATA,sha256=ANkdWGi2ZIHKqNeF3madzM7gO0Md1rT-f1I8aGDvQWo,3773
+libpyvivotek-0.5.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+libpyvivotek-0.5.1.dist-info/top_level.txt,sha256=pcWEiNDU_7U0XtBwE7MLVJ5CZqjtglRXfm119NRS1mc,19
+libpyvivotek-0.5.1.dist-info/RECORD,,
