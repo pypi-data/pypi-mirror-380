@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+datastore_manager=$(crudini --get /etc/trove/conf.d/guest_info.conf DEFAULT datastore_manager)
+datastore_version=$(crudini --get /etc/trove/conf.d/guest_info.conf DEFAULT datastore_version)
+datastore_image=$(crudini --get /etc/trove/conf.d/trove-guestagent.conf "$datastore_manager" docker_image)
+backup_image=$(crudini --get /etc/trove/conf.d/trove-guestagent.conf "$datastore_manager" backup_docker_image)
+
+echo "datastore_image=$datastore_image"
+echo "backup_image=$backup_image"
+
+if docker image inspect "${datastore_image}:${datastore_version}" >/dev/null 2>&1; then
+  echo "Image already exists, skip loading."
+else
+  if [ -n "$datastore_image" ]; then
+    docker pull "${datastore_image}:${datastore_version}"
+  fi
+fi
+
+if docker image inspect "${backup_image}:${datastore_version}" >/dev/null 2>&1; then
+    echo "Image already exists, skip loading."
+else
+  if [ -n "$backup_image" ]; then
+    docker pull "${backup_image}:${datastore_version}"
+  fi
+fi
