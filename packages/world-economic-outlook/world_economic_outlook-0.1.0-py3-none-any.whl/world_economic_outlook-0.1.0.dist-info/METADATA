@@ -1,0 +1,330 @@
+Metadata-Version: 2.4
+Name: world-economic-outlook
+Version: 0.1.0
+Summary: An IMF World Economic Outlook (WEO) API Client
+Author-email: Rob Suomi <robert.suomi@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: colorama
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: simple-sqlite3
+Description-Content-Type: text/markdown
+
+# World Economic Outlook
+[![PyPI version](https://badge.fury.io/py/world-economic-outlook.svg)](https://pypi.org/project/world-economic-outlook/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+
+---
+
+## Overview
+
+**World Economic Outlook** is a Python library for downloading and processing IMF datasets.
+
+---
+
+## Features
+
+- Download data from over 70 IMF [datasets](https://data.imf.org/en/Datasets).
+- Save data as `.csv`, `.json`, and `.txt` files.
+- Push data to SQLite databases.
+- ISO alpha-2 and alpha-3 compatible.
+- Easy-to-use command line interface (CLI).
+
+---
+
+## Installation
+
+Requires **Python 3.9+**.
+
+```bash
+pip install world-economic-outlook
+```
+
+---
+
+## Quick Start
+
+> **Note:** This library is robust to the new API changes made by the IMF. Many previous datasets have changed in format and naming convention. For example, the International Financial Statistics (IFS) has been diffused into other datasets.
+
+### Programmatic Approach
+
+Datasets are accessed programmatically using `<dataset>(*args)`.
+
+#### 1. Download full datasets and save them locally
+
+This example shows how to download the most recently updated WEO dataset and save it as a `.csv`.
+
+```py
+from world_economic_outlook import weo
+
+weo("*", save_path="weo.csv")
+```
+
+This example shows how to download the Fiscal Monitor (FM) dataset and save it as a `.txt`.
+
+```py
+from world_economic_outlook import fm
+
+fm("*", save_path="fm.txt")
+```
+
+This example shows how to download the Exchange Rates (ER) dataset and save it as a `.json`.
+
+```py
+from world_economic_outlook import er
+
+er("*", save_path="er.json")
+```
+
+This example shows how to download WEO datasets by vintage and save them as a `.csv`.
+
+```py
+from world_economic_outlook import vweo
+
+vweo(["April 2025", "October 2024"], save_path="vweo.csv")
+```
+
+#### 2. Use arguments for more targeted data retrievals
+
+This example shows how to download exchange rate data for a specific country using the Exchange Rates (ER) dataset. Some datasets are large, containing lots of different features, making narrowed down data retrievals useful. Accepted API-specific arguments and definitions can be found from the IMF's Data Explorer [page](https://data.imf.org/en/Data-Explorer).
+
+```py
+from world_economic_outlook import er
+
+records = er(
+    isos="AR",                        # Argentina
+    indicator="XDC_USD",              # Local currency per dollar (USDARS)
+    type_of_transformation="EOP_RT",  # End of period rate
+    frequency="M",                    # Monthly frequency
+    start_date="2000",                # Since 2000
+    use_iso_alpha2=True               # Output iso in ISO alpha-2 format
+)
+
+print(records[-1])
+```
+
+**Output:**
+
+```json
+{
+    'date': '2025-08-01',
+    'frequency': 'M',
+    'indicator': 'XDC_USD',
+    'iso': 'AR',
+    'type_of_transformation': 'EOP_RT',
+    'value': 1337.5
+}
+```
+
+#### 3. Pushing data to a SQLite database
+
+This example shows how to download trade data for selected countries using the International Trade in Goods (IMTS) dataset. Data are stored in a SQLite database.
+
+```py
+from world_economic_outlook import imts
+
+imts(
+    isos=["FIN", "SWE", "DNK", "NOR"]
+    isos_star=["FIN", "SWE", "DNK", "NOR"]
+    indicator=[
+        "MG_CIF_USD",        # Imports
+        "XG_FOB_USD",        # Exports
+        "TBG_USD",           # Trade balance
+    ],
+    frequency="M",
+    database="database.db",
+    table="imts"
+)
+```
+
+#### 4. Querying data from a SQLite database
+
+This example shows how to query stored trade data from the previous example.
+
+```py
+from simple_sqlite3 import Database
+
+with Database("database.db") as db:
+    sql = f"""
+    SELECT * FROM imts
+    WHERE iso = 'FIN'
+    AND iso_star = 'SWE'
+    AND indicator IN ("MG_CIF_USD", 'XG_FOB_USD', 'TBG_USD')
+    """
+
+    records = db.query(sql)
+
+print(records)
+```
+
+**Output:**
+
+```json
+{
+    'date': '2025-05-01',
+    'frequency': 'M',
+    'indicator': 'MG_CIF_USD',
+    'iso': 'FIN',
+    'iso_star': 'SWE',
+    'value': 1153284502.0
+}
+{
+    'date': '2025-05-01',
+    'frequency': 'M',
+    'indicator': 'XG_FOB_USD',
+    'iso': 'FIN',
+    'iso_star': 'SWE',
+    'value': 849917785.0
+ }
+
+ {
+    'date': '2025-05-01',
+    'frequency': 'M',
+    'indicator': 'TBG_USD',
+    'iso': 'FIN',
+    'iso_star': 'SWE',
+    'value': -303366717.0
+ }
+```
+
+### Command Line Interface (CLI)
+
+The `world-economic-outlook` library includes a powerful CLI tool for retrieving data, searching IMF datasets, and exploring metadata.
+
+#### Basic Usage
+
+After installation, open a terminal and use the CLI via the `imf` command:
+
+```bash
+>>> imf --help
+```
+
+```bash
+World Economic Outlook CLI
+
+Usage:
+  imf <command> [options]
+
+Commands:
+  <dataset>         {weo, er, cpi, ...}
+  list              List all datasets
+  show              Show dataset info
+  search            Search datasets & indicators
+  help              Show this help message
+
+Options:
+  --help [-h]       Show this help message
+```
+
+#### Examples of CLI Commands
+
+- `list`  
+  List all available datasets.
+
+  ```bash
+  >>> imf list
+  ```
+
+- `show <dataset>`  
+  Show detailed info for a specific dataset.
+
+  ```bash
+  >>> imf show weo
+  ```
+
+- `search <term>`  
+  Search datasets and codelists by keywords.
+
+  ```bash
+  >>> imf search "inflation"
+  ```
+
+- `<dataset>`  
+  Download data from a specific dataset (e.g., `weo`, `er`, `cpi`, etc.).
+
+  ```bash
+  imf weo --isos "USA" --indicator "NGDP_RPCH"
+  ```
+
+#### Dataset-Specific Commands & Options
+
+To see available arguments for a dataset, run:
+
+```bash
+>>> imf <dataset> --help
+```
+
+For example, running this for `vweo` returns:
+
+```bash
+Vintage World Economic Outlook (VWEO)
+
+Usage:
+  imf vweo [options]
+
+Options:
+  --vintage           April 2025, October 2024, April 2024, October 2023, ...
+  --isos              ABW, AFG, AGO, ALB, AND, ...
+  --indicator         BCA, BCA_NGDPD, BF, BFD, BFF, ...
+  --start_year        e.g. 2020
+  --end_year          e.g. 2028
+  --database [-d]     e.g. database.db
+  --table [-t]        e.g. vweo
+  --save_path [-s]    e.g. vweo.json
+  --full_output       True/False
+  --use_iso_alpha2    True/False
+  --info              Show dataset description
+  --help [-h]         Show this help message
+```
+
+#### Examples of Dataset-Specific CLI Commands & Options
+
+- `--info`  
+  Show detailed info of specified dataset.
+
+  ```bash
+  >>> imf vweo --info
+  ```
+
+- `--{*args}`  
+  Pass arguments to specify dataset retrieval.
+
+  Download the April 2025 WEO dataset and save it as `vweo.csv`
+  ```bash
+  >>> imf vweo --vintage "April 2025" --save_path "vweo.csv".
+  ```
+
+  Print 2026 growth forecasts for China, the EU and the US. Note: the IMF uses G998 as the country code for the European Union in the WEO dataset.
+  ```bash
+  >>> imf weo --isos "CHN G998 USA" --indicator "NGDP_RPCH" --start_date 2025 --end_date 2026
+  ```
+
+## Compatibility
+
+The library is intended to be minimalistic in its dependencies and work smoothly with other widely used libraries, such as pandas. This example fetches real GDP growth figures for France and the UK, converts records into a dataframe and plots the results.
+
+```python
+import pandas as pd
+from world_economic_outlook import weo
+
+records = weo(
+    isos=["FRA", "GBR"],
+    indicator="NGDP_RPCH",
+    start_date="2015",
+    end_date="2025"
+)
+
+df = pd.DataFrame(records)
+
+df.pivot(index="date", columns="iso", values="value").plot()
+
+```
+
+
+## License
+
+This project is developed by Rob Suomi and licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
