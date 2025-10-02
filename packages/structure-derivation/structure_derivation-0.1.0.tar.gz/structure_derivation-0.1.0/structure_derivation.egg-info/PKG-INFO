@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: structure_derivation
+Version: 0.1.0
+Summary: Metrics for Musical Structure
+Author-email: Keshav Bhandari <keshavbhandari@gmail.com>
+Description-Content-Type: text/markdown
+Requires-Dist: transformers>=4.40.0
+Requires-Dist: accelerate
+Requires-Dist: peft
+Requires-Dist: torchlibrosa
+Requires-Dist: librosa
+Requires-Dist: tensorboard
+Requires-Dist: vendi_score
