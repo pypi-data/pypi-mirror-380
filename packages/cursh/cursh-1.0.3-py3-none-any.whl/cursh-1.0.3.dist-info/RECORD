@@ -1,0 +1,9 @@
+cursh/__init__.py,sha256=tW3GoIOj9hnifZO0Rw6lMFr_XFXYEGuImw0KMM4Jxx4,33
+cursh/__main__.py,sha256=tW3GoIOj9hnifZO0Rw6lMFr_XFXYEGuImw0KMM4Jxx4,33
+cursh/cli.py,sha256=1nl7llehTcC2SoUDXRRAkKe8A5sWx9WMlRW53b3UOgc,18807
+cursh-1.0.3.dist-info/licenses/LICENSE,sha256=GarBVd_Bb7cC0yVREOovDGLC0lYlpL248GDQauoyF94,1069
+cursh-1.0.3.dist-info/METADATA,sha256=UOqkxhRn2Pmbpz0ZzB7E3Z_yPqTRPWuFJBfGdftmqEw,2181
+cursh-1.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cursh-1.0.3.dist-info/entry_points.txt,sha256=89MQvQOvMj944v08-0jnQytFUrfjLU_0s01pfd8jZsA,41
+cursh-1.0.3.dist-info/top_level.txt,sha256=TVqH32uZFtstBOg_DLYObW5eZl9e3r7dn52E3FispLw,6
+cursh-1.0.3.dist-info/RECORD,,
