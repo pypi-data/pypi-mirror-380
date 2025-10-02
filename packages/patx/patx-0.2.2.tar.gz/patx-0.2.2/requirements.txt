@@ -1,0 +1,7 @@
+numpy
+pyarrow
+matplotlib
+seaborn
+scikit-learn
+optuna
+lightgbm
