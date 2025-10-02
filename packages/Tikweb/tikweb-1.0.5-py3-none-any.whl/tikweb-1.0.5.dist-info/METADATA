@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: Tikweb
+Version: 1.0.5
+Summary: TikTok Web automation and utilities
+Home-page: https://github.com/Trade999/Tikweb
+Author: Lariot & Horte
+Author-email: lariot.antsa@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: user-agent>=0.1.14
+Requires-Dist: random_strings>=0.1.1
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: h2>=4.2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Tikweb is a Python package to interact with TikTok web features programmatically.
