@@ -1,0 +1,3 @@
+/home/epanet-python/owa-epanet/EPANET/src/outfile/CMakeFiles/epanet-output.dir
+/home/epanet-python/owa-epanet/EPANET/src/outfile/CMakeFiles/edit_cache.dir
+/home/epanet-python/owa-epanet/EPANET/src/outfile/CMakeFiles/rebuild_cache.dir
