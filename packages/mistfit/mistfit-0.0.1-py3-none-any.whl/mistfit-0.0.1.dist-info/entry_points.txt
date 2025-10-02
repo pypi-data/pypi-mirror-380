@@ -1,0 +1,3 @@
+[console_scripts]
+mist-fit = mistfit.cli:main
+mistfit = mistfit.cli:main
