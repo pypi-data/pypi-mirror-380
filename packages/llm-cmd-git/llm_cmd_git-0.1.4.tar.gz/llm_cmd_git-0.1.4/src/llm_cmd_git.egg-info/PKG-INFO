@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: llm-cmd-git
+Version: 0.1.4
+Summary: LLM plugin to enhance Git experience
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: llm
+Requires-Dist: pydanclick
+Requires-Dist: pydantic-settings
+Requires-Dist: questionary
+Requires-Dist: rich-click
+
+# llm-cmd-git
+
+`llm-cmd-git` is a plugin for [Simon Willison's `llm` CLI](https://llm.datasette.io/) that turns your staged Git diff into a well-structured commit message using your preferred provider. It ships Git-aware subcommands that you can drop straight into daily workflows or Git hooks.
+
+## Installation
+
+1. Install `llm` together with this plugin (and a model provider) via [`uvx`](https://github.com/astral-sh/uvx). The `--with` flag pulls the plugin into the same isolated environment; run `uvx --help` for usage details.
+
+   ```bash
+   uvx install llm --with llm-cmd-git
+   ```
+
+2. If you manage tools with [`mise`](https://mise.jdx.dev/), configure it to use the uvx backend so installs happen in uv-managed environments (see the uvx backend docs: https://mise.jdx.dev/dev-tools/backends/pipx.html#uvx-args).
+
+   ```bash
+   mise install llm@latest --backend uvx --uvx-args "--with llm-cmd-git"
+   ```
+
+After installation, `llm` will discover the plugin automatically.
+You should setup `llm` according to [llm setup guide](https://llm.datasette.io/en/stable/setup.html)
+## Usage
+
+- `llm git commit` reads the staged diff, runs any existing `pre-commit` or `prepare-commit-msg` hooks, streams the LLM response, and finalizes the commit with optional in-editor edits.
+- `llm git prepare-commit-msg` generates the commit message but leaves committing to you—ideal for Git hook integration.
+
+Both commands share configuration and model selection, so you can jump between them without duplicating setup.
+
+## Configuration
+
+Settings are powered by `pydantic-settings` (see `src/llm_cmd_git/settings.py`) and are resolved in the following order:
+
+- CLI arguments or `llm` environment variables prefixed with `LLM_GIT_` (for example, `LLM_GIT_MODEL`, `LLM_GIT_KEY`).
+- `[tool.llm-git]` session under `pyproject.toml`.
+- Project-level TOML files: `.llm-git.toml`, `llm-git.toml` or `.git/.llm-git.toml`.
+- Global TOML configuration in `llm`'s user directory, typically `~/.config/llm/llm-git.toml`.
+
+All TOML configurations use flat keys matching the settings fields:
+
+```toml
+# pyproject.toml
+[tool.llm-git]
+model = "mistral/codestral-2508"
+preset = "conventional"  # options: default | conventional | odoo
+```
+
+For standalone `llm-git.toml` files, drop the `[tool.llm-git]` header and place the same keys at the top level. Available settings include `model`, `key`, nested `options`, prompt overrides (`system_prompt_custom`, `user_prompt_template`), `extra_context`, and the interactive `edit` flag.
+
+With configuration in place, the `llm git` subcommands will automatically load your defaults whenever they run.
