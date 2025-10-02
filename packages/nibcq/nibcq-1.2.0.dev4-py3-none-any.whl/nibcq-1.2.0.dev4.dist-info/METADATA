@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: nibcq
+Version: 1.2.0.dev4
+Summary: NI Battery Cell Quality library
+Author: Mate Vagner
+Author-email: mate.vagner@emerson.com
+Requires-Python: <4.0,>=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: nidaqmx (>=1.2.0,<2.0.0)
+Requires-Dist: nidcpower (>=1.5.0,<2.0.0)
+Requires-Dist: nidmm (>=1.4.9,<2.0.0)
+Requires-Dist: niswitch (>=1.4.9,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Battery Cell Quality library
+
