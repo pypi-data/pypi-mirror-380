@@ -1,0 +1,7 @@
+quickconn/__init__.py,sha256=DNL8lF6PcL6BUMo7ZYNHIhl0WZgxBnRe1dTR4Ucq6U0,212
+quickconn/cloudflare.py,sha256=wukARW7HKu0IsUgBroelVvrdREkhFak5fYl6ZdhEXyo,997
+quickconn/http_clients.py,sha256=sDYolMymcQmBt4N01mrSqoSS18VAywpPldN4HnbUW3E,16418
+quickconn-0.2.0.dist-info/METADATA,sha256=cqHTVyf92881e9KZ9FUHWc3OxH9yZqOq6Te2qYQVT_M,3788
+quickconn-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+quickconn-0.2.0.dist-info/top_level.txt,sha256=d84lrbcaldqIJoeNs97OhEvfVvY0Re1mmENFsro5k7k,10
+quickconn-0.2.0.dist-info/RECORD,,
