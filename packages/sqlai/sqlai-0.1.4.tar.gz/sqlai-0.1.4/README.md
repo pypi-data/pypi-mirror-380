@@ -1,0 +1,178 @@
+# SQLAI
+
+**SQLAI** is a command-line tool that leverages generative AI to help data professionals to interact efficiently with SQL queries.
+
+---
+
+## Target Users
+Data professionals like ...
+
+- Analytic Engineers
+- Data Analysts
+- Data Engineers
+- Data Scientists
+
+---
+
+## Features
+
+- **fix**: Fixes violations in your SQL queries.
+- **format**: Formats your SQL queries.
+- **chat**: Chat with your SQL query.
+- **explain**: Explains what a SQL query does.
+
+---
+
+## Local Development
+
+To set up your development environment and use the CLI tool while working on the project:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/alexanderbrueck/sqlai.git
+cd sqlai
+```
+
+### 2. Install in editable mode
+
+From the project root, run:
+
+```bash
+pip install -e .
+```
+
+- The `-e .` flag installs your package in "editable" mode, so changes to the code are immediately reflected without reinstalling.
+- All required dependencies will be installed automatically, as they are specified in `setup.py` (`install_requires`).  
+- **You do not need to run `pip install -r requirements.txt` separately.**
+
+---
+
+## Quick Start
+
+1. **Configure your AI provider and credentials:**
+
+   ```bash
+   sqlai set_config
+   ```
+
+   You’ll be prompted for:
+   - AI provider (e.g., `gemini`, `openai`)
+   - API key
+   - Model name (e.g., `gemini-1.5-flash`)
+
+2. **Analyze a SQL file:**
+
+   ```bash
+   sqlai run path/to/your_query.sql
+   ```
+
+   You will be shown several actions (fix, format, chat, explain), and you can select one interactively.
+
+3. **Show your current configuration:**
+
+   ```bash
+   sqlai show_config
+   ```
+
+---
+
+## Example Usage
+
+```bash
+sqlai set_config
+sqlai run my_query.sql
+```
+
+---
+
+## Requirements
+
+- Python 3.7+
+- [google-generativeai](https://pypi.org/project/google-generativeai/)
+- [tomli](https://pypi.org/project/tomli/)
+- [tomli-w](https://pypi.org/project/tomli-w/)
+
+Install all dependencies via:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Publishing to PyPI
+
+To publish `sqlai` to [PyPI](https://pypi.org/):
+
+1. **Update your version number** in `setup.py` or `pyproject.toml`. Each upload requires a unique version.
+2. **Clean out artifacts from previous builds**
+   ```
+   rm -rf build dist *.egg-info 
+   ```
+3. **Build the package:**
+
+   ```bash
+   python -m pip install --upgrade build
+   python -m build
+   ```
+
+   This will create a `dist/` directory with `.tar.gz` and `.whl` files.
+
+4. **Get a PyPI API token:**
+   - Go to [PyPI Account > API tokens](https://pypi.org/manage/account/#api-tokens)
+   - Create a new token (for your project or your whole account) and copy it.
+
+5. **Upload using Twine:**
+
+   Install twine if you haven’t:
+
+   ```bash
+   python -m pip install --upgrade twine
+   ```
+
+   Then upload:
+
+   ```bash
+   python -m twine upload dist/*
+   ```
+
+   When prompted, paste your API token (it starts with `pypi-...`).
+
+   *Tip: To avoid pasting your token every time, you can save it in your `~/.pypirc`.*
+
+6. **Verify upload:**
+
+   Try installing from PyPI:
+
+   ```bash
+   pip install sqlai
+   ```
+
+### (Optional) Test on TestPyPI
+
+Before publishing to the main PyPI, you can test your package on [TestPyPI](https://test.pypi.org/):
+
+```bash
+python -m twine upload --repository testpypi dist/*
+pip install --index-url https://test.pypi.org/simple/ sqlai
+```
+
+---
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## Notes
+
+- Only `.sql` files are supported.
+- Your credentials are stored in `~/.sqlai/config.toml`.
+
+---
+
+## Contributing
+
+Pull requests and feedback are welcome! Please open an issue or PR to discuss changes or suggestions.
