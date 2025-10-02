@@ -1,0 +1,23 @@
+flappy_rl/flappy_rl/__init__.py,sha256=yvZJ4B6VDLbXSAML_K3KEGOfCnpDyELH8XcwgYsduVI,66
+flappy_rl/flappy_rl/assets/Screen Recording 2025-02-23 170420.gif,sha256=v-ayoyfryqk6a285TBZp5q_3SV7Rqf2jnFVLVa3Kdgc,9791939
+flappy_rl/flappy_rl/assets/futuristic-robotic-hummingbird_23-2151443897-Photoroom.png,sha256=5KoY8pJ65SJwbGued4va2WG6Dvd50gt67bdj0XZshFU,160158
+flappy_rl/flappy_rl/assets/image (1).png,sha256=QpKNzgMn-PrTSdPmkhy9YoQVgjStfX0VU1FwiNpcZ2w,6044254
+flappy_rl/flappy_rl/game/__init__.py,sha256=txFAOvYY0qA6wi720eFIYSMg5oNIDBonoXl7D3gXwbs,27
+flappy_rl/flappy_rl/game/flappy_bird.py,sha256=OyTUMRT8hYQA60rg01_I7Tzh9-nEg8IHGzq_RjQ3GGo,5017
+flappy_rl/flappy_rl/models/best_q_table_beginner.npy,sha256=6wxqMjhHDs42mQsFR_kTI3q1djXMcly5yDe-W115kjo,172928
+flappy_rl/flappy_rl/models/best_q_table_hard.npy,sha256=wJ_BI8XtkOnnAo485Q2pujohw3n_nFZmXZ-ZF4xWh0A,172928
+flappy_rl/flappy_rl/playground/__init__.py,sha256=dduz55TwRyM0wYxxvsNJR9gSh_J2zObuZlwV5qA_9y8,56
+flappy_rl/flappy_rl/playground/playground.py,sha256=PJYqlUv1xuCbrYDDQlptbujRvsy4tIY0ioikOsIwVKI,7093
+flappy_rl/flappy_rl/playground/playgroundHARD.py,sha256=doClnkzpV-ywDv-lafckdkZRzPE5Fi1khTqnJU7Arbs,7104
+flappy_rl/flappy_rl/results/beginner_mode_scores.png,sha256=Ie2eWn6hgjFbzMUL5jqhXfiRG8Va24yZ9rwbgJzm2TY,26595
+flappy_rl/flappy_rl/results/hard_mode_scores.png,sha256=yO0nrNRAYA3inT03ifIP1yDTw2G7cSlsOzmm2UcRa0o,32286
+flappy_rl/flappy_rl/results/user_vs_agent_scores.png,sha256=ja3GvxEcx4NBgmdggBDV0xteWZJxLzgXKgHebPDcEUk,44846
+flappy_rl/flappy_rl/results/user_vs_agent_scoresHARD.png,sha256=OLeI8qMd0gZrktsCPa3en6zVbzu5NvvlwV0AAdDh-e8,45676
+flappy_rl/flappy_rl/train/__init__.py,sha256=dgXMQ54PpwTy6UdR9pzKq5Cso_RkJguM4lufdaOpy6Q,74
+flappy_rl/flappy_rl/train/train_qLearningBEGINNER.py,sha256=1MMfwYaXEDc3rTxlS-8DOHTVpXy5tW-9p1urgvCfK9Q,3404
+flappy_rl/flappy_rl/train/train_qLearningHARD.py,sha256=obfgGKvWLiwuV9r4i5raoJ1zr49wV1RF0tnw3wzoX9g,5662
+flappy_rl-0.1.1.dist-info/METADATA,sha256=UB_hc20tD1MEy7N_lzlhYgVodxj47XjWJCLq0395-2Y,5782
+flappy_rl-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flappy_rl-0.1.1.dist-info/entry_points.txt,sha256=Uz3vkxcGsL-A7Mt24WJdChtNGgxJL6Zck6Q0mapK7nU,250
+flappy_rl-0.1.1.dist-info/licenses/LICENSE,sha256=Vfi79eLXDbSq6T3oft_n-ngtntsTdYXOcZP8_c7gMyM,1068
+flappy_rl-0.1.1.dist-info/RECORD,,

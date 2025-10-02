@@ -1,0 +1,5 @@
+[console_scripts]
+flappy-play = flappy_rl.playground.playground:main
+flappy-play-hard = flappy_rl.playground.playgroundHARD:main
+flappy-train = flappy_rl.train.train_qLearningBEGINNER:main
+flappy-train-hard = flappy_rl.train.train_qLearningHARD:main
