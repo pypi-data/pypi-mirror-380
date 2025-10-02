@@ -1,0 +1,1 @@
+Replace bitnami images with legacy versions, make configurable to allow future replacement with custom updated images.

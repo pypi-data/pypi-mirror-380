@@ -1,0 +1,1 @@
+Update rucio to 38.2 to sync with BDMS.
