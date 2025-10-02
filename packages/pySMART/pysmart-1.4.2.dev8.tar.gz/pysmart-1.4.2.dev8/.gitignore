@@ -1,0 +1,16 @@
+﻿venv
+.env
+docs
+pySMART.egg-info
+.idea
+.vscode
+.pypirc
+*.pyc
+__pycache__
+build/
+dist/
+.coverage
+cov.xml
+htmlcov
+version.py
+.venv
