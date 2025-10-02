@@ -1,0 +1,2 @@
+[console_scripts]
+term-symbols = term_symbols.terms:main
