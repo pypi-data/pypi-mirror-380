@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+PyAccessModifier/__init__.py
+PyAccessModifier/modifier.py
+PyAccessModifier.egg-info/PKG-INFO
+PyAccessModifier.egg-info/SOURCES.txt
+PyAccessModifier.egg-info/dependency_links.txt
+PyAccessModifier.egg-info/top_level.txt
+test/test.py
