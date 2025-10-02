@@ -1,0 +1,6 @@
+---
+other:
+  - |
+    Removed unused ``OperationNotPermitted`` exception that was dead code
+    since the initial import of the Watcher codebase. This exception
+    provides the appropriate 400 Bad Request response behavior.
