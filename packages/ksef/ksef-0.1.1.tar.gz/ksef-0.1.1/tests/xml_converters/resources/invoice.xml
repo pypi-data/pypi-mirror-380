@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Faktura
+    xmlns="http://ksef.mf.gov.pl/wzor/2021/08/05/08051/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tns="http://ksef.mf.gov.pl/wzor/2021/08/05/08051/"
+    xsi:schemaLocation="http://crd.gov.pl/wzor/2021/11/29/11089/schemat.xsd"
+>
+    <Naglowek>
+        <KodFormularza kodSystemowy="FA (1)" wersjaSchemy="1-0E">FA</KodFormularza>
+        <WariantFormularza>1</WariantFormularza>
+        <SystemInfo>python-ksef</SystemInfo>
+    </Naglowek>
+    <Podmiot1>
+        <DaneIdentyfikacyjne>
+            <NIP>1111111111</NIP>
+            <PelnaNazwa>Example Company 1 Sp z o. o.</PelnaNazwa>
+        </DaneIdentyfikacyjne>
+        <Adres xsi:type="tns:TAdresPolski">
+            <KodKraju>PL</KodKraju>
+            <Miejscowosc>Warszawa</Miejscowosc>
+            <Ulica>Kwiatowa</Ulica>
+            <NrDomu>1</NrDomu>
+            <NrLokalu>2</NrLokalu>
+            <KodPocztowy>00-001</KodPocztowy>
+        </Adres>
+    </Podmiot1>
+    <Podmiot2>
+        <DaneIdentyfikacyjne>
+            <NIP>2222222222</NIP>
+        </DaneIdentyfikacyjne>
+    </Podmiot2>
+    <Fa>
+        <KodWaluty>PLN</KodWaluty>
+        <P_1>2024-01-22</P_1>
+        <P_2>FA/1/2024</P_2>
+        <P_6>2024-01-01</P_6>
+        <P_15>450.00</P_15>
+        <Adnotacje>
+            <P_16>2</P_16>
+            <P_17>2</P_17>
+            <P_18>2</P_18>
+            <P_18A>2</P_18A>
+            <P_19>2</P_19>
+            <P_22>2</P_22>
+            <P_23>2</P_23>
+            <P_PMarzy>2</P_PMarzy>
+        </Adnotacje>
+        <RodzajFaktury>VAT</RodzajFaktury>
+        <FaWiersze>
+            <LiczbaWierszyFaktury>2</LiczbaWierszyFaktury>
+            <FaWiersz>
+                <NrWierszaFa>1</NrWierszaFa>
+                <P_7>Example service 1</P_7>
+                <P_12>23</P_12>
+            </FaWiersz>
+            <FaWiersz>
+                <NrWierszaFa>2</NrWierszaFa>
+                <P_7>Example service 2</P_7>
+                <P_12>8</P_12>
+            </FaWiersz>
+        </FaWiersze>
+    </Fa>
+</Faktura>
