@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/mopactools/__init__.py
+src/mopactools/api.py
+src/mopactools/binding.py
+src/mopactools.egg-info/PKG-INFO
+src/mopactools.egg-info/SOURCES.txt
+src/mopactools.egg-info/dependency_links.txt
+src/mopactools.egg-info/requires.txt
+src/mopactools.egg-info/top_level.txt
+tests/test_api.py

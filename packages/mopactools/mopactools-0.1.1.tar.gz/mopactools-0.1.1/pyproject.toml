@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mopactools"
+version = "0.1.1"
+authors = [
+  { name="Jonathan Moussa", email="jemoussa@vt.edu" },
+]
+description = "Productivity tools for MOPAC"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Development Status :: 4 - Beta",
+]
+license = { text="Apache-2.0" }
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "packaging",
+]
+
+[project.urls]
+Homepage = "https://github.com/openmopac/mopactools"
+Documentation = "https://openmopac.github.io/mopactools/"
+Issues = "https://github.com/openmopac/mopactools/issues"
+
+[tool.setuptools.package-data]
+mopactools = ["lib/*.dylib", "lib/*.dll", "lib/*.so"]
