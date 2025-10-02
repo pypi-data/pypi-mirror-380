@@ -1,0 +1,30 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [ published ]
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install uv and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install uv
+
+      - name: Build and publish
+        env:
+          pypi_token: ${{ secrets.PyPI_TOKEN }}
+        run: uv build && uv publish --token $pypi_token

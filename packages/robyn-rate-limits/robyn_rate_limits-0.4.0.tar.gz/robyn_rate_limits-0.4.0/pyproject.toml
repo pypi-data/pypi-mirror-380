@@ -1,0 +1,71 @@
+[project]
+name = "robyn-rate-limits"
+version = "0.4.0"
+description = ""
+authors = [{name = "IdoKendo", email = "ryuusuke@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.9"
+packages = [{include = "robyn_rate_limits"}]
+
+dependencies = [
+    "cachetools>=5",
+    "robyn>=0.72",
+    "redis>=5; extra == \"redis\"",
+]
+
+[project.optional-dependencies]
+redis = ["redis>=5"]
+
+[project.scripts]
+test_server = "tests.base_routes:main"
+
+[dependency-groups]
+dev = [
+    "fakeredis>=2",
+    "pre-commit>=3",
+    "pytest>=7",
+    "requests>=2",
+    "tox>=4",
+]
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
+
+[tool.ruff]
+src = ["robyn_rate_limits", "tests"]
+target-version = "py39"
+line-length = 99
+
+[tool.ruff.lint]
+select = [
+    "A",    #  builtins
+    "ARG",  #  unsued arguments
+    "B",    #  bugbear
+    "C4",   #  comprehensions
+    "C90",  #  mccabe
+    "COM",  #  commas
+    "E",    #  pycodestyle
+    "F",    #  pyflakes
+    "I",    #  isort
+    "N",    #  pep8-naming
+    "PT",   #  pytest style
+    "RUF",  #  ruff
+    "SIM",  #  simplify
+    "TID",  #  tidy imports
+    "UP",   #  pyupgrade
+    "W",    #  warnings
+]
+ignore = [
+    "COM812",  # avoid conflicts
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 8
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
