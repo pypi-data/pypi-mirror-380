@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pynel
+Version: 0.1.0
+Summary: A Minimal clean basic UI for pygame
+Author: HussuBro010 (Hussain Vohra)
+Author-email: <hussainv2807@gmail.com>
+Keywords: python,pygame,python-ui,pygame-ui,minimal,clean,simple
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+Requires-Dist: pryttier
+Requires-Dist: numpy
+
+# Pynel
+
+[![Github Repository](https://img.shields.io/badge/Github%20Repository-db6038)](https://github.com/HussuBro010/pynel/)
+[![PyPI](https://img.shields.io/badge/PyPi-dba738)](https://pypi.org/project/pynel/)
+
+### A clean and minimal Python UI library for [Pygame](https://pypi.org/project/pygame/)
+
+## Installation
+
+#### Current Latest Version of the package:- 0.1.0
+
+Run:-
+
+```commandline
+pip install pynel
+```
+
+or
+
+Run for installing a specific version:-
+
+```commandline
+pip install pynel==VERSION
+```
+
+## Updating
+
+Run:
+
+```commandline
+pip install pynel --upgrade
+```
