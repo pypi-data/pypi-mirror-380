@@ -1,0 +1,118 @@
+Metadata-Version: 2.4
+Name: mackerel
+Version: 0.3.0
+Summary: Minimal static site generator built with type annotations
+Project-URL: Homepage, https://mackerel.sh
+Project-URL: Repository, https://github.com/pkolios/mackerel
+Project-URL: Changelog, https://github.com/pkolios/mackerel/blob/main/CHANGELOG.md
+Author-email: Paris Kolios <hey@pariskolios.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: cli,markdown,static site generator,type annotations
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.11
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: markdown
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: python-frontmatter>=1.1.0
+Requires-Dist: tomli-w>=1.2.0
+Requires-Dist: watchfiles>=1.1.0
+Description-Content-Type: text/markdown
+
+# Mackerel
+
+[![PyPI](https://img.shields.io/pypi/v/mackerel.svg)](https://pypi.org/project/mackerel/)
+[![CI](https://github.com/pkolios/mackerel/actions/workflows/ci.yml/badge.svg)](https://github.com/pkolios/mackerel/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![codecov](https://codecov.io/gh/pkolios/mackerel/branch/main/graph/badge.svg)](https://codecov.io/gh/pkolios/mackerel)
+
+A minimal static site generator written in typed Python.
+This README is for **developers** contributing to Mackerel. For end-user documentation, see [docs](https://mackerel.sh).
+
+---
+
+## Development Setup
+
+Clone the repo and set up dependencies:
+
+```bash
+git clone https://github.com/pkolios/mackerel.git
+cd mackerel
+uv sync
+````
+
+Run tests:
+
+```bash
+make test
+```
+
+Lint & type check:
+
+```bash
+make lint
+```
+
+Build docs:
+
+```bash
+make docs
+```
+
+---
+
+## Codebase Structure
+
+```
+src/mackerel/
+├── build.py        # Build logic
+├── cli.py          # CLI (init, build, develop)
+├── config.py       # Configuration loading
+├── parsers.py      # Front matter parsing
+├── renderers.py    # Markdown + Jinja2 rendering
+├── site/           # Starter site (templates + content)
+└── types.py        # Typed core types & protocols
+```
+
+* **Functional Core, Imperative Shell**: Business logic is pure and typed, orchestration happens in CLI.
+* **Minimal dependencies**: Keeping the cli installation time as fast as possible.
+
+---
+
+## Contributing
+
+1. Fork the repo & create a branch.
+2. Write tests for new features.
+3. Ensure `make lint test` passes.
+4. Submit a PR.
+
+We follow **strict typing** (`mypy`, `pyright`) and **ruff** for linting.
+Docs are in `docs/`.
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md).
+
+---
+
+## License
+
+MIT © Paris Kolios
