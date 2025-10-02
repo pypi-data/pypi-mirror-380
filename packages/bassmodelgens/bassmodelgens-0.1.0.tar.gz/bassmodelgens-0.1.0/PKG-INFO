@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: bassmodelgens
+Version: 0.1.0
+Summary: A package containing functions to simulate and fit the Bass diffusion model with generations (1987)
+License: MIT
+License-File: LICENSE
+Author: Lewis Mitchell
+Author-email: lewis.mitchell@adelaide.edu.au
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Description-Content-Type: text/markdown
+
+# bassmodelgens
+Package containing functions to simulate the Bass diffusion model with generations (1987) and fit it to data.
+
