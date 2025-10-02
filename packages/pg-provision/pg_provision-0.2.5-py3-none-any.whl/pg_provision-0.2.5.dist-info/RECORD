@@ -1,0 +1,16 @@
+pgprovision/__init__.py,sha256=DvTRO9kaeQIQAhZ70jOnDdO0QLpW6BVfQZzQRjE-OZM,35
+pgprovision/cli.py,sha256=ALJKyOFgE0eXmpjRJPmC8ZB0p5e7VNkGSY3p_UoOqUo,1864
+pgprovision/_sh/__init__.py,sha256=DlAiBU-Aouz2nQL4Y1vBDwkwE6DBY8piiWHkQ71iSvE,79
+pgprovision/_sh/provision.sh,sha256=sVujyoiQdu4J07EXG62vidjh3J8P2nEq41-JBTcIy2A,21064
+pgprovision/_sh/lib/common.sh,sha256=f2sEQhZYmQG0vQaBdBAdGY6NLng0qusqExYnJN8lIfg,1634
+pgprovision/_sh/lib/hba.sh,sha256=3RABxh2LYuR6xBq0oVmfBVoajUg10nIoWoN6LQpdz24,2438
+pgprovision/_sh/lib/profile.sh,sha256=Stj-9eiRUfwrpZaczGveaIDLg0E7gYRUbzUU0O3Mbpc,560
+pgprovision/_sh/os/rhel.sh,sha256=hHoZQOwI17HJ5wTsKBZsH3WyKZd7pz4BelFgKLUvyz8,11766
+pgprovision/_sh/os/ubuntu.sh,sha256=ADrQAKbi0p2eqrB0g1b0Miox-QGUCXsLTalS8j6JEG4,14984
+pgprovision/_sh/profiles/xl-32c-256g.conf,sha256=oKZ_5V0cKnLWtx8E000irUaX3JGnV-DXHJajddnchDI,203
+pg_provision-0.2.5.dist-info/LICENSE,sha256=giF6PPATZ7nakr0E3lAKb7hK7a22nrtjG1jLCOwOd8I,1069
+pg_provision-0.2.5.dist-info/METADATA,sha256=twnwDlIipMM6uwx_uJA0vQSTY-lnK6UpcTVWSQdSV44,7066
+pg_provision-0.2.5.dist-info/WHEEL,sha256=beeZ86-EfXScwlR_HKu4SllMC9wUEj_8Z_4FJ3egI2w,91
+pg_provision-0.2.5.dist-info/entry_points.txt,sha256=59CQxg9A3SP36UJhUKsAT0dgjE8FJqAF-POcX9fivx8,53
+pg_provision-0.2.5.dist-info/top_level.txt,sha256=lFWQu8cTQvkXhERjV7guMwL3yACdOBGF6-X16htrOhc,12
+pg_provision-0.2.5.dist-info/RECORD,,
