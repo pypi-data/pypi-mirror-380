@@ -1,0 +1,17 @@
+beautifulsoup4
+defusedxml
+networkx
+pandas
+rdflib
+thefuzz
+tldextract
+build
+twine
+pytest
+coverage
+sphinx
+pydata-sphinx-theme
+sphinx-design
+sphinx-iframes
+sphinxcontrib-shtest
+myst-parser
