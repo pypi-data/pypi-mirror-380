@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfv"                    # PyPI project name
+version = "0.0.0a6"              # use a yanked prerelease to reserve the name
+description = "PyFV: modern Python port of FV for FITS image/table viewing and analysis"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { text = "BSD-3-Clause" }
+authors = [{ name = "Pan Chai" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Astronomy",
+  "Operating System :: OS Independent",
+]
+
+# Add your runtime deps here (uncomment/edit as needed)
+# Tip: keep this minimal; heavy libs can be optional via [project.optional-dependencies]
+dependencies = [
+  # "numpy>=1.23",
+  # "astropy>=6",
+  # "matplotlib>=3.8",
+]
+
+[project.urls]
+#Homepage = "https://github.com/your-user/pyfv"
+#Issues = "https://github.com/your-user/pyfv/issues"
+#Documentation = "https://github.com/your-user/pyfv#readme"
+
+# If you have a CLI entry point (e.g., def main(): in pyfv/fv.py), uncomment and set it:
+# [project.scripts]
+# pyfv = "pyfv.fv:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pyfv*"]
+
+# Precisely include runtime docs and the two sample FITS files in the wheel
+[tool.setuptools.package-data]
+pyfv = [
+  "demo/*.gif",
+  "docs/*.html",
+  "data/sample*.fits",
+]
+

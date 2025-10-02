@@ -1,0 +1,10 @@
+# Include metadata in sdist
+include README.md LICENSE
+
+# Exclude top-level heavy folders from sdist (they’re duplicated inside src/pyfv/)
+prune data
+prune doc
+
+include demo/pow.gif
+# (Wheel content is controlled by tool.setuptools.package-data above)
+
