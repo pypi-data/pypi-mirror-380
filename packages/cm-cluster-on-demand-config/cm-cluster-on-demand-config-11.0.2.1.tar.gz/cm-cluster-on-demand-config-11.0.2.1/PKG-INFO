@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cm-cluster-on-demand-config
+Version: 11.0.2.1
+Summary: Base Command Manager COD configuration library
+Home-page: https://docs.nvidia.com/base-command-manager/index.html
+Author: Base Command Manager Cloud Team
+Author-email: sw-bright-cloud-team@nvidia.onmicrosoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+With Cluster on Demand you can spin up a cluster running Base Command Manager.
+
+This package is a supporting package, for the full COD client packages check:
+- cm-cluster-on-demand-aws
+- cm-cluster-on-demand-azure
+- cm-cluster-on-demand-oci
+
+
