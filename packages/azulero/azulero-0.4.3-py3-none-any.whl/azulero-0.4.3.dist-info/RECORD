@@ -1,0 +1,15 @@
+azulero/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azulero/client.py,sha256=KkBkFhmwt3Bb2-HtckLT26fWokfyuXjXCGSmxpnIJfQ,750
+azulero/color.py,sha256=aV30sTD66uKctfyALlIR8QpWydqKc8smSQu_btdlnqI,1758
+azulero/crop.py,sha256=LJW3WZ0uPJVSiSA949TFyWFB9h1q9oFPCeD0gui1yho,2249
+azulero/io.py,sha256=_KxGrbVMJPl2c8B_euB_KONFDgrksaq7BbobSaam1lc,1733
+azulero/mask.py,sha256=HsmyNulN4v7ZCa10oJ7eOdzyrLHQSfOdcAGJ8poY8OU,1602
+azulero/process.py,sha256=n18baFNIYZg4T9eWyxkik8xBz5acTQNLbE1A-netzpM,4841
+azulero/retrieve.py,sha256=4HfLPAyv402xjssRPwaeEswB-rmJPSl74ZtjpJJ2CbA,5314
+azulero/spot.py,sha256=Ux0WbAaqHtsQCOCc0Ck0aTwtXjPL3DDziDXL6Hxlqr0,1312
+azulero/timing.py,sha256=ugZGf1NfNtRGh5E0ZFLwcwSQYXSmCJm5g-Mrc05KgVY,551
+azulero-0.4.3.dist-info/METADATA,sha256=CQNihd-vP0S_7vzJfJbXt1khOc7X9ly6Lc-eEwTwhoE,5265
+azulero-0.4.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+azulero-0.4.3.dist-info/entry_points.txt,sha256=RREReOP3L2oeBgIu_GyY5yfbFZt--dUvcnREkavygyk,44
+azulero-0.4.3.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+azulero-0.4.3.dist-info/RECORD,,
