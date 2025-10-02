@@ -1,0 +1,23 @@
+{
+    "services": {
+        "log": {
+            "fields": {
+                "domain": {
+                    "name": "Domaine"
+                },
+                "entity_id": {
+                    "name": "ID d'entit\u00e9"
+                },
+                "message": {
+                    "name": "Message"
+                },
+                "name": {
+                    "description": "Nom personnalis\u00e9 pour une entit\u00e9, peut \u00eatre r\u00e9f\u00e9renc\u00e9 \u00e0 l'aide du champ \u00ab\u00a0ID d'entit\u00e9\u00a0\u00bb.",
+                    "name": "Nom"
+                }
+            },
+            "name": "Journal"
+        }
+    },
+    "title": "Activit\u00e9"
+}
