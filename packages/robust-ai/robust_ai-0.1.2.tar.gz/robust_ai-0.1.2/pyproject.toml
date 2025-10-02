@@ -1,0 +1,24 @@
+[project]
+name = "robust-ai"
+description="Robustness library for binary image classification tasks"
+readme = "README.md"
+dynamic = ["dependencies"]
+version= "0.1.2"
+license ="Apache-2.0"
+requires-python = ">=3.9,<3.11"
+authors = [
+  {name = "IRT-SystemX.fr"},
+  {email="support@irt-systemx.fr"}
+]
+
+[project.urls]
+Homepage = "https://irt-systemx.github.io/robust-ai"
+Documentation = "https://irt-systemx.github.io/robust-ai"
+Repository = "https://github.com/IRT-SystemX/robust-ai"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"

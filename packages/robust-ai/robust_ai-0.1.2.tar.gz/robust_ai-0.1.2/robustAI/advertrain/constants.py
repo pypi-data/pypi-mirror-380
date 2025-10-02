@@ -1,0 +1,6 @@
+ADV = "adv"
+CONVNET = "convnet"
+METRICS_FILE = "metrics.json"
+CUDA = "cuda"
+VANILLA = "classical_training"
+ADVTRAINING = "adversarial_training"
