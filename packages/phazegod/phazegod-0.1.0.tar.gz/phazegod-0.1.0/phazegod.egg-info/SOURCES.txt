@@ -1,0 +1,9 @@
+LICENSE
+README.md
+phazegod.py
+setup.py
+phazegod.egg-info/PKG-INFO
+phazegod.egg-info/SOURCES.txt
+phazegod.egg-info/dependency_links.txt
+phazegod.egg-info/entry_points.txt
+phazegod.egg-info/top_level.txt
