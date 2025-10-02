@@ -1,0 +1,2 @@
+[console_scripts]
+case-boss = case_boss.cli:main

@@ -1,0 +1,12 @@
+
+[cli]
+typer>=0.17.0
+
+[dev]
+black
+isort
+flake8
+mypy
+pytest
+pre-commit
+build<2,>=1.2
