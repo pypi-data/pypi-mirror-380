@@ -1,0 +1,50 @@
+[build-system]
+requires = ["poetry-core>=1.2.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "volttron-lib-bacnet-driver"
+version = "2.0.0rc1"
+description = "BACnet driver supported and maintained by the Volttron team."
+authors = ["Mark Bonicillo <volttron@pnnl.gov>"]
+license = "Apache License 2.0"
+readme = "README.md"
+repository = "https://github.com/eclipse-volttron/volttron-lib-bacnet-driver"
+homepage = "https://github.com/eclipse-volttron/volttron-lib-bacnet-driver"
+keywords = []
+packages = [ { include = "volttron", from = "src" } ]
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Other Audience",
+    "License :: OSI Approved :: Apache Software License"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+volttron-lib-base-driver = ">=2.0.0rc0"
+bacpypes3 = ">=0.0.102"
+protocol-proxy-bacnet = ">=2.0.0rc0"
+
+[tool.poetry.group.dev.dependencies]
+pytest-sugar = "^0.9.6"
+
+[tool.poetry.group.docs.dependencies]
+Sphinx = "^4.5.0"
+sphinx-rtd-theme = "^1.0.0"
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_before_comment = 4
+column_limit = 99
+split_before_logical_operator = true
+
+[tool.yapfignore]
+ignore_patterns = [
+    ".venv/**",
+    ".pytest_cache/**",
+    "dist/**",
+    "docs/**"
+]
