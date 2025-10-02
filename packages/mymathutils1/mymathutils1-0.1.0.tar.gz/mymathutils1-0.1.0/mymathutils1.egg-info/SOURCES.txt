@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+mymathutils1/__init__.py
+mymathutils1/core.py
+mymathutils1.egg-info/PKG-INFO
+mymathutils1.egg-info/SOURCES.txt
+mymathutils1.egg-info/dependency_links.txt
+mymathutils1.egg-info/top_level.txt

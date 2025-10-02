@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mymathutils1"       # unique name on PyPI
+version = "0.1.0"
+description = "A simple math utilities package"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [{ name="Ved Tiwari", email="vedprakash4utiwari@example.com" }]
+
+[tool.setuptools]
+packages = ["mymathutils1"]
+
+[project.urls]
+Homepage = "https://github.com/Tved1209/mymathutils1"
+Bug_Tracker = "https://github.com/Tved1209/mymathutils1/issues"
