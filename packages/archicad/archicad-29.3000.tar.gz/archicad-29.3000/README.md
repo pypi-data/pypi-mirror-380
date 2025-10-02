@@ -1,0 +1,106 @@
+# Archicad Python Interface
+
+## Project Description
+
+This is the official Python binding for the Archicad JSON command interface.
+
+This package provides a convenient way to write simple scripts to support your Archicad workflow, e.g. by automating repetitive tasks.
+
+The set of available commands will increase with each release.
+
+## Requirements
+
+* Archicad 24 beta 3 or later.
+* Python 3.7 or later (Tcl/Tk is recommended)
+
+## Getting started
+
+* Install the package with pip
+* *Optional: Enable the experimental Python palette in Archicad*
+* Run your own scripts either from the command line or directly from ARCHICAD
+
+### Documentations
+
+* [Reference Manual](https://archicadapi.graphisoft.com/archicadPythonPackage/archicad.html)
+* [Documentation of Archicad's new JSON interface](https://archicadapi.graphisoft.com/JSONInterfaceDocumentation/#Introduction)
+* [Official website](https://graphisoft.com/downloads/python)
+
+## Release notes
+
+### 29.3000
+
+Here's an overview of the changes included in this release:
+* PropertyTypes
+    - A new property called `NormalPropertyValue` has been added.
+* Types
+    - A new enum value called `All` has been added to `ElementTypes` enum.
+* GetElementsRelatedToZones
+    - The `elementTypes` command parameter is now required.
+        - In cases where `elementTypes` was not used previously, use it with the newly added `All` value.
+* GetPropertyValuesOfElements
+    - A new parameter called `onlySupportedTypes` has been added.
+        - Optional parameter. When it is set to true, only elements with types that are supported by any other JSON API command will be returned.
+
+### 28.3000
+
+Here's an overview of the changes included in this release:
+* GetSelectedElements
+    - A new parameter called `onlySupportedTypes` has been added.
+        - When set to `true`, only elements with types supported by other JSON API commands will be returned.
+* GetAttributesIndices
+    - A new function that provides requested indices and GUIDs for given attributes.
+* New Attribute related classes were introduced:
+    1. `AttributeIndexAndGuid`
+    2. `AttributeIndexAndGuidWrapperItem`
+    3. `AttributeIndexAndGuidOrError`
+
+### 27.3000
+
+This release focuses primarily on maintenance, ensuring continued support for our users.
+
+Here's an overview of the changes included in this release:
+* New Attribute related classes were introduced and some former classes were removed.
+* CreateAttributeFolders uses a list of AttributeFolderCreationParameters instead of AttributeFolders.
+* DeleteAttributeFolders uses AttributeFolderIds instead of AttributeFolders.
+* GetAttributeFolder and GetAttributeFolderContent functions are removed.
+* GetAttributeFolders uses AttributeFolders instead of DetailedAttributeFolders.
+* MoveAttributesAndFolders uses AttributeFolderIds parameters instead of the AttributeFolders.
+* RenameAttributeFolder was renamed to RenameAttributeFolders and uses AttributeFolderRenameParameters instead of the two previous parameters.
+
+### 26.3000
+
+* Preparation for Archicad 26 release.
+* More navigator item types are handled
+* New attribute-related commands (folder handling) are introduced
+* Property handling: return info on property default values
+* Removed those attribute types which are not attributes in Archicad reality
+* Classification systems are introduced
+* Property groups are now available
+* Selected elements' identifiers can be queried
+
+### 25.3000
+
+* More properties became available. For example, the dynamic enum-typed built-in properties (like Structural Function, Position and Renovation Status) are available from AC25. Those can be retrieved and modified.
+
+### 25.2255
+
+* ExecuteAddOnCommand and IsAddOnCommandAvailable commands require command namespace instead of developerId and localId.
+
+### 25.1100
+
+* Preparation for ARCHICAD 25 release.
+* New commands were introduced.
+
+### 25.326
+
+* Preparation for Archicad 25 release.
+* New commands were introduced.
+
+### 24.3000
+
+* An unexpected Runtime Error is fixed.
+
+### 24.2310b3
+
+* Beta release. Compatible with the official Archicad beta 3.
+* Doesn't compatible with earlier (preview) versions.
