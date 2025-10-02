@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: polarityjam-napari-plugin
+Version: 0.2.0
+Summary: polarityjam napari plugin
+Author-email: Jan Philipp Albrecht <j.p.albrecht@fu-berlin.de>, Wolfgang Giese <wolfgang.giese@mdc-berlin.de>
+License-Expression: MIT
+Project-URL: Documentation, https://polarityjam.readthedocs.io
+Project-URL: Homepage, https://www.polarityjam.com
+Project-URL: DeveloperDocumentation, https://github.com/polarityjam/polarityjam/wiki
+Project-URL: Repository, https://github.com/polarityjam/polarityjam-napari-plugin.git
+Project-URL: Tracker, https://github.com/polarityjam/polarityjam-napari-plugin.git/issues
+Keywords: vascular cell,imaging,data analysis,polarity
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: polarityjam<0.5.0,>=0.4.0
+Requires-Dist: napari[all]
+Dynamic: license-file
+
+# Feature extraction pipeline - napari plugin
+
+The feature extraction pipeline to study endothelial cell polarity, junctions and morphology.
+
+Check out our [paper](https://doi.org/10.1101/2024.01.24.577027).
+
+For installation, usage, and more read our [wiki](https://polarityjam.readthedocs.io/en/latest/).
+
+Administrators and Maintainers please look here: [admin-wiki](https://github.com/polarityjam/polarityjam/wiki)
