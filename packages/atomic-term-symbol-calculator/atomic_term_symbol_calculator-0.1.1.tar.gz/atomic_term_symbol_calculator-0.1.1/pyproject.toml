@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atomic-term-symbol-calculator"
+dynamic = ["version"]
+dependencies = [
+  "numpy",
+  "pandas",
+]
+authors = [
+  { name="Charles Cheung", email="ccheung@udel.edu"}
+]
+description = "A Python package for calculating atomic term symbols from electron configurations"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["chemistry", "quantum-mechanics", "atomic-physics", "term-symbols", "electron-configuration"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Education",
+]
+
+[tool.hatch]
+version.path = "src/atomic_term_symbol_calculator/__init__.py"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+atomic-term-calculator = "atomic_term_symbol_calculator.terms:main"
+
+[project.urls]
+"Homepage" = "https://ccheung93.github.io/notes/term_symbols/"
+"Repository" = "https://github.com/ccheung93/atomic-term-symbol-calculator"
+"Bug Tracker" = "https://github.com/ccheung93/atomic-term-symbol-calculator/issues"
+"Documentation" = "https://ccheung93.github.io/notes/term_symbols/"
