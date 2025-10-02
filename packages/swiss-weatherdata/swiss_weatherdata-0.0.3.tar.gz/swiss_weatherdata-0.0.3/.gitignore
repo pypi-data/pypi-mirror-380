@@ -1,0 +1,7 @@
+
+## ignored folders:
+dist
+**/__pycache__/
+
+## ignored files:
+swiss_weatherdata_develop.ipynb
