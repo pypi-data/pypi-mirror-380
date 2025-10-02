@@ -1,0 +1,30 @@
+=========
+Changelog
+=========
+
+
+0.4 (2025-10-01)
+================
+
+- fix bug with replacing query_string
+
+
+0.3 (2025-08-20)
+================
+
+- add patch method 
+- add docs
+
+
+0.2 (2025-08-19)
+================
+
+- add logging
+- extended errors handling
+- shortcuts for methods
+
+
+0.1 (2025-08-08)
+================
+
+- API client, tests, CICD configuration
