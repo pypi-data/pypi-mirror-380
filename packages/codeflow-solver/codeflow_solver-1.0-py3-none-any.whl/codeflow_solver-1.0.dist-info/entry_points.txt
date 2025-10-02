@@ -1,0 +1,2 @@
+[console_scripts]
+codeflow-solver = codeflow_solver.cli.main:main
