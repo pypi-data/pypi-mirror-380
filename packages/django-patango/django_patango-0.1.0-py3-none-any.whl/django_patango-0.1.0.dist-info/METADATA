@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: django_patango
+Version: 0.1.0
+Summary: My Django library with frontend
+Author-email: Galech Mercado Alejandro <your@email.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=4.0
+Dynamic: license-file
+
+# django_patango
