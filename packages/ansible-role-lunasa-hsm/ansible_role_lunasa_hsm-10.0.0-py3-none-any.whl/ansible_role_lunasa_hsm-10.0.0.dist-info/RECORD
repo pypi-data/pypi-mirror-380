@@ -1,0 +1,11 @@
+ansible_role_lunasa_hsm-10.0.0.data/data/share/ansible/roles/lunasa_hsm/defaults/main.yaml,sha256=Y5G0J2_WQFOsvDZx6xNmK6shYMHKCn0lDk4qWhTtVkU,247
+ansible_role_lunasa_hsm-10.0.0.data/data/share/ansible/roles/lunasa_hsm/tasks/main.yaml,sha256=hPZyt3PaEeG2KkCjvjK7tHNE5m9QOk9Yg_HOEBBHf4k,4930
+ansible_role_lunasa_hsm-10.0.0.data/data/share/ansible/roles/lunasa_hsm/tasks/register_client.yaml,sha256=PXdLBOgiOpXLq3B9AEpbQLy-y8_-szFa6duuIl8nwqY,3512
+ansible_role_lunasa_hsm-10.0.0.data/data/share/ansible/roles/lunasa_hsm/tasks/unregister_client.yaml,sha256=pJIQpnto9HJOF4yV9fU8cRkYdnlF7Ffy6TmGjoROisc,618
+ansible_role_lunasa_hsm-10.0.0.dist-info/AUTHORS,sha256=pZJMsTvG_KDR7lygOXKAANmqO2_hU7e3oWCIWNU4Z7s,294
+ansible_role_lunasa_hsm-10.0.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ansible_role_lunasa_hsm-10.0.0.dist-info/METADATA,sha256=CVqr2UAcWYQvcXuXx6f_T3xSzbsZhlTczK3CiAukfpM,2568
+ansible_role_lunasa_hsm-10.0.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+ansible_role_lunasa_hsm-10.0.0.dist-info/pbr.json,sha256=uXv0Tu-pMCI-CXJm2wtQPgWuVduw5JOgxJdwyJPzHaY,46
+ansible_role_lunasa_hsm-10.0.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ansible_role_lunasa_hsm-10.0.0.dist-info/RECORD,,
