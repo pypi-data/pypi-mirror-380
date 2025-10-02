@@ -1,0 +1,39 @@
+[project]
+name = "nibcq"
+version = "1.2.0dev4"
+description = "NI Battery Cell Quality library"
+authors = [
+    {name = "Mate Vagner",email = "mate.vagner@emerson.com"}
+]
+readme = "README.md"
+requires-python = "<4.0,>=3.12"
+dependencies = [
+    "nidmm (>=1.4.9,<2.0.0)",
+    "nidcpower (>=1.5.0,<2.0.0)",
+    "nidaqmx (>=1.2.0,<2.0.0)",
+    "niswitch (>=1.4.9,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "nibcq", from = "src"}]
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=8.2"
+sphinx-rtd-theme = ">=1.0.0"
+sphinx-autoapi = ">=1.8.4"
+m2r2 = ">=0.3.2"
+toml = ">=0.10.2"
+tomlkit = ">=0.11.0"
+
+[tool.poetry.group.dev.dependencies]
+ni-python-styleguide = "^0.4.6"
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+matplotlib = "^3.10.6"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ni-python-styleguide]
+application-import-names = "nibcq"
