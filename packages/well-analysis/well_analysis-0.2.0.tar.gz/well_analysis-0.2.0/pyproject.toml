@@ -1,0 +1,61 @@
+[project]
+name = "well-analysis"
+version = "0.2.0"
+description = "Open-source Python API for Well Performance and Nodal Analysis built on Schlumberger PIPESIM Toolkit."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Aman Sharma", email = "amnnsharma@gmail.com" }
+]
+license = { text = "MIT" }
+
+keywords = [
+  "pipesim",
+  "well-analysis",
+  "nodal-analysis",
+  "gas-lift",
+  "reservoir-engineering",
+  "production-optimization",
+  "oil-and-gas"
+]
+
+dependencies = [
+  "pandas>=1.3",
+  "numpy>=1.22",
+  "matplotlib>=3.5",
+  "openpyxl>=3.0",
+  "scipy>=1.8"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent"
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Automatically find all subpackages (core + _impl)
+include = ["well_analysis", "well_analysis.*"]
+
+[tool.setuptools.package-data]
+# Include data files if any (like .xlsx templates, configs, etc.)
+"well_analysis" = ["*.csv", "*.xlsx", "*.json"]
+
+[tool.setuptools.exclude-package-data]
+# Exclude compiled or temporary files
+"*" = ["*.pyd", "*.so", "*.dll", "*.pyc", "__pycache__"]
+
+[project.urls]
+Homepage = "https://pypi.org/project/well-analysis"
