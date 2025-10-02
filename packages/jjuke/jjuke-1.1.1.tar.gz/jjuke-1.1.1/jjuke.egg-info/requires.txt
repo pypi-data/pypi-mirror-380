@@ -1,0 +1,9 @@
+torch
+numpy
+accelerate
+transformers
+diffusers
+omegaconf
+easydict
+tqdm
+wandb
