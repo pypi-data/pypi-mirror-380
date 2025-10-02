@@ -1,0 +1,15 @@
+apscheduler==3.9.1.post1
+pyserial
+tzlocal
+xmodem
+
+[docs]
+
+[receiver]
+
+[release]
+build==0.5.1
+twine==1.15.0
+
+[test]
+pytest<6,>3
