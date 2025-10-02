@@ -1,0 +1,9 @@
+torch>=2.0.1
+
+[dev]
+build
+wheel
+twine
+ruff
+pytest
+mypy

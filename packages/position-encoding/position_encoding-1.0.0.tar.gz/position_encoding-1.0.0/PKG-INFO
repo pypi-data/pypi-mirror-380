@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: position-encoding
+Version: 1.0.0
+Summary: A library that encodes sequence positions in torch
+Author: Coos Baakman
+Maintainer: Coos Baakman
+License-Expression: Apache-2.0
+Project-URL: Repository, https://github.com/X-lab-3D/position-encoding
+Project-URL: Issues, https://github.com/X-lab-3D/position-encoding/issues
+Requires-Python: >=3.11
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: torch>=2.0.1
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: license-file
