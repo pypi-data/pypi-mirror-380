@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+marketflow/__marketconfig__/dataextraction/brvm_data.py
+marketflow/__marketconfig__/tickerextraction/brvm_ticker.py
+marketflow/__marketconfig__/tickerextraction/bvc_ticker.py
+marketflow/marketflow.egg-info/PKG-INFO
+marketflow/marketflow.egg-info/SOURCES.txt
+marketflow/marketflow.egg-info/dependency_links.txt
+marketflow/marketflow.egg-info/requires.txt
+marketflow/marketflow.egg-info/top_level.txt
