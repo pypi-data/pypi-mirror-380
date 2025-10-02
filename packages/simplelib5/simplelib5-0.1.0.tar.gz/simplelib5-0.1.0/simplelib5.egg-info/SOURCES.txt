@@ -1,0 +1,7 @@
+README.md
+setup.py
+simplelib5.py
+simplelib5.egg-info/PKG-INFO
+simplelib5.egg-info/SOURCES.txt
+simplelib5.egg-info/dependency_links.txt
+simplelib5.egg-info/top_level.txt
