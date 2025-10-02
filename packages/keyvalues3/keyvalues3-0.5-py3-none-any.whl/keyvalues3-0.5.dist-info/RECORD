@@ -1,0 +1,15 @@
+keyvalues3/__init__.py,sha256=1FfUZEDVge8AR2LNmU1swEVEW3CE22AZnxfDZag9hng,5819
+keyvalues3/binaryreader.py,sha256=eCfZ1leDCIf31b63TNpBoVkZTfsUbYgrCr8wPgNpXpE,31178
+keyvalues3/binarywriter.py,sha256=gq3ot3DSO3Khd90pv1qa5t0sykTxwcHFcAHRBHEVbCg,5628
+keyvalues3/keyvalues3.py,sha256=zxRdsWiz8Wh533LVQQgkkGvjd_g4yksl3FyJ-04Jqlk,4642
+keyvalues3/kv3file.py,sha256=fTQtLTrGU8M3mP28JSVXSh42L3Yo9mECUxVHn8jKX-g,2578
+keyvalues3/textreader.py,sha256=Re4tgGA3zrp2zXexMDmmr2mAw9aHfTafiWh28sN8Y5c,7587
+keyvalues3/textwriter.py,sha256=Y-M-S5jula_vlCmnCaAPKI8dsKounXtrFeBaPQcqNH0,3052
+keyvalues3/utils/__init__.py,sha256=Jr_mUd6nGzOPivnjK1n9WKvYsPLVlYB-fw52F1HwAf4,708
+keyvalues3/utils/buffer.py,sha256=lHFaBf7b_ZZG5zwV1O1GEDvvJ3DGzM3S04fd-J8pfg4,10035
+keyvalues3/utils/compression.py,sha256=HKPlv2gk8ulvjAzeoi_jZ7gF1NegzL37-Q_KI9tOQHE,7815
+keyvalues3/utils/helpers.py,sha256=wZ0vExOgZBpqQBRppXQOQHUGhzQLSQo2PCtW3Cek41s,955
+keyvalues3-0.5.dist-info/licenses/LICENSE,sha256=SpU-dTDH-oljj0Lk6Ywxl0dUGQY3KzTCkNTrkkTdWiU,1066
+keyvalues3-0.5.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+keyvalues3-0.5.dist-info/METADATA,sha256=qEam5my03pzgLsM0UZ0-2Of4412qX5CqvQ7ATOllbPE,3800
+keyvalues3-0.5.dist-info/RECORD,,
