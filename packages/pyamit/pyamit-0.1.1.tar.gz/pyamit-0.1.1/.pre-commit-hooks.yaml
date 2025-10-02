@@ -1,0 +1,9 @@
+- id: pyamit
+  name: Format YAML files
+  description: |
+    Format and optionally sort YAML files using pyamit.
+    Use with args: args: ["--sort-keys", "--indent=4"]
+  entry: pyamit
+  language: python
+  types: [yaml]
+  args: [--sort-keys]
