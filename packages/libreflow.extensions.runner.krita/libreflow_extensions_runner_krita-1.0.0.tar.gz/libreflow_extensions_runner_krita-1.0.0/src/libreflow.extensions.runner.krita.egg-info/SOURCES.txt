@@ -1,0 +1,17 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+src/libreflow/__init__.py
+src/libreflow.extensions.runner.krita.egg-info/PKG-INFO
+src/libreflow.extensions.runner.krita.egg-info/SOURCES.txt
+src/libreflow.extensions.runner.krita.egg-info/dependency_links.txt
+src/libreflow.extensions.runner.krita.egg-info/top_level.txt
+src/libreflow/extensions/__init__.py
+src/libreflow/extensions/runner/__init__.py
+src/libreflow/extensions/runner/krita/__init__.py
+src/libreflow/extensions/runner/krita/_version.py
+src/libreflow/extensions/runner/krita/scripts/__init__.py
+src/libreflow/extensions/runner/krita/scripts/krita_setup_file.py
