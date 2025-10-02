@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: pachcalib
+Version: 0.1.1
+Summary: This library was done for easy interaction with Pachca Messenger
+Author: Владислав Кузнецов
+Author-email: Владислав Кузнецов <v.kuznetsov@ideco.ru>
+Requires-Dist: aiohttp>=3.12.15
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: uvloop>=0.21.0
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# Здесь будет документация по Pachcalib
+

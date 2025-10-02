@@ -1,0 +1,27 @@
+[project]
+name = "pachcalib"
+version = "0.1.1"
+description = "This library was done for easy interaction with Pachca Messenger"
+readme = "README.md"
+authors = [
+    { name = "Владислав Кузнецов", email = "v.kuznetsov@ideco.ru" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "pydantic>=2.11.9",
+    "uvloop>=0.21.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=6.0.1",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+]
