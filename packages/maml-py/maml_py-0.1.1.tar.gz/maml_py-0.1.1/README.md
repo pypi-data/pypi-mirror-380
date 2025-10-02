@@ -1,0 +1,362 @@
+# maml-py
+
+A pure Python parser for MAML (Minimal Abstract Markup Language) v0.1.
+
+This is NOT PRODUCTION READY. I have never written a parser before and this is mostly for people to play around with. 
+
+MAML is a minimal configuration format designed to be easily readable by humans and easily parsed by machines. It's similar to YAML but with a simpler syntax.
+
+## Features
+
+- Pure Python implementation with no external dependencies
+- Full support for MAML v0.1 specification
+- Type hints throughout for better IDE support
+- Comprehensive test coverage
+- Simple API similar to Python's `json` module
+
+## Installation
+
+```bash
+pip install maml-py
+```
+
+## Quick Start
+
+### Installation from Source
+
+```bash
+git clone https://gitlab.com/matdevdug/maml-py.git
+cd maml-py
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .
+```
+
+### Testing the Installation
+
+```bash
+python -c "import maml; print(maml.loads('{key: \"value\"}'))"
+```
+
+Expected output:
+```
+{'key': 'value'}
+```
+
+## Usage
+
+### Basic Parsing
+
+```python
+import maml
+
+data = maml.loads("""
+{
+  name: "John Doe"
+  age: 30
+  active: true
+}
+""")
+
+print(data)
+```
+
+Output:
+```python
+{'name': 'John Doe', 'age': 30, 'active': True}
+```
+
+### Reading from Files
+
+```python
+import maml
+
+with open('config.maml', 'r') as f:
+    config = maml.load(f)
+```
+
+### Writing MAML
+
+```python
+import maml
+
+data = {
+    "name": "John Doe",
+    "age": 30,
+    "items": [1, 2, 3]
+}
+
+maml_string = maml.dumps(data)
+print(maml_string)
+```
+
+Output:
+```maml
+{
+  name: "John Doe"
+  age: 30
+  items: [
+    1
+    2
+    3
+  ]
+}
+```
+
+### Writing to Files
+
+```python
+import maml
+
+data = {"key": "value"}
+
+with open('output.maml', 'w') as f:
+    maml.dump(data, f)
+```
+
+### Error Handling
+
+```python
+import maml
+
+try:
+    data = maml.loads('{ invalid syntax')
+except maml.MAMLSyntaxError as e:
+    print(f"Parse error: {e}")
+    print(f"Line: {e.line}, Column: {e.column}")
+```
+
+### Complete Example
+
+```python
+import maml
+
+config_text = """
+{
+  # Database configuration
+  database: {
+    host: "localhost"
+    port: 5432
+    credentials: {
+      username: "admin"
+      password: "secret"
+    }
+  }
+
+  # Feature flags
+  features: [
+    "auth"
+    "api"
+    "dashboard"
+  ]
+
+  # Settings
+  debug: true
+  max_connections: 100
+  timeout: 30.5
+}
+"""
+
+config = maml.loads(config_text)
+print(f"Database host: {config['database']['host']}")
+print(f"Features: {', '.join(config['features'])}")
+print(f"Debug mode: {config['debug']}")
+```
+
+Output:
+```
+Database host: localhost
+Features: auth, api, dashboard
+Debug mode: True
+```
+
+## MAML Syntax Overview
+
+### Values
+
+MAML supports the following value types:
+
+- `null` - null value
+- `true`, `false` - booleans
+- `42`, `-100` - integers
+- `3.14`, `1.5e10` - floats
+- `"string"` - strings
+- `"""multiline string"""` - multiline strings
+- `[1, 2, 3]` - arrays
+- `{key: "value"}` - objects
+
+### Objects
+
+Objects use curly braces with key-value pairs separated by colons:
+
+```maml
+{
+  name: "Alice"
+  age: 25
+  "quoted key": "value"
+}
+```
+
+Keys can be identifiers (alphanumeric, `_`, `-`) or quoted strings. Commas and newlines are both valid separators.
+
+### Arrays
+
+Arrays use square brackets:
+
+```maml
+[
+  "item1"
+  "item2"
+  "item3"
+]
+```
+
+Like objects, commas and newlines are both valid separators.
+
+### Strings
+
+Regular strings use double quotes with standard escape sequences:
+
+```maml
+"Hello, world!\nNew line here."
+```
+
+Multiline strings use triple quotes and preserve formatting:
+
+```maml
+"""
+This is a
+multiline string
+with preserved formatting.
+"""
+```
+
+### Comments
+
+Comments start with `#` and continue to the end of the line:
+
+```maml
+{
+  key: "value"  # This is a comment
+}
+```
+
+## API Reference
+
+### `maml.loads(s: str) -> Any`
+
+Parse a MAML string and return the corresponding Python object.
+
+### `maml.load(fp: TextIO) -> Any`
+
+Read and parse a MAML file.
+
+### `maml.dumps(obj: Any) -> str`
+
+Serialize a Python object to a MAML formatted string.
+
+### `maml.dump(obj: Any, fp: TextIO) -> None`
+
+Serialize a Python object to a MAML formatted string and write to a file.
+
+### Exceptions
+
+- `MAMLError` - Base exception for all MAML errors
+- `MAMLSyntaxError` - Raised when parsing invalid MAML syntax
+
+## Development
+
+### Setup
+
+```bash
+git clone https://gitlab.com/matdevdug/maml-py.git
+cd maml-py
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .
+```
+
+### Running Tests
+
+Run all tests:
+
+```bash
+python -m unittest discover tests/ -v
+```
+
+Run specific test file:
+
+```bash
+python -m unittest tests.test_parser -v
+```
+
+Run specific test class:
+
+```bash
+python -m unittest tests.test_parser.TestParser -v
+```
+
+Run specific test method:
+
+```bash
+python -m unittest tests.test_parser.TestParser.test_object_simple -v
+```
+
+### Test Coverage
+
+The test suite includes 44 comprehensive tests covering:
+
+- All primitive types (null, boolean, integer, float, string)
+- String escaping and unicode handling
+- Multiline strings with various edge cases
+- Arrays (empty, simple, nested, with trailing commas)
+- Objects (empty, simple, nested, identifier keys, quoted keys)
+- Comments (line comments, inline comments)
+- Error handling (syntax errors, invalid escapes, duplicate keys)
+- Round-trip encoding and decoding
+
+### Quick Test Commands
+
+Test basic parsing:
+```bash
+python -c "import maml; assert maml.loads('null') is None; print('✓ null')"
+python -c "import maml; assert maml.loads('true') == True; print('✓ boolean')"
+python -c "import maml; assert maml.loads('42') == 42; print('✓ integer')"
+python -c "import maml; assert maml.loads('\"hello\"') == 'hello'; print('✓ string')"
+python -c "import maml; assert maml.loads('[1,2,3]') == [1,2,3]; print('✓ array')"
+python -c "import maml; assert maml.loads('{a:1}') == {'a': 1}; print('✓ object')"
+```
+
+Test encoding:
+```bash
+python -c "import maml; s=maml.dumps({'key':'value'}); print(s)"
+```
+
+### Building for Distribution
+
+Build the package:
+
+```bash
+pip install build
+python -m build
+```
+
+This creates distribution files in `dist/`:
+- `maml_py-0.1.0.tar.gz` - Source distribution
+- `maml_py-0.1.0-py3-none-any.whl` - Wheel distribution
+
+### Publishing to PyPI
+
+```bash
+pip install twine
+twine check dist/*
+twine upload dist/*
+```
+
+## License
+
+MIT
+
+## Specification
+
+This library implements the MAML v0.1 specification. For more details on the MAML format, see the official specification.

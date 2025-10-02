@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/maml/__init__.py
+src/maml/encoder.py
+src/maml/exceptions.py
+src/maml/lexer.py
+src/maml/parser.py
+src/maml/py.typed
+src/maml_py.egg-info/PKG-INFO
+src/maml_py.egg-info/SOURCES.txt
+src/maml_py.egg-info/dependency_links.txt
+src/maml_py.egg-info/top_level.txt
+tests/test_parser.py
