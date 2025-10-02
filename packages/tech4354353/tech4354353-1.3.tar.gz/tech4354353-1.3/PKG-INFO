@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: tech4354353
+Version: 1.3
+Summary: This is just a test package
+Author: Noman Ansari
+Author-email: mnomanansari99@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
