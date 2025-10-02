@@ -1,0 +1,55 @@
+- job:
+    name: grenade-ceilometer
+    parent: grenade
+    required-projects:
+      - opendev.org/openstack/grenade
+      - opendev.org/openstack/ceilometer
+      - name: gnocchixyz/gnocchi
+        override-checkout: stable/4.6
+    vars:
+      configure_swap_size: 8192
+      grenade_devstack_localrc:
+        shared:
+          CEILOMETER_BACKEND: gnocchi
+      devstack_plugins:
+        ceilometer: https://opendev.org/openstack/ceilometer
+      devstack_services:
+        ceilometer-acompute: true
+        ceilometer-acentral: true
+        ceilometer-aipmi: true
+        ceilometer-anotification: true
+      tempest_test_regex: '\[.*\bsmoke\b.*\]|^(telemetry_tempest_plugin)'
+      tox_envlist: all
+    irrelevant-files: &ceilometer-irrelevant-files
+      - ^\.gitreview$
+      - ^(test-|)requirements.txt$
+      - ^setup.cfg$
+      - ^doc/.*$
+      - ^.*\.rst$
+      - ^releasenotes/.*$
+      - ^ceilometer/locale/.*$
+      - ^ceilometer/tests/.*$
+
+- project:
+    queue: telemetry
+    templates:
+      - openstack-cover-jobs
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      - periodic-stable-jobs
+      - release-notes-jobs-python3
+      - check-requirements
+    check:
+      jobs:
+        - grenade-ceilometer
+        - telemetry-dsvm-integration:
+            irrelevant-files: *ceilometer-irrelevant-files
+        - telemetry-dsvm-integration-ipv6-only:
+            irrelevant-files: *ceilometer-irrelevant-files
+    gate:
+      jobs:
+        - grenade-ceilometer
+        - telemetry-dsvm-integration:
+            irrelevant-files: *ceilometer-irrelevant-files
+        - telemetry-dsvm-integration-ipv6-only:
+            irrelevant-files: *ceilometer-irrelevant-files
