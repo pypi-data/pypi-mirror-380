@@ -1,0 +1,7 @@
+---
+features:
+  - |
+    In OpenStack on Kubernetes, this is a new host monitor by Kubernetes.
+    This driver enable seamless integration with the Kubernetes API,
+    allowing for efficient and straightforward host monitoring without the
+    need for additional configuration using tools like Consul or Pacemaker.
