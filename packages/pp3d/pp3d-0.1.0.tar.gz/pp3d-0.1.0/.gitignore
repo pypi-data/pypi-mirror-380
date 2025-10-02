@@ -1,0 +1,15 @@
+# PyCharm files
+.idea/
+
+# Python build files
+*.egg-info/
+__pycache__/
+
+# Coverage files
+htmlcov/
+pytest/
+.coverage
+coverage.xml
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
