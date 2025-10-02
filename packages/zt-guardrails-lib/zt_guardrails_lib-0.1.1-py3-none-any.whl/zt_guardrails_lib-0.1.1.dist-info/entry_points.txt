@@ -1,0 +1,3 @@
+[console_scripts]
+zt-guardrails-lib=zt_guardrails_lib.main:run
+
