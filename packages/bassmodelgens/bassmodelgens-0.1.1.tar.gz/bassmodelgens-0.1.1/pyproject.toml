@@ -1,0 +1,20 @@
+[project]
+name = "bassmodelgens"
+version = "0.1.1"
+description = "A package containing functions to simulate and fit the Bass diffusion model with generations (1987)"
+authors = [
+    {name = "Lewis Mitchell",email = "lewis.mitchell@adelaide.edu.au"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+homepage = "https://github.com/lewismath/bassmodel"
