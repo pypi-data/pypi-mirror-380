@@ -1,0 +1,2 @@
+[console_scripts]
+embeddingbuddy = embeddingbuddy.app:main
