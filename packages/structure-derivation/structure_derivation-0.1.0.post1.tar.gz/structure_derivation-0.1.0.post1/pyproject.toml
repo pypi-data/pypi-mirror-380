@@ -1,0 +1,26 @@
+[build-system]
+requires = [ "setuptools", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structure_derivation"
+version = "0.1.0.post1"
+description = "Metrics for Musical Structure"
+dependencies = [ "transformers>=4.40.0", "accelerate", "peft", "torchlibrosa", "librosa", "tensorboard", "vendi_score",]
+[[project.authors]]
+name = "Keshav Bhandari"
+email = "keshavbhandari@gmail.com"
+
+[project.readme]
+file = "readme.md"
+content-type = "text/markdown"
+
+[project.license]
+file = "LICENSE"
+
+[tool.setuptools.exclude-package-data]
+structure_derivation = [ "artifacts/*",]
+
+[tool.setuptools.packages.find]
+where = [ ".",]
+include = [ "structure_derivation", "structure_derivation.*",]
