@@ -1,0 +1,3 @@
+
+[cli]
+prettytable>=2
