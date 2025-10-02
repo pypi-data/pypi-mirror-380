@@ -1,0 +1,2 @@
+[console_scripts]
+test_server = tests.base_routes:main

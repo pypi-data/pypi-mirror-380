@@ -1,0 +1,11 @@
+robyn_rate_limits/__init__.py,sha256=Ls17UjQr-HZbZkkuhNjMz-Eai-cQX-e2wyZwEeQDEyk,350
+robyn_rate_limits/in_memory.py,sha256=FLfgZTg-J7uVy15ZuaFEXRcxldWnDSSA_JjyNxa34Yg,3202
+robyn_rate_limits/protocols.py,sha256=lQ2YPBs3v5Le4_P1DO2yXr0CmUTahJdD_aWgU52Ak5I,191
+robyn_rate_limits/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+robyn_rate_limits/rate_limiter.py,sha256=gd9SuHIP_o9lI8CfP-wqtAp-vzySSNx9XeugT0FuHqY,1467
+robyn_rate_limits/redis.py,sha256=wwt7ygUDGLM0zNM4flXyf95nk-sC_1hGSVnygLDFTZc,2822
+robyn_rate_limits-0.4.0.dist-info/METADATA,sha256=W59Eh94Xtla4Oqe0Sr404gejUVDp8XmT_iZd0N943Qg,4529
+robyn_rate_limits-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+robyn_rate_limits-0.4.0.dist-info/entry_points.txt,sha256=egQ6J2JVws3tCxk3TEOyAcwi3rOtgwdFdw76zokDFtE,55
+robyn_rate_limits-0.4.0.dist-info/licenses/LICENSE,sha256=QmtF9Ey7Jy2vl7BUznzkKVtO_rhtDFJN4sG5OCbk8sg,1065
+robyn_rate_limits-0.4.0.dist-info/RECORD,,
