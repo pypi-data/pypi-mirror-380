@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/brief_test/__init__.py
+src/brief_test/core.py
+src/brief_test/log.py
+src/brief_test/server.py
+src/brief_test.egg-info/PKG-INFO
+src/brief_test.egg-info/SOURCES.txt
+src/brief_test.egg-info/dependency_links.txt
+src/brief_test.egg-info/requires.txt
+src/brief_test.egg-info/top_level.txt
+tests/test_main.py
