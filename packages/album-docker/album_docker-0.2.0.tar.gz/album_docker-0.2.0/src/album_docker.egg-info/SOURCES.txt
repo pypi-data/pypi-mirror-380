@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/album/__init__.py
+src/album/docker_plugin/__init__.py
+src/album/docker_plugin/argument_parsing.py
+src/album/docker_plugin/build_image.py
+src/album/docker_plugin/solution_entrypoint.sh
+src/album_docker.egg-info/PKG-INFO
+src/album_docker.egg-info/SOURCES.txt
+src/album_docker.egg-info/dependency_links.txt
+src/album_docker.egg-info/entry_points.txt
+src/album_docker.egg-info/requires.txt
+src/album_docker.egg-info/top_level.txt
