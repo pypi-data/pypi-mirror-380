@@ -1,0 +1,10 @@
+aqora_cli-0.18.2.dist-info/METADATA,sha256=I3tEeDKSysaCXQcoqfZ5j41Xc6fmvDIk84QEJAN2ODA,974
+aqora_cli-0.18.2.dist-info/WHEEL,sha256=DLqF2HZq4W_umZdP6RnfAuqhmtX_UrV4mkqrSIMhipE,102
+aqora_cli-0.18.2.dist-info/entry_points.txt,sha256=ON5Soch_i9Cd08MQyfQeZUsJv0-Z6XH36ddYagaFtSo,93
+aqora_cli/__init__.py,sha256=FepZmvYFpxWKM18lVoqIfP25H1hv_yLhBVNEaApRgzA,1012
+aqora_cli/_aqora_cli.abi3.so,sha256=r5m5dgBq20vtLcCRynWwoBSRhnKGb33DLeAunMIwQNs,28802608
+aqora_cli/_aqora_cli.pyi,sha256=7Cyl6IPREHpsA2Dfe0Hxu5vPdCzvgh6eLU3iMvF1Ka0,656
+aqora_cli/fsspec.py,sha256=2zfrYqEJzyaYPSR4sSTBd3K5Yl5OOeZ8jXz9N4reWaE,11126
+aqora_cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aqora_cli/pyarrow.py,sha256=KDa5-Dym9iOOfyBT3A_JTjLLL2kNMXTBvyI4TFnFafA,916
+aqora_cli-0.18.2.dist-info/RECORD,,
