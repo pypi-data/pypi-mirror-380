@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+git_worktree_cli.egg-info/PKG-INFO
+git_worktree_cli.egg-info/SOURCES.txt
+git_worktree_cli.egg-info/dependency_links.txt
+git_worktree_cli.egg-info/entry_points.txt
+git_worktree_cli.egg-info/requires.txt
+git_worktree_cli.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_launchers.py
+tests/test_worktree.py
+wt/__init__.py
+wt/__main__.py
+wt/cli.py
+wt/launchers.py
+wt/worktree.py
