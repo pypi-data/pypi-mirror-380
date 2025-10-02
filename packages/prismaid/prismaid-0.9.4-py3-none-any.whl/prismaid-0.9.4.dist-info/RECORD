@@ -1,0 +1,8 @@
+prismaid/__init__.py,sha256=bu9KtArMSFhdfhap0Nq3-XoxbFhs1-sVclPpXVFvtV0,5068
+prismaid/libprismaid_darwin_arm64.dylib,sha256=BHKhWEd01pbEY3Vp25_9l3EomL-lEgaHJ1YxjpTECuc,33210178
+prismaid/libprismaid_linux_amd64.so,sha256=NZDSxLxYZj_7zJx1NyRJ3E6SVs5WJEyVXuXai4IOwhE,44355168
+prismaid/libprismaid_windows_amd64.dll,sha256=W31hJMhOUx5C-tW171IBIt7W2fRhy5iT0HPvxlV7Z_0,56214036
+prismaid-0.9.4.dist-info/METADATA,sha256=IfmW5QPhiZ0XhFk1CuClazmQi6uH6YYo4Dq28CVZu1g,7390
+prismaid-0.9.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+prismaid-0.9.4.dist-info/licenses/LICENSE,sha256=EW5_OUPga4hB1DpC9QfPrMXxK49y7-iom_YmwoavZLo,34519
+prismaid-0.9.4.dist-info/RECORD,,
