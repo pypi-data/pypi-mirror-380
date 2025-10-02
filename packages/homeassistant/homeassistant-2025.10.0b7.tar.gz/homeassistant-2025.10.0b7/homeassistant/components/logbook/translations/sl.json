@@ -1,0 +1,22 @@
+{
+    "services": {
+        "log": {
+            "fields": {
+                "domain": {
+                    "name": "Domena"
+                },
+                "entity_id": {
+                    "name": "ID Entitete"
+                },
+                "message": {
+                    "name": "Sporo\u010dilo"
+                },
+                "name": {
+                    "description": "Prilagojeno ime entitete, na katero se je mogo\u010de sklicevati z uporabo polja 'ID entitete'.",
+                    "name": "Naziv"
+                }
+            },
+            "name": "Zapis"
+        }
+    }
+}
