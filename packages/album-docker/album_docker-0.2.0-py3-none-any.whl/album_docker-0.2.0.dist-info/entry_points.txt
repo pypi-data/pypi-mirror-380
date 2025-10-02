@@ -1,0 +1,2 @@
+[console_parsers_album]
+docker = album.docker_plugin.argument_parsing:create_docker_parser

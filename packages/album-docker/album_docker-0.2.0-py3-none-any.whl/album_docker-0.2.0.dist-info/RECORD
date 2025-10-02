@@ -1,0 +1,11 @@
+album/__init__.py,sha256=0PTa-mWkgd3564VUanWPsG7L7a4so5LmLmVjze_35Yo,141
+album/docker_plugin/__init__.py,sha256=qKyE5V7rZ7onwKMR-3xtT3EJSRy_C7OvoAkNjVUbAXc,31
+album/docker_plugin/argument_parsing.py,sha256=dFue0FlVp-rSOzNvsRKWOVYUydfIl7OuMfG2LHaJdWg,1287
+album/docker_plugin/build_image.py,sha256=SYossicEHcSXhbIj7C2IEcIRnaiNFXad9gK17Cefa04,4386
+album/docker_plugin/solution_entrypoint.sh,sha256=c0wdeAvdLDKJ8DDgdho1WyyYUC20WkxaNdgVYyeln6M,70
+album_docker-0.2.0.dist-info/licenses/LICENSE,sha256=2zDDeakDhK3mz_X3Tr_BMca3EsU-6kjYH5hvjHL_-bI,1075
+album_docker-0.2.0.dist-info/METADATA,sha256=ofjd7VruVtu1US89rdtoxQvgk98qx1_pEc_weqhPWLM,3492
+album_docker-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+album_docker-0.2.0.dist-info/entry_points.txt,sha256=jn7xkxes_VxgfW058LME6uZS0tAFsNhHKh0ZTRxSd1c,91
+album_docker-0.2.0.dist-info/top_level.txt,sha256=FOUsCQfv8kIbqdEM3Yz4z2I-Nohd1Le4YzCzMeDCnrg,6
+album_docker-0.2.0.dist-info/RECORD,,
