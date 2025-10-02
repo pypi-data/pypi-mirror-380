@@ -1,0 +1,9 @@
+whr_core.cp38-win32.pyd,sha256=4cgZqlqpCJcD0leXlzeSQQmVca15LG1BFzu4S8ioQYo,228352
+whr/__init__.py,sha256=4P5MhK7pddkDDucYCm34BYD4Q9DF85jPsC0AMw0qyUk,90
+whr/base.py,sha256=4jgDAEGPP5LsobeS11isZIyU2gftaHzVqCO7jMncrJA,6966
+whr/evaluate.py,sha256=PuKlH8ZVk0KoJq7YGzPYPxrDFzKqyWP3F5WYoa2-DRM,2330
+whr-2.1.0.dist-info/LICENSE,sha256=XSP_qNk5GmIwHGvbR6hmgkh7oLGzFCXw1sQgud_t2lM,1107
+whr-2.1.0.dist-info/METADATA,sha256=uoOb9_gldgt2vhd2vWz1a0aHxP-EQjCxxB-BNgd4wTg,7508
+whr-2.1.0.dist-info/WHEEL,sha256=BsoMMMHJGneA25n2FDquZW143lDYOuIAMJ0po_3Su94,95
+whr-2.1.0.dist-info/top_level.txt,sha256=jPksrpE002D5NAM3-xdeJpNMBZ_FTfEOLSNOX4GSJVU,13
+whr-2.1.0.dist-info/RECORD,,
