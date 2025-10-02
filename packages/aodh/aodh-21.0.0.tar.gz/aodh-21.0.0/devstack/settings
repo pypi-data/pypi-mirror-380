@@ -1,0 +1,32 @@
+# turn on all the aodh services by default
+# API service
+enable_service aodh-api
+# Alarming
+enable_service aodh-notifier aodh-evaluator
+# Listener for Event Alarming
+enable_service aodh-listener
+
+# Default directories
+AODH_DIR=$DEST/aodh
+AODH_CONF_DIR=/etc/aodh
+AODH_CONF=$AODH_CONF_DIR/aodh.conf
+AODH_UWSGI_CONF=$AODH_CONF_DIR/aodh-uwsgi.ini
+AODH_UWSGI=aodh.wsgi.api:application
+
+# Aodh connection info.
+AODH_SERVICE_PROTOCOL=http
+AODH_SERVICE_HOST=${AODH_SERVICE_HOST:-$SERVICE_HOST}
+
+AODH_NOTIFICATION_TOPICS=${AODH_NOTIFICATION_TOPICS:-notifications}
+
+AODH_COORDINATION_URL=${AODH_COORDINATION_URL:-}
+
+# Set up default directories for client
+GITDIR["python-aodhclient"]=$DEST/python-aodhclient
+GITREPO["python-aodhclient"]=$GIT_BASE/openstack/python-aodhclient.git
+
+# Get rid of this before done.
+# Tell emacs to use shell-script-mode
+## Local variables:
+## mode: shell-script
+## End:

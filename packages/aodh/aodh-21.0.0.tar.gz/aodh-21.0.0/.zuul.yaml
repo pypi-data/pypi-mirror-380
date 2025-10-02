@@ -1,0 +1,86 @@
+- project:
+    queue: telemetry
+    templates:
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+      - check-requirements
+    check:
+      jobs:
+        - grenade-aodh
+        - telemetry-dsvm-integration:
+            irrelevant-files: &aodh-irrelevant-files
+              - ^\.gitreview$
+              - ^(test-|)requirements.txt$
+              - ^setup.cfg$
+              - ^doc/.*$
+              - ^.*\.rst$
+              - ^releasenotes/.*$
+              - ^aodh/tests/.*$
+              - ^aodh/locale/.*$
+              - ^tools/.*$
+              - ^tox.ini$
+            vars:
+              devstack_local_conf:
+                test-config:
+                  $TEMPEST_CONFIG:
+                    telemetry_services:
+                      metric_backends: gnocchi
+        - telemetry-dsvm-integration-ipv6-only:
+            irrelevant-files: *aodh-irrelevant-files
+            vars:
+              devstack_local_conf:
+                test-config:
+                  $TEMPEST_CONFIG:
+                    telemetry_services:
+                      metric_backends: gnocchi
+    gate:
+      jobs:
+        - grenade-aodh
+        - telemetry-dsvm-integration:
+            irrelevant-files: *aodh-irrelevant-files
+            vars:
+              devstack_local_conf:
+                test-config:
+                  $TEMPEST_CONFIG:
+                    telemetry_services:
+                      metric_backends: gnocchi, prometheus
+                    service_available:
+                      gnocchi: True
+                      sg-core: True
+        - telemetry-dsvm-integration-ipv6-only:
+            irrelevant-files: *aodh-irrelevant-files
+            vars:
+              devstack_local_conf:
+                test-config:
+                  $TEMPEST_CONFIG:
+                    telemetry_services:
+                      metric_backends: gnocchi
+
+- job:
+    name: grenade-aodh
+    parent: grenade
+    required-projects:
+      - openstack/aodh
+      - openstack/ceilometer
+      - name: gnocchixyz/gnocchi
+        override-checkout: stable/4.6
+    vars:
+      configure_swap_size: 8192
+      grenade_devstack_localrc:
+        shared:
+          CEILOMETER_BACKEND: gnocchi
+      devstack_plugins:
+        ceilometer: https://opendev.org/openstack/ceilometer
+        aodh: https://opendev.org/openstack/aodh
+      devstack_services:
+        ceilometer-acompute: true
+        ceilometer-acentral: true
+        ceilometer-aipmi: true
+        ceilometer-anotification: true
+        aodh-api: true
+        aodh-evaluator: true
+        aodh-listener: true
+      tempest_test_regex: '\[.*\bsmoke\b.*\]|^telemetry_tempest_plugin'
+      tox_envlist: all
+    irrelevant-files: *aodh-irrelevant-files
