@@ -1,0 +1,37 @@
+[project]
+name = "vscode-pytest-update-snapshot"
+version = "0.1.0"
+description = "Run pytest on the test at cursor and update inline snapshots."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+authors = [{ name = "David Walker", email = "dbwalker0min@gmail.com"}]
+dependencies = [
+    "typer>=0.19.2",
+]
+
+[project.scripts]
+vscode-pytest-update-snapshot = "vscode_pytest_update_snapshot.__main__:app"
+
+[tool.uv]
+# optional: makes `uvx update-snapshot` resolve fast
+index-url = "https://pypi.org/simple"
+package = true
+
+[dependency-groups]
+dev = [
+    "inline-snapshot>=0.29.1",
+    "pytest>=8.4.2",
+]
+
+[tool.pytest.ini_options]
+markers = [
+  "e2e: end-to-end tests that shell out to pytest"
+]
+
+[tool.inline-snapshot]
+# Pure formatting:
+format-command = "ruff format --stdin-filename {filename}"
+
+# (Optional) If you also want auto-fixes before formatting, use this instead:
+# format-command = "ruff check --fix --stdin-filename {filename} - | ruff format --stdin-filename {filename}"

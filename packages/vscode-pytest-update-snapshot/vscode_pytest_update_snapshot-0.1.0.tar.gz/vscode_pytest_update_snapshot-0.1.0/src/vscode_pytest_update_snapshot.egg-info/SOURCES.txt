@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/vscode_pytest_update_snapshot/__init__.py
+src/vscode_pytest_update_snapshot/__main__.py
+src/vscode_pytest_update_snapshot.egg-info/PKG-INFO
+src/vscode_pytest_update_snapshot.egg-info/SOURCES.txt
+src/vscode_pytest_update_snapshot.egg-info/dependency_links.txt
+src/vscode_pytest_update_snapshot.egg-info/entry_points.txt
+src/vscode_pytest_update_snapshot.egg-info/requires.txt
+src/vscode_pytest_update_snapshot.egg-info/top_level.txt
+tests/test_cli_invokation.py
+tests/test_e2e_update.py
+tests/test_errors.py
+tests/test_nodeid.py
