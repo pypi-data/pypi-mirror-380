@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: marketflow
+Version: 1.1.6
+Summary: Access to African, American, European and Asian market data for financial analysis, scientific study and to provide a decision-making basis to investors.
+License-Expression: MIT
+License-File: LICENSE
+Keywords: finance,analysis,raw data,market,evaluation
+Author: ODJO OLABIYI AUREL GEOFFROY
+Author-email: xgeosoft@gmail.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: bs4 (>=0.0.2)
+Requires-Dist: numpy (>=2.0.0)
+Requires-Dist: pandas (>=2.3.2)
+Requires-Dist: requests (>=2.32.5)
+Requires-Dist: tabulate (>=0.9.0)
+Description-Content-Type: text/markdown
+
+# Asset Management Package
+
+Access to African, American, European and Asian open market data for financial analysis, scientific study and to provide a decision-making basis to investors.
+
+## Installation
+
+You can install this package using pip:
+
+```bash
+pip install marketflow
+```
+
+## How to use marketflow
+
+Import requirements 
+
+```bash
+from marketflow.market_registry import MarketRegistry
+from marketflow.market_ticker import MarketTickers
+from marketflow.market_data import MarketData
+```
+
+Initialize the registry (to manage cache / stored data)
+
+```bash
+register = MarketRegistry()
+# register.purge()   # Uncomment to clear existing registry data
+```
+
+Get available tickers for market (Ex : BRVM)
+
+```bash
+tickers = MarketTickers()
+brvm_tickers = tickers.getTickers("BRVM")
+print(brvm_tickers)
+```
+
+Download market data (example: BRVM, ticker BNBC.ci)
+```bash
+data = MarketData()
+brvm_data = data.getData("BRVM", ["BNBC.ci"])
+print(brvm_data.head())
+```

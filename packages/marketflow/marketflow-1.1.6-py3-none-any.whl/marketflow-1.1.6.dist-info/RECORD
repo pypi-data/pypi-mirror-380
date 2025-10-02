@@ -1,0 +1,14 @@
+marketflow/__data__/database.db,sha256=eno0lyNfVYEAt_DlN1j7wji97uKfDp2DewBjHe_Bjn0,20480
+marketflow/__db_manager__.py,sha256=rHBXZlZxDMQZDt9Q6Re40roSf5FC6WcAJf3QLmEqVLE,9054
+marketflow/__init__.py,sha256=m5eiM3mQJyneHCE9y7VYcnhJtof2ScxzavvB6nz_XB4,256
+marketflow/__marketconfig__/dataextraction/brvm_data.py,sha256=p2kLwQ53tt9kBEj2WLzOoWDywHZQn_AObxZePEOATIg,7396
+marketflow/__marketconfig__/tickerextraction/brvm_ticker.py,sha256=OIyT6A4KhReBoXX2yESA6NRdByWo4Ej9FJOJSHd4pnk,4685
+marketflow/__marketconfig__/tickerextraction/bvc_ticker.py,sha256=-k0Kdg2f0_cF8lK_rtLBFqdhYm-eLPAhUpUb-zWyc0A,1717
+marketflow/market_data.py,sha256=aDoa9to4KwV05CUv1nNObEln4j8o4jPjvab8AvLCE0Y,2603
+marketflow/market_information.py,sha256=JMyW9lwHeNK4coHO5e8e8P8q65vt-v4m-9hbHjolRlM,1388
+marketflow/market_registry.py,sha256=kznb2xUivYISQLRhiWCkCZIq60o-H3c8UfjROdVvTN4,3987
+marketflow/market_ticker.py,sha256=Ttu8cLkH68HjGpKT1CfFirEs8F4sZJ2sKD2VNLEHMjg,3358
+marketflow-1.1.6.dist-info/licenses/LICENSE,sha256=t23xRNso4A2oG-4n527bV75NapferPkUu2K07r-UFpk,1083
+marketflow-1.1.6.dist-info/METADATA,sha256=LxHMpvYpBrjvVfitEbcOXdPS7Qq5-I2a8u40eHkua1A,1772
+marketflow-1.1.6.dist-info/WHEEL,sha256=M5asmiAlL6HEcOq52Yi5mmk9KmTVjY2RDPtO4p9DMrc,88
+marketflow-1.1.6.dist-info/RECORD,,
