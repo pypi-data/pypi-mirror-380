@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/zenodo_sync/__init__.py
+src/zenodo_sync/cli.py
+src/zenodo_sync/core.py
+src/zenodo_sync/exceptions.py
+src/zenodo_sync.egg-info/PKG-INFO
+src/zenodo_sync.egg-info/SOURCES.txt
+src/zenodo_sync.egg-info/dependency_links.txt
+src/zenodo_sync.egg-info/entry_points.txt
+src/zenodo_sync.egg-info/requires.txt
+src/zenodo_sync.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_core.py
+tests/test_exceptions.py

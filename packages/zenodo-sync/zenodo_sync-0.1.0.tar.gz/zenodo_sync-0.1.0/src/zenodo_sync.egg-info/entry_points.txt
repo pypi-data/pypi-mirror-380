@@ -1,0 +1,2 @@
+[console_scripts]
+zenodo-sync = zenodo_sync.cli:main
