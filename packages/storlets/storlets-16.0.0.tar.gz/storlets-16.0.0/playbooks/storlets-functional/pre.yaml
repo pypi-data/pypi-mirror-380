@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+    - shell:
+        cmd: |
+          set -e
+          set -x
+          ./s2aio.sh install
+        executable: /bin/bash
+        chdir: 'src/{{ zuul.project.canonical_name }}'
+      environment:
+        STORLETS_GATEWAY_MODULE: '{{ storlets_gateway_module }}'
+
+    - shell:
+        cmd: |
+          ant build_storlets
+        executable: /bin/bash
+        chdir: 'src/{{ zuul.project.canonical_name }}'
+
+  roles:
+    - ensure-tox
