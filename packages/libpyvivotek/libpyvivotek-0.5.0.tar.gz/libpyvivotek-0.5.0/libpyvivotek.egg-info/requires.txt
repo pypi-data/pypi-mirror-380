@@ -1,0 +1,7 @@
+requests
+
+[tests]
+pylint>=2.3
+pytest
+mypy>=1.18.1
+vcrpy>=2.0
