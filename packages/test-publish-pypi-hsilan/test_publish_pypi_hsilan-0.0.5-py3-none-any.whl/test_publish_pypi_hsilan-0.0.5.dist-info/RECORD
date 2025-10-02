@@ -1,0 +1,5 @@
+test_publish_pypi_hsilan-0.0.5.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+test_publish_pypi_hsilan-0.0.5.dist-info/METADATA,sha256=dzmlmoEiiz6o_6OqWFVsly5_vuh3aXH7rIzGyTqyrQU,112
+test_publish_pypi_hsilan-0.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+test_publish_pypi_hsilan-0.0.5.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+test_publish_pypi_hsilan-0.0.5.dist-info/RECORD,,
