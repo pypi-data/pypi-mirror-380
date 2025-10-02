@@ -1,0 +1,866 @@
+{
+    "FSICDM": {
+        "name": "Financial Soundness Indicators (FSI), Concentration and Distribution Measures",
+        "description": "The Financial Soundness Indicators (FSIs), developed by the IMF together with the international community, are aimed at supporting macroprudential analysis—the surveillance and assessment of the strengths and vulnerabilities of financial systems. FSIs are macroprudential statistics aimed at filling the gap between macroeconomic statistics and micro-prudential data. Concentration and Distribution Measures indicators assess the distribution of financial risks and exposures within the financial system, focusing on how concentrated or dispersed these risks are among different entities.",
+        "structure_id": "DSD_FSICDM",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "INDICATOR",
+            "TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "QGDP_WCA": {
+        "name": "Quarterly Gross Domestic Product (GDP), World and Country Aggregates",
+        "description": "This dataset provides a snapshot of the economic activity of the world and selected country aggregates on a quarterly basis.  It offers quarterly measurements of Gross Domestic Product (GDP). Quarterly estimates are disseminated on a seasonally adjusted basis. ",
+        "structure_id": "DSD_QGDP_WCA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ICSD": {
+        "name": "Investment and Capital Stock Dataset (ICSD)",
+        "description": "This dataset provides comprehensive data for investment and capital stock for the general government, private sector and public-private partnerships, across the Fund member countries.",
+        "structure_id": "DSD_ICSD",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "SPE": {
+        "name": "Special Purpose Entities (SPEs)",
+        "description": "Special Purpose Entities (SPEs) dataset provide detailed information on cross-border transactions and financial positions related to resident SPEs. ",
+        "structure_id": "DSD_BOP",
+        "dimensions": [
+            "COUNTRY",
+            "BOP_ACCOUNTING_ENTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "EER": {
+        "name": "Effective Exchange Rate (EER)",
+        "description": "The Effective Exchange Rate (EER) dataset includes annual, quarterly and monthly nominal and real effective exchange rates by economy.  Nominal effective exchange rates (NEERs) measure the value of a country's currency in relation to a weighted average of the currency values of their major trading partners. Real effective exchange rates (REERs) adjust the NEER to account for a country's inflation rate in relation to the weighted inflation rate of their major trading partners. \n\nThe IMF publishes NEERs and REERs for approximately 90 IMF member countries that account for the vast share of global international trade. These statistics help policymakers and analysts assess the competitiveness of a country's exports, monitor currency trends, evaluate the impact of exchange rate changes on trade flows, and inform decisions regarding monetary policy, exchange rate management, and international trade. \n\nThe EERs are calculated by IMF staff using exchange rate information, consumer price indexes received from national authorities and international trade weights. These weights are calculated as three-year averages of annual data available from official sources on trade, tourism and manufacturing collected from the United Nations (UN), Organization for Economic Co-operation and Development (OECD), World Bank, World Tourism Organization (UNWTO), United Nations Industrial Development Organization (UNIDO).",
+        "structure_id": "DSD_EER",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "IIPCC": {
+        "name": "Currency Composition of the International Investment Position (IIPCC)",
+        "description": "The Currency Composition of International Investment Positions dataset provides a snapshot of the currency breakdown of a country's foreign financial assets and liabilities at a specific date. This includes debt, financial derivatives, and reserve-related assets and liabilities, categorized by sector and currency (domestic, US dollar, Euro, Yen, and others). This data complements the standard International Investment Position (IIP) statistics.",
+        "structure_id": "DSD_IIPCC",
+        "dimensions": [
+            "COUNTRY",
+            "BOP_ACCOUNTING_ENTRY",
+            "INDICATOR",
+            "CURRENCY",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FSIBSIS": {
+        "name": "Financial Soundness Indicators (FSI), Balance Sheet, Income Statement and Memorandum Series",
+        "description": "The Financial Soundness Indicators (FSIs), developed by the IMF together with the international community, are aimed at supporting macroprudential analysis—the surveillance and assessment of the strengths and vulnerabilities of financial systems. FSIs are macroprudential statistics aimed at filling the gap between macroeconomic statistics and micro-prudential data. These indicators, derived from balance sheet and income statement items, provide insights into the financial performance and position of key sectors within the financial system. Core indicators are essential for all countries, while additional indicators provide more detailed insights into financial stability.",
+        "structure_id": "DSD_FSIBSIS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_SSUC": {
+        "name": "GFS Statement of Sources and Uses of Cash",
+        "description": "The Government Finance Statistics (GFS) includes a cash‐based summary showing how a government obtains and uses its cash resources over a reporting period. This covers inflows (e.g., tax receipts, grants, borrowings) and outflows (e.g., operating expenses, loan repayments), providing insight into the government’s liquidity and financing needs.",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ITG_WCA": {
+        "name": "International Trade in Goods, World and Country Aggregates",
+        "description": "The dataset includes seasonally adjusted exports of goods aggregated for regions and the world.",
+        "structure_id": "DSD_ITG_WCA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "QNEA": {
+        "name": "National Economic Accounts (NEA), Quarterly Data",
+        "description": "This dataset provides a snapshot of the economic activity of various countries on a quarterly basis.  It offers quarterly measurements of key indicators like Gross Domestic Product (GDP), consumption, investment, government spending, and foreign trade.  Quarterly estimates are disseminated on non-seasonally adjusted and seasonally adjusted bases.  ",
+        "structure_id": "DSD_QNEA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "PRICE_TYPE",
+            "S_ADJUSTMENT",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_CBS": {
+        "name": "Monetary and Financial Statistics (MFS), Central Bank Data",
+        "description": "The Monetary and Financial Statistics (MFS), Central Bank dataset offers an analytical perspective on the central bank’s balance sheet, focusing on the monetary base and the central bank’s financial relationships with other economic sectors and nonresidents.",
+        "structure_id": "DSD_MFS_CBS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FSIC": {
+        "name": "Financial Soundness Indicators (FSI), Core and Additional Indicators",
+        "description": "The Financial Soundness Indicators (FSIs), developed by the IMF together with the international community, are aimed at supporting macroprudential analysis—the surveillance and assessment of the strengths and vulnerabilities of financial systems. FSIs are macroprudential statistics aimed at filling the gap between macroeconomic statistics and micro-prudential data. FSIs are categorized into \"core\" and \"additional\" indicators. Core indicators are essential for all countries, while additional indicators provide more detailed insights into financial stability.",
+        "structure_id": "DSD_FSIC",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "WPCPER": {
+        "name": "Crypto-based Parallel Exchange Rates (Working Paper dataset WP-CPER)",
+        "description": "This dataset provides a cross-country indicator of parallel exchange rates based on crypto markets. Parallel exchange rates are measured as the price of bitcoin on the local market relative to the U.S. market. Suggested citation: Graf von Luckner, C., Koepke, R., & Sgherri, S. (2024). “Crypto as a Marketplace for Capital Flight.” IMF Working Paper No. 2024/133. International Monetary Fund.",
+        "structure_id": "DSD_WPCPER",
+        "dimensions": [
+            "CURRENCY",
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "WHDREO": {
+        "name": "Western Hemisphere Regional Economic Outlook (WHDREO)",
+        "description": "The WHD Regional Economic Outlook (REO) provides information on recent economic developments and prospects for countries in the Western Hemisphere. Data for the Western Hemisphere REO are prepared in conjunction and are consistent with the semi-annual World Economic Outlook (WEO) exercises. REO aggregate data may differ from WEO aggregates due to differences in group membership. Composite data for country groups are weighted averages of data for individual countries. Arithmetic weighted averages are used for all concepts except for inflation and broad money, for which geometric averages are used. PPP GDP weights from the WEO database are used for the aggregation of real GDP growth, real non-oil GDP growth, real per capita GDP growth, investment, national savings, broad money, claims on the nonfinancial private sector, and real and nominal effective exchange rates. Aggregates for other concepts are weighted by GDP in U.S. dollars at market exchange rates.",
+        "structure_id": "DSD_WHDREO",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FD": {
+        "name": "Fiscal Decentralization (FD)",
+        "description": "The Fiscal Decentralization dataset includes fiscal decentralization indicators for a sample of IMF member countries.  The following indicators are included in the dataset: Revenue and Expenditure Decentralization Shares; Transfer dependency and Vertical Fiscal Imbalances; Deficit and Debt; Allocation of expenditure (economic classification); Allocation of expenditure (functional classification); Allocation of non-Tax Revenues; and Allocation of Taxes.",
+        "structure_id": "DSD_FD",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "SECTOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FAS": {
+        "name": "Financial Access Survey (FAS)",
+        "description": "The Financial Access Survey (FAS) dataset includes annual statistics on financial service access and usage. Selected data series are disaggregated by gender (male and female), the type of financial service provider (e.g., commercial banks, credit unions, and microfinance institutions) and the type of customer (e.g., households and SMEs). ",
+        "structure_id": "DSD_FAS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "LS": {
+        "name": "Labor Statistics (LS)",
+        "description": "Labor Force Statistics provide information on various aspects of labor markets including employment rates, unemployment rates, labor force participation. Data are obtained from national statistical organizations.  The data are used by policymakers, researchers, and analysts to understand labor market conditions, identifying trends, and making informed decisions related to economic development, social policies, and labor force planning.",
+        "structure_id": "DSD_LS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ISORA_2018_DATA_PUB": {
+        "name": "ISORA 2018 Data",
+        "description": "ISORA data for FY2016 and FY2017",
+        "structure_id": "DSD_ISORA_PUBLISHED",
+        "dimensions": [
+            "JURISDICTION",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_OFC": {
+        "name": "Monetary and Financial Statistics (MFS), Other Financial Corporations",
+        "description": "The Monetary and Financial Statistics (MFS), Other Financial Corporations (OFCs) dataset presents the balance sheet of OFCs highlighting their financial linkages with other economic sectors and nonresidents.",
+        "structure_id": "DSD_MFS_OFC",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FA": {
+        "name": "Fund Accounts (FA)",
+        "description": "The Fund Accounts dataset provides information on IMF member countries' transactions with, and accounts with the Fund. ",
+        "structure_id": "DSD_FA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_NSRF": {
+        "name": "Monetary and Financial Statistics (MFS),  Non-Standard Data",
+        "description": "The Monetary and Financial Statistics (MFS), Non-standard dataset provides discontinued, vintage country-reported financial data that are not harmonized and use country-specific terms.",
+        "structure_id": "DSD_MFS_NSRF",
+        "dimensions": [
+            "COUNTRY",
+            "MFS_SRVY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_COFOG": {
+        "name": "GFS Government Expenditures by Function",
+        "description": "The Government Finance Statistics (GFS) employs the Classification of the Functions of Government (COFOG) to group government expenditure by the purpose for which funds are used (e.g., health, education, defense). It provides an internationally standardized view of public spending priorities, facilitating comparability and policy analysis.",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MCDREO": {
+        "name": "Middle East and Central Asia Regional Economic Outlook (MCDREO) ",
+        "description": "The Middle East and Central Asia Department Regional Economic Outlook (MCDREO) provides information on recent economic developments and prospects for 32 countries and territories: Afghanistan, Algeria, Armenia, Azerbaijan, Bahrain, Djibouti, Egypt, Georgia, Islamic Republic of Iran, Iraq, Jordan, Kazakhstan, Kuwait, Kyrgyz Republic, Lebanon, Libya, Mauritania, Morocco, Oman, Pakistan, Qatar, Saudi Arabia, Somalia, Sudan, Syrian Arab Republic, Tajikistan, Tunisia, Turkmenistan, United Arab Emirates, Uzbekistan, West Bank and Gaza, and Yemen. These countries and territories are divided into two main nonoverlapping groups, based on export earnings, namely (1) oil exporters; and (2) oil importers. The oil importers group comprises (1) emerging market and middle-income countries (EM&MI) and (2) low-income countries (LICs) based on the income level. Additional analytical and regional groups might be used to provide a more granular breakdown for analysis and continuity.",
+        "structure_id": "DSD_MCDREO",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FDI": {
+        "name": "Financial Development Index (FDI)",
+        "description": "The dataset contains nine indices that summarize how developed financial institutions and financial markets  are in terms of their depth, access, and efficiency. These indices are aggregated into an  overall index of financial development. With the coverage of over 180 countries on annual frequency  from 1980 onwards, the database should offer a useful analytical tool for researchers and  policy makers.",
+        "structure_id": "DSD_FDI",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "EQ": {
+        "name": "Export Quality (EQ)",
+        "description": "This dataset provides export quality indicators for over 800 products across 166 countries from 1963 to 2014, resulting in over 1.7 million observations.  Higher index values indicate higher quality, and the index is normalized with a value of 1 representing the 90th percentile of export quality among all exporters (the world frontier). Data can be aggregated at various levels, including by product according to the Standard International Trade Classification (SITC) up to the 4-digit level, by Broad Economic Categories (BEC) up to the 3-digit level, and by aggregate sectors such as Agriculture, Commodities, and Manufactures.",
+        "structure_id": "DSD_EQ",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "PRODUCT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "FM": {
+        "name": "Fiscal Monitor (FM)",
+        "description": "The Fiscal Monitor surveys and analyzes the latest public finance developments, it updates fiscal implications of the crisis and medium-term fiscal projections, and assesses policies to put public finances on a sustainable footing.",
+        "structure_id": "DSD_FM",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "HPD": {
+        "name": "Historical Public Debt (HPD)",
+        "description": "The Historical Public Debt Database contains unbalanced panel data on Gross Domestic Product, Gross Government Debt, and Debt to GDP Ratio for 187 countries. The series spans the years 1800 through 2015 although each country’s data depends on its date of independence and data availability.",
+        "structure_id": "DSD_HPD",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_IR": {
+        "name": "Monetary and Financial Statistics (MFS), Interest Rate",
+        "description": "The Monetary and Financial Statistics (MFS), Interest Rates dataset presents country-specific interest rate data across sectors and instruments, based on nationally defined methodologies.",
+        "structure_id": "DSD_MFS_IR",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ANEA": {
+        "name": "National Economic Accounts (NEA), Annual Data",
+        "description": "This dataset presents national, official estimates of annual expenditure-based Gross Domestic Product (GDP), by economy.   Estimates are presented in nominal terms (current prices) and volume terms (with the effect of price changes removed). ",
+        "structure_id": "DSD_ANEA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "PRICE_TYPE",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "WEO": {
+        "name": "World Economic Outlook (WEO)",
+        "description": "The World Economic Outlook (WEO) database is created during the biannual WEO exercise, which begins in January and June of each year and results in the April and September/October WEO publication. Selected series from the publication are available in a database format. ",
+        "structure_id": "DSD_WEO",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "QGFS": {
+        "name": "Quarterly Government Finance Statistics (QGFS)",
+        "description": "The Government Finance Statistics (GFS) includes government revenues and expenditures, government net lending / net borrowing (the surplus / deficit) financing transactions and balance sheet data on government assets and liabilities. Statistics are available for different levels of government including budgetary central government, central government and general government.",
+        "structure_id": "DSD_QGFS",
+        "dimensions": [
+            "COUNTRY",
+            "ACCOUNTS",
+            "SECTOR",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "PIP": {
+        "name": "Portfolio Investment Positions by Counterpart Economy (formerly CPIS)",
+        "description": "The Portfolio Investment Positions by Counterpart Economy dataset (formerly Coordinated Portfolio Investment Survey, or CPIS) is a voluntary data collection exercise conducted under the auspices of the IMF. To participate, an economy provides data on its holdings of portfolio investment securities (data are separately requested for equity and investment fund shares, long-term debt instruments, and short-term debt instruments).",
+        "structure_id": "DSD_PIP",
+        "dimensions": [
+            "COUNTRY",
+            "ACCOUNTING_ENTRY",
+            "INDICATOR",
+            "SECTOR",
+            "COUNTERPART_SECTOR",
+            "COUNTERPART_COUNTRY",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_ODC": {
+        "name": "Monetary and Financial Statistics (MFS), Other Depository Corporations",
+        "description": "The Monetary and Financial Statistics (MFS), Other Depository Corporations (ODCs) dataset presents the sectoral balance sheet of the ODCs highlighting the liabilities of ODCs sector that are included in broad money and financial linkages of the sector with other economic sectors and nonresidents.",
+        "structure_id": "DSD_MFS_ODC",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "BOP_AGG": {
+        "name": "Balance of Payments and International Investment Position Statistics (BOP/IIP), World and Country Group Aggregates",
+        "description": "The World and Country Group Aggregates (historically called BOPSY) is an annual publication, released each November, of major balance of payments and international investment position components for countries, country groups, and the world.",
+        "structure_id": "DSD_BOP_AGG",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "COFER": {
+        "name": "Currency Composition of Official Foreign Exchange Reserves (COFER)",
+        "description": "The Currency Composition of Official Foreign Exchange Reserves (COFER) dataset includes official foreign exchange reserves by currency.  The currencies identified in the COFER dataset are: U.S. dollar, Pound sterling, Japanese yen, Swiss francs, Canadian dollar, Australian dollar, Chinese renminbi, and Euro.  All other currencies are included in the category of “other currencies.”  Prior to the introduction of the Euro in 1999, several European currencies were separately identified in COFER: European Currency Unit, Deutsche mark, French franc, and the Netherlands guilder.\n\nCOFER data are reported to the IMF on a voluntary and confidential basis by central banks from over 140 economies. COFER data for individual countries are strictly confidential. At present there are 149 reporters, consisting of the monetary authorities of IMF member countries and non-IMF member countries/economies; and of other foreign exchange reserves holding entities. COFER includes a list of the participating economies that agreed to disclose their names. SDDS Plus adherents are required to participate in the COFER database and to disclose their participation. The data published on this website are aggregates for each currency for the world, advanced economies, and emerging markets and developing economies. Starting 2015Q2, the IMF decided to cease the publication of the latter two geographical breakdowns to avoid possible residual disclosure of individual data with the release of the list of countries who have agreed to publish their names as COFER reporters.   Estimates of Official Foreign Exchange Reserves are critical for the smooth functioning of national and international financial systems.  \n\nForeign Exchange Reserves (FXR) data reported to COFER are consistent with the \"other reserve assets\" classification of reserve assets as outlined in the sixth edition of the IMF's Balance of Payments and International Investment Position Manual (BPM6). They are reserve assets other than monetary gold, SDRs, and reserve position in the IMF; and consist of the monetary authorities' claims on nonresidents in the form of: Currency and deposits, Securities, Financial derivatives, and Other claims.  \n     \nAllocated Foreign Exchange Reserves: in the context of COFER, Allocated FXR is the COFER category in which reporting countries identify and report the currency of denomination of their FXR.\n\nUnallocated Foreign Exchange Reserves: in the context of COFER, Unallocated FXR is a residual COFER category consisting of the difference between total FXR sourced from the International Financial Statistics (IFS) and the total allocated reserves in COFER. It has two components: (i) the total FXR of nonreporting countries; and (ii) the discrepancy (if any) between the IFS total FXR of COFER-reporting countries and the total allocated FXR in COFER.",
+        "structure_id": "DSD_COFER",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FXR_CURRENCY",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_SOEF": {
+        "name": "GFS Statement of Other Economic Flows",
+        "description": "The Government Finance Statistics (GFS) captures changes in the volume or value of assets and liabilities that do not arise from transactions (e.g., valuation changes, reclassifications, and other events). This statement, as per GFSM 2014, is essential for understanding fluctuations in government’s financial position outside regular revenue and expense flows.",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "SDG": {
+        "name": "IMF Reported SDG Data",
+        "description": "This dataset contains data from the International Monetary Fund (IMF) that is used to monitor progress on the Sustainable Development Goals (SDGs). It includes key economic and financial indicators, structured according to the UN's Global Data Structure Definitions (DSD) for easy integration and analysis.",
+        "structure_id": "SDG",
+        "dimensions": [
+            "FREQ",
+            "REPORTING_TYPE",
+            "SERIES",
+            "REF_AREA",
+            "SEX",
+            "AGE",
+            "URBANISATION",
+            "INCOME_WEALTH_QUANTILE",
+            "EDUCATION_LEV",
+            "OCCUPATION",
+            "CUST_BREAKDOWN",
+            "COMPOSITE_BREAKDOWN",
+            "DISABILITY_STATUS",
+            "ACTIVITY",
+            "PRODUCT",
+            "TIME_PERIOD"
+        ]
+    },
+    "IRFCL": {
+        "name": "International Reserves and Foreign Currency Liquidity (IRFCL)",
+        "description": "The International Reserves and Foreign Currency Liquidity (IRFCL, or the “Reserves Data Template”) dataset includes data on the amount and composition of countries’ official reserve assets, other foreign currency assets held by monetary authorities and central governments, and short-term foreign currency obligations and related activities of monetary authorities and central governments that can lead to drains on official reserves and other foreign currency assets. This website re-disseminates IMF member countries' data on international reserves and foreign currency liquidity in a common template and in a common currency (the U.S. dollar). Historical data by country are also available. Please note that the re-dissemination of the template data by the Fund does not constitute endorsement of the quality of the data by the Fund.",
+        "structure_id": "DSD_IRFCL_PUB",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "SECTOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_FMP": {
+        "name": "Monetary and Financial Statistics (MFS): Financial Market Prices",
+        "description": "The Monetary and Financial Statistics (MFS), Financial Market Prices dataset presents country-specific information on share prices, providing insights into equity markets. These data are compiled using nationally defined methodologies and are not based on a standardized definition across countries.",
+        "structure_id": "DSD_FMP",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "PI": {
+        "name": "Production Indexes (PI)",
+        "description": "The Production Indexes dataset presents data on industrial production, construction, and retail sales indexes. These statistics are widely used to monitor economic activity. ",
+        "structure_id": "DSD_IPI",
+        "dimensions": [
+            "COUNTRY",
+            "PRODUCTION_INDEX",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ITS": {
+        "name": "International Trade in Services (ITS)",
+        "description": "Using the IMF’s Balance of Payments Statistics database as a source, the statistics provided here are the first of its kind providing a compilation of detailed historic and new data on world trade in services. This can be a useful resource for researchers, policymakers and businesses for decisions in macroeconomic competitiveness and understanding how technological forces are affecting rapid resource reallocation in specific sectors. The dataset covers exports of services from 1970 to 2014. See reference Loungani, Mishra, Papageorgiou, Wang (2017). There is ongoing work to extend the dataset, which will be made available in the future.",
+        "structure_id": "DSD_ITS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ISORA_LATEST_DATA_PUB": {
+        "name": "ISORA Latest Data",
+        "description": "ISORA data beginning FY2018 to current",
+        "structure_id": "DSD_ISORA_PUBLISHED",
+        "dimensions": [
+            "JURISDICTION",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "IL": {
+        "name": "International Liquidity (IL)",
+        "description": "International liquidity consists of all the resources that are available to the monetary authorities of countries for the purpose of meeting balance of payments financing needs. ",
+        "structure_id": "DSD_IL",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "AFRREO": {
+        "name": "Sub-Saharan Africa Regional Economic Outlook (AFRREO)",
+        "description": "Sub-Saharan Africa Regional Economic Outlook (REO) provides information on recent economic developments and prospects for countries in sub-Saharan Africa. Data for the REO for sub-Saharan Africa are prepared in conjunction with the semi-annual World Economic Outlook (WEO) exercises, spring and fall.",
+        "structure_id": "DSD_AFRREO",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "DIP": {
+        "name": "Direct Investment Positions by Counterpart Economy (formerly CDIS)",
+        "description": "\t The Direct Investment Positions by Counterpart Economy dataset (formerly Coordinated Direct Investment Survey, or CDIS) includes (i) inward foreign direct investment positions by instrument (equity or debt) and by economy of immediate investor and (ii) outward direct investment positions by instrument (equity or debt) and by economy of immediate investment. In most instances the database contains separate data on net equity and net debt positions, as well as separate data on financial companies and fellow enterprises.",
+        "structure_id": "DSD_DIP",
+        "dimensions": [
+            "COUNTRY",
+            "DV_TYPE",
+            "INDICATOR",
+            "COUNTERPART_COUNTRY",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "PI_WCA": {
+        "name": "Production Indexes, World and Country Group Aggregates",
+        "description": "The Production Indexes dataset presents data on industrial production, construction, and retail sales indexes. These statistics are widely used to monitor economic activity.",
+        "structure_id": "DSD_IPI",
+        "dimensions": [
+            "COUNTRY",
+            "PRODUCTION_INDEX",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "CTOT": {
+        "name": "Commodity Terms of Trade (CTOT)",
+        "description": "CTOT is a comprehensive database of country-specific commodity price indices for 182 economies covering the period 1962-2018. For each country, the change in the international price of up to 45 individual commodities is weighted using commodity-level trade data. The database includes a commodity terms-of-trade index—which proxies the windfall gains and losses of income associated with changes in world prices—as well as additional country-specific series, including commodity export and import price indices. It includes indices that are constructed using, alternatively, fixed weights (based on average trade flows over several decades) and time-varying weights (which can account for time variation in the mix of commodities traded and the overall importance of commodities in economic activity)",
+        "structure_id": "DSD_CTOT",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "WGT_TYPE",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "TAXFIT": {
+        "name": "Tax and Benefits Analysis Tool (TAXFIT)",
+        "description": "TaxFit is a microsimulation model that computes taxes and benefits— including income taxes, social security contributions, social assistance, care, family, and in-work-benefits — for households whose characteristics are defined by user provided information about gross incomes and family structures. Users can compare the burden and generosity of the tax and benefits systems across 16 Emerging Market and Developing Economies, as well as indicators of policy-induced (dis)incentives to formal work, which have a gender focus. ",
+        "structure_id": "DSD_TAXFIT",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "LEGAL_SPOUSE_PRESENCE",
+            "NUMBER_OF_CHILDREN",
+            "PRINCIPAL_EMPLOYMENT_EARNINGS",
+            "SPOUSE_EMPLOYMENT_EARNINGS",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "NSDP": {
+        "name": "National Summary Data Page (NSDP)",
+        "description": "Dataset of key macroeconomic indicators that participating countries commit to publishing on the National Summary Data Page (NSDP).",
+        "structure_id": "DSD_NSDP",
+        "dimensions": [
+            "COUNTRY",
+            "NSDP_CAT",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "CPI": {
+        "name": "Consumer Price Index (CPI)",
+        "description": "The Consumer Price Index (CPI) dataset includes the national consumer price indexes by economy. In addition to the all items, headline index, detailed indexes by Division (e.g. Food and Non-alcoholic beverages, Clothing, etc.), their associated weights, and contributions to national annual inflation are published where available. In addition to the national CPIs, the CPI dataset includes the Harmonised Indices of Consumer Prices (HICPs) compiled by Eurostat for Europe. Consumer price indexes measure the relative changes over time in the prices of goods and services purchased by households, which households use directly, or indirectly, to satisfy their own needs and wants.",
+        "structure_id": "DSD_CPI",
+        "dimensions": [
+            "COUNTRY",
+            "INDEX_TYPE",
+            "COICOP_1999",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ISORA_2016_DATA_PUB": {
+        "name": "ISORA 2016 Data",
+        "description": "ISORA data for FY2014 and FY2015",
+        "structure_id": "DSD_ISORA_PUBLISHED",
+        "dimensions": [
+            "JURISDICTION",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_FC": {
+        "name": "Monetary and Financial Statistics (MFS), Financial Corporations",
+        "description": "The Monetary and Financial Statistics (MFS), Financial Corporations dataset consolidates balance sheets of central banks, ODCs, and OFCs to analyze net financing by financial corporations to nonresidents and domestic nonfinancial sectors.",
+        "structure_id": "DSD_MFS_FCS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_SOO": {
+        "name": "GFS Statement of Operations ",
+        "description": "The Government Finance Statistics (GFS) includes a comprehensive report of all government revenues and expenditures, the government net lending / net borrowing (i.e. the government surplus / deficit) as well as the transactions in financial assets and liabilities that explain how the deficit / surplus is financed.",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MPFT": {
+        "name": "Monetary Policy Frameworks Toolkit (MPFT)",
+        "description": "Monetary policy framework comprises the structures in place that enable and guide the conduct of monetary policy. In this project, we provide a multidimensional characterization of monetary policy frameworks across three pillars: Independence and Accountability, Policy and Operational Strategy, and Communications (IAPOC). This database covers 50 advanced economies, emerging markets, and low-income developing countries, from 2007 to 2018 (being extended).",
+        "structure_id": "DSD_MPFT",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "IIP": {
+        "name": "International Investment Position (IIP)",
+        "description": "The International Investment Position (IIP) is a statistical statement that shows at a point in time the value of financial assets of residents of an economy that are claims on nonresidents or are gold bullion held as reserve assets; and the liabilities of residents of an economy to nonresidents.  ",
+        "structure_id": "DSD_BOP",
+        "dimensions": [
+            "COUNTRY",
+            "BOP_ACCOUNTING_ENTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_SFCP": {
+        "name": "GFS Stocks and Flows by Counterparty",
+        "description": "The Government Finance Statistics (GFS) includes the government transactions and stock positions in financial assets and liabilities by counterparty. The counterpart sectors include nonfinancial corporations, the central bank, deposit taking corporations, international organizations, external (foreign) governments, external financial corporations and others",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_MA": {
+        "name": "Monetary and Financial Statistics (MFS), Monetary Aggregates",
+        "description": "The Monetary and Financial Statistics (MFS), Monetary Aggregates dataset presents monetary aggregates based on standardized SRF data, while also reflecting country-specific components aligned with national definitions.",
+        "structure_id": "DSD_MFS_MA",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GFS_BS": {
+        "name": "GFS Balance Sheet",
+        "description": "The Government Finance Statistics (GFS) includes a statement of the government’s stocks of assets, liabilities, and net worth. As recommended by GFSM 2014, it reflects the financial position at the end of the accounting period and helps evaluate sustainability and the capacity to meet current and future financial obligations.",
+        "structure_id": "DSD_GFS",
+        "dimensions": [
+            "COUNTRY",
+            "SECTOR",
+            "GFS_GRP",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "PCPS": {
+        "name": "Primary Commodity Price System (PCPS)",
+        "description": "Indices of market prices for fuel and non-fuel commodities, and actual market prices for fuel and non-fuel commodities.",
+        "structure_id": "DSD_PCPS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "DATA_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ER": {
+        "name": "Exchange Rates (ER)",
+        "description": "This dataset contains historical exchange rate data between the US Dollar, Special Drawing Rights (SDR), Euro, and various national currencies. It includes both period average and end-of-period exchange rates.",
+        "structure_id": "DSD_ER_PUB",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "PPI": {
+        "name": "Producer Price Index (PPI)",
+        "description": "Producer Price Indexes (PPI) measures the average change over time in the selling prices received by domestic producers for their output. ",
+        "structure_id": "DSD_PPI",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "BOP": {
+        "name": "Balance of Payments (BOP)",
+        "description": "The Balance of Payments (BOP) is a statistical statement that summarizes transactions between residents and nonresidents during a period. It consists of the goods and services account, the primary income account, the secondary income account, the capital account, and the financial account.",
+        "structure_id": "DSD_BOP",
+        "dimensions": [
+            "COUNTRY",
+            "BOP_ACCOUNTING_ENTRY",
+            "INDICATOR",
+            "UNIT",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "SRD": {
+        "name": "Structural Reform Database (SRD)",
+        "description": "The SRD contains data on a wide range of structural policies across different countries. These policies are things that affect how markets function, like labor laws, regulations on businesses, and trade policies.",
+        "structure_id": "DSD_SRD",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ED": {
+        "name": "Export Diversification (ED)",
+        "description": "Covers 200 countries with data from 1962 to 2014. It has three main indicators: the Export Diversification Index, which can be disaggregated into sub-indices covering the Extensive Margin and the Intensive Margin. As these are Theil indices, higher values for all three correspond to lower export diversification.",
+        "structure_id": "DSD_ED",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "IMTS": {
+        "name": "International Trade in Goods (by partner country) (IMTS)",
+        "description": "The International trade in goods by partner country dataset (formerly Direction of Trade Statistics (DOTS)) includes goods (merchandise) export and import statistics disaggregated according to a country's trading partners. ",
+        "structure_id": "DSD_IMTS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "COUNTERPART_COUNTRY",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "GDD": {
+        "name": "Global Debt Database (GDD)",
+        "description": "The Global Debt Database (GDD) is the result of a multiyear investigative process that started with the October 2016 Fiscal Monitor. The dataset comprises total gross debt of the (private and public) nonfinancial sector for an unbalanced panel of 190 advanced economies, emerging market economies and low-income countries, dating back to 1950.",
+        "structure_id": "DSD_GDD",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "ITG": {
+        "name": "International Trade in Goods (ITG)",
+        "description": "Trade in goods includes all goods which add to, or subtract from, the stock of material resources of a country by entering its economic territory (imports) or leaving it (exports). Goods are physical, produced items over which ownership rights can be established and whose economic ownership can be passed from one institutional unit to another by engaging in transactions. Goods being transported through a country or temporarily admitted or withdrawn (except for goods for inward or outward processing) are not included.",
+        "structure_id": "DSD_ITG",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "MFS_DC": {
+        "name": "Monetary and Financial Statistics (MFS), Depository Corporations",
+        "description": "The Monetary and Financial Statistics (MFS), Depository Corporations dataset consolidates central bank and other depository corporations balance sheets to analyze broad money and depository corporations' financial linkages with other economic sectors and nonresidents.",
+        "structure_id": "DSD_MFS_DCS",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "TYPE_OF_TRANSFORMATION",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "APDREO": {
+        "name": "Asia and Pacific Regional Economic Outlook (APDREO)",
+        "description": "APD Regional Economic Outlook (REO) provides information on recent economic developments and prospects for countries in Asia and the Pacific. Data for the REO for Asia and Pacific is prepared in conjunction with the semi-annual World Economic Outlook (WEO) exercises, spring and fall. Data are consistent with the projections underlying the WEO. REO aggregate data may differ from WEO aggregates due to differences in group membership. Composite data for country groups are weighted averages of data for individual countries. Arithmetic weighted averages are used for all concepts except for inflation and broad money, for which geometric averages are used. PPP GDP weights from the WEO database are used for the aggregation of real GDP growth, real non-oil GDP growth, real per capita GDP growth, investment, national savings, broad money, claims on the nonfinancial private sector, and real and nominal effective exchange rates. Aggregates for other concepts are weighted by GDP in U.S. dollars at market exchange rates.",
+        "structure_id": "DSD_APDREO",
+        "dimensions": [
+            "COUNTRY",
+            "INDICATOR",
+            "FREQUENCY",
+            "TIME_PERIOD"
+        ]
+    },
+    "VWEO": {
+        "name": "Vintage World Economic Outlook (VWEO)",
+        "description": "This *custom* Vintage World Economic Outlook (VWEO) WEO retriever provides access to all published versions of the World Economic Outlook (WEO), allowing users to track changes in economic forecasts and data revisions over time. This dataset retriever is particularly useful for researchers, policymakers and practitioners of economics who are interested in understanding how economic projections have evolved in response to changing global conditions.",
+        "structure_id": "None",
+        "dimensions": [
+            "VINTAGE",
+            "COUNTRY",
+            "INDICATOR"
+        ]
+    }
+}
