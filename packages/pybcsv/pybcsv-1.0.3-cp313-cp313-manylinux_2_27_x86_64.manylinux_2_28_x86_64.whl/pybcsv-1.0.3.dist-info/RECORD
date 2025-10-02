@@ -1,0 +1,12 @@
+_bcsv.cpython-313-x86_64-linux-gnu.so,sha256=Ui6sA5wsDdcDHKi2yHI5Ls0i12BXmyUtE5CK41Osd8I,1205944
+pybcsv/__init__.py,sha256=Ct6stqANtvFB_9A-hxo7tXkmCBViEYkvbNZjvoLbjcc,2101
+pybcsv/__version__.py,sha256=nHXUhDPCTg1EmunZuK3DpLthLNCLVLDTgFPY_J-9c6g,629
+pybcsv/_version.py,sha256=WOzIl_T_9QDLo877dup6ky_xop9-2twN9Wx8668cjQg,712
+pybcsv/bindings.cpp,sha256=MXXkp2DHrDaqCBrJRtRd9TPOELaS6yjFB8KwOWpNh8Q,21394
+pybcsv/pandas_utils.py,sha256=tk_1mcvSW4cVVy2Oi8DCgMgIcYNPXzhmXX843FjPNII,17682
+pybcsv/pandas_utils_original.py,sha256=LJ9fKueWDsrKGv2-DjkgDoXjEG4qxKZgU4asdIcwR2c,9786
+pybcsv/py.typed,sha256=4tmAoWDBtWZvsOGzZY3EzGZhnuypGt90IN7GZkrHKHc,186
+pybcsv-1.0.3.dist-info/METADATA,sha256=y5KnD0aY2zjclL0PE4iWF7g2pFEbTPqqIzVS57HbDFw,9851
+pybcsv-1.0.3.dist-info/WHEEL,sha256=FGhoiLBD6z3eO88tnYRS0TgLaWveAr5uyXIqBlx6mno,152
+pybcsv-1.0.3.dist-info/top_level.txt,sha256=YFJL_bVqCKct__1nMNlly_5s8R6yvypJw7QHbN6h32E,13
+pybcsv-1.0.3.dist-info/RECORD,,
