@@ -1,0 +1,10 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="error_logger",
+    version="0.2.0",
+    description="Automatic error logging for Kaggle kernels",
+    author="Brij Patel",
+    packages=find_packages(),
+    python_requires=">=3.6",
+)
