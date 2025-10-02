@@ -1,0 +1,12 @@
+aiohttp
+httpx
+openai
+
+[dev]
+pytest
+pytest-asyncio
+black
+flake8
+mypy
+types-aiohttp
+types-httpx
