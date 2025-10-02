@@ -1,0 +1,10 @@
+setup.py
+classifierPratik/__init__.py
+classifierPratik/classifierPratikFunctions.py
+classifierPratik.egg-info/PKG-INFO
+classifierPratik.egg-info/SOURCES.txt
+classifierPratik.egg-info/dependency_links.txt
+classifierPratik.egg-info/requires.txt
+classifierPratik.egg-info/top_level.txt
+tests/__init__.py
+tests/test_classifier.py
