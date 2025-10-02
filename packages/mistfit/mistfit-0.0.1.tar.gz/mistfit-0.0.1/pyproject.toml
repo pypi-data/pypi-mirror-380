@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69", "setuptools-scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mistfit"
+dynamic = ["version"]
+description = "Fit MIST models using MiniMINT with dynesty nested sampling (photometry + spectroscopic constraints)."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Manuel Cavieres" }]
+keywords = ["MIST", "stellar", "astrophysics", "dynesty", "minimint", "isochrones"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Astronomy"
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.10",
+  "astropy>=5",
+  "dynesty>=2.1",
+  "minimint>=0.5",
+  "matplotlib>=3.6",
+  "tqdm>=4.64"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff", "mypy", "build", "twine"]
+plot = ["corner>=2.2"]
+
+[project.urls]
+Homepage = "https://github.com/mncavieres/mistfit"
+Issues   = "https://github.com/mncavieres/mistfit/issues"
+
+[project.scripts]
+mistfit = "mistfit.cli:main"
+mist-fit = "mistfit.cli:main"  # optional alias
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme   = "no-local-version"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools]
+license-files = []

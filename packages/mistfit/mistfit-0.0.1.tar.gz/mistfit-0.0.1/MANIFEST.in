@@ -1,0 +1,2 @@
+include README.md
+recursive-include src/mist_stellar_fitter *.py
