@@ -1,0 +1,11 @@
+pyjwt
+cryptography
+typer
+pyperclip
+
+[dev]
+pytest
+pytest-cov
+fastapi
+uvicorn
+httpx
