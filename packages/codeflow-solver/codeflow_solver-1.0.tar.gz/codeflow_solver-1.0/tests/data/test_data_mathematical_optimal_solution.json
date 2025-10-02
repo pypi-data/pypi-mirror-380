@@ -1,0 +1,133 @@
+{
+  "mathematical_analysis_metadata": {
+    "total_vulnerabilities_|V|": 5,
+    "total_vulnerability_types_|T|": 3,
+    "total_potential_fix_locations_|N|": 9,
+    "optimization_timestamp": "2025-09-06T09:27:35.679711",
+    "mathematical_approach": "Integer Linear Programming Set Cover"
+  },
+  "optimal_solutions_by_vulnerability_type": [
+    {
+      "vulnerability_type_t": "java/XSS",
+      "vulnerability_set_size_|V_t|": 2,
+      "optimal_fix_locations_needed_|x_optimal|": 2,
+      "mathematical_reduction_factor": 1.0,
+      "efficiency_improvement_percent": 0.0,
+      "optimal_fix_locations": [
+        {
+          "rank_in_optimal_solution": 1,
+          "fix_location_ni": {
+            "file_path": "src/main/java/com/example/Controller.java",
+            "line": 45,
+            "column": 20
+          },
+          "vulnerabilities_covered_|Sv_t(ni)|": 1,
+          "total_vulnerabilities_covered_|Sv(ni)|": 1,
+          "covered_vulnerabilities_details": [
+            {
+              "vulnerability_index_j": 0,
+              "file_path": "src/main/java/com/example/Controller.java",
+              "line": 45,
+              "rule_id": "java/XSS",
+              "severity": "high",
+              "message": "Unsanitized input from an HTTP parameter flows into a webpage and can lead to Cross-Site Scripting (XSS)."
+            }
+          ]
+        },
+        {
+          "rank_in_optimal_solution": 2,
+          "fix_location_ni": {
+            "file_path": "src/main/java/com/example/UserService.java",
+            "line": 15,
+            "column": 20
+          },
+          "vulnerabilities_covered_|Sv_t(ni)|": 1,
+          "total_vulnerabilities_covered_|Sv(ni)|": 1,
+          "covered_vulnerabilities_details": [
+            {
+              "vulnerability_index_j": 1,
+              "file_path": "src/main/java/com/example/UserService.java",
+              "line": 22,
+              "rule_id": "java/XSS",
+              "severity": "high",
+              "message": "Another XSS vulnerability in a different location."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vulnerability_type_t": "java/PT",
+      "vulnerability_set_size_|V_t|": 2,
+      "optimal_fix_locations_needed_|x_optimal|": 1,
+      "mathematical_reduction_factor": 2.0,
+      "efficiency_improvement_percent": 50.0,
+      "optimal_fix_locations": [
+        {
+          "rank_in_optimal_solution": 1,
+          "fix_location_ni": {
+            "file_path": "src/main/java/com/example/FileHandler.java",
+            "line": 12,
+            "column": 25
+          },
+          "vulnerabilities_covered_|Sv_t(ni)|": 2,
+          "total_vulnerabilities_covered_|Sv(ni)|": 2,
+          "covered_vulnerabilities_details": [
+            {
+              "vulnerability_index_j": 2,
+              "file_path": "src/main/java/com/example/FileHandler.java",
+              "line": 18,
+              "rule_id": "java/PT",
+              "severity": "medium",
+              "message": "Unsanitized input from an HTTP parameter flows into a file path and can lead to Path Traversal."
+            },
+            {
+              "vulnerability_index_j": 4,
+              "file_path": "src/main/java/com/example/FileHandler.java",
+              "line": 25,
+              "rule_id": "java/PT",
+              "severity": "medium",
+              "message": "Another Path Traversal vulnerability that can be fixed at the same location as the first one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vulnerability_type_t": "javascript/DOMXSS",
+      "vulnerability_set_size_|V_t|": 1,
+      "optimal_fix_locations_needed_|x_optimal|": 1,
+      "mathematical_reduction_factor": 1.0,
+      "efficiency_improvement_percent": 0.0,
+      "optimal_fix_locations": [
+        {
+          "rank_in_optimal_solution": 1,
+          "fix_location_ni": {
+            "file_path": "src/main/webapp/js/app.js",
+            "line": 25,
+            "column": 0
+          },
+          "vulnerabilities_covered_|Sv_t(ni)|": 1,
+          "total_vulnerabilities_covered_|Sv(ni)|": 1,
+          "covered_vulnerabilities_details": [
+            {
+              "vulnerability_index_j": 3,
+              "file_path": "src/main/webapp/js/app.js",
+              "line": 25,
+              "rule_id": "javascript/DOMXSS",
+              "severity": "low",
+              "message": "DOM-based XSS vulnerability detected."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "overall_mathematical_summary": {
+    "total_vulnerabilities_|V|": 5,
+    "total_optimal_fix_locations_|x_optimal|": 4,
+    "overall_reduction_factor": 1.25,
+    "overall_efficiency_percent": 20.0,
+    "mathematical_optimality": "Guaranteed optimal by Integer Linear Programming"
+  }
+}

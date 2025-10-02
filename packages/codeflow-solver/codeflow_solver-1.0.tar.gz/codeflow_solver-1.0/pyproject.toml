@@ -1,0 +1,93 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codeflow-solver"
+version = "1.0"
+description = "Find the minimum number of code fixes to eliminate all vulnerabilities from SARIF scan results using mathematical optimization"
+readme = "README.md"
+requires-python = ">= 3.9"
+authors = [
+    {name = "Amine Boudraa"},
+    {name = "Gianfranco Romani"},
+    {name = "Yassine Ilmi"}
+]
+keywords = ["security", "sarif", "vulnerability", "sast", "static-analysis", "optimization"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "ortools>=9.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/thomsonreuters/codeflow-solver"
+Issues = "https://github.com/thomsonreuters/codeflow-solver/issues"
+
+
+[dependency-groups]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.0.280",
+]
+
+[tool.hatch.envs.default]
+dependencies = []
+
+[tool.hatch.envs.default.scripts]
+format = "ruff format ."
+lint = "ruff check ."
+typecheck = "mypy ."
+test = "pytest"
+cov = "pytest --cov"
+
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codeflow_solver"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "credz*",
+    "*.token",
+    "*.key",
+]
+
+[project.scripts]
+codeflow-solver = "codeflow_solver.cli.main:main"
+
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "B", "A"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/codeflow_solver"]
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "if __name__ == .__main__.:"]
+fail_under = 80

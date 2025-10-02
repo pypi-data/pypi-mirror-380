@@ -1,0 +1,334 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SnykCode",
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "java/XSS",
+              "name": "CrossSiteScripting",
+              "shortDescription": {
+                "text": "Cross-Site Scripting (XSS)"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "java/PT",
+              "name": "PathTraversal",
+              "shortDescription": {
+                "text": "Path Traversal"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "javascript/DOMXSS",
+              "name": "DOMBasedXSS",
+              "shortDescription": {
+                "text": "DOM-based XSS"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "java/XSS",
+          "level": "error",
+          "message": {
+            "text": "Unsanitized input from an HTTP parameter flows into a webpage and can lead to Cross-Site Scripting (XSS)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/com/example/Controller.java"
+                },
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 20,
+                  "endLine": 45,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/Controller.java"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 25,
+                            "endLine": 30,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/Controller.java"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 15,
+                            "endLine": 35,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/Controller.java"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "startColumn": 20,
+                            "endLine": 45,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "java/XSS",
+          "level": "error",
+          "message": {
+            "text": "Another XSS vulnerability in a different location."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/com/example/UserService.java"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 10,
+                  "endLine": 22,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/UserService.java"
+                          },
+                          "region": {
+                            "startLine": 15,
+                            "startColumn": 20,
+                            "endLine": 15,
+                            "endColumn": 35
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/UserService.java"
+                          },
+                          "region": {
+                            "startLine": 22,
+                            "startColumn": 10,
+                            "endLine": 22,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "java/PT",
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from an HTTP parameter flows into a file path and can lead to Path Traversal."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/com/example/FileHandler.java"
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 15,
+                  "endLine": 18,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/FileHandler.java"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 25,
+                            "endLine": 12,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/FileHandler.java"
+                          },
+                          "region": {
+                            "startLine": 18,
+                            "startColumn": 15,
+                            "endLine": 18,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "javascript/DOMXSS",
+          "level": "note",
+          "message": {
+            "text": "DOM-based XSS vulnerability detected."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/webapp/js/app.js"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 5,
+                  "endLine": 25,
+                  "endColumn": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "java/PT",
+          "level": "warning",
+          "message": {
+            "text": "Another Path Traversal vulnerability that can be fixed at the same location as the first one."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/com/example/FileHandler.java"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 10,
+                  "endLine": 25,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/FileHandler.java"
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 25,
+                            "endLine": 12,
+                            "endColumn": 40
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/com/example/FileHandler.java"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "startColumn": 10,
+                            "endLine": 25,
+                            "endColumn": 25
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

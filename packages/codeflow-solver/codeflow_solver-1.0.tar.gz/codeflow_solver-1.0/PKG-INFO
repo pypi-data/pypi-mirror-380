@@ -1,0 +1,155 @@
+Metadata-Version: 2.4
+Name: codeflow-solver
+Version: 1.0
+Summary: Find the minimum number of code fixes to eliminate all vulnerabilities from SARIF scan results using mathematical optimization
+Project-URL: Repository, https://github.com/thomsonreuters/codeflow-solver
+Project-URL: Issues, https://github.com/thomsonreuters/codeflow-solver/issues
+Author: Amine Boudraa, Gianfranco Romani, Yassine Ilmi
+Keywords: optimization,sarif,sast,security,static-analysis,vulnerability
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.9
+Requires-Dist: ortools>=9.0.0
+Description-Content-Type: text/markdown
+
+# CodeFlow Solver
+
+[![PyPI version](https://badge.fury.io/py/codeflow-solver.svg)](https://pypi.org/project/codeflow-solver/)
+[![GitHub](https://img.shields.io/github/license/thomsonreuters/codeflow-solver)](https://github.com/thomsonreuters/codeflow-solver)
+
+## Overview
+
+CodeFlow Solver helps security engineers efficiently fix vulnerabilities by finding the optimal minimum number of code fixes needed to eliminate all vulnerabilities from SARIF scan results. Using mathematical optimization (set cover problem), it determines the most efficient fix strategy - guaranteeing the absolute minimum number of code changes required to address all security issues.
+
+## Installation
+
+### From PyPI
+
+```bash
+pip install codeflow-solver
+```
+
+### From Source
+
+```bash
+git clone https://github.com/thomsonreuters/codeflow-solver.git
+cd codeflow-solver
+uv sync
+uv pip install -e .
+```
+
+## Usage
+
+### CLI Options
+
+```bash
+# Basic usage
+codeflow-solver vulnerabilities.sarif
+
+# Filtering options
+codeflow-solver vulnerabilities.sarif --severity-filter high medium
+codeflow-solver vulnerabilities.sarif --rule-filter java/XSS java/PT
+
+# Export options
+codeflow-solver vulnerabilities.sarif --export              # Detailed solution with vulnerability details
+codeflow-solver vulnerabilities.sarif --minimal-export     # Optimal path with fix locations only
+
+# Quiet mode
+codeflow-solver vulnerabilities.sarif --quiet --minimal-export
+```
+
+### Using as Package
+
+```python
+from codeflow_solver import SarifSetCoverSolver
+
+# Basic usage
+optimizer = SarifSetCoverSolver("vulnerabilities.sarif")
+optimizer.solve_mathematical_optimization()
+
+# With filtering and export
+optimizer = SarifSetCoverSolver(
+    "vulnerabilities.sarif",
+    severity_filter=["high", "medium"],
+    rule_filter=["java/XSS"],
+    export_detailed=True
+)
+optimizer.solve_mathematical_optimization()
+```
+
+### Development Usage
+
+```bash
+cd codeflow-solver
+uv run python -m codeflow_solver.cli.main vulnerabilities.sarif
+```
+
+## Package Structure
+
+```
+src/
+└── codeflow_solver/
+    ├── __init__.py
+    ├── cli/
+    │   ├── __init__.py
+    │   └── main.py             # CLI entry point
+    ├── utils/
+    │   ├── __init__.py
+    │   ├── sarif_parser.py     # SARIF parsing
+    │   ├── severity_mapper.py  # Severity mapping
+    │   └── data_structures.py  # Data classes
+    ├── solver/
+    │   ├── __init__.py
+    │   ├── set_cover_solver.py # Main solver implementation
+    │   └── optimizer.py        # Optimization algorithms
+    ├── set_cover/
+    │   ├── __init__.py
+    │   └── initializer.py      # Set cover initialization
+    └── docs/                   # Documentation
+tests/                          # Test files
+```
+
+## Tests
+
+```bash
+# Run tests
+uv run pytest
+
+# Format and lint
+uv run ruff format .
+uv run ruff check .
+uv run mypy .
+```
+
+## How It Works
+
+CodeFlow Solver uses mathematical optimization to find the minimum set of code changes needed to fix all vulnerabilities:
+
+1. **Parse SARIF results** - Extract vulnerabilities and dataflow paths
+2. **Map coverage** - Identify which fixes eliminate which vulnerabilities
+3. **Optimize** - Use integer programming to find the minimum fix set
+4. **Export** - Generate prioritized fix recommendations
+
+## Repository
+
+**GitHub:** [https://github.com/thomsonreuters/codeflow-solver](https://github.com/thomsonreuters/codeflow-solver)
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository at [github.com/thomsonreuters/codeflow-solver](https://github.com/thomsonreuters/codeflow-solver)
+2. Create a feature branch
+3. Add tests for new functionality
+4. Submit a pull request
+
+## Authors
+
+- Amine Boudraa
+- Gianfranco Romani
+- Yassine Ilmi
