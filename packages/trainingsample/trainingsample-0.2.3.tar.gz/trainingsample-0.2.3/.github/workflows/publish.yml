@@ -1,0 +1,154 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [x86_64]
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Cache static OpenCV
+      id: cache-opencv
+      uses: actions/cache@v4
+      with:
+        path: third_party/opencv-static
+        key: opencv-static-4.12.0-no-itt-linux-${{ runner.os }}-${{ runner.arch }}
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        # Install LLVM for opencv-rust bindings codegen (no need for system OpenCV anymore)
+        sudo apt-get install -y clang libclang-dev llvm-dev cmake curl
+        sudo apt-get install -y llvm-18 llvm-18-dev llvm-18-tools libclang1-18 libclang-cpp18
+        # Set environment variables for LLVM 18
+        echo "LIBCLANG_PATH=/usr/lib/llvm-18/lib" >> $GITHUB_ENV
+        echo "LLVM_CONFIG_PATH=/usr/bin/llvm-config-18" >> $GITHUB_ENV
+        echo "LD_LIBRARY_PATH=/usr/lib/llvm-18/lib:$LD_LIBRARY_PATH" >> $GITHUB_ENV
+        # Verify the key files exist
+        ls -la /usr/lib/llvm-18/lib/libclang.so
+        which llvm-config-18
+
+    - name: Build static OpenCV
+      if: steps.cache-opencv.outputs.cache-hit != 'true'
+      run: |
+        ./scripts/build-opencv-static.sh
+
+    - name: Build wheels
+      uses: PyO3/maturin-action@v1
+      with:
+        target: ${{ matrix.target }}
+        args: --release --out dist --find-interpreter --no-default-features --features python-bindings,simd,opencv
+        sccache: 'false'
+        container: off
+      env:
+        # Use stable ABI for forward compatibility
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: '1'
+        # LLVM for opencv-rust bindings (from earlier install step)
+        LIBCLANG_PATH: /usr/lib/llvm-18/lib
+        LLVM_CONFIG_PATH: /usr/bin/llvm-config-18
+        # OpenCV static linking configuration
+        OPENCV_INCLUDE_PATHS: ${{ github.workspace }}/third_party/opencv-static/include/opencv4
+        OPENCV_LINK_PATHS: ${{ github.workspace }}/third_party/opencv-static/lib
+        OPENCV_LINK_LIBS: static=opencv_world,static=stdc++
+        OPENCV_DISABLE_PROBES: pkg_config,cmake,vcpkg,vcpkg_cmake
+
+    - name: Upload wheels
+      uses: actions/upload-artifact@v4
+      with:
+        name: wheels-linux-${{ matrix.target }}
+        path: dist
+
+
+  macos:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        target: [aarch64]
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Cache static OpenCV
+      id: cache-opencv
+      uses: actions/cache@v4
+      with:
+        path: third_party/opencv-static
+        key: opencv-static-4.12.0-no-itt-macos-${{ runner.os }}-${{ runner.arch }}
+
+    - name: Install build dependencies
+      run: |
+        # Install LLVM for opencv-rust bindings codegen (no need for system OpenCV anymore)
+        brew install llvm cmake
+        # Set up LLVM environment for opencv-rust bindings (keg-only installation)
+        echo "LIBCLANG_PATH=/opt/homebrew/opt/llvm/lib" >> $GITHUB_ENV
+        echo "LLVM_CONFIG_PATH=/opt/homebrew/opt/llvm/bin/llvm-config" >> $GITHUB_ENV
+        echo "DYLD_LIBRARY_PATH=/opt/homebrew/opt/llvm/lib:$DYLD_LIBRARY_PATH" >> $GITHUB_ENV
+
+    - name: Build static OpenCV
+      if: steps.cache-opencv.outputs.cache-hit != 'true'
+      run: |
+        ./scripts/build-opencv-static.sh
+
+    - name: Build wheels
+      uses: PyO3/maturin-action@v1
+      with:
+        target: ${{ matrix.target }}
+        args: --release --out dist --find-interpreter --no-default-features --features python-bindings,simd,opencv,metal
+        sccache: 'false'
+      env:
+        # Use stable ABI for forward compatibility
+        PYO3_USE_ABI3_FORWARD_COMPATIBILITY: '1'
+        # OpenCV static linking configuration
+        OPENCV_INCLUDE_PATHS: ${{ github.workspace }}/third_party/opencv-static/include/opencv4
+        OPENCV_LINK_PATHS: ${{ github.workspace }}/third_party/opencv-static/lib
+        OPENCV_LINK_LIBS: static=opencv_world,framework=Accelerate,dylib=c++
+        OPENCV_DISABLE_PROBES: pkg_config,cmake,vcpkg,vcpkg_cmake
+    - name: Upload wheels
+      uses: actions/upload-artifact@v4
+      with:
+        name: wheels-macos-${{ matrix.target }}
+        path: dist
+
+  sdist:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build sdist
+      uses: PyO3/maturin-action@v1
+      with:
+        command: sdist
+        args: --out dist
+    - name: Upload sdist
+      uses: actions/upload-artifact@v4
+      with:
+        name: wheels-sdist
+        path: dist
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: [linux, macos, sdist]
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        pattern: wheels-*
+        merge-multiple: true
+        path: dist
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@v1.12.4
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
