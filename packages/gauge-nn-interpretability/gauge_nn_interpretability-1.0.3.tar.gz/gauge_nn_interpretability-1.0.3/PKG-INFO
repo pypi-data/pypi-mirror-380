@@ -1,0 +1,161 @@
+Metadata-Version: 2.4
+Name: gauge-nn-interpretability
+Version: 1.0.3
+Summary: Computational Gauge Theory for Neural Network Interpretability
+Home-page: https://github.com/theaicowboys/gauge-nn-interpretability
+Author: Michael J. Pendleton
+Author-email: michael.pendleton.20@gmail.com
+Project-URL: Bug Reports, https://github.com/theaicowboys/gauge-nn-interpretability/issues
+Project-URL: Source, https://github.com/theaicowboys/gauge-nn-interpretability
+Project-URL: Documentation, https://github.com/theaicowboys/gauge-nn-interpretability/docs
+Keywords: neural-networks interpretability gauge-theory transformers machine-learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: networkx>=3.0
+Requires-Dist: transformers>=4.30.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Computational Gauge Theory for Neural Network Interpretability
+
+## Breaking the Black Box: A Mathematical Framework for Transparent AI
+
+This framework treats transformers and neural networks not as opaque black boxes, but as **computational gauge fields** with rigorous mathematical guarantees for reasoning, performance, and interpretability.
+
+## 🎯 Core Innovation
+
+We shift from heuristics to **first principles** by treating neural network operations as elements of non-abelian Lie algebras, where:
+
+- **Curvature** measures non-commutativity of reasoning paths
+- **Commutators** [A,B] = AB - BA reveal how order matters in attention
+- **BCH plaquettes** expose higher-order algebraic structure
+- **Jacobiators** J(A,B,C) capture hierarchical thinking
+- **Wilson loops** trace reasoning chains with path-dependent evolution
+- **Homotopy invariants** guarantee stable generalization
+
+## 📐 Mathematical Foundation
+
+### Gauge Field Structure
+```
+F_ij = [∇_i, ∇_j] = ∂_i A_j - ∂_j A_i + [A_i, A_j]
+```
+where A_i are attention operators at layer i.
+
+### Baker-Campbell-Hausdorff Formula
+```
+e^A e^B = e^{A + B + 1/2[A,B] + 1/12[A,[A,B]] + ...}
+```
+reveals compositional structure of sequential operations.
+
+### Jacobiator (measures associativity failure)
+```
+J(A,B,C) = [[A,B],C] + [[B,C],A] + [[C,A],B]
+```
+
+### Wilson Loop (path-ordered product)
+```
+W(C) = P exp(∮_C A_μ dx^μ)
+```
+
+## 🔬 What This Framework Reveals
+
+1. **Reasoning Chains**: Not vague activations, but loops and curvature
+2. **Deep Thinking**: Measured by homotopy invariance of operator invariants
+3. **Attention Structure**: Shows heads organizing into algebraic structures
+4. **Abelian Collapse**: Detects when thinking becomes linear (bad)
+5. **Stability Guarantees**: Symmetries ensure generalization
+
+## 🚀 Features
+
+- ✅ Full mathematical implementation of gauge theory operators
+- ✅ Commutator, curvature, and Jacobiator calculations
+- ✅ BCH expansion to arbitrary order
+- ✅ Wilson loop computation for reasoning path analysis
+- ✅ Homotopy invariant extraction
+- ✅ Transformer-specific interpretability layer
+- ✅ Real-time visualization of reasoning geometry
+- ✅ Mathematical proof verification
+- ✅ Works with any transformer architecture
+
+## 📊 Applications
+
+- **Model Debugging**: See exactly where reasoning fails
+- **Architecture Design**: Optimize for non-abelian structure
+- **Training Guidance**: Maximize curvature in reasoning paths
+- **Explainability**: Show users the geometric path of inference
+- **Safety**: Detect collapse to deterministic patterns
+
+## 🎓 Built By
+
+**Michael J. Pendleton**
+Doctoral Candidate in AI/ML Engineering, George Washington University
+CEO, The AI Cowboys
+michael.pendleton.20@gmail.com
+
+---
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Quick Start
+
+```python
+from gauge_nn_interpretability import GaugeAnalyzer
+
+# Load your transformer
+analyzer = GaugeAnalyzer(model)
+
+# Extract gauge-theoretic properties
+curvature = analyzer.compute_curvature()
+plaquettes = analyzer.compute_bch_plaquettes()
+reasoning_loops = analyzer.trace_wilson_loops()
+
+# Visualize
+analyzer.visualize_reasoning_geometry()
+```
+
+## Citation
+
+If you use this framework, please cite:
+
+```bibtex
+@software{pendleton2025gauge,
+  author = {Pendleton, Michael J.},
+  title = {Computational Gauge Theory for Neural Network Interpretability},
+  year = {2025},
+  url = {https://github.com/theaicowboys/gauge-nn-interpretability}
+}
+```
+
+---
+
+**Bridge from heuristics to physics. From "does it work?" to WHY it works.**

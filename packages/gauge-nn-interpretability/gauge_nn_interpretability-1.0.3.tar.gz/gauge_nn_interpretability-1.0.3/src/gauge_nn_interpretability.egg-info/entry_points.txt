@@ -1,0 +1,2 @@
+[console_scripts]
+gauge-analyze = gauge_nn_interpretability.cli:main
