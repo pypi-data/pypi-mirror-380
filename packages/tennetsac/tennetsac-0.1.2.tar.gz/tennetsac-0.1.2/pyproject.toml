@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+include = ["tennetsac*"]
+
+[tool.setuptools.package-data]
+tennetsac = [
+    "utils/smi_ted_light/*.txt",
+    "ckpt_files/*.ckpt",
+    "ckpt_files/fine-tuned/*.ckpt"
+]
+
+[project]
+name = "tennetsac"
+version = "0.1.2"
+description = "Thermodynamics-embedded Neural Network for Segment Activity Coefficients"
+authors = [{ name="Yue Yang" }]
+readme = "README.md"
+license = { file = "MIT" }
+
