@@ -1,0 +1,5 @@
+include README.md
+recursive-include meowmod/files *
+recursive-include meowmod/locale *
+recursive-include meowmod/files/game_data *
+
