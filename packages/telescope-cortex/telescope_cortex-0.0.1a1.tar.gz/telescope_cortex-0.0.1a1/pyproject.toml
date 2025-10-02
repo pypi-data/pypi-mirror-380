@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "telescope-cortex"
+version = "0.0.1a1"
+description = "Headless BI for AI Native applications"
+authors = ["Nilotpal Roychowdhury <nilotpal@jointelescope.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cortex"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+pydantic = "^2.10.6"
+sqlalchemy = "^2.0.38"
+sqlalchemy-bigquery = "^1.12.1"
+psycopg = {extras = ["binary", "pool"], version = "3.2.9"}
+pytz = "^2025.1"
+alembic = "^1.16.5"
+duckdb = "^1.4.0"
+duckdb-engine = "^0.17.0"
+pymysql = {extras = ["rsa"], version = "^1.1.2"}
+
+
+[tool.poetry.group.api]
+optional = true
+
+[tool.poetry.group.api.dependencies]
+fastapi = {extras = ["standard"], version = "^0.115.8"}
+scalar-fastapi = "^1.0.3"
+secweb = "^1.18.1"
+
+[tool.poetry.extras]
+api = ["fastapi", "scalar-fastapi", "secweb"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
