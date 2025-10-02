@@ -1,0 +1,2 @@
+[console_scripts]
+atomic-term-calculator = atomic_term_symbol_calculator.terms:main
