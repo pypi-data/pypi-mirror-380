@@ -1,0 +1,9 @@
+mcp_client_capabilities/__init__.py,sha256=oeG05KFU5vkgGIgySQDBbcrfqZasNLIAYQae7uqHbZI,549
+mcp_client_capabilities/example.py,sha256=sWi99MSkihwulhZbrBZaW9Xe91ZmriO2QRT-9iT8f-E,1236
+mcp_client_capabilities/mcp-clients.json,sha256=_OPFJvhxSpA4zWTutB3uOaLXLap69G_2SBRoiudWwHs,1585
+mcp_client_capabilities/mcp_types.py,sha256=yKgLPKzZwygsxqdpBHqNpXnAKvsVcCEyK25664-972c,1152
+mcp_client_capabilities-0.0.5.dist-info/licenses/LICENSE,sha256=rOfM4Zfr4lWhl1NxO2Zp94B4AdA4A-jaC_0ZDoTS4tQ,11354
+mcp_client_capabilities-0.0.5.dist-info/METADATA,sha256=8H-bWN1hYKkmu_1FXIhFXiOf_mernDEexB4101FCvlE,13377
+mcp_client_capabilities-0.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcp_client_capabilities-0.0.5.dist-info/top_level.txt,sha256=45nGRSf9OigmFxr-fO0JJpP-yQYhSnsUWYVhzxGO1gE,24
+mcp_client_capabilities-0.0.5.dist-info/RECORD,,
