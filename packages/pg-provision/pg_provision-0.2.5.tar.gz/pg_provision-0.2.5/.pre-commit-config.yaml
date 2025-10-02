@@ -1,0 +1,83 @@
+ci:
+  autofix_prs: false
+
+minimum_pre_commit_version: '3.6.0'
+
+# Keep runs fast and deterministic; skip common build/cache/vendor dirs
+exclude: |
+  (?x)(
+    ^(node_modules|vendor|dist|build|\.venv|\.tox|\.mypy_cache|\.ruff_cache|\.git|\.idea|\.vscode|coverage|\.pytest_cache|\.terraform|target|\.eggs|eggs-info|site-packages)/
+  )
+
+default_stages: [pre-commit]
+default_language_version:
+  python: python3
+
+repos:
+  # Core hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: ["--markdown-linebreak-ext=md"]
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+
+  # Python linting (plus simple autofixes)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.13.1
+    hooks:
+      - id: ruff
+        args: ["--fix", "--exit-non-zero-on-fix"]
+
+  # Python formatting
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+
+  #Shell formatting
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.12.0-2
+    hooks:
+      - id: shfmt
+
+  # Shell linting
+  -   repo: https://github.com/shellcheck-py/shellcheck-py
+      rev: v0.11.0.1
+      hooks:
+      -   id: shellcheck
+          args: ["-x"]
+
+  # Secrets scanning (kept to commit stage; uses repo baseline)
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+        stages: [pre-commit]
+
+  - repo: https://github.com/hukkin/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        additional_dependencies: ["mdformat-gfm==0.4.1"]
+        files: "\\.md$"
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest -q
+        language: python
+        additional_dependencies: [pytest]
+        pass_filenames: false
+        types: [python]

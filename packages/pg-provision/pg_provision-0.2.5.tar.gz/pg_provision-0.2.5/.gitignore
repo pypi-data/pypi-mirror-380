@@ -1,0 +1,17 @@
+
+tests/__pycache__/
+
+src/pg_provision.egg-info/
+dist/
+build/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+out/
+*.log
+
+src/pgprovision/__pycache__/
+
+src/pgprovision/_sh/__pycache__/
