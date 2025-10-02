@@ -1,0 +1,21 @@
+# pyproject.toml
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyansiwrap"  
+version = "1.0.0"
+authors = [
+    { name = "Tarun Simha", email = "tarunsimha2509@gmail.com" },
+]
+description = "A simple, zero-dependency package for adding ANSI color and style to terminal text."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Terminals",
+]
