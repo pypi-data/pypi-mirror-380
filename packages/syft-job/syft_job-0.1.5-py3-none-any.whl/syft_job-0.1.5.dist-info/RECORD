@@ -1,0 +1,10 @@
+syft_job/__init__.py,sha256=dS38yDGJwqkw4AJUPr0UR9m3J14-7dfI03f6vo59xp0,267
+syft_job/client.py,sha256=2dzOAfvArjkl_gRBmE6PZvnrrG6HhPx_8KXf_pVyhms,60019
+syft_job/config.py,sha256=7SSUmRJKFwtrnTYgBl2vFGoBLhftDTZQ1KhVXz5jjc0,2534
+syft_job/job_runner.py,sha256=HIVOr5PThJQKV2QL6vk5NtPXLw6ib1aBX_qjr-G5hlU,12209
+syft_job/runner_main.py,sha256=b3nwt90v8H70VurMmttHqDYImhLED_FPbTFfJ-QPx8o,2987
+syft_job-0.1.5.dist-info/METADATA,sha256=3yOVuxG_Hgtq3qcLnoEM2-HYdiSoi2APVD0EAM-53nw,3898
+syft_job-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+syft_job-0.1.5.dist-info/entry_points.txt,sha256=1GET8JDGhG5AYbL-JuuRhbwTMBzC32lG_2qK2Bxb_Lg,87
+syft_job-0.1.5.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+syft_job-0.1.5.dist-info/RECORD,,
