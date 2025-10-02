@@ -1,0 +1,39 @@
+{
+  "name": "shiny-treeview",
+  "version": "0.1.1",
+  "description": "A Shiny for Python extension providing MUI RichTreeView component",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild srcts/index.ts --bundle --outfile=shiny_treeview/distjs/index.js --jsx=transform",
+    "watch": "npm run build -- --watch"
+  },
+  "keywords": [
+    "shiny",
+    "python",
+    "tree-view",
+    "mui",
+    "react"
+  ],
+  "author": "David Hall",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidchall/shiny-treeview.git"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/rstudio-shiny": "git+https://github.com/rstudio/shiny.git#v1.10.0",
+    "esbuild": "0.19.5",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.14",
+    "@mui/x-tree-view": "^8.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
