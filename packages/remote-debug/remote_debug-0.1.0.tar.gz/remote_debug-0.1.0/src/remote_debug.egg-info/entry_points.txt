@@ -1,0 +1,2 @@
+[console_scripts]
+remote-debug = remote_debug.cli:cli

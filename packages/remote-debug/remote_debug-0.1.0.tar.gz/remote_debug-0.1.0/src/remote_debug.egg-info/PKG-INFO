@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: remote-debug
+Version: 0.1.0
+Summary: A helper tool for remote debugging on HPC clusters.
+Author-email: Paul Link <paul.link@student.kit.edu>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: debugpy
+Dynamic: license-file
+
+# remote-debug
+
+## How to install
+You can install the necessary dependencies by running `pixi install` in the project folder.
+
+> [!TIP]  
+> You can install pixi via `curl -fsSL https://pixi.sh/install.sh | sh`
