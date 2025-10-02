@@ -1,0 +1,4 @@
+pbr!=2.1.0,>=2.0.0
+python-mistralclient>=4.3.0
+PyYAML>=3.12
+horizon>=23.1.1
