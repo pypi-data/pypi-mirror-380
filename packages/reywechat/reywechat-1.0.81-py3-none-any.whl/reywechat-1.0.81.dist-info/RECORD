@@ -1,0 +1,16 @@
+reywechat/__init__.py,sha256=FXc3XSiPLLmz9bgZdiYKxeWX-7VT9RqPc_EkXp3Kk0I,476
+reywechat/rall.py,sha256=5J_X-XMOyb1Vp1jyS9-oRFXGOtp2vRPX1g3tJot_Eck,371
+reywechat/rbase.py,sha256=hbxn5spvcl_C_Bw8A9teulOXT9GMlxUw145_YbXIOzc,1124
+reywechat/rcache.py,sha256=5FIa8UB3VsLHT_EXHHmFP62a5AeS22anJCJXC8t4tWw,908
+reywechat/rclient.py,sha256=j4ktgD2l1W9ktrTtfQfyIXCxc7KnT-gvqgy8-zRq8IU,22655
+reywechat/rdb.py,sha256=-tZ1xzWKgDnt_sYLNQqmqMigrv8vdWpafJoismO33AA,39942
+reywechat/rlog.py,sha256=JnzuSfQCKnvASPjZw9KrLTX9TjT79KLbciu8XeIA_88,5256
+reywechat/rreceive.py,sha256=PjDdbF5tJh-bj2p_DxwYKXfk6dDkmv4s8W77Z1ODE1M,50960
+reywechat/rsend.py,sha256=m3TvKlmBKK8KTsM85DeWIHbhVTRWbLMetBAU-zBYkAc,20064
+reywechat/rtrigger.py,sha256=gDnokfFjw29Kz9qazxtb2clT2pBsuOJqIEErvg7L3hE,4986
+reywechat/rwechat.py,sha256=xOxki5zFq145V-Ii3q8cFnJkCm8joCftgbbekGoCel0,4718
+reywechat/data/client_api.dll,sha256=H9uj-x9Ztg0jFZK0yY6NsnyH5_119dQRFfoVVMidxRs,592384
+reywechat-1.0.81.dist-info/METADATA,sha256=rlyCxhuW3cUbQaXedNeU_phFAohqkXBfZr0amsicEgw,1551
+reywechat-1.0.81.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+reywechat-1.0.81.dist-info/licenses/LICENSE,sha256=UYLPqp7BvPiH8yEZduJqmmyEl6hlM3lKrFIefiD4rvk,1059
+reywechat-1.0.81.dist-info/RECORD,,
