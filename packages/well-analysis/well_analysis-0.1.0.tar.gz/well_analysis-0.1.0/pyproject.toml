@@ -1,0 +1,33 @@
+[project]
+name = "well-analysis"
+version = "0.1.0"
+description = "Public API for well performance/nodal analysis (compiled backend)."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Aman Sharma", email = "amnnsharma@gmail.com" }]
+license = { text = "Proprietary" }
+dependencies = [
+  "pandas",
+  "numpy",
+  "matplotlib",
+  "scipy"
+  # add whatever the public API truly needs at runtime
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel", "Cython>=3.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# find both packages, but exclude .py sources for _impl in the wheel
+packages = ["well_analysis", "well_analysis._impl"]
+
+[tool.setuptools.package-data]
+# ship only compiled binaries from _impl
+"well_analysis._impl" = ["*.pyd", "*.so", "*.dll"]
+
+[tool.setuptools.exclude-package-data]
+# do NOT include sources inside the wheel for _impl
+"well_analysis._impl" = ["*.py", "*.pyx", "*.c", "*.cpp"]
+
+# Optional: long_description & content-type can come from README automatically.
