@@ -1,0 +1,181 @@
+# DataGuild Snowflake Connector Configuration
+# =============================================
+# This configuration file defines all settings for the DataGuild Snowflake Connector
+# Copy this file and modify the values according to your Snowflake environment
+
+# =============================================================================
+# SNOWFLAKE CONNECTION SETTINGS
+# =============================================================================
+
+# Snowflake Account Information
+account_id: your-account.snowflakecomputing.com  # Your Snowflake account identifier
+username: your-username                          # Snowflake username
+password: your-password                          # Snowflake password (consider using environment variables)
+warehouse: your-warehouse                        # Snowflake warehouse name
+database: your-database                          # Default database to connect to
+role: your-role                                  # Snowflake role (optional)
+
+# Connection Timeouts
+connection_timeout: 300                          # Connection timeout in seconds
+query_timeout: 600                              # Query timeout in seconds
+
+# Performance Settings
+max_workers: 4                                   # Maximum number of parallel workers
+
+# =============================================================================
+# DATA EXTRACTION SETTINGS
+# =============================================================================
+
+# What to Extract
+include_tables_bool: true                        # Extract table metadata
+include_views: true                             # Extract view metadata
+include_procedures: true                        # Extract stored procedures
+include_streams: true                           # Extract stream metadata
+include_tags: true                              # Extract tag information
+include_usage_stats: true                       # Extract usage statistics
+include_table_lineage: true                     # Extract table lineage relationships
+include_column_lineage: true                    # Extract column lineage relationships
+
+# =============================================================================
+# DATABASE FILTERING
+# =============================================================================
+
+# Database Pattern Filtering
+database_pattern:
+  allow:                                        # Databases to include
+    - PRODUCTION_DB
+    - STAGING_DB
+    - ANALYTICS_DB
+  deny:                                         # Databases to exclude
+    - SNOWFLAKE.*
+    - TEMP_*
+    - TEST_*
+  ignoreCase: true                              # Case-insensitive matching
+
+# =============================================================================
+# SCHEMA FILTERING
+# =============================================================================
+
+# Schema Pattern Filtering
+schema_pattern:
+  allow:                                        # Schemas to include
+    - PUBLIC
+    - ANALYTICS
+    - DATA_SCIENCE
+  deny:                                         # Schemas to exclude
+    - INFORMATION_SCHEMA
+    - TEMP_SCHEMA
+    - TEST_SCHEMA
+  ignoreCase: true                              # Case-insensitive matching
+
+# =============================================================================
+# AI INTELLIGENCE SETTINGS
+# =============================================================================
+
+# AI-Powered Features
+enable_ai_intelligence: true                    # Enable AI-powered metadata enhancement
+ai_model_name: "gemma-7b-it"                   # AI model for intelligence
+ai_api_key: ""                                 # AI service API key (optional)
+ai_max_tokens: 2048                            # Maximum tokens for AI processing
+ai_confidence_threshold: 0.8                   # Minimum confidence for AI predictions
+
+# =============================================================================
+# PERFORMANCE MONITORING
+# =============================================================================
+
+# Performance Monitoring
+performance_monitoring: true                    # Enable performance monitoring
+metrics_retention_days: 30                     # How long to keep performance metrics
+enable_detailed_logging: false                 # Enable detailed debug logging
+
+# =============================================================================
+# SECURITY SETTINGS
+# =============================================================================
+
+# Security Configuration
+enable_data_masking: true                      # Enable automatic PII data masking
+mask_pii_fields: true                          # Mask PII fields in metadata
+audit_logging: true                            # Enable audit logging
+encryption_at_rest: true                       # Enable encryption at rest
+
+# =============================================================================
+# ADVANCED SETTINGS
+# =============================================================================
+
+# Advanced Configuration
+warn_no_datasets: false                        # Warn when no datasets are found
+enable_parallel_processing: true               # Enable parallel processing
+batch_size: 1000                               # Batch size for processing
+memory_limit_mb: 2048                          # Memory limit in MB
+enable_caching: true                           # Enable metadata caching
+cache_ttl_hours: 24                            # Cache time-to-live in hours
+
+# =============================================================================
+# OUTPUT SETTINGS
+# =============================================================================
+
+# Output Configuration
+output_format: "json"                          # Output format (json, yaml, xml)
+include_raw_metadata: false                    # Include raw Snowflake metadata
+include_derived_metadata: true                 # Include derived metadata
+include_ai_insights: true                      # Include AI-generated insights
+
+# =============================================================================
+# ERROR HANDLING
+# =============================================================================
+
+# Error Handling Configuration
+retry_attempts: 3                              # Number of retry attempts
+retry_delay_seconds: 5                         # Delay between retries
+continue_on_error: true                        # Continue processing on non-critical errors
+log_error_details: true                        # Log detailed error information
+
+# =============================================================================
+# ENVIRONMENT-SPECIFIC OVERRIDES
+# =============================================================================
+
+# Development Environment
+# Uncomment and modify for development
+# environment: "development"
+# debug_mode: true
+# log_level: "DEBUG"
+
+# Production Environment
+# Uncomment and modify for production
+# environment: "production"
+# debug_mode: false
+# log_level: "INFO"
+# enable_telemetry: true
+
+# =============================================================================
+# EXAMPLE CONFIGURATIONS
+# =============================================================================
+
+# Example 1: Minimal Configuration
+# account_id: "company.snowflakecomputing.com"
+# username: "data_engineer"
+# password: "secure_password"
+# warehouse: "COMPUTE_WH"
+# database: "ANALYTICS"
+
+# Example 2: Production Configuration with AI
+# account_id: "company.snowflakecomputing.com"
+# username: "data_engineer"
+# password: "secure_password"
+# warehouse: "COMPUTE_WH"
+# database: "ANALYTICS"
+# role: "DATA_ENGINEER_ROLE"
+# enable_ai_intelligence: true
+# ai_api_key: "your-ai-api-key"
+# performance_monitoring: true
+# audit_logging: true
+
+# Example 3: Development Configuration
+# account_id: "dev-company.snowflakecomputing.com"
+# username: "dev_user"
+# password: "dev_password"
+# warehouse: "DEV_WH"
+# database: "DEV_DB"
+# debug_mode: true
+# log_level: "DEBUG"
+# warn_no_datasets: true
