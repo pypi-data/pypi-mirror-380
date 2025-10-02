@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_assistance_somconnexio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-10 08:43+0000\n"
+"PO-Revision-Date: 2025-07-10 08:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model,name:hr_assistance_somconnexio.model_hr_attendance
+msgid "Attendance"
+msgstr "Asistencia"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance__place_id
+msgid "Attendance Place"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#. odoo-python
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#, python-format
+msgid "Cannot perform check in or check out on multiple employees."
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#. odoo-python
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#, python-format
+msgid ""
+"Cannot perform check out on %(empl_name)s, could not find corresponding "
+"check in. Your attendances have probably been modified manually by human "
+"resources."
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:hr.attendance.place,name:hr_assistance_somconnexio.external_office
+msgid "Centre de treball aliè"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__code
+msgid "Code"
+msgstr "Código"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance__comments
+msgid "Comments"
+msgstr "Comentarios"
+
+#. module: hr_assistance_somconnexio
+#. odoo-javascript
+#: code:addons/hr_assistance_somconnexio/static/src/xml/attendance.xml:0
+#: code:addons/hr_assistance_somconnexio/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Comments?"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_employee__current_place
+msgid "Current attendance place"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model,name:hr_assistance_somconnexio.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_assistance_somconnexio
+#: model:hr.attendance.place,name:hr_assistance_somconnexio.event
+msgid "Fires/Esdeveniments"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:hr.attendance.place,name:hr_assistance_somconnexio.training
+msgid "Formació"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model.fields,field_description:hr_assistance_somconnexio.field_hr_attendance_place__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_assistance_somconnexio
+#: model:hr.attendance.place,name:hr_assistance_somconnexio.office
+msgid "Oficina"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model_terms:ir.ui.view,arch_db:hr_assistance_somconnexio.hr_attendance_tree_view
+msgid "Place"
+msgstr "Lugar"
+
+#. module: hr_assistance_somconnexio
+#: model:hr.attendance.place,name:hr_assistance_somconnexio.home
+msgid "Teletreball"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#. odoo-python
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#: code:addons/hr_assistance_somconnexio/models/hr_employee.py:0
+#, python-format
+msgid "Wrong PIN"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#. odoo-javascript
+#: code:addons/hr_assistance_somconnexio/static/src/xml/attendance.xml:0
+#: code:addons/hr_assistance_somconnexio/static/src/xml/attendance.xml:0
+#, python-format
+msgid "You have to select a workplace"
+msgstr ""
+
+#. module: hr_assistance_somconnexio
+#: model:ir.model,name:hr_assistance_somconnexio.model_hr_attendance_place
+msgid "hr.attendance.place"
+msgstr ""
