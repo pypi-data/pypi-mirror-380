@@ -1,0 +1,6 @@
+requests>=2.32.3
+bs4>=0.0.2
+user-agent>=0.1.14
+random_strings>=0.1.1
+httpx>=0.28.1
+h2>=4.2.0
