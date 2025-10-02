@@ -1,0 +1,14 @@
+[console_scripts]
+tufte-bar = tufteplotlib.plots.bar:main
+tufte-barcode = tufteplotlib.plots.barcode:main
+tufte-density = tufteplotlib.plots.density:main
+tufte-galaxy = tufteplotlib.plots.galaxy:main
+tufte-histogram = tufteplotlib.plots.histogram:main
+tufte-line = tufteplotlib.plots.line:main
+tufte-pareto = tufteplotlib.plots.pareto:main
+tufte-quartile = tufteplotlib.plots.quartile:main
+tufte-rug = tufteplotlib.plots.rug:main
+tufte-scatter = tufteplotlib.plots.scatter:main
+tufte-sparkline = tufteplotlib.plots.sparkline:main
+tufte-stem = tufteplotlib.plots.stem_and_leaf:main
+tufte-time = tufteplotlib.plots.time:main
