@@ -1,0 +1,6 @@
+rustshogi-0.2.0.dist-info/METADATA,sha256=pjNGuWVJXWteQ2wIx4Zd14rZp75ZEmnRz8xYGVAMiiQ,280
+rustshogi-0.2.0.dist-info/WHEEL,sha256=ZfR7bzq8rzB3iaakzYMKHhdHBrXI_MVlTbJn4g34uJI,138
+rustshogi-0.2.0.dist-info/licenses/LICENSE,sha256=BScdneCT8okewQMSe2jN2qOICMf7upItg1CiA4zRkDA,1069
+rustshogi/__init__.py,sha256=PtjfUs5CV6p63-hFYvqSmUeqPAu8krIS0n_J6cKmB0Y,119
+rustshogi/rustshogi.pypy310-pp73-aarch64-linux-gnu.so,sha256=rz7WzOniHXvUNFf7MnmSuGt41Ru5vtQ5TvTHH9Zy7FA,871024
+rustshogi-0.2.0.dist-info/RECORD,,
