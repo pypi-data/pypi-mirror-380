@@ -1,0 +1,12 @@
+turingdb/__init__.py,sha256=ZtSKfXpIh23hJSxzysSB-l3u8bhG-obVWNSvJ906_dQ,146
+turingdb/__init__.pyi,sha256=9KNytbSxto6geGA_RMdl66f_6LHE7QkO2-yNlTI8El4,1144
+turingdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turingdb/turingdb.py,sha256=6lZ-mha0ZcC6Rn7lUF7V5X1g-jkK2KHKjqC9mAt1m5Y,5296
+turingdb/turingsh/__init__.py,sha256=4wdl3RdVQbx-rKhI_7hDawkMtcJzRb90qG84JynT8Qo,47
+turingdb/turingsh/greeter.py,sha256=lxbfT6eS89tZmDui92ZXTFDMzWzUST_ih8a-Zrf8sxY,1570
+turingdb/turingsh/turingsh.py,sha256=vi2rQrjRZaafqF756AR5itoCiOFxTQmGkMWhm2lgmRE,8160
+turingdb-0.2.6.dist-info/METADATA,sha256=md4mpFMQSX_xKVgS6wlUvdR1akAuriMsC_OamLxfqN0,585
+turingdb-0.2.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+turingdb-0.2.6.dist-info/entry_points.txt,sha256=qbMJy64bcRtR1UOSnMV9Io5aWLZIFI8H7N4sv1mqUwA,47
+turingdb-0.2.6.dist-info/licenses/LICENSE.txt,sha256=PgwD9hjeoyWO93yZQnxCyt0s-PlhXWLgqdCPpB91GhY,1078
+turingdb-0.2.6.dist-info/RECORD,,
