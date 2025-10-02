@@ -1,0 +1,10 @@
+[project]
+name = "test-publish-pypi-hsilan"
+version = "0.0.5"
+
+[build-system]
+requires = [
+    "setuptools >= 61",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
