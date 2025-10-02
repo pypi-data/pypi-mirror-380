@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+config.example.yaml
+pyproject.toml
+requirements.txt
+setup.py
+pcf_config/__init__.py
+pcf_config/config.py
+pcf_config/py.typed
+pcf_config.egg-info/PKG-INFO
+pcf_config.egg-info/SOURCES.txt
+pcf_config.egg-info/dependency_links.txt
+pcf_config.egg-info/requires.txt
+pcf_config.egg-info/top_level.txt
+tests/__init__.py
+tests/test_config.py
