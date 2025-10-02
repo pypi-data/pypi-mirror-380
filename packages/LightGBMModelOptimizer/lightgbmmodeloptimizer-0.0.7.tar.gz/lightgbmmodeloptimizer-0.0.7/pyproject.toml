@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LightGBMModelOptimizer"
+version = "0.0.7"
+description = "Trained Lightgbm Model Optimizer. Reduce size and improve inference time of the trained lightgbm model"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Rajat Goyal", email = "rajatgoyal376@gmail.com"}
+]
+maintainers = [
+    {name = "Paras Malik", email = "paras.mal@media.net"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+
