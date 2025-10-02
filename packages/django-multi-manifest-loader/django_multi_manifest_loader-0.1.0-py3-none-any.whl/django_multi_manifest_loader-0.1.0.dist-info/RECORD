@@ -1,0 +1,8 @@
+django_multi_manifest_loader/__init__.py,sha256=3E2vjeuEpf8-As7MTJdsu0pOxxykIfgKM9Q7QXq1tYY,677
+django_multi_manifest_loader/templatetags/__init__.py,sha256=QxVZnMDkGMk5qZ3BMbxmG3zaUkFnhamoUN2YHv0ZT_Y,23
+django_multi_manifest_loader/templatetags/manifest.py,sha256=FLGkF1ZnPXD1i--EPrQfqcJg-Toxo5Adx8g0bjhEt4k,4534
+django_multi_manifest_loader-0.1.0.dist-info/licenses/LICENSE,sha256=GXGhzCMgVGzEY-GyUY-LHbL0r3imjaqPCMZwcKixmjw,1065
+django_multi_manifest_loader-0.1.0.dist-info/METADATA,sha256=sn5uwsjzbLHR5neHWJVuNdyYx9QwqxXuo7r3C342dKk,8515
+django_multi_manifest_loader-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_multi_manifest_loader-0.1.0.dist-info/top_level.txt,sha256=YS5Uf-J1Qk80gJmmct7ehqRYUKkvUdzm-6haDuMLO-c,29
+django_multi_manifest_loader-0.1.0.dist-info/RECORD,,
