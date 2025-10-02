@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: jjuke
+Version: 1.1.1
+Summary: Framework for training Deep Learning networks by JJukE
+Home-page: https://github.com/JJukE/JJuk_E.git
+Author: JJukE
+Author-email: psj9156@gmail.com
+Keywords: JJukE,jjuke
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: accelerate
+Requires-Dist: transformers
+Requires-Dist: diffusers
+Requires-Dist: omegaconf
+Requires-Dist: easydict
+Requires-Dist: tqdm
+Requires-Dist: wandb
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
