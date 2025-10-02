@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: LPC3D
+Version: 0.1.2
+Summary: A package for LPC3D mesoscopic simulations
+Author-email: El Hassane Lahrar <lahrar.el@gmail.com>, Céline Merlet <celine.merlet.fr@gmail.com>
+License: AGPL-3.0-or-later
+Keywords: LPC3D,simulation,OpenMP,GPU,computational science
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pystencils
+Requires-Dist: numba
+Requires-Dist: ipython
+Requires-Dist: matplotlib
+Requires-Dist: pyevtk
+Provides-Extra: gpu
+Requires-Dist: cupy-cuda; extra == "gpu"
+
+# LPC3D
+A code to do mesoscopic simulations of ions diffusing in carbon particles and of full supercapacitors.
+
+This code is developed in the context of the MultiXscale project.
+
+This code was written by El Hassane Lahrar and Céline Merlet, with contributions from Rudolf Weber, and was used in one published work:
+
+"Investigating the effect of particle size distribution and complex exchange dynamics on NMR spectra of ions diffusing in disordered porous carbons through a mesoscopic model", Faraday Discuss., Advance article, https://pubs.rsc.org/en/Content/ArticleLanding/2024/FD/D4FD00082J 
+
+Here, a manual and example input files are provided.
+
+Compared to the previous version of the program, written in C and serial (https://github.com/cmerlet/LPC3D-C-serial), this code is written using pystencils (https://pypi.org/project/pystencils/) - is parallel - and can use CPU and GPU.
+

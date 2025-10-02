@@ -1,0 +1,2 @@
+[console_scripts]
+lpc3d = lpc3d.LPC3D:main
