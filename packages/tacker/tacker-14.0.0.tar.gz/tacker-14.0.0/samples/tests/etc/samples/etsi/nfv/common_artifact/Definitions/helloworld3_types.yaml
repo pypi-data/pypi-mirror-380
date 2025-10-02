@@ -1,0 +1,57 @@
+tosca_definitions_version: tosca_simple_yaml_1_2
+
+description: VNF type definition
+
+imports:
+  - etsi_nfv_sol001_common_types.yaml
+  - etsi_nfv_sol001_vnfd_types.yaml
+
+node_types:
+  company.provider.VNF:
+    derived_from: tosca.nodes.nfv.VNF
+    properties:
+      descriptor_id:
+        type: string
+        constraints: [ valid_values: [ b1bb0ce7-ebca-4fa7-95ed-4840d70a1177 ] ]
+        default: b1bb0ce7-ebca-4fa7-95ed-4840d70a1177
+      descriptor_version:
+        type: string
+        constraints: [ valid_values: [ '1.0' ] ]
+        default: '1.0'
+      provider:
+        type: string
+        constraints: [ valid_values: [ 'Company' ] ]
+        default: 'Company'
+      product_name:
+        type: string
+        constraints: [ valid_values: [ 'Sample VNF' ] ]
+        default: 'Sample VNF'
+      software_version:
+        type: string
+        constraints: [ valid_values: [ '1.0' ] ]
+        default: '1.0'
+      vnfm_info:
+        type: list
+        entry_schema:
+          type: string
+          constraints: [ valid_values: [ Tacker ] ]
+        default: [ Tacker ]
+      flavour_id:
+        type: string
+        constraints: [ valid_values: [ simple ] ]
+        default: simple
+      flavour_description:
+        type: string
+        default: ""
+    requirements:
+      #Tosca-parser 2.13.0 adds validation for relationship occurrences. Since SOL001 v2.6.1 does not have these occurrences
+      #set, validation fails. Aligning with SOL001 v5.1.1 by adding occurrences to pass the validation.
+      - virtual_link_external:
+          capability: tosca.capabilities.nfv.VirtualLinkable
+          occurrences: [0, 1]
+      - virtual_link_internal:
+          capability: tosca.capabilities.nfv.VirtualLinkable
+          occurrences: [0, 1]
+    interfaces:
+      Vnflcm:
+        type: tosca.interfaces.nfv.Vnflcm
