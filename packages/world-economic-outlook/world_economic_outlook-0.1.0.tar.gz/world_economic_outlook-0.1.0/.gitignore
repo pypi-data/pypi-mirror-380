@@ -1,0 +1,10 @@
+**__pycache__**
+main.py
+*dist/
+*scripts/
+*.xls
+*.db
+.backups
+*.toml
+.generate_iso_dicts.py
+test.py
