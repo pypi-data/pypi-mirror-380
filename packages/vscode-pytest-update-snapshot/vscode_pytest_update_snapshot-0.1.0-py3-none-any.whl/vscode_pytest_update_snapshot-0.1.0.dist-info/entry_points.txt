@@ -1,0 +1,2 @@
+[console_scripts]
+vscode-pytest-update-snapshot = vscode_pytest_update_snapshot.__main__:app
