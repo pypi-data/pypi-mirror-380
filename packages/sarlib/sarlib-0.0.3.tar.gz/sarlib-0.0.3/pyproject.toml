@@ -1,0 +1,35 @@
+[project]
+name = "sarlib"
+dynamic = ["version"]
+authors = [
+  { name="SiPBA Group"},
+]
+description = "Statistical Analysis and Regression Library"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "statsmodels"
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel", "numpy", "matplotlib", "scipy", 
+            "scikit-learn", "statsmodels"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/SiPBA/sar/"
+Issues = "https://github.com/SiPBA/sar/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "sarlib.__version__"}
