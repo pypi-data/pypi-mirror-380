@@ -1,0 +1,7 @@
+setup.py
+student90001/__init__.py
+student90001/student90001.py
+student90001.egg-info/PKG-INFO
+student90001.egg-info/SOURCES.txt
+student90001.egg-info/dependency_links.txt
+student90001.egg-info/top_level.txt
