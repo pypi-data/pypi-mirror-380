@@ -1,0 +1,93 @@
+version: 2
+jobs:
+  build_docs:
+    docker:
+      - image: cimg/base:current-22.04
+    steps:
+      # Get our data and merge with upstream
+      - checkout
+      - run:
+          name: Merge
+          command: |
+            set -eo pipefail
+            echo $(git log -1 --pretty=%B) | tee gitlog.txt
+            echo ${CI_PULL_REQUEST//*pull\//} | tee merge.txt
+            if [[ $(cat merge.txt) != "" ]]; then
+              echo "Merging $(cat merge.txt)";
+              git pull --ff-only origin "refs/pull/$(cat merge.txt)/merge";
+            fi
+      - run:
+          name: Prep env
+          command: |
+            set -eo pipefail
+            echo "set -eo pipefail" >> $BASH_ENV
+            sudo apt update
+            sudo apt install libglu1-mesa python3.10-venv python3-venv libxft2 ffmpeg xvfb
+            /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1400x900x24 -ac +extension GLX +render -noreset
+            python3.10 -m venv ~/python_env
+            echo "export PATH=~/.local/bin:$PATH" >> $BASH_ENV
+            echo "export SOUND_CARD_BACKEND=pyglet >> $BASH_ENV"  # rtmixer needs pulse, which is a huge pain to get running on CircleCI
+            echo "export OPENBLAS_NUM_THREADS=4" >> $BASH_ENV
+            echo "export XDG_RUNTIME_DIR=/tmp/runtime-circleci" >> $BASH_ENV
+            echo "export PATH=~/.local/bin/:$PATH" >> $BASH_ENV
+            echo "export DISPLAY=:99" >> $BASH_ENV
+            echo "export _EXPYFUN_SILENT=true" >> $BASH_ENV
+            echo "source ~/python_env/bin/activate" >> $BASH_ENV
+            mkdir -p ~/.local/bin
+            ln -s ~/python_env/bin/python ~/.local/bin/python
+            echo "BASH_ENV:"
+            cat $BASH_ENV
+      - run: pip install --quiet --upgrade pip setuptools wheel
+      - run: pip install --quiet --upgrade numpy scipy matplotlib sphinx pandas h5py mne pyglet psutil pydata-sphinx-theme numpydoc sphinx-gallery
+      - run: python -m pip install --group docs -ve .[all]
+      - run: python -c "import mne; mne.sys_info()"
+      - run: python -c "import pyglet; print(pyglet.version)"
+      - run: cd doc && make html
+
+      - store_artifacts:
+          path: doc/_build/html/
+          destination: html
+
+      - persist_to_workspace:
+          root: doc/_build
+          paths:
+            - html
+
+
+  deploy:
+    docker:
+      - image: circleci/python:3.8.5-buster
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "25:b7:f2:bf:d7:38:6d:b6:c7:78:41:05:01:f8:41:7b"
+      - attach_workspace:
+          at: /tmp/_build
+      - run:
+          name: upload
+          command: |
+            echo "Deploying docs."
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            git clone git@github.com:/LABSN/labsn.github.io.git ~/labsn.github.io --depth=1
+            git config --global user.email "circle@labsn.github.io"
+            git config --global user.name "Circle CI"
+            cd ~/labsn.github.io
+            git checkout main
+            git pull origin main
+            rm -Rf ~/labsn.github.io/expyfun
+            cp -a /tmp/_build/html ~/labsn.github.io/expyfun
+            git add -A
+            git commit -m "CircleCI update of docs (${CIRCLE_BUILD_NUM})."
+            git push origin main
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build_docs
+      - deploy:
+          requires:
+            - build_docs
+          filters:
+            branches:
+              only: main
