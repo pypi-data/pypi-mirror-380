@@ -1,0 +1,11 @@
+vidigi/__init__.py,sha256=wRXEd_n26WNhoBpGJv9wFb-lbxAyMkUmbGnWl8M2K9Y,117
+vidigi/animation.py,sha256=q-IP5bNmPxeH4ZH8kF9N-whI-4GoBznRCABe7Hjd2hY,64909
+vidigi/ciw.py,sha256=4pNhqrj5n_YRbEupHsLPbb6W4PL5zFU8GRMr1wupSio,4387
+vidigi/logging.py,sha256=b8lsHPckEZgF4MVc_k8l2l3xrq6PQJey_-aqxhsjZeg,37399
+vidigi/prep.py,sha256=EX950dqBD4q6hQHxyTeToIQWLjph6GPndmjNcwD5AGU,37621
+vidigi/resources.py,sha256=tS5HF0U2u4hQk_OPrdCw3L2erfiGRzfsHNjCb9ipZd0,34636
+vidigi/utils.py,sha256=IzEUkVyFR1Ta4TUqj41p8KH8BiWI_aYO7m7dxId2iM4,7489
+vidigi-1.1.0.dist-info/METADATA,sha256=YW79pbEt-Xl3iMMvN5uxJN8DyFXwg7rQx9EWgaNQsHo,7378
+vidigi-1.1.0.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+vidigi-1.1.0.dist-info/licenses/LICENSE.md,sha256=P0iZhbxSNUeLS8804JK-0Si8u0kG6Mn3YZBm2dEpQVc,1090
+vidigi-1.1.0.dist-info/RECORD,,
