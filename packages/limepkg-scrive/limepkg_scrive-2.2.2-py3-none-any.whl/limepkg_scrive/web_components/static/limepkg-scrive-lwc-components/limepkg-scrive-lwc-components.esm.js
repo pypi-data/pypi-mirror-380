@@ -1,0 +1,1 @@
+import{p as e,b as o}from"./p-02a3464d.js";(()=>{const o=import.meta.url,c={};return""!==o&&(c.resourcesUrl=new URL(".",o).href),e(c)})().then((e=>o([["p-f6a6d14c",[[1,"lwc-limepkg-scrive",{platform:[16],context:[16],document:[32],session:[32],config:[32],cloneDocument:[32],isOpen:[32]}]]],["p-b81a28e2",[[1,"lwc-limepkg-scrive-loader",{platform:[16],context:[16]}]]]],e)));
