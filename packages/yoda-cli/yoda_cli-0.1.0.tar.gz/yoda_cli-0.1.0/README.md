@@ -1,0 +1,442 @@
+# 🧙‍♂️ Yoda CLI
+
+A powerful offline CLI tool for codebase analysis and intelligent chat powered by local LLMs.
+
+## ✨ Features
+
+Yoda CLI enables you to:
+- **📚 Generate Wisdom**: Automatically create comprehensive WISDOM.md documentation with architecture diagrams, dependencies, and project insights
+- **💬 Chat with your code**: Ask questions about your codebase using RAG (Retrieval-Augmented Generation) for context-aware answers
+- **🔒 Work completely offline**: Uses Ollama for local LLM inference, keeping your code private and secure
+- **🔍 Semantic search**: Builds vector indexes using Faiss and LlamaIndex for fast, relevant code retrieval
+- **🎨 Real-time streaming**: Get answers with syntax-highlighted streaming output
+- **🔄 Model switching**: Choose between different code models (CodeLlama, StarCoder, DeepSeek Coder)
+
+## Installation
+
+### Quick Install
+
+1. **Install Python 3.9+** (if not already installed):
+
+**macOS:**
+```bash
+brew install python@3.11
+```
+
+**Linux:**
+```bash
+sudo apt-get install python3.11 python3.11-venv  # Ubuntu/Debian
+# or
+sudo yum install python3.11  # RedHat/CentOS
+```
+
+2. **Install Yoda CLI**:
+```bash
+# Clone or navigate to the yoda directory
+cd yoda
+
+# Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install Yoda
+pip install -e .
+```
+
+That's it! Yoda will automatically:
+- ✅ Install Ollama if not present (macOS/Linux)
+- ✅ Start the Ollama service when needed
+- ✅ Download required models on first use
+
+### First Run
+
+When you run any Yoda command for the first time, it will automatically:
+1. Check if Ollama is installed (install if missing on macOS/Linux)
+2. Start the Ollama service if not running
+3. Download the required model (codellama:7b by default)
+
+**Note for Windows users:** Please install Ollama manually from https://ollama.com before using Yoda.
+
+## 🚀 Usage
+
+### Initialize a codebase
+Index your codebase for wisdom generation and chat:
+```bash
+# Initialize current directory
+yoda init
+
+# Or specify a path and model
+yoda init /path/to/project --model codellama:7b
+```
+
+This will:
+- Parse source files using tree-sitter
+- Build a semantic vector index with Faiss
+- Download and configure the LLM model
+
+### Generate WISDOM documentation
+Create comprehensive project documentation with architecture diagrams:
+```bash
+yoda wisdom
+```
+
+This generates a `WISDOM.md` file with:
+- 📜 Detailed project overview (3-4 paragraphs)
+- 🛠️ Technology stack analysis with percentages
+- 🏗️ Architecture description with Mermaid diagrams
+- 📦 Dependency analysis (core & development)
+- 📁 Annotated directory structure
+- 🚀 Getting started guide
+- 💡 Core modules breakdown
+- 🔄 Data flow visualization
+- 🎯 Key features
+- 🔐 Configuration & environment setup
+- 🧪 Testing architecture
+- 📊 Performance considerations
+- 🔒 Security measures
+- 🚢 Deployment architecture
+
+### Chat with your codebase (Yoda Seek)
+Ask questions about your code with real-time streaming:
+```bash
+yoda seek
+```
+
+Interactive commands:
+```
+> What does the SeekEngine class do?
+> How is the RAG system implemented?
+> Explain the indexing process
+> clear       # Clear conversation history
+> help        # Show help
+> exit        # Quit (or Ctrl+C twice)
+```
+
+**Features:**
+- Real-time syntax-highlighted responses
+- WISDOM.md integration for better context
+- Quirky Yoda-themed messages
+- Ctrl+C interruption support
+
+### Switch models
+Choose a different LLM model:
+```bash
+yoda summon
+```
+
+Available models:
+- **codellama:7b** (default, good balance)
+- **starcoder2:7b** (specialized for code)
+- **deepseek-coder:6.7b** (efficient)
+
+### Update the index
+Re-index after making code changes:
+```bash
+yoda update
+```
+
+## Troubleshooting
+
+### Tree-sitter build errors
+
+If you encounter tree-sitter compilation issues:
+
+1. **Install build tools**:
+```bash
+xcode-select --install
+```
+
+2. **Set compiler explicitly**:
+```bash
+export CC=clang
+export CXX=clang++
+pip install --upgrade tree-sitter
+```
+
+### Faiss installation issues
+
+If `faiss-cpu` fails to install:
+
+1. **Use conda** (alternative approach):
+```bash
+conda install -c pytorch faiss-cpu
+```
+
+2. **Or install from source**:
+```bash
+pip install --no-binary :all: faiss-cpu
+```
+
+### Ollama connection errors
+
+If Yoda can't connect to Ollama (this should rarely happen as Yoda auto-starts it):
+
+1. **Check if Ollama is running**:
+```bash
+ps aux | grep ollama
+```
+
+2. **Manually restart Ollama**:
+```bash
+pkill ollama
+ollama serve &
+```
+
+3. **Verify model is available**:
+```bash
+ollama list
+```
+
+**Note:** Yoda automatically handles Ollama installation and startup, so you typically won't need these commands.
+
+### Memory issues with large codebases
+
+For large projects:
+
+1. **Use a smaller model** (specify during init):
+```bash
+yoda init . --model codellama:7b  # default, uses less memory
+# or for better quality but more memory:
+yoda init . --model mistral:7b
+```
+
+2. **Increase chunk size in indexer** (edit `src/yoda/core/indexer.py`):
+```python
+CHUNK_SIZE = 2048  # increase if needed
+```
+
+### Python version compatibility
+
+Ensure you're using Python 3.9 or higher:
+```bash
+python --version
+```
+
+If needed, specify the Python version:
+```bash
+python3.11 -m venv venv
+```
+
+## Configuration
+
+Yoda stores its index and metadata in `.yoda/` within your project directory:
+```
+your-project/
+├── .yoda/
+│   ├── index/          # Faiss vector index
+│   ├── documents/      # Parsed documents
+│   └── config.json     # Project configuration
+```
+
+## Requirements
+
+- Python 3.9+
+- Ollama with a code-capable model (codellama, mistral, etc.)
+- 4GB+ RAM recommended
+- macOS, Linux, or Windows with WSL
+
+## 📦 Packaging & Publishing
+
+### For Users (Once Published to PyPI)
+
+Install Yoda with a single command:
+
+```bash
+pip install yoda-cli
+yoda init /path/to/your/project
+```
+
+### For Maintainers
+
+#### Prerequisites
+
+1. **Install build tools:**
+```bash
+pip install --upgrade build twine
+```
+
+2. **Create accounts:**
+   - PyPI (production): https://pypi.org/account/register/
+   - TestPyPI (testing): https://test.pypi.org/account/register/
+
+3. **Get API tokens:**
+   - PyPI: https://pypi.org/manage/account/token/
+   - TestPyPI: https://test.pypi.org/manage/account/token/
+
+4. **Configure `.pypirc`:**
+```bash
+# Create ~/.pypirc
+cat > ~/.pypirc << 'EOF'
+[distutils]
+index-servers =
+    pypi
+    testpypi
+
+[pypi]
+username = __token__
+password = pypi-YOUR-PRODUCTION-TOKEN
+
+[testpypi]
+username = __token__
+password = pypi-YOUR-TEST-TOKEN
+EOF
+
+chmod 600 ~/.pypirc
+```
+
+#### Version Management
+
+Update version in **both** files before building:
+
+1. **`setup.py`:**
+```python
+version="0.1.0",  # Update this
+```
+
+2. **`src/yoda/__init__.py`:**
+```python
+__version__ = "0.1.0"  # Update this
+```
+
+Follow semantic versioning: `MAJOR.MINOR.PATCH`
+- MAJOR: Breaking changes
+- MINOR: New features (backward compatible)
+- PATCH: Bug fixes
+
+#### Build Process
+
+```bash
+# Clean previous builds
+rm -rf dist/ build/ *.egg-info
+
+# Build the package (creates wheel and source distribution)
+python -m build
+
+# Verify the build
+twine check dist/*
+
+# View contents (optional)
+tar -tzf dist/yoda-cli-*.tar.gz
+```
+
+#### Publishing Steps
+
+**1. Test on TestPyPI first (ALWAYS):**
+```bash
+# Upload to TestPyPI
+twine upload --repository testpypi dist/*
+
+# Test install in a clean environment
+python -m venv test_env
+source test_env/bin/activate
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ yoda-cli
+
+# Test the installation
+yoda --version
+yoda init --help
+
+# If everything works, deactivate and clean up
+deactivate
+rm -rf test_env
+```
+
+**2. Publish to PyPI (production):**
+```bash
+# Upload to production PyPI
+twine upload dist/*
+
+# Verify it's live
+pip install yoda-cli
+```
+
+#### Post-Release
+
+1. **Tag the release:**
+```bash
+git tag -a v0.1.0 -m "Release version 0.1.0"
+git push origin v0.1.0
+```
+
+2. **Create GitHub release:**
+   - Go to https://github.com/your-org/yoda/releases/new
+   - Select the tag
+   - Add release notes
+
+3. **Update changelog:**
+```markdown
+## [0.1.0] - 2025-01-15
+### Added
+- Initial release
+- WISDOM.md generation with Mermaid diagrams
+- Interactive chat with syntax highlighting
+- Model switching support
+```
+
+#### Package Structure
+
+Your package should have this structure:
+```
+yoda/
+├── setup.py                 # Package configuration
+├── README.md               # This file (shown on PyPI)
+├── LICENSE                 # MIT License
+├── requirements.txt        # Dependencies
+├── MANIFEST.in            # Include non-Python files
+├── src/
+│   └── yoda/
+│       ├── __init__.py    # Version info
+│       ├── cli.py         # Main CLI
+│       ├── core/          # Core modules
+│       └── utils/         # Utilities
+└── dist/                  # Built packages (generated)
+```
+
+#### Common Issues
+
+**Issue: "File already exists"**
+```bash
+# You're trying to upload the same version twice
+# Solution: Bump the version number
+```
+
+**Issue: Missing dependencies in installed package**
+```bash
+# Solution: Ensure requirements.txt is complete
+# Test in clean virtualenv
+```
+
+**Issue: Module not found after install**
+```bash
+# Solution: Check setup.py packages configuration
+# Should be: packages=find_packages(where="src")
+```
+
+#### Automation (Optional)
+
+Create `.github/workflows/publish.yml` for automatic releases:
+```yaml
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install build twine
+      - run: python -m build
+      - run: twine upload dist/*
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+```
+
+## License
+
+MIT License - See LICENSE file for details
