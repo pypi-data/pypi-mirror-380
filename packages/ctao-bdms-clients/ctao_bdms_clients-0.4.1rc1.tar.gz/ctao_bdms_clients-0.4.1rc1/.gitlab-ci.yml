@@ -1,0 +1,92 @@
+include:
+  - project: 'cta-computing/dpps/aiv/dpps-aiv-toolkit'
+    ref: ef1de2bb845d461262a84de6b56a1c196cd566ad
+    file: 'ci-functions.yml'
+  - "aiv-config.yml"
+
+
+variables:
+  CHART_LOCATION: chart
+  CHART_NAME: bdms
+  DOCKER_IMAGE_CONTEXT: '${CI_PROJECT_DIR}'
+  RUCIO_VERSION: "35.4.1"
+  RUCIO_TAG: "release-${RUCIO_VERSION}"
+
+stages:
+  - prepare
+  - lint
+  - build
+  - sign
+  - tests
+  - sonarqube
+  - publish
+  - report
+  - changelog
+
+k8s-integration-tests:
+  variables:
+    KUBERNETES_CPU_REQUEST: "5"
+    KUBERNETES_CPU_LIMIT: "5"
+    KUBERNETES_MEMORY_REQUEST: "24Gi"
+    KUBERNETES_MEMORY_LIMIT: "63Gi"
+  # override from toolkit to add .env file with CI secrets
+  script:
+    - echo -e "MINIO_ACCESS_KEY=$MINIO_ACCESS_KEY\nMINIO_SECRET_KEY=$MINIO_SECRET_KEY\n" > .env
+    - ${MAKE} test-chart 2>&1 | tee test-output.log
+
+k8s-integration-tests-with-upgrade:
+  extends: k8s-integration-tests
+  variables:
+    KUBERNETES_CPU_REQUEST: "5"
+    KUBERNETES_CPU_LIMIT: "5"
+    KUBERNETES_MEMORY_REQUEST: "32Gi"
+    KUBERNETES_MEMORY_LIMIT: "63Gi"
+    UPGRADE_BASE_REF: v0.3.1
+    GIT_DEPTH: 0
+    UPGRADE_BASE_EXTRA_VALUES: >-
+      --set dev.client_image_tag=${UPGRADE_BASE_REF}
+      --set acada_ingest.image.tag=${UPGRADE_BASE_REF}
+      --set postgresql.image.repository=bitnamilegacy/postgresql
+  script:
+    - echo -e "MINIO_ACCESS_KEY=$MINIO_ACCESS_KEY\nMINIO_SECRET_KEY=$MINIO_SECRET_KEY\n" > .env
+    # new toolkit is better to bootstrap
+    - make setup-k8s-cluster
+    # tests expect kubectl in base from old toolkit
+    - make $(pwd)/.toolkit/bin/kubectl; cp .toolkit/bin/kubectl .
+    # checkout $UPGRADE_BASE_REF, setup the system.
+    - echo "Checking out ${UPGRADE_BASE_REF} and performing initial setup" | tee test-output.log
+    - git checkout ${UPGRADE_BASE_REF}
+    # TODO: change v3.1.0-rc2 to v3.1.0
+    - sed -i 's/v2.1.0/v3.1.0-rc2/g' chart/Chart.yaml
+    # need to override image versions
+    - find -name Chart.lock -delete
+    - ${MAKE} CHART_EXTRA_VALUES="$UPGRADE_BASE_EXTRA_VALUES" test-chart 2>&1 | tee test-output.log
+    # Upgrade to current version, run tests.
+    - echo "Checking out CI commit and running upgrade tests" | tee test-output.log
+    - find -name Chart.lock -delete
+    - git reset --hard ${CI_COMMIT_SHA}
+    - ${MAKE} test-chart 2>&1 | tee test-output.log
+
+
+sonarqube:
+  variables:
+    # TODO: remove when toolkit is updated to no longer set this variable
+    # should just be taken from sonar-project.properties
+    SONAR_HOST_URL: "https://sonar-ctao.zeuthen.desy.de"
+
+  # two tokens only needed while sonar pr is not merged, can also be removed after
+  script:
+    - sonar-scanner --debug -Dsonar.token="$SONAR_TOKEN_CTAO"
+
+build:
+  variables:
+    CI_HARBOR_REGISTRY_IMAGE: '${HARBOR_HOST}/dpps/bdms-client:${DOCKER_TAG}'
+    KANIKO_EXTRA_ARGS: --build-arg RUCIO_TAG=${RUCIO_TAG}
+
+hadolint:
+  rules:
+    - when: never
+
+sign:
+  rules:
+    - when: never
