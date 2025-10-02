@@ -1,0 +1,15 @@
+[project]
+name = "autodocmiashs"
+version = "0.1.0"
+description = "One-command docstring generator using Mistral (Google-style) for MIASHS students"
+readme = "README.md"
+authors = [{ name = "Aness Rabia" }]
+requires-python = ">=3.9"
+dependencies = ["requests"]
+
+[project.scripts]
+autodocmiashs = "autodocmiashs.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/autodocmiashs/__init__.py
+src/autodocmiashs/cli.py
+src/autodocmiashs/generator.py
+src/autodocmiashs.egg-info/PKG-INFO
+src/autodocmiashs.egg-info/SOURCES.txt
+src/autodocmiashs.egg-info/dependency_links.txt
+src/autodocmiashs.egg-info/entry_points.txt
+src/autodocmiashs.egg-info/requires.txt
+src/autodocmiashs.egg-info/top_level.txt

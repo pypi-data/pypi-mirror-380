@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: autodocmiashs
+Version: 0.1.0
+Summary: One-command docstring generator using Mistral (Google-style) for MIASHS students
+Author: Aness Rabia
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# autodocmiashs
+
+One-command docstring generator using **Mistral (mistral-small-latest)** that writes
+Google-style docstrings into your Python files under `src/`.
+
+## Quick start (local dev)
+
+```bash
+# from project root
+python -m pip install -e .
+export MISTRAL_API_KEY="xq-..."   # put your key here
+
+# run inside ANY project that has a src/ folder
+autodocmiashs
