@@ -1,0 +1,8 @@
+
+[:platform_system == "Darwin"]
+pyobjc-framework-Cocoa
+
+[dev]
+pytest
+twine
+wheel
