@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokenvault"
+version = "0.1.1"
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["pyjwt", "cryptography", "typer", "pyperclip"]
+keywords = ["cryptography", "vault", "user management", "cli", "jwt", "token", "encryption", "asymmetric", "fastapi"]
+requires-python = ">=3.7"
+description = "A lightweight package to manage tokens in your application in a single encrypted file and asymmetric token encryption."
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "fastapi", "uvicorn", "httpx"]
+
+[project.scripts]
+tv = "tokenvault.cli:app"
+
+
+[tool.setuptools]
+packages = ["tokenvault"]
+
+[project.urls]
+Homepage = "https://xethub.com/xdssio/token-vault"
+
+
