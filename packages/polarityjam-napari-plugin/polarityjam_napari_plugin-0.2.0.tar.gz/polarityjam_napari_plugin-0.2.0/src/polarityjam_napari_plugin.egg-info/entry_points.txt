@@ -1,0 +1,2 @@
+[console_parsers_polarityjam]
+napari = polarityjam.napari_plugin.argument_parsing:create_parser_napari
