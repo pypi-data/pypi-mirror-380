@@ -1,0 +1,104 @@
+from rest_framework import serializers
+
+from netbox.api.serializers import NetBoxModelSerializer
+from dcim.api.serializers import DeviceSerializer
+from ipam.api.serializers import IPAddressSerializer
+
+from ..models import VNI, VXLAN, BFDConfig, BGPPeer, BGPPeerGroup, BGPSessionConfig, ISISConfig
+from ..constants import APP_LABEL
+
+class BFDConfigSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:bfdconfig-detail' #this is the name of an api view that we have to write and link to in urls
+    )
+
+    class Meta:
+        model = BFDConfig
+        fields = (
+            #the order of these fields is how the JSON/API representation of the object will be structured
+            'id', 'hello_interval', 'multiplier', 'description', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'hello_interval', 'multiplier', 'description') #the shorthand serializer
+
+
+
+
+class BGPSessionConfigSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:bgpsessionconfig-detail'
+    )
+
+    class Meta:
+        model = BGPSessionConfig
+        fields = (
+            'id', 'name', 'address_families', 'peer_asn', 'import_policy', 'export_policy',
+            'next_hop_self', 'hardcoded_description', 'hello_interval', 'keepalive_interval',
+            'ebgp_multihop', 'unencrypted_password', 'encrypted_password', 'source_interface',
+            'source_ip', 'local_asn', 'bfd_config', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'name', 'description')
+
+class BGPPeerSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:bgppeer-detail'
+    )
+    device = DeviceSerializer(nested=True) #nested=True return the brief serialized version of the object reference
+    peer_ip = IPAddressSerializer(nested=True) #nested=True return the brief serialized version of the object reference
+
+    class Meta:
+        model = BGPPeer
+        fields = (
+            'id', 'device', 'name', 'peer_ip', 'session_config', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'device', 'name', 'peer_ip', 'session_config')
+
+class BGPPeerGroupSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:bgppeergroup-detail'
+    )
+    device = DeviceSerializer(nested=True) #nested=True return the brief serialized version of the object reference
+
+    class Meta:
+        model = BGPPeerGroup
+        fields = (
+            'id', 'device', 'name', 'description', 'session_config', 'peers', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'name', 'description')
+
+class VNISerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:vni-detail'
+    )
+
+    class Meta:
+        model = VNI
+        fields = (
+            'id', 'vlan', 'vnid', 'tenant', 'description', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'vnid', 'description')
+
+class VXLANSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:vxlan-detail'
+    )
+
+    class Meta:
+        model = VXLAN
+        fields = (
+            'id', 'ipv4_gateway', 'ipv6_gateway', 'vni', 'l3mtu', 'ingress_replication', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'vni')
+
+class ISISConfigSerializer(NetBoxModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name=f'plugins-api:{APP_LABEL}-api:isisconfig-detail'
+    )
+    net = serializers.CharField(read_only=True) #this is a property and should never be hit on a create operation
+    device = DeviceSerializer(nested=True) #nested=True return the brief serialized version of the object reference
+
+    class Meta:
+        model = ISISConfig
+        fields = (
+            'id', 'device', 'router_id', 'pid', 'afi', 'area_id', 'network_selector', 'net_hardcoded', 'net', 'default_link_metric', 'tags', 'custom_fields', 'created', 'last_updated'
+        )
+        brief_fields = ('id', 'device', 'router_id', 'net')
