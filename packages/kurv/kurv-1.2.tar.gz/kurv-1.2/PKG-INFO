@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: kurv
+Version: 1.2
+Summary: Kurv programming language in Python
+Author: Kurv
+Requires-Python: >=3.8
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary
