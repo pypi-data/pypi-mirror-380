@@ -1,0 +1,2 @@
+[dlt]
+dlt-plus-context = dlt_plus.plugin
