@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: AI-Validation-Automation-deps
+Version: 0.1.0
+Summary: Dependency bundle for testing AI Agents
+Author: Siva Arumugam
+Requires-Dist: pytest
+Requires-Dist: playwright
+Requires-Dist: allure-pytest
+Requires-Dist: sentence-transformers
+Requires-Dist: scikit-learn
+Requires-Dist: bert-score
+Requires-Dist: pyyaml
+Requires-Dist: requests
