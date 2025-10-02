@@ -1,0 +1,89 @@
+:root {
+    --root-color: yellow;
+}
+
+/* --------------------------------- TOOLTIP -------------------------------- */
+
+.tooltip-inner {
+    font-size: xx-small;
+}
+
+.custom-tooltip {
+    pointer-events: none !important;
+}
+
+/* ------------------------------ CIRCULAR TEXT ----------------------------- */
+
+.circlePath {
+    fill: none;
+    pointer-events: none;
+}
+
+textPath {
+    text-anchor: middle;
+    stroke: white;
+    stroke-width: 3;
+    paint-order: stroke;
+    letter-spacing: 1px;
+    font-size: 15px;
+    pointer-events: none;
+
+}
+
+/* ------------------------------- WORST LIST ------------------------------- */
+
+.worst-list {
+    text-align: left;
+    font-style: italic;
+    font-size: small;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+#worst {
+    display: block;
+
+}
+
+
+/* ---------------------------------- MENU ---------------------------------- */
+
+select {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.form-check {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* ------------------------------- NODE STATUS ------------------------------ */
+
+#circle-0 {
+    filter: drop-shadow(0px 0px 100px var(--root-color));
+}
+
+.pulse {
+    /* opacity: 0.3; */
+    animation: pulseAnim 2.5s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulseAnim {
+    0% {
+        stroke-width: 3;
+        transform: scale(1);
+        stroke-opacity: 0.5;
+    }
+    
+    100% {
+        stroke-width: 10;
+        /* thicker stroke */
+        transform: scale(1.01);
+        stroke-opacity: 0;
+    }
+    
+}
