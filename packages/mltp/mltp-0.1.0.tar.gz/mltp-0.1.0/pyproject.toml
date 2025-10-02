@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mltp"
+authors = [{name = "Harris J. Bolus", email = "bolusharris@gmail.com"}]
+license = "MIT"
+license-files = ["LICENSE"]
+dynamic = ["version"]
+description = "Tools for propositional and predicate logic, based on the textbook Mathematical Logic Through Python by Nisan and Gonczarowski"
+requires-python = ">=3.8"
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = []
+
+[project.urls]
+Home = "https://github.com/hjbolus"

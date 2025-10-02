@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: mltp
+Version: 0.1.0
+Summary: Tools for propositional and predicate logic, based on the textbook Mathematical Logic Through Python by Nisan and Gonczarowski
+Author-email: "Harris J. Bolus" <bolusharris@gmail.com>
+Requires-Python: >=3.8
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Project-URL: Home, https://github.com/hjbolus
