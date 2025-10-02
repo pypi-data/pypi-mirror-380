@@ -1,0 +1,37 @@
+[build-system]                              # packages needed at build time
+requires = [
+    'setuptools>=61.0',
+    'wheel',
+    'torch>=2.6.0',
+    'ninja'
+]
+build-backend = 'setuptools.build_meta'
+
+[project]                                   # packages needed at runtime
+name = 'quartic_bspline_extension'          # package name
+version = '0.3.0'
+dependencies = [
+    'torch>=2.6.0'
+]
+authors = [
+    {name = 'Florian Thaler, Thomas Pock', email = 'florian.thaler@tugraz.at'},
+]
+maintainers = [
+    {name = 'Florian Thaler', email = 'florian.thaler@tugraz.at'}
+]
+description = 'Quartic B-Spline extension: CPU and CUDA extension for quartic bspline based potential functions.'
+readme = 'README.md'
+license = 'MIT'
+keywords = ['Quartic B-Spline']
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Programming Language :: C++'
+]
+dynamic = ["requires-python"]
+
+[tool.setuptools.packages.find]
+where = ['.']
+exclude = ['tests*', 'docs*', 'artefacts*', 'examples*', 'profiling*']
+
+[project.urls]
+Homepage = 'https://github.com/VLOGroup/quartic_bspline_extension'
