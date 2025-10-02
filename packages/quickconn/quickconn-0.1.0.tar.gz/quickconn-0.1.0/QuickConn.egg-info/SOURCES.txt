@@ -1,0 +1,9 @@
+README.md
+setup.py
+QuickConn.egg-info/PKG-INFO
+QuickConn.egg-info/SOURCES.txt
+QuickConn.egg-info/dependency_links.txt
+QuickConn.egg-info/requires.txt
+QuickConn.egg-info/top_level.txt
+quickconn/__init__.py
+quickconn/clients.py
