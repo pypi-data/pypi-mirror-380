@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: philologic
+Version: 5.1.0.1
+Summary: A concordance search engine for TEI-XML
+Author-email: Clovis Gladstone <clovisgladstone@artfl.uchicago.edu>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/ARTFL-Project/PhiloLogic5
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: regex
+Requires-Dist: lxml
+Requires-Dist: python-levenshtein
+Requires-Dist: natsort
+Requires-Dist: multiprocess
+Requires-Dist: tqdm
+Requires-Dist: orjson
+Requires-Dist: black
+Requires-Dist: msgspec
+Requires-Dist: unidecode
+Requires-Dist: lz4
+Requires-Dist: lmdb
+Requires-Dist: numpy~=2.2
+Requires-Dist: numba~=0.61
+Requires-Dist: scikit-learn~=1.4
+Requires-Dist: pandas~=2.2
+Requires-Dist: spacy~=3.8
+Requires-Dist: netaddr
+Provides-Extra: transformers
+Requires-Dist: spacy-transformers~=1.3.8; extra == "transformers"
+Dynamic: license-file
