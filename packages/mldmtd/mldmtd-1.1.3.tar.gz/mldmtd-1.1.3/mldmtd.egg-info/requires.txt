@@ -1,0 +1,6 @@
+numpy
+pandas
+gsw
+netCDF4
+scipy
+scikit-learn
