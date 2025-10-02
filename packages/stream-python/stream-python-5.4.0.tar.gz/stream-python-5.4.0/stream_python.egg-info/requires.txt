@@ -1,0 +1,15 @@
+requests<3,>=2.31.0
+pyjwt<3,>=2.8.0
+pytz>=2023.3.post1
+aiohttp>=3.9.0b0
+
+[ci]
+black
+flake8
+pytest-cov
+
+[test]
+pytest
+pytest-cov
+python-dateutil
+pytest-asyncio
